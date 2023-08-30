@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="80" height="80" viewBox="0 0 80 80">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_8" data-name="Rectangle 8" width="80" height="80" fill="#fff"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_2" data-name="Mask Group 2" clip-path="url(#clip-path)">
+    <g id="分组-2" transform="translate(2.002 20)">
+      <g id="分组">
+        <path id="路径" d="M4.109.343A.789.789,0,0,1,4.76,0a.818.818,0,0,1,.807.8.739.739,0,0,1-.028.2L5.545.993,5.553.968C2.527,11.933,17.13,20.78,38.431,20.78c21.264,0,35.852-8.817,32.888-19.756h0a.787.787,0,0,1-.044-.261A.757.757,0,0,1,72.037,0a.779.779,0,0,1,.7.431A20.087,20.087,0,0,1,76.775,12c.185,14.586-17,28.945-38.393,28.945S-.19,26.588,0,12A20.127,20.127,0,0,1,4.109.343Z" fill="#0043e9" fill-rule="evenodd"/>
+      </g>
+    </g>
+  </g>
+</svg>
