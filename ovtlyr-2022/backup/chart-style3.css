@@ -1,0 +1,64 @@
+﻿@charset "UTF-8";
+/* CSS Document */
+
+#fear_greed1, #fear_greed, #lines_chart3, #lines_chart4 {
+    width: 100%;
+    height: 160px;
+}
+#piechart_small {
+    width: 250px;
+    height: 200px;
+}
+#piechart_mid {
+     width: 300px;
+    height: 228px;
+}
+#piechart_large {
+    width: 400px;
+    height: 260px
+}
+
+.stockDtl_charts #piechart_small {
+  width: 150px;
+  height: 100px;
+}
+.stockDtl_charts #piechart_mid {
+   width: 160px;
+  height: 130px;
+}
+.stockDtl_charts #piechart_large {
+  width: 260px;
+  height: 170px;
+}
+
+#FG-Scorefear_greed, #range_chart
+{
+  width: 100%;
+  height: 340px;
+  background: #703372;
+}
+
+#FG-Scorefear_greed1 {
+  width: 100%;
+  height: 300px;
+}
+#heatmap_chart, #heatmap_chart2
+{
+	width: 100%;
+  height: 225px;
+}
+#risk-tolerance-pieChart
+{
+	width:100%;
+height:400px;
+}
+#allocation_pie
+{
+	width:100%;
+	height:280px;
+}
+#co_relation,#timeline_chart, #histogram_chart
+{
+	width:100%;
+	height:250px;
+}

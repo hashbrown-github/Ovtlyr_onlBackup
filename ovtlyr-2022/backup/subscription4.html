@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>OVTLYR | Subscription </title>
+<meta name="description" content="Updates and Statistics" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no">
+<link rel="icon" type="img/png" sizes="32x32" href="images/trident-favicon.png" />
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/chart-style.css" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+<header class="header_front">
+  <div class="header_front1">
+    <div class="container-xl">
+      <div class="header_front2">
+        <div class="logo">
+          <a href="index.html"><img src="images/ovtlyr-logo.svg" alt="OVTLYR" /></a>
+        </div>
+        <div class="header_menu">
+          <ul class="desk_menu">
+            <li><a href="big-view.html">BigView</a></li>
+            <li><a href="stocks-etfs.html">Stocks/ETFs</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li class="active"><a href="pricing.html">Pricing</a></li>
+            <li><a href="scoops.html">Scoops</a></li>
+            <li>
+              <div class="headSearch_box">
+                <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <div class="headSearch_pop">
+                  <div class="headSearch_pop1">
+                    <a href="javascript:void(0);"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    <input type="text" placeholder="Search stock, company or symbol.." />
+                  </div>
+                  <div class="headSearch_pop2">
+                    <ul id="div_homeSeachbarData">
+                      <li class="homeSearch-suggestions" data-symbol="AAPL">             
+                        <a href="#">                 
+                          <div class="list_item">                     
+                            <div>                         
+                              <h4>Apple Inc</h4>                         
+                              <p>NASDAQ: <span class="searchsymbolclass">AAPL</span></p>                     
+                            </div>                 
+                          </div>             
+                        </a>         
+                      </li>
+                      <li class="homeSearch-suggestions arrowdownClass" data-symbol="AAPL">             
+                        <a href="#">                 
+                          <div class="list_item">                     
+                            <div>                         
+                              <h4>Apple Inc</h4>                         
+                              <p>NASDAQ: <span class="searchsymbolclass">AAPL</span></p>                     
+                            </div>                 
+                          </div>             
+                        </a>         
+                      </li>
+                      <li class="homeSearch-suggestions" data-symbol="AAPL">             
+                        <a href="#">                 
+                          <div class="list_item">                     
+                            <div>                         
+                              <h4>Apple Inc</h4>                         
+                              <p>NASDAQ: <span class="searchsymbolclass">AAPL</span></p>                     
+                            </div>                 
+                          </div>             
+                        </a>         
+                      </li>
+                      <li class="homeSearch-suggestions" data-symbol="AAPL">             
+                        <a href="#">                 
+                          <div class="list_item">                     
+                            <div>                         
+                              <h4>Apple Inc</h4>                         
+                              <p>NASDAQ: <span class="searchsymbolclass">AAPL</span></p>                     
+                            </div>                 
+                          </div>             
+                        </a>         
+                      </li>
+                      <li class="homeSearch-suggestions" data-symbol="AAPL">             
+                        <a href="#">                 
+                          <div class="list_item">                     
+                            <div>                         
+                              <h4>Apple Inc</h4>                         
+                              <p>NASDAQ: <span class="searchsymbolclass">AAPL</span></p>                     
+                            </div>                 
+                          </div>             
+                        </a>         
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul> 
+          <div class="userLoginPro">
+            <a href="login.html" class="border_btn">Login</a>
+            <a href="sign-up.html" class="filled_btn">Try for Free</a>
+          </div>
+          <div class="userLoginPro2 js-header-item" style="display: none;">
+            <button class="header__head js-header-head"><img src="images/profile.svg" alt="Profile"><span class="user_nme">Shivani Chandel</span></button>
+            <div class="header__body js-header-body">
+              <a class="header__item" href="#">
+                <div class="header__title">My Account</div>
+              </a>
+              <a class="header__item" href="#">
+                <div class="header__title">Trading History</div>
+              </a>
+              <a class="header__item" href="watchlist.html">
+                <div class="header__title">My Watchlist</div>
+              </a>
+              <a class="header__item" href="#">
+                <div class="header__title">Linked Brokerages</div>
+              </a>
+              <a class="header__item" href="#">
+                <div class="header__title">Contact Us</div>
+              </a>
+              <a class="header__item" href="#">
+                <div class="header__title">Sign Out</div>
+              </a>
+            </div>
+          </div>
+          <div class="mobile-nav mobile_menu">
+            <div class="b-nav">
+              <ul>
+                <li class="active"><a class="b-link" href="big-view.html">BigView</a></li>
+                <li><a class="b-link" href="stocks-etfs.html">Stocks/ETFs</a></li>
+                <li><a class="b-link" href="portfolio.html">Portfolio</a></li>
+                <li><a class="b-link" href="pricing.html">Pricing</a></li>
+              </ul>
+              <div class="mobile_userLogin">
+                <a class="border_btn" href="sign-in.html">Login</a>
+                <a class="filled_btn" href="sign-up.html">Try for Free</a>
+              </div>
+            </div>
+            <!-- Burger-Icon -->
+            <div class="b-container">
+              <div class="b-menu">
+                <div class="b-bun b-bun--top"></div>
+                <div class="b-bun b-bun--mid"></div>
+                <div class="b-bun b-bun--bottom"></div>
+              </div>
+            </div>
+          </div>
+        </div> 
+      </div>
+    </div>
+  </div>
+</header>
+<div class="outer_main">
+  <section class="pricing_sec1 proPlan_sec">
+    <div class="container-xl">
+      <div class="subscrip_sec1">
+        <h3>Your Subscription</h3>
+        <a href="manage-card.html">Manage Your Card</a>
+      </div>
+      <div class="subscrip_sec10 border-0">
+        <div class="subscrip_sec101 subscrip_sec302">
+          <div class="subscrip_child">
+            <h3><span class="txt_bold">Education</span> Plan</h3>
+            <span class="status active">Active</span>
+          </div>
+          <h5>Next Billing Date: <span>26/11/2022</span></h5>
+          <h5>Wish to change your subscription? <a href="#">Click here</a></h5>
+        </div>
+      </div>
+      <div class="subscrip_sec12 border-0 subsSec_forEdu">
+        <div class="subscrip_sec20">
+          <div class="subscrip_sec21">
+            <img src="images/signup-logo.svg" alt="OVTLYR">
+            <span>Education</span>
+          </div>
+          <h5>Complete Access to <span>all Insights for over 1600+ stocks/ETFs</span></h5>
+        </div>
+        <div class="subscrip_sec23">
+          <h5>Opportunity HEATMAP</h5>
+          <div class="subscription_slider owl-carousel owl-theme">
+            <div class="item">
+              <img src="images/stock-img1.jpg" alt="Stock Market" />
+            </div>
+            <div class="item">
+              <img src="images/stock-img2.jpg" alt="Stock Market" />
+            </div>
+            <div class="item">
+              <img src="images/stock-img3.jpg" alt="Stock Market" />
+            </div>
+            <div class="item">
+              <img src="images/stock-img4.jpg" alt="Stock Market" />
+            </div>
+            <div class="item">
+              <img src="images/stock-img5.jpg" alt="Stock Market" />
+            </div> 
+          </div>
+        </div>
+        <div class="subscrip_sec25">
+          <ul>
+            <li>
+              <div class="inner_txt">
+                <h6>Over 1600</h6>
+              </div>
+              <p>No. of stocks + ETFs  covered</p>
+            </li>
+            <li>
+              <div class="inner_txt">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+              <p>HeatTrail – Gives you the buy and sell opportunities</p>
+            </li>
+            <li>
+              <div class="inner_txt">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+              <p>Daily Risk On & Off Meter – Tells you where the market is headed </p>
+            </li>
+            <li>
+              <div class="inner_txt">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+              <p>Fear & Greed Score – A worthy tool for every investor</p>
+            </li>
+            <li>
+              <div class="inner_txt">
+                <p>Full Coverage</p>
+              </div>
+              <p>Daily Sector Opportunity Map</p>
+            </li>
+            <li>
+              <div class="inner_txt">
+                <p>Full Coverage</p>
+              </div>
+              <p>Daily Allocation Charts for each stock and ETF</p>
+            </li>
+            <li>
+              <div class="inner_txt">
+                <p>Full Coverage</p>
+              </div>
+              <p>Daily Undervalued & Overvalued Stocks</p>
+            </li>
+            <li>
+              <div class="inner_txt">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+              <p>OVTLYR Portfolio Simulator</p>
+            </li>
+            <li>
+              <div class="inner_txt">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+              <p>OVTLYR One - Brokerage Integration</p>
+            </li>
+            <li>
+              <div class="inner_txt">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+              <p>Bi-Directional Volatility – Stocks & ETFs</p>
+            </li>
+            <li>
+              <div class="inner_txt">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+              <p>Correlation Data for Stocks & ETFs</p>
+            </li>
+            <li>
+              <div class="inner_txt">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+              <p>Latest Company Filings</p>
+            </li>
+            <li>
+              <div class="inner_txt">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+              <p>Scoops - OVTLYR’s Deep Dive Bulletin</p>
+            </li>
+            <li>
+              <div class="inner_txt">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+              <p>Portfolio Weight Suggestions – Connected Accounts</p>
+            </li>
+            <li>
+              <div class="inner_txt">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+              <p>Access to Premium OVTLYR Webinars</p>
+            </li>
+            <li>
+              <div class="inner_txt">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+              <p>Email Customer Support</p>
+            </li>
+            <li>
+              <div class="inner_txt">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+              <p>Membership to OVTLYR Student hub</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="ovt_footer fixed_footerA">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-sm-12 col-12 border_bottom">
+          <div class="footer_logo">
+            <a href="index.html"><img src="images/ovtlyr-footer-logo.svg" alt="OVTLYR"></a>
+          </div>
+          <!-- <h4 class="h4 mb-4">Actionable Insights</h4> -->
+          <ul class="footer_socialMedia">
+            <li><a href="https://www.facebook.com/Ovtlyr/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="https://www.linkedin.com/company/ovtlyr" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+            <li><a href="https://twitter.com/ovtlyr" target="_blank"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://www.instagram.com/ovtlyr/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-sm-12 col-12 border_bottom">
+          <h4 class="h4">Resources</h4>
+          <ul class="footer_menu footer_menu2">
+            <li><a href="scoops.html">Scoops</a></li>
+            <li><a href="watchlist.html">Watchlist</a></li>
+            <li><a href="coverage-list.html">Coverage List</a></li>
+            <li><a href="faqs.html">FAQs</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-sm-12 col-12 border_bottom">
+          <h4 class="h4">Company</h4>
+          <ul class="footer_menu footer_menu2">
+            <li><a href="contact-us.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-sm-12 col-12 p-0">
+          <h4 class="h4">Legal</h4>
+          <ul class="footer_menu footer_menu2">
+            <li><a href="terms-of-use.html">Terms of Use</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+if($('a.nav-link.annual_link').hasClass('active')){ 
+  $('.show_txt').show();
+  $('.hide_txt').hide();
+}
+else{
+  $('.show_txt').hide();
+  $('.hide_txt').show();
+}
+if($('.pricingNew2 a.nav-link').click(function(){
+  if($('a.nav-link.annual_link').hasClass('active')) {
+    $('.show_txt').show();
+    $('.hide_txt').hide();
+  }
+  else{
+    $('.show_txt').hide();
+    $('.hide_txt').show();
+  }
+}));
+});
+</script>
+<!--======== SUBSCRIPTION CAROUSEL START =======-->
+<script src="js/owl.carousel.js"></script>
+<script>
+$('.subscription_slider').owlCarousel({
+  center: true,
+  items: 1,
+  loop: true,
+  margin: 0,
+  transitionStyle: "linear",
+  autoplay: true,
+  autoplayTimeout: 3000,
+  autoplaySpeed: 1000,
+});
+</script>
+<!--======== SUBSCRIPTION CAROUSEL END ========-->
+</body>
+</html>

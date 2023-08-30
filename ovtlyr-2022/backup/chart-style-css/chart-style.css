@@ -1,0 +1,216 @@
+﻿@charset "UTF-8";
+/* CSS Document */
+
+#fear_greed {
+  width: 100%;
+  height: 205px;
+}
+#piechart_small {
+  width: 100%;
+  height: 140px;
+}
+#piechart_mid {
+  width: 100%;
+  height: 170px;
+}
+#piechart_large {
+  width: 100%;
+  height: 200px;
+}
+.stockDtl_charts #piechart_small {
+  width: 100%;
+  height: 100px;
+}
+.stockDtl_charts #piechart_mid {
+  width: 100%;
+  height: 120px;
+}
+.stockDtl_charts #piechart_large {
+  width: 100%;
+  height: 140px;
+}
+#FG-Scorefear_greed, #FG-Scorefear_greed2 {
+  width: 100%;
+  height: 330px;
+}
+#range_chart, #range_chart2 {
+  width: 100%;
+  height: 285px;
+}
+#FG-Scorefear_greed1 {
+  width: 100%;
+  height: 300px;
+}
+#heatmap_chart {
+  width: 100%;
+  height: 200px;
+}
+#heatmap_chart2 {
+  width: 100%;
+  height: 200px;
+}
+#heatmap_chart3 {
+  width: 100%;
+  height: 250px;
+}
+#risk-tolerance-pieChart {
+  width: 100%;
+  height: 380px;
+}
+#allocation_pie {
+  width: 100%;
+  height: 280px;
+}
+#co_relation, #timeline_chart, #histogram_chart {
+  width: 100%;
+  height: 250px;
+}
+#price_chart {
+  width: 100%;
+  height: 225px;
+}
+#treemap2, #treemap3 {
+  width: 100%;
+  height: 450px;
+}
+#piechart_treemap1, #piechart_treemap2, #piechart_treemap3, #piechart_treemap4, #piechart_treemap5, #piechart_treemap6, #piechart_treemap7, #piechart_treemap8 {
+  width: 100px;
+  height: 90px;
+}
+.risk-tolerance-pieChart2 {
+  width: 100%;
+  height: 242px;
+}
+.portfolio_box {
+    position: relative;
+    width: 100%;
+    float: left;
+}
+	.maxImage {
+   width: 27px;
+    position: absolute;
+    right: 0px;
+    top: -28px;
+    z-index: 2;
+    background: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 2px 10px #0000004f;
+    -moz-box-shadow: 0 2px 10px #0000004f;
+    -webkit-box-shadow: 0 2px 10px #0000004f;
+}
+.fullscreen  .maxImage{
+right: 10px;
+    top: 10px;
+}
+.fullscreen .risk-tolerance-pieChart2
+{
+    width: 100%;
+    height: 600px;
+    
+}
+		.fullscreen {
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+        top: 0;
+    right: 0;
+    background:rgb(247 247 247 / 93%);
+}
+#strategy_chart {
+  width: 100%;
+  height: 480px;
+}
+/*=========== MEDIA QUERY BEGIN ==============*/
+@media(max-width: 1024px) {
+#piechart_large {
+  height: 250px;
+}
+#piechart_mid {
+  height: 200px;
+}
+#piechart_small {
+  height: 160px;
+}
+#risk-tolerance-pieChart {
+  height: 340px;
+}
+#treemap2, #treemap3 {
+  height: 400px;
+}
+}
+@media(max-width: 991px) {
+#risk-tolerance-pieChart {
+  height: 320px;
+}
+#fear_greed1 {
+  height: 200px;
+}
+}
+@media(max-width: 900px) {
+#allocation_pie {
+  height: 250px;
+}
+}
+
+@media(max-width: 767px) {
+#piechart_large {
+  height: 210px;
+}
+#piechart_mid {
+  height: 170px;
+}
+#piechart_small {
+  height: 120px;
+}
+#treemap2, #treemap3 {
+  height: 350px;
+}
+}
+@media(max-width: 576px) {
+#FG-Scorefear_greed, #range_chart, #FG-Scorefear_greed2, #range_chart2 {
+  height: 250px;
+}
+#risk-tolerance-pieChart {
+  height: 250px;
+}
+#piechart_small {
+  height: 100px;
+}
+#piechart_mid {
+  height: 130px;
+}
+#piechart_large {
+  height: 160px;
+}
+#allocation_pie {
+  height: 230px;
+}
+#treemap2, #treemap3 {
+  height: 250px;
+}
+}
+@media(max-width: 480px) {
+.stockD_12 #price_chart {
+  height: 180px;
+}
+.sDtl_sec3333 #heatmap_chart3 {
+  height: 200px;
+}
+#co_relation, #timeline_chart, #histogram_chart {
+  height: 200px;
+}
+}
+@media(max-width: 400px) {
+#price_chart {
+  height: 150px;
+}
+#fear_greed {
+  height: 200px;
+}
+}
+@media(max-width: 360px) {
+#treemap2, #treemap3 {
+  height: 200px;
+}
+}

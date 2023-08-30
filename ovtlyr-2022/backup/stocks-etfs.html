@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>OVTLYR | Stocks/ETFs </title>
+<meta name="description" content="Updates and Statistics" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no">
+<link rel="icon" type="img/png" sizes="32x32" href="images/trident-favicon.png" />
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/chart-style.css" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <header class="header_front">
+    <div class="header_front1">
+      <div class="container-xl">
+        <div class="header_front2">
+          <div class="logo">
+            <a href="index.html"><img src="images/ovtlyr-logo.svg" alt="OVTLYR" /></a>
+          </div>
+          <div class="header_menu">
+            <ul class="desk_menu">
+              <li><a href="big-view.html">BigView</a></li>
+              <li class="active"><a href="stocks-etfs.html">Stocks/ETFs</a></li>
+              <li><a href="#">Portfolio</a></li>
+              <li><a href="#">Pricing</a></li>
+            </ul> 
+            <div class="userLoginPro">
+              <a href="#" class="border_btn">Login</a>
+              <a href="#" class="filled_btn">SIGN UP for Free</a>
+            </div>
+          </div> 
+        </div>
+      </div>
+    </div>
+  </header>
+<div class="outer_main">
+  <section class="stocksEtf_sec1 etf_sec1">
+    <div class="container-xl">
+      <div class="stocksEtf_sec11">
+        <ul class="nav nav-tabs" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" data-bs-toggle="tab" href="#stocks_tab1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="34" height="26" viewBox="0 0 34 26">
+                <path id="Vector" d="M33.66,22.935H.34a.341.341,0,0,0-.34.341v2.384A.341.341,0,0,0,.34,26H33.66a.341.341,0,0,0,.34-.341V23.275A.341.341,0,0,0,33.66,22.935ZM2.282,17.6,3.97,19.286a.341.341,0,0,0,.48,0l9.975-9.958,4.148,4.142a1.363,1.363,0,0,0,1.921,0L31.722,2.266a.342.342,0,0,0,0-.481L30.035.1a.341.341,0,0,0-.48,0l-10.017,10L15.385,5.961a1.363,1.363,0,0,0-1.921,0L2.282,17.124a.338.338,0,0,0,0,.481Z" fill="#00000000" />
+              </svg>
+              <span>Stocks</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#etfs_tab1">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="34" height="26" viewBox="0 0 34 26">
+                <defs>
+                  <clipPath id="clip-path">
+                    <rect id="Rectangle_1" data-name="Rectangle 1" width="34" height="26" fill="#fff"/>
+                  </clipPath>
+                </defs>
+                <g id="Mask_Group_1" data-name="Mask Group 1" clip-path="url(#clip-path)">
+                  <path id="Vector" d="M26.994.357a1.155,1.155,0,0,1,1.67,0l3.229,3.251a1.1,1.1,0,0,1,.4.862.958.958,0,0,1-.4.818L28.664,8.54a1.091,1.091,0,0,1-1.67,0,1.18,1.18,0,0,1,0-1.682l1.166-1.214H19.375A1.177,1.177,0,0,1,18.164,4.47a1.214,1.214,0,0,1,1.211-1.219l8.784-.045L26.994,2.082a1.232,1.232,0,0,1,0-1.724ZM5.252,19.108,4.134,20.322l8.737-.046A1.212,1.212,0,0,1,14.082,21.5a1.162,1.162,0,0,1-1.211,1.219l-8.736.046L5.252,23.93a1.109,1.109,0,0,1,0,1.682,1.089,1.089,0,0,1-1.669,0L.355,22.36A1.08,1.08,0,0,1,0,21.5a1.2,1.2,0,0,1,.355-.818l3.229-3.252a1.159,1.159,0,0,1,1.669,0,1.109,1.109,0,0,1,0,1.682ZM4.8,3.252H17.049a2.566,2.566,0,0,0-.3,1.174,2.605,2.605,0,0,0,2.624,2.642h4.9A3.253,3.253,0,0,0,25.7,9.242a3.167,3.167,0,0,0,.293.351,2.615,2.615,0,0,0,3.714,0l.969-.981v10.9a3.243,3.243,0,0,1-3.229,3.252H15.243a2.754,2.754,0,0,0-2.371-3.907L8.017,18.9A3.284,3.284,0,0,0,6.59,16.771,3.166,3.166,0,0,0,6.3,16.42a2.613,2.613,0,0,0-3.712,0L1.569,17.4V6.5A3.27,3.27,0,0,1,4.8,3.252Zm0,6.5A3.215,3.215,0,0,0,8.027,6.5H4.8Zm22.65,9.755V16.258a3.243,3.243,0,0,0-3.229,3.252ZM16.1,17.884a4.878,4.878,0,1,0-4.844-4.877A4.872,4.872,0,0,0,16.1,17.884Z" transform="translate(0.854 0)" fill="#00000000"/>
+                </g>
+              </svg>
+              <span>ETFs</span>
+            </a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div id="stocks_tab1" class="tab-pane stocksEtf_sec111 active">
+            <div class="indexSec_271">
+              <div class="indexSec_2711">
+                <h3>Undervalued <span>[400 out of 1000 stocks undervalued today]</span><i class="fa-solid fa-circle-arrow-left"></i></h3>
+                <div class="table_scroll vertical_scroll horizontal_scroll">
+                  <div class="disabled_div">
+                    <p>Unlock immediately for free</p>
+                    <a href="#" class="blue_button">Sign Up</a>
+                  </div>
+                  <table class="table ovtlyr_table">
+                    <thead>
+                      <tr>
+                        <th style="width: 12%;" class="align__items">Symbol</th>
+                        <th style="width: 7%;">Name</th>
+                        <th style="width: 7%;">Rank</th>
+                        <th style="width: 16%;">Last Day Close</th>
+                        <!-- <th style="width: 35%;">Rating</th> -->
+                        <th style="width: 25%;">Current Price</th>
+                        <th style="width: 21%;">Sector</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="blur_list">
+                        <td class="align__items"><a href="stock-detail.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>17</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span><span> 0.98%)</span></span></p></td>
+                        <!-- <td>
+                          <div class="footLeft11">
+                            <div class="slidecontainer">
+                              <span class="values">Bullish</span>
+                              <div class="RangeSlider_div">
+                                <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                              </div>
+                              <span class="values">Bearish</span>
+                            </div>
+                          </div>
+                        </td> -->
+                        <td><p>Financials</p></td>
+                      </tr>
+                      <tr class="blur_list">
+                        <td class="align__items"><a href="stock-detail.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>17</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Technology</p></td>
+                      </tr>
+                      <tr class="blur_list">
+                        <td class="align__items"><a href="stock-detail.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>17</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Financials</p></td>
+                      </tr>
+                      <tr class="blur_list">
+                        <td class="align__items"><a href="stock-detail.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>17</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Technology</p></td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="stock-detail.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>21</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Technology</p></td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="stock-detail.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>22</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Technology</p></td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="stock-detail.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>23</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Financials</p></td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="stock-detail.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>24</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Technology</p></td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="stock-detail.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>25</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Financials</p></td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="stock-detail.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>24</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Technology</p></td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="stock-detail.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>25</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Financials</p></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="indexSec_2711">
+                <h3>Overvalued <span>[600 out of 1000 stocks undervalued today]</span><i class="fa-solid fa-circle-arrow-left"></i></h3>
+                <div class="table_scroll vertical_scroll horizontal_scroll">
+                  <div class="disabled_div">
+                    <p>Unlock immediately for free</p>
+                    <a href="#" class="blue_button">Sign Up</a>
+                  </div>
+                  <table class="table ovtlyr_table">
+                    <thead>
+                      <tr>
+                        <th style="width: 12%;" class="align__items">Symbol</th>
+                        <th style="width: 7%;">Name</th>
+                        <th style="width: 7%;">Rank</th>
+                        <th style="width: 16%;">Last Day Close</th>
+                        <th style="width: 25%;">Current Price</th>
+                        <th style="width: 21%;">Sector</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="blur_list">
+                        <td class="align__items"><a href="stock-detail.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>17</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span><span> 0.98%)</span></span></p></td>
+                        <td><p>Financials</p></td>
+                      </tr>
+                      <tr class="blur_list">
+                        <td class="align__items"><a href="stock-detail.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>17</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Technology</p></td>
+                      </tr>
+                      <tr class="blur_list">
+                        <td class="align__items"><a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>17</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Financials</p></td>
+                      </tr>
+                      <tr class="blur_list">
+                        <td class="align__items"><a href="stock-detail.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>17</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Technology</p></td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="stock-detail.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>21</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Technology</p></td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="stock-detail.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>22</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Technology</p></td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="stock-detail.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>23</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Financials</p></td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="stock-detail.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>24</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Technology</p></td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="stock-detail.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>25</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Financials</p></td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="stock-detail.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>24</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Technology</p></td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="stock-detail.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>25</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Financials</p></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="indexSec_271">
+              <div class="indexSec_2711">
+                <h3>Top Gainers<i class="fa-solid fa-circle-arrow-left"></i></h3>
+                <div class="table_scroll vertical_scroll horizontal_scroll">
+                  <div class="disabled_div">
+                    <p>Unlock immediately for free</p>
+                    <a href="#" class="blue_button">Sign Up</a>
+                  </div>
+                  <table class="table ovtlyr_table">
+                    <thead>
+                      <tr>
+                        <th style="width: 12%;" class="align__items">Symbol</th>
+                        <th style="width: 7%;">Name</th>
+                        <th style="width: 7%;">Rank</th>
+                        <th style="width: 16%;">Last Day Close</th>
+                        <th style="width: 25%;">Current Price</th>
+                        <th style="width: 21%;">Sector</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="blur_list">
+                        <td class="align__items"><a href="stock-detail.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>17</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span><span> 0.98%)</span></span></p></td>
+                        <td><p>Financials</p></td>
+                      </tr>
+                      <tr class="blur_list">
+                        <td class="align__items"><a href="stock-detail.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>17</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Technology</p></td>
+                      </tr>
+                      <tr class="blur_list">
+                        <td class="align__items"><a href="stock-detail.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>17</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Financials</p></td>
+                      </tr>
+                      <tr class="blur_list">
+                        <td class="align__items"><a href="stock-detail.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>17</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Technology</p></td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="stock-detail.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>21</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Technology</p></td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="stock-detail.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>22</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Technology</p></td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="stock-detail.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>23</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Financials</p></td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="stock-detail.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>24</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Technology</p></td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="stock-detail.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>25</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Financials</p></td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="stock-detail.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>24</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Technology</p></td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="stock-detail.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>25</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Financials</p></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="indexSec_2711">
+                <h3>Top Losers<i class="fa-solid fa-circle-arrow-left"></i></h3>
+                <div class="table_scroll vertical_scroll horizontal_scroll">
+                  <div class="disabled_div">
+                    <p>Unlock immediately for free</p>
+                    <a href="#" class="blue_button">Sign Up</a>
+                  </div>
+                  <table class="table ovtlyr_table">
+                    <thead>
+                      <tr>
+                        <th style="width: 12%;" class="align__items">Symbol</th>
+                        <th style="width: 7%;">Name</th>
+                        <th style="width: 7%;">Rank</th>
+                        <th style="width: 16%;">Last Day Close</th>
+                        <th style="width: 25%;">Current Price</th>
+                        <th style="width: 21%;">Sector</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="blur_list">
+                        <td class="align__items"><a href="stock-detail.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>17</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span><span> 0.98%)</span></span></p></td>
+                        <td><p>Financials</p></td>
+                      </tr>
+                      <tr class="blur_list">
+                        <td class="align__items"><a href="stock-detail.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>17</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Technology</p></td>
+                      </tr>
+                      <tr class="blur_list">
+                        <td class="align__items"><a href="#stock-detail.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>17</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Financials</p></td>
+                      </tr>
+                      <tr class="blur_list">
+                        <td class="align__items"><a href="stock-detail.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>17</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Technology</p></td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="stock-detail.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>21</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Technology</p></td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="stock-detail.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>22</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Technology</p></td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="stock-detail.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>23</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Financials</p></td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>24</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Technology</p></td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="stock-detail.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>25</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Financials</p></td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>24</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Technology</p></td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="stock-detail.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>25</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Financials</p></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="etfs_tab1" class="tab-pane stocksEtf_sec112 fade">
+            <div class="indexSec_271">
+              <div class="indexSec_2711">
+                <h3>Undervalued<i class="fa-solid fa-circle-arrow-left"></i></h3>
+                <div class="table_scroll vertical_scroll horizontal_scroll">
+                  <div class="disabled_div">
+                    <p>Unlock immediately for free</p>
+                    <a href="#" class="blue_button">Sign Up</a>
+                  </div>
+                  <table class="table ovtlyr_table">
+                    <thead>
+                      <tr>
+                        <th style="width: 12%;" class="align__items">Symbol</th>
+                        <th style="width: 7%;">Name</th>
+                        <th style="width: 7%;">Rank</th>
+                        <th style="width: 16%;">Last Day Close</th>
+                        <!-- <th style="width: 35%;">Rating</th> -->
+                        <th style="width: 25%;">Current Price</th>
+                        <th style="width: 21%;">Sector</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="blur_list">
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>17</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span><span> 0.98%)</span></span></p></td>
+                        <!-- <td>
+                          <div class="footLeft11">
+                            <div class="slidecontainer">
+                              <span class="values">Bullish</span>
+                              <div class="RangeSlider_div">
+                                <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                              </div>
+                              <span class="values">Bearish</span>
+                            </div>
+                          </div>
+                        </td> -->
+                        <td><p>Financials</p></td>
+                      </tr>
+                      <tr class="blur_list">
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>17</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Technology</p></td>
+                      </tr>
+                      <tr class="blur_list">
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>17</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Financials</p></td>
+                      </tr>
+                      <tr class="blur_list">
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>17</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Technology</p></td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>21</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Technology</p></td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>22</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Technology</p></td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>23</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Financials</p></td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>24</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Technology</p></td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>25</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Financials</p></td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>24</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Technology</p></td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>25</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Financials</p></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="indexSec_2711">
+                <h3>Overvalued<i class="fa-solid fa-circle-arrow-left"></i></h3>
+                <div class="table_scroll vertical_scroll horizontal_scroll">
+                  <div class="disabled_div">
+                    <p>Unlock immediately for free</p>
+                    <a href="#" class="blue_button">Sign Up</a>
+                  </div>
+                  <table class="table ovtlyr_table">
+                    <thead>
+                      <tr>
+                        <th style="width: 12%;" class="align__items">Symbol</th>
+                        <th style="width: 7%;">Name</th>
+                        <th style="width: 7%;">Rank</th>
+                        <th style="width: 16%;">Last Day Close</th>
+                        <th style="width: 25%;">Current Price</th>
+                        <th style="width: 21%;">Sector</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="blur_list">
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>17</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span><span> 0.98%)</span></span></p></td>
+                        <td><p>Financials</p></td>
+                      </tr>
+                      <tr class="blur_list">
+                        <td class="align__items"><a href="setf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>17</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Technology</p></td>
+                      </tr>
+                      <tr class="blur_list">
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>17</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Financials</p></td>
+                      </tr>
+                      <tr class="blur_list">
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>17</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Technology</p></td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>21</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Technology</p></td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>22</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Technology</p></td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>23</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Financials</p></td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>24</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Technology</p></td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>25</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Financials</p></td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>24</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Technology</p></td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>25</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Financials</p></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="indexSec_271">
+              <div class="indexSec_2711">
+                <h3>Top Gainers<i class="fa-solid fa-circle-arrow-left"></i></h3>
+                <div class="table_scroll vertical_scroll horizontal_scroll">
+                  <div class="disabled_div">
+                    <p>Unlock immediately for free</p>
+                    <a href="#" class="blue_button">Sign Up</a>
+                  </div>
+                  <table class="table ovtlyr_table">
+                    <thead>
+                      <tr>
+                        <th style="width: 12%;" class="align__items">Symbol</th>
+                        <th style="width: 7%;">Name</th>
+                        <th style="width: 7%;">Rank</th>
+                        <th style="width: 16%;">Last Day Close</th>
+                        <th style="width: 25%;">Current Price</th>
+                        <th style="width: 21%;">Sector</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="blur_list">
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>17</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span><span> 0.98%)</span></span></p></td>
+                        <td><p>Financials</p></td>
+                      </tr>
+                      <tr class="blur_list">
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>17</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Technology</p></td>
+                      </tr>
+                      <tr class="blur_list">
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>17</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Financials</p></td>
+                      </tr>
+                      <tr class="blur_list">
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>17</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Technology</p></td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>21</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Technology</p></td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>22</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Technology</p></td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>23</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Financials</p></td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>24</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Technology</p></td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>25</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Financials</p></td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>24</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Technology</p></td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>25</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Financials</p></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="indexSec_2711">
+                <h3>Top Losers<i class="fa-solid fa-circle-arrow-left"></i></h3>
+                <div class="table_scroll vertical_scroll horizontal_scroll">
+                  <div class="disabled_div">
+                    <p>Unlock immediately for free</p>
+                    <a href="#" class="blue_button">Sign Up</a>
+                  </div>
+                  <table class="table ovtlyr_table">
+                    <thead>
+                      <tr>
+                        <th style="width: 12%;" class="align__items">Symbol</th>
+                        <th style="width: 7%;">Name</th>
+                        <th style="width: 7%;">Rank</th>
+                        <th style="width: 16%;">Last Day Close</th>
+                        <th style="width: 25%;">Current Price</th>
+                        <th style="width: 21%;">Sector</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="blur_list">
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>17</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span><span> 0.98%)</span></span></p></td>
+                        <td><p>Financials</p></td>
+                      </tr>
+                      <tr class="blur_list">
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>17</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Technology</p></td>
+                      </tr>
+                      <tr class="blur_list">
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>17</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Financials</p></td>
+                      </tr>
+                      <tr class="blur_list">
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>17</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Technology</p></td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>21</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Technology</p></td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>22</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Technology</p></td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>23</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Financials</p></td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>24</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Technology</p></td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>25</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Financials</p></td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>24</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Technology</p></td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ISPC</span></p></a></td>
+                        <td><p>ISPC</p></td>
+                        <td><p>25</p></td>
+                        <td><p>$ 2.04</p></td>
+                        <td><p>$ 2.06 (<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>0.98%)</p></td>
+                        <td><p>Financials</p></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="ovt_footer fixed_footerA">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-sm-12 col-12 border_bottom">
+          <div class="footer_logo">
+            <a href="index.html"><img src="images/ovtlyr-footer-logo.svg" alt="OVTLYR"></a>
+          </div>
+          <h4 class="h4 mb-4">Leading Market Behavioral Data</h4>
+          <ul class="footer_socialMedia">
+            <li><a href="https://www.facebook.com/Ovtlyr/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="https://www.linkedin.com/company/ovtlyr" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+            <li><a href="https://twitter.com/ovtlyr" target="_blank"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://www.instagram.com/ovtlyr/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-sm-12 col-12 border_bottom">
+          <h4 class="h4">Resources</h4>
+          <ul class="footer_menu footer_menu2">
+            <li><a href="https://blog.ovtlyr.com/">News & Opinion</a></li>
+            <li><a href="coverage-list.html">Coverage List</a></li>
+            <li><a href="faqs.html">FAQs</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-sm-12 col-12 border_bottom">
+          <h4 class="h4">Company</h4>
+          <ul class="footer_menu footer_menu2">
+            <li><a href="contact-us.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-sm-12 col-12">
+          <h4 class="h4">Legal</h4>
+          <ul class="footer_menu footer_menu2">
+            <li><a href="terms-of-use.html">Terms of Use</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.min.js"></script>
+</body>
+</html>
