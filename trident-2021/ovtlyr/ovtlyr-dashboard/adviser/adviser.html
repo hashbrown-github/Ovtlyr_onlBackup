@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>OVTLYR | Portfolio</title>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#fff">
+<meta name="format-detection" content="telephone=no">
+<link rel="icon" type="image/png" sizes="32x32" href="imgages/trident-favicon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/trident-favicon.png">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+<meta name="description" content="Updates and Statistics">
+<link rel="stylesheet" media="all" href="adviser-css/chart-style.css">
+<link rel="stylesheet" media="all" href="adviser-css/app.min.css">
+<link rel="stylesheet" href="adviser-css/style.css" />
+<div class="outer">
+  <div class="outer__inner">
+    <div class="section main adviser_sec secPadd_100" style="min-height: calc(100vh - 100px);">
+      <div class="learn__center center">
+        <div class="bargaining js-tabs3">
+          <div class="bargaining__main nav_link3">
+            <div class="nav">
+              <button class="MYnav__link js-tabs-link3 active">Version 1</button>
+              <button class="MYnav__link js-tabs-link3">Version 2</button>
+              <button class="MYnav__link js-tabs-link3">Version 2</button>
+              <button class="MYnav__link js-tabs-link3">Version 2</button>
+              <button class="MYnav__link js-tabs-link3">Version 2</button>
+            </div>
+          </div>
+          <div class="bargaining__container">
+            <div class="bargaining__item js-tabs-item3" style="display: block;">
+              <div class="bargaining__wrapper js-bargaining-wrapper">
+                <div class="tabsList_sec1">
+                  <div class="tabsList_sec11">
+                    <div class="tabsList_sec12">
+                      <div id="home_piechart1"></div>
+                      <div id="tooltip_pie" class="hidden"><span id="value"></span></div>
+                    </div>
+                    <div class="tabsList_sec12">
+                      <div id="home_piechart2"></div>
+                      <div id="tooltip_pie" class="hidden"><span id="value"></span></div>
+                    </div>
+                    <div class="tabsList_sec12">
+                      <div id="home_piechart3"></div>
+                      <div id="tooltip_pie" class="hidden"><span id="value"></span></div>
+                    </div>
+                  </div>
+                  <div class="tabsList_sec11">
+                    <div class="tabsList_sec15">
+                  
+                    </div>
+                    <div class="tabsList_sec16">
+                  
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="bargaining__item js-tabs-item3" style="display: none;">
+              <div class="bargaining__wrapper js-bargaining-wrapper">
+                <p>Version 2 <br> Set 2 <br> 56</p>
+              </div>
+            </div>
+            <div class="bargaining__item js-tabs-item3" style="display: none;">
+              <div class="bargaining__wrapper js-bargaining-wrapper">
+                <p>Version 3 <br> Set 3 <br> 57</p>
+              </div>
+            </div>
+            <div class="bargaining__item js-tabs-item3" style="display: none;">
+              <div class="bargaining__wrapper js-bargaining-wrapper">
+                <p>Version 4 <br> Set 4 <br> 58</p>
+              </div>
+            </div>
+            <div class="bargaining__item js-tabs-item3" style="display: none;">
+              <div class="bargaining__wrapper js-bargaining-wrapper">
+                <p>Version 5 <br> Set 5 <br> 59</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="js/jquery.min.js"></script> 
+<script src="js/svg4everybody.min.js"></script> 
+<script src="js/jquery.magnific-popup.min.js"></script> 
+<script src="js/app.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+<!--============ PIE CHART START ============-->
+<script> 
+  am5.ready(function() {
+  am5.addLicense("AM5C311897715");
+  var root = am5.Root.new("home_piechart1");
+  root.setThemes([
+    am5themes_Animated.new(root)
+  ]);
+  var chart = root.container.children.push(am5percent.PieChart.new(root, {
+    layout: root.verticalLayout
+  }));
+  root.interfaceColors.set("grid", am5.color(0x808191));
+  var series = chart.series.push(am5percent.PieSeries.new(root, {
+    valueField: "Allocation",
+    categoryField: "Labels",
+    alignLabels: false
+  }));
+    
+  series.slices.template.adapters.add("fill", function(fill, target) {
+    return target.dataItem.get("category") == "cash" ? am5.color(0x555d66) : fill;
+  })	
+    series.get("colors").set("colors", [
+    am5.color(0x468999),
+    am5.color(0x519DAF),
+    am5.color(0x5CB1C5),
+    am5.color(0x73CAE1),
+    am5.color(0x82D0E4),
+    am5.color(0x91D6E7),
+    am5.color(0xA0DCEA),
+    am5.color(0xAFE2ED),
+    am5.color(0xBEE8F0),
+    am5.color(0xCDEEF3),
+    am5.color(0xDCF4F6)
+  ]);
+    series.labels.template.setAll({
+    fontSize: 12,
+    text: "{category}",
+    textType: "radial",
+    radius: 0,
+    centerX: am5.percent(100),
+    fill: am5.color(0xffffff)
+  });
+    
+  series.data.setAll( [
+  {
+  "Labels": "cash",
+  "Quotedate": "2021-07-29",
+  "Allocation": 0.20,
+  "Delta_Allocation": 5.55111512312578e-17
+  },
+  {
+  "Labels": "FANG",
+  "Quotedate": "2021-07-29",
+  "Allocation":  0.20,
+  "Delta_Allocation": 0.0109090194901649
+  },
+  {
+  "Labels": "MSI",
+  "Quotedate": "2021-07-29",
+  "Allocation":  0.20,
+  "Delta_Allocation": -0.00421904374798759
+  },
+  {
+  "Labels": "RHP",
+  "Quotedate": "2021-07-29",
+  "Allocation":  0.70,
+  "Delta_Allocation": -0.000183027813774342
+  },
+  {
+  "Labels": "WU",
+  "Quotedate": "2021-07-29",
+  "Allocation":  0.30,
+  "Delta_Allocation": -0.00156506958872218
+  },
+  {
+  "Labels": "A",
+  "Quotedate": "2021-07-29",
+  "Allocation":  0.30,
+  "Delta_Allocation": -0.00156506958872218
+  },
+  {
+  "Labels": "AA",
+  "Quotedate": "2021-07-29",
+  "Allocation":  0.30,
+  "Delta_Allocation": -0.00156506958872218
+  }
+  ,
+  {
+  "Labels": "SS",
+  "Quotedate": "2021-07-29",
+  "Allocation":  0.30,
+  "Delta_Allocation": -0.00156506958872218
+  }
+  ,
+  {
+  "Labels": "E",
+  "Quotedate": "2021-07-29",
+  "Allocation":  0.30,
+  "Delta_Allocation": -0.00156506958872218
+  }
+  ,
+  {
+  "Labels": "U",
+  "Quotedate": "2021-07-29",
+  "Allocation":  0.30,
+  "Delta_Allocation": -0.00156506958872218
+  }
+  ,
+  {
+  "Labels": "W",
+  "Quotedate": "2021-07-29",
+  "Allocation":  0.30,
+  "Delta_Allocation": -0.00156506958872218
+  }
+  ]);
+  series.appear(1000, 100);
+  
+  }); 
+</script>
+<script> 
+  am5.ready(function() {
+  am5.addLicense("AM5C311897715");
+  var root = am5.Root.new("home_piechart2");
+  root.setThemes([
+    am5themes_Animated.new(root)
+  ]);
+  var chart = root.container.children.push(am5percent.PieChart.new(root, {
+    layout: root.verticalLayout
+  }));
+  root.interfaceColors.set("grid", am5.color(0x808191));
+  var series = chart.series.push(am5percent.PieSeries.new(root, {
+    valueField: "Allocation",
+    categoryField: "Labels",
+    alignLabels: false
+  }));
+    
+  series.slices.template.adapters.add("fill", function(fill, target) {
+    return target.dataItem.get("category") == "cash" ? am5.color(0x555d66) : fill;
+  })	
+    series.get("colors").set("colors", [
+    am5.color(0x468999),
+    am5.color(0x519DAF),
+    am5.color(0x5CB1C5),
+    am5.color(0x73CAE1),
+    am5.color(0x82D0E4),
+    am5.color(0x91D6E7),
+    am5.color(0xA0DCEA),
+    am5.color(0xAFE2ED),
+    am5.color(0xBEE8F0),
+    am5.color(0xCDEEF3),
+    am5.color(0xDCF4F6)
+  ]);
+    series.labels.template.setAll({
+    fontSize: 12,
+    text: "{category}",
+    textType: "radial",
+    radius: 0,
+    centerX: am5.percent(100),
+    fill: am5.color(0xffffff)
+  });
+    
+  series.data.setAll( [
+  {
+  "Labels": "cash",
+  "Quotedate": "2021-07-29",
+  "Allocation": 0.20,
+  "Delta_Allocation": 5.55111512312578e-17
+  },
+  {
+  "Labels": "FANG",
+  "Quotedate": "2021-07-29",
+  "Allocation":  0.20,
+  "Delta_Allocation": 0.0109090194901649
+  },
+  {
+  "Labels": "MSI",
+  "Quotedate": "2021-07-29",
+  "Allocation":  0.20,
+  "Delta_Allocation": -0.00421904374798759
+  },
+  {
+  "Labels": "RHP",
+  "Quotedate": "2021-07-29",
+  "Allocation":  0.70,
+  "Delta_Allocation": -0.000183027813774342
+  },
+  {
+  "Labels": "WU",
+  "Quotedate": "2021-07-29",
+  "Allocation":  0.30,
+  "Delta_Allocation": -0.00156506958872218
+  },
+  {
+  "Labels": "A",
+  "Quotedate": "2021-07-29",
+  "Allocation":  0.30,
+  "Delta_Allocation": -0.00156506958872218
+  },
+  {
+  "Labels": "AA",
+  "Quotedate": "2021-07-29",
+  "Allocation":  0.30,
+  "Delta_Allocation": -0.00156506958872218
+  }
+  ,
+  {
+  "Labels": "SS",
+  "Quotedate": "2021-07-29",
+  "Allocation":  0.30,
+  "Delta_Allocation": -0.00156506958872218
+  }
+  ,
+  {
+  "Labels": "E",
+  "Quotedate": "2021-07-29",
+  "Allocation":  0.30,
+  "Delta_Allocation": -0.00156506958872218
+  }
+  ,
+  {
+  "Labels": "U",
+  "Quotedate": "2021-07-29",
+  "Allocation":  0.30,
+  "Delta_Allocation": -0.00156506958872218
+  }
+  ,
+  {
+  "Labels": "W",
+  "Quotedate": "2021-07-29",
+  "Allocation":  0.30,
+  "Delta_Allocation": -0.00156506958872218
+  }
+  ]);
+  series.appear(1000, 100);
+  
+  }); 
+</script>
+<script> 
+  am5.ready(function() {
+  am5.addLicense("AM5C311897715");
+  var root = am5.Root.new("home_piechart3");
+  root.setThemes([
+    am5themes_Animated.new(root)
+  ]);
+  var chart = root.container.children.push(am5percent.PieChart.new(root, {
+    layout: root.verticalLayout
+  }));
+  root.interfaceColors.set("grid", am5.color(0x808191));
+  var series = chart.series.push(am5percent.PieSeries.new(root, {
+    valueField: "Allocation",
+    categoryField: "Labels",
+    alignLabels: false
+  }));
+    
+  series.slices.template.adapters.add("fill", function(fill, target) {
+    return target.dataItem.get("category") == "cash" ? am5.color(0x555d66) : fill;
+  })	
+    series.get("colors").set("colors", [
+    am5.color(0x468999),
+    am5.color(0x519DAF),
+    am5.color(0x5CB1C5),
+    am5.color(0x73CAE1),
+    am5.color(0x82D0E4),
+    am5.color(0x91D6E7),
+    am5.color(0xA0DCEA),
+    am5.color(0xAFE2ED),
+    am5.color(0xBEE8F0),
+    am5.color(0xCDEEF3),
+    am5.color(0xDCF4F6)
+  ]);
+    series.labels.template.setAll({
+    fontSize: 12,
+    text: "{category}",
+    textType: "radial",
+    radius: 0,
+    centerX: am5.percent(100),
+    fill: am5.color(0xffffff)
+  });
+    
+  series.data.setAll( [
+  {
+  "Labels": "cash",
+  "Quotedate": "2021-07-29",
+  "Allocation": 0.20,
+  "Delta_Allocation": 5.55111512312578e-17
+  },
+  {
+  "Labels": "FANG",
+  "Quotedate": "2021-07-29",
+  "Allocation":  0.20,
+  "Delta_Allocation": 0.0109090194901649
+  },
+  {
+  "Labels": "MSI",
+  "Quotedate": "2021-07-29",
+  "Allocation":  0.20,
+  "Delta_Allocation": -0.00421904374798759
+  },
+  {
+  "Labels": "RHP",
+  "Quotedate": "2021-07-29",
+  "Allocation":  0.70,
+  "Delta_Allocation": -0.000183027813774342
+  },
+  {
+  "Labels": "WU",
+  "Quotedate": "2021-07-29",
+  "Allocation":  0.30,
+  "Delta_Allocation": -0.00156506958872218
+  },
+  {
+  "Labels": "A",
+  "Quotedate": "2021-07-29",
+  "Allocation":  0.30,
+  "Delta_Allocation": -0.00156506958872218
+  },
+  {
+  "Labels": "AA",
+  "Quotedate": "2021-07-29",
+  "Allocation":  0.30,
+  "Delta_Allocation": -0.00156506958872218
+  }
+  ,
+  {
+  "Labels": "SS",
+  "Quotedate": "2021-07-29",
+  "Allocation":  0.30,
+  "Delta_Allocation": -0.00156506958872218
+  }
+  ,
+  {
+  "Labels": "E",
+  "Quotedate": "2021-07-29",
+  "Allocation":  0.30,
+  "Delta_Allocation": -0.00156506958872218
+  }
+  ,
+  {
+  "Labels": "U",
+  "Quotedate": "2021-07-29",
+  "Allocation":  0.30,
+  "Delta_Allocation": -0.00156506958872218
+  }
+  ,
+  {
+  "Labels": "W",
+  "Quotedate": "2021-07-29",
+  "Allocation":  0.30,
+  "Delta_Allocation": -0.00156506958872218
+  }
+  ]);
+  series.appear(1000, 100);
+  
+  }); 
+</script>
+</body>
+</html>
