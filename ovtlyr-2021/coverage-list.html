@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>OVTLYR | Coverage List</title>
+<meta name="description" content="Updates and Statistics" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no">
+<link rel="icon" type="img/png" sizes="32x32" href="img/trident-favicon.png" />
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+<link rel='stylesheet' href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css" />
+<link rel='stylesheet' href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/chart-style.css" />
+<link rel="stylesheet" media="all" href="css/app.min.css" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/responsive.css" />
+<script>
+  var viewportmeta = document.querySelector('meta[name="viewport"]');
+  if (viewportmeta) {
+    if (screen.width < 320) {
+      var newScale = screen.width / 320;
+      viewportmeta.content = 'width=320, minimum-scale=' + newScale + ', maximum-scale=1.0, user-scalable=no, initial-scale=' + newScale + '';
+    } else {
+      viewportmeta.content = 'width=device-width, maximum-scale=1.0, initial-scale=1.0';
+    }
+  }
+</script>
+  </head>
+  <body>
+    <script>
+      console.log(localStorage.getItem('darkMode'));
+      if (localStorage.getItem('darkMode') === "on") {
+        document.body.classList.add("dark");
+        document.addEventListener("DOMContentLoaded", function() {
+          document.querySelector('.js-theme input').checked = true;
+        });
+      }
+    </script>
+    <!-- outer-->
+    <div class="outer">
+      <!-- header-->
+      <header class="header js-header" data-id="#header">
+        <div class="header_front">
+        <div class="container-fluid">
+          <div class="header__center center">
+            <a class="header__logo" href="index.html">
+              <img class="header__pic header__pic_desktop some-icon" src="img/login_trident.svg" alt="OVTLYR" /><img class="header__pic header__pic_desktop some-icon-dark" src="img/outlyr-white-logo.svg" alt="OVTLYR" />
+              <img class="header__pic header__pic_mobile some-icon" src="img/black.svg" alt="OVTLYR" /><img class="header__pic header__pic_mobile some-icon-dark" src="img/white.svg" alt="OVTLYR" />
+            </a>
+            <div class="header__wrapper">
+              <div class="header__wrap js-header-wrap">
+                <div class="mobile_profile">
+                  <button class="mobile_headP"><img src="img/profile.svg" alt="Profile"><span class="user_nme">Shivani Chandel</span></button>
+                  <div class="mobile__btns" style="display: none;">
+                    <a class="mobile_btn" href="login.html">Login</a>
+                    <a class="mobile_btn blue_btn" href="signup.html">Sign Up</a>
+                  </div>
+                </div>
+                <div class="mobile_search">
+                  <input class="field__input headerSearch" type="email" name="email" placeholder="Symbols or Companies..." style="opacity: 0;" />
+                  <button type="button" class="header_searchIcon" style="opacity: 0;"><i class="fas fa-search"></i></button>
+                </div>
+                <nav class="header__nav ovtlyr_menu">
+                  <!-- <a class="header__item active" href="#"><i class="las la-newspaper"></i>News & Opinion</a> -->
+                  <a class="header__item" href="sectors.html"><i class="las la-chart-pie"></i>Sectors</a>
+                  <a class="header__item" href="industries.html"><i class="las la-building"></i>Industries</a>
+                  <a class="header__item" href="leaderboards.html"><i class="las la-chart-bar"></i>Leaderboards</a>
+                  <a class="header__item" href="watchlist.html"><i class="las la-list"></i>Watchlist</a>
+                  <a class="header__item" href="portfolio.html"><i class="las la-pen"></i>Portfolio</a>
+                </nav>
+              </div>
+              <div class="header__btns">
+                <div class="header_Search">
+                  <div class="field">
+                    <div class="field__wrap">
+                      <input class="field__input headerSearch" id="headerSearch_input" type="email" name="email" placeholder="Symbols or Companies...">
+                      <button class="header_searchIcon"><i class="fas fa-search"></i></button>
+                    </div>
+                  </div>
+                  <div class="search_popup">
+                    <div class="popup_input">
+                      <input class="field__input headerSearch" type="email" name="email" placeholder="Symbols or Companies...">
+                      <button class="header_searchIcon"><i class="fas fa-search"></i></button>
+                    </div>
+                    <h4>Stocks</h4>
+                    <ul>
+                      <li><a href="#"><p><span class="port_symbol">PYPL</span><span class="port_company">Paypal Holdings</span></p></a></li>
+                      <li><a href="#"><p><span class="port_symbol">NBEV</span><span class="port_company">NewAge Inc.</span></p></a></li>
+                      <li><a href="#"><p><span class="port_symbol">ISPC</span><span class="port_company">iSpecimen Inc.</span></p></a></li>
+                      <li><a href="#"><p><span class="port_symbol">LGVN</span><span class="port_company">Longeveron Inc.</span></p></a></li>
+                      <li><a href="#"><p><span class="port_symbol">NVDA</span><span class="port_company">Nvidia</span></p></a></li>
+                      <li><a href="#"><p><span class="port_symbol">NBEV</span><span class="port_company">NewAge Inc.</span></p></a></li>
+                      <li><a href="#"><p><span class="port_symbol">ISPC</span><span class="port_company">iSpecimen Inc.</span></p></a></li>
+                      <li><a href="#"><p><span class="port_symbol">LGVN</span><span class="port_company">Longeveron Inc.</span></p></a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="header__control">
+                  <label class="theme js-theme">
+                    <input class="theme__input" type="checkbox"/><span class="theme__icon">
+                      <svg class="icon icon-theme-light">
+                        <use xlink:href="#icon-theme-light"></use>
+                      </svg>
+                      <svg class="icon icon-theme-dark">
+                        <use xlink:href="#icon-theme-dark"></use>
+                      </svg></span>
+                  </label>
+                </div>
+                <a class="header__item ms-2 mobile_hideL" href="login.html" style="display: none;">Login</a>
+                <a class="button-small header__button ms-3 blue_button mobile_hideL" href="signup.html" style="display: none;">Join for Free</a> 
+                <div class="header__item header__item_user js-header-item mobile_hideL">
+                  <button class="header__head js-header-head"><img src="img/profile.svg" alt="Profile"><span class="user_nme">Shivani Chandel</span></button>
+                  <div class="header__body js-header-body">
+                    <a class="header__el" href="profile.html">
+                      <div class="header__icon">
+                        <i class="las la-user"></i>
+                      </div>
+                      <div class="header__details">
+                        <div class="header__title">Profile</div>
+                        <div class="header__content">Important account details</div>
+                      </div>
+                    </a>
+                    <div class="header__el">
+                      <div class="header__icon">
+                        <i class="las la-sun"></i>
+                      </div>
+                      <div class="header__details">
+                        <div class="header__line">
+                          <div class="header__title">Dark Mode</div>
+                          <label class="theme js-theme">
+                            <input class="theme__input" type="checkbox"/><span class="theme__inner"><span class="theme__box"></span></span>
+                          </label>
+                        </div>
+                        <div class="header__content">Switch Dark/Light Mode</div>
+                      </div>
+                    </div>
+                    <a class="header__el" href="change-password.html">
+                      <div class="header__icon">
+                        <i class="las la-edit"></i>
+                      </div>
+                      <div class="header__details">
+                        <div class="header__title">Change Password</div>
+                      </div>
+                    </a>
+                    <a class="header__el" href="#">
+                      <div class="header__icon">
+                        <i class="las la-sign-in-alt"></i>
+                      </div>
+                      <div class="header__details">
+                        <div class="header__title">Log out</div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <button class="header__burger js-header-burger"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      </header>
+      <!-- container-->
+      <div class="outer__inner">
+        <div class="section main minSec_height secPaddT_80 secPaddB_80">
+          <div class="learn__center center">
+            <div class="learn__head secPaddB_50 mb-0">
+              <div class="learn__wrap">
+                <h3 class="learn__title h2 mb-0">OVTLYR Coverage List</h3>
+                <p class="grey_color mt-2">The following companies are supported on the OVTLYR platform as of Oct, 2021</p>
+              </div>
+            </div>
+            <div class="learn__head policies_sec">
+              <div class="learn__wrap">
+                <h3 class="learn__title h4 mb-0">GICS Sector</h3>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="bargaining mb-0">
+                  <div class="bargaining__container">
+                    <div class="bargaining__item2">
+                      <div class="bargaining__wrapper">
+                        <div class="table_scroll">
+                          <table class="table ovtlyr_table coverage_list">
+                            <thead>
+                              <tr>
+                                <th style="width: 20%;" class="align__items">Symbol</th>
+                                <th style="width: 55%;" class="align__items">Name</th>
+                                <th style="width: 25%;" class="align__items">Sector</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td class="align__items"><p><span class="port_symbol">SPY</span></p></td>
+                                <td class="align__items"><p>S&amp;P500</p></td>              
+                                <td class="align__items"><p></p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p><span class="port_symbol">XLB</span></p></td>
+                                <td class="align__items"><p>Materials Select Sector SPDR</p></td>              
+                                <td class="align__items"><p>Materials</p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p><span class="port_symbol">XLC</span></p></td>
+                                <td class="align__items"><p>Communication Services Select Sector SPDR Fund</p></td>              
+                                <td class="align__items"><p>Communication</p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p><span class="port_symbol">XLE</span></p></td>
+                                <td class="align__items"><p>The Energy Select Sector SPDR Fund</p></td>              
+                                <td class="align__items"><p>Energy</p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p><span class="port_symbol">XLF</span></p></td>
+                                <td class="align__items"><p>Financial Select Sector SPDR</p></td>              
+                                <td class="align__items"><p>Financials</p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p><span class="port_symbol">XLI</span></p></td>
+                                <td class="align__items"><p>Industrial Select Sector SPDR</p></td>              
+                                <td class="align__items"><p>Industrial</p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p><span class="port_symbol">XLK</span></p></td>
+                                <td class="align__items"><p>Technology Select Sector SPDR ETF</p></td>              
+                                <td class="align__items"><p>Technology</p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p><span class="port_symbol">XLP</span></p></td>
+                                <td class="align__items"><p>Consumer Staples Select Sector SPDR</p></td>              
+                                <td class="align__items"><p>Staples</p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p><span class="port_symbol">XLRE</span></p></td>
+                                <td class="align__items"><p>Real Estate Select Sector SPDR Fund (The)</p></td>              
+                                <td class="align__items"><p>Real Estate</p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p><span class="port_symbol">XLU</span></p></td>
+                                <td class="align__items"><p>Utilities Select Sector SPDR ETF</p></td>              
+                                <td class="align__items"><p>Utilities</p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p><span class="port_symbol">XLV</span></p></td>
+                                <td class="align__items"><p>Health Care Select Sector SPDR</p></td>              
+                                <td class="align__items"><p>Healthcare</p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p><span class="port_symbol">XLY</span></p></td>
+                                <td class="align__items"><p>Consumer Discretionary Select Sector SPDR</p></td>              
+                                <td class="align__items"><p>Discretionary</p></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="learn__head secPaddT_50">
+              <div class="learn__wrap">
+                <h3 class="learn__title h4 mb-0">Materials</h3>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="bargaining mb-0">
+                  <div class="bargaining__container">
+                    <div class="bargaining__item2">
+                      <div class="bargaining__wrapper">
+                        <div class="table_scroll">
+                          <table class="table ovtlyr_table coverage_list">
+                            <thead>
+                              <tr>
+                                <th style="width: 20%;" class="align__items">Symbol</th>
+                                <th style="width: 55%;" class="align__items">Name</th>
+                                <th style="width: 25%;" class="align__items">Sector</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td class="align__items"><p><span class="port_symbol">RGLD</span></p></td>
+                                <td class="align__items"><p>Royal Gold Inc</p></td>              
+                                <td class="align__items"><p>Materials</p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p><span class="port_symbol">RPM</span></p></td>
+                                <td class="align__items"><p>RPM International Inc</p></td>              
+                                <td class="align__items"><p>Materials</p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p><span class="port_symbol">RS</span></p></td>
+                                <td class="align__items"><p>Reliance Steel & Aluminum Company</p></td>              
+                                <td class="align__items"><p>Materials</p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p><span class="port_symbol">SCCO</span></p></td>
+                                <td class="align__items"><p>Southern Copper Corporation</p></td>              
+                                <td class="align__items"><p>Materials</p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p><span class="port_symbol">SCL</span></p></td>
+                                <td class="align__items"><p>Stepan Company</p></td>              
+                                <td class="align__items"><p>Materials</p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p><span class="port_symbol">SHW</span></p></td>
+                                <td class="align__items"><p>Sherwin-Williams Company</p></td>              
+                                <td class="align__items"><p>Materials</p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p><span class="port_symbol">SLGN</span></p></td>
+                                <td class="align__items"><p>Silgan Holdings Inc</p></td>              
+                                <td class="align__items"><p>Materials</p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p><span class="port_symbol">SMG</span></p></td>
+                                <td class="align__items"><p>Scotts Miracle-Gro Company - Class A</p></td>              
+                                <td class="align__items"><p>Materials</p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p><span class="port_symbol">SON</span></p></td>
+                                <td class="align__items"><p>Sonoco Products Company</p></td>              
+                                <td class="align__items"><p>Materials</p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p><span class="port_symbol">SSRM</span></p></td>
+                                <td class="align__items"><p>SSR Mining Inc</p></td>              
+                                <td class="align__items"><p>Materials</p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p><span class="port_symbol">STLD</span></p></td>
+                                <td class="align__items"><p>Steel Dynamics Inc</p></td>              
+                                <td class="align__items"><p>Materials</p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p><span class="port_symbol">SXT</span></p></td>
+                                <td class="align__items"><p>Sensient Technologies Corp</p></td>              
+                                <td class="align__items"><p>Materials</p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p><span class="port_symbol">TECK</span></p></td>
+                                <td class="align__items"><p>Teck Resources Ltd - Class B</p></td>              
+                                <td class="align__items"><p>Materials</p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p><span class="port_symbol">VVV</span></p></td>
+                                <td class="align__items"><p>Valvoline Inc</p></td>              
+                                <td class="align__items"><p>Materials</p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p><span class="port_symbol">WLK</span></p></td>
+                                <td class="align__items"><p>Westlake Chemical Corp</p></td>              
+                                <td class="align__items"><p>Materials</p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p><span class="port_symbol">WOR</span></p></td>
+                                <td class="align__items"><p>Worthington Industries Inc</p></td>              
+                                <td class="align__items"><p>Materials</p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p><span class="port_symbol">WPM</span></p></td>
+                                <td class="align__items"><p>Wheaton Precious Metals Corp</p></td>              
+                                <td class="align__items"><p>Materials</p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p><span class="port_symbol">AA</span></p></td>
+                                <td class="align__items"><p>Alcoa Corp</p></td>              
+                                <td class="align__items"><p>Materials</p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p><span class="port_symbol">AEM</span></p></td>
+                                <td class="align__items"><p>Agnico Eagle Mines Ltd</p></td>              
+                                <td class="align__items"><p>Materials</p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p><span class="port_symbol">AG</span></p></td>
+                                <td class="align__items"><p>First Majestic Silver Corporation</p></td>              
+                                <td class="align__items"><p>Materials</p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p><span class="port_symbol">WPM</span></p></td>
+                                <td class="align__items"><p>Wheaton Precious Metals Corp</p></td>              
+                                <td class="align__items"><p>Materials</p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p><span class="port_symbol">AA</span></p></td>
+                                <td class="align__items"><p>Alcoa Corp</p></td>              
+                                <td class="align__items"><p>Materials</p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p><span class="port_symbol">AEM</span></p></td>
+                                <td class="align__items"><p>Agnico Eagle Mines Ltd</p></td>              
+                                <td class="align__items"><p>Materials</p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p><span class="port_symbol">AG</span></p></td>
+                                <td class="align__items"><p>First Majestic Silver Corporation</p></td>              
+                                <td class="align__items"><p>Materials</p></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- footer-->
+      <footer class="ovt_footer fixed_footerA">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 col-sm-12 col-12 border_bottom">
+              <div class="footer_logo">
+                <a class="black_theme" href="home.html"><img src="img/white.svg" alt="OVTLYR"></a>
+                <a class="white_theme" href="home.html"><img src="img/black.svg" alt="OVTLYR"></a>
+              </div>
+              <h4 class="h4 mb-4">Leading Market Behavioral Data</h4>
+              <ul class="footer_socialMedia">
+                <li><a href="https://www.facebook.com/Ovtlyr/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://www.linkedin.com/company/ovtlyr" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="https://twitter.com/ovtlyr" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://www.instagram.com/ovtlyr/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-sm-12 col-12 border_bottom">
+              <h4 class="h4">Resources</h4>
+              <ul class="footer_menu footer_menu2">
+                <li><a href="#">News & Opinion</a></li>
+                <li><a href="coverage-list.html">Coverage List</a></li>
+                <!-- <li><a href="#">Guide</a></li> -->
+                <li><a href="faqs.html">FAQs</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-sm-12 col-12 border_bottom">
+              <h4 class="h4">Company</h4>
+              <ul class="footer_menu footer_menu2">
+                <!-- <li><a href="#">About Us</a></li>
+                <li><a href="#">Employment</a></li> -->
+                <li><a href="contact-us.html">Contact Us</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-2 col-sm-12 col-12">
+              <h4 class="h4">Legal</h4>
+              <ul class="footer_menu footer_menu2">
+                <li><a href="terms-of-use.html">Terms of Use</a></li>
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+<!-- scripts-->
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.nice-select.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/jquery.daterangepicker.min.js"></script>
+<script src="js/app.js"></script>
+<div style="display: none">
+  <svg width="0" height="0">
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="icon-theme-light">
+  <path d="M8 13.333c.368 0 .667.298.667.667s-.298.667-.667.667-.667-.298-.667-.667.298-.667.667-.667zm-4.714-1.562c.26-.26.682-.26.943 0s.26.682 0 .943-.682.26-.943 0-.26-.682 0-.943zm9.428 0c.26.26.26.682 0 .943s-.682.26-.943 0-.26-.682 0-.943.682-.26.943 0zM8 5.333c1.473 0 2.667 1.194 2.667 2.667S9.472 10.666 8 10.666 5.333 9.472 5.333 8 6.527 5.333 8 5.333zm0 1.333c-.736 0-1.333.597-1.333 1.333S7.263 9.333 8 9.333 9.333 8.736 9.333 8 8.736 6.666 8 6.666zm6 .667c.368 0 .667.298.667.667s-.298.667-.667.667-.667-.298-.667-.667.298-.667.667-.667zm-12 0c.368 0 .667.298.667.667s-.298.667-.667.667-.667-.298-.667-.667.298-.667.667-.667zm10.714-4.047c.26.26.26.682 0 .943s-.682.26-.943 0-.26-.682 0-.943.682-.26.943 0zm-9.428 0c.26-.26.682-.26.943 0s.26.682 0 .943-.682.26-.943 0-.26-.682 0-.943zM8 1.333c.368 0 .667.298.667.667s-.298.667-.667.667-.667-.298-.667-.667.298-.667.667-.667z"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="icon-theme-dark">
+  <path d="M8 12c.368 0 .667.298.667.667h0V14c0 .368-.298.667-.667.667s-.667-.298-.667-.667h0v-1.333c0-.368.298-.667.667-.667zm-3.771-1.171c.26-.26.682-.26.943 0s.26.682 0 .943h0l-.943.943c-.26.26-.682.26-.943 0s-.26-.682 0-.943h0zm7.542 0l.943.943c.26.26.26.682 0 .943s-.682.26-.943 0l-.943-.943c-.26-.26-.26-.682 0-.943s.682-.26.943 0zM8 5.333c1.473 0 2.667 1.194 2.667 2.667S9.472 10.666 8 10.666 5.333 9.472 5.333 8 6.527 5.333 8 5.333zm0 1.333c-.736 0-1.333.597-1.333 1.333S7.263 9.333 8 9.333 9.333 8.736 9.333 8 8.736 6.666 8 6.666zm6 .667c.368 0 .667.298.667.667s-.298.667-.667.667h-1.333C12.298 8.666 12 8.368 12 8s.298-.667.667-.667H14zm-10.667 0c.368 0 .667.298.667.667s-.298.667-.667.667h0H2c-.368 0-.667-.298-.667-.667s.298-.667.667-.667h0zm9.381-4.047c.26.26.26.682 0 .943l-.943.943c-.26.26-.682.26-.943 0s-.26-.682 0-.943l.943-.943c.26-.26.682-.26.943 0zm-9.428 0c.26-.26.682-.26.943 0h0l.943.943c.26.26.26.682 0 .943s-.682.26-.943 0h0l-.943-.943c-.26-.26-.26-.682 0-.943zM8 1.333c.368 0 .667.298.667.667h0v1.333C8.666 3.701 8.368 4 8 4s-.667-.298-.667-.667h0V2c0-.368.298-.667.667-.667z"></path>
+  </symbol>
+  </svg>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  $(document).ready(function(){
+  $('.header_Search #headerSearch_input').click(function(){
+  $(".search_popup").css("display" , "block");
+   });
+  });
+  $(document).click(function() {
+  var container = $(".header_Search");
+  if (!container.is(event.target) && !container.has(event.target).length) {
+    $(".search_popup").css("display" , "none");
+  }
+  });
+</script>
+</body>
+</html>

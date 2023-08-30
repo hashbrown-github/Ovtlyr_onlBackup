@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>OVTLYR | Industries </title>
+<meta name="description" content="Updates and Statistics" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no">
+<link rel="icon" type="img/png" sizes="32x32" href="img/trident-favicon.png" />
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+<link rel='stylesheet' href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css" />
+<link rel='stylesheet' href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/chart-style.css" />
+<link rel="stylesheet" media="all" href="css/app.min.css" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/responsive.css" />
+<script>
+  var viewportmeta = document.querySelector('meta[name="viewport"]');
+  if (viewportmeta) {
+    if (screen.width < 320) {
+      var newScale = screen.width / 320;
+      viewportmeta.content = 'width=320, minimum-scale=' + newScale + ', maximum-scale=1.0, user-scalable=no, initial-scale=' + newScale + '';
+    } else {
+      viewportmeta.content = 'width=device-width, maximum-scale=1.0, initial-scale=1.0';
+    }
+  }
+</script>
+  </head>
+  <body>
+    <script>
+      console.log(localStorage.getItem('darkMode'));
+      if (localStorage.getItem('darkMode') === "on") {
+        document.body.classList.add("dark");
+        document.addEventListener("DOMContentLoaded", function() {
+        document.querySelector('.js-theme input').checked = true;
+        });
+      }
+    </script>
+    <!-- outer-->
+    <div class="outer">
+      <!-- header-->
+      <header class="header js-header" data-id="#header">
+        <div class="header_front">
+        <div class="container-fluid">
+          <div class="header__center center">
+            <a class="header__logo" href="index.html">
+              <img class="header__pic header__pic_desktop some-icon" src="img/login_trident.svg" alt="OVTLYR" /><img class="header__pic header__pic_desktop some-icon-dark" src="img/outlyr-white-logo.svg" alt="OVTLYR" />
+              <img class="header__pic header__pic_mobile some-icon" src="img/black.svg" alt="OVTLYR" /><img class="header__pic header__pic_mobile some-icon-dark" src="img/white.svg" alt="OVTLYR" />
+            </a>
+            <div class="header__wrapper">
+              <div class="header__wrap js-header-wrap">
+                <div class="mobile_profile">
+                  <button class="mobile_headP"><img src="img/profile.svg" alt="Profile"><span class="user_nme">Shivani Chandel</span></button>
+                  <div class="mobile__btns" style="display: none;">
+                    <a class="mobile_btn" href="login.html">Login</a>
+                    <a class="mobile_btn blue_btn" href="signup.html">Sign Up</a>
+                  </div>
+                </div>
+                <div class="mobile_search">
+                  <input class="field__input headerSearch" type="email" name="email" placeholder="Symbols or Companies..." style="opacity: 0;" />
+                  <button type="button" class="header_searchIcon" style="opacity: 0;"><i class="fas fa-search"></i></button>
+                </div>
+                <nav class="header__nav ovtlyr_menu">
+                  <!-- <a class="header__item active" href="#"><i class="las la-newspaper"></i>News & Opinion</a> -->
+                  <a class="header__item" href="sectors.html"><i class="las la-chart-pie"></i>Sectors</a>
+                  <a class="header__item active" href="industries.html"><i class="las la-building"></i>Industries</a>
+                  <a class="header__item" href="leaderboards.html"><i class="las la-chart-bar"></i>Leaderboards</a>
+                  <a class="header__item" href="watchlist.html"><i class="las la-list"></i>Watchlist</a>
+                  <a class="header__item" href="portfolio.html"><i class="las la-pen"></i>Portfolio</a>
+                </nav>
+              </div>
+              <div class="header__btns">
+                <div class="header_Search">
+                  <div class="field">
+                    <div class="field__wrap">
+                      <input class="field__input headerSearch" id="headerSearch_input" type="email" name="email" autocomplete="off" placeholder="Symbols or Companies..." />
+                      <button class="header_searchIcon"><i class="fas fa-search"></i></button>
+                    </div>
+                  </div>
+                  <div class="search_popup">
+                    <div class="popup_input">
+                      <input class="field__input headerSearch" type="email" name="email" autocomplete="off" placeholder="Symbols or Companies..." />
+                      <button class="header_searchIcon"><i class="fas fa-search"></i></button>
+                    </div>
+                    <h4>Stocks</h4>
+                    <ul>
+                      <li><a href="#"><p><span class="port_symbol">PYPL</span><span class="port_company">Paypal Holdings</span></p></a></li>
+                      <li><a href="#"><p><span class="port_symbol">NBEV</span><span class="port_company">NewAge Inc.</span></p></a></li>
+                      <li><a href="#"><p><span class="port_symbol">ISPC</span><span class="port_company">iSpecimen Inc.</span></p></a></li>
+                      <li><a href="#"><p><span class="port_symbol">LGVN</span><span class="port_company">Longeveron Inc.</span></p></a></li>
+                      <li><a href="#"><p><span class="port_symbol">NVDA</span><span class="port_company">Nvidia</span></p></a></li>
+                      <li><a href="#"><p><span class="port_symbol">NBEV</span><span class="port_company">NewAge Inc.</span></p></a></li>
+                      <li><a href="#"><p><span class="port_symbol">ISPC</span><span class="port_company">iSpecimen Inc.</span></p></a></li>
+                      <li><a href="#"><p><span class="port_symbol">LGVN</span><span class="port_company">Longeveron Inc.</span></p></a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="header__control">
+                  <label class="theme js-theme">
+                    <input class="theme__input" type="checkbox"/><span class="theme__icon">
+                      <svg class="icon icon-theme-light">
+                        <use xlink:href="#icon-theme-light"></use>
+                      </svg>
+                      <svg class="icon icon-theme-dark">
+                        <use xlink:href="#icon-theme-dark"></use>
+                      </svg></span>
+                  </label>
+                </div>
+                <a class="header__item ms-2 mobile_hideL" href="login.html" style="display: none;">Login</a>
+                <a class="button-small header__button ms-3 blue_button mobile_hideL" href="signup.html" style="display: none;">Join for Free</a> 
+                <div class="header__item header__item_user js-header-item mobile_hideL">
+                  <button class="header__head js-header-head"><img src="img/profile.svg" alt="Profile"><span class="user_nme">Shivani Chandel</span></button>
+                  <div class="header__body js-header-body">
+                    <a class="header__el" href="profile.html">
+                      <div class="header__icon">
+                        <i class="las la-user"></i>
+                      </div>
+                      <div class="header__details">
+                        <div class="header__title">Profile</div>
+                        <div class="header__content">Important account details</div>
+                      </div>
+                    </a>
+                    <div class="header__el">
+                      <div class="header__icon">
+                        <i class="las la-sun"></i>
+                      </div>
+                      <div class="header__details">
+                        <div class="header__line">
+                          <div class="header__title">Dark Mode</div>
+                          <label class="theme js-theme">
+                            <input class="theme__input" type="checkbox"/><span class="theme__inner"><span class="theme__box"></span></span>
+                          </label>
+                        </div>
+                        <div class="header__content">Switch Dark/Light Mode</div>
+                      </div>
+                    </div>
+                    <a class="header__el" href="change-password.html">
+                      <div class="header__icon">
+                        <i class="las la-edit"></i>
+                      </div>
+                      <div class="header__details">
+                        <div class="header__title">Change Password</div>
+                      </div>
+                    </a>
+                    <a class="header__el" href="#">
+                      <div class="header__icon">
+                        <i class="las la-sign-in-alt"></i>
+                      </div>
+                      <div class="header__details">
+                        <div class="header__title">Log out</div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <button class="header__burger js-header-burger"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      </header>
+      <!-- container-->
+      <div class="outer__inner">
+        <div class="section minSec_height main industries secPadd_100 secPaddT_60">
+          <div class="learn__center center">
+            <!-- <div class="popular__head">
+              <h3 class="popular__title h1 mb-0">Industries</h3>
+              <div class="popular__info search_text"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates alias doloribus cumque quisquam vitae soluta iste? Facilis non voluptates numquam dolorum dolores.</p></div>
+            </div> -->
+            <div class="row market_sect1">
+              <div class="col-lg-12">
+                <div class="market_sect12">
+                  <a class="sec_link" href="#">All</a>
+                  <a class="sec_link active" href="#">Communication</a>
+                  <a class="sec_link" href="#">Discretionary</a>
+                  <a class="sec_link" href="#">Energy</a>
+                  <a class="sec_link" href="#">Fnancials</a>
+                  <a class="sec_link" href="#">Materials</a>
+                  <a class="sec_link" href="#">Healthcare</a>
+                  <a class="sec_link" href="#">Industrial</a>
+                  <a class="sec_link" href="#">Real Estate</a>
+                  <a class="sec_link" href="#">Staples</a>
+                  <a class="sec_link" href="#">Technology</a>
+                  <a class="sec_link" href="#">Utilities</a>
+                </div>
+              </div>
+            </div>
+            <!-- <ul class="industries__wrapper secPaddT_50">
+              <li class="industries__item">
+                <div class="indus_head">
+                  <div class="indus_head1">
+                    <a href="#"><h5>Renewable Fuels</h5></a>
+                  </div>
+                  <div class="indus_head2">
+                    <a href="#"><h5>Covered Stocks: 201</h5></a>
+                  </div>
+                </div>
+                <div class="indus_content">
+                  <div id="treemap"></div>
+                </div>
+              </li>
+              <li class="industries__item">
+                <div class="indus_head">
+                  <div class="indus_head1">
+                    <a href="#"><h5>Passenger Transportation, Ground & Sea</h5></a>
+                  </div>
+                  <div class="indus_head2">
+                    <a href="#"><h5>Covered Stocks: 201</h5></a>
+                  </div>
+                </div>
+                <div class="indus_content">
+                  <img src="img/industries-chart-1.png" />
+                </div>
+              </li>
+              <li class="industries__item">
+                <div class="indus_head">
+                  <div class="indus_head1">
+                    <a href="#"><h5>Coal</h5></a>
+                  </div>
+                  <div class="indus_head2">
+                    <a href="#"><h5>Covered Stocks: 201</h5></a>
+                  </div>
+                </div>
+                <div class="indus_content">
+                  <img src="img/industries-chart-1.png" />
+                </div>
+              </li>
+              <li class="industries__item">
+                <div class="indus_head">
+                  <div class="indus_head1">
+                    <a href="#"><h5>Renewable Fuels</h5></a>
+                  </div>
+                  <div class="indus_head2">
+                    <a href="#"><h5>Covered Stocks: 201</h5></a>
+                  </div>
+                </div>
+                <div class="indus_content">
+                  <img src="img/industries-chart-1.png" />
+                </div>
+              </li>
+              <li class="industries__item">
+                <div class="indus_head">
+                  <div class="indus_head1">
+                    <a href="#"><h5>Passenger Transportation, Ground & Sea</h5></a>
+                  </div>
+                  <div class="indus_head2">
+                    <a href="#"><h5>Covered Stocks: 201</h5></a>
+                  </div>
+                </div>
+                <div class="indus_content">
+                  <img src="img/industries-chart-1.png" />
+                </div>
+              </li>
+              <li class="industries__item">
+                <div class="indus_head">
+                  <div class="indus_head1">
+                    <a href="#"><h5>Coal</h5></a>
+                  </div>
+                  <div class="indus_head2">
+                    <a href="#"><h5>Covered Stocks: 201</h5></a>
+                  </div>
+                </div>
+                <div class="indus_content">
+                  <img src="img/industries-chart-1.png" />
+                </div>
+              </li>
+              <li class="industries__item">
+                <div class="indus_head">
+                  <div class="indus_head1">
+                    <a href="#"><h5>Renewable Fuels</h5></a>
+                  </div>
+                  <div class="indus_head2">
+                    <a href="#"><h5>Covered Stocks: 201</h5></a>
+                  </div>
+                </div>
+                <div class="indus_content">
+                  <img src="img/industries-chart-1.png" />
+                </div>
+              </li>
+              <li class="industries__item">
+                <div class="indus_head">
+                  <div class="indus_head1">
+                    <a href="#"><h5>Passenger Transportation, Ground & Sea</h5></a>
+                  </div>
+                  <div class="indus_head2">
+                    <a href="#"><h5>Covered Stocks: 201</h5></a>
+                  </div>
+                </div>
+                <div class="indus_content">
+                  <img src="img/industries-chart-1.png" />
+                </div>
+              </li>
+              <li class="industries__item">
+                <div class="indus_head">
+                  <div class="indus_head1">
+                    <a href="#"><h5>Coal</h5></a>
+                  </div>
+                  <div class="indus_head2">
+                    <a href="#"><h5>Covered Stocks: 201</h5></a>
+                  </div>
+                </div>
+                <div class="indus_content">
+                  <img src="img/industries-chart-1.png" />
+                </div>
+              </li> 
+            </ul>-->
+            <div class="industry_item secPaddT_50">
+              <div class="bargaining">
+                <div class="indus_head">
+                  <div class="indus_head1">
+                    <a href="#"><h3 class="learn__title h4 mb-0">Communication</h3></a>
+                  </div>
+                  <div class="indus_head2">
+                    <a href="#"><h5>Covered Stocks: 201</h5></a>
+                  </div>
+                </div>
+                <div class="indus_content">
+                  <div id="treemap"></div>
+                </div>
+              </div>
+              <div class="chart_para mt-3">
+                <p><b>What is this chart?</b></p>
+                <p>The prevalence of fear & greed among industries and their constituents.</p>
+              </div>
+            </div>
+            <div class="industries_sec secPaddT_80">
+              <div class="bargaining">
+                <!-- <div class="empty_box">
+                  <img class="light_img" src="img/emty-industry-light.svg" alt="Empty Industry Table" />
+                  <img class="dark_img" src="img/emty-industry-dark.svg" alt="Empty Industry Table" />
+                  <h3 class="h4">Please select an Industry</h3>
+                </div> -->
+                <div>
+                  <div class="bargaining__main">
+                    <div class="indus_head">
+                      <div class="indus_head1">
+                        <a href="#"><h3 class="learn__title h4 mb-0">Hotels, Restaurants & Leisure</h3></a>
+                      </div>
+                      <div class="indus_head2">
+                        <a href="#"><h5>Covered Stocks: 201</h5></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bargaining__container">
+                    <div class="table_scroll">
+                      <table class="table ovtlyr_table industries_table">
+                        <thead>
+                          <tr>
+                            <th style="width: 10%;" class="align__items">Symbol</th>
+                            <th style="width: 13%;" class="align__items">Name</th>
+                            <th style="width: 11%;">Last Price</th>
+                            <th style="width: 11%;">Change</th>
+                            <th style="width: 11%;">% Change</th>
+                            <th style="width: 27%;">OVTLYR Rating</th>
+                            <th style="width: 11%;">Market Cap</th>
+                            <th style="width: 6%;"></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="align__items">
+                              <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="HERTZ GLOBAL HLD">
+                                <p><span class="port_symbol">HTZWW</span></p>
+                              </a>
+                            </td>
+                            <td class="align__items"><a href="#">HERTZ GLOBAL HLD</a></td>
+                            <td class="green_color"><p>16.90</p></td>
+                            <td class="green_color"><p>+1.51</p></td>
+                            <td class="green_color"><p>+9.81%</p></td>
+                            <td>
+                              <div class="footLeft11 rating_slider">
+                                <div class="slidecontainer">
+                                  <span class="values">Bullish</span>
+                                  <div class="RangeSlider_div">
+                                    <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                                  </div>
+                                  <span class="values">Bearish</span>
+                                </div>
+                              </div>
+                            </td>
+                            <td><p>--</p></td>
+                            <td class="align_itemR">
+                              <div class="edit_butns marketCount46">
+                                <button type="button" class="clickTo_add addtoWatch "><i class="fas fa-plus-circle"></i></button>
+                                <ul class="addStock_dropdown">
+                                  <li class="option selected"><button type="button">Add to Portfolio</button></li>
+                                  <li class="option"><button type="button">Add to Watchlist</button></li>
+                                </ul>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="align__items">
+                              <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="HERTZ GLOBAL HLD">
+                                <p><span class="port_symbol">HTZ</span></p>
+                              </a>
+                            </td>
+                            <td class="align__items"><a href="#">HERTZ GLOBAL HLD</a></td>
+                            <td class="green_color"><p>25.98</p></td>
+                            <td class="green_color"><p>+1.92</p></td>
+                            <td class="green_color"><p>+7.98%</p></td>
+                            <td>
+                              <div class="footLeft11 rating_slider">
+                                <div class="slidecontainer">
+                                  <span class="values">Bullish</span>
+                                  <div class="RangeSlider_div">
+                                    <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                                  </div>
+                                  <span class="values">Bearish</span>
+                                </div>
+                              </div>
+                            </td>
+                            <td><p>12.28B</p></td>
+                            <td class="align_itemR">
+                              <div class="edit_butns">
+                                <button type="button" class="clickTo_add addPortfolio"><i class="fas fa-plus-circle"></i></button>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="align__items">
+                              <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="HyreCar">
+                                <p><span class="port_symbol">HYRE</span></p>
+                              </a>
+                            </td>
+                            <td class="align__items"><a href="#">HyreCar</a></td>
+                            <td class="green_color"><p>4.820</p></td>
+                            <td class="green_color"><p>+0.150</p></td>
+                            <td class="green_color"><p>+3.21%</p></td>
+                            <td>
+                              <div class="footLeft11 rating_slider">
+                                <div class="slidecontainer">
+                                  <span class="values">Bullish</span>
+                                  <div class="RangeSlider_div">
+                                    <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                                  </div>
+                                  <span class="values">Bearish</span>
+                                </div>
+                              </div>
+                            </td>
+                            <td><p>103.68M</p></td>
+                            <td class="align_itemR">
+                              <div class="edit_butns">
+                                <button type="button" class="clickTo_add addPortfolio"><i class="fas fa-plus-circle"></i></button>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="align__items">
+                              <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="TD Holdings Inc">
+                                <p><span class="port_symbol">GLG</span></p>
+                              </a>
+                            </td>
+                            <td class="align__items"><a href="#">TD Holdings Inc</a></td>
+                            <td class="green_color"><p>0.4451</p></td>
+                            <td class="green_color"><p>+0.0131</p></td>
+                            <td class="green_color"><p>+3.03%</p></td>
+                            <td>
+                              <div class="footLeft11 rating_slider">
+                                <div class="slidecontainer">
+                                  <span class="values">Bullish</span>
+                                  <div class="RangeSlider_div">
+                                    <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                                  </div>
+                                  <span class="values">Bearish</span>
+                                </div>
+                              </div>
+                            </td>
+                            <td><p>61.50M</p></td>
+                            <td class="align_itemR">
+                              <div class="edit_butns">
+                                <button type="button" class="clickTo_add addPortfolio"><i class="fas fa-plus-circle"></i></button>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="align__items">
+                              <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Avis Budget Grp">
+                                <p><span class="port_symbol">CAR</span></p>
+                              </a>
+                            </td>
+                            <td class="align__items"><a href="#">Avis Budget Grp</a></td>
+                            <td class="green_color"><p>265.30</p></td>
+                            <td class="green_color"><p>+4.08</p></td>
+                            <td class="green_color"><p>+1.56%</p></td>
+                            <td>
+                              <div class="footLeft11 rating_slider">
+                                <div class="slidecontainer">
+                                  <span class="values">Bullish</span>
+                                  <div class="RangeSlider_div">
+                                    <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                                  </div>
+                                  <span class="values">Bearish</span>
+                                </div>
+                              </div>
+                            </td>
+                            <td><p>14.98B</p></td>
+                            <td class="align_itemR">
+                              <div class="edit_butns">
+                                <button type="button" class="clickTo_add addPortfolio"><i class="fas fa-plus-circle"></i></button>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="marketTab_content secPaddT_80">
+              <h3 class="learn__title h3 mb-0">News</h3>
+              <ul>
+                <li>
+                  <h4><a href="#" target="_blank"><i class="la la-newspaper"></i> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text</a></h4>
+                  <p class="more_headline">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of 
+                    type and scrambled it to make a type specimen book.
+                  </p>
+                  <div class="detail_timings"> <span>Seekingalpha</span> <span> | </span> <span>Feb 18, 2021</span> <span> | </span> <span>03:30 pm</span> </div>
+                </li>
+                <li>
+                  <h4><a href="#" target="_blank"> <i class="la la-newspaper"></i> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</a></h4>
+                    <p class="more_headline">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of 
+                      type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and 
+                      typesetting industry. 
+                    </p>
+                  <div class="detail_timings"> <span>Seekingalpha</span> <span> | </span> <span>Feb 18, 2021</span> <span> | </span> <span>03:30 pm</span> </div>
+                </li>
+                <li> 
+                  <h4><a href="#" target="_blank"><i class="la la-newspaper"></i> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</a></h4>
+                  <p class="more_headline">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of 
+                    type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and 
+                    typesetting industry. Lorem Ipsum has been the industry's standard dummy text.
+                  </p>
+                  <div class="detail_timings"> <span>Seekingalpha</span> <span> | </span> <span>Feb 18, 2021</span> <span> | </span> <span>03:30 pm</span> </div>
+                </li>
+                <li>
+                  <h4><a href="#" target="_blank"><i class="la la-newspaper"></i> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text</a></h4>
+                  <p class="more_headline">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of 
+                    type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and 
+                    typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                  </p>
+                  <div class="detail_timings"> <span>Seekingalpha</span> <span> | </span> <span>Feb 18, 2021</span> <span> | </span> <span>03:30 pm</span> </div>
+                </li>
+              </ul>
+              <a href="#" class="fold_moreBtn">More <i class="fas fa-chevron-right"></i></a> 
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- footer-->
+      <footer class="ovt_footer fixed_footerA">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 col-sm-12 col-12 border_bottom">
+              <div class="footer_logo">
+                <a class="black_theme" href="home.html"><img src="img/white.svg" alt="OVTLYR"></a>
+                <a class="white_theme" href="home.html"><img src="img/black.svg" alt="OVTLYR"></a>
+              </div>
+              <h4 class="h4 mb-4">Leading Market Behavioral Data</h4>
+              <ul class="footer_socialMedia">
+                <li><a href="https://www.facebook.com/Ovtlyr/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://www.linkedin.com/company/ovtlyr" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="https://twitter.com/ovtlyr" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://www.instagram.com/ovtlyr/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-sm-12 col-12 border_bottom">
+              <h4 class="h4">Resources</h4>
+              <ul class="footer_menu footer_menu2">
+                <li><a href="#">News & Opinion</a></li>
+                <li><a href="coverage-list.html">Coverage List</a></li>
+                <!-- <li><a href="#">Guide</a></li> -->
+                <li><a href="faqs.html">FAQs</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-sm-12 col-12 border_bottom">
+              <h4 class="h4">Company</h4>
+              <ul class="footer_menu footer_menu2">
+                <!-- <li><a href="#">About Us</a></li>
+                <li><a href="#">Employment</a></li> -->
+                <li><a href="contact-us.html">Contact Us</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-2 col-sm-12 col-12">
+              <h4 class="h4">Legal</h4>
+              <ul class="footer_menu footer_menu2">
+                <li><a href="terms-of-use.html">Terms of Use</a></li>
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+<!-- scripts-->
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.nice-select.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/jquery.daterangepicker.min.js"></script>
+<script src="js/app.js"></script>
+<div style="display: none">
+  <svg width="0" height="0">
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="icon-theme-light">
+  <path d="M8 13.333c.368 0 .667.298.667.667s-.298.667-.667.667-.667-.298-.667-.667.298-.667.667-.667zm-4.714-1.562c.26-.26.682-.26.943 0s.26.682 0 .943-.682.26-.943 0-.26-.682 0-.943zm9.428 0c.26.26.26.682 0 .943s-.682.26-.943 0-.26-.682 0-.943.682-.26.943 0zM8 5.333c1.473 0 2.667 1.194 2.667 2.667S9.472 10.666 8 10.666 5.333 9.472 5.333 8 6.527 5.333 8 5.333zm0 1.333c-.736 0-1.333.597-1.333 1.333S7.263 9.333 8 9.333 9.333 8.736 9.333 8 8.736 6.666 8 6.666zm6 .667c.368 0 .667.298.667.667s-.298.667-.667.667-.667-.298-.667-.667.298-.667.667-.667zm-12 0c.368 0 .667.298.667.667s-.298.667-.667.667-.667-.298-.667-.667.298-.667.667-.667zm10.714-4.047c.26.26.26.682 0 .943s-.682.26-.943 0-.26-.682 0-.943.682-.26.943 0zm-9.428 0c.26-.26.682-.26.943 0s.26.682 0 .943-.682.26-.943 0-.26-.682 0-.943zM8 1.333c.368 0 .667.298.667.667s-.298.667-.667.667-.667-.298-.667-.667.298-.667.667-.667z"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="icon-theme-dark">
+  <path d="M8 12c.368 0 .667.298.667.667h0V14c0 .368-.298.667-.667.667s-.667-.298-.667-.667h0v-1.333c0-.368.298-.667.667-.667zm-3.771-1.171c.26-.26.682-.26.943 0s.26.682 0 .943h0l-.943.943c-.26.26-.682.26-.943 0s-.26-.682 0-.943h0zm7.542 0l.943.943c.26.26.26.682 0 .943s-.682.26-.943 0l-.943-.943c-.26-.26-.26-.682 0-.943s.682-.26.943 0zM8 5.333c1.473 0 2.667 1.194 2.667 2.667S9.472 10.666 8 10.666 5.333 9.472 5.333 8 6.527 5.333 8 5.333zm0 1.333c-.736 0-1.333.597-1.333 1.333S7.263 9.333 8 9.333 9.333 8.736 9.333 8 8.736 6.666 8 6.666zm6 .667c.368 0 .667.298.667.667s-.298.667-.667.667h-1.333C12.298 8.666 12 8.368 12 8s.298-.667.667-.667H14zm-10.667 0c.368 0 .667.298.667.667s-.298.667-.667.667h0H2c-.368 0-.667-.298-.667-.667s.298-.667.667-.667h0zm9.381-4.047c.26.26.26.682 0 .943l-.943.943c-.26.26-.682.26-.943 0s-.26-.682 0-.943l.943-.943c.26-.26.682-.26.943 0zm-9.428 0c.26-.26.682-.26.943 0h0l.943.943c.26.26.26.682 0 .943s-.682.26-.943 0h0l-.943-.943c-.26-.26-.26-.682 0-.943zM8 1.333c.368 0 .667.298.667.667h0v1.333C8.666 3.701 8.368 4 8 4s-.667-.298-.667-.667h0V2c0-.368.298-.667.667-.667z"></path>
+  </symbol>
+  </svg>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  $(document).ready(function(){
+  $('.header_Search #headerSearch_input').click(function(){
+  $(".search_popup").css("display" , "block");
+   });
+  });
+  $(document).click(function() {
+  var container = $(".header_Search");
+  if (!container.is(event.target) && !container.has(event.target).length) {
+    $(".search_popup").css("display" , "none");
+  }
+  });
+</script>
+<script>
+$(".industries_slider").slick({
+  dots: false,
+  autoplay:false,
+/*   autoplaySpeed:2500, */
+  infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 1
+});
+ $('a[data-slide]').click(function(e) {
+   e.preventDefault();
+   var slideno = $(this).data('slide');
+   $('.slider-nav').slick('slickGoTo', slideno - 1);
+ });
+</script>
+<script>
+  $(document).ready(function(){
+    $('.addtoWatch').click(function() {
+      $('.addStock_dropdown').css({
+        "visibility": "visible" , 
+        "opacity": "1",
+        "transform": "translateY(0)",
+        "-webkit-transform": "translateY(0)"
+      });  
+    });
+    $(document). click(function() {
+      var container = $(".marketCount46");
+      if (! container. is(event. target) && ! container. has(event. target). length) {
+        $('.addStock_dropdown').css({
+        "visibility": "hidden" , 
+        "opacity": "0",
+        "transform": "translateY(10px)",
+        "-webkit-transform": "translateY(10px)"
+      }); 
+      }
+    });
+  });
+</script>
+<!--========= ADD STOCK DROPDOWN SCRIPT END ===========-->
+<!-- ========== TREE MAP BEGIN ============= -->
+<!-- Resources -->
+<script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/hierarchy.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+<!-- Chart code -->
+<!-- ========== TREE MAP BEGIN ============= -->
+<script>
+  am5.ready(function() {
+    am5.addLicense("AM5C311897715")
+  var root = am5.Root.new("treemap");
+  // Create wrapper container
+  var container = root.container.children.push(
+    am5.Container.new(root, {
+      width: am5.percent(100),
+      height: am5.percent(100),
+      layout: root.verticalLayout
+    })
+  );
+  // Create series
+  // https://www.amcharts.com/docs/v5/charts/hierarchy/#Adding
+  var series = container.children.push(am5hierarchy.Treemap.new(root, {
+      singleBranchOnly: true,
+      sort: "descending",
+      downDepth: 1,
+      upDepth: -1,
+      initialDepth: 2,
+      valueField: "PlotValue",
+      categoryField: "PlotColour",
+      childDataField: "children", 
+      nodePaddingOuter: 0,
+      nodePaddingInner: 0,
+    tooltip: am5.Tooltip.new(root, {
+      labelText: "{Evenly_Weighted}",
+      })})
+  );
+  series.labels.template.setAll({
+    fill: am5.color(0x000000),
+    fontSize: 14,text: "{Industry}"
+  });
+    
+  series.rectangles.template.adapters.add("fill", function(fill, target) {
+    if (target.dataItem.get("category") == "Red"  && target.dataItem.get("value")>0 && target.dataItem.get("value")<=5) {
+      return am5.color(0xFEABB7);}
+    else if (target.dataItem.get("category") == "Red"  && target.dataItem.get("value")>5 && target.dataItem.get("value")<=10) {
+      return am5.color(0xFE98A7);}
+    else if (target.dataItem.get("category") == "Red"  && target.dataItem.get("value")>10 && target.dataItem.get("value")<=15) {
+      return am5.color(0xFE8597);}
+    else if (target.dataItem.get("category") == "Red"  && target.dataItem.get("value")>15 && target.dataItem.get("value")<=20) {
+      return am5.color(0xFE7287);}
+    else if (target.dataItem.get("category") == "Red"  && target.dataItem.get("value")>20 && target.dataItem.get("value")<=25) {
+      return am5.color(0xFE5F77);}
+    else if (target.dataItem.get("category") == "Red"  && target.dataItem.get("value")>25 && target.dataItem.get("value")<=30) {
+      return am5.color(0xFE4C67);}
+    else if (target.dataItem.get("category") == "Red"  && target.dataItem.get("value")>30 && target.dataItem.get("value")<=35) {
+      return am5.color(0xFE3957);}
+    else if (target.dataItem.get("category") == "Red"  && target.dataItem.get("value")>35 && target.dataItem.get("value")<=40) {
+      return am5.color(0xE1304C);}
+    else if (target.dataItem.get("category") == "Red"  && target.dataItem.get("value")>40 && target.dataItem.get("value")<=45) {
+      return am5.color(0xC82A43);}
+    else if (target.dataItem.get("category") == "Red"  && target.dataItem.get("value")>45 && target.dataItem.get("value")<=50) {
+      return am5.color(0xAF243A);}
+       else if (target.dataItem.get("category") == "Blue"  && target.dataItem.get("value")>0 && target.dataItem.get("value")<=5) {
+      return am5.color(0xCDEEF3);}
+    else if (target.dataItem.get("category") == "Blue"  && target.dataItem.get("value")>5 && target.dataItem.get("value")<=10) {
+      return am5.color(0xBEE8F0);}
+    else if (target.dataItem.get("category") == "Blue"  && target.dataItem.get("value")>10 && target.dataItem.get("value")<=15) {
+      return am5.color(0xAFE2ED);}
+    else if (target.dataItem.get("category") == "Blue"  && target.dataItem.get("value")>15 && target.dataItem.get("value")<=20) {
+      return am5.color(0xA0DCEA);}
+    else if (target.dataItem.get("category") == "Blue"  && target.dataItem.get("value")>20 && target.dataItem.get("value")<=25) {
+      return am5.color(0x91D6E7);}
+    else if (target.dataItem.get("category") == "Blue"  && target.dataItem.get("value")>25 && target.dataItem.get("value")<=30) {
+      return am5.color(0x82D0E4);}
+    else if (target.dataItem.get("category") == "Blue"  && target.dataItem.get("value")>30 && target.dataItem.get("value")<=35) {
+      return am5.color(0x73CAE1);}
+    else if (target.dataItem.get("category") == "Blue"  && target.dataItem.get("value")>35 && target.dataItem.get("value")<=40) {
+      return am5.color(0x64C4DE);}
+    else if (target.dataItem.get("category") == "Blue"  && target.dataItem.get("value")>40 && target.dataItem.get("value")<=45) {
+      return am5.color(0x5CB1C5);}
+    else if (target.dataItem.get("category") == "Blue"  && target.dataItem.get("value")>45 && target.dataItem.get("value")<=50) {
+      return am5.color(0x519DAF);}
+    
+    
+    else  {return  fill;}
+  });	
+  
+  series.rectangles.template.setAll({
+    strokeWidth: 3,
+    cornerRadiusTL: 7,
+    cornerRadiusTR: 7,
+    cornerRadiusBL: 7,
+    cornerRadiusBR: 7
+  });
+  
+  // set data
+  // https://www.amcharts.com/docs/v5/charts/hierarchy/#Setting_data
+  var data = {
+    name: "Root",
+    children: [
+     {
+      "Date": "12/3/2021",
+      "Sector": "Consumer Discretionary",
+      "Industry": "Hotels, Restaurants & Leisure",
+      "Evenly_Weighted": 27.73039118,
+      "PlotValuesBlue": 0,
+      "PlotValuesRed": 22,
+      "PlotValue1": -22,
+      "PlotValue": 22,
+      "PlotColour": "Red"
+    },
+    {
+      "Date": "12/3/2021",
+      "Sector": "Consumer Discretionary",
+      "Industry": "Diversified Consumer Services",
+      "Evenly_Weighted": 32.47071667,
+      "PlotValuesBlue": 0,
+      "PlotValuesRed": 17,
+      "PlotValue1": -17,
+      "PlotValue": 17,
+      "PlotColour": "Red"
+    },
+    {
+      "Date": "12/3/2021",
+      "Sector": "Consumer Discretionary",
+      "Industry": "Internet & Direct Marketing Retail",
+      "Evenly_Weighted": 41.02723846,
+      "PlotValuesBlue": 0,
+      "PlotValuesRed": 8,
+      "PlotValue1": -8,
+      "PlotValue": 8,
+      "PlotColour": "Red"
+    },
+    {
+      "Date": "12/3/2021",
+      "Sector": "Consumer Discretionary",
+      "Industry": "Automobiles",
+      "Evenly_Weighted": 47.65067727,
+      "PlotValuesBlue": 0,
+      "PlotValuesRed": 2,
+      "PlotValue1": -2,
+      "PlotValue": 2,
+      "PlotColour": "Red"
+    },
+    {
+      "Date": "12/3/2021",
+      "Sector": "Consumer Discretionary",
+      "Industry": "Specialty Retail",
+      "Evenly_Weighted": 53.64648056,
+      "PlotValuesBlue": 3,
+      "PlotValuesRed": 0,
+      "PlotValue1": 3,
+      "PlotValue": 3,
+      "PlotColour": "Blue"
+    },
+    {
+      "Date": "12/3/2021",
+      "Sector": "Consumer Discretionary",
+      "Industry": "Leisure Products",
+      "Evenly_Weighted": 54.51673571,
+      "PlotValuesBlue": 4,
+      "PlotValuesRed": 0,
+      "PlotValue1": 4,
+      "PlotValue": 4,
+      "PlotColour": "Blue"
+    },
+    {
+      "Date": "12/3/2021",
+      "Sector": "Consumer Discretionary",
+      "Industry": "Textiles, Apparel & Luxury Goods",
+      "Evenly_Weighted": 55.56259688,
+      "PlotValuesBlue": 5,
+      "PlotValuesRed": 0,
+      "PlotValue1": 5,
+      "PlotValue": 5,
+      "PlotColour": "Blue"
+    },
+    {
+      "Date": "12/3/2021",
+      "Sector": "Consumer Discretionary",
+      "Industry": "Auto Components",
+      "Evenly_Weighted": 56.13373333,
+      "PlotValuesBlue": 6,
+      "PlotValuesRed": 0,
+      "PlotValue1": 6,
+      "PlotValue": 6,
+      "PlotColour": "Blue"
+    },
+    {
+      "Date": "12/3/2021",
+      "Sector": "Consumer Discretionary",
+      "Industry": "Multiline Retail",
+      "Evenly_Weighted": 57.2082625,
+      "PlotValuesBlue": 7,
+      "PlotValuesRed": 0,
+      "PlotValue1": 7,
+      "PlotValue": 7,
+      "PlotColour": "Blue"
+    },
+    {
+      "Date": "12/3/2021",
+      "Sector": "Consumer Discretionary",
+      "Industry": "Household Durables",
+      "Evenly_Weighted": 57.980206,
+      "PlotValuesBlue": 7,
+      "PlotValuesRed": 0,
+      "PlotValue1": 7,
+      "PlotValue": 8,
+      "PlotColour": "Blue"
+    },
+    {
+      "Date": "12/3/2021",
+      "Sector": "Consumer Discretionary",
+      "Industry": "Distributors",
+      "Evenly_Weighted": 61.0287,
+      "PlotValuesBlue": 11,
+      "PlotValuesRed": 0,
+      "PlotValue1": 11,
+      "PlotValue": 11,
+      "PlotColour": "Blue"
+    }]
+  };
+  
+  
+  series.data.setAll([data]);
+  series.set("selectedDataItem", series.dataItems[0]);
+  series.appear(1000, 100);
+  }); // end am5.ready()
+</script>
+<!-- ========== TREE MAP END ============= -->
+</body>
+</html>
