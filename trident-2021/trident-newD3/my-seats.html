@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<base href="">
+<meta charset="utf-8" />
+<title>Trident | User Management </title>
+<meta name="description" content="Updates and statistics" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
+<link href="assets/plugins/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
+<link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+<link href="assets/plugins/custom/prismjs/prismjs.bundle.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="assets/css/style.css" />
+<link rel="stylesheet" href="assets/css/responsive.css" />
+</head>
+<body id="kt_body" class="quick-panel-right demo-panel-right offcanvas-right header-fixed header-mobile-fixed subheader-enabled aside-enabled aside-static page-loading">
+<div class="d-flex flex-column flex-root">
+   <header>
+    <div class="container">
+      <div class="row pt-1 pb-1 logo_colWid"> <!-- CHANGES -->
+        <div class="col-lg-4 col-md-4 col-sm-4"> <!-- CHANGES --> <img class="auth_logo" src="assets/media/login_trident.png" alt="logo" /></div>
+        <div class="col-lg-8 col-md-8 col-sm-8"> <!-- CHANGES -->
+          <ul class="header_list">
+            <li class="mr-10"><a href="" class="text-white">Login</a></li>
+            <li><a class="text-white" href="">Sign Up</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="d-flex flex-column-fluid mt-6 mt-lg-0 bg-white margin--top"> <!-- CHANGES -->
+     <div class="col-lg-1 col-md-2 col-sm-2 col-xs-12 sidebar_list"> <!-- CHANGES -->
+		<div class="">
+           <div class="userProfile">
+              <div class=""> 
+                 <a href="#"><img src="assets/media/user-profile.png" alt="Finclub User Image"></a>
+              </div>
+              <div class="userContent">
+			     <p> shivani@meradesh.org</p>
+              </div>
+           </div>
+		   <ul class="tri_sidebarList">
+			  <li><a href="#">Users</a></li>
+			  <li><a href="#">Billing</a></li>
+			  <li><a href="#">My Susbscription</a></li>
+			  <li><a href="#">Logout</a></li>
+           </ul></div>
+	  </div>
+    <div class="col-lg-11 col-md-10 col-sm-10 col-xs-12"> <!-- CHANGES -->
+       <div class="card card-custom gutter-b my-10 shadow_none">
+          <div class="row">
+             <div class="card-body">
+                <div class="card-title">
+                   <h3 class="card-label font-size-h2 text-dark text-center">My Seats</h3>
+                </div>
+			    <div class="col-lg-12 mt-10">
+			       <div class="float-right"> 
+			          <a href="/MemberHome" class="btn btn-blue text-white">User Management</a> 
+				      <a href="#" id="btn_Refresh_MemberSeat" class="btn btn-blue text-white">Refresh</a>
+				   </div>
+                </div>
+			 </div>
+          </div>
+          <div class="row">
+             <div class="pl-10 pr-10 w-100">
+                <div class="table-responsive">
+                   <table class="table">
+                      <thead class="thead-dark">
+                         <tr>
+                            <th scope="col">Sr no.</th>
+                            <th scope="col">Seat Id</th>
+                            <th scope="col">Map User</th>
+                            <th scope="col">Active</th>
+                            <th scope="col">Map Seat</th>
+					        <th scope="col"></th> <th scope="col"></th><th scope="col"></th>
+                         </tr>
+                      </thead>
+                      <tbody>
+                         <tr>
+                            <th scope="row">1</th>
+                            <td>ADx9LUF1fN</td>
+					        <td> mvarun9<a href="#"> <i class="far fa-trash-alt"></i> </a></td>
+                            <td>True</td>
+                            <td>True</td>
+                            <td><a class="btn btn-blue text-white btn_openPopup_mapUser" href="#modal_mapUser" data-seatid="ADx9LUF1fN" data-toggle="modal">Map Seat</a></td>
+					        <td><a class="btn btn-blue text-white btn_openPopup_mapUser" href="#" data-toggle="modal">Delete</a></td>
+					        <td><a class="btn btn-blue text-white btn_openPopup_mapUser" href="#add_seats" data-toggle="modal">Add Seats</a></td>
+                         </tr>
+                         <tr>
+                            <th scope="row">1</th>
+                            <td>ADx9LUF1fN</td>
+					        <td> mvarun9<a href="#"> <i class="far fa-trash-alt"></i> </a></td>
+                            <td>True</td>
+                            <td>True</td>
+                            <td><a class="btn btn-blue text-white btn_openPopup_mapUser" href="#modal_mapUser" data-seatid="ADx9LUF1fN" data-toggle="modal">Map Seat</a></td>
+					        <td><a class="btn btn-blue text-white btn_openPopup_mapUser" href="#" data-toggle="modal">Delete</a></td>
+					        <td><a class="btn btn-blue text-white btn_openPopup_mapUser" href="#add_seats" data-toggle="modal">Add Seats</a></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </div>
+         </div>
+       </div>
+    </div>
+  </div>
+</div>
+<footer class="footer p-10" id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"> <img class="footer_logo" src="assets/media/mini-logo.png" alt="kievanos Logo"> </div>
+      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+        <ul class="footer_list">
+          <li><a class="text-white" href="https://kievanos.com/about">About us</a></li>
+          <li><a class="text-white" href="https://medium.com/@kievanos" target="_blank">Blog</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+        <ul class="footer_list">
+          <li><a class="text-white" href="https://kievanos.com/terms-of-use">Terms of use</a></li>
+          <li><a class="text-white" href="https://kievanos.com/privacy-policy">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+        <ul class="footer_list">
+          <li class="follow-box">Follow Us</li>
+          <li><a href="https://www.linkedin.com/company/kievanos" target="_blank"> <img src="assets/media/linkeding-icon_short.png" class="linked_inn" alt="linkedinn"> </a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="color-grey">Kievanos is not an SEC registered broker-dealer or investment advisor. This website does not constitute an offer or solicitation to transact in any security. Contents of this website including downloadable materials are intended for informational purposes only. All information presented is deemed to be accurate, but accuracy is not guaranteed. Certain products provided by Kievanos incorporate forecasts and/or culminate in forecasted outcomes; such forecasts should not be solely relied upon when making investment decisions. Kievanos offers neither legal, financial, nor tax advice. You are entirely responsible for determining whether any security or investment strategy meets suitability requirements for your investment objectives, financial circumstances and risk tolerance. You should consult your attorney, financial planner, or tax and accounting advisor regarding your specific legal, financial, business or tax situation.</p>
+  </div>
+  <div class="bottom-footer">
+    <div class="container">
+      <p>© 2020  Trident All rights reserved by <a href="https://kievanos.com/" target="_blabk">Kievanos</a></p>
+    </div>
+  </div>
+</footer>
+
+<!--begin Add Seats Modal-->
+<div class="modal fade" id="add_seats" tabindex="-1" role="dialog" aria-hidden="true" style="display:none;">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body auto_center p-10 text-center w-100">
+        <h5>Professional $20/Seat</h5>
+        <div class="mt-5 counter_box text-center"> <a href="#" class="minus_seats"><i class="ki ki-minus text-blue"></i></a>
+          <input type="text" placeholder="1">
+          <a href="#" class="add_seats"><i class="ki ki-plus text-white"></i></a>
+			<div class="seats_bg">
+			 <p class="mt-5 mb-1"> No. Of total seats : <strong>5</strong></p>
+			<p class="mb-1">Charge per seat $499</p>
+          <p class="mb-0"> Charges will be <strong>$40</strong> Total</p>
+			</div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-blue text-white" data-dismiss="modal">OK</button>
+        <button type="button" class="btn btn-default text-dark" data-dismiss="modal">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--end::Modal--> 
+
+<!--begin Map User Modal-->
+<div class="modal fade" id="modal_mapUser" tabindex="-1" role="dialog" style="display: none;" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div id="div_mapUserForm" class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Map Seat</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">×</span> </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group mb-0">
+          <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="input-daterange input-group">
+                <p class="form-text text-muted col-lg-12">Seat Id : 
+                <span id="lbl_mapUser_seatId"><b>ADx9LUF1fN</b></span>
+              </p>
+              <p class="form-text text-muted col-lg-12">User Name 
+                <input id="txt_mapUser_userName" type="text" class="form-control">
+              </p>
+             
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button id="btnMapUser" type="button" class="btn btn-blue text-white">Map User</button>
+		  <button id="btn_CloseMapUserPopup" type="button" class="btn btn-default text-dark" data-dismiss="modal">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--end::Modal--> 
+
+<script>var HOST_URL = "https://keenthemes.com/metronic/tools/preview";</script> 
+<script>var KTAppSettings = { "breakpoints": { "sm": 576, "md": 768, "lg": 992, "xl": 1200, "xxl": 1200 }, "colors": { "theme": { "base": { "white": "#ffffff", "primary": "#6993FF", "secondary": "#E5EAEE", "success": "#1BC5BD", "info": "#8950FC", "warning": "#FFA800", "danger": "#F64E60", "light": "#F3F6F9", "dark": "#212121" }, "light": { "white": "#ffffff", "primary": "#E1E9FF", "secondary": "#ECF0F3", "success": "#C9F7F5", "info": "#EEE5FF", "warning": "#FFF4DE", "danger": "#FFE2E5", "light": "#F3F6F9", "dark": "#D6D6E0" }, "inverse": { "white": "#ffffff", "primary": "#ffffff", "secondary": "#212121", "success": "#ffffff", "info": "#ffffff", "warning": "#ffffff", "danger": "#ffffff", "light": "#464E5F", "dark": "#ffffff" } }, "gray": { "gray-100": "#F3F6F9", "gray-200": "#ECF0F3", "gray-300": "#E5EAEE", "gray-400": "#D6D6E0", "gray-500": "#B5B5C3", "gray-600": "#80808F", "gray-700": "#464E5F", "gray-800": "#1B283F", "gray-900": "#212121" } }, "font-family": "Poppins" };</script> 
+<!--end::Global Config--> 
+<!--begin::Global Theme Bundle(used by all pages)--> 
+<script src="assets/plugins/global/plugins.bundle.js"></script> 
+<script src="assets/plugins/custom/prismjs/prismjs.bundle.js"></script> 
+<script src="assets/js/scripts.bundle.js"></script> 
+<!--end::Global Theme Bundle--> 
+<!--begin::Page Scripts(used by this page)--> 
+<script src="assets/js/pages/custom/login/login.js"></script> 
+<script src="https://js.stripe.com/v3/"></script> 
+<!--end::Page Scripts--> 
+<script type="text/javascript">
+       $(function () {
+           // Create a Stripe client.
+           var stripe = Stripe('pk_test_ryt6Rj4BnE6OSPmAiowpqm62');
+
+           // Create an instance of Elements.
+           var elements = stripe.elements();
+
+           // Custom styling can be passed to options when creating an Element.
+           // (Note that this demo uses a wider set of styles than the guide below.)
+           var style = {
+               base: {
+                   color: '#32325d',
+                   lineHeight: '18px',
+                   fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
+                   fontSmoothing: 'antialiased',
+                   fontSize: '16px',
+                   '::placeholder': {
+                       color: '#aab7c4'
+                   }
+               },
+               invalid: {
+                   color: '#fa755a',
+                   iconColor: '#fa755a'
+               }
+           };
+
+           // Create an instance of the card Element.
+           var card = elements.create('card', { style: style });
+
+           // Add an instance of the card Element into the `card-element` <div>.
+           card.mount('#card-element');
+
+           // Handle real-time validation errors from the card Element.
+           card.addEventListener('change', function (event) {
+               var displayError = document.getElementById('card-errors');
+               if (event.error) {
+                   displayError.textContent = event.error.message;
+               } else {
+                   displayError.textContent = '';
+               }
+           });
+
+           // Handle form submission.
+           var form = document.getElementById('payment-form');
+           form.addEventListener('submit', function (event) {
+               event.preventDefault();
+
+               stripe.createToken(card).then(function (result) {
+                   if (result.error) {
+// Inform the user if there was an error.
+                       var errorElement = document.getElementById('card-errors');
+                       errorElement.textContent = result.error.message;
+                   } else {
+                       // Send the token to your server.
+                       stripeTokenHandler(result.token);
+                   }
+               });
+           });
+
+           // Submit the form with the token ID.
+           function stripeTokenHandler(token) {
+               // Insert the token ID into the form so it gets submitted to the server
+               var form = document.getElementById('payment-form');
+               var hiddenInput = document.createElement('input');
+               hiddenInput.setAttribute('type', 'hidden');
+               hiddenInput.setAttribute('name', 'stripeToken');
+               hiddenInput.setAttribute('value', token.id);
+               form.appendChild(hiddenInput);
+               alert(token.id);
+               // Submit the form
+               form.submit();
+           }
+       });
+   </script>
+</body>
+<!--end::Body-->
+</html>
