@@ -1,0 +1,542 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="305.6" height="175.398" viewBox="0 0 305.6 175.398">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.496" y1="1.01" x2="0.503" y2="0.155" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="0.091" stop-color="#d9dbdc"/>
+      <stop offset="0.701" stop-color="#d9dbdc"/>
+      <stop offset="0.801" stop-color="#d9dbdc"/>
+      <stop offset="0.901" stop-color="#dbddde"/>
+      <stop offset="0.944" stop-color="#e2e4e4"/>
+      <stop offset="0.975" stop-color="#efeff0"/>
+      <stop offset="1" stop-color="#fff"/>
+    </linearGradient>
+    <clipPath id="clip-path">
+      <path id="Path_97" data-name="Path 97" d="M598.8,345.3h-253V182.8a7.127,7.127,0,0,1,7.1-7.1H591.6a7.127,7.127,0,0,1,7.1,7.1V345.3Z" transform="translate(-249 -329.3)"/>
+    </clipPath>
+    <radialGradient id="radial-gradient" cx="0.5" cy="0.499" r="5.791" gradientTransform="translate(-1.361 0.456) scale(0.086 0.086)" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#a7a9ac"/>
+      <stop offset="0.003" stop-color="#a8aaad"/>
+      <stop offset="0.179" stop-color="#c7c8ca"/>
+      <stop offset="0.362" stop-color="#e0e0e1"/>
+      <stop offset="0.554" stop-color="#f1f1f2"/>
+      <stop offset="0.759" stop-color="#fcfcfc"/>
+      <stop offset="1" stop-color="#fff"/>
+    </radialGradient>
+    <clipPath id="clip-path-2">
+      <path id="Path_98" data-name="Path 98" d="M598.8,345.3h-253V182.8a7.127,7.127,0,0,1,7.1-7.1H591.6a7.127,7.127,0,0,1,7.1,7.1V345.3Z" transform="translate(-159.2 -333.6)"/>
+    </clipPath>
+    <radialGradient id="radial-gradient-2" cx="0.5" cy="0.501" r="5.791" gradientTransform="translate(-1.194 0.457) scale(0.086 0.086)" xlink:href="#radial-gradient"/>
+    <clipPath id="clip-path-3">
+      <path id="Path_99" data-name="Path 99" d="M598.8,345.3h-253V182.8a7.127,7.127,0,0,1,7.1-7.1H591.6a7.127,7.127,0,0,1,7.1,7.1V345.3Z" transform="translate(-321.9 -334.7)"/>
+    </clipPath>
+    <radialGradient id="radial-gradient-3" cx="0.5" cy="0.5" r="5.791" gradientTransform="translate(-1.497 0.457) scale(0.086 0.086)" xlink:href="#radial-gradient"/>
+    <linearGradient id="linear-gradient-2" y1="0.508" x2="1" y2="0.508" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="0.027" stop-color="#d9dbdc"/>
+      <stop offset="0.089" stop-color="#e9eaeb"/>
+      <stop offset="0.17" stop-color="#f6f6f6"/>
+      <stop offset="0.278" stop-color="#fdfdfd"/>
+      <stop offset="0.521" stop-color="#fff"/>
+      <stop offset="0.753" stop-color="#fdfdfd"/>
+      <stop offset="0.837" stop-color="#f6f7f7"/>
+      <stop offset="0.896" stop-color="#ebebec"/>
+      <stop offset="0.944" stop-color="#dadbdc"/>
+      <stop offset="0.962" stop-color="#d1d3d4"/>
+      <stop offset="1" stop-color="#fff"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" y1="0.5" x2="1" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0.048" stop-color="#bcbec0"/>
+      <stop offset="0.254" stop-color="#dddfdf"/>
+      <stop offset="0.403" stop-color="#f1f2f2"/>
+      <stop offset="0.554" stop-color="#ebecec"/>
+      <stop offset="0.758" stop-color="#d9dbdc"/>
+      <stop offset="0.992" stop-color="#bdbfc1"/>
+      <stop offset="1" stop-color="#bcbec0"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-4" y1="0.507" x2="1" y2="0.507" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#bcbec0"/>
+      <stop offset="0.995" stop-color="#fff"/>
+    </linearGradient>
+    <clipPath id="clip-path-4">
+      <rect id="Rectangle_16" data-name="Rectangle 16" width="148.5" height="231.8" transform="translate(588.169 186.168) rotate(90)" opacity="0.63"/>
+    </clipPath>
+    <clipPath id="clip-path-5">
+      <rect id="Rectangle_17" data-name="Rectangle 17" width="148.5" height="231.8" transform="translate(588.169 186.168) rotate(90)"/>
+    </clipPath>
+    <linearGradient id="linear-gradient-5" x1="0.517" y1="0.997" x2="0.517" y2="-0.001" gradientUnits="objectBoundingBox">
+      <stop offset="0.005" stop-color="#28a6f0" stop-opacity="0"/>
+      <stop offset="0.176" stop-color="#30aaf1" stop-opacity="0.173"/>
+      <stop offset="0.445" stop-color="#47b6f5" stop-opacity="0.443"/>
+      <stop offset="0.777" stop-color="#6bc8fb" stop-opacity="0.776"/>
+      <stop offset="1" stop-color="#88d7ff"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-6" x1="0.497" y1="1.001" x2="0.497" y2="0.001" xlink:href="#linear-gradient-5"/>
+    <linearGradient id="linear-gradient-7" x1="0.506" y1="0.996" x2="0.506" y2="-0.002" xlink:href="#linear-gradient-5"/>
+    <linearGradient id="linear-gradient-8" x1="0.515" y1="1.001" x2="0.515" y2="0" xlink:href="#linear-gradient-5"/>
+    <linearGradient id="linear-gradient-9" x1="0.495" y1="1.002" x2="0.495" y2="0.001" xlink:href="#linear-gradient-5"/>
+    <linearGradient id="linear-gradient-10" x1="0.504" y1="1.002" x2="0.504" y2="0.001" xlink:href="#linear-gradient-5"/>
+    <linearGradient id="linear-gradient-11" x1="0.512" y1="0.997" x2="0.512" y2="-0.001" xlink:href="#linear-gradient-5"/>
+    <linearGradient id="linear-gradient-12" x1="0.493" y1="0.998" x2="0.493" y2="-0.001" xlink:href="#linear-gradient-5"/>
+    <linearGradient id="linear-gradient-13" x1="0.501" y1="1.001" x2="0.501" y2="0" xlink:href="#linear-gradient-5"/>
+    <linearGradient id="linear-gradient-14" x1="0.51" y1="0.998" x2="0.51" y2="-0.001" xlink:href="#linear-gradient-5"/>
+    <linearGradient id="linear-gradient-15" x1="0.519" y1="1.001" x2="0.519" y2="0" xlink:href="#linear-gradient-5"/>
+    <linearGradient id="linear-gradient-16" x1="0.499" y1="0.997" x2="0.499" y2="-0.001" xlink:href="#linear-gradient-5"/>
+    <linearGradient id="linear-gradient-17" x1="0.508" y1="0.996" x2="0.508" y2="-0.002" xlink:href="#linear-gradient-5"/>
+    <linearGradient id="linear-gradient-18" x1="0.516" y1="1.002" x2="0.516" y2="0.001" xlink:href="#linear-gradient-5"/>
+    <linearGradient id="linear-gradient-19" x1="0.497" y1="1.001" x2="0.497" y2="0" xlink:href="#linear-gradient-5"/>
+    <linearGradient id="linear-gradient-20" x1="0.505" y1="1.002" x2="0.505" y2="-0.001" xlink:href="#linear-gradient-5"/>
+    <linearGradient id="linear-gradient-21" x1="0.514" y1="1.001" x2="0.514" y2="0" xlink:href="#linear-gradient-5"/>
+    <linearGradient id="linear-gradient-22" x1="0.494" y1="1.001" x2="0.494" y2="0" xlink:href="#linear-gradient-5"/>
+    <linearGradient id="linear-gradient-23" x1="0.503" y1="1.001" x2="0.503" y2="0" xlink:href="#linear-gradient-5"/>
+    <linearGradient id="linear-gradient-24" x1="0.512" y1="0.998" x2="0.512" y2="-0.001" xlink:href="#linear-gradient-5"/>
+    <linearGradient id="linear-gradient-25" x1="0.492" y1="0.997" x2="0.492" y2="-0.001" xlink:href="#linear-gradient-5"/>
+    <linearGradient id="linear-gradient-26" x1="0.501" y1="0.996" x2="0.501" y2="-0.002" xlink:href="#linear-gradient-5"/>
+    <linearGradient id="linear-gradient-27" x1="0.509" y1="0.998" x2="0.509" y2="-0.001" xlink:href="#linear-gradient-5"/>
+    <linearGradient id="linear-gradient-28" x1="0.518" y1="0.998" x2="0.518" y2="-0.001" xlink:href="#linear-gradient-5"/>
+    <linearGradient id="linear-gradient-29" x1="0.498" y1="0.998" x2="0.498" y2="-0.001" xlink:href="#linear-gradient-5"/>
+    <linearGradient id="linear-gradient-30" x1="0.507" y1="1.002" x2="0.507" y2="-0.001" xlink:href="#linear-gradient-5"/>
+    <linearGradient id="linear-gradient-31" x1="0.516" y1="0.998" x2="0.516" y2="-0.001" xlink:href="#linear-gradient-5"/>
+    <linearGradient id="linear-gradient-32" x1="0.496" y1="1.001" x2="0.496" y2="0.001" xlink:href="#linear-gradient-5"/>
+    <linearGradient id="linear-gradient-33" x1="0.505" y1="1.001" x2="0.505" y2="0" xlink:href="#linear-gradient-5"/>
+    <linearGradient id="linear-gradient-34" x1="0.513" y1="1.001" x2="0.513" y2="0.001" xlink:href="#linear-gradient-5"/>
+    <linearGradient id="linear-gradient-35" x1="0.494" y1="0.998" x2="0.494" y2="-0.001" xlink:href="#linear-gradient-5"/>
+    <linearGradient id="linear-gradient-36" x1="0.502" y1="1.001" x2="0.502" y2="0" xlink:href="#linear-gradient-5"/>
+    <linearGradient id="linear-gradient-37" x1="0.511" y1="1.001" x2="0.511" y2="0" xlink:href="#linear-gradient-5"/>
+    <linearGradient id="linear-gradient-38" x1="0.52" y1="0.998" x2="0.52" y2="-0.001" xlink:href="#linear-gradient-5"/>
+    <linearGradient id="linear-gradient-39" x1="0.5" y1="1.001" x2="0.5" y2="0.001" xlink:href="#linear-gradient-5"/>
+    <linearGradient id="linear-gradient-40" x1="0.509" y1="1.001" x2="0.509" y2="0" xlink:href="#linear-gradient-5"/>
+    <linearGradient id="linear-gradient-41" x1="0.518" y1="1.001" x2="0.518" y2="0.001" xlink:href="#linear-gradient-5"/>
+    <linearGradient id="linear-gradient-42" x1="0.498" y1="0.999" x2="0.498" y2="-0.001" xlink:href="#linear-gradient-5"/>
+    <linearGradient id="linear-gradient-43" x1="0.506" y1="1.001" x2="0.506" y2="0" xlink:href="#linear-gradient-5"/>
+    <linearGradient id="linear-gradient-44" x1="0.515" y1="0.998" x2="0.515" y2="-0.001" xlink:href="#linear-gradient-5"/>
+    <linearGradient id="linear-gradient-45" x1="0.495" y1="0.998" x2="0.495" y2="-0.001" xlink:href="#linear-gradient-5"/>
+    <linearGradient id="linear-gradient-46" x1="0.504" y1="0.998" x2="0.504" y2="-0.001" xlink:href="#linear-gradient-5"/>
+    <linearGradient id="linear-gradient-47" x1="0.513" y1="1.001" x2="0.513" y2="0" xlink:href="#linear-gradient-5"/>
+    <linearGradient id="linear-gradient-48" x1="0.516" y1="0.997" x2="0.516" y2="-0.001" xlink:href="#linear-gradient-5"/>
+    <linearGradient id="linear-gradient-49" x1="0.496" y1="1.001" x2="0.496" y2="0.001" xlink:href="#linear-gradient-5"/>
+    <linearGradient id="linear-gradient-50" x1="0.505" y1="0.996" x2="0.505" y2="-0.002" xlink:href="#linear-gradient-5"/>
+    <linearGradient id="linear-gradient-51" x1="0.494" y1="1" x2="0.494" y2="-0.002" xlink:href="#linear-gradient-5"/>
+    <linearGradient id="linear-gradient-52" x1="0.502" y1="1" x2="0.502" y2="0" xlink:href="#linear-gradient-5"/>
+    <linearGradient id="linear-gradient-53" x1="0.511" y1="1" x2="0.511" y2="0.001" xlink:href="#linear-gradient-5"/>
+    <linearGradient id="linear-gradient-54" x1="0.495" y1="0.999" x2="0.495" gradientUnits="objectBoundingBox">
+      <stop offset="0.011" stop-color="#28a6f0"/>
+      <stop offset="0.181" stop-color="#30aaf1"/>
+      <stop offset="0.448" stop-color="#47b6f5"/>
+      <stop offset="0.778" stop-color="#6bc8fb"/>
+      <stop offset="1" stop-color="#88d7ff"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-55" x1="0.502" y1="0.999" x2="0.502" gradientUnits="objectBoundingBox">
+      <stop offset="0.011" stop-color="#f01f15"/>
+      <stop offset="0.16" stop-color="#f1271d"/>
+      <stop offset="0.395" stop-color="#f43c34"/>
+      <stop offset="0.687" stop-color="#f95f59"/>
+      <stop offset="1" stop-color="#ff8c88"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-56" x1="0.503" y1="1.01" x2="0.503" y2="0.005" xlink:href="#linear-gradient-54"/>
+    <linearGradient id="linear-gradient-57" x1="0.49" y1="1" x2="0.49" y2="-0.005" xlink:href="#linear-gradient-55"/>
+    <linearGradient id="linear-gradient-58" x1="0.505" y1="1.005" x2="0.505" y2="-0.001" xlink:href="#linear-gradient-54"/>
+    <linearGradient id="linear-gradient-59" x1="0.505" y1="1.009" x2="0.505" y2="0.004" xlink:href="#linear-gradient-55"/>
+    <linearGradient id="linear-gradient-60" x1="0.492" y1="1.001" x2="0.492" y2="-0.004" xlink:href="#linear-gradient-55"/>
+    <linearGradient id="linear-gradient-61" x1="0.499" y1="1.005" x2="0.499" y2="0" xlink:href="#linear-gradient-54"/>
+    <linearGradient id="linear-gradient-62" x1="0.504" y1="1.003" x2="0.504" y2="-0.002" xlink:href="#linear-gradient-54"/>
+    <linearGradient id="linear-gradient-63" x1="0.491" y1="1.008" x2="0.491" y2="0.002" xlink:href="#linear-gradient-54"/>
+    <linearGradient id="linear-gradient-64" x1="0.489" y1="1.001" x2="0.489" y2="0.002" xlink:href="#linear-gradient-55"/>
+    <linearGradient id="linear-gradient-65" x1="0.49" y1="0.998" x2="0.49" y2="0.002" xlink:href="#linear-gradient-54"/>
+    <linearGradient id="linear-gradient-66" x1="0.502" y1="1.002" x2="0.502" y2="0.004" xlink:href="#linear-gradient-54"/>
+    <linearGradient id="linear-gradient-67" x1="0.496" y1="0.995" x2="0.496" y2="-0.003" xlink:href="#linear-gradient-55"/>
+    <linearGradient id="linear-gradient-68" x1="0.504" y1="1.007" x2="0.504" y2="0.003" xlink:href="#linear-gradient-55"/>
+    <linearGradient id="linear-gradient-69" x1="0.496" y1="0.992" x2="0.496" y2="-0.005" xlink:href="#linear-gradient-55"/>
+    <linearGradient id="linear-gradient-70" x1="0.503" y1="1.004" x2="0.503" y2="0.003" xlink:href="#linear-gradient-55"/>
+    <linearGradient id="linear-gradient-71" x1="0.489" y1="1" x2="0.489" y2="0.003" xlink:href="#linear-gradient-54"/>
+    <linearGradient id="linear-gradient-72" x1="0.49" y1="0.999" x2="0.49" y2="0.002" xlink:href="#linear-gradient-54"/>
+    <linearGradient id="linear-gradient-73" x1="0.491" y1="1.006" x2="0.491" y2="0.003" xlink:href="#linear-gradient-54"/>
+    <linearGradient id="linear-gradient-74" x1="0.485" y1="1" x2="0.485" y2="-0.003" xlink:href="#linear-gradient-54"/>
+    <linearGradient id="linear-gradient-75" x1="0.489" y1="1" x2="0.489" y2="0.004" xlink:href="#linear-gradient-54"/>
+    <linearGradient id="linear-gradient-76" x1="0.504" y1="0.997" x2="0.504" y2="0" xlink:href="#linear-gradient-55"/>
+    <linearGradient id="linear-gradient-77" x1="0.496" y1="0.998" x2="0.496" y2="0" xlink:href="#linear-gradient-54"/>
+    <linearGradient id="linear-gradient-78" x1="0.498" y1="0.996" x2="0.498" y2="-0.002" xlink:href="#linear-gradient-54"/>
+    <linearGradient id="linear-gradient-79" x1="0.499" y1="1.001" x2="0.499" y2="0.001" xlink:href="#linear-gradient-54"/>
+    <linearGradient id="linear-gradient-80" x1="0.498" y1="0.996" x2="0.498" y2="-0.001" xlink:href="#linear-gradient-54"/>
+    <linearGradient id="linear-gradient-81" x1="0.488" y1="0.997" x2="0.488" y2="-0.001" xlink:href="#linear-gradient-54"/>
+    <linearGradient id="linear-gradient-82" x1="0.491" y1="0.996" x2="0.491" y2="-0.001" xlink:href="#linear-gradient-55"/>
+    <linearGradient id="linear-gradient-83" x1="0.485" y1="0.999" x2="0.485" y2="0.002" xlink:href="#linear-gradient-54"/>
+    <linearGradient id="linear-gradient-84" x1="0.495" y1="0.998" x2="0.495" y2="0" xlink:href="#linear-gradient-54"/>
+    <linearGradient id="linear-gradient-85" x1="0.497" y1="1.003" x2="0.497" y2="-0.004" xlink:href="#linear-gradient-54"/>
+    <linearGradient id="linear-gradient-86" x1="0.497" y1="1.011" x2="0.497" y2="0.005" xlink:href="#linear-gradient-55"/>
+    <linearGradient id="linear-gradient-87" x1="0.49" y1="0.987" x2="0.49" y2="-0.007" xlink:href="#linear-gradient-54"/>
+    <linearGradient id="linear-gradient-88" x1="0.503" y1="0.999" x2="0.503" y2="-0.005" xlink:href="#linear-gradient-55"/>
+    <linearGradient id="linear-gradient-89" x1="0.497" y1="0.998" x2="0.497" y2="-0.001" xlink:href="#linear-gradient-55"/>
+    <linearGradient id="linear-gradient-90" x1="0.504" y1="0.995" x2="0.504" y2="-0.005" xlink:href="#linear-gradient-54"/>
+    <linearGradient id="linear-gradient-91" x1="0.498" y1="1" x2="0.498" y2="0.002" xlink:href="#linear-gradient-55"/>
+    <linearGradient id="linear-gradient-92" x1="0.488" y1="0.997" x2="0.488" y2="0" xlink:href="#linear-gradient-54"/>
+    <linearGradient id="linear-gradient-93" x1="0.489" y1="1.002" x2="0.489" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#f01f15" stop-opacity="0"/>
+      <stop offset="0.063" stop-color="#f1271d" stop-opacity="0.149"/>
+      <stop offset="0.163" stop-color="#f43c34" stop-opacity="0.388"/>
+      <stop offset="0.287" stop-color="#f95f59" stop-opacity="0.682"/>
+      <stop offset="0.419" stop-color="#ff8c88"/>
+      <stop offset="0.51" stop-color="#fb726d" stop-opacity="0.843"/>
+      <stop offset="0.656" stop-color="#f74e47" stop-opacity="0.592"/>
+      <stop offset="0.791" stop-color="#f3342b" stop-opacity="0.361"/>
+      <stop offset="0.91" stop-color="#f1251b" stop-opacity="0.157"/>
+      <stop offset="1" stop-color="#f01f15" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-94" x1="0.496" y1="0.999" x2="0.496" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#28a6f0" stop-opacity="0"/>
+      <stop offset="0.072" stop-color="#30aaf1" stop-opacity="0.173"/>
+      <stop offset="0.185" stop-color="#47b6f5" stop-opacity="0.443"/>
+      <stop offset="0.325" stop-color="#6bc8fb" stop-opacity="0.776"/>
+      <stop offset="0.419" stop-color="#88d7ff"/>
+      <stop offset="0.451" stop-color="#80d3fe" stop-opacity="0.945"/>
+      <stop offset="0.615" stop-color="#5abff8" stop-opacity="0.663"/>
+      <stop offset="0.766" stop-color="#3eb1f4" stop-opacity="0.404"/>
+      <stop offset="0.899" stop-color="#2ea9f1" stop-opacity="0.173"/>
+      <stop offset="1" stop-color="#28a6f0" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-95" x1="0.503" y1="1" x2="0.503" y2="-0.003" xlink:href="#linear-gradient-94"/>
+    <linearGradient id="linear-gradient-96" x1="0.504" y1="0.998" x2="0.504" y2="-0.001" xlink:href="#linear-gradient-94"/>
+    <linearGradient id="linear-gradient-97" x1="0.504" y1="0.999" x2="0.504" y2="0" xlink:href="#linear-gradient-93"/>
+    <linearGradient id="linear-gradient-98" x1="0.49" y1="1" x2="0.49" y2="-0.001" xlink:href="#linear-gradient-94"/>
+    <linearGradient id="linear-gradient-99" x1="0.505" y1="1.001" x2="0.505" y2="0" xlink:href="#linear-gradient-94"/>
+    <linearGradient id="linear-gradient-100" x1="0.498" y1="1" x2="0.498" y2="0.001" xlink:href="#linear-gradient-93"/>
+    <linearGradient id="linear-gradient-101" x1="0.505" y1="0.999" x2="0.505" y2="0" xlink:href="#linear-gradient-93"/>
+    <linearGradient id="linear-gradient-102" x1="0.491" y1="0.999" x2="0.491" y2="-0.001" xlink:href="#linear-gradient-94"/>
+    <linearGradient id="linear-gradient-103" x1="0.499" y1="0.999" x2="0.499" y2="0" xlink:href="#linear-gradient-94"/>
+    <linearGradient id="linear-gradient-104" x1="0.492" y1="1" x2="0.492" y2="0.001" xlink:href="#linear-gradient-93"/>
+    <linearGradient id="linear-gradient-105" x1="0.499" y1="1" x2="0.499" y2="0.001" xlink:href="#linear-gradient-94"/>
+    <linearGradient id="linear-gradient-106" x1="0.528" y1="1.031" x2="0.528" y2="0.041" xlink:href="#linear-gradient-54"/>
+    <linearGradient id="linear-gradient-107" x1="0.508" y1="0.981" x2="0.508" y2="-0.008" xlink:href="#linear-gradient-54"/>
+    <linearGradient id="linear-gradient-108" x1="0.481" y1="0.993" x2="0.481" y2="0.003" xlink:href="#linear-gradient-54"/>
+    <linearGradient id="linear-gradient-109" x1="0.536" y1="0.991" x2="0.536" y2="0.001" xlink:href="#linear-gradient-54"/>
+    <linearGradient id="linear-gradient-110" x1="0.509" y1="1.015" x2="0.509" y2="0.025" xlink:href="#linear-gradient-55"/>
+    <linearGradient id="linear-gradient-111" x1="0.482" y1="1.034" x2="0.482" y2="0.044" xlink:href="#linear-gradient-54"/>
+    <linearGradient id="linear-gradient-112" x1="0.538" y1="1.006" x2="0.538" y2="0.016" xlink:href="#linear-gradient-54"/>
+    <linearGradient id="linear-gradient-113" x1="0.51" y1="0.959" x2="0.51" y2="-0.031" xlink:href="#linear-gradient-55"/>
+    <linearGradient id="linear-gradient-114" x1="0.518" y1="0.977" x2="0.518" y2="-0.012" xlink:href="#linear-gradient-54"/>
+    <linearGradient id="linear-gradient-115" x1="0.49" y1="1.036" x2="0.49" y2="0.046" xlink:href="#linear-gradient-54"/>
+    <linearGradient id="linear-gradient-116" x1="0.546" y1="1.005" x2="0.546" y2="0.016" xlink:href="#linear-gradient-54"/>
+    <linearGradient id="linear-gradient-117" x1="0.519" y1="0.985" x2="0.519" y2="-0.004" xlink:href="#linear-gradient-54"/>
+    <linearGradient id="linear-gradient-118" x1="0.492" y1="1.019" x2="0.492" y2="0.029" xlink:href="#linear-gradient-55"/>
+    <linearGradient id="linear-gradient-119" x1="0.483" y1="1.005" x2="0.483" y2="0.016" xlink:href="#linear-gradient-54"/>
+    <linearGradient id="linear-gradient-120" x1="0.521" y1="0.995" x2="0.521" y2="0.005" xlink:href="#linear-gradient-54"/>
+    <linearGradient id="linear-gradient-121" x1="0.476" y1="0.959" x2="0.476" y2="-0.031" xlink:href="#linear-gradient-55"/>
+    <linearGradient id="linear-gradient-122" x1="0.515" y1="1.002" x2="0.515" y2="0.013" xlink:href="#linear-gradient-55"/>
+    <linearGradient id="linear-gradient-123" x1="0.47" y1="0.987" x2="0.47" y2="-0.002" xlink:href="#linear-gradient-54"/>
+    <linearGradient id="linear-gradient-124" x1="0.487" y1="1.003" x2="0.487" y2="0.013" xlink:href="#linear-gradient-54"/>
+    <linearGradient id="linear-gradient-125" x1="0.493" y1="1.021" x2="0.493" y2="0.031" xlink:href="#linear-gradient-54"/>
+    <linearGradient id="linear-gradient-126" x1="0.466" y1="0.956" x2="0.466" y2="-0.033" xlink:href="#linear-gradient-54"/>
+    <linearGradient id="linear-gradient-127" x1="0.522" y1="0.975" x2="0.522" y2="-0.015" xlink:href="#linear-gradient-54"/>
+    <linearGradient id="linear-gradient-128" x1="0.509" y1="0.993" x2="0.509" y2="0.004" xlink:href="#linear-gradient-54"/>
+    <linearGradient id="linear-gradient-129" x1="0.52" y1="1.021" x2="0.52" y2="0.031" xlink:href="#linear-gradient-55"/>
+    <linearGradient id="linear-gradient-130" x1="0.523" y1="0.965" x2="0.523" y2="-0.025" xlink:href="#linear-gradient-54"/>
+  </defs>
+  <g id="Group_20" data-name="Group 20" transform="translate(-549.5 -343.402)">
+    <g id="XMLID_10_" transform="translate(230 168)">
+      <g id="XMLID_328_">
+        <g id="XMLID_334_">
+          <path id="XMLID_498_" d="M598.8,345.3h-253V182.8a7.127,7.127,0,0,1,7.1-7.1H591.6a7.127,7.127,0,0,1,7.1,7.1V345.3Z" fill="url(#linear-gradient)"/>
+          <path id="XMLID_497_" d="M356.4,334.7V186.2H588.2V334.7Z" fill="#4f2150"/>
+          <g id="XMLID_495_">
+            <g id="Group_16" data-name="Group 16">
+              <rect id="Rectangle_15" data-name="Rectangle 15" width="253.4" height="170.1" transform="translate(345.592 175.402)" fill="none"/>
+            </g>
+          </g>
+          <rect id="XMLID_491_" width="148.5" height="231.8" transform="translate(588.169 186.168) rotate(90)" fill="none" stroke="#e1e1e5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="0.466"/>
+          <path id="XMLID_490_" d="M473.7,181.3a1.4,1.4,0,1,1-1.4-1.4A1.312,1.312,0,0,1,473.7,181.3Z" fill="#d4d5d6"/>
+        </g>
+        <g id="XMLID_329_">
+          <g id="Group_17" data-name="Group 17" transform="translate(249 329.3)" clip-path="url(#clip-path)">
+            <ellipse id="XMLID_333_" cx="224.7" cy="19.4" rx="224.7" ry="19.4" fill="url(#radial-gradient)"/>
+          </g>
+          <g id="Group_18" data-name="Group 18" transform="translate(159.2 333.6)" clip-path="url(#clip-path-2)">
+            <ellipse id="XMLID_332_" cx="224.7" cy="19.4" rx="224.7" ry="19.4" fill="url(#radial-gradient-2)"/>
+          </g>
+          <g id="Group_19" data-name="Group 19" transform="translate(321.9 334.7)" clip-path="url(#clip-path-3)">
+            <ellipse id="XMLID_331_" cx="224.7" cy="19.4" rx="224.7" ry="19.4" fill="url(#radial-gradient-3)"/>
+          </g>
+        </g>
+        <path id="XMLID_394_" d="M612.1,350.8H332.5a26.664,26.664,0,0,1-6.9-.9,20.125,20.125,0,0,1-6.1-2.9H625.1a22.8,22.8,0,0,1-6.1,2.9A27.237,27.237,0,0,1,612.1,350.8Z" fill="#fff"/>
+        <path id="XMLID_494_" d="M625.1,347H319.5v-2.8a.43.43,0,0,1,.4-.4H624.7a.43.43,0,0,1,.4.4Z" fill="url(#linear-gradient-2)"/>
+        <path id="XMLID_493_" d="M493.8,347h-43a3.159,3.159,0,0,1-3.2-3.2v-.1H497v.1A3.159,3.159,0,0,1,493.8,347Z" fill="url(#linear-gradient-3)"/>
+        <path id="XMLID_492_" d="M612.1,350.3H332.5a26.858,26.858,0,0,1-10.8-2.3l-2.2-1H625.1l-2.2,1A26.858,26.858,0,0,1,612.1,350.3Z" fill="url(#linear-gradient-4)"/>
+      </g>
+      <g id="XMLID_325_" opacity="0.63">
+        <g id="XMLID_663_" opacity="0.51" clip-path="url(#clip-path-4)">
+          <g id="XMLID_683_">
+            <line id="XMLID_704_" y2="246.6" transform="translate(285.2 147.5)" fill="none" stroke="#0034a5" stroke-miterlimit="10" stroke-width="0.414"/>
+            <line id="XMLID_703_" y2="246.6" transform="translate(301.9 147.5)" fill="none" stroke="#0034a5" stroke-miterlimit="10" stroke-width="0.414"/>
+            <line id="XMLID_702_" y2="246.6" transform="translate(318.6 147.5)" fill="none" stroke="#0034a5" stroke-miterlimit="10" stroke-width="0.414"/>
+            <line id="XMLID_701_" y2="246.6" transform="translate(335.2 147.5)" fill="none" stroke="#0034a5" stroke-miterlimit="10" stroke-width="0.414"/>
+            <line id="XMLID_700_" y2="246.6" transform="translate(351.9 147.5)" fill="none" stroke="#0034a5" stroke-miterlimit="10" stroke-width="0.414"/>
+            <line id="XMLID_699_" y2="246.6" transform="translate(368.6 147.5)" fill="none" stroke="#0034a5" stroke-miterlimit="10" stroke-width="0.414"/>
+            <line id="XMLID_698_" y2="246.6" transform="translate(385.3 147.5)" fill="none" stroke="#0034a5" stroke-miterlimit="10" stroke-width="0.414"/>
+            <line id="XMLID_697_" y2="246.6" transform="translate(402 147.5)" fill="none" stroke="#0034a5" stroke-miterlimit="10" stroke-width="0.414"/>
+            <line id="XMLID_696_" y2="246.6" transform="translate(418.7 147.5)" fill="none" stroke="#0034a5" stroke-miterlimit="10" stroke-width="0.414"/>
+            <line id="XMLID_695_" y2="246.6" transform="translate(435.4 147.5)" fill="none" stroke="#0034a5" stroke-miterlimit="10" stroke-width="0.414"/>
+            <line id="XMLID_694_" y2="246.6" transform="translate(452 147.5)" fill="none" stroke="#0034a5" stroke-miterlimit="10" stroke-width="0.414"/>
+            <line id="XMLID_693_" y2="246.6" transform="translate(468.7 147.5)" fill="none" stroke="#0034a5" stroke-miterlimit="10" stroke-width="0.414"/>
+            <line id="XMLID_692_" y2="246.6" transform="translate(485.4 147.5)" fill="none" stroke="#0034a5" stroke-miterlimit="10" stroke-width="0.414"/>
+            <line id="XMLID_691_" y2="246.6" transform="translate(502.1 147.5)" fill="none" stroke="#0034a5" stroke-miterlimit="10" stroke-width="0.414"/>
+            <line id="XMLID_690_" y2="246.6" transform="translate(518.8 147.5)" fill="none" stroke="#0034a5" stroke-miterlimit="10" stroke-width="0.414"/>
+            <line id="XMLID_689_" y2="246.6" transform="translate(535.5 147.5)" fill="none" stroke="#0034a5" stroke-miterlimit="10" stroke-width="0.414"/>
+            <line id="XMLID_688_" y2="246.6" transform="translate(552.2 147.5)" fill="none" stroke="#0034a5" stroke-miterlimit="10" stroke-width="0.414"/>
+            <line id="XMLID_687_" y2="246.6" transform="translate(568.8 147.5)" fill="none" stroke="#0034a5" stroke-miterlimit="10" stroke-width="0.414"/>
+            <line id="XMLID_686_" y2="246.6" transform="translate(585.5 147.5)" fill="none" stroke="#0034a5" stroke-miterlimit="10" stroke-width="0.414"/>
+            <line id="XMLID_685_" y2="246.6" transform="translate(602.2 147.5)" fill="none" stroke="#0034a5" stroke-miterlimit="10" stroke-width="0.414"/>
+            <line id="XMLID_684_" y2="246.6" transform="translate(618.9 147.5)" fill="none" stroke="#0034a5" stroke-miterlimit="10" stroke-width="0.414"/>
+          </g>
+          <g id="XMLID_666_">
+            <line id="XMLID_682_" x1="375.5" transform="translate(264.3 154)" fill="none" stroke="#0034a5" stroke-miterlimit="10" stroke-width="0.511"/>
+            <line id="XMLID_681_" x1="375.5" transform="translate(264.3 170.7)" fill="none" stroke="#0034a5" stroke-miterlimit="10" stroke-width="0.511"/>
+            <line id="XMLID_680_" x1="375.5" transform="translate(264.3 187.4)" fill="none" stroke="#0034a5" stroke-miterlimit="10" stroke-width="0.511"/>
+            <line id="XMLID_679_" x1="375.5" transform="translate(264.3 204.1)" fill="none" stroke="#0034a5" stroke-miterlimit="10" stroke-width="0.511"/>
+            <line id="XMLID_678_" x1="375.5" transform="translate(264.3 220.7)" fill="none" stroke="#0034a5" stroke-miterlimit="10" stroke-width="0.511"/>
+            <line id="XMLID_677_" x1="375.5" transform="translate(264.3 237.4)" fill="none" stroke="#0034a5" stroke-miterlimit="10" stroke-width="0.511"/>
+            <line id="XMLID_676_" x1="375.5" transform="translate(264.3 254.1)" fill="none" stroke="#0034a5" stroke-miterlimit="10" stroke-width="0.511"/>
+            <line id="XMLID_675_" x1="375.5" transform="translate(264.3 270.8)" fill="none" stroke="#0034a5" stroke-miterlimit="10" stroke-width="0.511"/>
+            <line id="XMLID_674_" x1="375.5" transform="translate(264.3 287.5)" fill="none" stroke="#0034a5" stroke-miterlimit="10" stroke-width="0.511"/>
+            <line id="XMLID_673_" x1="375.5" transform="translate(264.3 304.2)" fill="none" stroke="#0034a5" stroke-miterlimit="10" stroke-width="0.511"/>
+            <line id="XMLID_672_" x1="375.5" transform="translate(264.3 320.9)" fill="none" stroke="#0034a5" stroke-miterlimit="10" stroke-width="0.511"/>
+            <line id="XMLID_670_" x1="375.5" transform="translate(264.3 337.5)" fill="none" stroke="#0034a5" stroke-miterlimit="10" stroke-width="0.511"/>
+            <line id="XMLID_669_" x1="375.5" transform="translate(264.3 354.2)" fill="none" stroke="#0034a5" stroke-miterlimit="10" stroke-width="0.511"/>
+            <line id="XMLID_668_" x1="375.5" transform="translate(264.3 370.9)" fill="none" stroke="#0034a5" stroke-miterlimit="10" stroke-width="0.511"/>
+            <line id="XMLID_667_" x1="375.5" transform="translate(264.3 387.6)" fill="none" stroke="#0034a5" stroke-miterlimit="10" stroke-width="0.511"/>
+          </g>
+        </g>
+      </g>
+      <g id="XMLID_30_">
+        <g id="XMLID_11_" clip-path="url(#clip-path-5)">
+          <g id="XMLID_270_">
+            <g id="XMLID_281_">
+              <rect id="XMLID_324_" width="3.5" height="26.1" transform="translate(372.4 313.7)" fill="url(#linear-gradient-5)"/>
+              <rect id="XMLID_323_" width="3.5" height="28.9" transform="translate(377.4 310.8)" fill="url(#linear-gradient-6)"/>
+              <rect id="XMLID_322_" width="3.5" height="17.9" transform="translate(382.3 321.9)" fill="url(#linear-gradient-7)"/>
+              <rect id="XMLID_321_" width="3.5" height="25.1" transform="translate(387.2 314.6)" fill="url(#linear-gradient-8)"/>
+              <rect id="XMLID_320_" width="3.5" height="16.3" transform="translate(392.2 323.4)" fill="url(#linear-gradient-9)"/>
+              <rect id="XMLID_319_" width="3.5" height="22" transform="translate(397.1 317.7)" fill="url(#linear-gradient-10)"/>
+              <rect id="XMLID_318_" width="3.5" height="26.1" transform="translate(402 313.7)" fill="url(#linear-gradient-11)"/>
+              <rect id="XMLID_317_" width="3.5" height="34.4" transform="translate(407 305.4)" fill="url(#linear-gradient-12)"/>
+              <rect id="XMLID_316_" width="3.5" height="25.1" transform="translate(411.9 314.6)" fill="url(#linear-gradient-13)"/>
+              <rect id="XMLID_315_" width="3.5" height="33.1" transform="translate(416.8 306.7)" fill="url(#linear-gradient-14)"/>
+              <rect id="XMLID_314_" width="3.5" height="37.9" transform="translate(421.7 301.8)" fill="url(#linear-gradient-15)"/>
+              <rect id="XMLID_313_" width="3.5" height="26.1" transform="translate(426.7 313.7)" fill="url(#linear-gradient-16)"/>
+              <rect id="XMLID_312_" width="3.5" height="19" transform="translate(431.6 320.8)" fill="url(#linear-gradient-17)"/>
+              <rect id="XMLID_311_" width="3.5" height="16.3" transform="translate(436.5 323.4)" fill="url(#linear-gradient-18)"/>
+              <rect id="XMLID_310_" width="3.5" height="29.7" transform="translate(441.5 310)" fill="url(#linear-gradient-19)"/>
+              <rect id="XMLID_309_" width="3.5" height="20.3" transform="translate(446.4 319.4)" fill="url(#linear-gradient-20)"/>
+              <rect id="XMLID_308_" width="3.5" height="32.2" transform="translate(451.3 307.5)" fill="url(#linear-gradient-21)"/>
+              <rect id="XMLID_307_" width="3.5" height="32.2" transform="translate(456.3 307.5)" fill="url(#linear-gradient-22)"/>
+              <rect id="XMLID_306_" width="3.5" height="36.5" transform="translate(461.2 303.2)" fill="url(#linear-gradient-23)"/>
+              <rect id="XMLID_305_" width="3.5" height="34.4" transform="translate(466.1 305.4)" fill="url(#linear-gradient-24)"/>
+              <rect id="XMLID_304_" width="3.5" height="26.1" transform="translate(471.1 313.7)" fill="url(#linear-gradient-25)"/>
+              <rect id="XMLID_303_" width="3.5" height="19" transform="translate(476 320.8)" fill="url(#linear-gradient-26)"/>
+              <rect id="XMLID_302_" width="3.5" height="36" transform="translate(480.9 303.8)" fill="url(#linear-gradient-27)"/>
+              <rect id="XMLID_301_" width="3.5" height="32.6" transform="translate(485.8 307.2)" fill="url(#linear-gradient-28)"/>
+              <rect id="XMLID_300_" width="3.5" height="43" transform="translate(490.8 296.8)" fill="url(#linear-gradient-29)"/>
+              <rect id="XMLID_299_" width="3.5" height="20.3" transform="translate(495.7 319.4)" fill="url(#linear-gradient-30)"/>
+              <rect id="XMLID_298_" width="3.5" height="36" transform="translate(500.6 303.8)" fill="url(#linear-gradient-31)"/>
+              <rect id="XMLID_297_" width="3.5" height="23" transform="translate(505.6 316.7)" fill="url(#linear-gradient-32)"/>
+              <rect id="XMLID_296_" width="3.5" height="28.8" transform="translate(510.5 310.9)" fill="url(#linear-gradient-33)"/>
+              <rect id="XMLID_295_" width="3.5" height="43.3" transform="translate(515.4 296.4)" fill="url(#linear-gradient-34)"/>
+              <rect id="XMLID_294_" width="3.5" height="36" transform="translate(520.4 303.8)" fill="url(#linear-gradient-35)"/>
+              <rect id="XMLID_293_" width="3.5" height="40.8" transform="translate(525.3 298.9)" fill="url(#linear-gradient-36)"/>
+              <rect id="XMLID_292_" width="3.5" height="47.5" transform="translate(530.2 292.2)" fill="url(#linear-gradient-37)"/>
+              <rect id="XMLID_291_" width="3.5" height="44.4" transform="translate(535.1 295.4)" fill="url(#linear-gradient-38)"/>
+              <rect id="XMLID_290_" width="3.5" height="46.8" transform="translate(540.1 292.9)" fill="url(#linear-gradient-39)"/>
+              <rect id="XMLID_289_" width="3.5" height="46" transform="translate(545 293.7)" fill="url(#linear-gradient-40)"/>
+              <rect id="XMLID_288_" width="3.5" height="31.6" transform="translate(549.9 308.1)" fill="url(#linear-gradient-41)"/>
+              <rect id="XMLID_287_" width="3.5" height="50.3" transform="translate(554.9 289.5)" fill="url(#linear-gradient-42)"/>
+              <rect id="XMLID_286_" width="3.5" height="54.3" transform="translate(559.8 285.4)" fill="url(#linear-gradient-43)"/>
+              <rect id="XMLID_285_" width="3.5" height="27.2" transform="translate(564.7 312.6)" fill="url(#linear-gradient-44)"/>
+              <rect id="XMLID_284_" width="3.5" height="32.5" transform="translate(569.7 307.3)" fill="url(#linear-gradient-45)"/>
+              <rect id="XMLID_283_" width="3.5" height="42.1" transform="translate(574.6 297.7)" fill="url(#linear-gradient-46)"/>
+              <rect id="XMLID_282_" width="3.5" height="54.3" transform="translate(579.5 285.4)" fill="url(#linear-gradient-47)"/>
+            </g>
+            <g id="XMLID_275_">
+              <rect id="XMLID_280_" width="3.5" height="26.1" transform="translate(584.3 313.7)" fill="url(#linear-gradient-48)"/>
+              <rect id="XMLID_277_" width="3.5" height="28.9" transform="translate(589.3 310.8)" fill="url(#linear-gradient-49)"/>
+              <rect id="XMLID_276_" width="3.5" height="17.9" transform="translate(594.2 321.9)" fill="url(#linear-gradient-50)"/>
+            </g>
+            <g id="XMLID_271_">
+              <rect id="XMLID_274_" width="3.5" height="16.3" transform="translate(357.5 323.4)" fill="url(#linear-gradient-51)"/>
+              <rect id="XMLID_273_" width="3.5" height="22" transform="translate(362.4 317.7)" fill="url(#linear-gradient-52)"/>
+              <rect id="XMLID_272_" width="3.5" height="26.1" transform="translate(367.3 313.6)" fill="url(#linear-gradient-53)"/>
+            </g>
+          </g>
+          <g id="XMLID_117_">
+            <path id="XMLID_269_" d="M344.1,281.1c.6-.5,31.1-44.9,52-45.6,20.8-.7,24.9,45,40.2,43.1,15.2-1.9,21-44,38.7-46.8,17.6-2.8,11.3,48.8,34.4,44.9s15-42.7,27.8-45.3c12.9-2.6,6.7,13.6,23.1,8.9s5.7-47,52.9-50.6" fill="none" stroke="#707070" stroke-miterlimit="10" stroke-width="0.322"/>
+            <path id="XMLID_268_" d="M329.1,297.1s66.6-53.5,98.8-58.2,51.8,35.4,90.2,23.5,72.8-72.7,123.2-71.6" fill="none" stroke="#707070" stroke-miterlimit="10" stroke-width="0.322"/>
+            <g id="XMLID_118_">
+              <g id="XMLID_221_">
+                <g id="XMLID_222_">
+                  <rect id="XMLID_267_" width="4.8" height="12.9" transform="translate(362.9 264.3)" fill="url(#linear-gradient-54)"/>
+                  <rect id="XMLID_266_" width="4.8" height="12.9" transform="translate(375.6 264.3)" fill="url(#linear-gradient-55)"/>
+                  <rect id="XMLID_265_" width="4.8" height="8.4" transform="translate(432.9 266.9)" fill="url(#linear-gradient-56)"/>
+                  <rect id="XMLID_264_" width="4.8" height="8.4" transform="translate(483.9 244.5)" fill="url(#linear-gradient-57)"/>
+                  <rect id="XMLID_263_" width="4.8" height="8.4" transform="translate(528.4 233.8)" fill="url(#linear-gradient-58)"/>
+                  <rect id="XMLID_262_" width="4.8" height="8.4" transform="translate(547.5 240.2)" fill="url(#linear-gradient-59)"/>
+                  <rect id="XMLID_261_" width="4.8" height="8.4" transform="translate(579.4 207.2)" fill="url(#linear-gradient-60)"/>
+                  <rect id="XMLID_260_" width="4.8" height="8.4" transform="translate(592.1 190.8)" fill="url(#linear-gradient-61)"/>
+                  <rect id="XMLID_259_" width="4.8" height="8.4" transform="translate(509.3 261.1)" fill="url(#linear-gradient-62)"/>
+                  <rect id="XMLID_258_" width="4.8" height="8.4" transform="translate(560.3 221)" fill="url(#linear-gradient-63)"/>
+                  <rect id="XMLID_257_" width="4.8" height="12.9" transform="translate(426.6 257.2)" fill="url(#linear-gradient-64)"/>
+                  <rect id="XMLID_256_" width="4.8" height="8.8" transform="translate(445.7 249.5)" fill="url(#linear-gradient-65)"/>
+                  <rect id="XMLID_255_" width="4.8" height="12.9" transform="translate(356.5 274.6)" fill="url(#linear-gradient-66)"/>
+                  <rect id="XMLID_254_" width="4.8" height="12.9" transform="translate(420.2 250.2)" fill="url(#linear-gradient-67)"/>
+                  <rect id="XMLID_250_" width="4.8" height="8.2" transform="translate(452 245.7)" fill="url(#linear-gradient-68)"/>
+                  <rect id="XMLID_249_" width="4.8" height="7.2" transform="translate(401.1 246.5)" fill="url(#linear-gradient-69)"/>
+                  <rect id="XMLID_248_" width="4.8" height="7.7" transform="translate(394.7 240.6)" fill="url(#linear-gradient-70)"/>
+                  <rect id="XMLID_247_" width="4.8" height="18.1" transform="translate(388.4 246.2)" fill="url(#linear-gradient-71)"/>
+                  <rect id="XMLID_246_" width="4.8" height="18.1" transform="translate(464.8 235.4)" fill="url(#linear-gradient-72)"/>
+                  <rect id="XMLID_245_" width="4.8" height="14.4" transform="translate(522.1 239)" fill="url(#linear-gradient-73)"/>
+                  <rect id="XMLID_244_" width="4.8" height="14.4" transform="translate(566.7 209.1)" fill="url(#linear-gradient-74)"/>
+                  <rect id="XMLID_243_" width="4.8" height="6.1" transform="translate(407.5 249.5)" fill="url(#linear-gradient-75)"/>
+                  <rect id="XMLID_242_" width="4.8" height="18.1" transform="translate(490.2 248.2)" fill="url(#linear-gradient-76)"/>
+                  <rect id="XMLID_241_" width="4.8" height="18.1" transform="translate(439.3 254)" fill="url(#linear-gradient-77)"/>
+                  <rect id="XMLID_240_" width="4.8" height="18.1" transform="translate(515.7 247.6)" fill="url(#linear-gradient-78)"/>
+                  <rect id="XMLID_239_" width="4.8" height="10.5" transform="translate(573 201.9)" fill="url(#linear-gradient-79)"/>
+                  <rect id="XMLID_238_" width="4.8" height="18.1" transform="translate(553.9 226.9)" fill="url(#linear-gradient-80)"/>
+                  <rect id="XMLID_237_" width="4.8" height="18.1" transform="translate(350.2 281.1)" fill="url(#linear-gradient-81)"/>
+                  <rect id="XMLID_236_" width="4.8" height="18.1" transform="translate(541.2 226.9)" fill="url(#linear-gradient-82)"/>
+                  <rect id="XMLID_235_" width="4.8" height="18.1" transform="translate(585.8 193.3)" fill="url(#linear-gradient-83)"/>
+                  <rect id="XMLID_233_" width="4.8" height="12.9" transform="translate(382 258.6)" fill="url(#linear-gradient-84)"/>
+                  <rect id="XMLID_232_" width="4.8" height="6.4" transform="translate(458.4 248.7)" fill="url(#linear-gradient-85)"/>
+                  <rect id="XMLID_231_" width="4.8" height="6.4" transform="translate(496.6 262.5)" fill="url(#linear-gradient-86)"/>
+                  <rect id="XMLID_230_" width="4.8" height="4.3" transform="translate(503 268)" fill="url(#linear-gradient-87)"/>
+                  <rect id="XMLID_227_" width="4.8" height="9.6" transform="translate(413.8 242.6)" fill="url(#linear-gradient-88)"/>
+                  <rect id="XMLID_226_" width="4.8" height="12.9" transform="translate(477.5 234.7)" fill="url(#linear-gradient-89)"/>
+                  <rect id="XMLID_225_" width="4.8" height="7.7" transform="translate(471.1 229.5)" fill="url(#linear-gradient-90)"/>
+                  <rect id="XMLID_224_" width="4.8" height="12.9" transform="translate(534.8 223)" fill="url(#linear-gradient-91)"/>
+                  <rect id="XMLID_223_" width="4.8" height="11.6" transform="translate(369.3 261.6)" fill="url(#linear-gradient-92)"/>
+                </g>
+              </g>
+              <line id="XMLID_220_" y1="3.8" transform="translate(371.6 257.8)" fill="none" stroke="#77cefc" stroke-miterlimit="10" stroke-width="0.322"/>
+              <line id="XMLID_218_" y1="1.9" transform="translate(371.6 273.2)" fill="none" stroke="#77cefc" stroke-miterlimit="10" stroke-width="0.322"/>
+              <line id="XMLID_217_" y1="1.9" transform="translate(358.9 287.5)" fill="none" stroke="#77cefc" stroke-miterlimit="10" stroke-width="0.322"/>
+              <line id="XMLID_215_" y1="3.8" transform="translate(365.3 260.5)" fill="none" stroke="#77cefc" stroke-miterlimit="10" stroke-width="0.322"/>
+              <line id="XMLID_213_" y1="7.3" transform="translate(358.9 267.4)" fill="none" stroke="#77cefc" stroke-miterlimit="10" stroke-width="0.322"/>
+              <line id="XMLID_212_" y1="7.3" transform="translate(378 257.1)" fill="none" stroke="#fc7c77" stroke-miterlimit="10" stroke-width="0.322"/>
+              <line id="XMLID_211_" y1="3.3" transform="translate(384.4 255.3)" fill="none" stroke="#77cefc" stroke-miterlimit="10" stroke-width="0.322"/>
+              <line id="XMLID_210_" y1="3" transform="translate(384.4 271.5)" fill="none" stroke="#77cefc" stroke-miterlimit="10" stroke-width="0.322"/>
+              <line id="XMLID_209_" y1="3.1" transform="translate(422.6 247.1)" fill="none" stroke="#fc7c77" stroke-miterlimit="10" stroke-width="0.322"/>
+              <line id="XMLID_208_" y1="1.7" transform="translate(422.6 263)" fill="none" stroke="#fc7c77" stroke-miterlimit="10" stroke-width="0.322"/>
+              <line id="XMLID_207_" y1="1.6" transform="translate(441.7 272.1)" fill="none" stroke="#77cefc" stroke-miterlimit="10" stroke-width="0.322"/>
+              <line id="XMLID_206_" y1="1.7" transform="translate(435.3 275.4)" fill="none" stroke="#77cefc" stroke-miterlimit="10" stroke-width="0.322"/>
+              <line id="XMLID_205_" y1="1.6" transform="translate(428.9 255.6)" fill="none" stroke="#fc7c77" stroke-miterlimit="10" stroke-width="0.322"/>
+              <line id="XMLID_202_" y1="4.4" transform="translate(397.1 236.2)" fill="none" stroke="#fc7c77" stroke-miterlimit="10" stroke-width="0.322"/>
+              <line id="XMLID_201_" y2="2.2" transform="translate(409.8 255.6)" fill="none" stroke="#77cefc" stroke-miterlimit="10" stroke-width="0.322"/>
+              <line id="XMLID_200_" y2="2.2" transform="translate(403.5 253.6)" fill="none" stroke="#fc7c77" stroke-miterlimit="10" stroke-width="0.322"/>
+              <line id="XMLID_198_" y2="3.6" transform="translate(403.5 242.9)" fill="none" stroke="#fc7c77" stroke-miterlimit="10" stroke-width="0.322"/>
+              <line id="XMLID_193_" y2="4.4" transform="translate(390.7 264.3)" fill="none" stroke="#77cefc" stroke-miterlimit="10" stroke-width="0.322"/>
+              <line id="XMLID_166_" y2="4.4" transform="translate(428.9 270.1)" fill="none" stroke="#fc7c77" stroke-miterlimit="10" stroke-width="0.322"/>
+              <line id="XMLID_165_" y2="2.7" transform="translate(441.7 251.3)" fill="none" stroke="#77cefc" stroke-miterlimit="10" stroke-width="0.322"/>
+              <line id="XMLID_163_" y2="2.7" transform="translate(460.8 255.1)" fill="none" stroke="#77cefc" stroke-miterlimit="10" stroke-width="0.322"/>
+              <line id="XMLID_159_" y2="2.7" transform="translate(454.4 243)" fill="none" stroke="#fc7c77" stroke-miterlimit="10" stroke-width="0.322"/>
+              <line id="XMLID_158_" y2="2.7" transform="translate(486.3 241.9)" fill="none" stroke="#fc7c77" stroke-miterlimit="10" stroke-width="0.322"/>
+              <line id="XMLID_156_" y2="4.6" transform="translate(492.6 243.6)" fill="none" stroke="#fc7c77" stroke-miterlimit="10" stroke-width="0.322"/>
+              <line id="XMLID_155_" y2="2" transform="translate(505.4 266)" fill="none" stroke="#77cefc" stroke-miterlimit="10" stroke-width="0.322"/>
+              <line id="XMLID_154_" y2="2.1" transform="translate(499 260.4)" fill="none" stroke="#fc7c77" stroke-miterlimit="10" stroke-width="0.322"/>
+              <line id="XMLID_153_" y2="4.6" transform="translate(505.4 272.2)" fill="none" stroke="#77cefc" stroke-miterlimit="10" stroke-width="0.322"/>
+              <line id="XMLID_151_" y2="2" transform="translate(492.6 266.3)" fill="none" stroke="#fc7c77" stroke-miterlimit="10" stroke-width="0.322"/>
+              <line id="XMLID_150_" y2="2.7" transform="translate(473.5 226.8)" fill="none" stroke="#77cefc" stroke-miterlimit="10" stroke-width="0.322"/>
+              <line id="XMLID_149_" y2="1.3" transform="translate(473.5 237.2)" fill="none" stroke="#77cefc" stroke-miterlimit="10" stroke-width="0.322"/>
+              <line id="XMLID_147_" y2="4.7" transform="translate(460.8 244)" fill="none" stroke="#77cefc" stroke-miterlimit="10" stroke-width="0.322"/>
+              <line id="XMLID_146_" y2="4.7" transform="translate(467.2 230.7)" fill="none" stroke="#77cefc" stroke-miterlimit="10" stroke-width="0.322"/>
+              <line id="XMLID_145_" y2="1.4" transform="translate(467.2 253.5)" fill="none" stroke="#77cefc" stroke-miterlimit="10" stroke-width="0.322"/>
+              <line id="XMLID_144_" y2="1.7" transform="translate(448 258.3)" fill="none" stroke="#77cefc" stroke-miterlimit="10" stroke-width="0.322"/>
+              <line id="XMLID_143_" y2="2.8" transform="translate(448 246.7)" fill="none" stroke="#77cefc" stroke-miterlimit="10" stroke-width="0.322"/>
+              <line id="XMLID_142_" y2="5" transform="translate(479.9 247.6)" fill="none" stroke="#fc7c77" stroke-miterlimit="10" stroke-width="0.322"/>
+              <line id="XMLID_141_" y2="5.1" transform="translate(518.1 242.5)" fill="none" stroke="#77cefc" stroke-miterlimit="10" stroke-width="0.322"/>
+              <line id="XMLID_140_" y2="2.1" transform="translate(518.1 265.6)" fill="none" stroke="#77cefc" stroke-miterlimit="10" stroke-width="0.322"/>
+              <line id="XMLID_139_" y2="3.9" transform="translate(524.3 235.2)" fill="none" stroke="#77cefc" stroke-miterlimit="10" stroke-width="0.322"/>
+              <line id="XMLID_138_" y2="3.9" transform="translate(530.8 242.2)" fill="none" stroke="#77cefc" stroke-miterlimit="10" stroke-width="0.322"/>
+              <line id="XMLID_137_" y2="2" transform="translate(543.6 244.9)" fill="none" stroke="#fc7c77" stroke-miterlimit="10" stroke-width="0.322"/>
+              <line id="XMLID_136_" y2="4" transform="translate(543.6 222.9)" fill="none" stroke="#fc7c77" stroke-miterlimit="10" stroke-width="0.322"/>
+              <line id="XMLID_135_" y2="4" transform="translate(537.2 219)" fill="none" stroke="#fc7c77" stroke-miterlimit="10" stroke-width="0.322"/>
+              <line id="XMLID_134_" y2="3.9" transform="translate(556.3 244.9)" fill="none" stroke="#77cefc" stroke-miterlimit="10" stroke-width="0.322"/>
+              <line id="XMLID_133_" y2="2.7" transform="translate(549.9 248.7)" fill="none" stroke="#fc7c77" stroke-miterlimit="10" stroke-width="0.322"/>
+              <line id="XMLID_132_" y2="4.1" transform="translate(549.9 236.1)" fill="none" stroke="#fc7c77" stroke-miterlimit="10" stroke-width="0.322"/>
+              <line id="XMLID_131_" y2="4" transform="translate(562.7 217.1)" fill="none" stroke="#77cefc" stroke-miterlimit="10" stroke-width="0.322"/>
+              <line id="XMLID_130_" y2="1.9" transform="translate(562.7 229.5)" fill="none" stroke="#77cefc" stroke-miterlimit="10" stroke-width="0.322"/>
+              <line id="XMLID_129_" y2="3.9" transform="translate(569 205.2)" fill="none" stroke="#77cefc" stroke-miterlimit="10" stroke-width="0.322"/>
+              <line id="XMLID_128_" y2="4" transform="translate(575.4 197.9)" fill="none" stroke="#77cefc" stroke-miterlimit="10" stroke-width="0.322"/>
+              <line id="XMLID_127_" y2="4" transform="translate(581.8 215.6)" fill="none" stroke="#fc7c77" stroke-miterlimit="10" stroke-width="0.322"/>
+              <line id="XMLID_126_" y2="6.2" transform="translate(588.1 187.1)" fill="none" stroke="#77cefc" stroke-miterlimit="10" stroke-width="0.322"/>
+              <line id="XMLID_125_" y2="3.1" transform="translate(594.7 199.2)" fill="none" stroke="#77cefc" stroke-miterlimit="10" stroke-width="0.322"/>
+              <line id="XMLID_124_" y2="1.8" transform="translate(569 223.5)" fill="none" stroke="#77cefc" stroke-miterlimit="10" stroke-width="0.322"/>
+              <line id="XMLID_121_" y2="1.9" transform="translate(530.8 231.9)" fill="none" stroke="#77cefc" stroke-miterlimit="10" stroke-width="0.322"/>
+              <line id="XMLID_120_" y2="2.1" transform="translate(524.5 253.5)" fill="none" stroke="#77cefc" stroke-miterlimit="10" stroke-width="0.322"/>
+              <line id="XMLID_119_" y1="4.3" transform="translate(416.2 238.2)" fill="none" stroke="#fc7c77" stroke-miterlimit="10" stroke-width="0.322"/>
+            </g>
+          </g>
+          <g id="XMLID_114_">
+            <rect id="XMLID_115_" width="4.8" height="28.2" transform="translate(426.6 248.9)" fill="url(#linear-gradient-93)"/>
+          </g>
+          <g id="XMLID_102_">
+            <rect id="XMLID_113_" width="4.8" height="36.4" transform="translate(439.3 240.2)" fill="url(#linear-gradient-94)"/>
+          </g>
+          <g id="XMLID_99_">
+            <rect id="XMLID_100_" width="4.8" height="14.8" transform="translate(432.9 266.8)" fill="url(#linear-gradient-95)"/>
+          </g>
+          <g id="XMLID_97_">
+            <rect id="XMLID_98_" width="4.8" height="36.4" transform="translate(471.1 213.3)" fill="url(#linear-gradient-96)"/>
+          </g>
+          <g id="XMLID_95_">
+            <rect id="XMLID_96_" width="4.8" height="36.4" transform="translate(490.2 238.5)" fill="url(#linear-gradient-97)"/>
+          </g>
+          <g id="XMLID_91_">
+            <rect id="XMLID_92_" width="4.8" height="22.2" transform="translate(503 258.3)" fill="url(#linear-gradient-98)"/>
+          </g>
+          <g id="XMLID_87_">
+            <rect id="XMLID_89_" width="4.8" height="22.2" transform="translate(528.4 227.4)" fill="url(#linear-gradient-99)"/>
+          </g>
+          <g id="XMLID_85_">
+            <rect id="XMLID_86_" width="4.8" height="33.2" transform="translate(534.8 211.5)" fill="url(#linear-gradient-100)"/>
+          </g>
+          <g id="XMLID_75_">
+            <rect id="XMLID_84_" width="4.8" height="33.2" transform="translate(547.5 229.3)" fill="url(#linear-gradient-101)"/>
+          </g>
+          <g id="XMLID_73_">
+            <rect id="XMLID_74_" width="4.8" height="33.2" transform="translate(560.3 207.5)" fill="url(#linear-gradient-102)"/>
+          </g>
+          <g id="XMLID_71_">
+            <rect id="XMLID_72_" width="4.8" height="33.2" transform="translate(573 188.6)" fill="url(#linear-gradient-103)"/>
+          </g>
+          <g id="XMLID_69_">
+            <rect id="XMLID_70_" width="4.8" height="25.4" transform="translate(579.4 199.7)" fill="url(#linear-gradient-104)"/>
+          </g>
+          <g id="XMLID_66_">
+            <rect id="XMLID_67_" width="4.8" height="25.4" transform="translate(592.1 182.3)" fill="url(#linear-gradient-105)"/>
+          </g>
+          <g id="XMLID_32_">
+            <circle id="XMLID_65_" cx="0.6" cy="0.6" r="0.6" transform="translate(474 258.5)" fill="url(#linear-gradient-106)"/>
+            <path id="XMLID_63_" d="M359.5,257.8a.6.6,0,1,1-.6-.6A.645.645,0,0,1,359.5,257.8Z" fill="url(#linear-gradient-107)"/>
+            <path id="XMLID_62_" d="M365.9,251.9a.6.6,0,1,1-.6-.6A.645.645,0,0,1,365.9,251.9Z" fill="url(#linear-gradient-108)"/>
+            <path id="XMLID_61_" d="M372.2,248.1a.6.6,0,1,1-.6-.6A.576.576,0,0,1,372.2,248.1Z" fill="url(#linear-gradient-109)"/>
+            <path id="XMLID_60_" d="M378.6,240.1a.6.6,0,1,1-.6-.6A.645.645,0,0,1,378.6,240.1Z" fill="url(#linear-gradient-110)"/>
+            <path id="XMLID_56_" d="M385,236.2a.6.6,0,1,1-.6-.6C384.7,235.7,385,235.9,385,236.2Z" fill="url(#linear-gradient-111)"/>
+            <path id="XMLID_54_" d="M391.3,230.7a.6.6,0,1,1-.6-.6A.576.576,0,0,1,391.3,230.7Z" fill="url(#linear-gradient-112)"/>
+            <path id="XMLID_53_" d="M397.7,227.8a.6.6,0,1,1-.6-.6A.576.576,0,0,1,397.7,227.8Z" fill="url(#linear-gradient-113)"/>
+            <circle id="XMLID_52_" cx="0.6" cy="0.6" r="0.6" transform="translate(511.1 242.7)" fill="url(#linear-gradient-114)"/>
+            <circle id="XMLID_50_" cx="0.6" cy="0.6" r="0.6" transform="translate(517.5 236.6)" fill="url(#linear-gradient-115)"/>
+            <path id="XMLID_49_" d="M525,231.8a.6.6,0,1,1-.6-.6A.576.576,0,0,1,525,231.8Z" fill="url(#linear-gradient-116)"/>
+            <path id="XMLID_48_" d="M531.4,225.2a.6.6,0,1,1-.6-.6A.576.576,0,0,1,531.4,225.2Z" fill="url(#linear-gradient-117)"/>
+            <path id="XMLID_44_" d="M537.8,217.1a.6.6,0,1,1-.6-.6A.645.645,0,0,1,537.8,217.1Z" fill="url(#linear-gradient-118)"/>
+            <circle id="XMLID_42_" cx="0.6" cy="0.6" r="0.6" transform="translate(479.9 264.1)" fill="url(#linear-gradient-119)"/>
+            <path id="XMLID_41_" d="M486.9,272.9a.6.6,0,1,1-.6-.6A.576.576,0,0,1,486.9,272.9Z" fill="url(#linear-gradient-120)"/>
+            <circle id="XMLID_40_" cx="0.6" cy="0.6" r="0.6" transform="translate(491.6 279.3)" fill="url(#linear-gradient-121)"/>
+            <circle id="XMLID_39_" cx="0.6" cy="0.6" r="0.6" transform="translate(497.4 282)" fill="url(#linear-gradient-122)"/>
+            <path id="XMLID_25_" d="M504.5,287a.6.6,0,1,1-.6-.6A.645.645,0,0,1,504.5,287Z" fill="url(#linear-gradient-123)"/>
+            <circle id="XMLID_37_" cx="0.6" cy="0.6" r="0.6" transform="translate(549.5 260.6)" fill="url(#linear-gradient-124)"/>
+            <path id="XMLID_20_" d="M556.9,255.3a.6.6,0,1,1-.6-.6A.645.645,0,0,1,556.9,255.3Z" fill="url(#linear-gradient-125)"/>
+            <path id="XMLID_16_" d="M563.3,249.5a.6.6,0,1,1-.6-.6A.576.576,0,0,1,563.3,249.5Z" fill="url(#linear-gradient-126)"/>
+            <path id="XMLID_34_" d="M569.6,243.6a.6.6,0,1,1-.6-.6A.53.53,0,0,1,569.6,243.6Z" fill="url(#linear-gradient-127)"/>
+            <path id="XMLID_15_" d="M575.5,237.7a.6.6,0,1,1-.6-.6A.645.645,0,0,1,575.5,237.7Z" fill="url(#linear-gradient-128)"/>
+            <path id="XMLID_189_" d="M582.1,231.3a.6.6,0,1,1-.6-.6A.576.576,0,0,1,582.1,231.3Z" fill="url(#linear-gradient-129)"/>
+            <path id="XMLID_12_" d="M588.7,225a.6.6,0,1,1-.6-.6A.53.53,0,0,1,588.7,225Z" fill="url(#linear-gradient-130)"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
