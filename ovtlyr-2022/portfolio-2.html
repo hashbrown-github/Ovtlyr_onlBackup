@@ -1,0 +1,4599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>OVTLYR | Portfolio </title>
+<meta name="description" content="Updates and Statistics" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no">
+<link rel="icon" type="img/png" sizes="32x32" href="images/trident-favicon.png" />
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/chart-style.css" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <header class="header_front">
+    <div class="header_front1">
+      <div class="container-xl">
+        <div class="header_front2 js-header">
+          <div class="logo">
+            <a href="index.html"><img src="images/ovtlyr-logo.svg" alt="OVTLYR" /></a>
+          </div>
+          <div class="header_menu">
+            <ul class="desk_menu">
+              <li><a href="big-view.html">BigView</a></li>
+              <li><a href="stocks-etfs.html">Stocks+ETFs</a></li>
+              <li class="active"><a href="portfolio.html">Portfolio</a></li>
+              <li><a href="pricing-new.html">Pricing</a></li>
+              <li><a href="scoops.html" class="scoops_link">Scoops</a></li>
+              <li>
+                <div class="headSearch_box">
+                  <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                  <div class="headSearch_pop">
+                    <div class="headSearch_pop1">
+                      <a href="javascript:void(0);"><i class="fa-solid fa-magnifying-glass"></i></a>
+                      <input type="text" placeholder="Search stock, company or symbol.." />
+                    </div>
+                    <div class="headSearch_pop2">
+                      <ul id="div_homeSeachbarData">
+                        <li class="homeSearch-suggestions" data-symbol="AAPL">             
+                          <a href="#">                 
+                            <div class="list_item">                     
+                              <div>                         
+                                <h4>Apple Inc</h4>                         
+                                <p>NASDAQ: <span class="searchsymbolclass">AAPL</span></p>                     
+                              </div>                 
+                            </div>             
+                          </a>         
+                        </li>
+                        <li class="homeSearch-suggestions" data-symbol="AAPL">             
+                          <a href="#">                 
+                            <div class="list_item">                     
+                              <div>                         
+                                <h4>Apple Inc</h4>                         
+                                <p>NASDAQ: <span class="searchsymbolclass">AAPL</span></p>                     
+                              </div>                 
+                            </div>             
+                          </a>         
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul> 
+            <div class="userLoginPro">
+              <a href="sign-in.html" class="border_btn">Login</a>
+              <a href="sign-up.html" class="filled_btn">Try for Free</a>
+            </div>
+            <div class="userLoginPro2 js-header-item" style="display: none;">
+              <button class="header__head js-header-head"><img src="images/profile.svg" alt="Profile"><span class="user_nme">Shivani Chandel</span></button>
+              <div class="header__body js-header-body">
+                <a class="header__item" href="#">
+                  <div class="header__title">My Account</div>
+                </a>
+                <a class="header__item" href="#">
+                  <div class="header__title">Trading History</div>
+                </a>
+                <a class="header__item" href="watchlist.html">
+                  <div class="header__title">My Watchlist</div>
+                </a>
+                <a class="header__item" href="#">
+                  <div class="header__title">Linked Brokerages</div>
+                </a>
+                <a class="header__item" href="#">
+                  <div class="header__title">Contact Us</div>
+                </a>
+                <a class="header__item" href="#">
+                  <div class="header__title">Sign Out</div>
+                </a>
+              </div>
+            </div>
+          </div> 
+        </div>
+      </div>
+    </div>
+  </header>
+<div class="outer_main">
+  <section class="stocksEtf_sec1 portfolio_sec1">
+    <div class="container-xl">
+      <div class="stocksEtf_sec11">
+        <ul class="nav nav-tabs" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" data-bs-toggle="tab" href="#yourPortfolio">
+              <span>Your Portfolio</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#ovtlyrSugesstions">
+              <span>OVTLYR Suggestions</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#portSimulator">
+              <span>Portfolio Simulator</span>
+            </a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div id="yourPortfolio" class="tab-pane active">
+            <div class="empty_box">
+              <h4>You do not have any Linked Brokerage.</h4>
+              <img src="images/empty-brokerage.svg" alt="Empty List" />
+              <h5>Click to connect to brokerage account</h5>
+              <div class="broker_addBtn">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#addLinked_brokerage">Link Brokerage</span></a>
+              </div>
+            </div>
+            <div class="portfolio_1">
+              <div class="portfolio_11">
+                <ul class="portfolio_111">
+                  <li>
+                    <p>Brokerage</p>
+                  </li>
+                  <li class="selectBro_drop">
+                    <p class="active">
+                      <a href="javascript:void(0);">Brokerage 1 <span class="material-icons-outlined">expand_more</span> </a>
+                    </p>
+                    <ul class="brokage_dropdown">
+                      <li class="active"><a href="#">Brokerage 1</a></li>
+                      <li><a href="#">Brokerage 2</a></li>
+                      <li><a href="#">Brokerage 3</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                <div class="portfolio_112">
+                  <h4>Current Portfolio</h4>
+                  <div class="current_portfolio">
+                    <div id="risk-tolerance-pieChart2"></div>
+                  </div>
+                  <p>Account Value: <b>$100,000</b></p>
+                </div>
+              </div>
+              <div class="portfolio_12 currentPort_table">
+                <div class="table_scroll horizontal_scroll">
+                  <table class="table ovtlyr_table treemapChart_table">
+                    <thead>
+                      <tr>
+                        <th style="width: 8%;" class="align__items">Symbol</th>
+                        <th style="width: 14%;" class="align__items">Name</th>
+                        <th style="width: 8%;" class="align__items">Last Price</th>
+                        <th style="width: 16%;">Today's Return</th>
+                        <th style="width: 16%;">Total Return</th>
+                        <th style="width: 6%;">Current Value</th>
+                        <th style="width: 6%;">% of Portfolio</th>
+                        <th style="width: 6%;">Shares</th>
+                        <th style="width: 5%;">Avg. Cost</th>
+                        <th style="width: 15%;">Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p><span class="port_symbol">MSFT</span></p></a></td>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p class="company_name">Microsoft Corporation</p></a></td>
+                        <td class="align__items"><p>$123.00</p></td>
+                        <td><p>+$68.30(<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>4.6%)</p></td>
+                        <td><p>+$68.30(<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>4.6%)</p></td>
+                        <td><p>$1234.00</p></td>
+                        <td><p>2.3%</p></td>
+                        <td><p>22</p></td>
+                        <td><p>$123.00</p></td>
+                        <td>
+                          <div class="actions_btn">
+                            <a href="#"><p><span class="port_symbol">Buy</span></p></a>
+                            <a href="#"><p><span class="port_symbol ms-2">Sell</span></p></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p><span class="port_symbol">MSFT</span></p></a></td>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p class="company_name">Microsoft Corporation</p></a></td>
+                        <td class="align__items"><p>$123.00</p></td>
+                        <td><p>-$22.30(<span class="red_value"><span class="material-icons arrow_ico">play_arrow</span></span>4.6%)</p></td>
+                        <td><p>-$18.30(<span class="red_value"><span class="material-icons arrow_ico">play_arrow</span></span>4.6%)</p></td>
+                        <td><p>$1234.00</p></td>
+                        <td><p>5.3%</p></td>
+                        <td><p>22</p></td>
+                        <td><p>$123.00</p></td>
+                        <td>
+                          <div class="actions_btn">
+                            <a href="#"><p><span class="port_symbol">Buy</span></p></a>
+                            <a href="#"><p><span class="port_symbol ms-2">Sell</span></p></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p><span class="port_symbol">MSFT</span></p></a></td>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p class="company_name">Microsoft Corporation</p></a></td>
+                        <td class="align__items"><p>$123.00</p></td>
+                        <td><p>+$68.30(<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>4.6%)</p></td>
+                        <td><p>+$68.30(<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>4.6%)</p></td>
+                        <td><p>$1234.00</p></td>
+                        <td><p>22.3%</p></td>
+                        <td><p>22</p></td>
+                        <td><p>$123.00</p></td>
+                        <td>
+                          <div class="actions_btn">
+                            <a href="#"><p><span class="port_symbol">Buy</span></p></a>
+                            <a href="#"><p><span class="port_symbol ms-2">Sell</span></p></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p><span class="port_symbol">MSFT</span></p></a></td>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p class="company_name">Microsoft Corporation</p></a></td>
+                        <td class="align__items"><p>$123.00</p></td>
+                        <td><p>+$68.30(<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>4.6%)</p></td>
+                        <td><p>+$68.30(<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>4.6%)</p></td>
+                        <td><p>$1234.00</p></td>
+                        <td><p>62.3%</p></td>
+                        <td><p>22</p></td>
+                        <td><p>$123.00</p></td>
+                        <td>
+                          <div class="actions_btn">
+                            <a href="#"><p><span class="port_symbol">Buy</span></p></a>
+                            <a href="#"><p><span class="port_symbol ms-2">Sell</span></p></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p><span class="port_symbol">MSFT</span></p></a></td>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p class="company_name">Microsoft Corporation</p></a></td>
+                        <td class="align__items"><p>$123.00</p></td>
+                        <td><p>+$68.30(<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>4.6%)</p></td>
+                        <td><p>+$68.30(<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>4.6%)</p></td>
+                        <td><p>$1234.00</p></td>
+                        <td><p>29.3%</p></td>
+                        <td><p>22</p></td>
+                        <td><p>$123.00</p></td>
+                        <td>
+                          <div class="actions_btn">
+                            <a href="#"><p><span class="port_symbol">Buy</span></p></a>
+                            <a href="#"><p><span class="port_symbol ms-2">Sell</span></p></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p><span class="port_symbol">MSFT</span></p></a></td>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p class="company_name">Microsoft Corporation</p></a></td>
+                        <td class="align__items"><p>$123.00</p></td>
+                        <td><p>+$68.30(<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>4.6%)</p></td>
+                        <td><p>+$68.30(<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>4.6%)</p></td>
+                        <td><p>$1234.00</p></td>
+                        <td><p>22.3%</p></td>
+                        <td><p>22</p></td>
+                        <td><p>$123.00</p></td>
+                        <td>
+                          <div class="actions_btn">
+                            <a href="#"><p><span class="port_symbol">Buy</span></p></a>
+                            <a href="#"><p><span class="port_symbol ms-2">Sell</span></p></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p><span class="port_symbol">MSFT</span></p></a></td>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p class="company_name">Microsoft Corporation</p></a></td>
+                        <td class="align__items"><p>$123.00</p></td>
+                        <td><p>+$68.30(<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>4.6%)</p></td>
+                        <td><p>+$68.30(<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>4.6%)</p></td>
+                        <td><p>$1234.00</p></td>
+                        <td><p>22.3%</p></td>
+                        <td><p>22</p></td>
+                        <td><p>$123.00</p></td>
+                        <td>
+                          <div class="actions_btn">
+                            <a href="#"><p><span class="port_symbol">Buy</span></p></a>
+                            <a href="#"><p><span class="port_symbol ms-2">Sell</span></p></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p><span class="port_symbol">MSFT</span></p></a></td>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p class="company_name">Microsoft Corporation</p></a></td>
+                        <td class="align__items"><p>$123.00</p></td>
+                        <td><p>+$68.30(<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>4.6%)</p></td>
+                        <td><p>+$68.30(<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>4.6%)</p></td>
+                        <td><p>$1234.00</p></td>
+                        <td><p>22.3%</p></td>
+                        <td><p>22</p></td>
+                        <td><p>$123.00</p></td>
+                        <td>
+                          <div class="actions_btn">
+                            <a href="#"><p><span class="port_symbol">Buy</span></p></a>
+                            <a href="#"><p><span class="port_symbol ms-2">Sell</span></p></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p><span class="port_symbol">MSFT</span></p></a></td>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p class="company_name">Microsoft Corporation</p></a></td>
+                        <td class="align__items"><p>$123.00</p></td>
+                        <td><p>+$68.30(<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>4.6%)</p></td>
+                        <td><p>+$68.30(<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>4.6%)</p></td>
+                        <td><p>$1234.00</p></td>
+                        <td><p>22.3%</p></td>
+                        <td><p>22</p></td>
+                        <td><p>$123.00</p></td>
+                        <td>
+                          <div class="actions_btn">
+                            <a href="#"><p><span class="port_symbol">Buy</span></p></a>
+                            <a href="#"><p><span class="port_symbol ms-2">Sell</span></p></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p><span class="port_symbol">MSFT</span></p></a></td>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p class="company_name">Microsoft Corporation</p></a></td>
+                        <td class="align__items"><p>$123.00</p></td>
+                        <td><p>+$68.30(<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>4.6%)</p></td>
+                        <td><p>+$68.30(<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>4.6%)</p></td>
+                        <td><p>$1234.00</p></td>
+                        <td><p>22.3%</p></td>
+                        <td><p>22</p></td>
+                        <td><p>$123.00</p></td>
+                        <td>
+                          <div class="actions_btn">
+                            <a href="#"><p><span class="port_symbol">Buy</span></p></a>
+                            <a href="#"><p><span class="port_symbol ms-2">Sell</span></p></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p><span class="port_symbol">MSFT</span></p></a></td>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p class="company_name">Microsoft Corporation</p></a></td>
+                        <td class="align__items"><p>$123.00</p></td>
+                        <td><p>+$68.30(<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>4.6%)</p></td>
+                        <td><p>+$68.30(<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>4.6%)</p></td>
+                        <td><p>$1234.00</p></td>
+                        <td><p>22.3%</p></td>
+                        <td><p>22</p></td>
+                        <td><p>$123.00</p></td>
+                        <td>
+                          <div class="actions_btn">
+                            <a href="#"><p><span class="port_symbol">Buy</span></p></a>
+                            <a href="#"><p><span class="port_symbol ms-2">Sell</span></p></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="pink_row">
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p><span class="port_symbol">MSFT</span></p></a></td>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p class="company_name">Microsoft Corporation</p></a></td>
+                        <td class="align__items"><p>$123.00</p></td>
+                        <td><p>+$68.30(<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>4.6%)</p></td>
+                        <td><p>+$68.30(<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>4.6%)</p></td>
+                        <td><p>$1234.00</p></td>
+                        <td><p>22.3%</p></td>
+                        <td><p>22</p></td>
+                        <td><p>$123.00</p></td>
+                        <td>
+                          <div class="actions_btn">
+                            <a href="#"><p><span class="port_symbol">Buy</span></p></a>
+                            <a href="#"><p><span class="port_symbol ms-2">Sell</span></p></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="pink_row">
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p><span class="port_symbol">MSFT</span></p></a></td>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p class="company_name">Microsoft Corporation</p></a></td>
+                        <td class="align__items"><p>$123.00</p></td>
+                        <td><p>+$68.30(<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>4.6%)</p></td>
+                        <td><p>+$68.30(<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>4.6%)</p></td>
+                        <td><p>$1234.00</p></td>
+                        <td><p>22.3%</p></td>
+                        <td><p>22</p></td>
+                        <td><p>$123.00</p></td>
+                        <td>
+                          <div class="actions_btn">
+                            <a href="#"><p><span class="port_symbol">Buy</span></p></a>
+                            <a href="#"><p><span class="port_symbol ms-2">Sell</span></p></a>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p class="table_para">The above allocation suggestions are made on the basis of the stocks that we cover. The results may differ if you have stocks in your portfolio that we currently do not 
+                  cover. * stocks that are not currently covered by OVTLYR</p>
+              </div>
+            </div>
+            <div class="backtestResults">
+              <div class="backtest_head">
+                <h3>Backtest Results</h3>
+                <h5>The OVTLYR Portfolio Engine has been tested  for 51 months</h5>
+              </div>
+              <div class="backtest_data">
+                <div class="backtest_data1">
+                  <div class="table_scroll horizontal_scroll">
+                    <table class="table ovtlyr_table treemapChart_table">
+                      <thead>
+                        <tr>
+                          <th style="width: 34%;" class="align__items">Category</th>
+                          <th style="width: 32%;">Buy & Hold</th>
+                          <th style="width: 34%;">OVTLYR</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="align__items"><p>ROI [%]</p></td>
+                          <td><p>118.88%</p></td>
+                          <td><p>203.79%</p></td>
+                        </tr>
+                        <tr>
+                          <td class="align__items"><p>ROI [&]</p></td>
+                          <td><p>$118,883.71</p></td>
+                          <td><p>$203,790.73</p></td>
+                        </tr>
+                        <tr>
+                          <td class="align__items"><p>CAGR</p></td>
+                          <td><p>19.54%</p></td>
+                          <td><p>28.81%</p></td>
+                        </tr>
+                        <tr>
+                          <td class="align__items"><p>Max Drawdown</p></td>
+                          <td><p>22.26%</p></td>
+                          <td><p>9.14%</p></td>
+                        </tr>
+                        <tr>
+                          <td class="align__items"><p>Sharpe</p></td>
+                          <td><p>0.9762</p></td>
+                          <td><p>2.3869</p></td>
+                        </tr>
+                        <tr>
+                          <td class="align__items"><p>Sortino</p></td>
+                          <td><p>1.1734</p></td>
+                          <td><p>3.5439</p></td>
+                        </tr>
+                        <tr>
+                          <td class="align__items"><p>Jensen α</p></td>
+                          <td><p>-</p></td>
+                          <td><p>2.30%</p></td>
+                        </tr>
+                        <tr>
+                          <td class="align__items"><p>β</p></td>
+                          <td><p>-</p></td>
+                          <td><p>0.5752</p></td>
+                        </tr>
+                        <tr>
+                          <td class="align__items"><p>Treynor</p></td>
+                          <td><p>-</p></td>
+                          <td><p>0.0031</p></td>
+                        </tr>
+                        <tr>
+                          <td class="align__items"><p>Avg. Cash</p></td>
+                          <td><p>-</p></td>
+                          <td><p>37.18%</p></td>
+                        </tr>
+                        <tr>
+                          <td class="align__items"><p>Capital Efficiency</p></td>
+                          <td><p>-</p></td>
+                          <td><p>234.68%</p></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="backtest_data2">
+                  <div id="strategy_chart"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="ovtlyrSugesstions" class="tab-pane portfolio fade">
+            <div class="empty_box">
+              <h4>You do not have any Linked Brokerage.</h4>
+              <img src="images/empty-brokerage.svg" alt="Empty List" />
+              <h5>Click to connect to brokerage account</h5>
+              <div class="broker_addBtn">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#addLinked_brokerage">Link Brokerage</span></a>
+              </div>
+            </div>
+            <div class="update_sugges">
+              <h4>You have updated suggestions</h4>
+              <a href="#" data-bs-toggle="modal" data-bs-target="#syncUpdate_modal" class="purple_btn">Sync & Update</a>
+            </div>
+            <div class="portfolio_2">
+              <div class="portfolio_11">
+                <div class="portfolio_112">
+                  <h4>Current Portfolio</h4>
+                  <div class="current_portfolio">
+                    <img src="images/risk-tolerance-chart.png" style="width: 220px; text-align: center;">
+                    <!-- <div id="risk-tolerance-pieChart2"></div> -->
+                  </div>
+                  <p>Account Value: <b>$100,000</b></p>
+                </div>
+                <div class="portfolio_1121">
+                  <a href="#" class="purple_btn"><i class="fa-solid fa-rotate-left"></i>Reset</a>
+                  <div class="resetBtn_dtl">
+                    <p>The ‘reset’ button will remove any stocks/etfs you may have imported from the portfolio simulator.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="portfolio_13 currentPort_table">
+                <div class="table_scroll horizontal_scroll">
+                  <table class="table ovtlyr_table treemapChart_table">
+                    <thead>
+                      <tr>
+                        <th style="width: 10%;" class="align__items">Symbol</th>
+                        <th style="width: 13%;" class="align__items">Name</th>
+                        <th style="width: 11%;">Current Allocation</th>
+                        <th style="width: 12%;">$ Value</th>
+                        <th style="width: 25%;">Suggested Allocation <span class="block_txt small_txt">(9.35 am ET, 05/25/2022)</span></th>
+                        <th style="width: 14%;">Price</th>
+                        <th style="width: 10%;">Actions</th>
+                        <th style="width: 5%;"></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p><span class="port_symbol">MSFT</span></p></a></td>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p class="company_name">Microsoft Corporation</p></a></td>
+                        <td><p>22</p></td>
+                        <td><p>$123.00</p></td>
+                        <td><p>18(<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>2)</p></td>
+                        <td><p>$1234.00</p></td>
+                        <td>
+                          <div class="actions_btn">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#buySell_modal"><p><span class="port_symbol">Buy</span></p></a>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#buySell_modal2"><p><span class="port_symbol ms-1">Sell</span></p></a>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="actions_btn">
+                            <a href="#" class="minus_icon"><i class="fa-solid fa-circle-minus"></i></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p><span class="port_symbol">MSFT</span></p></a></td>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p class="company_name">Microsoft Corporation</p></a></td>
+                        <td><p>22</p></td>
+                        <td><p>$123.00</p></td>
+                        <td><p>18(<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>2)</p></td>
+                        <td><p>$1234.00</p></td>
+                        <td>
+                          <div class="actions_btn">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#buySell_modal"><p><span class="port_symbol">Buy</span></p></a>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#buySell_modal2"><p><span class="port_symbol ms-1">Sell</span></p></a>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="actions_btn">
+                            <a href="#" class="minus_icon"><i class="fa-solid fa-circle-minus"></i></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p><span class="port_symbol">MSFT</span></p></a></td>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p class="company_name">Microsoft Corporation</p></a></td>
+                        <td><p>22</p></td>
+                        <td><p>$123.00</p></td>
+                        <td><p>18(<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>2)</p></td>
+                        <td><p>$1234.00</p></td>
+                        <td>
+                          <div class="actions_btn">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#buySell_modal"><p><span class="port_symbol">Buy</span></p></a>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#buySell_modal2"><p><span class="port_symbol ms-1">Sell</span></p></a>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="actions_btn">
+                            <a href="#" class="minus_icon"><i class="fa-solid fa-circle-minus"></i></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p><span class="port_symbol">MSFT</span></p></a></td>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p class="company_name">Microsoft Corporation</p></a></td>
+                        <td><p>22</p></td>
+                        <td><p>$123.00</p></td>
+                        <td><p>18(<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>2)</p></td>
+                        <td><p>$1234.00</p></td>
+                        <td>
+                          <div class="actions_btn">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#buySell_modal"><p><span class="port_symbol">Buy</span></p></a>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#buySell_modal2"><p><span class="port_symbol ms-1">Sell</span></p></a>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="actions_btn">
+                            <a href="#" class="minus_icon"><i class="fa-solid fa-circle-minus"></i></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p><span class="port_symbol">MSFT</span></p></a></td>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p class="company_name">Microsoft Corporation</p></a></td>
+                        <td><p>22</p></td>
+                        <td><p>$123.00</p></td>
+                        <td><p>18(<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>2)</p></td>
+                        <td><p>$1234.00</p></td>
+                        <td>
+                          <div class="actions_btn">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#buySell_modal"><p><span class="port_symbol">Buy</span></p></a>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#buySell_modal2"><p><span class="port_symbol ms-1">Sell</span></p></a>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="actions_btn">
+                            <a href="#" class="minus_icon"><i class="fa-solid fa-circle-minus"></i></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p><span class="port_symbol">MSFT</span></p></a></td>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p class="company_name">Microsoft Corporation</p></a></td>
+                        <td><p>22</p></td>
+                        <td><p>$123.00</p></td>
+                        <td><p>18(<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>2)</p></td>
+                        <td><p>$1234.00</p></td>
+                        <td>
+                          <div class="actions_btn">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#buySell_modal"><p><span class="port_symbol">Buy</span></p></a>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#buySell_modal2"><p><span class="port_symbol ms-1">Sell</span></p></a>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="actions_btn">
+                            <a href="#" class="minus_icon"><i class="fa-solid fa-circle-minus"></i></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="green_row">
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p><span class="port_symbol">MSFT</span></p></a></td>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p class="company_name">Microsoft Corporation</p></a></td>
+                        <td><p>22</p></td>
+                        <td><p>$123.00</p></td>
+                        <td><p>18(<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>2)</p></td>
+                        <td><p>$1234.00</p></td>
+                        <td>
+                          <div class="actions_btn">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#buySell_modal"><p><span class="port_symbol">Buy</span></p></a>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#buySell_modal2"><p><span class="port_symbol ms-1">Sell</span></p></a>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="actions_btn">
+                            <a href="#" class="minus_icon"><i class="fa-solid fa-circle-minus"></i></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="green_row">
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p><span class="port_symbol">MSFT</span></p></a></td>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p class="company_name">Microsoft Corporation</p></a></td>
+                        <td><p>22</p></td>
+                        <td><p>$123.00</p></td>
+                        <td><p>18(<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>2)</p></td>
+                        <td><p>$1234.00</p></td>
+                        <td>
+                          <div class="actions_btn">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#buySell_modal"><p><span class="port_symbol">Buy</span></p></a>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#buySell_modal2"><p><span class="port_symbol ms-1">Sell</span></p></a>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="actions_btn">
+                            <a href="#" class="minus_icon"><i class="fa-solid fa-circle-minus"></i></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p><span class="port_symbol">MSFT</span></p></a></td>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p class="company_name">Microsoft Corporation</p></a></td>
+                        <td><p>22</p></td>
+                        <td><p>$123.00</p></td>
+                        <td><p>18(<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>2)</p></td>
+                        <td><p>$1234.00</p></td>
+                        <td>
+                          <div class="actions_btn">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#buySell_modal"><p><span class="port_symbol">Buy</span></p></a>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#buySell_modal2"><p><span class="port_symbol ms-1">Sell</span></p></a>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="actions_btn">
+                            <a href="#" class="minus_icon"><i class="fa-solid fa-circle-minus"></i></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="green_row">
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p><span class="port_symbol">MSFT</span></p></a></td>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p class="company_name">Microsoft Corporation</p></a></td>
+                        <td><p>22</p></td>
+                        <td><p>$123.00</p></td>
+                        <td><p>18(<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>2)</p></td>
+                        <td><p>$1234.00</p></td>
+                        <td>
+                          <div class="actions_btn">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#buySell_modal"><p><span class="port_symbol">Buy</span></p></a>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#buySell_modal2"><p><span class="port_symbol ms-1">Sell</span></p></a>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="actions_btn">
+                            <a href="#" class="minus_icon"><i class="fa-solid fa-circle-minus"></i></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p><span class="port_symbol">MSFT</span></p></a></td>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p class="company_name">Microsoft Corporation</p></a></td>
+                        <td><p>22</p></td>
+                        <td><p>$123.00</p></td>
+                        <td><p>18(<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>2)</p></td>
+                        <td><p>$1234.00</p></td>
+                        <td>
+                          <div class="actions_btn">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#buySell_modal"><p><span class="port_symbol">Buy</span></p></a>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#buySell_modal2"><p><span class="port_symbol ms-1">Sell</span></p></a>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="actions_btn">
+                            <a href="#" class="minus_icon"><i class="fa-solid fa-circle-minus"></i></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="pink_row">
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p><span class="port_symbol">MSFT</span></p></a></td>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p class="company_name">Microsoft Corporation</p></a></td>
+                        <td><p>22</p></td>
+                        <td><p>$123.00</p></td>
+                        <td><p>18(<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>2)</p></td>
+                        <td><p>$1234.00</p></td>
+                        <td>
+                          <div class="actions_btn">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#buySell_modal"><p><span class="port_symbol">Buy</span></p></a>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#buySell_modal2"><p><span class="port_symbol ms-1">Sell</span></p></a>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="actions_btn">
+                            <a href="#" class="minus_icon"><i class="fa-solid fa-circle-minus"></i></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="pink_row">
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p><span class="port_symbol">MSFT</span></p></a></td>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p class="company_name">Microsoft Corporation</p></a></td>
+                        <td><p>22</p></td>
+                        <td><p>$123.00</p></td>
+                        <td><p>18(<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>2)</p></td>
+                        <td><p>$1234.00</p></td>
+                        <td>
+                          <div class="actions_btn">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#buySell_modal"><p><span class="port_symbol">Buy</span></p></a>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#buySell_modal2"><p><span class="port_symbol ms-1">Sell</span></p></a>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="actions_btn">
+                            <a href="#" class="minus_icon"><i class="fa-solid fa-circle-minus"></i></a>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p class="table_para">We have included some stocks in our suggestions even if you don’t own them. This is because you had owned these stocks earlier. If you don’t want to include these stocks in your portfolio anymore, please feel free to delete them.</p>
+                <a href="#" class="execute_trades" data-bs-toggle="modal" data-bs-target="#rebalance_port">
+                  <h5>Press here to EXECUTE TRADES AS PER THE SUGGESTIONS</h5>
+                  <p>(You will be able to make edits on the next screen)</p>
+                </a>
+              </div>
+              <div class="portfolio_11 grid_part3">
+                <div class="portfolio_112">
+                  <h4>Suggested Portfolio</h4>
+                  <div class="current_portfolio">
+                    <img src="images/risk-tolerance-chart.png" style="width: 220px; text-align: center;">
+                    <!-- <div id="risk-tolerance-pieChart2"></div> -->
+                  </div>
+                  <p>Account Value: <b>$100,000</b></p>
+                </div>
+                <div class="portfolio_113">
+                  <h3>Risk Tolerance:</h3>
+                  <a href="#" data-bs-toggle="modal" data-bs-target="#editRisk_tol" class="editRisk_btn">Edit</a>
+                  <div class="Portfolio_slider">
+                    <div class="footLeft11">
+                      <div class="slidecontainer">
+                        <div class="RangeSlider_div">
+                          <input type="range" min="0" max="6" value="4" class="slider_range" id="ovtlyr_rating" disabled="">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="Portfolio_sliderV">
+                      <ul>
+                        <li><p>Conservative</p></li>
+                        <li><p>Balanced</p></li>
+                        <li><p>Aggressive</p></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="backtestResults">
+              <div class="backtest_head">
+                <h3>Backtest Results</h3>
+                <h5>The OVTLYR Portfolio Engine has been tested  for 51 months</h5>
+              </div>
+              <div class="backtest_data">
+                <div class="backtest_data1">
+                  <div class="table_scroll horizontal_scroll">
+                    <table class="table ovtlyr_table treemapChart_table">
+                      <thead>
+                        <tr>
+                          <th style="width: 34%;" class="align__items">Category</th>
+                          <th style="width: 32%;">Buy & Hold</th>
+                          <th style="width: 34%;">OVTLYR</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="align__items"><p>ROI [%]</p></td>
+                          <td><p>118.88%</p></td>
+                          <td><p>203.79%</p></td>
+                        </tr>
+                        <tr>
+                          <td class="align__items"><p>ROI [&]</p></td>
+                          <td><p>$118,883.71</p></td>
+                          <td><p>$203,790.73</p></td>
+                        </tr>
+                        <tr>
+                          <td class="align__items"><p>CAGR</p></td>
+                          <td><p>19.54%</p></td>
+                          <td><p>28.81%</p></td>
+                        </tr>
+                        <tr>
+                          <td class="align__items"><p>Max Drawdown</p></td>
+                          <td><p>22.26%</p></td>
+                          <td><p>9.14%</p></td>
+                        </tr>
+                        <tr>
+                          <td class="align__items"><p>Sharpe</p></td>
+                          <td><p>0.9762</p></td>
+                          <td><p>2.3869</p></td>
+                        </tr>
+                        <tr>
+                          <td class="align__items"><p>Sortino</p></td>
+                          <td><p>1.1734</p></td>
+                          <td><p>3.5439</p></td>
+                        </tr>
+                        <tr>
+                          <td class="align__items"><p>Jensen α</p></td>
+                          <td><p>-</p></td>
+                          <td><p>2.30%</p></td>
+                        </tr>
+                        <tr>
+                          <td class="align__items"><p>β</p></td>
+                          <td><p>-</p></td>
+                          <td><p>0.5752</p></td>
+                        </tr>
+                        <tr>
+                          <td class="align__items"><p>Treynor</p></td>
+                          <td><p>-</p></td>
+                          <td><p>0.0031</p></td>
+                        </tr>
+                        <tr>
+                          <td class="align__items"><p>Avg. Cash</p></td>
+                          <td><p>-</p></td>
+                          <td><p>37.18%</p></td>
+                        </tr>
+                        <tr>
+                          <td class="align__items"><p>Capital Efficiency</p></td>
+                          <td><p>-</p></td>
+                          <td><p>234.68%</p></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="backtest_data2">
+                  <div id="strategy_chart"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="portSimulator" class="tab-pane stocksEtf_sec112 fade">
+            <div class="portfolio_3">
+              <div class="portfolio_11">
+                <div class="portfolio_112">
+                  <h4>Simulated Portfolio</h4>
+                  <div class="current_portfolio">
+                    <img src="images/risk-tolerance-chart.png" style="width: 220px; text-align: center;">
+                    <!-- <div id="risk-tolerance-pieChart2"></div> -->
+                  </div>
+                  <p>Account Value: <b>$100,000</b></p>
+                </div>
+                <div class="portfolio_113">
+                  <h3>Risk Tolerance:</h3>
+                  <a href="#" data-bs-toggle="modal" data-bs-target="#editRisk_tol" class="editRisk_btn">Edit</a>
+                  <div class="Portfolio_slider">
+                    <div class="footLeft11">
+                      <div class="slidecontainer">
+                        <div class="RangeSlider_div">
+                          <input type="range" min="0" max="6" value="4" class="slider_range" id="ovtlyr_rating" disabled="">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="Portfolio_sliderV">
+                      <ul>
+                        <li><p>Conservative</p></li>
+                        <li><p>Balanced</p></li>
+                        <li><p>Aggressive</p></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="portfolio_12 currentPort_table">
+                <div class="portfolio_121">
+                  <div class="portfolio_122">
+                    <p>Portfolio Value</p>
+                    <div class="portfolio_1221">
+                      <span>$</span>
+                      <input type="text" />
+                    </div>
+                  </div>
+                  <div class="portfolio_123">
+                    <a href="#" class="show_sideBar" id="hide_sidebar"><i class="fa-solid fa-plus"></i><span class="ms-1">Add</span></a>
+                  </div>
+                </div>
+                <div class="table_scroll horizontal_scroll">
+                  <table class="table ovtlyr_table treemapChart_table">
+                    <thead>
+                      <tr>
+                        <th style="width: 11%;" class="align__items">Symbol</th>
+                        <th style="width: 11%;" class="align__items">Name</th>
+                        <th style="width: 11%;" class="align__items">Last Price</th>
+                        <th style="width: 23%;">Risk ON/OFF</th>
+                        <th style="width: 11%;">Quantity</th>
+                        <th style="width: 12%;">Total Value</th>
+                        <th style="width: 11%;">% of Portfolio</th>
+                        <th style="width: 10%;"></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p><span class="port_symbol">MSFT</span></p></a></td>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p class="company_name">Microsoft Corporation</p></a></td>
+                        <td class="align__items"><p>$123.00</p></td>
+                        <td>
+                          <div class="footLeft11 rating_slider">
+                            <div class="slidecontainer">
+                              <span class="values">ON</span>
+                              <div class="RangeSlider_div">
+                                <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                              </div>
+                              <span class="values">OFF</span>
+                            </div>
+                          </div>
+                        </td>
+                        <td><p>22</p></td>
+                        <td><p>$1234.00</p></td>
+                        <td><p>2.3%</p></td>
+                        <td>
+                          <div class="actions_btn">
+                            <a href="#" class="add_icon"><i class="fa-solid fa-circle-check"></i></a>
+                            <a href="#" class="minus_icon ms-2"><i class="fa-solid fa-circle-minus"></i></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p><span class="port_symbol">MSFT</span></p></a></td>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p class="company_name">Microsoft Corporation</p></a></td>
+                        <td class="align__items"><p>$123.00</p></td>
+                        <td>
+                          <div class="footLeft11 rating_slider">
+                            <div class="slidecontainer">
+                              <span class="values">ON</span>
+                              <div class="RangeSlider_div">
+                                <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                              </div>
+                              <span class="values">OFF</span>
+                            </div>
+                          </div>
+                        </td>
+                        <td><p>22</p></td>
+                        <td><p>$1234.00</p></td>
+                        <td><p>2.3%</p></td>
+                        <td>
+                          <div class="actions_btn">
+                            <a href="#" class="add_icon"><i class="fa-solid fa-circle-check"></i></a>
+                            <a href="#" class="minus_icon ms-2"><i class="fa-solid fa-circle-minus"></i></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p><span class="port_symbol">MSFT</span></p></a></td>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p class="company_name">Microsoft Corporation</p></a></td>
+                        <td class="align__items"><p>$123.00</p></td>
+                        <td>
+                          <div class="footLeft11 rating_slider">
+                            <div class="slidecontainer">
+                              <span class="values">ON</span>
+                              <div class="RangeSlider_div">
+                                <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                              </div>
+                              <span class="values">OFF</span>
+                            </div>
+                          </div>
+                        </td>
+                        <td><p>22</p></td>
+                        <td><p>$1234.00</p></td>
+                        <td><p>2.3%</p></td>
+                        <td>
+                          <div class="actions_btn">
+                            <a href="#" class="add_icon"><i class="fa-solid fa-circle-check"></i></a>
+                            <a href="#" class="minus_icon ms-2"><i class="fa-solid fa-circle-minus"></i></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p><span class="port_symbol">MSFT</span></p></a></td>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p class="company_name">Microsoft Corporation</p></a></td>
+                        <td class="align__items"><p>$123.00</p></td>
+                        <td>
+                          <div class="footLeft11 rating_slider">
+                            <div class="slidecontainer">
+                              <span class="values">ON</span>
+                              <div class="RangeSlider_div">
+                                <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                              </div>
+                              <span class="values">OFF</span>
+                            </div>
+                          </div>
+                        </td>
+                        <td><p>22</p></td>
+                        <td><p>$1234.00</p></td>
+                        <td><p>2.3%</p></td>
+                        <td>
+                          <div class="actions_btn">
+                            <a href="#" class="add_icon"><i class="fa-solid fa-circle-check"></i></a>
+                            <a href="#" class="minus_icon ms-2"><i class="fa-solid fa-circle-minus"></i></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p><span class="port_symbol">MSFT</span></p></a></td>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p class="company_name">Microsoft Corporation</p></a></td>
+                        <td class="align__items"><p>$123.00</p></td>
+                        <td>
+                          <div class="footLeft11 rating_slider">
+                            <div class="slidecontainer">
+                              <span class="values">ON</span>
+                              <div class="RangeSlider_div">
+                                <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                              </div>
+                              <span class="values">OFF</span>
+                            </div>
+                          </div>
+                        </td>
+                        <td><p>22</p></td>
+                        <td><p>$1234.00</p></td>
+                        <td><p>2.3%</p></td>
+                        <td>
+                          <div class="actions_btn">
+                            <a href="#" class="add_icon"><i class="fa-solid fa-circle-check"></i></a>
+                            <a href="#" class="minus_icon ms-2"><i class="fa-solid fa-circle-minus"></i></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p><span class="port_symbol">MSFT</span></p></a></td>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p class="company_name">Microsoft Corporation</p></a></td>
+                        <td class="align__items"><p>$123.00</p></td>
+                        <td>
+                          <div class="footLeft11 rating_slider">
+                            <div class="slidecontainer">
+                              <span class="values">ON</span>
+                              <div class="RangeSlider_div">
+                                <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                              </div>
+                              <span class="values">OFF</span>
+                            </div>
+                          </div>
+                        </td>
+                        <td><p>22</p></td>
+                        <td><p>$1234.00</p></td>
+                        <td><p>2.3%</p></td>
+                        <td>
+                          <div class="actions_btn">
+                            <a href="#" class="add_icon"><i class="fa-solid fa-circle-check"></i></a>
+                            <a href="#" class="minus_icon ms-2"><i class="fa-solid fa-circle-minus"></i></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p><span class="port_symbol">MSFT</span></p></a></td>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p class="company_name">Microsoft Corporation</p></a></td>
+                        <td class="align__items"><p>$123.00</p></td>
+                        <td>
+                          <div class="footLeft11 rating_slider">
+                            <div class="slidecontainer">
+                              <span class="values">ON</span>
+                              <div class="RangeSlider_div">
+                                <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                              </div>
+                              <span class="values">OFF</span>
+                            </div>
+                          </div>
+                        </td>
+                        <td><p>22</p></td>
+                        <td><p>$1234.00</p></td>
+                        <td><p>2.3%</p></td>
+                        <td>
+                          <div class="actions_btn">
+                            <a href="#" class="add_icon"><i class="fa-solid fa-circle-check"></i></a>
+                            <a href="#" class="minus_icon ms-2"><i class="fa-solid fa-circle-minus"></i></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p><span class="port_symbol">MSFT</span></p></a></td>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p class="company_name">Microsoft Corporation</p></a></td>
+                        <td class="align__items"><p>$123.00</p></td>
+                        <td>
+                          <div class="footLeft11 rating_slider">
+                            <div class="slidecontainer">
+                              <span class="values">ON</span>
+                              <div class="RangeSlider_div">
+                                <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                              </div>
+                              <span class="values">OFF</span>
+                            </div>
+                          </div>
+                        </td>
+                        <td><p>22</p></td>
+                        <td><p>$1234.00</p></td>
+                        <td><p>2.3%</p></td>
+                        <td>
+                          <div class="actions_btn">
+                            <a href="#" class="add_icon"><i class="fa-solid fa-circle-check"></i></a>
+                            <a href="#" class="minus_icon ms-2"><i class="fa-solid fa-circle-minus"></i></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p><span class="port_symbol">MSFT</span></p></a></td>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p class="company_name">Microsoft Corporation</p></a></td>
+                        <td class="align__items"><p>$123.00</p></td>
+                        <td>
+                          <div class="footLeft11 rating_slider">
+                            <div class="slidecontainer">
+                              <span class="values">ON</span>
+                              <div class="RangeSlider_div">
+                                <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                              </div>
+                              <span class="values">OFF</span>
+                            </div>
+                          </div>
+                        </td>
+                        <td><p>22</p></td>
+                        <td><p>$1234.00</p></td>
+                        <td><p>2.3%</p></td>
+                        <td>
+                          <div class="actions_btn">
+                            <a href="#" class="add_icon"><i class="fa-solid fa-circle-check"></i></a>
+                            <a href="#" class="minus_icon ms-2"><i class="fa-solid fa-circle-minus"></i></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p><span class="port_symbol">MSFT</span></p></a></td>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p class="company_name">Microsoft Corporation</p></a></td>
+                        <td class="align__items"><p>$123.00</p></td>
+                        <td>
+                          <div class="footLeft11 rating_slider">
+                            <div class="slidecontainer">
+                              <span class="values">ON</span>
+                              <div class="RangeSlider_div">
+                                <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                              </div>
+                              <span class="values">OFF</span>
+                            </div>
+                          </div>
+                        </td>
+                        <td><p>22</p></td>
+                        <td><p>$1234.00</p></td>
+                        <td><p>2.3%</p></td>
+                        <td>
+                          <div class="actions_btn">
+                            <a href="#" class="add_icon"><i class="fa-solid fa-circle-check"></i></a>
+                            <a href="#" class="minus_icon ms-2"><i class="fa-solid fa-circle-minus"></i></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p><span class="port_symbol">MSFT</span></p></a></td>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p class="company_name">Microsoft Corporation</p></a></td>
+                        <td class="align__items"><p>$123.00</p></td>
+                        <td>
+                          <div class="footLeft11 rating_slider">
+                            <div class="slidecontainer">
+                              <span class="values">ON</span>
+                              <div class="RangeSlider_div">
+                                <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                              </div>
+                              <span class="values">OFF</span>
+                            </div>
+                          </div>
+                        </td>
+                        <td><p>22</p></td>
+                        <td><p>$1234.00</p></td>
+                        <td><p>2.3%</p></td>
+                        <td>
+                          <div class="actions_btn">
+                            <a href="#" class="add_icon"><i class="fa-solid fa-circle-check"></i></a>
+                            <a href="#" class="minus_icon ms-2"><i class="fa-solid fa-circle-minus"></i></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="pink_row">
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p><span class="port_symbol">MSFT</span></p></a></td>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p class="company_name">Microsoft Corporation</p></a></td>
+                        <td class="align__items"><p>$123.00</p></td>
+                        <td>
+                          <div class="footLeft11 rating_slider">
+                            <div class="slidecontainer">
+                              <span class="values">ON</span>
+                              <div class="RangeSlider_div">
+                                <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                              </div>
+                              <span class="values">OFF</span>
+                            </div>
+                          </div>
+                        </td>
+                        <td><p>22</p></td>
+                        <td><p>$1234.00</p></td>
+                        <td><p>2.3%</p></td>
+                        <td>
+                          <div class="actions_btn">
+                            <a href="#" class="add_icon"><i class="fa-solid fa-circle-check"></i></a>
+                            <a href="#" class="minus_icon ms-2"><i class="fa-solid fa-circle-minus"></i></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="pink_row">
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p><span class="port_symbol">MSFT</span></p></a></td>
+                        <td class="align__items"><a href="etf.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Microsoft Corporation"><p class="company_name">Microsoft Corporation</p></a></td>
+                        <td class="align__items"><p>$123.00</p></td>
+                        <td>
+                          <div class="footLeft11 rating_slider">
+                            <div class="slidecontainer">
+                              <span class="values">ON</span>
+                              <div class="RangeSlider_div">
+                                <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                              </div>
+                              <span class="values">OFF</span>
+                            </div>
+                          </div>
+                        </td>
+                        <td><p>22</p></td>
+                        <td><p>$1234.00</p></td>
+                        <td><p>2.3%</p></td>
+                        <td>
+                          <div class="actions_btn">
+                            <a href="#" class="add_icon"><i class="fa-solid fa-circle-check"></i></a>
+                            <a href="#" class="minus_icon ms-2"><i class="fa-solid fa-circle-minus"></i></a>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="simulator_buttons">
+                  <div class="buttonsHover">
+                    <a href="#"><i class="fa-solid fa-rotate-left me-2"></i>Reset</a>
+                    <div class="resetBtn_dtl">
+                      <p>Press ‘reset’ to revert back to your current portfolio</p>
+                    </div>
+                  </div>
+                  <div class="buttonsHover">
+                    <a href="#" class="pinkButton">RUN Simulator NOW!</a>
+                  </div>
+                  <div class="buttonsHover">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#simulatorRun">Export To Suggestions</a>
+                    <div class="resetBtn_dtl">
+                      <p>Press this  button to export the simulated portfolio holdings to suggestions tab.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="backtestResults">
+              <div class="backtest_head">
+                <h3>Backtest Results</h3>
+                <h5>The OVTLYR Portfolio Engine has been tested  for 51 months</h5>
+              </div>
+              <div class="backtest_data">
+                <div class="backtest_data1">
+                  <div class="table_scroll horizontal_scroll">
+                    <table class="table ovtlyr_table treemapChart_table">
+                      <thead>
+                        <tr>
+                          <th style="width: 34%;" class="align__items">Category</th>
+                          <th style="width: 32%;">Buy & Hold</th>
+                          <th style="width: 34%;">OVTLYR</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="align__items"><p>ROI [%]</p></td>
+                          <td><p>118.88%</p></td>
+                          <td><p>203.79%</p></td>
+                        </tr>
+                        <tr>
+                          <td class="align__items"><p>ROI [&]</p></td>
+                          <td><p>$118,883.71</p></td>
+                          <td><p>$203,790.73</p></td>
+                        </tr>
+                        <tr>
+                          <td class="align__items"><p>CAGR</p></td>
+                          <td><p>19.54%</p></td>
+                          <td><p>28.81%</p></td>
+                        </tr>
+                        <tr>
+                          <td class="align__items"><p>Max Drawdown</p></td>
+                          <td><p>22.26%</p></td>
+                          <td><p>9.14%</p></td>
+                        </tr>
+                        <tr>
+                          <td class="align__items"><p>Sharpe</p></td>
+                          <td><p>0.9762</p></td>
+                          <td><p>2.3869</p></td>
+                        </tr>
+                        <tr>
+                          <td class="align__items"><p>Sortino</p></td>
+                          <td><p>1.1734</p></td>
+                          <td><p>3.5439</p></td>
+                        </tr>
+                        <tr>
+                          <td class="align__items"><p>Jensen α</p></td>
+                          <td><p>-</p></td>
+                          <td><p>2.30%</p></td>
+                        </tr>
+                        <tr>
+                          <td class="align__items"><p>β</p></td>
+                          <td><p>-</p></td>
+                          <td><p>0.5752</p></td>
+                        </tr>
+                        <tr>
+                          <td class="align__items"><p>Treynor</p></td>
+                          <td><p>-</p></td>
+                          <td><p>0.0031</p></td>
+                        </tr>
+                        <tr>
+                          <td class="align__items"><p>Avg. Cash</p></td>
+                          <td><p>-</p></td>
+                          <td><p>37.18%</p></td>
+                        </tr>
+                        <tr>
+                          <td class="align__items"><p>Capital Efficiency</p></td>
+                          <td><p>-</p></td>
+                          <td><p>234.68%</p></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="backtest_data2">
+                  <div id="strategy_chart"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--============ PORTFOLIO SIDEBAR CODE BEGIN ============-->
+      <div class="watchlist_sidebar watchlistScroll">
+        <button type="button" class="cross_btn show_sideBar2"><span class="material-icons">close</span></button>
+        <div class="sidebar_filters">
+          <ul class="nav nav-tabs outer_filters" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="tab" href="#searchBy_stock">
+                <span>Search by Stock</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="tab" href="#searchBy_filter">
+                <span>Search by Filters</span>
+              </a>
+            </li>
+          </ul>
+          <div class="tab-content">
+            <div id="searchBy_stock" class="tab-pane active">
+              <div class="searchBy_stock">
+                <button class="header_searchIcon"><i class="material-icons">search</i></button>
+                <input class="search_symbol" type="text" placeholder="Type Company Name or Ticker to Search">
+              </div>
+            </div>
+            <div id="searchBy_filter" class="tab-pane fade">
+              <div class="searchBy_filter">
+                <ul class="nav nav-tabs inner_filters" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" data-bs-toggle="tab" href="#selectBy_sec">
+                      <span>Sector</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="tab" href="#selectBy_indus">
+                      <span>Industry</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="tab" href="#selectBy_market">
+                      <span>Market Cap</span>
+                    </a>
+                  </li>
+                </ul>
+                <div class="tab-content">
+                  <div id="selectBy_sec" class="tab-pane active">
+                    <div class="sector_tab1 watchlistScroll">
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <span class="checkbox__in">
+                          <span class="checkbox__tick"></span>
+                          <span class="checkbox__text">Communication</span>
+                        </span>
+                      </label>
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <span class="checkbox__in">
+                          <span class="checkbox__tick"></span>
+                          <span class="checkbox__text">Discretionary</span>
+                        </span>
+                      </label>
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <span class="checkbox__in">
+                          <span class="checkbox__tick"></span>
+                          <span class="checkbox__text">Energy</span>
+                        </span>
+                      </label>
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <span class="checkbox__in">
+                          <span class="checkbox__tick"></span>
+                          <span class="checkbox__text">Financials</span>
+                        </span>
+                      </label>
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <span class="checkbox__in">
+                          <span class="checkbox__tick"></span>
+                          <span class="checkbox__text">Healthcare</span>
+                        </span>
+                      </label>
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <span class="checkbox__in">
+                          <span class="checkbox__tick"></span>
+                          <span class="checkbox__text">Industrial</span>
+                        </span>
+                      </label>
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <span class="checkbox__in">
+                          <span class="checkbox__tick"></span>
+                          <span class="checkbox__text">Materials</span>
+                        </span>
+                      </label>
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <span class="checkbox__in">
+                          <span class="checkbox__tick"></span>
+                          <span class="checkbox__text">Real Estate</span>
+                        </span>
+                      </label>
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <span class="checkbox__in">
+                          <span class="checkbox__tick"></span>
+                          <span class="checkbox__text">Staples</span>
+                        </span>
+                      </label>
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <span class="checkbox__in">
+                          <span class="checkbox__tick"></span>
+                          <span class="checkbox__text">Technology</span>
+                        </span>
+                      </label>
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <span class="checkbox__in">
+                          <span class="checkbox__tick"></span>
+                          <span class="checkbox__text">Utilities</span>
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                  <div id="selectBy_indus" class="tab-pane fade">
+                    <div class="sector_tab1 watchlistScroll">
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <span class="checkbox__in">
+                          <span class="checkbox__tick"></span>
+                          <span class="checkbox__text">Technology Hardware, Storage &amp; Peripherals</span>
+                        </span>
+                      </label>
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <span class="checkbox__in">
+                          <span class="checkbox__tick"></span>
+                          <span class="checkbox__text">Hotels, Restaurants &amp; Leisure</span>
+                        </span>
+                      </label>
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <span class="checkbox__in">
+                          <span class="checkbox__tick"></span>
+                          <span class="checkbox__text">IT Services</span>
+                        </span>
+                      </label>
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <span class="checkbox__in">
+                          <span class="checkbox__tick"></span>
+                          <span class="checkbox__text">Electrical Equipment</span>
+                        </span>
+                      </label>
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <span class="checkbox__in">
+                          <span class="checkbox__tick"></span>
+                          <span class="checkbox__text">Metals &amp; Mining</span>
+                        </span>
+                      </label>
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <span class="checkbox__in">
+                          <span class="checkbox__tick"></span>
+                          <span class="checkbox__text">Hotels, Restaurants &amp; Leisure</span>
+                        </span>
+                      </label>
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <span class="checkbox__in">
+                          <span class="checkbox__tick"></span>
+                          <span class="checkbox__text">IT Services</span>
+                        </span>
+                      </label>
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <span class="checkbox__in">
+                          <span class="checkbox__tick"></span>
+                          <span class="checkbox__text">Electrical Equipment</span>
+                        </span>
+                      </label>
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <span class="checkbox__in">
+                          <span class="checkbox__tick"></span>
+                          <span class="checkbox__text">Metals &amp; Mining</span>
+                        </span>
+                      </label>
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <span class="checkbox__in">
+                          <span class="checkbox__tick"></span>
+                          <span class="checkbox__text">Hotels, Restaurants &amp; Leisure</span>
+                        </span>
+                      </label>
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <span class="checkbox__in">
+                          <span class="checkbox__tick"></span>
+                          <span class="checkbox__text">IT Services</span>
+                        </span>
+                      </label>
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <span class="checkbox__in">
+                          <span class="checkbox__tick"></span>
+                          <span class="checkbox__text">Electrical Equipment</span>
+                        </span>
+                      </label>
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <span class="checkbox__in">
+                          <span class="checkbox__tick"></span>
+                          <span class="checkbox__text">Software</span>
+                        </span>
+                      </label>
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <span class="checkbox__in">
+                          <span class="checkbox__tick"></span>
+                          <span class="checkbox__text">Hotels, Restaurants &amp; Leisure</span>
+                        </span>
+                      </label>
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <span class="checkbox__in">
+                          <span class="checkbox__tick"></span>
+                          <span class="checkbox__text">IT Services</span>
+                        </span>
+                      </label>
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <span class="checkbox__in">
+                          <span class="checkbox__tick"></span>
+                          <span class="checkbox__text">Electrical Equipment</span>
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                  <div id="selectBy_market" class="tab-pane fade">
+                    <div class="sector_tab1">
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <span class="checkbox__in">
+                          <span class="checkbox__tick"></span>
+                          <span class="checkbox__text">&lt;$10B</span>
+                        </span>
+                      </label>
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <span class="checkbox__in">
+                          <span class="checkbox__tick"></span>
+                          <span class="checkbox__text">$10B - $100B</span>
+                        </span>
+                      </label>
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <span class="checkbox__in">
+                          <span class="checkbox__tick"></span>
+                          <span class="checkbox__text">&gt;$100B</span>
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="apply_filter">
+                  <a href="javascript:void(0);" class="purple_button">Apply</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h4>Results:</h4>
+        <div class="filtered_results watchlistScroll">
+          <div class="card_item">
+            <div class="card_details">
+              <div class="card_line">
+                <span class="card_category port_symbol">AAPL</span>
+                <div class="card_date"><button type="button" class="clickTo_add"><i class="fa-solid fa-circle-plus"></i></button></div>
+              </div>
+              <div class="card_status">TD Holdings Inc</div>
+            </div>
+            <div class="">
+              <div class="footLeft11 rating_slider">
+                <div class="slidecontainer">
+                  <span class="values">ON</span>
+                  <div class="RangeSlider_div">
+                    <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                  </div>
+                  <span class="values">OFF</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card_item">
+            <div class="card_details">
+              <div class="card_line">
+                <span class="card_category port_symbol">AAPL</span>
+                <div class="card_date"><button type="button" class="clickTo_add"><i class="fa-solid fa-circle-plus"></i></button></div>
+              </div>
+              <div class="card_status">Avis Budget Grp</div>
+            </div>
+            <div class="">
+              <div class="footLeft11 rating_slider">
+                <div class="slidecontainer">
+                  <span class="values">ON</span>
+                  <div class="RangeSlider_div">
+                    <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                  </div>
+                  <span class="values">OFF</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card_item">
+            <div class="card_details">
+              <div class="card_line">
+                <span class="card_category port_symbol">AAPL</span>
+                <div class="card_date"><button type="button" class="clickTo_add"><i class="fa-solid fa-circle-plus"></i></button></div>
+              </div>
+              <div class="card_status">HyreCar</div>
+            </div>
+            <div class="">
+              <div class="footLeft11 rating_slider">
+                <div class="slidecontainer">
+                  <span class="values">ON</span>
+                  <div class="RangeSlider_div">
+                    <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                  </div>
+                  <span class="values">OFF</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card_item">
+            <div class="card_details">
+              <div class="card_line">
+                <span class="card_category port_symbol">AAPL</span>
+                <div class="card_date"><button type="button" class="clickTo_add"><i class="fa-solid fa-circle-plus"></i></button></div>
+              </div>
+              <div class="card_status">HyreCar</div>
+            </div>
+            <div class="">
+              <div class="footLeft11 rating_slider">
+                <div class="slidecontainer">
+                  <span class="values">ON</span>
+                  <div class="RangeSlider_div">
+                    <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                  </div>
+                  <span class="values">OFF</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card_item">
+            <div class="card_details">
+              <div class="card_line">
+                <span class="card_category port_symbol">AAPL</span>
+                <div class="card_date"><button type="button" class="clickTo_add"><i class="fa-solid fa-circle-plus"></i></button></div>
+              </div>
+              <div class="card_status">HyreCar</div>
+            </div>
+            <div class="">
+              <div class="footLeft11 rating_slider">
+                <div class="slidecontainer">
+                  <span class="values">ON</span>
+                  <div class="RangeSlider_div">
+                    <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                  </div>
+                  <span class="values">OFF</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card_item">
+            <div class="card_details">
+              <div class="card_line">
+                <span class="card_category port_symbol">AAPL</span>
+                <div class="card_date"><button type="button" class="clickTo_add"><i class="fa-solid fa-circle-plus"></i></button></div>
+              </div>
+              <div class="card_status">HERTZ GLOBAL HLD</div>
+            </div>
+            <div class="">
+              <div class="footLeft11 rating_slider">
+                <div class="slidecontainer">
+                  <span class="values">ON</span>
+                  <div class="RangeSlider_div">
+                    <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                  </div>
+                  <span class="values">OFF</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card_item">
+            <div class="card_details">
+              <div class="card_line">
+                <span class="card_category port_symbol">AAPL</span>
+                <div class="card_date"><button type="button" class="clickTo_add"><i class="fa-solid fa-circle-plus"></i></button></div>
+              </div>
+              <div class="card_status">Apple Inc</div>
+            </div>
+            <div class="">
+              <div class="footLeft11 rating_slider">
+                <div class="slidecontainer">
+                  <span class="values">ON</span>
+                  <div class="RangeSlider_div">
+                    <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                  </div>
+                  <span class="values">OFF</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--============= PORTFOLIO SIDEBAR CODE END =============-->
+    </div>
+  </section>
+  <!--=========== BUY / SELL MODAL 1 START ==========-->
+  <div class="modal editRisk_tol buySell_modal fade" id="buySell_modal" tabindex="-1" aria-labelledby="buySell_modalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <button type="button" class="close_btn" data-bs-dismiss="modal" aria-label="Close"><span class="material-icons">close</span></button>
+          <div class="buySellModal_box">
+            <div class="stockDtl_tabs2">
+              <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" data-bs-toggle="tab" href="#buy_tab2">Buy</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-bs-toggle="tab" href="#sell_tab2">Sell</a>
+                </li>
+              </ul>
+              <div class="tab-content">
+                <div id="buy_tab2" class="tab2Sec1_box tab-pane active">
+                  <div class="tab2_secBox1" style="display: block;">
+                    <div class="tab2_sec1">
+                      <p class="tab2_sec11 mb-0">Buying Power: <span class="bold_txt">$1345.45</span></p>
+                      <div class="tab2_sec13"></div>
+                      <p class="tab2_sec11">Order Type</p>
+                      <div class="tab2_sec12">
+                        <p>
+                          <span>Market Order</span>
+                          <label class="contain_box">
+                            <input type="radio" name="orderType1" class="form_check_add" checked="">
+                            <span class="checkmark"></span>
+                          </label>
+                        </p>
+                        <p>
+                          <span>Limit Order</span>
+                          <label class="contain_box">
+                            <input type="radio" name="orderType1" class="form_check_add">
+                            <span class="checkmark"></span>
+                          </label>
+                        </p>
+                      </div>
+                      <div class="tab2_sec13"></div>
+                      <p class="tab2_sec11">Invest In</p>
+                      <div class="tab2_sec12">
+                        <p>
+                          <span>Dollars</span>
+                          <label class="contain_box">
+                            <input type="radio" name="investIn1" class="form_check_add" checked="">
+                            <span class="checkmark"></span>
+                          </label>
+                        </p>
+                        <p>
+                          <span>Shares</span>
+                          <label class="contain_box">
+                            <input type="radio" name="investIn1" class="form_check_add">
+                            <span class="checkmark"></span>
+                          </label>
+                        </p>
+                      </div>
+                      <div class="tab2_sec13"></div>
+                      <!--======== FIRST SELECT RADIO BUTTON =======-->
+                      <div class="marketlimit_fields">
+                        <div class="tab2_sec14">
+                          <span>Amount:</span>
+                          <input type="text" placeholder="$0.00">
+                        </div>
+                        <div class="tab2_sec13"></div>
+                        <div class="tab2_sec14">
+                          <span>Est. Quantity</span>
+                          <input type="text" placeholder="0.00">
+                        </div>
+                      </div>
+                      <!--========== FIRST SELECT RADIO END =========-->
+                      <!--======== SECOND SELECT RADIO BUTTON =======-->
+                      <div class="marketlimit_fields">
+                        <div class="tab2_sec14">
+                          <span>Shares:</span>
+                          <input type="text" placeholder="$0.00" />
+                        </div>
+                        <div class="tab2_sec13"></div>
+                        <div class="tab2_sec14">
+                          <span>Est. Amount</span>
+                          <input type="text" placeholder="0.00" />
+                        </div>
+                      </div>
+                      <!--======== SECOND SELECT RADIO END =======-->
+                      <div class="tab2_sec15">
+                        <p><span>Best Bid</span><span>Best Ask</span></p>
+                        <p><span>$123.34</span><span>$123.35</span></p>
+                      </div>
+                      <div class="tab2_sec16">
+                        <p>Market Price: $157.65</p>
+                      </div>
+                    </div>
+                    <div class="tab2_sec111">
+                      <a href="#">Review Order</a>
+                    </div>
+                  </div>
+                  <!--======== AFTER CLICK ON REVIEW ORDER BUTTON =======-->
+                  <div class="tab2_secBox2" style="display: block;">
+                    <div class="tab2_sec14">
+                      <span>Order type</span>
+                      <select>
+                        <option selected="">Market</option>
+                        <option>Limit</option>
+                      </select>
+                    </div>
+                    <div class="tab2_sec14">
+                      <span>Invest In</span>
+                      <select>
+                        <option selected="">Dollars</option>
+                        <option>Shares</option>
+                      </select>
+                    </div>
+                    <div class="tab2_sec14 mb-0">
+                      <span>Amount:</span>
+                      <input type="text" placeholder="$100.00">
+                    </div>
+                    <div class="tab2_sec13"></div>
+                    <div class="tab2_sec17">
+                      <p><span>Est. Quantity</span><span>0.654</span></p>
+                    </div>
+                    <div class="tab2_sec18">
+                      <h3>Order Summary</h3>
+                      <p>You are placing a good for day market order to buy 0.654 shares of AAPL based on the current market price of $152.75. The total estimated cost of your order is $100.</p>
+                    </div>
+                    <div class="tab2_sec111">
+                      <a href="#">Buy</a>
+                      <a href="#" class="border_btn">Edit</a>
+                    </div>
+                  </div>
+                </div>
+                <div id="sell_tab2" class="tab2Sec2_box tab-pane fade">
+                  <div class="tab2_secBox1" style="display: block;">
+                    <div class="tab2_sec1">
+                      <p class="tab2_sec11 mb-0">Shares Available: <span class="bold_txt">$1345.45</span></p>
+                      <div class="tab2_sec13"></div>
+                      <p class="tab2_sec11">Order Type</p>
+                      <div class="tab2_sec12">
+                        <p>
+                          <span>Market Order</span>
+                          <label class="contain_box">
+                            <input type="radio" name="orderType2" class="form_check_add" checked="">
+                            <span class="checkmark"></span>
+                          </label>
+                        </p>
+                        <p>
+                          <span>Limit Order</span>
+                          <label class="contain_box">
+                            <input type="radio" name="orderType2" class="form_check_add">
+                            <span class="checkmark"></span>
+                          </label>
+                        </p>
+                      </div>
+                      <div class="tab2_sec13"></div>
+                      <p class="tab2_sec11">Selling In</p>
+                      <div class="tab2_sec12">
+                        <p>
+                          <span>Dollars</span>
+                          <label class="contain_box">
+                            <input type="radio" name="investIn2" class="form_check_add" checked="">
+                            <span class="checkmark"></span>
+                          </label>
+                        </p>
+                        <p>
+                          <span>Shares</span>
+                          <label class="contain_box">
+                            <input type="radio" name="investIn2" class="form_check_add">
+                            <span class="checkmark"></span>
+                          </label>
+                        </p>
+                      </div>
+                      <div class="tab2_sec13"></div>
+                      <!--======== FIRST SELECT RADIO BUTTON =======-->
+                      <div class="marketlimit_fields">
+                        <div class="tab2_sec14">
+                          <span>Selling Amount:</span>
+                          <input type="text" placeholder="$0.00">
+                        </div>
+                        <div class="tab2_sec13"></div>
+                        <div class="tab2_sec14">
+                          <span>Est. Quantity</span>
+                          <input type="text" placeholder="0.00">
+                        </div>
+                      </div>
+                      <!--========== FIRST SELECT RADIO END =========-->
+                      <!--======== SECOND SELECT RADIO BUTTON =======-->
+                      <div class="marketlimit_fields">
+                        <div class="tab2_sec14">
+                          <span>Selling Shares:</span>
+                          <input type="text" placeholder="$0.00" />
+                        </div>
+                        <div class="tab2_sec13"></div>
+                        <div class="tab2_sec14">
+                          <span>Est. Credit:</span>
+                          <input type="text" placeholder="0.00" />
+                        </div>
+                      </div>
+                      <!--======== SECOND SELECT RADIO END =======-->
+                      <div class="tab2_sec15">
+                        <p><span>Best Bid</span><span>Best Ask</span></p>
+                        <p><span>$123.34</span><span>$123.35</span></p>
+                      </div>
+                      <div class="tab2_sec16">
+                        <p>Market Price: $157.65</p>
+                      </div>
+                    </div>
+                    <div class="tab2_sec111">
+                      <a href="#">Review Order</a>
+                    </div>
+                  </div>
+                  <!--======== AFTER CLICK ON REVIEW ORDER BUTTON =======-->
+                  <div class="tab2_secBox2" style="display: block;">
+                    <div class="tab2_sec14">
+                      <span>Order type</span>
+                      <select>
+                        <option selected="">Market</option>
+                        <option>Limit</option>
+                      </select>
+                    </div>
+                    <div class="tab2_sec14">
+                      <span>Selling In</span>
+                      <select>
+                        <option>Dollars</option>
+                        <option selected="">Shares</option>
+                      </select>
+                    </div>
+                    <div class="tab2_sec14 mb-0">
+                      <span>Shares:</span>
+                      <input type="text" placeholder="0.654">
+                    </div>
+                    <div class="tab2_sec13"></div>
+                    <div class="tab2_sec17">
+                      <p><span>Est. Quantity</span><span>0.654</span></p>
+                    </div>
+                    <div class="tab2_sec18">
+                      <h3>Order Summary</h3>
+                      <p>You are placing a good for day market order to sell 0.654 shares of AAPL based on the current market price of $152.75. The total estimated credit for your order is $100.</p>
+                    </div>
+                    <div class="tab2_sec111">
+                      <a href="#">Sell</a>
+                      <a href="#" class="border_btn">Edit</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+  <!--============= BUY / SELL MODAL 1 END ============-->
+  <!--============ BUY / SELL MODAL 2 START ===========-->
+  <div class="modal editRisk_tol buySell_modal fade" id="buySell_modal2" tabindex="-1" aria-labelledby="buySell_modal2Label" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <button type="button" class="close_btn" data-bs-dismiss="modal" aria-label="Close"><span class="material-icons">close</span></button>
+          <div class="buySellModal_box">
+            <div class="stockDtl_tabs2">
+              <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link" data-bs-toggle="tab" href="#buy_tab3">Buy</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" data-bs-toggle="tab" href="#sell_tab3">Sell</a>
+                </li>
+              </ul>
+              <div class="tab-content">
+                <div id="buy_tab3" class="tab2Sec1_box tab-pane fade">
+                  <div class="tab2_secBox1" style="display: block;">
+                    <div class="tab2_sec1">
+                      <p class="tab2_sec11 mb-0">Buying Power: <span class="bold_txt">$1345.45</span></p>
+                      <div class="tab2_sec13"></div>
+                      <p class="tab2_sec11">Order Type</p>
+                      <div class="tab2_sec12">
+                        <p>
+                          <span>Market Order</span>
+                          <label class="contain_box">
+                            <input type="radio" name="orderType1" class="form_check_add" checked="">
+                            <span class="checkmark"></span>
+                          </label>
+                        </p>
+                        <p>
+                          <span>Limit Order</span>
+                          <label class="contain_box">
+                            <input type="radio" name="orderType1" class="form_check_add">
+                            <span class="checkmark"></span>
+                          </label>
+                        </p>
+                      </div>
+                      <div class="tab2_sec13"></div>
+                      <p class="tab2_sec11">Invest In</p>
+                      <div class="tab2_sec12">
+                        <p>
+                          <span>Dollars</span>
+                          <label class="contain_box">
+                            <input type="radio" name="investIn1" class="form_check_add" checked="">
+                            <span class="checkmark"></span>
+                          </label>
+                        </p>
+                        <p>
+                          <span>Shares</span>
+                          <label class="contain_box">
+                            <input type="radio" name="investIn1" class="form_check_add">
+                            <span class="checkmark"></span>
+                          </label>
+                        </p>
+                      </div>
+                      <div class="tab2_sec13"></div>
+                      <!--======== FIRST SELECT RADIO BUTTON =======-->
+                      <div class="marketlimit_fields">
+                        <div class="tab2_sec14">
+                          <span>Amount:</span>
+                          <input type="text" placeholder="$0.00">
+                        </div>
+                        <div class="tab2_sec13"></div>
+                        <div class="tab2_sec14">
+                          <span>Est. Quantity</span>
+                          <input type="text" placeholder="0.00">
+                        </div>
+                      </div>
+                      <!--========== FIRST SELECT RADIO END =========-->
+                      <!--======== SECOND SELECT RADIO BUTTON =======-->
+                      <div class="marketlimit_fields">
+                        <div class="tab2_sec14">
+                          <span>Shares:</span>
+                          <input type="text" placeholder="$0.00" />
+                        </div>
+                        <div class="tab2_sec13"></div>
+                        <div class="tab2_sec14">
+                          <span>Est. Amount</span>
+                          <input type="text" placeholder="0.00" />
+                        </div>
+                      </div>
+                      <!--======== SECOND SELECT RADIO END =======-->
+                      <div class="tab2_sec15">
+                        <p><span>Best Bid</span><span>Best Ask</span></p>
+                        <p><span>$123.34</span><span>$123.35</span></p>
+                      </div>
+                      <div class="tab2_sec16">
+                        <p>Market Price: $157.65</p>
+                      </div>
+                    </div>
+                    <div class="tab2_sec111">
+                      <a href="#">Review Order</a>
+                    </div>
+                  </div>
+                  <!--======== AFTER CLICK ON REVIEW ORDER BUTTON =======-->
+                  <div class="tab2_secBox2" style="display: block;">
+                    <div class="tab2_sec14">
+                      <span>Order type</span>
+                      <select>
+                        <option selected="">Market</option>
+                        <option>Limit</option>
+                      </select>
+                    </div>
+                    <div class="tab2_sec14">
+                      <span>Invest In</span>
+                      <select>
+                        <option selected="">Dollars</option>
+                        <option>Shares</option>
+                      </select>
+                    </div>
+                    <div class="tab2_sec14 mb-0">
+                      <span>Amount:</span>
+                      <input type="text" placeholder="$100.00">
+                    </div>
+                    <div class="tab2_sec13"></div>
+                    <div class="tab2_sec17">
+                      <p><span>Est. Quantity</span><span>0.654</span></p>
+                    </div>
+                    <div class="tab2_sec18">
+                      <h3>Order Summary</h3>
+                      <p>You are placing a good for day market order to buy 0.654 shares of AAPL based on the current market price of $152.75. The total estimated cost of your order is $100.</p>
+                    </div>
+                    <div class="tab2_sec111">
+                      <a href="#">Buy</a>
+                      <a href="#" class="border_btn">Edit</a>
+                    </div>
+                  </div>
+                </div>
+                <div id="sell_tab3" class="tab2Sec2_box tab-pane active">
+                  <div class="tab2_secBox1" style="display: block;">
+                    <div class="tab2_sec1">
+                      <p class="tab2_sec11 mb-0">Shares Available: <span class="bold_txt">$1345.45</span></p>
+                      <div class="tab2_sec13"></div>
+                      <p class="tab2_sec11">Order Type</p>
+                      <div class="tab2_sec12">
+                        <p>
+                          <span>Market Order</span>
+                          <label class="contain_box">
+                            <input type="radio" name="orderType2" class="form_check_add" checked="">
+                            <span class="checkmark"></span>
+                          </label>
+                        </p>
+                        <p>
+                          <span>Limit Order</span>
+                          <label class="contain_box">
+                            <input type="radio" name="orderType2" class="form_check_add">
+                            <span class="checkmark"></span>
+                          </label>
+                        </p>
+                      </div>
+                      <div class="tab2_sec13"></div>
+                      <p class="tab2_sec11">Selling In</p>
+                      <div class="tab2_sec12">
+                        <p>
+                          <span>Dollars</span>
+                          <label class="contain_box">
+                            <input type="radio" name="investIn2" class="form_check_add" checked="">
+                            <span class="checkmark"></span>
+                          </label>
+                        </p>
+                        <p>
+                          <span>Shares</span>
+                          <label class="contain_box">
+                            <input type="radio" name="investIn2" class="form_check_add">
+                            <span class="checkmark"></span>
+                          </label>
+                        </p>
+                      </div>
+                      <div class="tab2_sec13"></div>
+                      <!--======== FIRST SELECT RADIO BUTTON =======-->
+                      <div class="marketlimit_fields">
+                        <div class="tab2_sec14">
+                          <span>Selling Amount:</span>
+                          <input type="text" placeholder="$0.00">
+                        </div>
+                        <div class="tab2_sec13"></div>
+                        <div class="tab2_sec14">
+                          <span>Est. Quantity</span>
+                          <input type="text" placeholder="0.00">
+                        </div>
+                      </div>
+                      <!--========== FIRST SELECT RADIO END =========-->
+                      <!--======== SECOND SELECT RADIO BUTTON =======-->
+                      <div class="marketlimit_fields">
+                        <div class="tab2_sec14">
+                          <span>Selling Shares:</span>
+                          <input type="text" placeholder="$0.00" />
+                        </div>
+                        <div class="tab2_sec13"></div>
+                        <div class="tab2_sec14">
+                          <span>Est. Credit:</span>
+                          <input type="text" placeholder="0.00" />
+                        </div>
+                      </div>
+                      <!--======== SECOND SELECT RADIO END =======-->
+                      <div class="tab2_sec15">
+                        <p><span>Best Bid</span><span>Best Ask</span></p>
+                        <p><span>$123.34</span><span>$123.35</span></p>
+                      </div>
+                      <div class="tab2_sec16">
+                        <p>Market Price: $157.65</p>
+                      </div>
+                    </div>
+                    <div class="tab2_sec111">
+                      <a href="#">Review Order</a>
+                    </div>
+                  </div>
+                  <!--======== AFTER CLICK ON REVIEW ORDER BUTTON =======-->
+                  <div class="tab2_secBox2" style="display: block;">
+                    <div class="tab2_sec14">
+                      <span>Order type</span>
+                      <select>
+                        <option selected="">Market</option>
+                        <option>Limit</option>
+                      </select>
+                    </div>
+                    <div class="tab2_sec14">
+                      <span>Selling In</span>
+                      <select>
+                        <option>Dollars</option>
+                        <option selected="">Shares</option>
+                      </select>
+                    </div>
+                    <div class="tab2_sec14 mb-0">
+                      <span>Shares:</span>
+                      <input type="text" placeholder="0.654">
+                    </div>
+                    <div class="tab2_sec13"></div>
+                    <div class="tab2_sec17">
+                      <p><span>Est. Quantity</span><span>0.654</span></p>
+                    </div>
+                    <div class="tab2_sec18">
+                      <h3>Order Summary</h3>
+                      <p>You are placing a good for day market order to sell 0.654 shares of AAPL based on the current market price of $152.75. The total estimated credit for your order is $100.</p>
+                    </div>
+                    <div class="tab2_sec111">
+                      <a href="#">Sell</a>
+                      <a href="#" class="border_btn">Edit</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+  <!--============= BUY / SELL MODAL 2 END ============-->
+  <!--============ SYNC & UPDAE MODAL START ===========-->
+  <div class="modal editRisk_tol syncUpdate_modal fade" id="syncUpdate_modal" tabindex="-1" aria-labelledby="syncUpdate_modalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <button type="button" class="close_btn" data-bs-dismiss="modal" aria-label="Close"><span class="material-icons">close</span></button>
+          <div class="whiteModal_box">
+            <div class="popupData mt-0">
+              <div class="popupData1">
+                <span class="me-0 mt-2">The ‘Sync’ function updates your OVTLYR portfolio as per your positions in your brokerage account. It will change the OVTLYR suggestions.</span>
+              </div>
+              <div class="popupData1">
+                <span class="me-0">Syncing will take a couple of minutes to be completed</span>
+              </div>
+            </div>
+            <div class="editRisk_buttons">
+              <a href="#" data-bs-dismiss="modal" aria-label="Close">Cancel</a>
+              <a href="#" class="filled_btn" data-bs-dismiss="modal" aria-label="Close">Continue Sync</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>      
+  <!--============= SYNC & UPDAE MODAL END ============-->
+  <!--========== ADD LINKED BROKERAGE POPUP START =============-->
+  <div class="modal editRisk_tol fade" id="addLinked_brokerage" tabindex="-1" aria-labelledby="addLinked_brokerageLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <button type="button" class="close_btn" data-bs-dismiss="modal" aria-label="Close"><span class="material-icons">close</span></button>
+          <div class="editRisk_tol_box">
+            <h3>Add Linked Brokerages</h3>
+            <div class="brokerage_list">
+              <ul>
+                <li>
+                  <div class="comp_logo"><img src="images/robinhood-icon.svg" alt="Robinhood" /></div>
+                  <span class="checkbox__text">Robinhood</span>
+                </li>
+                <li class="active">
+                  <div class="comp_logo"><img src="images/webull-icon.svg" alt="Webull" /></div>
+                  <span class="checkbox__text">Webull</span>
+                </li>
+                <li>
+                  <div class="comp_logo"><img src="images/trade-station-icon.svg" alt="Trade Station" /></div>
+                  <span class="checkbox__text">Trade Station</span>
+                </li>
+                <li>
+                  <div class="comp_logo"><img src="images/tradier-icon.svg" alt="Tradier" /></div>
+                  <span class="checkbox__text">Tradier</span>
+                </li>
+
+                <li>
+                  <div class="comp_logo"><img src="images/alpaca-icon.svg" alt="Alpaca" /></div>
+                  <span class="checkbox__text">Alpaca</span>
+                </li>
+                <li>
+                  <div class="comp_logo"><img src="images/interactive-broker-icon.svg" alt="Interactive Brokers" /></div>
+                  <span class="checkbox__text">Interactive Brokers</span>
+                </li>
+                <li>
+                  <div class="comp_logo"><img src="images/ally-icon.svg" alt="Ally Invest" /></div>
+                  <span class="checkbox__text">Ally Invest</span>
+                </li>
+                <li>
+                  <div class="comp_logo"><img src="images/ameritrade-icon.svg" alt="Ameritrade" /></div>
+                  <span class="checkbox__text">Ameritrade</span>
+                </li>
+              </ul>
+            </div>
+            <div class="editRisk_buttons">
+              <a href="#" data-bs-dismiss="modal" aria-label="Close">Cancel</a>
+              <a href="#" class="filled_btn" data-bs-dismiss="modal" aria-label="Close">Add</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--========== ADD LINKED BROKERAGE POPUP END =============--> 
+  <!--========== EDIT RISK TOLERANCE START =============-->
+  <div class="modal editRisk_tol fade" id="editRisk_tol" tabindex="-1" aria-labelledby="editRisk_tollabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <button type="button" class="close_btn" data-bs-dismiss="modal" aria-label="Close"><span class="material-icons">close</span></button>
+          <div class="editRisk_tol_box">
+            <h3>Risk Tolerance</h3>
+            <div class="Portfolio_slider">
+              <div class="footLeft11">
+                <div class="slidecontainer">
+                  <div class="RangeSlider_div">
+                    <input type="range" min="0" max="6" value="4" class="slider_range" id="ovtlyr_rating" />
+                  </div>
+                </div>
+              </div>
+              <div class="Portfolio_sliderV mt-3">
+                <ul>
+                  <li><p>Conservative</p></li>
+                  <li><p>Balanced</p></li>
+                  <li><p>Aggressive</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="editRisk_buttons">
+              <a href="#" data-bs-dismiss="modal" aria-label="Close">Cancel</a>
+              <a href="#" class="filled_btn" data-bs-dismiss="modal" aria-label="Close">Confirm</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--============== EDIT RISK TOLERANCE END ===============-->
+  <!--=========== REBALANCE PORTFOLIO MODAL 1 START ==========-->
+  <div class="modal editRisk_tol rebalance_port fade" id="rebalance_port" tabindex="-1" aria-labelledby="rebalance_portLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <button type="button" class="close_btn" data-bs-dismiss="modal" aria-label="Close"><span class="material-icons">close</span></button>
+          <div class="whiteModal_box">
+            <div class="headingLine">
+              <h4>Rebalance your Portfolio</h4>
+              <h4>Buying Power: $4,567.98</h4>
+            </div>
+            <div class="popupData">
+              <div class="popupData1">
+                <div>
+                  <select>
+                    <option selected>Buy</option>
+                    <option>Sell</option>
+                  </select>
+                  <p>FB</p>
+                  <input type="number" value="69" />
+                </div>
+                <div>
+                  <span>Shares;</span>
+                  <span class="me-0"><i>Current Market Price: $198.86</i></span>
+                </div>
+              </div>
+              <div class="popupData1">
+                <div>
+                  <select>
+                  <option selected>Buy</option>
+                  <option>Sell</option>
+                </select>
+                <p>GOOGL</p>
+                <input type="number" value="0" /></div>
+                <div>
+                  <span>Shares;</span>
+                  <span class="me-0"><i>Current Market Price: $2,352.45</i></span>
+                </div>
+              </div>
+              <div class="popupData1">
+                <div>
+                  <select>
+                    <option>Buy</option>
+                    <option selected>Sell</option>
+                  </select>
+                  <p>AAPL</p>
+                  <input type="number" value="6" />
+                </div>
+                <div>
+                  <span>Shares;</span>
+                  <span class="me-0"><i>Current Market Price: $151.23</i></span>
+                </div>
+              </div>
+            </div>
+            <div class="popupFooter">
+              <p>All Trades will be Executed as Market Orders. To place limit orders, please place orders individually for each stock.</p>
+              <div class="editRisk_buttons">
+                <a href="#" data-bs-dismiss="modal" aria-label="Close">Cancel</a>
+                <a href="#" class="filled_btn" data-bs-dismiss="modal" aria-label="Close" data-bs-toggle="modal" data-bs-target="#rebalance_port2">Review</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>      
+  <!--=========== REBALANCE PORTFOLIO MODAL 1 END ==========-->
+  <!--=========== REBALANCE PORTFOLIO MODAL 2 START ==========-->
+  <div class="modal editRisk_tol rebalance_port2 fade" id="rebalance_port2" tabindex="-1" aria-labelledby="rebalance_port2Label" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <button type="button" class="close_btn" data-bs-dismiss="modal" aria-label="Close"><span class="material-icons">close</span></button>
+          <div class="whiteModal_box">
+            <div class="popupData mt-0">
+              <div class="popupData1">
+                <span class="me-0">Buying FB 69 shares at <b>$123 per share</b> with total cost of $8487.00</span>
+              </div>
+              <div class="popupData1">
+                <span class="me-0">Buy Google 0 shares at <b>$325.00 per share</b> with total cost of $325.00</span>
+              </div>
+              <div class="popupData1">
+                <span class="me-0">Selling Apple 6 shares at <b>$250.00 per share</b> with total cost of $1500.00 </span>
+              </div>
+              <div class="popupData1">
+                <span class="me-0"><i>Total Cost of the above trades: $9876.04</i></span>
+              </div>
+            </div>
+            <div class="editRisk_buttons">
+              <a href="#" data-bs-dismiss="modal" aria-label="Close">Edit</a>
+              <a href="#" class="filled_btn" data-bs-dismiss="modal" aria-label="Close" data-bs-toggle="modal" data-bs-target="#rebalance_port3">Confirm</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>      
+  <!--=========== REBALANCE PORTFOLIO MODAL 2 END ==========-->
+  <!--=========== REBALANCE PORTFOLIO MODAL 3 START ==========-->
+  <div class="modal editRisk_tol rebalance_port3 fade" id="rebalance_port3" tabindex="-1" aria-labelledby="rebalance_port3Label" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <button type="button" class="close_btn" data-bs-dismiss="modal" aria-label="Close"><span class="material-icons">close</span></button>
+          <div class="whiteModal_box">
+            <div class="popupData mt-0">
+              <p><i>Total Cost of the above trades is <b>$9876.04</b></i></p>
+              <p><i>But your buying power is <b>$4567.98</b></i></p>
+              <p><i><b>Add Funds to Your Account</b></i></p>
+            </div>
+            <div class="editRisk_buttons">
+              <a href="#" class="filled_btn" data-bs-dismiss="modal" aria-label="Close">Okay</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>      
+  <!--=========== REBALANCE PORTFOLIO MODAL 2 END ==========-->
+  <!--=========== SIMULATOR RUN MODAL START ==========-->
+  <div class="modal editRisk_tol rebalance_port3 fade" id="simulatorRun" tabindex="-1" aria-labelledby="simulatorRunLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <button type="button" class="close_btn" data-bs-dismiss="modal" aria-label="Close"><span class="material-icons">close</span></button>
+          <div class="whiteModal_box">
+            <div class="popupData mt-2">
+              <p class="text-start">Exporting the above simulated portfolio to suggestions tab will change the existing suggestions for the original stocks as well.</p>
+            </div>
+            <div class="editRisk_buttons">
+              <a href="#" data-bs-dismiss="modal" aria-label="Close">Cancel</a>
+              <a href="#" class="filled_btn" data-bs-dismiss="modal" aria-label="Close">Confirm</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>      
+  <!--=========== SIMULATOR RUN MODAL END ==========-->
+  <footer class="ovt_footer fixed_footerA">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-sm-12 col-12 border_bottom">
+          <div class="footer_logo">
+            <a href="index.html"><img src="images/ovtlyr-footer-logo.svg" alt="OVTLYR"></a>
+          </div>
+          <!-- <h4 class="h4">Leading Market Behavioral Data</h4> -->
+          <!-- <h4 class="h4">Outliers Wins</h4> -->
+          <ul class="footer_socialMedia">
+            <li><a href="https://www.facebook.com/Ovtlyr/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="https://www.linkedin.com/company/ovtlyr/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+            <li><a href="https://twitter.com/ovtlyr" target="_blank"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://www.tiktok.com/@ovtlyr" target="_blank"><i class="fa-brands fa-tiktok"></i></a></li>
+            <li><a href="https://youtube.com/channel/UCmiMBSWQ83P1j1pP-zrbFbw" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+            <li><a href="https://www.instagram.com/ovtlyr/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-sm-12 col-12 border_bottom">
+          <h4 class="h4">Resources</h4>
+          <ul class="footer_menu footer_menu2">
+            <li><a href="scoops.html">Scoops</a></li>
+            <li><a href="watchlist.html">Watchlist</a></li>
+            <li><a href="coverage-list.html">Coverage List</a></li>
+            <li><a href="faqs.html">FAQs</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-sm-12 col-12 border_bottom">
+          <h4 class="h4">Company</h4>
+          <ul class="footer_menu footer_menu2">
+            <li><a href="contact-us.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-sm-12 col-12 p-0">
+          <h4 class="h4">Legal</h4>
+          <ul class="footer_menu footer_menu2">
+            <li><a href="terms-of-use.html">Terms of Use</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.min.js"></script>
+<!--======== PORTFOLIO SIDEBAR HIDE/SHOW SCRIPT BEGIN =========-->
+<script>
+  document.querySelector('.show_sideBar').addEventListener('click', function(event) {
+    event.preventDefault();
+    var target1 = document.querySelector('.watchlist_sidebar');
+    if (target1.classList.contains('open')) {
+      target1.classList.remove('open');
+    } 
+    else {
+      target1.classList.add('open');
+    }
+  });
+  
+  document.querySelector('.show_sideBar2').addEventListener('click', function(event) {
+    var target1 = document.querySelector('.watchlist_sidebar');
+    if (target1.classList.contains('open')) {
+      target1.classList.remove('open');
+    } 
+    else {
+      target1.classList.add('open');
+    }
+  });  
+  
+  $('#hide_sidebar').click(function (evt) {
+    evt.stopPropagation();
+    $('.watchlist_sidebar').addClass('open');
+  });
+  $('body,html').click(function (e) {
+    var container = $(".watchlist_sidebar");
+    if (!container.is(e.target) && container.has(e.target).length === 0) {
+      container.removeClass('open');
+    }
+  });
+</script>
+<!--======== PORTFOLIO SIDEBAR HIDE/SHOW SCRIPT END =========-->
+<!--===== BROKERAGE DROPDOWN START ======-->
+<script>
+  $(document).ready(function(){
+    $('.selectBro_drop a').click(function(){
+      $(".brokage_dropdown").css({
+        "visibility": "visible" , 
+        "opacity": "1"
+      });
+    });
+  });
+  $(document). click(function() {
+    var container = $(".selectBro_drop");
+    if (! container. is(event. target) && ! container. has(event. target). length) {
+      $(".brokage_dropdown").css({
+        "visibility": "hidden" , 
+        "opacity": "0"
+       });
+    }
+  });
+</script>
+<!--===== BROKERAGE DROPDOWN END ======-->
+<script src="https://cdn.amcharts.com/lib/5/index.js"></script>  
+<script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/themes/Responsive.js"></script>	
+<!-- Pie Chart code -->
+<script>
+  am5.ready(function() {
+  am5.addLicense("AM5C311897715");
+  var root = am5.Root.new("risk-tolerance-pieChart2");
+  root.setThemes([
+    am5themes_Animated.new(root)
+  ]);
+  var chart = root.container.children.push(am5percent.PieChart.new(root, {
+    layout: root.verticalLayout
+  }));
+  root.interfaceColors.set("grid", am5.color(0x808191));
+  var series = chart.series.push(am5percent.PieSeries.new(root, {
+    valueField: "Allocation",
+    categoryField: "Labels",
+    alignLabels: false
+  }));
+    
+  series.slices.template.adapters.add("fill", function(fill, target) {
+  if (target.dataItem.get("category") == "FB") {
+  return am5.color(0xa985aa);}
+  else if (target.dataItem.get("category") == "TSLA") {
+  return am5.color(0x9b709c);}
+  else if (target.dataItem.get("category") == "APLE") {
+  return am5.color(0x8d5c8e);}
+  else if (target.dataItem.get("category") =="AMZN") {
+  return am5.color(0x703372);}
+  else {
+  return true;
+  }});
+  series.slices.template.adapters.add("stroke", function(stroke, target) {
+  if (target.dataItem.get("category") == "FB") {
+  return am5.color(0xa985aa);}
+  else if (target.dataItem.get("category") == "TSLA") {
+  return am5.color(0x9b709c);}
+  else if (target.dataItem.get("category") == "APLE") {
+  return am5.color(0x8d5c8e);}
+  else if (target.dataItem.get("category") =="AMZN") {
+  return am5.color(0x7e4780);}
+  else {
+  return true;
+  }});
+    series.slices.template.adapters.add("fill", function(fill, target) {
+    return target.dataItem.get("category") == "CASH" ? am5.color(0xE2A122) : fill;
+  })
+    series.slices.template.adapters.add("stroke", function(stroke, target) {
+    return target.dataItem.get("category") == "CASH" ? am5.color(0xE2A122) : stroke;
+  })
+  var tooltip = am5.Tooltip.new(root, {
+    getFillFromSprite: true, 
+  });
+  series.set("tooltip", tooltip).label.setAll({ fontSize:12,fontWeight:600});		
+  series.labels.template.setAll({
+    fontSize: 12,
+    text: "{category}",
+    textType: "radial",
+    radius: 0,
+    centerX: am5.percent(100),
+    fill: am5.color(0xffffff)
+  });
+    
+  series.data.setAll( [
+  {
+  "Labels": "FB",
+  "Quotedate": "2021-07-29",
+  "Allocation":  0.50,
+  "Delta_Allocation": 0.0109090194901649
+  },
+  {
+  "Labels": "TSLA",
+  "Quotedate": "2021-07-29",
+  "Allocation":  0.30,
+  "Delta_Allocation": -0.00421904374798759
+  },
+  {
+  "Labels": "APLE",
+  "Quotedate": "2021-07-29",
+  "Allocation":  0.20,
+  "Delta_Allocation": -0.000183027813774342
+  },
+  {
+  "Labels": "AMZN",
+  "Quotedate": "2021-07-29",
+  "Allocation":  0.10,
+  "Delta_Allocation": -0.000183027813774342
+  },
+  {
+  "Labels": "CASH",
+  "Quotedate": "2021-07-29",
+  "Allocation":  1.00,
+  "Delta_Allocation": -0.000183027813774342
+  }
+  ]);
+  series.appear(1000, 100);
+  
+  }); 
+</script>	
+<!-- Pie Chart code END -->
+<!-- STRATEGY VIEW CHART START -->
+<script>
+  am5.ready(function() {
+  am5.addLicense("AM5C311897715");
+  var root = am5.Root.new("strategy_chart");
+  root.setThemes([
+    am5themes_Animated.new(root)
+  ]);
+  var chart = root.container.children.push(am5xy.XYChart.new(root, {
+   panX: false,
+  panY: false,
+  focusable: false
+  }));
+  chart.zoomOutButton.set("forceHidden", true);
+  var cursor = chart.set("cursor", am5xy.XYCursor.new(root, {
+    behavior: "none"
+  }));
+  cursor.lineY.set("visible", true);
+  cursor.lineX.set("visible", true);
+  cursor.lineX.setAll({
+  stroke: am5.color(0x703372),
+  strokeWidth: 1,
+  strokeDasharray: [2]
+  });
+  cursor.lineY.setAll({
+  stroke: am5.color(0x703372),
+  strokeWidth: 1,
+  strokeDasharray: [2]
+  });
+  
+  function generateDatas(count) {
+  var data=[
+    {
+      "BH": 9.715077547,
+      "Cash": 22,
+      "Quotedate": "4/23/2018",
+      "ovtlyr": 15.53604079,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 6.831460046,
+      "Cash": 0,
+      "Quotedate": "4/24/2018",
+      "ovtlyr": 12.4747676,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 6.679433475,
+      "Cash": 12,
+      "Quotedate": "4/25/2018",
+      "ovtlyr": 12.36517423,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 9.970865994,
+      "Cash":43,
+      "Quotedate": "4/26/2018",
+      "ovtlyr": 15.97164637,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 10.51841063,
+      "Cash": 17.54088817,
+      "Quotedate": "4/27/2018",
+      "ovtlyr": 17.10266514,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 10.4181047,
+      "Cash": 20.97856152,
+      "Quotedate": "4/30/2018",
+      "ovtlyr": 16.90336495,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 11.90621196,
+      "Cash": 25.69934166,
+      "Quotedate": "05-01-2018",
+      "ovtlyr": 17.98384501,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 12.55794433,
+      "Cash": 2.078265896,
+      "Quotedate": "05-02-2018",
+      "ovtlyr": 19.52798225,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 11.41058461,
+      "Cash": 15.21602404,
+      "Quotedate": "05-03-2018",
+      "ovtlyr": 18.52450193,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 13.82168176,
+      "Cash": 23.53289644,
+      "Quotedate": "05-04-2018",
+      "ovtlyr": 20.84922435,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 15.22024642,
+      "Cash": 36.79564551,
+      "Quotedate": "05-07-2018",
+      "ovtlyr": 21.80771089,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 15.28306039,
+      "Cash": 0,
+      "Quotedate": "05-08-2018",
+      "ovtlyr": 21.84220638,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 16.83337769,
+      "Cash": 4.018554991,
+      "Quotedate": "05-09-2018",
+      "ovtlyr": 23.4655558,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 17.46296725,
+      "Cash": 20.14028825,
+      "Quotedate": "05-10-2018",
+      "ovtlyr": 23.90207542,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 17.06040274,
+      "Cash": 34.13777979,
+      "Quotedate": "05-11-2018",
+      "ovtlyr": 23.44740347,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 16.62717237,
+      "Cash": 44.52884184,
+      "Quotedate": "5/14/2018",
+      "ovtlyr": 23.50417293,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 15.11027435,
+      "Cash": 48.39593325,
+      "Quotedate": "5/15/2018",
+      "ovtlyr": 22.78312324,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 15.51074157,
+      "Cash": 70.25678654,
+      "Quotedate": "5/16/2018",
+      "ovtlyr": 22.9052176,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 15.09113185,
+      "Cash": 70.83245111,
+      "Quotedate": "5/17/2018",
+      "ovtlyr": 22.74755412,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 14.17010073,
+      "Cash": 70.58661093,
+      "Quotedate": "5/18/2018",
+      "ovtlyr": 22.4183732,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 15.64920415,
+      "Cash": 69.70179011,
+      "Quotedate": "5/21/2018",
+      "ovtlyr": 22.97338761,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 14.80325379,
+      "Cash": 73.90177869,
+      "Quotedate": "5/22/2018",
+      "ovtlyr": 22.66872688,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 16.47635302,
+      "Cash": 56.8879758,
+      "Quotedate": "5/23/2018",
+      "ovtlyr": 23.8567255,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 16.52412614,
+      "Cash": 56.52264915,
+      "Quotedate": "5/24/2018",
+      "ovtlyr": 24.13556179,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 16.67966948,
+      "Cash": 56.57695181,
+      "Quotedate": "5/25/2018",
+      "ovtlyr": 24.31424425,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 16.69494801,
+      "Cash": 56.68924522,
+      "Quotedate": "5/29/2018",
+      "ovtlyr": 24.26846964,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 17.75264043,
+      "Cash": 43.06270536,
+      "Quotedate": "5/30/2018",
+      "ovtlyr": 25.21608767,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 17.96784902,
+      "Cash": 42.79894947,
+      "Quotedate": "5/31/2018",
+      "ovtlyr": 24.77641452,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 19.92256231,
+      "Cash": 37.40603846,
+      "Quotedate": "06-01-2018",
+      "ovtlyr": 26.25554524,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 20.87474627,
+      "Cash": 32.93498413,
+      "Quotedate": "06-04-2018",
+      "ovtlyr": 27.07107344,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 21.12458388,
+      "Cash": 33.32827558,
+      "Quotedate": "06-05-2018",
+      "ovtlyr": 27.2340899,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 22.67861795,
+      "Cash": 39.17069386,
+      "Quotedate": "06-06-2018",
+      "ovtlyr": 28.89846024,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 21.66092133,
+      "Cash": 44.31129307,
+      "Quotedate": "06-07-2018",
+      "ovtlyr": 28.33885529,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 21.55777253,
+      "Cash": 49.51175318,
+      "Quotedate": "06-08-2018",
+      "ovtlyr": 28.27207574,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 22.70154336,
+      "Cash": 54.64488447,
+      "Quotedate": "06-11-2018",
+      "ovtlyr": 28.64829694,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 23.71462747,
+      "Cash": 67.7118403,
+      "Quotedate": "06-12-2018",
+      "ovtlyr": 28.88033888,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 24.41626203,
+      "Cash": 68.83566915,
+      "Quotedate": "6/13/2018",
+      "ovtlyr": 29.12186106,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 26.4163494,
+      "Cash": 73.23118673,
+      "Quotedate": "6/14/2018",
+      "ovtlyr": 29.53901127,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 26.05870343,
+      "Cash": 63.69400208,
+      "Quotedate": "6/15/2018",
+      "ovtlyr": 29.39106444,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 27.20660165,
+      "Cash": 64.54715401,
+      "Quotedate": "6/18/2018",
+      "ovtlyr": 29.49331493,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 26.70661336,
+      "Cash": 64.64012054,
+      "Quotedate": "6/19/2018",
+      "ovtlyr": 29.72097473,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 28.32493418,
+      "Cash": 66.86153452,
+      "Quotedate": "6/20/2018",
+      "ovtlyr": 30.23789927,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 27.06604476,
+      "Cash": 69.2424912,
+      "Quotedate": "6/21/2018",
+      "ovtlyr": 30.03936178,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 26.05487249,
+      "Cash": 74.53899065,
+      "Quotedate": "6/22/2018",
+      "ovtlyr": 29.93325757,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 23.31396174,
+      "Cash": 76.42044831,
+      "Quotedate": "6/25/2018",
+      "ovtlyr": 29.24042495,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 25.02449154,
+      "Cash": 76.18400299,
+      "Quotedate": "6/26/2018",
+      "ovtlyr": 29.59050137,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 23.94957805,
+      "Cash": 79.92808335,
+      "Quotedate": "6/27/2018",
+      "ovtlyr": 29.3750251,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 25.13922952,
+      "Cash": 77.94829894,
+      "Quotedate": "6/28/2018",
+      "ovtlyr": 29.64280261,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 24.46082605,
+      "Cash": 75.87474475,
+      "Quotedate": "6/29/2018",
+      "ovtlyr": 29.5855186,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 25.14016801,
+      "Cash": 73.09988716,
+      "Quotedate": "07-02-2018",
+      "ovtlyr": 29.89653551,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 22.36436365,
+      "Cash": 70.18550784,
+      "Quotedate": "07-03-2018",
+      "ovtlyr": 29.29240772,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 23.66804218,
+      "Cash": 66.76788358,
+      "Quotedate": "07-05-2018",
+      "ovtlyr": 29.7316768,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 25.00725589,
+      "Cash": 37.17230673,
+      "Quotedate": "07-06-2018",
+      "ovtlyr": 30.57344979,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 26.77129381,
+      "Cash": 36.25907908,
+      "Quotedate": "07-09-2018",
+      "ovtlyr": 31.60714281,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 26.76466025,
+      "Cash": 36.41359133,
+      "Quotedate": "07-10-2018",
+      "ovtlyr": 31.58674824,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 26.58195708,
+      "Cash": 0,
+      "Quotedate": "07-11-2018",
+      "ovtlyr": 31.33515423,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 27.71844374,
+      "Cash": 54,
+      "Quotedate": "07-12-2018",
+      "ovtlyr": 32.70686771,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 27.37315601,
+      "Cash": 17.13965037,
+      "Quotedate": "7/13/2018",
+      "ovtlyr": 32.74404049,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 27.04551966,
+      "Cash": 20.73810356,
+      "Quotedate": "7/16/2018",
+      "ovtlyr": 32.53110281,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 27.54422897,
+      "Cash": 24.06598008,
+      "Quotedate": "7/17/2018",
+      "ovtlyr": 33.06071055,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 27.26021631,
+      "Cash": 28.08571294,
+      "Quotedate": "7/18/2018",
+      "ovtlyr": 32.86449124,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 26.15746915,
+      "Cash": 32.75561865,
+      "Quotedate": "7/19/2018",
+      "ovtlyr": 32.29699083,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 25.76555978,
+      "Cash": 38.63498798,
+      "Quotedate": "7/20/2018",
+      "ovtlyr": 32.04122463,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 25.45502263,
+      "Cash": 44.91447807,
+      "Quotedate": "7/23/2018",
+      "ovtlyr": 31.87957972,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 26.21132682,
+      "Cash": 50.17198014,
+      "Quotedate": "7/24/2018",
+      "ovtlyr": 32.31921592,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 28.02966281,
+      "Cash": 24.29398191,
+      "Quotedate": "7/25/2018",
+      "ovtlyr": 34.27437675,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 24.34214811,
+      "Cash": 59.30932258,
+      "Quotedate": "7/26/2018",
+      "ovtlyr": 33.86518853,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 22.7216621,
+      "Cash": 62.55029603,
+      "Quotedate": "7/27/2018",
+      "ovtlyr": 33.29461394,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 20.26708006,
+      "Cash": 66.79717022,
+      "Quotedate": "7/30/2018",
+      "ovtlyr": 32.84106923,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 20.97531427,
+      "Cash": 76.37073583,
+      "Quotedate": "7/31/2018",
+      "ovtlyr": 33.08176315,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 22.32756942,
+      "Cash": 63.55962094,
+      "Quotedate": "08-01-2018",
+      "ovtlyr": 34.14985378,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 26.72712976,
+      "Cash": 36.0980109,
+      "Quotedate": "08-02-2018",
+      "ovtlyr": 40.70156048,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 26.63485984,
+      "Cash": 53.26077109,
+      "Quotedate": "08-03-2018",
+      "ovtlyr": 40.64875341,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 27.76448255,
+      "Cash": 57.61210466,
+      "Quotedate": "08-06-2018",
+      "ovtlyr": 40.59828384,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 29.6916968,
+      "Cash": 5.55e-15,
+      "Quotedate": "08-07-2018",
+      "ovtlyr": 42.73148962,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 29.50998006,
+      "Cash": 1.11e-14,
+      "Quotedate": "08-08-2018",
+      "ovtlyr": 41.62134289,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 28.87912046,
+      "Cash": 0,
+      "Quotedate": "08-09-2018",
+      "ovtlyr": 41.24295105,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 28.28450852,
+      "Cash": 5.55e-15,
+      "Quotedate": "08-10-2018",
+      "ovtlyr": 40.56930902,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 28.23208054,
+      "Cash": 68.37955368,
+      "Quotedate": "8/13/2018",
+      "ovtlyr": 40.67563636,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 28.13669476,
+      "Cash": 71.83812325,
+      "Quotedate": "8/14/2018",
+      "ovtlyr": 40.63917388,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 26.38861247,
+      "Cash": 0,
+      "Quotedate": "8/15/2018",
+      "ovtlyr": 38.51524847,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 25.74689757,
+      "Cash": 74.09968375,
+      "Quotedate": "8/16/2018",
+      "ovtlyr": 38.41184503,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 24.06348235,
+      "Cash": 78.46805154,
+      "Quotedate": "8/17/2018",
+      "ovtlyr": 38.12064627,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 24.54775588,
+      "Cash": 77.56782849,
+      "Quotedate": "8/20/2018",
+      "ovtlyr": 38.13042603,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 25.77514124,
+      "Cash": 11.18187142,
+      "Quotedate": "8/21/2018",
+      "ovtlyr": 40.60450041,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 26.42698159,
+      "Cash": 0,
+      "Quotedate": "8/22/2018",
+      "ovtlyr": 41.68181515,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 26.02970406,
+      "Cash": 0,
+      "Quotedate": "8/23/2018",
+      "ovtlyr": 40.88360988,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 27.59153246,
+      "Cash": 5.5515,
+      "Quotedate": "8/24/2018",
+      "ovtlyr": 43.53132105,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 28.53970787,
+      "Cash": 5.5515,
+      "Quotedate": "8/27/2018",
+      "ovtlyr": 44.93381784,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 28.25985763,
+      "Cash": 5.5515,
+      "Quotedate": "8/28/2018",
+      "ovtlyr": 44.7437851,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 28.9024787,
+      "Cash": 5.5515,
+      "Quotedate": "8/29/2018",
+      "ovtlyr": 45.27742477,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 29.15321854,
+      "Cash": 0,
+      "Quotedate": "8/30/2018",
+      "ovtlyr": 45.58303123,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 28.72159324,
+      "Cash": 0,
+      "Quotedate": "8/31/2018",
+      "ovtlyr": 44.64490203,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 27.39913004,
+      "Cash": 14.50663874,
+      "Quotedate": "09-04-2018",
+      "ovtlyr": 43.16856054,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 24.8683902,
+      "Cash": 49.90462778,
+      "Quotedate": "09-05-2018",
+      "ovtlyr": 41.35068331,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 23.8831973,
+      "Cash": 52.89609868,
+      "Quotedate": "09-06-2018",
+      "ovtlyr": 41.20713046,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 22.71402094,
+      "Cash": 55.49264063,
+      "Quotedate": "09-07-2018",
+      "ovtlyr": 41.102434,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 23.8560198,
+      "Cash": 75.75501868,
+      "Quotedate": "09-10-2018",
+      "ovtlyr": 41.15600876,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 25.08757736,
+      "Cash": 76.04201056,
+      "Quotedate": "09-11-2018",
+      "ovtlyr": 41.55891153,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 25.56974103,
+      "Cash": 64.47782901,
+      "Quotedate": "09-12-2018",
+      "ovtlyr": 42.06730739,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 25.91228781,
+      "Cash": 65.12378324,
+      "Quotedate": "9/13/2018",
+      "ovtlyr": 42.08411483,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 25.76675072,
+      "Cash": 65.58236168,
+      "Quotedate": "9/14/2018",
+      "ovtlyr": 41.82829476,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 23.691722,
+      "Cash": 77.37243479,
+      "Quotedate": "9/17/2018",
+      "ovtlyr": 41.22576787,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 24.34773347,
+      "Cash": 0,
+      "Quotedate": "9/18/2018",
+      "ovtlyr": 40.03882188,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 25.41230878,
+      "Cash": 6.89018543,
+      "Quotedate": "9/19/2018",
+      "ovtlyr": 43.47070869,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 26.13065778,
+      "Cash": 5.5515,
+      "Quotedate": "9/20/2018",
+      "ovtlyr": 44.37941232,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 24.97060128,
+      "Cash": 0,
+      "Quotedate": "9/21/2018",
+      "ovtlyr": 43.25349928,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 26.15900672,
+      "Cash": 0,
+      "Quotedate": "9/24/2018",
+      "ovtlyr": 44.20618628,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 26.82780506,
+      "Cash": 0,
+      "Quotedate": "9/25/2018",
+      "ovtlyr": 44.75647666,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 27.76298477,
+      "Cash": 0,
+      "Quotedate": "9/26/2018",
+      "ovtlyr": 45.97971583,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 28.81554588,
+      "Cash": 0,
+      "Quotedate": "9/27/2018",
+      "ovtlyr": 46.84446198,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 25.75023907,
+      "Cash": 2.7815,
+      "Quotedate": "9/28/2018",
+      "ovtlyr": 44.81130836,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 28.90547682,
+      "Cash": 0,
+      "Quotedate": "10-01-2018",
+      "ovtlyr": 47.96654611,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 27.74072477,
+      "Cash": 0,
+      "Quotedate": "10-02-2018",
+      "ovtlyr": 46.80179406,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 27.81629905,
+      "Cash": 0,
+      "Quotedate": "10-03-2018",
+      "ovtlyr": 47.02893728,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 24.98640323,
+      "Cash": 29.28950659,
+      "Quotedate": "10-04-2018",
+      "ovtlyr": 45.13232505,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 22.51366662,
+      "Cash": 29.77228984,
+      "Quotedate": "10-05-2018",
+      "ovtlyr": 43.7044658,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 21.24262588,
+      "Cash": 46.33047989,
+      "Quotedate": "10-08-2018",
+      "ovtlyr": 43.12379507,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 22.56990262,
+      "Cash": 47.30523049,
+      "Quotedate": "10-09-2018",
+      "ovtlyr": 43.79756515,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 17.54004729,
+      "Cash": 60.06785436,
+      "Quotedate": "10-10-2018",
+      "ovtlyr": 41.70659273,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 16.7006852,
+      "Cash": 63.99832673,
+      "Quotedate": "10-11-2018",
+      "ovtlyr": 41.41000938,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 19.85598921,
+      "Cash": 67.29318247,
+      "Quotedate": "10-12-2018",
+      "ovtlyr": 42.50855311,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 18.68531529,
+      "Cash": 70.85424427,
+      "Quotedate": "10/15/2018",
+      "ovtlyr": 42.08063918,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 22.40073547,
+      "Cash": 73.19046785,
+      "Quotedate": "10/16/2018",
+      "ovtlyr": 42.93059908,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 23.01356951,
+      "Cash": 0,
+      "Quotedate": "10/17/2018",
+      "ovtlyr": 42.5080228,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 19.85498137,
+      "Cash": 5.5515,
+      "Quotedate": "10/18/2018",
+      "ovtlyr": 39.55715541,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 19.14076841,
+      "Cash": 0,
+      "Quotedate": "10/19/2018",
+      "ovtlyr": 38.28728602,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 19.55776786,
+      "Cash": 0,
+      "Quotedate": "10/22/2018",
+      "ovtlyr": 38.65945555,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 21.8369927,
+      "Cash": 0,
+      "Quotedate": "10/23/2018",
+      "ovtlyr": 41.95410322,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 16.62839937,
+      "Cash": 28.12745485,
+      "Quotedate": "10/24/2018",
+      "ovtlyr": 39.89543329,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 21.60024502,
+      "Cash": 0,
+      "Quotedate": "10/25/2018",
+      "ovtlyr": 47.06704398,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 19.27025632,
+      "Cash": 0,
+      "Quotedate": "10/26/2018",
+      "ovtlyr": 42.67630663,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 16.13881323,
+      "Cash": 68.22645223,
+      "Quotedate": "10/29/2018",
+      "ovtlyr": 42.57334332,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 16.66330536,
+      "Cash": 73.30314696,
+      "Quotedate": "10/30/2018",
+      "ovtlyr": 42.41513875,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 20.42705031,
+      "Cash": 76.96467972,
+      "Quotedate": "10/31/2018",
+      "ovtlyr": 42.99372322,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 22.5178817,
+      "Cash": 0,
+      "Quotedate": "11-01-2018",
+      "ovtlyr": 44.43915681,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 20.70453293,
+      "Cash": 0,
+      "Quotedate": "11-02-2018",
+      "ovtlyr": 43.39673098,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 19.5243812,
+      "Cash": 1.1114,
+      "Quotedate": "11-05-2018",
+      "ovtlyr": 41.57771259,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 19.95838699,
+      "Cash": 5.5515,
+      "Quotedate": "11-06-2018",
+      "ovtlyr": 41.69129474,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 23.62657401,
+      "Cash": 5.5515,
+      "Quotedate": "11-07-2018",
+      "ovtlyr": 45.90414073,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 22.62344703,
+      "Cash": 0,
+      "Quotedate": "11-08-2018",
+      "ovtlyr": 44.26329827,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 20.50279106,
+      "Cash": 0,
+      "Quotedate": "11-09-2018",
+      "ovtlyr": 41.62666375,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 16.67689234,
+      "Cash": 0,
+      "Quotedate": "11-12-2018",
+      "ovtlyr": 38.31184383,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 16.89579569,
+      "Cash": 5.5515,
+      "Quotedate": "11/13/2018",
+      "ovtlyr": 38.21171819,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 16.26812821,
+      "Cash": 5.5515,
+      "Quotedate": "11/14/2018",
+      "ovtlyr": 36.91021759,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 17.51859843,
+      "Cash": 9.323086441,
+      "Quotedate": "11/15/2018",
+      "ovtlyr": 38.15563709,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 16.95107805,
+      "Cash": 11.80632831,
+      "Quotedate": "11/16/2018",
+      "ovtlyr": 37.31705521,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 12.90300541,
+      "Cash": 85.22918875,
+      "Quotedate": "11/19/2018",
+      "ovtlyr": 36.60733468,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 11.57694254,
+      "Cash": 88.48726248,
+      "Quotedate": "11/20/2018",
+      "ovtlyr": 36.55300079,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 11.55706205,
+      "Cash": 49.43556874,
+      "Quotedate": "11/21/2018",
+      "ovtlyr": 37.18704897,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 9.558055856,
+      "Cash": 90.18241067,
+      "Quotedate": "11/23/2018",
+      "ovtlyr": 37.05258539,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 12.86922243,
+      "Cash": 49.29505119,
+      "Quotedate": "11/26/2018",
+      "ovtlyr": 38.50689774,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 12.83880425,
+      "Cash": 0,
+      "Quotedate": "11/27/2018",
+      "ovtlyr": 38.34531955,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 16.5307857,
+      "Cash": 2.928991466,
+      "Quotedate": "11/28/2018",
+      "ovtlyr": 43.1269929,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 16.67649379,
+      "Cash": 0,
+      "Quotedate": "11/29/2018",
+      "ovtlyr": 43.38959699,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 17.51676288,
+      "Cash": 2.7815,
+      "Quotedate": "11/30/2018",
+      "ovtlyr": 43.94556837,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 19.69108592,
+      "Cash": 2.7815,
+      "Quotedate": "12-03-2018",
+      "ovtlyr": 46.08378413,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 15.99930115,
+      "Cash": 0,
+      "Quotedate": "12-04-2018",
+      "ovtlyr": 41.93849119,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 17.18405724,
+      "Cash": 1.3915,
+      "Quotedate": "12-06-2018",
+      "ovtlyr": 43.08487446,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 13.87294987,
+      "Cash": 1.3915,
+      "Quotedate": "12-07-2018",
+      "ovtlyr": 39.54199005,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 15.36781055,
+      "Cash": 0,
+      "Quotedate": "12-10-2018",
+      "ovtlyr": 41.28701799,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 15.25881049,
+      "Cash": 0,
+      "Quotedate": "12-11-2018",
+      "ovtlyr": 41.18687324,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 16.57793868,
+      "Cash": 2.7815,
+      "Quotedate": "12-12-2018",
+      "ovtlyr": 42.86360452,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 17.29684099,
+      "Cash": 0,
+      "Quotedate": "12/13/2018",
+      "ovtlyr": 43.56052874,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 14.60301481,
+      "Cash": 0,
+      "Quotedate": "12/14/2018",
+      "ovtlyr": 40.80056573,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 11.80355932,
+      "Cash": 49.5745407,
+      "Quotedate": "12/17/2018",
+      "ovtlyr": 39.32679392,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 13.02762651,
+      "Cash": 24.84253122,
+      "Quotedate": "12/18/2018",
+      "ovtlyr": 40.95991607,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 10.10874425,
+      "Cash": 0,
+      "Quotedate": "12/19/2018",
+      "ovtlyr": 37.73294495,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 7.867968964,
+      "Cash": 51.00587891,
+      "Quotedate": "12/20/2018",
+      "ovtlyr": 36.9532156,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 4.01068498,
+      "Cash": 64.5942551,
+      "Quotedate": "12/21/2018",
+      "ovtlyr": 35.5908777,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 0.827959685,
+      "Cash": 65.45542147,
+      "Quotedate": "12/24/2018",
+      "ovtlyr": 34.42267136,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 9.147247885,
+      "Cash": 34.94253371,
+      "Quotedate": "12/26/2018",
+      "ovtlyr": 39.98380542,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 8.672159032,
+      "Cash": 66.84185696,
+      "Quotedate": "12/27/2018",
+      "ovtlyr": 39.8175046,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 9.574326608,
+      "Cash": 68.01166678,
+      "Quotedate": "12/28/2018",
+      "ovtlyr": 40.18279232,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 10.41433693,
+      "Cash": 8.491547912,
+      "Quotedate": "12/31/2018",
+      "ovtlyr": 41.66230322,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 10.448484,
+      "Cash": 1.3915,
+      "Quotedate": "01-02-2019",
+      "ovtlyr": 42.49343303,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 7.117993961,
+      "Cash": 0,
+      "Quotedate": "01-03-2019",
+      "ovtlyr": 38.85161179,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 12.88661307,
+      "Cash": 1.3915,
+      "Quotedate": "01-04-2019",
+      "ovtlyr": 44.5343571,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 15.30221949,
+      "Cash": 0,
+      "Quotedate": "01-07-2019",
+      "ovtlyr": 47.41821632,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 16.86403373,
+      "Cash": 2.7815,
+      "Quotedate": "01-08-2019",
+      "ovtlyr": 48.90297457,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 17.45921275,
+      "Cash": 0,
+      "Quotedate": "01-09-2019",
+      "ovtlyr": 49.55140055,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 17.99530251,
+      "Cash": 0,
+      "Quotedate": "01-10-2019",
+      "ovtlyr": 49.99264086,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 18.18041394,
+      "Cash": 2.7815,
+      "Quotedate": "01-11-2019",
+      "ovtlyr": 49.43943199,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 16.82716444,
+      "Cash": 0,
+      "Quotedate": "1/14/2019",
+      "ovtlyr": 47.98527546,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 20.30835168,
+      "Cash": 0,
+      "Quotedate": "1/15/2019",
+      "ovtlyr": 50.73636017,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 20.4176288,
+      "Cash": 5.5515,
+      "Quotedate": "1/16/2019",
+      "ovtlyr": 51.30919245,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 20.9889529,
+      "Cash": 4.249213411,
+      "Quotedate": "1/17/2019",
+      "ovtlyr": 51.87913564,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 18.61378414,
+      "Cash": 29.67223109,
+      "Quotedate": "1/18/2019",
+      "ovtlyr": 51.27274205,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 16.03531422,
+      "Cash": 48.09485611,
+      "Quotedate": "1/22/2019",
+      "ovtlyr": 50.16618991,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 15.10867114,
+      "Cash": 51.3702893,
+      "Quotedate": "1/23/2019",
+      "ovtlyr": 50.02624803,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 15.76792298,
+      "Cash": 53.98357514,
+      "Quotedate": "1/24/2019",
+      "ovtlyr": 49.88048824,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 18.00714529,
+      "Cash": 64.23157748,
+      "Quotedate": "1/25/2019",
+      "ovtlyr": 50.8525309,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 16.87217285,
+      "Cash": 65.51111167,
+      "Quotedate": "1/28/2019",
+      "ovtlyr": 50.5096895,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 15.45472054,
+      "Cash": 66.60842018,
+      "Quotedate": "1/29/2019",
+      "ovtlyr": 50.24913422,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 19.77885003,
+      "Cash": 68.31185194,
+      "Quotedate": "1/30/2019",
+      "ovtlyr": 51.93535597,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 22.4557999,
+      "Cash": 69.59632831,
+      "Quotedate": "1/31/2019",
+      "ovtlyr": 52.23014748,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 21.66014855,
+      "Cash": 70.93627241,
+      "Quotedate": "02-01-2019",
+      "ovtlyr": 52.17397937,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 23.50165783,
+      "Cash": 25.94674388,
+      "Quotedate": "02-04-2019",
+      "ovtlyr": 52.81772822,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 25.0503791,
+      "Cash": 31.16297608,
+      "Quotedate": "02-05-2019",
+      "ovtlyr": 54.4318816,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 24.00141578,
+      "Cash": 35.84724836,
+      "Quotedate": "02-06-2019",
+      "ovtlyr": 53.58138688,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 21.90474303,
+      "Cash": 37.1050908,
+      "Quotedate": "02-07-2019",
+      "ovtlyr": 51.84869421,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 21.74183712,
+      "Cash": 37.45153478,
+      "Quotedate": "02-08-2019",
+      "ovtlyr": 51.51916298,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 21.81330399,
+      "Cash": 37.94297883,
+      "Quotedate": "02-11-2019",
+      "ovtlyr": 52.57613816,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 23.39059587,
+      "Cash": 37.71092999,
+      "Quotedate": "02-12-2019",
+      "ovtlyr": 52.94011612,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 22.68493841,
+      "Cash": 37.6080779,
+      "Quotedate": "2/13/2019",
+      "ovtlyr": 52.31738126,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 22.6734707,
+      "Cash": 37.48381229,
+      "Quotedate": "2/14/2019",
+      "ovtlyr": 51.70885061,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 22.32013351,
+      "Cash": 37.79103124,
+      "Quotedate": "2/15/2019",
+      "ovtlyr": 52.15699557,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 22.76894228,
+      "Cash": 37.72429678,
+      "Quotedate": "2/19/2019",
+      "ovtlyr": 52.0398712,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 22.49970915,
+      "Cash": 36.96409597,
+      "Quotedate": "2/20/2019",
+      "ovtlyr": 51.51737936,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 21.11615088,
+      "Cash": 71.76876402,
+      "Quotedate": "2/21/2019",
+      "ovtlyr": 51.0797949,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 22.28767321,
+      "Cash": 70.34547082,
+      "Quotedate": "2/22/2019",
+      "ovtlyr": 51.41941884,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 22.98680524,
+      "Cash": 69.46409761,
+      "Quotedate": "2/25/2019",
+      "ovtlyr": 51.60082504,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 23.04905529,
+      "Cash": 68.44855838,
+      "Quotedate": "2/26/2019",
+      "ovtlyr": 51.62932149,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 23.87609769,
+      "Cash": 19.68724444,
+      "Quotedate": "2/27/2019",
+      "ovtlyr": 53.57660782,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 23.66756814,
+      "Cash": 19.80525804,
+      "Quotedate": "2/28/2019",
+      "ovtlyr": 53.98288225,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 23.23412577,
+      "Cash": 32.29756825,
+      "Quotedate": "03-01-2019",
+      "ovtlyr": 54.34679069,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 23.32940517,
+      "Cash": 32.12954333,
+      "Quotedate": "03-04-2019",
+      "ovtlyr": 54.68437395,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 23.51720461,
+      "Cash": 32.55285486,
+      "Quotedate": "03-05-2019",
+      "ovtlyr": 54.85599921,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 23.48285076,
+      "Cash": 33.15304225,
+      "Quotedate": "03-06-2019",
+      "ovtlyr": 54.53837454,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 22.0286217,
+      "Cash": 30.09446742,
+      "Quotedate": "03-07-2019",
+      "ovtlyr": 53.34187649,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 22.36215843,
+      "Cash": 48.59915957,
+      "Quotedate": "03-08-2019",
+      "ovtlyr": 53.46413676,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 24.95820854,
+      "Cash": 37.00821787,
+      "Quotedate": "03-11-2019",
+      "ovtlyr": 55.03756463,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 24.85653475,
+      "Cash": 38.29895517,
+      "Quotedate": "03-12-2019",
+      "ovtlyr": 55.09077006,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 25.83290003,
+      "Cash": 36.49969604,
+      "Quotedate": "3/13/2019",
+      "ovtlyr": 55.66857448,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 25.52194019,
+      "Cash": 37.73705449,
+      "Quotedate": "3/14/2019",
+      "ovtlyr": 55.42980626,
+      "ZeroLine": 0
+    },
+    {
+      "BH": 24.84302397,
+      "Cash": 48.56247501,
+      "Quotedate": "3/15/2019",
+      "ovtlyr": 55.57141678,
+      "ZeroLine": 0
+    }];
+    return data;
+  };
+  
+  var dateAxisRenderer = am5xy.AxisRendererX.new(root, {
+    minGridDistance: 40,
+    strokeOpacity: 1,
+        strokeWidth: 1});
+  dateAxisRenderer.labels.template.setAll({
+      minPosition: 0.02,
+      maxPosition: 1,
+    fill: am5.color(0x000000),
+    fontSize: 10,fontWeight:600
+  });
+  dateAxisRenderer.grid.template.setAll({
+    strokeWidth: 1,strokeOpacity:1,
+    strokeDasharray: [2,2],stroke: am5.color(0x000000),
+  });
+  
+  var dateAxis = chart.xAxes.push(am5xy.CategoryDateAxis.new(root, {
+      baseInterval: { timeUnit: "day", count: 1 },
+      categoryField: "Quotedate",paddingBottom:40,
+    /*  tooltipDateFormat: "MMM dd, yyyy",*/
+      renderer: dateAxisRenderer
+  }));
+  
+  /*dateAxis.set("tooltip", am5.Tooltip.new(root, {}));*/
+  
+  
+  var lineYaxisRenderer = am5xy.AxisRendererY.new(root, {opposite: true,minGridDistance: 40});
+      lineYaxisRenderer.labels.template.setAll({
+      fill: am5.color(0x000000),fontSize: 10,fontWeight:600
+  });
+  lineYaxisRenderer.grid.template.setAll({
+  forceHidden:"visible",strokeOpacity: 0.1,
+        strokeWidth: 1,
+  });
+  var lineYaxis = chart.yAxes.push(am5xy.ValueAxis.new(root, { 
+     renderer: lineYaxisRenderer,
+     height: am5.percent(65), 
+     paddingBottom:20,
+    numberFormat: "#,###0'%'"
+  }));
+  var yAxisCashRenderer = am5xy.AxisRendererY.new(root, {opposite: true,minGridDistance: 30});
+  yAxisCashRenderer.labels.template.setAll({
+    fill: am5.color(0x000000),fontWeight:600,fontSize:10
+  });
+  yAxisCashRenderer.grid.template.setAll({
+  forceHidden:"visible",strokeOpacity: 0.1,
+        strokeWidth: 1,
+  });
+  var yAxisCash = chart.yAxes.push(am5xy.ValueAxis.new(root, {  
+    renderer: yAxisCashRenderer,
+    height: am5.percent(20),
+    width: am5.percent(100),
+    y: am5.percent(93),
+    centerY: am5.percent(93),
+    numberFormat: "#,###0'%'"
+  }));
+  chart.leftAxesContainer.set("layout", root.verticalLayout);
+  root.interfaceColors.set("grid", am5.color(0x000000));
+  
+    yAxisCash.children.moveValue(am5.Label.new(root, {
+      rotation: 90,
+      text: "Cash",
+      fill: am5.color(0x000000),
+      width: am5.percent(100),
+      fontSize:12,fontWeight:600,
+     centerY: am5.percent(100),
+    y: am5.percent(32), 
+    }),1);
+  
+    lineYaxis.children.moveValue(am5.Label.new(root, {
+      rotation: 90,
+      text: "ROI",
+      fill: am5.color(0x000000),
+      width: am5.percent(100),
+      fontSize:12,fontWeight:600,
+     centerY: am5.percent(100),
+    y: am5.percent(46), 
+    }),1);
+    
+  var seriesOvtlyr = chart.series.push(am5xy.SmoothedXLineSeries.new(root, {
+  name: "",
+  xAxis: dateAxis,
+  yAxis: lineYaxis,
+  valueYField: "ovtlyr",
+  categoryXField: "Quotedate"
+  }));
+  seriesOvtlyr.set("stroke", am5.color(0x3ABB4E));
+  seriesOvtlyr.strokes.template.setAll({
+  visible: true,
+  strokeOpacity: 1,
+  strokeWidth: 2
+  });	
+  
+  var seriesBH = chart.series.push(am5xy.SmoothedXLineSeries.new(root, {
+  name: "",
+  xAxis: dateAxis,
+  yAxis: lineYaxis,
+  valueYField: "BH",
+  categoryXField: "Quotedate"
+  }));
+  seriesBH.set("stroke", am5.color(0xFE6B97));
+  seriesBH.strokes.template.setAll({
+  visible: true,
+  strokeOpacity: 1,
+  strokeWidth: 2
+  });	
+  /*var tooltip = am5.Tooltip.new(root, {
+    getFillFromSprite: false,
+    labelText: "{Text} "
+  });
+  tooltip.get("background").setAll({
+    fill: am5.color(0x000000), stroke: am5.color(0xffffff),strokeWidth: 2,strokeOpacity: 1,
+    fillOpacity: 1});
+  seriesCorrelation.set("tooltip", tooltip);*/
+    
+    
+  var barchart = chart.series.push(am5xy.ColumnSeries.new(root, {
+     name: "",
+    xAxis: dateAxis,
+    yAxis: yAxisCash,
+    valueYField: "Cash",
+    categoryXField: "Quotedate",
+    clustered: false,
+    }));
+  
+  barchart.set("stroke", am5.color(0xB57EAF));
+  barchart.columns.template.setAll({
+  strokeOpacity: 1,
+  width: am5.percent(100),  
+  fill: am5.color(0xB57EAF),
+  fillOpacity: 1
+  });
+  
+  barchart.columns.template.set("draw", function (display, target) {
+    var w = target.getPrivate("width", 0);
+    var h = target.getPrivate("height", 0);
+    display.moveTo(0, h);
+    display.bezierCurveTo(w / 4, h, w / 4, 0, w / 2, 0);
+    display.bezierCurveTo(w - w / 4, 0, w - w / 4, h, w, h);
+  });
+  
+  /*Line in 0 value*/
+  function createGuide(value, text, dashArray) {
+    var guideDataItem = lineYaxis.makeDataItem({ value: value });
+    lineYaxis.createAxisRange(guideDataItem);
+    guideDataItem.get("grid").setAll({
+      forceHidden: false,
+      strokeOpacity: 1,
+      strokeDasharray: dashArray
+    });
+  }
+  
+  createGuide(0, "");
+  /*createGuide(0, "", [2, 2]);*/
+  
+  var legend = chart.children.push(am5.Legend.new(root, {
+    nameField: "name",
+    fillField: "color",
+    strokeField: "color",
+    y: am5.percent(100),
+    centerY: am5.percent(70),
+    layout: am5.GridLayout.new(root, {
+      maxColumns: 3,
+      fixedWidthGrid: false})}));
+  
+    
+  legend.data.setAll([{
+    name: "Cash",
+    color: am5.color(0xB57EAF)
+  }, {
+    name: "Buy & Hold",
+    color: am5.color(0xFE6B97)
+  },{
+    name: "Simulated Portfolio",
+    color: am5.color(0x3ABB4E)
+  }]);
+  
+  legend.markers.template.setAll({
+    width: 18,
+    height: 18
+  });
+    legend.markerRectangles.template.setAll({
+    cornerRadiusTL: 0,
+    cornerRadiusTR: 0,
+    cornerRadiusBL: 0,
+    cornerRadiusBR: 0
+  });
+    legend.labels.template.setAll({
+    fontSize: 12,
+    fontWeight: "400",
+    fill:am5.color(0x000000)
+  });
+    
+    
+   var processor = am5.DataProcessor.new(root, {
+      dateFields: ["Quotedate"],
+      dateFormat: "MMM-dd-yyyy"
+  });
+  var data = generateDatas(200);
+  processor.processMany(data);
+  dateAxis.data.setAll(data);
+    seriesOvtlyr.data.setAll(data);
+  seriesBH.data.setAll(data);
+  barchart.data.setAll(data);
+  
+  chart.appear(1000, 100);
+  });
+  </script>
+<!-- STRATEGY VIEW CHART END -->
+</body>
+</html>

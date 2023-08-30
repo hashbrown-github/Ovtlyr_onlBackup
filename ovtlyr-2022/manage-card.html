@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>OVTLYR | Manage Card </title>
+<meta name="description" content="Updates and Statistics" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no">
+<link rel="icon" type="img/png" sizes="32x32" href="images/trident-favicon.png" />
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/chart-style.css" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <header class="header_front">
+    <div class="header_front1">
+      <div class="container-xl">
+        <div class="header_front2 js-header">
+          <div class="logo">
+            <a href="index.html"><img src="images/ovtlyr-logo.svg" alt="OVTLYR" /></a>
+          </div>
+          <div class="header_menu">
+            <ul class="desk_menu">
+              <li><a href="big-view.html">BigView</a></li>
+              <li><a href="stocks-etfs.html">Stocks+ETFs</a></li>
+              <li><a href="portfolio.html">Portfolio</a></li>
+              <li><a href="pricing-new.html">Pricing</a></li>
+              <li><a href="scoops.html" class="scoops_link">Scoops</a></li>
+              <li>
+                <div class="headSearch_box">
+                  <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                  <div class="headSearch_pop">
+                    <div class="headSearch_pop1">
+                      <a href="javascript:void(0);"><i class="fa-solid fa-magnifying-glass"></i></a>
+                      <input type="text" placeholder="Search stock, company or symbol.." />
+                    </div>
+                    <div class="headSearch_pop2">
+                      <ul id="div_homeSeachbarData">
+                        <li class="homeSearch-suggestions" data-symbol="AAPL">             
+                          <a href="#">                 
+                            <div class="list_item">                     
+                              <div>                         
+                                <h4>Apple Inc</h4>                         
+                                <p>NASDAQ: <span class="searchsymbolclass">AAPL</span></p>                     
+                              </div>                 
+                            </div>             
+                          </a>         
+                        </li>
+                        <li class="homeSearch-suggestions" data-symbol="AAPL">             
+                          <a href="#">                 
+                            <div class="list_item">                     
+                              <div>                         
+                                <h4>Apple Inc</h4>                         
+                                <p>NASDAQ: <span class="searchsymbolclass">AAPL</span></p>                     
+                              </div>                 
+                            </div>             
+                          </a>         
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul> 
+            <div class="userLoginPro">
+              <a href="sign-in.html" class="border_btn">Login</a>
+              <a href="sign-up.html" class="filled_btn">Try for Free</a>
+            </div>
+            <div class="userLoginPro2 js-header-item" style="display: none;">
+              <button class="header__head js-header-head"><img src="images/profile.svg" alt="Profile"><span class="user_nme">Shivani Chandel</span></button>
+              <div class="header__body js-header-body">
+                <a class="header__item" href="#">
+                  <div class="header__title">My Account</div>
+                </a>
+                <a class="header__item" href="#">
+                  <div class="header__title">Trading History</div>
+                </a>
+                <a class="header__item" href="watchlist.html">
+                  <div class="header__title">My Watchlist</div>
+                </a>
+                <a class="header__item" href="#">
+                  <div class="header__title">Linked Brokerages</div>
+                </a>
+                <a class="header__item" href="#">
+                  <div class="header__title">Contact Us</div>
+                </a>
+                <a class="header__item" href="#">
+                  <div class="header__title">Sign Out</div>
+                </a>
+              </div>
+            </div>
+          </div> 
+        </div>
+      </div>
+    </div>
+  </header>
+<div class="outer_main">
+  <section class="pricing_sec1 minSec_height">
+    <div class="container-xl">
+      <div class="subscrip_sec1 manage_card1 align-items-start flex-column">
+        <h3>Manage Card</h3>
+        <p>Add or update a card to be used as your payment card (authorized for continuous payments).</p> 
+      </div>    
+      <div class="manage_card2">
+        <div class="manage_card22">
+          <h3>Empty Payment Method</h3>
+          <img src="images/no-plans.svg" alt="Empty Payment Method" />
+          <p>You haven't set any payment method yet</p>
+          <a href="#" class="addNew_card ms-0">Add new Card</a>
+        </div>
+        <div class="manage_card21">
+          <div class="saved_cards">
+            <div>
+              <h4 class="m-0">Active</h4>
+              <a href="#" class="addNew_card">Update Card</a>
+            </div>
+          </div>
+          <div class="active_card"> 
+            <div class="cardContent">
+              <h5 class="cardHead">Card Number</h5>
+              <span>xxxx - xxxx - xxxx - 8193</span>
+            </div>
+            <div class="cardContent"> 
+              <h5 class="cardHead">Expire Date</h5>
+              <span>05/2027</span>
+            </div>
+            <div class="visaLogo">Visa</div> 
+          </div>  
+          <button type="button"><i class="fa fa-trash"></i>Delete</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="ovt_footer fixed_footerA">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-sm-12 col-12 border_bottom">
+          <div class="footer_logo">
+            <a href="index.html"><img src="images/ovtlyr-footer-logo.svg" alt="OVTLYR"></a>
+          </div>
+          <!-- <h4 class="h4">Leading Market Behavioral Data</h4> -->
+          <!-- <h4 class="h4">Outliers Wins</h4> -->
+          <ul class="footer_socialMedia">
+            <li><a href="https://www.facebook.com/Ovtlyr/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="https://www.linkedin.com/company/ovtlyr/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+            <li><a href="https://twitter.com/ovtlyr" target="_blank"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://www.tiktok.com/@ovtlyr" target="_blank"><i class="fa-brands fa-tiktok"></i></a></li>
+            <li><a href="https://youtube.com/channel/UCmiMBSWQ83P1j1pP-zrbFbw" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+            <li><a href="https://www.instagram.com/ovtlyr/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-sm-12 col-12 border_bottom">
+          <h4 class="h4">Resources</h4>
+          <ul class="footer_menu footer_menu2">
+            <li><a href="scoops.html">Scoops</a></li>
+            <li><a href="watchlist.html">Watchlist</a></li>
+            <li><a href="coverage-list.html">Coverage List</a></li>
+            <li><a href="faqs.html">FAQs</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-sm-12 col-12 border_bottom">
+          <h4 class="h4">Company</h4>
+          <ul class="footer_menu footer_menu2">
+            <li><a href="contact-us.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-sm-12 col-12 p-0">
+          <h4 class="h4">Legal</h4>
+          <ul class="footer_menu footer_menu2">
+            <li><a href="terms-of-use.html">Terms of Use</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.min.js"></script>
+</body>
+</html>

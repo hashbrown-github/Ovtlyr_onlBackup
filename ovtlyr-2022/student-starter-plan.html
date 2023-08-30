@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>OVTLYR | Student Starter Plan </title>
+<meta name="description" content="Updates and Statistics" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no">
+<link rel="icon" type="img/png" sizes="32x32" href="images/trident-favicon.png" />
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/chart-style.css" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <header class="header_front">
+    <div class="header_front1">
+      <div class="container-xl">
+        <div class="header_front2 js-header">
+          <div class="logo">
+            <a href="index.html"><img src="images/ovtlyr-logo.svg" alt="OVTLYR" /></a>
+          </div>
+          <div class="header_menu">
+            <ul class="desk_menu">
+              <li><a href="big-view.html">BigView</a></li>
+              <li><a href="stocks-etfs.html">Stocks+ETFs</a></li>
+              <li><a href="portfolio.html">Portfolio</a></li>
+              <li><a href="pricing-new.html">Pricing</a></li>
+              <li><a href="scoops.html" class="scoops_link">Scoops</a></li>
+              <li>
+                <div class="headSearch_box">
+                  <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                  <div class="headSearch_pop">
+                    <div class="headSearch_pop1">
+                      <a href="javascript:void(0);"><i class="fa-solid fa-magnifying-glass"></i></a>
+                      <input type="text" placeholder="Search stock, company or symbol.." />
+                    </div>
+                    <div class="headSearch_pop2">
+                      <ul id="div_homeSeachbarData">
+                        <li class="homeSearch-suggestions" data-symbol="AAPL">             
+                          <a href="#">                 
+                            <div class="list_item">                     
+                              <div>                         
+                                <h4>Apple Inc</h4>                         
+                                <p>NASDAQ: <span class="searchsymbolclass">AAPL</span></p>                     
+                              </div>                 
+                            </div>             
+                          </a>         
+                        </li>
+                        <li class="homeSearch-suggestions" data-symbol="AAPL">             
+                          <a href="#">                 
+                            <div class="list_item">                     
+                              <div>                         
+                                <h4>Apple Inc</h4>                         
+                                <p>NASDAQ: <span class="searchsymbolclass">AAPL</span></p>                     
+                              </div>                 
+                            </div>             
+                          </a>         
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul> 
+            <div class="userLoginPro">
+              <a href="sign-in.html" class="border_btn">Login</a>
+              <a href="sign-up.html" class="filled_btn">Try for Free</a>
+            </div>
+            <div class="userLoginPro2 js-header-item" style="display: none;">
+              <button class="header__head js-header-head"><img src="images/profile.svg" alt="Profile"><span class="user_nme">Shivani Chandel</span></button>
+              <div class="header__body js-header-body">
+                <a class="header__item" href="#">
+                  <div class="header__title">My Account</div>
+                </a>
+                <a class="header__item" href="#">
+                  <div class="header__title">Trading History</div>
+                </a>
+                <a class="header__item" href="watchlist.html">
+                  <div class="header__title">My Watchlist</div>
+                </a>
+                <a class="header__item" href="#">
+                  <div class="header__title">Linked Brokerages</div>
+                </a>
+                <a class="header__item" href="#">
+                  <div class="header__title">Contact Us</div>
+                </a>
+                <a class="header__item" href="#">
+                  <div class="header__title">Sign Out</div>
+                </a>
+              </div>
+            </div>
+          </div> 
+        </div>
+      </div>
+    </div>
+  </header>
+<div class="outer_main">
+  <section class="pricing_sec1 proPlan_sec">
+    <div class="container-xl">
+      <div class="subscrip_sec1">
+        <h3>Your Subscription</h3>
+        <a href="manage-card.html">Manage Your Card</a>
+      </div>
+      <div class="subscrip_sec10 border-0">
+        <div class="subscrip_sec101">
+          <div>
+            <div class="subscrip_child">
+              <h3><span class="txt_bold">Starter</span>/FREE</h3>
+              <span class="status active">Active</span>
+            </div>
+            <p>Pro Trial - 6 days remaining</p>
+          </div>
+        </div>
+        <div class="subscrip_sec102">
+          <div class="pricingNew2">
+            <ul class="nav nav-tabs" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link annual_link active" data-bs-toggle="tab" href="#">
+                  <span>Annually</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#">
+                  <span>Monthly</span>
+                </a> 
+              </li>
+            </ul>
+          </div>
+          <div class="subscrip_sec1021">
+            <div>
+              <h3 class="show_txt">Educational plan at <span class="txt_bold"><sup>$</sup>5<sup>/month</sup></span></h3>
+              <h5 class="show_txt">(<b>$60</b>, Billed Annually)</h5>
+              <h3 class="hide_txt">Educational plan at <span class="txt_bold"><sup>$</sup>6<sup>/month</sup></span></h3>
+            </div>
+            <a href="#">Upgrade<i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="subscrip_sec10 border-0">
+        <div class="subscrip_sec101 subscrip_sec302">
+          <div class="subscrip_child">
+            <h3><span class="txt_bold">Education</span> Plan</h3>
+            <span class="status active">Active</span>
+          </div>
+          <h5>Next Billing Date: <span>26/11/2022</span></h5>
+          <h5>Wish to change your subscription? <a href="#" data-bs-toggle="modal" data-bs-target="#chnageSubs_popup1">Click here</a></h5>
+        </div>
+      </div>
+      <div class="subscrip_sec12 border-0 subsSec_forEdu">
+        <div class="subscrip_sec20">
+          <div class="subscrip_sec21">
+            <img src="images/signup-logo.svg" alt="OVTLYR">
+            <span>Education</span>
+          </div>
+          <h5>Complete Access to <span>all Insights for over 1600+ stocks/ETFs</span></h5>
+        </div>
+        <div class="subscrip_sec23">
+          <div class="subscription_slider owl-carousel owl-theme">
+            <div class="item">
+              <h5>Fear & Greed Score at Asset & Sector Level</h5>
+              <img src="images/plan-slide-1.svg" alt="Stock Market" />
+            </div>
+            <div class="item">
+              <h5>Opportunity HEATMAP</h5>
+              <img src="images/plan-slide-2.svg" alt="Stock Market" />
+            </div>
+            <div class="item">
+              <h5>Insightful Macro Level Reports</h5>
+              <img src="images/plan-slide-3.svg" alt="Stock Market" />
+            </div>
+            <div class="item">
+              <h5>Daily Top Opportunity Lists</h5>
+              <img src="images/plan-slide-4.svg" alt="Stock Market" />
+            </div>
+            <div class="item">
+              <h5>OVTLYR Portfolio Optimizer</h5>
+              <img src="images/plan-slide-5.svg" alt="Stock Market" />
+            </div> 
+            <div class="item">
+              <h5>Cash/Stock Allocation</h5>
+              <img src="images/plan-slide-6.svg" alt="Stock Market" />
+            </div> 
+            <div class="item">
+              <h5>Brokerage Integration</h5>
+              <img src="images/plan-slide-7.svg" alt="Stock Market" />
+            </div> 
+            <div class="item">
+              <div class="last_slide">
+                <h5 class="mb-0">And many more features</h5>
+                <img src="images/subscribe-arrow2.svg" alt="Arrow">
+              </div>
+            </div> 
+          </div>
+        </div>
+        <div class="subscrip_sec25">
+          <ul>
+            <li>
+              <div class="inner_txt">
+                <h6>Over 1600</h6>
+              </div>
+              <p>No. of stocks + ETFs  covered</p>
+            </li>
+            <li>
+              <div class="inner_txt">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+              <p>HeatTrail – Gives you the buy and sell opportunities</p>
+            </li>
+            <li>
+              <div class="inner_txt">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+              <p>Daily Risk On & Off Meter – Tells you where the market is headed </p>
+            </li>
+            <li>
+              <div class="inner_txt">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+              <p>Fear & Greed Score – A worthy tool for every investor</p>
+            </li>
+            <li>
+              <div class="inner_txt">
+                <p>Full Coverage</p>
+              </div>
+              <p>Daily Sector Opportunity Map</p>
+            </li>
+            <li>
+              <div class="inner_txt">
+                <p>Full Coverage</p>
+              </div>
+              <p>Daily Allocation Charts for each stock and ETF</p>
+            </li>
+            <li>
+              <div class="inner_txt">
+                <p>Full Coverage</p>
+              </div>
+              <p>Daily Undervalued & Overvalued Stocks</p>
+            </li>
+            <li>
+              <div class="inner_txt">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+              <p>OVTLYR Portfolio Simulator</p>
+            </li>
+            <li>
+              <div class="inner_txt">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+              <p>OVTLYR One - Brokerage Integration</p>
+            </li>
+            <li>
+              <div class="inner_txt">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+              <p>Bi-Directional Volatility – Stocks & ETFs</p>
+            </li>
+            <li>
+              <div class="inner_txt">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+              <p>Correlation Data for Stocks & ETFs</p>
+            </li>
+            <li>
+              <div class="inner_txt">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+              <p>Latest Company Filings</p>
+            </li>
+            <li>
+              <div class="inner_txt">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+              <p>Scoops - OVTLYR’s Deep Dive Bulletin</p>
+            </li>
+            <li>
+              <div class="inner_txt">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+              <p>Portfolio Weight Suggestions – Connected Accounts</p>
+            </li>
+            <li>
+              <div class="inner_txt">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+              <p>Access to Premium OVTLYR Webinars</p>
+            </li>
+            <li>
+              <div class="inner_txt">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+              <p>Email Customer Support</p>
+            </li>
+            <li>
+              <div class="inner_txt">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+              <p>Membership to OVTLYR Student hub</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--========== CHNAGE SUBSCRIPTION 1 ===========-->
+  <div class="modal editRisk_tol latestPlan_popup fade" id="chnageSubs_popup1" tabindex="-1" aria-labelledby="chnageSubs_popup1Label" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <button type="button" class="close_btn" data-bs-dismiss="modal" aria-label="Close"><span class="material-icons">close</span></button>
+          <div class="whiteModal_box">
+            <div class="latestPlan_popup1">
+              <h5>What do you want to do today?</h5>
+              <div class="latestPlan_popup11">
+                <a href="#" class="planPink_btn" data-bs-dismiss="modal" aria-label="Close">Switch to Annual Plan</a>
+                <a href="#" class="planPupl_btn" data-bs-dismiss="modal" aria-label="Close" data-bs-toggle="modal" data-bs-target="#chnageSubs_popup2">Cancel Subscription</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>        
+  <!--========== CHNAGE SUBSCRIPTION 1 END ===========-->
+  <!--============= CHNAGE SUBSCRIPTION 2 ============-->
+  <div class="modal editRisk_tol latestPlan_popup fade" id="chnageSubs_popup2" tabindex="-1" aria-labelledby="chnageSubs_popup2Label" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <button type="button" class="close_btn" data-bs-dismiss="modal" aria-label="Close"><span class="material-icons">close</span></button>
+          <div class="whiteModal_box">
+            <div class="latestPlan_popup1">
+              <h5>Are you sure you want to move away from OVTLYR Education?</h5>
+              <div class="latestPlan_popup11">
+                <a href="#" class="planPink_btn" data-bs-dismiss="modal" aria-label="Close"> Continue with EDUCATION Plan</a>
+                <a href="#" class="planPupl_btn" data-bs-dismiss="modal" aria-label="Close" data-bs-toggle="modal" data-bs-target="#chnageSubs_popup3">Yes</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>        
+  <!--========== CHNAGE SUBSCRIPTION 2 END ===========-->
+  <!--============= CHNAGE SUBSCRIPTION 3 ============-->
+  <div class="modal editRisk_tol latestPlan_popup fade" id="chnageSubs_popup3" tabindex="-1" aria-labelledby="chnageSubs_popup3Label" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <button type="button" class="close_btn" data-bs-dismiss="modal" aria-label="Close"><span class="material-icons">close</span></button>
+          <div class="whiteModal_box">
+            <div class="latestPlan_popup1">
+              <p>We understand and respect your decision.</p>   
+              <h5>However, you may lose the special student pricing and other student focussed benefits offered by OVTLYR.</h5>
+              <div class="latestPlan_popup11">
+                <a href="#" class="planPink_btn" data-bs-dismiss="modal" aria-label="Close"> Continue with EDUCATION Plan</a>
+                <a href="#" class="planPupl_btn" data-bs-dismiss="modal" aria-label="Close" data-bs-toggle="modal" data-bs-target="#chnageSubs_popup4">No, I still want to Cancel</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>        
+  <!--========== CHNAGE SUBSCRIPTION 3 END ===========-->
+  <!--============= CHNAGE SUBSCRIPTION 4 ============-->
+  <div class="modal editRisk_tol latestPlan_popup fade" id="chnageSubs_popup4" tabindex="-1" aria-labelledby="chnageSubs_popup4Label" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <button type="button" class="close_btn" data-bs-dismiss="modal" aria-label="Close"><span class="material-icons">close</span></button>
+          <div class="whiteModal_box">
+            <div class="latestPlan_popup1">
+              <p class="mb-0">We are sorry to let you go.</p>  
+              <p class="mb-0">You will not be charged from the next billing date.</p> 
+              <p>You are always welcome to renew your membership.</p>
+              <h5>You are now a subscriber of the OVTLYR Starter Pack for FREE.</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>        
+  <!--========== CHNAGE SUBSCRIPTION 4 END ===========-->
+  <footer class="ovt_footer fixed_footerA">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-sm-12 col-12 border_bottom">
+          <div class="footer_logo">
+            <a href="index.html"><img src="images/ovtlyr-footer-logo.svg" alt="OVTLYR"></a>
+          </div>
+          <!-- <h4 class="h4">Leading Market Behavioral Data</h4> -->
+          <!-- <h4 class="h4">Outliers Wins</h4> -->
+          <ul class="footer_socialMedia">
+            <li><a href="https://www.facebook.com/Ovtlyr/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="https://www.linkedin.com/company/ovtlyr/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+            <li><a href="https://twitter.com/ovtlyr" target="_blank"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://www.tiktok.com/@ovtlyr" target="_blank"><i class="fa-brands fa-tiktok"></i></a></li>
+            <li><a href="https://youtube.com/channel/UCmiMBSWQ83P1j1pP-zrbFbw" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+            <li><a href="https://www.instagram.com/ovtlyr/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-sm-12 col-12 border_bottom">
+          <h4 class="h4">Resources</h4>
+          <ul class="footer_menu footer_menu2">
+            <li><a href="scoops.html">Scoops</a></li>
+            <li><a href="watchlist.html">Watchlist</a></li>
+            <li><a href="coverage-list.html">Coverage List</a></li>
+            <li><a href="faqs.html">FAQs</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-sm-12 col-12 border_bottom">
+          <h4 class="h4">Company</h4>
+          <ul class="footer_menu footer_menu2">
+            <li><a href="contact-us.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-sm-12 col-12 p-0">
+          <h4 class="h4">Legal</h4>
+          <ul class="footer_menu footer_menu2">
+            <li><a href="terms-of-use.html">Terms of Use</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+if($('a.nav-link.annual_link').hasClass('active')){ 
+  $('.show_txt').show();
+  $('.hide_txt').hide();
+}
+else{
+  $('.show_txt').hide();
+  $('.hide_txt').show();
+}
+if($('.pricingNew2 a.nav-link').click(function(){
+  if($('a.nav-link.annual_link').hasClass('active')) {
+    $('.show_txt').show();
+    $('.hide_txt').hide();
+  }
+  else{
+    $('.show_txt').hide();
+    $('.hide_txt').show();
+  }
+}));
+});
+</script>
+<!--======== SUBSCRIPTION CAROUSEL START =======-->
+<script src="js/owl.carousel.js"></script>
+<script>
+  $('.subscription_slider').owlCarousel({
+    center: true,
+    items: 1,
+    loop: true,
+    margin: 10,
+    slideTransition: "linear",
+    autoplay:true,
+    autoplayTimeout: 2000,
+    autoplaySpeed: 1000,
+    autoplayHoverPause:true
+  });
+  </script>
+<!--======== SUBSCRIPTION CAROUSEL END ========-->
+</body>
+</html>

@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>OVTLYR | Watchlist </title>
+<meta name="description" content="Updates and Statistics" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no">
+<link rel="icon" type="img/png" sizes="32x32" href="images/trident-favicon.png" />
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/chart-style.css" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <header class="header_front">
+    <div class="header_front1">
+      <div class="container-xl">
+        <div class="header_front2 js-header">
+          <div class="logo">
+            <a href="index.html"><img src="images/ovtlyr-logo.svg" alt="OVTLYR" /></a>
+          </div>
+          <div class="header_menu">
+            <ul class="desk_menu">
+              <li><a href="big-view.html">BigView</a></li>
+              <li><a href="stocks-etfs.html">Stocks+ETFs</a></li>
+              <li><a href="portfolio.html">Portfolio</a></li>
+              <li><a href="pricing-new.html">Pricing</a></li>
+              <li><a href="scoops.html" class="scoops_link">Scoops</a></li>
+              <li>
+                <div class="headSearch_box">
+                  <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                  <div class="headSearch_pop">
+                    <div class="headSearch_pop1">
+                      <a href="javascript:void(0);"><i class="fa-solid fa-magnifying-glass"></i></a>
+                      <input type="text" placeholder="Search stock, company or symbol.." />
+                    </div>
+                    <div class="headSearch_pop2">
+                      <ul id="div_homeSeachbarData">
+                        <li class="homeSearch-suggestions" data-symbol="AAPL">             
+                          <a href="#">                 
+                            <div class="list_item">                     
+                              <div>                         
+                                <h4>Apple Inc</h4>                         
+                                <p>NASDAQ: <span class="searchsymbolclass">AAPL</span></p>                     
+                              </div>                 
+                            </div>             
+                          </a>         
+                        </li>
+                        <li class="homeSearch-suggestions" data-symbol="AAPL">             
+                          <a href="#">                 
+                            <div class="list_item">                     
+                              <div>                         
+                                <h4>Apple Inc</h4>                         
+                                <p>NASDAQ: <span class="searchsymbolclass">AAPL</span></p>                     
+                              </div>                 
+                            </div>             
+                          </a>         
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul> 
+            <div class="userLoginPro">
+              <a href="sign-in.html" class="border_btn">Login</a>
+              <a href="sign-up.html" class="filled_btn">Try for Free</a>
+            </div>
+            <div class="userLoginPro2 js-header-item" style="display: none;">
+              <button class="header__head js-header-head"><img src="images/profile.svg" alt="Profile"><span class="user_nme">Shivani Chandel</span></button>
+              <div class="header__body js-header-body">
+                <a class="header__item" href="#">
+                  <div class="header__title">My Account</div>
+                </a>
+                <a class="header__item" href="#">
+                  <div class="header__title">Trading History</div>
+                </a>
+                <a class="header__item" href="watchlist.html">
+                  <div class="header__title">My Watchlist</div>
+                </a>
+                <a class="header__item" href="#">
+                  <div class="header__title">Linked Brokerages</div>
+                </a>
+                <a class="header__item" href="#">
+                  <div class="header__title">Contact Us</div>
+                </a>
+                <a class="header__item" href="#">
+                  <div class="header__title">Sign Out</div>
+                </a>
+              </div>
+            </div>
+          </div> 
+        </div>
+      </div>
+    </div>
+  </header>
+<div class="outer_main">
+  <section class="watchlist_sec1">
+    <div class="container-xl">
+      <!-- <div class="welcomeSec_list">
+        <div class="empty_watchlist">
+          <h3>Customize your Watchlist</h3>
+          <p class="create_list">Quickly access data on assets which matter most to you</p>
+          <div class="email_left">
+            <a href="signup.html" class="blue_button">Join for Free</a>
+            <p class="small_italicFont">Login is required to save your selections</p>
+          </div>
+        </div>
+      </div>
+      <div class="empty_watchlist">
+        <h3 class="h2 mb-3">Welcome!</h3>
+        <p class="create_list">Your Watchlist is still empty</p>
+        <img src="images/empty-list.svg" alt="Wishlist Empty">
+        <a href="#" class="blue_button mb-0 show_sideBar3" id="hide_sidebar2"><i class="fas fa-plus"></i> Add Stocks</a>
+      </div> -->
+      <div class="portfolio_121">
+        <h3>My Watchlist</h3>
+        <div class="portfolio_123">
+          <a href="#" class="delete_button disable_sec" data-bs-toggle="modal" data-bs-target="#deleteConfirmation"><i class="fa-regular fa-trash-can"></i><span class="ms-2">Delete</span></a>
+          <!-- <a href="#" class="delete_button" data-bs-toggle="modal" data-bs-target="#deleteConfirmation"><i class="fa-regular fa-trash-can"></i><span class="ms-2">Delete</span></a> -->
+          <a href="#" class="show_sideBar ms-2" id="hide_sidebar"><i class="fa-solid fa-plus"></i><span class="ms-1">Add</span></a>
+        </div>
+      </div>
+      <div class="watchlist_sec11">
+        <div class="sectors_data4">
+          <div class="sectors_data31">
+            <div class="indexSec_xx">
+              <div class="purple_box"><span></span>Stock</div>
+              <div class="yellow_box"><span></span>Cash</div>
+            </div>
+          </div>
+          <div class="table_scroll horizontal_scroll">
+            <table class="table ovtlyr_table treemapChart_table">
+              <thead>
+                <tr>
+                  <th style="width: 5%;" class="align__items checkList1">
+                    <label class="checkbox">
+                      <input class="checkbox__input" type="checkbox">
+                      <span class="checkbox__in">
+                        <span class="checkbox__tick"></span>
+                      </span>
+                    </label>
+                  </th>
+                  <th style="width: 8%;" class="align__items">Symbol</th>
+                  <th style="width: 20%;" class="align__items">Name</th>
+                  <th style="width: 10%;" class="align__items">Last Price</th>
+                  <th style="width: 15%;" class="align__items">Price Change</th>
+                  <th style="width: 12%;" class="align__items">Fear & Greed Score</th>
+                  <th style="width: 13%;">Allocation Chart</th>
+                  <th style="width: 12%;">Actions</th>
+                  <th style="width: 5%;"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="align__items checkList">
+                    <label class="checkbox">
+                      <input class="checkbox__input" type="checkbox">
+                      <span class="checkbox__in">
+                        <span class="checkbox__tick"></span>
+                      </span>
+                    </label>
+                  </td>
+                  <td class="align__items"><a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ABC</span></p></a></td>
+                  <td class="align__items"><p class="company_nameWatch">Booz Allen Hamilton Holding Corp - Class A</p></td>
+                  <td class="align__items"><p>$123.00</p></td>
+                  <td class="align__items"><p>+$68.30(<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>4.6%)</p></td>
+                  <td class="align__items"><p>68(<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>4.6%)</p></td>
+                  <td><div id="piechart_treemap1"></div></td>
+                  <td>
+                    <div class="actions_btn">
+                      <a href="#"><p><span class="port_symbol">Buy</span></p></a>
+                      <a href="#"><p><span class="port_symbol ms-2">Sell</span></p></a>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="actions_btn">
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#removeConfirmation" class="minus_icon"><i class="fa-solid fa-circle-minus"></i></a>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="align__items checkList">
+                    <label class="checkbox">
+                      <input class="checkbox__input" type="checkbox">
+                      <span class="checkbox__in">
+                        <span class="checkbox__tick"></span>
+                      </span>
+                    </label>
+                  </td>
+                  <td class="align__items"><a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ABC</span></p></a></td>
+                  <td class="align__items"><p>ABC</p></td>
+                  <td class="align__items"><p>$123.00</p></td>
+                  <td class="align__items"><p>+$68.30(<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>4.6%)</p></td>
+                  <td class="align__items"><p>68(<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>4.6%)</p></td>
+                  <td><img src="images/piechart_treemap.jpg"></td>
+                  <td>
+                    <div class="actions_btn">
+                      <a href="#"><p><span class="port_symbol">Buy</span></p></a>
+                      <a href="#"><p><span class="port_symbol ms-2">Sell</span></p></a>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="actions_btn">
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#removeConfirmation" class="minus_icon"><i class="fa-solid fa-circle-minus"></i></a>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="align__items checkList">
+                    <label class="checkbox">
+                      <input class="checkbox__input" type="checkbox">
+                      <span class="checkbox__in">
+                        <span class="checkbox__tick"></span>
+                      </span>
+                    </label>
+                  </td>
+                  <td class="align__items"><a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ABC</span></p></a></td>
+                  <td class="align__items"><p>ABC</p></td>
+                  <td class="align__items"><p>$123.00</p></td>
+                  <td class="align__items"><p>+$68.30(<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>4.6%)</p></td>
+                  <td class="align__items"><p>68(<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>4.6%)</p></td>
+                  <td><img src="images/piechart_treemap.jpg"></td>
+                  <td>
+                    <div class="actions_btn">
+                      <a href="#"><p><span class="port_symbol">Buy</span></p></a>
+                      <a href="#"><p><span class="port_symbol ms-2">Sell</span></p></a>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="actions_btn">
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#removeConfirmation" class="minus_icon"><i class="fa-solid fa-circle-minus"></i></a>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="align__items checkList">
+                    <label class="checkbox">
+                      <input class="checkbox__input" type="checkbox">
+                      <span class="checkbox__in">
+                        <span class="checkbox__tick"></span>
+                      </span>
+                    </label>
+                  </td>
+                  <td class="align__items"><a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ABC</span></p></a></td>
+                  <td class="align__items"><p>ABC</p></td>
+                  <td class="align__items"><p>$123.00</p></td>
+                  <td class="align__items"><p>+$68.30(<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>4.6%)</p></td>
+                  <td class="align__items"><p>68(<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>4.6%)</p></td>
+                  <td><img src="images/piechart_treemap.jpg"></td>
+                  <td>
+                    <div class="actions_btn">
+                      <a href="#"><p><span class="port_symbol">Buy</span></p></a>
+                      <a href="#"><p><span class="port_symbol ms-2">Sell</span></p></a>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="actions_btn">
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#removeConfirmation" class="minus_icon"><i class="fa-solid fa-circle-minus"></i></a>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="align__items checkList">
+                    <label class="checkbox">
+                      <input class="checkbox__input" type="checkbox">
+                      <span class="checkbox__in">
+                        <span class="checkbox__tick"></span>
+                      </span>
+                    </label>
+                  </td>
+                  <td class="align__items"><a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ABC</span></p></a></td>
+                  <td class="align__items"><p>ABC</p></td>
+                  <td class="align__items"><p>$123.00</p></td>
+                  <td class="align__items"><p>+$68.30(<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>4.6%)</p></td>
+                  <td class="align__items"><p>68(<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>4.6%)</p></td>
+                  <td><img src="images/piechart_treemap.jpg"></td>
+                  <td>
+                    <div class="actions_btn">
+                      <a href="#"><p><span class="port_symbol">Buy</span></p></a>
+                      <a href="#"><p><span class="port_symbol ms-2">Sell</span></p></a>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="actions_btn">
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#removeConfirmation" class="minus_icon"><i class="fa-solid fa-circle-minus"></i></a>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="align__items checkList">
+                    <label class="checkbox">
+                      <input class="checkbox__input" type="checkbox">
+                      <span class="checkbox__in">
+                        <span class="checkbox__tick"></span>
+                      </span>
+                    </label>
+                  </td>
+                  <td class="align__items"><a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ABC</span></p></a></td>
+                  <td class="align__items"><p>ABC</p></td>
+                  <td class="align__items"><p>$123.00</p></td>
+                  <td class="align__items"><p>+$68.30(<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>4.6%)</p></td>
+                  <td class="align__items"><p>68(<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>4.6%)</p></td>
+                  <td><img src="images/piechart_treemap.jpg"></td>
+                  <td>
+                    <div class="actions_btn">
+                      <a href="#"><p><span class="port_symbol">Buy</span></p></a>
+                      <a href="#"><p><span class="port_symbol ms-2">Sell</span></p></a>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="actions_btn">
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#removeConfirmation" class="minus_icon"><i class="fa-solid fa-circle-minus"></i></a>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="align__items checkList">
+                    <label class="checkbox">
+                      <input class="checkbox__input" type="checkbox">
+                      <span class="checkbox__in">
+                        <span class="checkbox__tick"></span>
+                      </span>
+                    </label>
+                  </td>
+                  <td class="align__items"><a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ABC</span></p></a></td>
+                  <td class="align__items"><p>ABC</p></td>
+                  <td class="align__items"><p>$123.00</p></td>
+                  <td class="align__items"><p>+$68.30(<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>4.6%)</p></td>
+                  <td class="align__items"><p>68(<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>4.6%)</p></td>
+                  <td><img src="images/piechart_treemap.jpg"></td>
+                  <td>
+                    <div class="actions_btn">
+                      <a href="#"><p><span class="port_symbol">Buy</span></p></a>
+                      <a href="#"><p><span class="port_symbol ms-2">Sell</span></p></a>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="actions_btn">
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#removeConfirmation" class="minus_icon"><i class="fa-solid fa-circle-minus"></i></a>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="pink_row">
+                  <td class="align__items checkList">
+                    <label class="checkbox">
+                      <input class="checkbox__input" type="checkbox">
+                      <span class="checkbox__in">
+                        <span class="checkbox__tick"></span>
+                      </span>
+                    </label>
+                  </td>
+                  <td class="align__items"><a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ABC</span></p></a></td>
+                  <td class="align__items"><p>ABC</p></td>
+                  <td class="align__items"><p>$123.00</p></td>
+                  <td class="align__items"><p>+$68.30(<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>4.6%)</p></td>
+                  <td class="align__items"><p>68(<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>4.6%)</p></td>
+                  <td><img src="images/risk-tolerance-chart.png" style="width: 80px;"></td>
+                  <td>
+                    <div class="actions_btn">
+                      <a href="#"><p><span class="port_symbol">Buy</span></p></a>
+                      <a href="#"><p><span class="port_symbol ms-2">Sell</span></p></a>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="actions_btn">
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#removeConfirmation" class="minus_icon"><i class="fa-solid fa-circle-minus"></i></a>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="pink_row">
+                  <td class="align__items checkList">
+                    <label class="checkbox">
+                      <input class="checkbox__input" type="checkbox">
+                      <span class="checkbox__in">
+                        <span class="checkbox__tick"></span>
+                      </span>
+                    </label>
+                  </td>
+                  <td class="align__items"><a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="iSpecimen Inc."><p><span class="port_symbol">ABC</span></p></a></td>
+                  <td class="align__items"><p>ABC</p></td>
+                  <td class="align__items"><p>$123.00</p></td>
+                  <td class="align__items"><p>+$68.30(<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>4.6%)</p></td>
+                  <td class="align__items"><p>68(<span class="green_value"><span class="material-icons arrow_ico">play_arrow</span></span>4.6%)</p></td>
+                  <td><img src="images/risk-tolerance-chart.png" style="width: 80px;"></td>
+                  <td>
+                    <div class="actions_btn">
+                      <a href="#"><p><span class="port_symbol">Buy</span></p></a>
+                      <a href="#"><p><span class="port_symbol ms-2">Sell</span></p></a>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="actions_btn">
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#removeConfirmation" class="minus_icon"><i class="fa-solid fa-circle-minus"></i></a>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <p class="footer_txt">* stocks that are not currently covered by OVTLYR</p>
+      </div>
+      <!--============ PORTFOLIO SIDEBAR CODE BEGIN ============-->
+      <div class="watchlist_sidebar watchlistScroll">
+        <button type="button" class="cross_btn show_sideBar2"><span class="material-icons">close</span></button>
+        <div class="sidebar_filters">
+          <ul class="nav nav-tabs outer_filters" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="tab" href="#searchBy_stock">
+                <span>Search by Stock</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="tab" href="#searchBy_filter">
+                <span>Search by Filters</span>
+              </a>
+            </li>
+          </ul>
+          <div class="tab-content">
+            <div id="searchBy_stock" class="tab-pane active">
+              <div class="searchBy_stock">
+                <button class="header_searchIcon"><i class="fas fa-search"></i></button>
+                <input class="search_symbol" type="text" placeholder="Type Company Name or Ticker to Search">
+              </div>
+            </div>
+            <div id="searchBy_filter" class="tab-pane fade">
+              <div class="searchBy_filter">
+                <ul class="nav nav-tabs inner_filters" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" data-bs-toggle="tab" href="#selectBy_sec">
+                      <span>Sector</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="tab" href="#selectBy_indus">
+                      <span>Industry</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="tab" href="#selectBy_market">
+                      <span>Market Cap</span>
+                    </a>
+                  </li>
+                </ul>
+                <div class="tab-content">
+                  <div id="selectBy_sec" class="tab-pane active">
+                    <div class="sector_tab1 watchlistScroll">
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <span class="checkbox__in">
+                          <span class="checkbox__tick"></span>
+                          <span class="checkbox__text">Communication</span>
+                        </span>
+                      </label>
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <span class="checkbox__in">
+                          <span class="checkbox__tick"></span>
+                          <span class="checkbox__text">Discretionary</span>
+                        </span>
+                      </label>
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <span class="checkbox__in">
+                          <span class="checkbox__tick"></span>
+                          <span class="checkbox__text">Energy</span>
+                        </span>
+                      </label>
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <span class="checkbox__in">
+                          <span class="checkbox__tick"></span>
+                          <span class="checkbox__text">Financials</span>
+                        </span>
+                      </label>
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <span class="checkbox__in">
+                          <span class="checkbox__tick"></span>
+                          <span class="checkbox__text">Healthcare</span>
+                        </span>
+                      </label>
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <span class="checkbox__in">
+                          <span class="checkbox__tick"></span>
+                          <span class="checkbox__text">Industrial</span>
+                        </span>
+                      </label>
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <span class="checkbox__in">
+                          <span class="checkbox__tick"></span>
+                          <span class="checkbox__text">Materials</span>
+                        </span>
+                      </label>
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <span class="checkbox__in">
+                          <span class="checkbox__tick"></span>
+                          <span class="checkbox__text">Real Estate</span>
+                        </span>
+                      </label>
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <span class="checkbox__in">
+                          <span class="checkbox__tick"></span>
+                          <span class="checkbox__text">Staples</span>
+                        </span>
+                      </label>
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <span class="checkbox__in">
+                          <span class="checkbox__tick"></span>
+                          <span class="checkbox__text">Technology</span>
+                        </span>
+                      </label>
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <span class="checkbox__in">
+                          <span class="checkbox__tick"></span>
+                          <span class="checkbox__text">Utilities</span>
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                  <div id="selectBy_indus" class="tab-pane fade">
+                    <div class="sector_tab1 watchlistScroll">
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <span class="checkbox__in">
+                          <span class="checkbox__tick"></span>
+                          <span class="checkbox__text">Technology Hardware, Storage &amp; Peripherals</span>
+                        </span>
+                      </label>
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <span class="checkbox__in">
+                          <span class="checkbox__tick"></span>
+                          <span class="checkbox__text">Hotels, Restaurants &amp; Leisure</span>
+                        </span>
+                      </label>
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <span class="checkbox__in">
+                          <span class="checkbox__tick"></span>
+                          <span class="checkbox__text">IT Services</span>
+                        </span>
+                      </label>
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <span class="checkbox__in">
+                          <span class="checkbox__tick"></span>
+                          <span class="checkbox__text">Electrical Equipment</span>
+                        </span>
+                      </label>
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <span class="checkbox__in">
+                          <span class="checkbox__tick"></span>
+                          <span class="checkbox__text">Metals &amp; Mining</span>
+                        </span>
+                      </label>
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <span class="checkbox__in">
+                          <span class="checkbox__tick"></span>
+                          <span class="checkbox__text">Hotels, Restaurants &amp; Leisure</span>
+                        </span>
+                      </label>
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <span class="checkbox__in">
+                          <span class="checkbox__tick"></span>
+                          <span class="checkbox__text">IT Services</span>
+                        </span>
+                      </label>
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <span class="checkbox__in">
+                          <span class="checkbox__tick"></span>
+                          <span class="checkbox__text">Electrical Equipment</span>
+                        </span>
+                      </label>
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <span class="checkbox__in">
+                          <span class="checkbox__tick"></span>
+                          <span class="checkbox__text">Metals &amp; Mining</span>
+                        </span>
+                      </label>
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <span class="checkbox__in">
+                          <span class="checkbox__tick"></span>
+                          <span class="checkbox__text">Hotels, Restaurants &amp; Leisure</span>
+                        </span>
+                      </label>
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <span class="checkbox__in">
+                          <span class="checkbox__tick"></span>
+                          <span class="checkbox__text">IT Services</span>
+                        </span>
+                      </label>
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <span class="checkbox__in">
+                          <span class="checkbox__tick"></span>
+                          <span class="checkbox__text">Electrical Equipment</span>
+                        </span>
+                      </label>
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <span class="checkbox__in">
+                          <span class="checkbox__tick"></span>
+                          <span class="checkbox__text">Software</span>
+                        </span>
+                      </label>
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <span class="checkbox__in">
+                          <span class="checkbox__tick"></span>
+                          <span class="checkbox__text">Hotels, Restaurants &amp; Leisure</span>
+                        </span>
+                      </label>
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <span class="checkbox__in">
+                          <span class="checkbox__tick"></span>
+                          <span class="checkbox__text">IT Services</span>
+                        </span>
+                      </label>
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <span class="checkbox__in">
+                          <span class="checkbox__tick"></span>
+                          <span class="checkbox__text">Electrical Equipment</span>
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                  <div id="selectBy_market" class="tab-pane fade">
+                    <div class="sector_tab1">
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <span class="checkbox__in">
+                          <span class="checkbox__tick"></span>
+                          <span class="checkbox__text">&lt;$10B</span>
+                        </span>
+                      </label>
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <span class="checkbox__in">
+                          <span class="checkbox__tick"></span>
+                          <span class="checkbox__text">$10B - $100B</span>
+                        </span>
+                      </label>
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <span class="checkbox__in">
+                          <span class="checkbox__tick"></span>
+                          <span class="checkbox__text">&gt;$100B</span>
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="apply_filter">
+                  <a href="javascript:void(0);" class="purple_button">Apply</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h4>Results:</h4>
+        <div class="filtered_results watchlistScroll">
+          <div class="card_item">
+            <div class="card_details">
+              <div class="card_line">
+                <span class="card_category port_symbol">AAPL</span>
+                <div class="card_date"><button type="button" class="clickTo_add"><i class="fa-solid fa-circle-plus"></i></button></div>
+              </div>
+              <div class="card_status">TD Holdings Inc</div>
+            </div>
+            <div class="">
+              <div class="footLeft11 rating_slider">
+                <div class="slidecontainer">
+                  <span class="values">ON</span>
+                  <div class="RangeSlider_div">
+                    <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled />
+                  </div>
+                  <span class="values">OFF</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card_item">
+            <div class="card_details">
+              <div class="card_line">
+                <span class="card_category port_symbol">AAPL</span>
+                <div class="card_date"><button type="button" class="clickTo_add"><i class="fa-solid fa-circle-plus"></i></button></div>
+              </div>
+              <div class="card_status">Avis Budget Grp</div>
+            </div>
+            <div class="">
+              <div class="footLeft11 rating_slider">
+                <div class="slidecontainer">
+                  <span class="values">ON</span>
+                  <div class="RangeSlider_div">
+                    <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled />
+                  </div>
+                  <span class="values">OFF</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card_item">
+            <div class="card_details">
+              <div class="card_line">
+                <span class="card_category port_symbol">AAPL</span>
+                <div class="card_date"><button type="button" class="clickTo_add"><i class="fa-solid fa-circle-plus"></i></button></div>
+              </div>
+              <div class="card_status">HyreCar</div>
+            </div>
+            <div class="">
+              <div class="footLeft11 rating_slider">
+                <div class="slidecontainer">
+                  <span class="values">ON</span>
+                  <div class="RangeSlider_div">
+                    <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled />
+                  </div>
+                  <span class="values">OFF</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card_item">
+            <div class="card_details">
+              <div class="card_line">
+                <span class="card_category port_symbol">AAPL</span>
+                <div class="card_date"><button type="button" class="clickTo_add"><i class="fa-solid fa-circle-plus"></i></button></div>
+              </div>
+              <div class="card_status">HyreCar</div>
+            </div>
+            <div class="">
+              <div class="footLeft11 rating_slider">
+                <div class="slidecontainer">
+                  <span class="values">ON</span>
+                  <div class="RangeSlider_div">
+                    <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled />
+                  </div>
+                  <span class="values">OFF</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card_item">
+            <div class="card_details">
+              <div class="card_line">
+                <span class="card_category port_symbol">AAPL</span>
+                <div class="card_date"><button type="button" class="clickTo_add"><i class="fa-solid fa-circle-plus"></i></button></div>
+              </div>
+              <div class="card_status">HyreCar</div>
+            </div>
+            <div class="">
+              <div class="footLeft11 rating_slider">
+                <div class="slidecontainer">
+                  <span class="values">ON</span>
+                  <div class="RangeSlider_div">
+                    <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled />
+                  </div>
+                  <span class="values">OFF</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card_item">
+            <div class="card_details">
+              <div class="card_line">
+                <span class="card_category port_symbol">AAPL</span>
+                <div class="card_date"><button type="button" class="clickTo_add"><i class="fa-solid fa-circle-plus"></i></button></div>
+              </div>
+              <div class="card_status">HERTZ GLOBAL HLD</div>
+            </div>
+            <div class="">
+              <div class="footLeft11 rating_slider">
+                <div class="slidecontainer">
+                  <span class="values">ON</span>
+                  <div class="RangeSlider_div">
+                    <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled />
+                  </div>
+                  <span class="values">OFF</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card_item">
+            <div class="card_details">
+              <div class="card_line">
+                <span class="card_category port_symbol">AAPL</span>
+                <div class="card_date"><button type="button" class="clickTo_add"><i class="fa-solid fa-circle-plus"></i></button></div>
+              </div>
+              <div class="card_status">Apple Inc</div>
+            </div>
+            <div class="">
+              <div class="footLeft11 rating_slider">
+                <div class="slidecontainer">
+                  <span class="values">ON</span>
+                  <div class="RangeSlider_div">
+                    <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled />
+                  </div>
+                  <span class="values">OFF</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--============= PORTFOLIO SIDEBAR CODE END =============-->
+      <!--========== REMOVE STOCK CONFIRMATION POPUP START =============-->
+      <div class="modal removeConf editRisk_tol fade" id="removeConfirmation" tabindex="-1" aria-labelledby="removeConfLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body">
+              <button type="button" class="close_btn" data-bs-dismiss="modal" aria-label="Close"><span class="material-icons">close</span></button>
+              <div class="editRisk_tol_box">
+                <h4>Do you want to continue?</h4>
+                <p>This will change assets & allocations from your current selections</p>
+                <div class="editRisk_buttons">
+                  <a href="#" data-bs-dismiss="modal" aria-label="Close">Cancel</a>
+                  <a href="#" class="filled_btn" data-bs-dismiss="modal" aria-label="Close">Continue</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--============== REMOVE STOCK CONFIRMATION POPUP END ===============-->
+      <!--========== REMOVE STOCKS CONFIRMATION POPUP START =============-->
+      <div class="modal removeConf editRisk_tol fade" id="deleteConfirmation" tabindex="-1" aria-labelledby="deleteConfLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body">
+              <button type="button" class="close_btn" data-bs-dismiss="modal" aria-label="Close"><span class="material-icons">close</span></button>
+              <div class="editRisk_tol_box">
+                <h4>Delete Stocks Confirmation</h4>
+                <p>Do you really want to delete all the stocks?</p>
+                <div class="editRisk_buttons">
+                  <a href="#" data-bs-dismiss="modal" aria-label="Close">Cancel</a>
+                  <a href="#" class="filled_btn" data-bs-dismiss="modal" aria-label="Close">Continue</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--============== REMOVE STOCKS CONFIRMATION POPUP END ===============-->
+    </div>
+  </section>
+  <footer class="ovt_footer fixed_footerA">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-sm-12 col-12 border_bottom">
+          <div class="footer_logo">
+            <a href="index.html"><img src="images/ovtlyr-footer-logo.svg" alt="OVTLYR"></a>
+          </div>
+          <!-- <h4 class="h4">Leading Market Behavioral Data</h4> -->
+          <!-- <h4 class="h4">Outliers Wins</h4> -->
+          <ul class="footer_socialMedia">
+            <li><a href="https://www.facebook.com/Ovtlyr/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="https://www.linkedin.com/company/ovtlyr/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+            <li><a href="https://twitter.com/ovtlyr" target="_blank"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://www.tiktok.com/@ovtlyr" target="_blank"><i class="fa-brands fa-tiktok"></i></a></li>
+            <li><a href="https://youtube.com/channel/UCmiMBSWQ83P1j1pP-zrbFbw" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+            <li><a href="https://www.instagram.com/ovtlyr/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-sm-12 col-12 border_bottom">
+          <h4 class="h4">Resources</h4>
+          <ul class="footer_menu footer_menu2">
+            <li><a href="scoops.html">Scoops</a></li>
+            <li><a href="watchlist.html">Watchlist</a></li>
+            <li><a href="coverage-list.html">Coverage List</a></li>
+            <li><a href="faqs.html">FAQs</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-sm-12 col-12 border_bottom">
+          <h4 class="h4">Company</h4>
+          <ul class="footer_menu footer_menu2">
+            <li><a href="contact-us.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-sm-12 col-12 p-0">
+          <h4 class="h4">Legal</h4>
+          <ul class="footer_menu footer_menu2">
+            <li><a href="terms-of-use.html">Terms of Use</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.min.js"></script>
+<!--======== PORTFOLIO SIDEBAR HIDE/SHOW SCRIPT BEGIN =========-->
+<script>
+  document.querySelector('.show_sideBar').addEventListener('click', function(event) {
+    event.preventDefault();
+    var target1 = document.querySelector('.watchlist_sidebar');
+    if (target1.classList.contains('open')) {
+      target1.classList.remove('open');
+    } 
+    else {
+      target1.classList.add('open');
+    }
+  });
+  
+  document.querySelector('.show_sideBar2').addEventListener('click', function(event) {
+    var target1 = document.querySelector('.watchlist_sidebar');
+    if (target1.classList.contains('open')) {
+      target1.classList.remove('open');
+    } 
+    else {
+      target1.classList.add('open');
+    }
+  });  
+
+  document.querySelector('.show_sideBar3').addEventListener('click', function(event) {
+    var target1 = document.querySelector('.watchlist_sidebar');
+    if (target1.classList.contains('open')) {
+      target1.classList.remove('open');
+    } 
+    else {
+      target1.classList.add('open');
+    }
+  }); 
+
+  $('#hide_sidebar').click(function (evt) {
+    evt.stopPropagation();
+    $('.watchlist_sidebar').addClass('open');
+  });
+  $('#hide_sidebar2').click(function (evt) {
+    evt.stopPropagation();
+    $('.watchlist_sidebar').addClass('open');
+  });
+
+  $('body,html').click(function (e) {
+    var container = $(".watchlist_sidebar");
+    if (!container.is(e.target) && container.has(e.target).length === 0) {
+      container.removeClass('open');
+    }
+  });
+</script>
+<!--======== PORTFOLIO SIDEBAR HIDE/SHOW SCRIPT END =========-->
+<!--======== SELECT CHECKBOX SCRIPT BEGIN =========-->
+<script>
+  $(".checkList1 .checkbox__input").change(function () {
+    $(".checkList .checkbox__input").prop('checked', $(this).prop("checked"));
+  });
+</script>
+<!--========= SELECT CHECKBOX SCRIPT END ==========-->
+
+<script src="https://cdn.amcharts.com/lib/5/index.js"></script> 
+<script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/themes/Responsive.js"></script>
+  <!-- Tree map small pie Chart code -->
+  <script>
+    am5.ready(function() {
+    am5.addLicense("AM5C311897715");
+    var root = am5.Root.new("piechart_treemap1");
+    root.setThemes([
+    am5themes_Animated.new(root)
+    ]);
+    var chart = root.container.children.push(am5percent.PieChart.new(root, {
+    layout: root.verticalLayout,
+    }));
+    root.interfaceColors.set("grid", am5.color(0xffffff));
+    var series = chart.series.push(am5percent.PieSeries.new(root, {
+    valueField: "Allocation",
+    categoryField: "Labels",
+    alignLabels: false,
+    text: "{Industry}"
+    /*tooltip: am5.Tooltip.new(root, {
+    labelText:"{Popup},{Allocation}%"
+    })*/
+    }));
+    
+    
+      
+    series.slices.template.adapters.add("fill", function(fill, target) {
+    if (target.dataItem.get("category") == 1) {
+    return am5.color(0xE2A122);
+    }
+    else if (target.dataItem.get("category") == 2) {
+    return am5.color(0x703372);}
+    });
+    series.slices.template.adapters.add("stroke", function(stroke, target) {
+    if (target.dataItem.get("category") == 1) {
+    return am5.color(0xE2A122);
+    }
+    else if (target.dataItem.get("category") == 2) {
+    return am5.color(0x703372);}
+    
+    });
+    
+      
+    series.labels.template.setAll({
+    fontSize: 10,
+    text: "{Allocation}%",
+    textType: "radial",
+    radius: 0,
+    centerX: am5.percent(100),
+    fill: am5.color(0xffffff)
+    });
+    var tooltip = am5.Tooltip.new(root, {
+      getFillFromSprite: true, 
+       labelText: "{Allocation}%"
+    });
+    /*	tooltip.get("background").setAll({
+    strokeWidth: 2,strokeOpacity: 1,
+      fillOpacity: 1
+    });*/
+      
+    series.set("tooltip", tooltip).label.setAll({ fontSize: 10 });
+      
+      
+    series.data.setAll( [
+    {
+    "Labels": "1",
+    "text":"CASH",
+    "Quotedate": "2021-07-29",
+    "Allocation":  25,
+    "Delta_Allocation": 0.0109090194901649
+    },
+    {
+    "Labels": "2",
+    "text":"AAPL",
+    "Quotedate": "2021-07-29",
+    "Allocation":  75,
+    "Delta_Allocation": -0.00421904374798759
+    }
+    ]);
+    series.appear(1000, 100);
+    
+    }); 
+    </script>
+</body>
+</html>
