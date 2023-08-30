@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="63.147" height="55.922" viewBox="0 0 63.147 55.922">
+  <defs>
+    <filter id="comments-solid_-_Outline" x="0" y="0" width="63.147" height="55.922" filterUnits="userSpaceOnUse">
+      <feOffset dy="2" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feFlood flood-opacity="0.243"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_188" data-name="Group 188" transform="translate(-8.446 -13.456)">
+    <g id="Group_182" data-name="Group 182" transform="translate(12.946 15.956)">
+      <g id="Group_181" data-name="Group 181" transform="translate(0 0)">
+        <path id="comments-solid" d="M23.461,39.719c12.965,0,23.47-8.892,23.47-19.86S36.426,0,23.461,0-.01,8.892-.01,19.86A17.866,17.866,0,0,0,4.459,31.527a10.474,10.474,0,0,1-1.6,2.787,12.941,12.941,0,0,1-1.5,1.614c-.2.181-.372.327-.485.418a1,1,0,0,1-.124.09l-.023.023h0a1.8,1.8,0,0,0-.643,2.009A1.831,1.831,0,0,0,1.8,39.719,20.391,20.391,0,0,0,8.8,38.309a25.084,25.084,0,0,0,2.855-1.286A26.591,26.591,0,0,0,23.461,39.719Z" transform="translate(3.615 3.601)" fill="#e2a122"/>
+        <g transform="matrix(1, 0, 0, 1, -4.5, -2.5)" filter="url(#comments-solid_-_Outline)">
+          <path id="comments-solid_-_Outline-2" data-name="comments-solid - Outline" d="M24.062,40.32c12.965,0,23.471-8.892,23.471-19.86S37.028.6,24.062.6.592,9.493.592,20.461A17.866,17.866,0,0,0,5.06,32.128a10.473,10.473,0,0,1-1.6,2.787,12.942,12.942,0,0,1-1.5,1.614c-.2.181-.372.327-.485.418a1,1,0,0,1-.124.09l-.023.023a1.8,1.8,0,0,0-.643,2.009A1.831,1.831,0,0,0,2.4,40.32,20.391,20.391,0,0,0,9.4,38.91a25.085,25.085,0,0,0,2.855-1.286,26.591,26.591,0,0,0,11.8,2.7m0,3.6A30.608,30.608,0,0,1,12.313,41.6q-.788.353-1.628.673l-.01,0A24.208,24.208,0,0,1,2.4,43.922a5.42,5.42,0,0,1-5.126-3.7,5.377,5.377,0,0,1,1.645-5.847l.3-.3.181-.09.148-.131A9.283,9.283,0,0,0,.61,32.711l.016-.02q.084-.108.164-.215a21.036,21.036,0,0,1-3.8-12.015,20.722,20.722,0,0,1,2.224-9.34A23.547,23.547,0,0,1,5.139,3.669,29.226,29.226,0,0,1,24.062-3,29.226,29.226,0,0,1,42.986,3.669a23.548,23.548,0,0,1,5.924,7.452,20.725,20.725,0,0,1,0,18.68,23.548,23.548,0,0,1-5.924,7.452A29.226,29.226,0,0,1,24.062,43.922Z" transform="translate(7.51 5.5)" fill="#fff"/>
+        </g>
+        <circle id="Ellipse_147" data-name="Ellipse 147" cx="2.401" cy="2.401" r="2.401" transform="translate(13.316 21.684)" fill="#fff"/>
+        <circle id="Ellipse_148" data-name="Ellipse 148" cx="2.401" cy="2.401" r="2.401" transform="translate(24.119 21.684)" fill="#fff"/>
+        <circle id="Ellipse_149" data-name="Ellipse 149" cx="2.401" cy="2.401" r="2.401" transform="translate(34.923 21.684)" fill="#fff"/>
+      </g>
+    </g>
+    <g id="Group_182-2" data-name="Group 182" transform="translate(16.55 19.557)">
+      <g id="Group_181-2" data-name="Group 181" transform="translate(0 0)">
+        <path id="comments-solid-2" data-name="comments-solid" d="M23.461,39.719c12.965,0,23.47-8.892,23.47-19.86S36.426,0,23.461,0-.01,8.892-.01,19.86A17.866,17.866,0,0,0,4.459,31.527a10.474,10.474,0,0,1-1.6,2.787,12.941,12.941,0,0,1-1.5,1.614c-.2.181-.372.327-.485.418a1,1,0,0,1-.124.09l-.023.023h0a1.8,1.8,0,0,0-.643,2.009A1.831,1.831,0,0,0,1.8,39.719,20.391,20.391,0,0,0,8.8,38.309a25.084,25.084,0,0,0,2.855-1.286A26.591,26.591,0,0,0,23.461,39.719Z" transform="translate(0.011)" fill="#efc97f"/>
+        <circle id="Ellipse_147-2" data-name="Ellipse 147" cx="2.401" cy="2.401" r="2.401" transform="translate(9.712 18.083)" fill="#fff"/>
+        <circle id="Ellipse_148-2" data-name="Ellipse 148" cx="2.401" cy="2.401" r="2.401" transform="translate(20.515 18.083)" fill="#fff"/>
+        <circle id="Ellipse_149-2" data-name="Ellipse 149" cx="2.401" cy="2.401" r="2.401" transform="translate(31.319 18.083)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>
