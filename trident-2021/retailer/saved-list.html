@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<base href="">
+<meta charset="utf-8" />
+<title>Trident | Saved List </title>
+<meta name="description" content="Updates and statistics" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<link rel="icon" href="assets/media/trident-favicon.png" type="image/gif" sizes="32x32">
+<link href="assets/plugins/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
+<link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+<link href="assets/plugins/custom/prismjs/prismjs.bundle.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="assets/css/retailer-style.css" />
+<link rel="stylesheet" href="assets/css/retailer-style-link.css" />
+<link rel="stylesheet" href="assets/css/responsive.css" />
+<link rel="stylesheet" href="assets/css/chart-style.css" />
+</head>
+<body id="kt_body" class="quick-panel-right demo-panel-right offcanvas-right header-fixed header-mobile-fixed subheader-enabled aside-enabled aside-static page-loading">
+<div  id="kt_header" class="header_position">
+  <div class="header header-fixed">
+    <div class="container d-flex justify-content-between">
+      <div class="d-none d-lg-flex align-items-center mr-3 visiblity_icon"> <a href="index.html"> <img alt="Logo" src="assets/media/login_trident.png" class="logo-sticky max-h-35px"> </a> </div>
+      <div class="topbar">
+        <div class="dropdown"> 
+          <div class="topbar-item menu-text"> <a href="#" class="text-dark">Login</a> </div>
+          <div class="topbar-item menu-text"> <a href="#" class="text-dark btn btn-pink">Signup</a> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="d-flex flex-column flex-root footer_curves">
+  <div class="container page_space padding_top">
+    <div class="breadcrumb_outerLink">
+      <div class="breadcrumb_outer">
+          <ul>
+              <li><a href="" class="active_breadcrumb">Dashboard </a><span class="arrow_listIcon"><i class="flaticon2-arrow"></i></span></li>
+              <li><a href="javascript:void(0);" style="pointer-events: none">Saved List </a></li>
+          </ul>
+      </div>
+    </div>
+    <div class="pannel_page mob_view">
+      <div class="customList_head">
+         <div class="left_head">
+            <h3>Saved List <span>(0 of 5)</span></h3>
+         </div>
+         <div class="right_head">
+            <div class="right_divFlex">
+              <button class="addMore_stock" data-toggle="modal" data-target="#addTo_customList_create">New Saved List</button>
+            </div>
+         </div>
+      </div>
+      <div class="customList_ul">
+        <div class="empty_box_div"> 
+          <img src="assets/media/empty_box.png" alt="">
+          <h4>No Saved List Yet</h4>
+        </div>
+         <ul>
+           <li>
+              <div class="name_list">
+                <a href="">
+                  <div class="listIcon">
+                    <i class="fas fa-list"></i>
+                  </div>
+                  <h4>Saved List 1</h4>
+                  <p><span><span class="bold_txt">Created: </span><span>Mar 17, 2021</span></span> | <span><span class="bold_txt">Stock Count: </span><span>20</span> </span> </p>
+                </a>
+              </div>
+               <div class="edit_list">
+                <div class="editable_div">
+                  <button id="remove_list"><i class="fas fa-ellipsis-h"></i></button>
+                   <!-- ADD TO CUSTOM LIST MODAL  -->
+                   <div class="addToList_popup" id="remove_customList">
+                    <div class="modal_dialog">
+                       <div class="modal_content">
+                          <div class="modal_header">
+                            <!-- <button class="close_btn">x</button> -->
+                            <button><i class="fas fa-edit"></i>Rename</button>
+                            <button data-toggle="modal" data-target="#remove_customList_popup"><i class="fas fa-trash"></i>Remove</button>
+                          </div>
+                       </div>
+                    </div>
+                   </div> 
+                   <!-- ADD TO CUSTOM LIST MODAL END -->
+                </div>
+               </div>
+           </li>
+           <li>
+            <div class="name_list">
+              <a href="">
+                <div class="listIcon">
+                  <i class="fas fa-list"></i>
+                </div>
+                <h4>Saved List 2</h4>
+                <p><span><span class="bold_txt">Created: </span><span>Mar 17, 2021</span></span> | <span><span class="bold_txt">Stock Count: </span><span>20</span> </span> </p>
+              </a>
+            </div>
+             <div class="edit_list">
+              <div class="editable_div">
+                <button id="remove_list"><i class="fas fa-ellipsis-h"></i></button>
+              </div>
+             </div>
+         </li>
+         </ul>
+      </div>
+  <!-- CREATE CUSTOMLIST LIST MODAL  -->
+  <div class="modal show" id="addTo_customList_create" tabindex="-1" role="dialog" aria-labelledby="addTo_customList_create_modal" style="display: none;">
+    <div class="modal-dialog" role="document">
+       <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title">Create New List</h3>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Create a new list">
+                  <button data-dismiss="modal" id="createList_msg">Create</button>
+                </div>
+              </div>
+            </div>
+          </div>
+       </div>
+    </div>
+   </div> 
+   <!-- CREATE CUSTOMLIST LIST MODAL END -->
+      <!--  LIST CREATED SUCCESSFULLY MSG MODAL  -->
+      <div class="addToList_popup_Msg" id="create_customList_Msg">
+        <div class="modal_dialog">
+           <div class="modal_content">
+              <div class="modal_header">
+                <div class="success_icon"><i class="fas fa-check-circle"></i></div>
+                <div class="success_txt"> Saved list created.</div>
+              </div>
+           </div>
+        </div>
+       </div> 
+       <!-- LIST CREATED SUCCESSFULLY MSG MODAL END -->
+ <!-- REMOVE TO CUSTOMLIST LIST MODAL  -->
+ <div class="modal show" id="remove_customList_popup" tabindex="-1" role="dialog" aria-labelledby="remove_customList_popup_modal" style="display: none;">
+  <div class="modal-dialog" role="document">
+     <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title">Are you sure you want to remove?</h3>
+          <div class="remove_listBtns">
+            <a class="btn btn_cancel" data-dismiss="modal" href="#">Cancel</a>
+            <a class="btn btn_removeList" data-dismiss="modal" id="removeList_msg">Remove</a> 
+          </div>
+     </div>
+  </div>
+ </div> 
+</div>
+ <!-- REMOVE TO CUSTOMLIST LIST MODAL END -->
+   <!-- REMOVE LIST SUCCESSFULLY MSG MODAL  -->
+   <div class="addToList_popup_Msg" id="remove_customList_Msg">
+    <div class="modal_dialog">
+       <div class="modal_content">
+          <div class="modal_header">
+            <div class="success_icon"><i class="fas fa-check-circle"></i></div>
+            <div class="success_txt"> List Removed.</div>
+          </div>
+       </div>
+    </div>
+   </div> 
+   <!-- REMOVE LIST SUCCESSFULLY MSG MODAL END -->
+    </div>
+  </div>
+</div>
+<footer class="main_footer fixed_footer latest_footer">
+  <div class="bottom-footer">
+    <div class="container"> 
+      <!-- <p>© 2021  Trident All rights reserved by <a href="https://kievanos.com/" target="_blabk">Kievanos</a></p>-->
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-7 col-7">
+          <ul class="footer_list">
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-5 col-5"> <span class="pilot_button float-right"> <a href="#" class="btn btn-blue">Contact Us</a> </span> </div>
+      </div>
+      <div class="row">
+         <div class="col-lg-12 col-md-12 col-sm-12 col-12"> 
+            <p>OVTLYR is a trademark [pending] independently owned by Kievanos, L.L.C. ©2021 <a href="https://kievanos.com/">Kievanos</a>, L.L.C. All Rights Reserved</p>
+         </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>var HOST_URL = "https://keenthemes.com/metronic/tools/preview";</script> 
+<script>var KTAppSettings = { "breakpoints": { "sm": 576, "md": 768, "lg": 992, "xl": 1200, "xxl": 1200 }, "colors": { "theme": { "base": { "white": "#ffffff", "primary": "#6993FF", "secondary": "#E5EAEE", "success": "#1BC5BD", "info": "#8950FC", "warning": "#FFA800", "danger": "#F64E60", "light": "#F3F6F9", "dark": "#212121" }, "light": { "white": "#ffffff", "primary": "#E1E9FF", "secondary": "#ECF0F3", "success": "#C9F7F5", "info": "#EEE5FF", "warning": "#FFF4DE", "danger": "#FFE2E5", "light": "#F3F6F9", "dark": "#D6D6E0" }, "inverse": { "white": "#ffffff", "primary": "#ffffff", "secondary": "#212121", "success": "#ffffff", "info": "#ffffff", "warning": "#ffffff", "danger": "#ffffff", "light": "#464E5F", "dark": "#ffffff" } }, "gray": { "gray-100": "#F3F6F9", "gray-200": "#ECF0F3", "gray-300": "#E5EAEE", "gray-400": "#D6D6E0", "gray-500": "#B5B5C3", "gray-600": "#80808F", "gray-700": "#464E5F", "gray-800": "#1B283F", "gray-900": "#212121" } }, "font-family": "Poppins" };</script> 
+<script src="assets/plugins/global/plugins.bundle.js"></script> 
+<script src="assets/plugins/custom/prismjs/prismjs.bundle.js"></script> 
+<script src="assets/js/scripts.bundle.js"></script> 
+<script src="assets/js/pages/custom/login/login.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script> 
+
+<!--Start Signal Chart--> 
+<script src="https://cdn.amcharts.com/lib/4/core.js"></script> 
+<script src="https://cdn.amcharts.com/lib/4/charts.js"></script> 
+<script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script> 
+<script>
+$('#show_addToList').click(function() {
+    $("#addTo_customList").show();
+});
+$('#remove_list').click(function() {
+    $("#remove_customList").show();
+});
+$('#createList_msg').click(function() {
+    $("#create_customList_Msg").show();
+});
+$('#removeList_msg').click(function() {
+    $("#remove_customList_Msg").show();
+});
+</script>
+<script>
+var Oscillator;
+var month;
+var price;
+var std_heatmap;
+am4core.useTheme(am4themes_animated);
+var chart = am4core.create("signal_chart2", am4charts.XYChart);
+chart.data=[
+{
+"month": "2001-07-12",
+"price": 300,
+"Oscillator": 10,
+"Heatmap": 0,
+"std_heatmap" : 0.9099
+},
+{
+"month": "2002-30-11",
+"price": 310,
+"Oscillator": 20,
+"Heatmap": 0.293037564,
+"std_heatmap" : 0.801791079
+},
+{
+"month": "2003-09-03",
+"price": 231,
+"Oscillator": 13,
+"Heatmap": 1.935390755,
+"std_heatmap" : 2
+},
+{
+"month": "2004-02-01",
+"price": 222,
+"Oscillator": 33,
+"Heatmap": 0.357037725,
+"std_heatmap" : 4
+},
+
+{
+"month": "2005-07-02",
+"price": 342,
+"Oscillator": 10,
+"Heatmap": 0.250268393,
+"std_heatmap" : 6.049
+},
+
+{
+"month": "2006-07-03",
+"price":220,
+"Oscillator": 4,
+"Heatmap": 0.222731596,
+"std_heatmap" : 10.333
+},
+
+{
+"month":"2007-10-09",
+"price": 180,
+"Oscillator":19,
+"Heatmap": 0.211907867,
+"std_heatmap" : 13.2313444
+},
+{
+"month":"2008-10-07",
+"price": 480,
+"Oscillator":19,
+"Heatmap": 0.211907867,
+"std_heatmap" : 17.2313444
+},
+{
+"month":"2009-10-02",
+"price": 80,
+"Oscillator":10,
+"Heatmap": 0.211907867,
+"std_heatmap" :18
+},
+{
+"month":"2010-11-05",
+"price": 280,
+"Oscillator":13,
+"Heatmap": 0.211907867,
+"std_heatmap" : 14.22
+},
+{
+"month":"2011-10-03",
+"price": 220,
+"Oscillator":19,
+"Heatmap": 0.211907867,
+"std_heatmap" : 5.455
+},
+{
+"month":"2012-10-02",
+"price": 340,
+"Oscillator":29,
+"Heatmap": 0.211907867,
+"std_heatmap" : 2.2313444
+}];
+chart.dateFormatter.inputDateFormat = "yyyy";
+var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
+dateAxis.renderer.minGridDistance = 10;
+dateAxis.tooltip.disabled = false;
+dateAxis.skipEmptyPeriods = true;
+dateAxis.renderer.grid.template.disabled = true;
+dateAxis.renderer.labels.template.fill = am4core.color("#000");
+dateAxis.renderer.labels.template.rotation = 290;
+dateAxis.renderer.labels.template.fontSize = 12;
+
+var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+valueAxis.tooltip.disabled = true;
+valueAxis.renderer.grid.template.disabled = true;
+valueAxis.renderer.labels.template.disabled = true;
+valueAxis.renderer.opposite = false;
+valueAxis.fillOpacity = 0;	
+	
+var valueAxis2 = chart.yAxes.push(new am4charts.ValueAxis());
+valueAxis2.renderer.opposite = true;
+valueAxis2.renderer.grid.template.disabled = true;
+valueAxis2.tooltip.disabled = true;
+valueAxis2.renderer.labels.template.adapter.add("text", function(text) {return "$" + " " + text;});
+valueAxis2.renderer.labels.template.fill = am4core.color("#000");
+valueAxis2.renderer.labels.template.fontSize = 12;
+	
+var valueAxisHeatmap = chart.yAxes.push(new am4charts.ValueAxis());
+valueAxisHeatmap.renderer.opposite = false;
+valueAxisHeatmap.renderer.grid.template.disabled = true;
+valueAxisHeatmap.tooltip.disabled = true;
+valueAxisHeatmap.fillOpacity = 0;
+
+var series2 = chart.series.push(new am4charts.LineSeries());
+series2.dataFields.dateX = "month";
+series2.dataFields.valueY = "price";
+series2.tooltipText = "[#000]${valueY.value}[/]\n";
+series2.tooltip.getStrokeFromObject = true;
+series2.tooltip.background.strokeWidth = 3;
+series2.tooltip.getFillFromObject = false;
+series2.strokeWidth = 0;
+series2.yAxis = valueAxis2;
+series2.stacked = false;
+series2.fillOpacity = 1;
+series2.fill = am4core.color("#ddd");
+series2.marginRight = 30;
+
+var series3 = chart.series.push(new am4charts.ColumnSeries());
+series3.dataFields.valueY = "price";
+series3.dataFields.dateX = "month";
+series3.dataFields.Std = "std_heatmap";
+series3.columns.template.fillOpacity = 1;
+series3.yAxis = valueAxisHeatmap;
+series3.columns.template.width = am4core.percent(100);
+series3.columns.template.adapter.add("fill", function (fill, target) {
+if (target.dataItem && (target.dataItem.Std >= 0 && target.dataItem.Std <= 5)) {
+return am4core.color("#0caf82");
+}
+else if (target.dataItem && (target.dataItem.Std > 5 && target.dataItem.Std <= 10)) {
+return am4core.color("#FE3957");
+}
+else if (target.dataItem && (target.dataItem.Std > 10 && target.dataItem.Std <= 15)) {
+return am4core.color("#fe4d68");
+}
+else if (target.dataItem && (target.dataItem.Std > 15 && target.dataItem.Std <= 20)) {
+return am4core.color("#fe6078");
+}
+else if (target.dataItem && (target.dataItem.Std > 20 && target.dataItem.Std <= 25)) {
+return am4core.color("#6dcfb4");
+}
+else if (target.dataItem && (target.dataItem.Std > 25 && target.dataItem.Std <= 30)) {
+return am4core.color("#86d7c1");
+}
+else if (target.dataItem && (target.dataItem.Std > 30 && target.dataItem.Std <= 35)) {
+return am4core.color("#9edfcd");
+
+
+
+}
+else if (target.dataItem && (target.dataItem.Std > 35 && target.dataItem.Std <= 40)) {
+return am4core.color("#ffcde3");
+
+
+
+}
+else if (target.dataItem && (target.dataItem.Std > 40 && target.dataItem.Std <= 45)) {
+return am4core.color("#ffe1ee");
+
+
+
+}
+else if (target.dataItem && (target.dataItem.Std > 45 && target.dataItem.Std <= 50)) {
+return am4core.color("#fff5f9");
+
+
+
+}
+else if (target.dataItem && (target.dataItem.Std > 50 && target.dataItem.Std <= 55)) {
+return am4core.color("#f1fbff");
+
+
+
+}
+else if (target.dataItem && (target.dataItem.Std > 55 && target.dataItem.Std <= 60)) {
+return am4core.color("#ddf4ff");
+
+
+
+}
+else if (target.dataItem && (target.dataItem.Std > 60 && target.dataItem.Std <= 65)) {
+return am4core.color("#c9eeff");
+
+
+
+}
+else if (target.dataItem && (target.dataItem.Std > 65 && target.dataItem.Std <= 70)) {
+return am4core.color("#b6e8ff");
+
+
+
+}
+else if (target.dataItem && (target.dataItem.Std > 70 && target.dataItem.Std <= 75)) {
+return am4core.color("#a2e2ff");
+
+
+
+}
+else if (target.dataItem && (target.dataItem.Std > 75 && target.dataItem.Std <= 80)) {
+return am4core.color("#8edcff");
+
+
+
+}
+else if (target.dataItem && (target.dataItem.Std > 80 && target.dataItem.Std <= 85)) {
+return am4core.color("#7bd6ff");
+
+
+
+}
+else if (target.dataItem && (target.dataItem.Std > 85 && target.dataItem.Std <= 90)) {
+return am4core.color("#67d0ff");
+
+
+
+}
+else if (target.dataItem && (target.dataItem.Std > 90 && target.dataItem.Std <= 95)) {
+return am4core.color("#54caff");
+
+
+
+}
+else if (target.dataItem && (target.dataItem.Std > 95 && target.dataItem.Std <= 100)) {
+return am4core.color("#40c4ff");
+
+
+
+}
+});
+series3.columns.template.strokeOpacity = 0;
+var series = chart.series.push(new am4charts.LineSeries());
+series.dataFields.dateX = "month";
+series.dataFields.valueY = "Oscillator";
+series.tooltip.getStrokeFromObject = true;
+series.tooltip.background.strokeWidth = 3;
+series.tooltip.getFillFromObject = false;
+series.strokeWidth = 3;
+series.stroke = am4core.color("rgb(255, 255, 76)");
+
+var scrollbar = new am4charts.XYChartScrollbar();
+scrollbar.series.push(series)
+chart.scrollbarX = scrollbar;
+function customizeGrip(grip) 
+{
+grip.icon.disabled = true;
+grip.background.disabled = true;
+var line = grip.createChild(am4core.Rectangle);
+line.height = 40;
+line.width = 3;					
+line.fill = am4core.color("#555");
+line.align = "center";
+line.valign = "middle";
+var img = grip.createChild(am4core.Rectangle);
+img.width = 7;
+img.height = 40;img.strokeWidth = 1;img.stroke = am4core.color("#7f8495");
+img.fill = am4core.color("#9ca1b6");
+img.align = "center";
+img.valign = "middle";
+}
+chart.cursor = new am4charts.XYCursor();
+chart.cursor.xAxis = dateAxis;
+chart.scrollbarX = new am4core.Scrollbar();
+chart.scrollbarX = new am4charts.XYChartScrollbar();
+chart.scrollbarX.parent = chart.bottomAxesContainer;
+chart.strokeWidth = 0.1;
+chart.scrollbarX.minHeight = 30;
+chart.scrollbarX.thumb.minWidth = 40;
+chart.scrollbarX.unselectedOverlay.fill = am4core.color("#eee");
+chart.scrollbarX.background.fill = am4core.color("rgb(119, 119, 119);");
+customizeGrip(chart.scrollbarX.startGrip);
+customizeGrip(chart.scrollbarX.endGrip);  
+chart.zoomOutButton.disabled = true;
+	
+</script> 
+<script>
+	$(function(){
+  $(".fold-table tr.view").on("click", function(){
+    $(this).toggleClass("open").next(".fold").toggleClass("open");
+  });
+});</script>
+</body>
+</html>

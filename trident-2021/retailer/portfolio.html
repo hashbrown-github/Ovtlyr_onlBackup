@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<base href="">
+<meta charset="utf-8" />
+<title>Trident | Portfolio</title>
+<meta name="description" content="Updates and statistics" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<link rel="icon" href="assets/media/trident-favicon.png" type="image/gif" sizes="32x32">
+<link rel="stylesheet" href="assets/fonts/OpenSans-Bold.ttf" />
+<link href="assets/plugins/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
+<link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+<link href="assets/plugins/custom/prismjs/prismjs.bundle.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/retailer-style.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/retailer-style-link.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/responsive.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/chart-style.css" rel="stylesheet" type="text/css" />
+<style>
+#filter-id-66 {
+    display: none;
+    opacity: 0;
+}
+.axis {
+    stroke-width: 4px;
+}
+</style>
+</head>
+<body id="kt_body" class="quick-panel-right demo-panel-right offcanvas-right header-fixed header-mobile-fixed subheader-enabled aside-enabled aside-static">
+<div  id="kt_header" class="header_position">
+  <div class="header header-fixed">
+    <div class="container d-flex justify-content-between">
+      <div class="d-none d-lg-flex align-items-center mr-3 visiblity_icon"> <span class="logo"><a href="/home"> <img alt="Logo" src="assets/media/login_trident.svg" class="logo-sticky marg_top"> </a> </span> </div>
+      <div class="topbar">
+        <div class="dropdown">
+          <div class="topbar-item menu-text"> <a href="#" class="text-dark">Login</a> </div>
+          <div class="topbar-item menu-text"> <a href="#" class="text-dark btn btn-pink">Signup</a> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="d-flex flex-column flex-row-fluid footer_curves" id="">
+  <div class="d-flex flex-column flex-column-fluid" id="kt_content">
+    <div class="portfolio_sec">
+      <div class="container">
+        <div class="portfolio_filSec">
+          <div class="port_rightBtn">
+            <a href="#">Run Backtest</a>
+          </div>
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+              <div class="create_watchList">
+                <a href="" class="btn btn-bule_btn">Create Watchlist</a>
+                <h2>You need to create a watchlist first for Portfolio</h2>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-8 col-md-8 col-sm-8 col-12">
+              <div class="filter_results">
+                <h2>Your Watchlist:</h2>
+                <div class="dropdown_customList">
+                  <select class="form-control">
+                    <option value="" selected="" disabled="">Filter by Sector</option>
+                    <option value="">Industrial</option>
+                    <option value="">Discretionary</option>
+                    <option value="">Materials</option>
+                    <option value="">Healthcare</option>
+                  </select>
+                </div>
+                <div class="filterated_ul">
+                  <div class="table_overflow">
+                    <table class="table filterList_tbl">
+                      <thead class="table_head">
+                        <tr>
+                          <th scope="col" width="10%"><span class="bold_txt">Symbol</span>  </th>
+                          <th scope="col" width="20%"><span class="bold_txt">Comapny Name</span>  </th>
+                          <th scope="col" width="20%"><span class="bold_txt">Sector</span>  </th>
+                          <th scope="col" width="40%"><span class="bold_txt">Industry</span>  </th>
+                          <th scope="col" width="10%"> </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><a href=""><p><span class="port_symbol">AAPL</span></p></a></h4>
+                          <td><a href=""><p>Apple Inc</p></a></td>
+                          <td><p>Financials</p></td>
+                          <td><p>Technology Hardware, Storage & Peripherals</p></td>
+                          <td><button type="button" class="clickTo_add"><i class="la la-plus-circle"></i></button></td>
+                        </tr>
+                        <tr>
+                          <td><a href=""><p><span class="port_symbol">AAPL</span></p></a></h4>
+                          <td><a href=""><p>Apple Inc</p></a></td>
+                          <td><p>Financials</p></td>
+                          <td><p>Technology Hardware, Storage & Peripherals</p></td>
+                          <td><button type="button" class="clickTo_add"><i class="la la-plus-circle"></i></button></td>
+                        </tr>
+                        <tr>
+                          <td><a href=""><p><span class="port_symbol">AAPL</span></p></a></h4>
+                          <td><a href=""><p>Apple Inc</p></a></td>
+                          <td><p>Financials</p></td>
+                          <td><p>Technology Hardware, Storage & Peripherals</p></td>
+                          <td><button type="button" class="clickTo_add"><i class="la la-plus-circle"></i></button></td>
+                        </tr>
+                        <tr>
+                          <td><a href=""><p><span class="port_symbol">AAPL</span></p></a></h4>
+                          <td><a href=""><p>Apple Inc</p></a></td>
+                          <td><p>Financials</p></td>
+                          <td><p>Technology Hardware, Storage & Peripherals</p></td>
+                          <td><button type="button" class="clickTo_add"><i class="la la-plus-circle"></i></button></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="filteredSec_dtl">
+                <div class="filteredSec_chrt">
+                  --- CHART ---
+                </div>
+                <div class="filteredSec_tbl">
+                  <table class="table Filtered_table">
+                    <thead class="table_header">
+                      <tr>
+                        <th scope="col" width="40%" colspan="2"><p><span class="bold_blk"> Account Value: </span></p></th>
+                        <th scope="col" width="60%" colspan="3"><p><span class="bold_blk"> <input type="text" class="filterInput" placeholder="" /> </span></p></th>
+                      </tr>
+                      <tr>
+                        <th scope="col"><p><span class="bold_blk">Symbol</span></p></th>
+                        <th scope="col"><p><span class="bold_blk">Allocation [%]</span></p></th>
+                        <th scope="col"><p><span class="bold_blk">Allocation Δ</span></p></th>
+                        <th scope="col"><p><span class="bold_blk">Last Close</span></p></th>
+                        <th scope="col"><p><span class="bold_blk">Shares [approx. #]</span></p></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>AAA</td>
+                        <td>28.37%</td>
+                        <td>-050%</td>
+                        <td>$52.50</td>
+                        <td>540</td>
+                      </tr>
+                      <tr>
+                        <td>AAB</td>
+                        <td>21.45%</td>
+                        <td>1.00%</td>
+                        <td>$23.98</td>
+                        <td>894</td>
+                      </tr>
+                      <tr>
+                        <td>AAC</td>
+                        <td>15.57%</td>
+                        <td>1.20%</td>
+                        <td>$77.10</td>
+                        <td>201</td>
+                      </tr>
+                      <tr>
+                        <td>AAD</td>
+                        <td>11.07%</td>
+                        <td>-3.00%</td>
+                        <td>$213.50</td>
+                        <td>51</td>
+                      </tr>
+                      <tr>
+                        <td>AAE</td>
+                        <td>8.30%</td>
+                        <td>0.20%</td>
+                        <td>$24.44</td>
+                        <td>339</td>
+                      </tr>
+                      <tr>
+                        <td>AAF</td>
+                        <td>6.23%</td>
+                        <td>-0.50%</td>
+                        <td>$158.13</td>
+                        <td>39</td>
+                      </tr>
+                      <tr>
+                        <td>AAG</td>
+                        <td>4.84%</td>
+                        <td>-1.80%</td>
+                        <td>$35.91</td>
+                        <td>134</td>
+                      </tr>
+                      <tr>
+                        <td>AAH</td>
+                        <td>4.15%</td>
+                        <td>-3.50%</td>
+                        <td>$86.20</td>
+                        <td>48</td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td colspan="4" style="text-align: center;">N/A</td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td colspan="4" style="text-align: center;">N/A</td>
+                      </tr>
+                      <tr>
+                        <td>Cash</td>
+                        <td>0.2%</td>
+                        <td>-0.10%</td>
+                        <td colspan="2" style="text-align: center;">$20.00</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-12 padding_left20">
+              <div class="port_rightDiv">
+                <h3>Portfolio</h3>
+                <ul class="portfolio_symList">
+                  <li>
+                    <p class="left_Lnme"><span class="txt_width">AAPL</span><span class="right_dlt"><button type="button"><i class="la la-minus-circle"></i> </button></span></p>
+                  </li>
+                  <li>
+                    <p class="left_Lnme"><span class="txt_width">AAPL</span><span class="right_dlt"><button type="button"><i class="la la-minus-circle"></i> </button></span></p>
+                  </li>
+                  <li>
+                    <p class="left_Lnme"><span class="txt_width">AAPL</span><span class="right_dlt"><button type="button"><i class="la la-minus-circle"></i> </button></span></p>
+                  </li>
+                  <li>
+                    <p class="left_Lnme"><span class="txt_width">AAPL</span><span class="right_dlt"><button type="button"><i class="la la-minus-circle"></i> </button></span></p>
+                  </li>
+                  <li>
+                    <p class="left_Lnme"><span class="txt_width">AAPL</span><span class="right_dlt"><button type="button"><i class="la la-minus-circle"></i> </button></span></p>
+                  </li>
+                  <li>
+                    <p class="left_Lnme"><span class="txt_width">AAPL</span><span class="right_dlt"><button type="button"><i class="la la-minus-circle"></i> </button></span></p>
+                  </li>
+                  <li>
+                    <p class="left_Lnme"><span class="txt_width">AAPL</span><span class="right_dlt"><button type="button"><i class="la la-minus-circle"></i> </button></span></p>
+                  </li>
+                  <li>
+                    <p class="left_Lnme"><span class="txt_width">AAPL</span><span class="right_dlt"><button type="button"><i class="la la-minus-circle"></i> </button></span></p>
+                  </li>
+                  <li>
+                    <p class="left_Lnme"><span class="txt_width">AAPL</span><span class="right_dlt"><button type="button"><i class="la la-minus-circle"></i> </button></span></p>
+                  </li>
+                  <li>
+                    <p class="left_Lnme"><span class="txt_width">AAPL</span><span class="right_dlt"><button type="button"><i class="la la-minus-circle"></i> </button></span></p>
+                  </li>
+                  <li>
+                    <p class="left_Lnme"><span class="txt_width">AAPL</span><span class="right_dlt"><button type="button"><i class="la la-minus-circle"></i> </button></span></p>
+                  </li>
+                  <li>
+                    <p class="left_Lnme"><span class="txt_width">AAPL</span><span class="right_dlt"><button type="button"><i class="la la-minus-circle"></i> </button></span></p>
+                  </li>
+                  <li>
+                    <p class="left_Lnme"><span class="txt_width">AAPL</span><span class="right_dlt"><button type="button"><i class="la la-minus-circle"></i> </button></span></p>
+                  </li>
+                  <li>
+                    <p class="left_Lnme"><span class="txt_width">AAPL</span><span class="right_dlt"><button type="button"><i class="la la-minus-circle"></i> </button></span></p>
+                  </li>
+                  <li>
+                    <p class="left_Lnme"><span class="txt_width">AAPL</span><span class="right_dlt"><button type="button"><i class="la la-minus-circle"></i> </button></span></p>
+                  </li>
+                  <li>
+                    <p class="left_Lnme"><span class="txt_width">AAPL</span><span class="right_dlt"><button type="button"><i class="la la-minus-circle"></i> </button></span></p>
+                  </li>
+                  <li>
+                    <p class="left_Lnme"><span class="txt_width">AAPL</span><span class="right_dlt"><button type="button"><i class="la la-minus-circle"></i> </button></span></p>
+                  </li>
+                  <li>
+                    <p class="left_Lnme"><span class="txt_width">AAPL</span><span class="right_dlt"><button type="button"><i class="la la-minus-circle"></i> </button></span></p>
+                  </li>
+                  <li>
+                    <p class="left_Lnme"><span class="txt_width">AAPL</span><span class="right_dlt"><button type="button"><i class="la la-minus-circle"></i> </button></span></p>
+                  </li>
+                  <li>
+                    <p class="left_Lnme"><span class="txt_width">AAPL</span><span class="right_dlt"><button type="button"><i class="la la-minus-circle"></i> </button></span></p>
+                  </li>
+                  <li>
+                    <p class="left_Lnme"><span class="txt_width">AAAL</span><span class="right_dlt"><button type="button"><i class="la la-minus-circle"></i> </button></span></p>
+                  </li>
+                </ul>
+              </div>
+              <div class="port_rightDiv">
+                <h3>Risk Tolerance</h3>
+                <ul class="risk_valuesList">
+                  <li><p>0</p></li>
+                  <li><p>0</p></li>
+                  <li><p>0</p></li>
+                  <li><p>0</p></li>
+                </ul>
+                <ul class="risk_valuesText">
+                  <li><p>Conservative</p></li>
+                  <li><p>Aggressive</p></li>
+                </ul>
+              </div> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="main_footer latest_footer">
+  <div class="bottom-footer">
+    <div class="container"> 
+      <!-- <p>© 2021  Trident All rights reserved by <a href="https://kievanos.com/" target="_blabk">Kievanos</a></p>-->
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-7 col-7">
+          <ul class="footer_list">
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-5 col-5"> <span class="pilot_button float-right"> <a href="#" class="btn btn-blue">Contact Us</a> </span> </div>
+      </div>
+      <div class="row">
+         <div class="col-lg-12 col-md-12 col-sm-12 col-12"> 
+            <p>OVTLYR is a trademark [pending] independently owned by Kievanos, L.L.C. ©2021 <a href="https://kievanos.com/">Kievanos</a>, L.L.C. All Rights Reserved</p>
+         </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="assets/plugins/global/plugins.bundle.js"></script> 
+<script src="assets/plugins/custom/prismjs/prismjs.bundle.js"></script> 
+<script src="assets/js/scripts.bundle.js"></script> 
+<script src="assets/js/pages/widgets.js"></script> 
+<script src="assets/js/pages/features/cards/tools.js"></script> 
+<script>
+$('.clickTo_add').click(function() {
+    //Toggle class for current element's child 
+    $("i", this).toggleClass("la la-plus-circle fas fa-plus-circle"); 
+});
+</script>
+</body>
+
+<!--end::Body-->
+
+</html>

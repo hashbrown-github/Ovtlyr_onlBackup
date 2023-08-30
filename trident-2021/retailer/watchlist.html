@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<base href="">
+<meta charset="utf-8" />
+<title>Trident | Watchlist</title>
+<meta name="description" content="Updates and statistics" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<link rel="icon" href="assets/media/trident-favicon.png" type="image/gif" sizes="32x32">
+<link rel="stylesheet" href="assets/fonts/OpenSans-Bold.ttf" />
+<link href="assets/plugins/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
+<link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+<link href="assets/plugins/custom/prismjs/prismjs.bundle.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/retailer-style.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/retailer-style-link.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/responsive.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/chart-style.css" rel="stylesheet" type="text/css" />
+<style>
+#filter-id-66 {
+    display: none;
+    opacity: 0;
+}
+.axis {
+    stroke-width: 4px;
+}
+</style>
+</head>
+<body id="kt_body" class="quick-panel-right demo-panel-right offcanvas-right header-fixed header-mobile-fixed subheader-enabled aside-enabled aside-static">
+<div  id="kt_header" class="header_position">
+  <div class="header header-fixed">
+    <div class="container d-flex justify-content-between">
+      <div class="d-none d-lg-flex align-items-center mr-3 visiblity_icon"> <span class="logo"><a href="/home"> <img alt="Logo" src="assets/media/login_trident.svg" class="logo-sticky marg_top"> </a> </span> </div>
+      <div class="topbar">
+        <div class="dropdown">
+          <div class="topbar-item menu-text"> <a href="#" class="text-dark">Login</a> </div>
+          <div class="topbar-item menu-text"> <a href="#" class="text-dark btn btn-pink">Signup</a> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="d-flex flex-column flex-row-fluid footer_curves" id="">
+  <div class="d-flex flex-column flex-column-fluid" id="kt_content">
+    <div class="portfolio_sec">
+      <div class="container">
+        <div class="portfolio_filSec">
+          <div class="row">
+            <div class="col-lg-8 col-md-8 col-sm-8 col-12">
+              <div class="filter_search">
+                <div class="form-group mb-0">
+                  <input type="text" class="form-control form-control-solid py-3 px-6 rounded-sm font-size-h6" placeholder="Search Symbol, Company Name....">
+                </div>
+              </div>
+              <div class="filter_sector">
+                <div class="filter_head">
+                  <h2>Filter Sector, Industry & Market Cap to your Preference:</h2>
+                  <a href="" class="btn btn-bule_btn">Apply Filters</a>
+                </div>
+                <div class="card card-custom portfolio_filter card-collapse" id="kt_card_1">
+                  <div class="card-header">
+                    <div class="card-title">
+                      <ul class="nav nav-tabs nav-bold nav-tabs-line">
+                        <li class="nav-item"> <a class="nav-link active" data-toggle="tab" href="#select_sector"> <span class="nav-text">Sector</span> </a> </li>
+                        <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#Select_industry"> <span class="nav-text">Industry</span> </a> </li>
+                        <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#select_marketcap"> <span class="nav-text">Market Cap</span> </a> </li>
+                      </ul>
+                    </div>
+                    <div class="card-toolbar"> 
+                      <a href="#" class="btn btn-icon btn-sm btn-hover-light-primary" data-card-tool="toggle" data-toggle="collapse" data-target="#collapse1" data-placement="top" aria-expanded="true" aria-controls="collapse1"> 
+                        <i class="ki ki-arrow-down icon-nm"></i> 
+                      </a> 
+                    </div>
+                  </div>
+                  <div class="collapse show" id="collapse1">
+                    <div class="card-body">
+                      <div class="card card-custom collapse_tabs">
+                        <div class="card-body">
+                          <div class="tab-content">
+                            <div class="tab-pane fade active show" id="select_sector" role="tabpanel" aria-labelledby="select_sector">
+                              <div class="row">
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-12">
+                                  <div class="form-group">
+                                    <div class="radio-inline">
+                                      <div class="sector_selection">
+                                        <label class="checkbox radio-blue">
+                                          <input type="checkbox">
+                                          <span></span> 
+                                        </label>
+                                        <p><span class="port_sector">Communication</span></p>
+                                      </div>
+                                      <div class="sector_selection">
+                                        <label class="checkbox radio-blue">
+                                          <input type="checkbox">
+                                          <span></span> 
+                                        </label>
+                                        <p><span class="port_sector">Discretionary</span></p>
+                                      </div>
+                                      <div class="sector_selection">
+                                        <label class="checkbox radio-blue">
+                                          <input type="checkbox">
+                                          <span></span> 
+                                        </label>
+                                        <p><span class="port_sector">Energy</span></p>
+                                      </div>
+                                      <div class="sector_selection">
+                                        <label class="checkbox radio-blue">
+                                          <input type="checkbox">
+                                          <span></span> 
+                                        </label>
+                                        <p><span class="port_sector">Financials</span></p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-12">
+                                  <div class="form-group">
+                                    <div class="radio-inline">
+                                      <div class="sector_selection">
+                                        <label class="checkbox radio-blue">
+                                          <input type="checkbox">
+                                          <span></span> 
+                                        </label>
+                                        <p><span class="port_sector">Healthcare</span></p>
+                                      </div>
+                                      <div class="sector_selection">
+                                        <label class="checkbox radio-blue">
+                                          <input type="checkbox">
+                                          <span></span> 
+                                        </label>
+                                        <p><span class="port_sector">Industrial</span></p>
+                                      </div>
+                                      <div class="sector_selection">
+                                        <label class="checkbox radio-blue">
+                                          <input type="checkbox">
+                                          <span></span> 
+                                        </label>
+                                        <p><span class="port_sector">Materials</span></p>
+                                      </div>
+                                      <div class="sector_selection">
+                                        <label class="checkbox radio-blue">
+                                          <input type="checkbox">
+                                          <span></span> 
+                                        </label>
+                                        <p><span class="port_sector">Real Estate</span></p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-12">
+                                  <div class="form-group">
+                                    <div class="radio-inline">
+                                      <div class="sector_selection">
+                                        <label class="checkbox radio-blue">
+                                          <input type="checkbox">
+                                          <span></span> 
+                                        </label>
+                                        <p><span class="port_sector">Staples</span></p>
+                                      </div>
+                                      <div class="sector_selection">
+                                        <label class="checkbox radio-blue">
+                                          <input type="checkbox">
+                                          <span></span> 
+                                        </label>
+                                        <p><span class="port_sector">Technology</span></p>
+                                      </div>
+                                      <div class="sector_selection">
+                                        <label class="checkbox radio-blue">
+                                          <input type="checkbox">
+                                          <span></span> 
+                                        </label>
+                                        <p><span class="port_sector">Utilities</span></p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="tab-pane fade" id="Select_industry" role="tabpanel" aria-labelledby="Select_industry">
+                              <div class="row">
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-12">
+                                  <div class="form-group">
+                                    <div class="radio-inline">
+                                      <div class="sector_selection">
+                                        <label class="checkbox radio-blue">
+                                          <input type="checkbox">
+                                          <span></span> 
+                                        </label>
+                                        <p><span class="port_industry">Technology Hardware, Storage &amp; Peripherals</span></p>
+                                      </div>
+                                      <div class="sector_selection">
+                                        <label class="checkbox radio-blue">
+                                          <input type="checkbox">
+                                          <span></span> 
+                                        </label>
+                                        <p><span class="port_industry">Hotels, Restaurants &amp; Leisure</span></p>
+                                      </div>
+                                      <div class="sector_selection">
+                                        <label class="checkbox radio-blue">
+                                          <input type="checkbox">
+                                          <span></span> 
+                                        </label>
+                                        <p><span class="port_industry">IT Services</span></p>
+                                      </div>
+                                      <div class="sector_selection">
+                                        <label class="checkbox radio-blue">
+                                          <input type="checkbox">
+                                          <span></span> 
+                                        </label>
+                                        <p><span class="port_industry">Electrical Equipment</span></p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-12">
+                                  <div class="form-group">
+                                    <div class="radio-inline">
+                                      <div class="sector_selection">
+                                        <label class="checkbox radio-blue">
+                                          <input type="checkbox">
+                                          <span></span> 
+                                        </label>
+                                        <p><span class="port_industry">Technology Hardware, Storage &amp; Peripherals</span></p>
+                                      </div>
+                                      <div class="sector_selection">
+                                        <label class="checkbox radio-blue">
+                                          <input type="checkbox">
+                                          <span></span> 
+                                        </label>
+                                        <p><span class="port_industry">Hotels, Restaurants &amp; Leisure</span></p>
+                                      </div>
+                                      <div class="sector_selection">
+                                        <label class="checkbox radio-blue">
+                                          <input type="checkbox">
+                                          <span></span> 
+                                        </label>
+                                        <p><span class="port_industry">IT Services</span></p>
+                                      </div>
+                                      <div class="sector_selection">
+                                        <label class="checkbox radio-blue">
+                                          <input type="checkbox">
+                                          <span></span> 
+                                        </label>
+                                        <p><span class="port_industry">Electrical Equipment</span></p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-12">
+                                  <div class="form-group">
+                                    <div class="radio-inline">
+                                      <div class="sector_selection">
+                                        <label class="checkbox radio-blue">
+                                          <input type="checkbox">
+                                          <span></span> 
+                                        </label>
+                                        <p><span class="port_industry">Technology Hardware, Storage &amp; Peripherals</span></p>
+                                      </div>
+                                      <div class="sector_selection">
+                                        <label class="checkbox radio-blue">
+                                          <input type="checkbox">
+                                          <span></span> 
+                                        </label>
+                                        <p><span class="port_industry">Hotels, Restaurants &amp; Leisure</span></p>
+                                      </div>
+                                      <div class="sector_selection">
+                                        <label class="checkbox radio-blue">
+                                          <input type="checkbox">
+                                          <span></span> 
+                                        </label>
+                                        <p><span class="port_industry">IT Services</span></p>
+                                      </div>
+                                      <div class="sector_selection">
+                                        <label class="checkbox radio-blue">
+                                          <input type="checkbox">
+                                          <span></span> 
+                                        </label>
+                                        <p><span class="port_industry">Electrical Equipment</span></p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="tab-pane fade" id="select_marketcap" role="tabpanel" aria-labelledby="select_marketcap">
+                              <div class="form-group">
+                                <div class="radio-inline">
+                                  <div class="sector_selection">
+                                    <label class="checkbox radio-blue">
+                                      <input type="checkbox">
+                                      <span></span> 
+                                    </label>
+                                    <p><span class="port_marketCap">&lt;$10B</span></p>
+                                  </div>
+                                  <div class="sector_selection">
+                                    <label class="checkbox radio-blue">
+                                      <input type="checkbox">
+                                      <span></span> 
+                                    </label>
+                                    <p><span class="port_marketCap">$10B - $100B</span></p>
+                                  </div>
+                                  <div class="sector_selection">
+                                    <label class="checkbox radio-blue">
+                                      <input type="checkbox">
+                                      <span></span> 
+                                    </label>
+                                    <p><span class="port_marketCap">&gt;$100B</span></p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="selected_Filbox">
+                  <ul>
+                    <li><p>Healthcare</p><i class="flaticon2-cross"></i></li>
+                    <li><p>Utilities</p><i class="flaticon2-cross"></i></li>
+                    <li><p>Hotels, Restaurants &amp; Leisure</p><i class="flaticon2-cross"></i></li>
+                    <li><p>IT Services</p><i class="flaticon2-cross"></i></li>
+                    <li><p>Electrical Equipment</p><i class="flaticon2-cross"></i></li>
+                    <li><p>&lt;$10B</p><i class="flaticon2-cross"></i></li>
+                    <li><p>$10B - $100B</p><i class="flaticon2-cross"></i></li>
+                    <li class="removeAll_btn"><button type="button"><p>Remove All</p></button></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="filter_results">
+                <h2>Results:</h2>
+                <div class="filterated_ul">
+                  <div class="table_overflow">
+                    <table class="table filterList_tbl">
+                      <thead class="table_head">
+                        <tr>
+                          <th scope="col" width="10%"><span class="bold_txt">Symbol</span>  </th>
+                          <th scope="col" width="20%"><span class="bold_txt">Comapny Name</span>  </th>
+                          <th scope="col" width="20%"><span class="bold_txt">Sector</span>  </th>
+                          <th scope="col" width="40%"><span class="bold_txt">Industry</span>  </th>
+                          <th scope="col" width="10%"> </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><a href=""><p><span class="port_symbol">AAPL</span></p></a></td>
+                          <td><a href=""><p>Apple Inc</p></a></td>
+                          <td><p>Financials</p></td>
+                          <td><p>Technology Hardware, Storage & Peripherals</p></td>
+                          <td><button type="button" class="clickTo_add"><i class="la la-plus-circle"></i></button></td>
+                        </tr>
+                        <tr>
+                          <td><a href=""><p><span class="port_symbol">AAPL</span></p></a></td>
+                          <td><a href=""><p>Apple Inc</p></a></td>
+                          <td><p>Financials</p></td>
+                          <td><p>Technology Hardware, Storage & Peripherals</p></td>
+                          <td><button type="button" class="clickTo_add"><i class="la la-plus-circle"></i></button></td>
+                        </tr>
+                        <tr>
+                          <td><a href=""><p><span class="port_symbol">AAPL</span></p></a></td>
+                          <td><a href=""><p>Apple Inc</p></a></td>
+                          <td><p>Financials</p></td>
+                          <td><p>Technology Hardware, Storage & Peripherals</p></td>
+                          <td><button type="button" class="clickTo_add"><i class="la la-plus-circle"></i></button></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-12 padding_left20">
+              <div class="port_rightDiv">
+                <h3>Watchlist</h3>
+                <ul class="portfolio_symList">
+                  <li>
+                    <p class="left_Lnme"><span class="txt_width">AAPL</span><span class="right_dlt"><button type="button"><i class="la la-minus-circle"></i> </button></span></p>
+                  </li>
+                  <li>
+                    <p class="left_Lnme"><span class="txt_width">AAPL</span><span class="right_dlt"><button type="button"><i class="la la-minus-circle"></i> </button></span></p>
+                  </li>
+                  <li>
+                    <p class="left_Lnme"><span class="txt_width">AAPL</span><span class="right_dlt"><button type="button"><i class="la la-minus-circle"></i> </button></span></p>
+                  </li>
+                  <li>
+                    <p class="left_Lnme"><span class="txt_width">AAPL</span><span class="right_dlt"><button type="button"><i class="la la-minus-circle"></i> </button></span></p>
+                  </li>
+                  <li>
+                    <p class="left_Lnme"><span class="txt_width">AAPL</span><span class="right_dlt"><button type="button"><i class="la la-minus-circle"></i> </button></span></p>
+                  </li>
+                  <li>
+                    <p class="left_Lnme"><span class="txt_width">AAPL</span><span class="right_dlt"><button type="button"><i class="la la-minus-circle"></i> </button></span></p>
+                  </li>
+                  <li>
+                    <p class="left_Lnme"><span class="txt_width">AAPL</span><span class="right_dlt"><button type="button"><i class="la la-minus-circle"></i> </button></span></p>
+                  </li>
+                  <li>
+                    <p class="left_Lnme"><span class="txt_width">AAPL</span><span class="right_dlt"><button type="button"><i class="la la-minus-circle"></i> </button></span></p>
+                  </li>
+                  <li>
+                    <p class="left_Lnme"><span class="txt_width">AAPL</span><span class="right_dlt"><button type="button"><i class="la la-minus-circle"></i> </button></span></p>
+                  </li>
+                  <li>
+                    <p class="left_Lnme"><span class="txt_width">AAPL</span><span class="right_dlt"><button type="button"><i class="la la-minus-circle"></i> </button></span></p>
+                  </li>
+                  <li>
+                    <p class="left_Lnme"><span class="txt_width">AAPL</span><span class="right_dlt"><button type="button"><i class="la la-minus-circle"></i> </button></span></p>
+                  </li>
+                  <li>
+                    <p class="left_Lnme"><span class="txt_width">AAPL</span><span class="right_dlt"><button type="button"><i class="la la-minus-circle"></i> </button></span></p>
+                  </li>
+                  <li>
+                    <p class="left_Lnme"><span class="txt_width">AAPL</span><span class="right_dlt"><button type="button"><i class="la la-minus-circle"></i> </button></span></p>
+                  </li>
+                  <li>
+                    <p class="left_Lnme"><span class="txt_width">AAPL</span><span class="right_dlt"><button type="button"><i class="la la-minus-circle"></i> </button></span></p>
+                  </li>
+                  <li>
+                    <p class="left_Lnme"><span class="txt_width">AAPL</span><span class="right_dlt"><button type="button"><i class="la la-minus-circle"></i> </button></span></p>
+                  </li>
+                  <li>
+                    <p class="left_Lnme"><span class="txt_width">AAPL</span><span class="right_dlt"><button type="button"><i class="la la-minus-circle"></i> </button></span></p>
+                  </li>
+                  <li>
+                    <p class="left_Lnme"><span class="txt_width">AAPL</span><span class="right_dlt"><button type="button"><i class="la la-minus-circle"></i> </button></span></p>
+                  </li>
+                  <li>
+                    <p class="left_Lnme"><span class="txt_width">AAPL</span><span class="right_dlt"><button type="button"><i class="la la-minus-circle"></i> </button></span></p>
+                  </li>
+                  <li>
+                    <p class="left_Lnme"><span class="txt_width">AAPL</span><span class="right_dlt"><button type="button"><i class="la la-minus-circle"></i> </button></span></p>
+                  </li>
+                  <li>
+                    <p class="left_Lnme"><span class="txt_width">AAPL</span><span class="right_dlt"><button type="button"><i class="la la-minus-circle"></i> </button></span></p>
+                  </li>
+                  <li>
+                    <p class="left_Lnme"><span class="txt_width">AAAL</span><span class="right_dlt"><button type="button"><i class="la la-minus-circle"></i> </button></span></p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="main_footer latest_footer">
+  <div class="bottom-footer">
+    <div class="container"> 
+      <!-- <p>© 2021  Trident All rights reserved by <a href="https://kievanos.com/" target="_blabk">Kievanos</a></p>-->
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-7 col-7">
+          <ul class="footer_list">
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-5 col-5"> <span class="pilot_button float-right"> <a href="#" class="btn btn-blue">Contact Us</a> </span> </div>
+      </div>
+      <div class="row">
+         <div class="col-lg-12 col-md-12 col-sm-12 col-12"> 
+            <p>OVTLYR is a trademark [pending] independently owned by Kievanos, L.L.C. ©2021 <a href="https://kievanos.com/">Kievanos</a>, L.L.C. All Rights Reserved</p>
+         </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="assets/plugins/global/plugins.bundle.js"></script> 
+<script src="assets/plugins/custom/prismjs/prismjs.bundle.js"></script> 
+<script src="assets/js/scripts.bundle.js"></script> 
+<script src="assets/js/pages/widgets.js"></script> 
+<script src="assets/js/pages/features/cards/tools.js"></script> 
+<script>
+$('.clickTo_add').click(function() {
+    //Toggle class for current element's child 
+    $("i", this).toggleClass("la la-plus-circle fas fa-plus-circle"); 
+});
+</script>
+</body>
+
+<!--end::Body-->
+
+</html>
