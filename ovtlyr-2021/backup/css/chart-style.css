@@ -1,0 +1,443 @@
+﻿@charset "UTF-8";
+/* CSS Document */
+
+/*Bar_chart CSS Start*/
+.bar_chart, .bar_chart2 {
+  position: relative;
+  background: transparent;
+}
+.brush {
+  opacity: 1;
+}
+.brush .overlay {
+  opacity: 0.3;
+  fill: #41a4fe;
+}
+.bar_chart svg, .bar_chart2 svg {
+  height: 400px;
+}
+.lineNAVRevised {
+  fill: none;
+  stroke: #9dfb05;
+  stroke-width: 1px;
+}
+.selection {
+fill: #41a4fe;
+fill-opacity: 1;stroke:none;
+}
+
+.handle {
+fill: #41a4fe;
+stroke-width: 2px;
+stroke: #3C97EA;
+}
+
+.negative {
+fill: #FE3957;
+}
+
+.positive {
+fill: #0CAF82;
+}
+
+.zoom {
+cursor: move;
+fill: none;
+pointer-events: auto;
+}
+
+.tooltip {
+text-align: right;
+font-weight: 600;
+position: absolute;
+padding: 6px;
+border: 1px solid #E62B47;
+border-radius: 3px;
+background: #ffffff;
+font-size: 32px;
+line-height: 16px;
+color: #E62B47;
+}
+
+.bar_chart .tick, .bar_chart2 .tick {
+opacity: 0;
+}
+
+.tooltip-date, .tooltip-likes {
+font-weight: bold;
+}
+/* End Bar_chart CSS */
+/* Start Signal Chart CSS */
+.signal_chart {
+width: 100%;
+height: 500px;
+background: transparent;
+}
+
+.signal_chart2 {
+width: 100%;
+height: 400px;
+}
+/* End Signal Chart CSS */
+#power-gauge g.arc {
+fill: red;
+}
+
+#power-gauge .pointer,#power-gauge1 .pointer{
+fill: #808191;stroke: #999dab;
+}
+#power-gauge1 .pointer text, #power-gauge .pointer text
+{
+stroke:transparent;font-weight:600;
+}
+#power-gauge g.label text, #power-gauge1 g.label text {
+font-size: 9px;
+}
+
+.show {
+opacity: 1
+}
+
+#histogram_default {
+width: 100%;
+height: 505px;
+background: transparent;
+}
+.histogram_chart
+{
+height:490px;
+}
+.line_average {
+fill: none;
+stroke: #FF4497;
+stroke-width: 3px;
+}
+
+.line_valueGreen {
+fill: none;
+stroke: #41a4fe;
+stroke-width: 3px;
+}
+
+
+.histogram_chart .stroke_bar {
+stroke: #89ff00;
+fill: #41a4fe;
+stroke-width: 1px;
+position: relative;
+z-index: 999;
+}
+.histogram_chart .stroke_bar_Zero {
+stroke: #89ff00;
+fill: #848181;
+stroke-width: 1px;
+position: relative;
+z-index: 999;
+}
+
+.histogram_chart .stroke_bar_negative {
+stroke: #89ff00;
+fill: #fe3957;
+stroke-width: 1px;
+position: relative;
+z-index: 999;
+}
+
+.histogram_chart .zoom {
+cursor: move;
+fill: none;
+pointer-events: none;
+}
+#histogram_default .line {
+fill: none;
+stroke-width: 1px;
+stroke: #ffeb00
+}
+.tooltip_histogram {
+text-align: right;
+width: auto;
+height: auto;
+font-weight: 600;
+position: absolute;
+padding: 6px;
+border: 1px solid #E62B47;
+border-radius: 3px;
+margin-top: -30px;
+font: 10px sans-serif;
+background: #ffffff;
+color: #FE3957;
+}
+
+#co_relation .line_blue {
+fill: none;
+stroke: #41a4fe;
+stroke-width: 2px;
+}
+
+#co_relation .line_red {
+fill: none;
+stroke: #fe3957;
+stroke-width: 2px;
+}
+
+#co_relation .selection {
+fill: #41a4fe;
+fill-opacity: 1;
+height: 30px;
+cursor:default;
+}
+
+#co_relation .handle {
+fill: #41a4fe;
+stroke-width: 2px;
+stroke: #3C97EA;
+height: 37px;
+}
+
+#co_relation .zoom {
+cursor: move;
+fill: none;
+pointer-events: auto;
+}
+
+#co_relation .brush .overlay {
+opacity: 0;
+fill: #41a4fe;
+}
+
+#co_relation .overlay {
+fill: none;
+pointer-events: all;
+}
+
+
+/*#co_relation .focusTooltip text {
+font-size: 10px;
+fill: #41a4fe;
+}*/
+
+#co_relation .hover_bg {
+stroke: #41a4fe;
+fill: #fff;
+stroke-width: 2px;
+}
+
+#co_relation .tooltip-date, #co_relation .tooltip-count {
+font-weight: normal;
+fill: #41a4fe;
+stroke-width: 1.5px;
+font-size:10px;
+}
+/*.histo_chartSprite-group {
+cursor: default;
+}*/
+.histogram_chart .xaxis_bar .tick line {
+opacity: 0;
+}
+
+#co_relation .tooltip_co {
+width: auto;
+height: auto;
+position: absolute;
+top: 130px!important;
+padding: 6px;
+border: 1px solid #41a4fe;
+border-radius: 3px;
+margin-top: -20px;
+color: #41a4fe;
+font: 10px sans-serif;
+background: #ffffff;
+}
+.text_bar {
+font-size: 9px;
+fill: #ffffff;
+stroke-width: 0.4px;
+font-family: sans-serif;
+}
+
+/*========= LINE CHART PORTFOLIO ==========*/
+
+.bar_strategy {
+    fill:#555d66;
+}
+#histogram_default .zoom {
+    cursor: move;
+    fill: none;
+    pointer-events: auto;
+}
+.tooltip_value {
+    text-align: right;
+    width: auto;
+    height: auto;
+    font-weight: 400;
+    position: absolute;
+    top:200px!important;
+    padding: 6px;
+    border-radius: 3px;
+    margin-top: -30px;
+    line-height: 30px;
+    font: 10px sans-serif;
+    background: #ffffff;
+    border: 1px solid #41a4fe;
+    color: #41a4fe
+}
+.lineDU {
+    fill:none;
+    stroke:#41a4fe;stroke-width:1px;
+}
+.lineBH {
+    fill:none;
+    stroke:#ff04f7;
+    stroke-width:1px;
+}	 
+.Strategy_View .zoom {
+    fill:none;
+}
+.ZeroLine {
+    fill: none;
+    stroke: rgb(254, 57, 87);
+    stroke-width: 2px;
+    stroke-dasharray: 4, 2;
+}
+.tick text, text {
+    fill:#808191;
+}
+.domain, .tick line {
+    stroke:#808191!important;
+}
+/*========== PI CHART ============*/
+#tooltip_pie {
+    position: absolute;
+    width: auto;
+    height: auto;
+    padding: 5px;color: #808191;
+    background-color: #fff;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;font-size:12px;
+    border-radius: 2px;font-family: sans-serif;
+    -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+    -mox-box-shadow: 4px 4px 4px 10px rgba(0, 0, 0, 0.4);
+    box-shadow: 4px 4px 10px rbga(0, 0, 0, 0.4); pointer-events: none;
+}
+#tooltip_pie.hidden {
+    opacity: 0;
+}
+#tooltip_pie p {
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+}
+/*=========== SLIDER D3 ============*/
+p#value {
+    font-weight: 600;
+    position: absolute;
+    top: -39px;
+    left: 50px;
+    color: #41a4fd;
+}
+/*============ LATEST CHART STYLE CSS BEGIN ===========*/
+#treemap {
+    width: 100%;
+    height: 400px;
+}
+#treemap2, #treemap3, #treemap4, #treemap5, #treemap6, #treemap7, #treemap8, #treemap9, #treemap10, #treemap11, #treemap12, #treemap13 {
+    width: 100%;
+    height: 250px;
+}
+#combine_chart {
+    width:100%;
+    height:1500px;
+}
+#histogram {
+    width: 100%;
+    height: 500px;
+    max-width: 100%;
+}
+#Seclines_chart {
+    width: 100%;
+    height: 235px;
+}
+#lines_chart, #lines_chart2, #lines_chart3, #lines_chart4, #lines_chart5, #lines_chart6, #lines_chart7, #lines_chart8, #lines_chart9, #lines_chart10, #lines_chart11, #lines_chart12 {
+    width: 100%;
+    height: 120px;
+}
+.line_Chart .tick text {
+    opacity: 0;
+}
+.line_Chart .tick line, .line_Chart .domain {
+    opacity: 1;
+}
+.bar.ticks {
+    fill: #00ff4e;
+}
+.lineDU {
+    fill: none;
+    stroke: #64c4de;
+    stroke-width: 2px;
+}
+.chart_1 .zoom, .chart_2, .chart_3, .chart_4 {
+    fill: none;
+}
+/* .lineBH {
+    fill: none;
+    stroke: #FE3957;
+    stroke-width: 2px;
+} */
+.ZeroLine {
+    fill: none;
+    stroke: rgb(254, 57, 87);
+    stroke-width: 2px; 
+    stroke-dasharray: 2, 2;
+}
+.tooltip-date, .tooltip-likes {
+    font-weight: bold;
+}
+.lines_chart , 
+#pie_chart1, #rating_piechart, #range_chart, #fear_greed {
+	width:100%;
+	height:300px;
+}
+#range_chart_2 {
+    height: 650px;
+    width: 100%;
+}
+#home_piechart {
+    width: 100%;
+    height: 320px;
+}
+/*======= MEDIA STYLE START =========*/
+@media (max-width: 1199px) {  
+#range_chart_2 {
+    height: 550px;
+}
+}
+@media (max-width: 1099px) { 
+#treemap2, #treemap3, #treemap4, #treemap5, #treemap6, #treemap7, #treemap8, #treemap9, #treemap10, #treemap11, #treemap12, #treemap13 {
+    height: 200px;
+}
+}
+@media (max-width: 1023px) { 
+#treemap2, #treemap3, #treemap4, #treemap5, #treemap6, #treemap7, #treemap8, #treemap9, #treemap10, #treemap11, #treemap12, #treemap13 {
+    height: 300px;
+}
+}
+@media (max-width: 991px) {  
+#range_chart_2 {
+    height: 500px;
+}
+}
+@media (max-width: 576px) {  
+#treemap {
+    height: 300px;
+}
+#range_chart_2 {
+    height: 450px;
+}
+}
+@media (max-width: 360px) { 
+#pie_chart1, #rating_piechart, #range_chart, #fear_greed {
+    height: 200px;
+}
+}
+/*============ LATEST CHART STYLE CSS END =============*/

@@ -1,0 +1,2441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>OVTLYR | Home </title>
+<meta name="description" content="Updates and statistics" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<link rel="icon" type="image/png" sizes="32x32" href="imgages/trident-favicon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/trident-favicon.png">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css'>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/chart-style.css"  />
+<link rel="stylesheet" media="all" href="css/app.min.css">
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/responsive.css" />
+    <script>
+      var viewportmeta = document.querySelector('meta[name="viewport"]');
+      if (viewportmeta) {
+        if (screen.width < 375) {
+          var newScale = screen.width / 375;
+          viewportmeta.content = 'width=375, minimum-scale=' + newScale + ', maximum-scale=1.0, user-scalable=no, initial-scale=' + newScale + '';
+        } else {
+          viewportmeta.content = 'width=device-width, maximum-scale=1.0, initial-scale=1.0';
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <script>
+      console.log(localStorage.getItem('darkMode'));
+      if (localStorage.getItem('darkMode') === "on") {
+        document.body.classList.add("dark");
+        document.addEventListener("DOMContentLoaded", function() {
+          document.querySelector('.js-theme input').checked = true;
+        });
+      }
+    </script>
+    <!-- outer-->
+    <div class="outer">
+      <!-- header-->
+      <header class="header js-header" data-id="#header">
+        <div class="header_front">
+        <div class="container-fluid">
+          <div class="header__center center">
+            <a class="header__logo" href="index.html">
+              <img class="header__pic header__pic_desktop some-icon" src="img/login_trident.svg" alt="OVTLYR"><img class="header__pic header__pic_desktop some-icon-dark" src="img/outlyr-white-logo.png" alt="OVTLYR">
+              <img class="header__pic header__pic_mobile some-icon" src="img/black.svg" alt="OVTLYR"><img class="header__pic header__pic_mobile some-icon-dark" src="img/white.svg" alt="OVTLYR">
+            </a>
+            <div class="header__wrapper">
+              <div class="header__wrap js-header-wrap">
+                <nav class="header__nav ovtlyr_menu">
+                  <!-- <a class="header__item active" href="#"><i class="las la-newspaper"></i>News & Opinion</a> -->
+                  <a class="header__item active" href="#"><i class="las la-chart-pie"></i>Sectors</a>
+                  <a class="header__item" href="#"><i class="las la-industry"></i>Industries</a>
+                  <a class="header__item" href="#"><i class="las la-chart-bar"></i>Leaderboard</a>
+                  <a class="header__item" href="#"><i class="las la-list"></i>Watchlist </a>
+                  <a class="header__item" href="#"><i class="las la-edit"></i>Portfolio</a>
+                </nav>
+              </div>
+              <div class="header__control">
+                <label class="theme js-theme">
+                  <input class="theme__input" type="checkbox"/><span class="theme__icon">
+                    <svg class="icon icon-theme-light">
+                      <use xlink:href="#icon-theme-light"></use>
+                    </svg>
+                    <svg class="icon icon-theme-dark">
+                      <use xlink:href="#icon-theme-dark"></use>
+                    </svg></span>
+                </label>
+              </div>
+              <div class="header__btns"><a class="header__item" href="#">Login</a><a class="button-small header__button ms-3 blue_button" href="#">Join for Free</a></div>
+              <button class="header__burger js-header-burger"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      </header>
+      <!-- container-->
+      <div class="outer__inner">
+        <div class="section main secPadd_100">
+          <div class="main__center center">
+            <div class="section_one">
+              <div class="hero_text">
+                <h3>Market Behavioral Data <span class="inline_txt">for <span class="text text-sample2"></span></span></h3>
+              </div>
+              <div class="header__search">
+                <div class="serach_mainAuto">
+                  <div class="autocomplete_div">
+                    <input class="header__input" id="myInput" type="text" placeholder="Symbols or Companies...">
+                  </div>
+                  <div class="searchbar_dropdown" style="display: none;">
+                    <ul>
+                      <li>
+                        <p class="search_name"><b>AD</b>VANCE AUTO PARTS INC.</p>
+                        <p class="search_symbol"><span><b>AAP</b> :</span><span class="search_ComName"> CONSUMER DISCRETIONARY</span></p>
+                      </li>
+                      <li class="active">
+                        <p class="search_name"><b>AD</b>VANCE AUTO PARTS INC.</p>
+                        <p class="search_symbol"><span><b>AAP</b> :</span><span class="search_ComName"> CONSUMER DISCRETIONARY</span></p>
+                      </li>
+                      <li>
+                        <p class="search_name"><b>AD</b>VANCE AUTO PARTS INC.</p>
+                        <p class="search_symbol"><span><b>AAP</b> :</span><span class="search_ComName"> CONSUMER DISCRETIONARY</span></p>
+                      </li>
+                      <li>
+                        <p class="search_name"><b>AD</b>VANCE AUTO PARTS INC.</p>
+                        <p class="search_symbol"><span><b>AAP</b> :</span><span class="search_ComName"> CONSUMER DISCRETIONARY</span></p>
+                      </li>
+                      <li>
+                        <p class="search_name"><b>AD</b>VANCE AUTO PARTS INC.</p>
+                        <p class="search_symbol"><span><b>AAP</b> :</span><span class="search_ComName"> CONSUMER DISCRETIONARY</span></p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <button class="header__start"><i class="fas fa-search"></i></button>
+              </div>
+              <div class="bottom_box">
+                <div class="search_text">
+                  <p class="mb-0">OVTLYR takes a 360[degree] view of market participant behaviors to highlight opportunities and avoid risk. We provide the most frequent, detailed & accurate coverage available on over 1,600 stocks.</p>
+                </div>
+                <!-- <span><a href="/SignUp" class="blue_button ">Join for Free</a></span>
+                <span><a href="/SignUp" class="blueBorder_button ms-2">See Plans & Pricing</a></span> -->
+              </div>
+            </div>
+          </div>
+          <div class="container-xxl weighted_sec secPaddT_80 pb-0">
+            <div class="stock_list">
+              <div class="stock_item">
+                <div class="stock-align">
+                  <div class="learn__head small_head">
+                    <div class="learn__wrap">
+                      <h3 class="learn__title h3 mb-0">Fear & Greed Score</h3>
+                    </div>
+                  </div>
+                  <ul class="regular slider stock_list">
+                    <li>
+                      <div class="stock-alignData">
+                        <div class="flex_div">
+                          <div class="text_box">
+                            <h5 class="text-blue">S&P 500</h5>
+                          </div>
+                        </div>
+                        <div class="flex_div">
+                          <div class="text_box">
+                            <span class="text-grey red_color">65</span>
+                          </div>
+                          <div class="chart-box">
+                            <span class="chart_1 line_Chart"><span id="chart_1"></span></span>
+                          </div>
+                        </div>
+                        <div class="flex_div">
+                          <div class="text_box">
+                            <span class="text-grey blue_color">68</span>
+                          </div>
+                          <div class="chart-box">
+                            <span class="chart_2 line_Chart"><span id="chart_2"></span></span>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="stock-alignData">
+                        <div class="flex_div">
+                          <div class="text_box">
+                            <h5 class="text-blue">S&P 500</h5>
+                          </div>
+                        </div>
+                        <div class="flex_div">
+                          <div class="text_box">
+                            <span class="text-grey red_color">65</span>
+                          </div>
+                          <div class="chart-box">
+                            <span class="chart_3 line_Chart"><span id="chart_3"></span></span>
+                          </div>
+                        </div>
+                        <div class="flex_div">
+                          <div class="text_box">
+                            <span class="text-grey blue_color">68</span>
+                          </div>
+                          <div class="chart-box">
+                            <span class="chart_4 line_Chart"><span id="chart_4"></span></span>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="stock-alignData">
+                        <div class="flex_div">
+                          <div class="text_box">
+                            <h5 class="text-blue">S&P 500</h5>
+                          </div>
+                        </div>
+                        <div class="flex_div">
+                          <div class="text_box">
+                            <span class="text-grey red_color">65</span>
+                          </div>
+                          <div class="chart-box">
+                            <span class="chart_1 line_Chart"><span id="chart_1"></span></span>
+                          </div>
+                        </div>
+                        <div class="flex_div">
+                          <div class="text_box">
+                            <span class="text-grey blue_color">68</span>
+                          </div>
+                          <div class="chart-box">
+                            <span class="chart_2 line_Chart"><span id="chart_2"></span></span>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="stock-alignData">
+                        <div class="flex_div">
+                          <div class="text_box">
+                            <h5 class="text-blue">S&P 500</h5>
+                          </div>
+                        </div>
+                        <div class="flex_div">
+                          <div class="text_box">
+                            <span class="text-grey red_color">65</span>
+                          </div>
+                          <div class="chart-box">
+                            <span class="chart_1 line_Chart"><span id="chart_1"></span></span>
+                          </div>
+                        </div>
+                        <div class="flex_div">
+                          <div class="text_box">
+                            <span class="text-grey blue_color">68</span>
+                          </div>
+                          <div class="chart-box">
+                            <span class="chart_2 line_Chart"><span id="chart_2"></span></span>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="stock-alignData">
+                        <div class="flex_div">
+                          <div class="text_box">
+                            <h5 class="text-blue">S&P 500</h5>
+                          </div>
+                        </div>
+                        <div class="flex_div">
+                          <div class="text_box">
+                            <span class="text-grey red_color">65</span>
+                          </div>
+                          <div class="chart-box">
+                            <span class="chart_1 line_Chart"><span id="chart_1"></span></span>
+                          </div>
+                        </div>
+                        <div class="flex_div">
+                          <div class="text_box">
+                            <span class="text-grey blue_color">68</span>
+                          </div>
+                          <div class="chart-box">
+                            <span class="chart_2 line_Chart"><span id="chart_2"></span></span>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="stock-alignData">
+                        <div class="flex_div">
+                          <div class="text_box">
+                            <h5 class="text-blue">S&P 500</h5>
+                          </div>
+                        </div>
+                        <div class="flex_div">
+                          <div class="text_box">
+                            <span class="text-grey red_color">65</span>
+                          </div>
+                          <div class="chart-box">
+                            <span class="chart_1 line_Chart"><span id="chart_1"></span></span>
+                          </div>
+                        </div>
+                        <div class="flex_div">
+                          <div class="text_box">
+                            <span class="text-grey blue_color">68</span>
+                          </div>
+                          <div class="chart-box">
+                            <span class="chart_2 line_Chart"><span id="chart_2"></span></span>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="learn__foot">
+                    <div class="foot__wrap">
+                      <ul class="chart_labels">
+                        <li><span class="red_box"></span>Evenly weighted</li>
+                        <li><span class="blue_box"></span>Market Cap weighted</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a class="viewAll_button" href="#">All Sectors<i class="fas fa-chevron-right"></i></a>
+          </div>
+        </div>
+        <div class="section industries secPaddT_80">
+          <div class="learn__center center">
+            <div class="learn__head">
+              <div class="learn__wrap">
+                <h3 class="learn__title h3 mb-0">Industries</h2>
+                <span class="border_sec"></span>
+              </div>
+              <a class="viewAll_button" href="#">All Industries<i class="fas fa-chevron-right"></i></a>
+            </div>
+            <div class="industries__wrapper">
+              <div class="industries__item">
+                <div class="indus_head">
+                  <div class="indus_head1">
+                    <h5>Renewable Fuels</h5>
+                  </div>
+                  <div class="indus_head2">
+                    <h5>Covered Stocks: 201</h5>
+                  </div>
+                </div>
+                <div class="indus_content">
+                  <img src="img/industries-chart-1.png" />
+                </div>
+              </div>
+              <div class="industries__item">
+                <div class="indus_head">
+                  <div class="indus_head1">
+                    <h5>Passenger Transportation, Ground & Sea</h5>
+                  </div>
+                  <div class="indus_head2">
+                    <h5>Covered Stocks: 201</h5>
+                  </div>
+                </div>
+                <div class="indus_content">
+                  <img src="img/industries-chart-1.png" />
+                </div>
+              </div>
+              <div class="industries__item">
+                <div class="indus_head">
+                  <div class="indus_head1">
+                    <h5>Coal</h5>
+                  </div>
+                  <div class="indus_head2">
+                    <h5>Covered Stocks: 201</h5>
+                  </div>
+                </div>
+                <div class="indus_content">
+                  <img src="img/industries-chart-1.png" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="section learn secPadd_100 pb-0">
+          <div class="learn__center center">
+            <div class="learn__head">
+              <div class="learn__wrap">
+                <h3 class="learn__title h3 mb-0">Hot Stock Board</h3>
+                <span class="border_sec"></span>
+              </div>
+            </div>
+            <div class="bargaining js-tabs">
+              <div class="bargaining__main">
+                <div class="nav">
+                  <button class="nav__link js-tabs-link active">Undervalued</button>
+                  <button class="nav__link js-tabs-link">Overvalued</button>
+                </div>
+                <div class="bargaining__info"></div>
+              </div>
+              <div class="bargaining__container">
+                <div class="bargaining__item js-tabs-item" style="display: block;">
+                  <div class="bargaining__wrapper js-bargaining-wrapper">
+                    <table class="table ovtlyr_table">
+                      <thead>
+                        <tr>
+                          <th style="width: 20%;" class="align__items">Company</th>
+                          <th style="width: 15%;" class="align__items">Symbol</th>
+                          <th style="width: 15%;">OVTLYR Rank</th>
+                          <th style="width: 30%;">OVTLYR Rating</th>
+                          <th style="width: 20%;">Last Close</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="align__items"><a href="#">Apple Inc</a></td>
+                          <td class="align__items"><a href="#"><p><span class="port_symbol">AAPL</span></p></a></td>
+                          <td><p>22</p></td>
+                          <td>
+                            <div class="footLeft11 rating_slider">
+                              <div class="slidecontainer">
+                                <span class="values">Bullish</span>
+                                <div class="RangeSlider_div">
+                                  <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                                </div>
+                                <span class="values">Bearish</span>
+                              </div>
+                            </div>
+                          </td>
+                          <td><p>14 Nov, 2021</p></td>
+                        </tr>
+                        <tr>
+                          <td class="align__items"><a href="#">Apple Inc</a></td>
+                          <td class="align__items"><a href="#"><p><span class="port_symbol">AAPL</span></p></a></td>
+                          <td><p>22</p></td>
+                          <td>
+                            <div class="footLeft11 rating_slider">
+                              <div class="slidecontainer">
+                                <span class="values">Bullish</span>
+                                <div class="RangeSlider_div">
+                                  <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                                </div>
+                                <span class="values">Bearish</span>
+                              </div>
+                            </div>
+                          </td>
+                          <td><p>14 Nov, 2021</p></td>
+                        </tr>
+                        <tr>
+                          <td class="align__items"><a href="#">Apple Inc</a></td>
+                          <td class="align__items"><a href="#"><p><span class="port_symbol">AAPL</span></p></a></td>
+                          <td><p>22</p></td>
+                          <td>
+                            <div class="footLeft11 rating_slider">
+                              <div class="slidecontainer">
+                                <span class="values">Bullish</span>
+                                <div class="RangeSlider_div">
+                                  <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                                </div>
+                                <span class="values">Bearish</span>
+                              </div>
+                            </div>
+                          </td>
+                          <td><p>14 Nov, 2021</p></td>
+                        </tr>
+                        <tr>
+                          <td class="align__items"><a href="#">Apple Inc</a></td>
+                          <td class="align__items"><a href="#"><p><span class="port_symbol">AAPL</span></p></a></td>
+                          <td><p>22</p></td>
+                          <td>
+                            <div class="footLeft11 rating_slider">
+                              <div class="slidecontainer">
+                                <span class="values">Bullish</span>
+                                <div class="RangeSlider_div">
+                                  <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                                </div>
+                                <span class="values">Bearish</span>
+                              </div>
+                            </div>
+                          </td>
+                          <td><p>14 Nov, 2021</p></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="bargaining__item js-tabs-item">
+                  <div class="bargaining__wrapper js-bargaining-wrapper">
+                    <table class="table ovtlyr_table">
+                      <thead>
+                        <tr>
+                          <th style="width: 20%;" class="align__items">Company</th>
+                          <th style="width: 15%;" class="align__items">Symbol</th>
+                          <th style="width: 15%;">OVTLYR Rank</th>
+                          <th style="width: 30%;">OVTLYR Rating</th>
+                          <th style="width: 20%;">Last Close</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="align__items"><a href="#">Apple Inc</a></td>
+                          <td class="align__items"><a href="#"><p><span class="port_symbol">AAPL</span></p></a></td>
+                          <td><p>22</p></td>
+                          <td>
+                            <div class="footLeft11 rating_slider">
+                              <div class="slidecontainer">
+                                <span class="values">Bullish</span>
+                                <div class="RangeSlider_div">
+                                  <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                                </div>
+                                <span class="values">Bearish</span>
+                              </div>
+                            </div>
+                          </td>
+                          <td><p>14 Nov, 2021</p></td>
+                        </tr>
+                        <tr>
+                          <td class="align__items"><a href="#">Apple Inc</a></td>
+                          <td class="align__items"><a href="#"><p><span class="port_symbol">AAPL</span></p></a></td>
+                          <td><p>22</p></td>
+                          <td>
+                            <div class="footLeft11 rating_slider">
+                              <div class="slidecontainer">
+                                <span class="values">Bullish</span>
+                                <div class="RangeSlider_div">
+                                  <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                                </div>
+                                <span class="values">Bearish</span>
+                              </div>
+                            </div>
+                          </td>
+                          <td><p>14 Nov, 2021</p></td>
+                        </tr>
+                        <tr>
+                          <td class="align__items"><a href="#">Apple Inc</a></td>
+                          <td class="align__items"><a href="#"><p><span class="port_symbol">AAPL</span></p></a></td>
+                          <td><p>22</p></td>
+                          <td>
+                            <div class="footLeft11 rating_slider">
+                              <div class="slidecontainer">
+                                <span class="values">Bullish</span>
+                                <div class="RangeSlider_div">
+                                  <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                                </div>
+                                <span class="values">Bearish</span>
+                              </div>
+                            </div>
+                          </td>
+                          <td><p>14 Nov, 2021</p></td>
+                        </tr>
+                        <tr>
+                          <td class="align__items"><a href="#">Apple Inc</a></td>
+                          <td class="align__items"><a href="#"><p><span class="port_symbol">AAPL</span></p></a></td>
+                          <td><p>22</p></td>
+                          <td>
+                            <div class="footLeft11 rating_slider">
+                              <div class="slidecontainer">
+                                <span class="values">Bullish</span>
+                                <div class="RangeSlider_div">
+                                  <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                                </div>
+                                <span class="values">Bearish</span>
+                              </div>
+                            </div>
+                          </td>
+                          <td><p>14 Nov, 2021</p></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section learn secPadd_100 pt-0">
+          <div class="learn__center center">
+            <div class="learn__head">
+              <div class="learn__wrap">
+                <h3 class="learn__title h3 mb-0">OVTLYR Portfolio </h3>
+                <span class="border_sec"></span>
+              </div>
+            </div>
+            <div class="bargaining js-tabs">
+              <div class="bargaining__main">
+                <div class="nav">
+                  <button class="nav__link js-tabs-link active">Summary</button>
+                  <button class="nav__link js-tabs-link">Charts</button>
+                  <button class="nav__link js-tabs-link">Holdings</button>
+                </div>
+                <div class="bargaining__info"></div>
+              </div>
+              <div class="bargaining__container">
+                <div class="bargaining__item js-tabs-item" style="display: block;">
+                  <div class="bargaining__wrapper js-bargaining-wrapper">
+                    <div class="ovtlyr_summry">
+                      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores fugiat deserunt blanditiis! Officiis natus odio, enim placeat iste maxime voluptates explicabo, exercitationem debitis quisquam dolorum culpa beatae facilis ipsum voluptate.</p>
+                      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores fugiat deserunt blanditiis! Officiis natus odio, exercitationem debitis quisquam dolorum culpa beatae facilis ipsum voluptate.</p>
+                      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores fugiat deserunt blanditiis! Officiis natus odio, enim placeat iste maxime voluptates explicabo, exercitationem debitis quisquam dolorum culpa beatae facilis ipsum voluptate.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="bargaining__item js-tabs-item">
+                  <div class="bargaining__wrapper js-bargaining-wrapper">
+                    bbb
+                  </div>
+                </div>
+                <div class="bargaining__item js-tabs-item">
+                  <div class="bargaining__wrapper js-bargaining-wrapper">
+                    ccc
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section market_overview secPadd_100 secPaddT_80">
+          <div class="learn__center center">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="bargaining">
+                  <div class="bargaining__container">
+                    <div class="bargaining__item2">
+                      <div class="bargaining__wrapper">
+                        <div class="learn__head small_head">
+                          <div class="learn__wrap">
+                            <!-- <h3 class="learn__title h3 mb-0">Top Gainers</h3> -->
+                            <a href="#"><h3 class="learn__title h3 mb-0">Top Gainers<i class="fas fa-chevron-right"></i></h3></a> 
+                          </div>
+                          <!-- <a class="viewAll_button" href="#">More<i class="fas fa-chevron-right"></i></a> -->
+                        </div>
+                        <table class="table ovtlyr_table">
+                          <thead>
+                            <tr>
+                              <th style="width: 20%;" class="align__items">Symbol</th>
+                              <th style="width: 25%;">Last Price</th>
+                              <th style="width: 27%;">Change</th>
+                              <th style="width: 29%;">% Change</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="align__items"><a href="#"><p><span class="port_symbol">ISPC</span></p></a></td>
+                              <td class="green_color"><p>28.20</p></td>
+                              <td class="green_color"><p>+18.17</p></td>
+                              <td class="green_color"><p>+181.16<span>%</span></p></td>
+                            </tr>
+                            <tr>
+                              <td class="align__items"><a href="#"><p><span class="port_symbol">LGVN</span></p></a></td>
+                              <td class="green_color"><p>8.88</p></td>
+                              <td class="green_color"><p>+3.96</p></td>
+                              <td class="green_color"><p>+80.49<span>%</span></p></td>
+                            </tr>
+                            <tr>
+                              <td class="align__items"><a href="#"><p><span class="port_symbol">NDRAW</span></p></a></td>
+                              <td class="green_color"><p>0.1140</p></td>
+                              <td class="green_color"><p>+0.0347</p></td>
+                              <td class="green_color"><p>+43.76<span>%</span></p></td>
+                            </tr>
+                            <tr>
+                              <td class="align__items"><a href="#"><p><span class="port_symbol">NBEV</span></p></a></td>
+                              <td class="green_color"><p>1.630</p></td>
+                              <td class="green_color"><p>+0.45</p></td>
+                              <td class="green_color"><p>+38.14<span>%</span></p></td>
+                            </tr>
+                            <tr>
+                              <td class="align__items"><a href="#"><p><span class="port_symbol">ISPC</span></p></a></td>
+                              <td class="green_color"><p>28.20</p></td>
+                              <td class="green_color"><p>+18.17</p></td>
+                              <td class="green_color"><p>+181.16<span>%</span></p></td>
+                            </tr>
+                            <tr>
+                              <td class="align__items"><a href="#"><p><span class="port_symbol">LGVN</span></p></a></td>
+                              <td class="green_color"><p>8.88</p></td>
+                              <td class="green_color"><p>+3.96</p></td>
+                              <td class="green_color"><p>+80.49<span>%</span></p></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="bargaining">
+                  <div class="bargaining__container">
+                    <div class="bargaining__item2">
+                      <div class="bargaining__wrapper">
+                        <div class="learn__head small_head">
+                          <div class="learn__wrap">
+                            <!-- <h3 class="learn__title h3 mb-0">Top Losers</h3> -->
+                            <a href="#"><h3 class="learn__title h3 mb-0">Top Losers<i class="fas fa-chevron-right"></i></h3></a> 
+                          </div>
+                          <!-- <a class="viewAll_button" href="#">More<i class="fas fa-chevron-right"></i></a> -->
+                        </div>
+                        <table class="table ovtlyr_table">
+                          <thead>
+                            <tr>
+                              <th style="width: 20%;" class="align__items">Symbol</th>
+                              <th style="width: 25%;">Last Price</th>
+                              <th style="width: 27%;">Change</th>
+                              <th style="width: 29%;">% Change</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="align__items"><a href="#"><p><span class="port_symbol">ISPC</span></p></a></td>
+                              <td class="red_color"><p>28.20</p></td>
+                              <td class="red_color"><p>-18.17</p></td>
+                              <td class="red_color"><p>-181.16<span>%</span></p></td>
+                            </tr>
+                            <tr>
+                              <td class="align__items"><a href="#"><p><span class="port_symbol">LGVN</span></p></a></td>
+                              <td class="red_color"><p>8.88</p></td>
+                              <td class="red_color"><p>-3.96</p></td>
+                              <td class="red_color"><p>-80.49<span>%</span></p></td>
+                            </tr>
+                            <tr>
+                              <td class="align__items"><a href="#"><p><span class="port_symbol">NDRAW</span></p></a></td>
+                              <td class="red_color"><p>0.1140</p></td>
+                              <td class="red_color"><p>-0.0347</p></td>
+                              <td class="red_color"><p>-43.76<span>%</span></p></td>
+                            </tr>
+                            <tr>
+                              <td class="align__items"><a href="#"><p><span class="port_symbol">NBEV</span></p></a></td>
+                              <td class="red_color"><p>1.630</p></td>
+                              <td class="red_color"><p>-0.45</p></td>
+                              <td class="red_color"><p>-38.14<span>%</span></p></td>
+                            </tr>
+                            <tr>
+                              <td class="align__items"><a href="#"><p><span class="port_symbol">ISPC</span></p></a></td>
+                              <td class="red_color"><p>28.20</p></td>
+                              <td class="red_color"><p>-18.17</p></td>
+                              <td class="red_color"><p>-181.16<span>%</span></p></td>
+                            </tr>
+                            <tr>
+                              <td class="align__items"><a href="#"><p><span class="port_symbol">LGVN</span></p></a></td>
+                              <td class="red_color"><p>8.88</p></td>
+                              <td class="red_color"><p>-3.96</p></td>
+                              <td class="red_color"><p>-80.49<span>%</span></p></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+       <!--  <div class="section-bg industries section-mb0 secPadd_100">
+          <div class="learn__center center">
+            <div class="popular__head mb-0">
+              <h3 class="popular__title h3 mb-5">Best-Performing Industries</h3>
+            </div>
+            <div class="industries__wrapper">
+              <div class="industries__item">
+                <div class="indus_head">
+                  <div class="indus_head1">
+                    <h5>Renewable Fuels</h5>
+                  </div>
+                  <div class="indus_head2">
+                    <h5>+12.38%</h5>
+                  </div>
+                </div>
+                <div class="indus_content">
+                  <img src="img/industries-chart-1.png" />
+                </div>
+              </div>
+              <div class="industries__item">
+                <div class="indus_head">
+                  <div class="indus_head1">
+                    <h5>Passenger Transportation, Ground & Sea</h5>
+                  </div>
+                  <div class="indus_head2">
+                    <h5>+12.38%</h5>
+                  </div>
+                </div>
+                <div class="indus_content">
+                  <img src="img/industries-chart-1.png" />
+                </div>
+              </div>
+              <div class="industries__item">
+                <div class="indus_head">
+                  <div class="indus_head1">
+                    <h5>Coal</h5>
+                  </div>
+                  <div class="indus_head2">
+                    <h5>+4.35%</h5>
+                  </div>
+                </div>
+                <div class="indus_content">
+                  <img src="img/industries-chart-1.png" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> -->
+        <div class="section-bg section-mb0 popular secPadd_100">
+          <div class="popular__center center">
+            <div class="popular__head">
+              <h3 class="popular__title h2">News & Opinion</h3>
+              <div class="popular__info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates alias doloribus cumque quisquam vitae soluta iste? Facilis non voluptates numquam dolorum dolores.</div>
+            </div>
+            <div class="popular__wrapper">
+              <div class="popular__slider js-slider-popular">
+                <div class="popular__item">
+                  <a href="#">
+                    <div class="popular__preview"><img src="img/blog-image1.jpg" alt="Card"></div>
+                    <div class="popular__cont">
+                      <div class="popular__subtitle">Behavioral Finance</div>
+                      <div class="popular__content"><h5 class="h5">A Biased Understanding of Biases – BeFi Barometer Report</h5></div>
+                      <div class="popular__subtitle blog_date">October 27, 2021</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="popular__item">
+                  <a href="#">
+                    <div class="popular__preview"><img src="img/blog-image2.jpg" alt="Card"></div>
+                    <div class="popular__cont">
+                      <div class="popular__subtitle">Market & Economy</div>
+                      <div class="popular__content"><h5 class="h5">Inflation, Deflation, and Separating the Signal from the Noise</h5></div>
+                      <div class="popular__subtitle blog_date">October 20, 2021</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="popular__item">
+                  <a href="#">
+                    <div class="popular__preview"><img src="img/blog-image3.jpg" alt="Card"></div>
+                    <div class="popular__cont">
+                      <div class="popular__subtitle">Behavioral Finance</div>
+                      <div class="popular__content"><h5 class="h5">Behavioral Finance: A Sneak Peak into OVTLYR’s Approach (Part 8)</h5></div>
+                      <div class="popular__subtitle blog_date">October 21, 2021 </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section sponsered secPadd_60 secPaddB_80">
+          <div class="popular__center center">
+            <div class="popular__head mb-0">
+              <h3 class="popular__title h2 mb-45">As Seen On</h3>
+            </div>
+            <div class="popular__wrapper">
+              <div class="sponered_slider">
+                <ul class="slider slider-nav">
+                  <li>
+                    <div class="outer_box">
+                      <img data-lazy="img/marketwatch-c.png" alt="MrketWatch" class="hide_Indark" />
+                      <img data-lazy="img/marketwatch.png" alt="MrketWatch" class="hide_Inlight" />
+                    </div>
+                  </li>
+                  <li>
+                    <div class="outer_box">
+                      <img data-lazy="img/FORBES-c.png" alt="Forbes" class="hide_Indark" />
+                      <img data-lazy="img/FORBES.png" alt="Forbes" class="hide_Inlight" />
+                    </div>
+                  </li>
+                  <li>
+                    <div class="outer_box">
+                      <img data-lazy="img/morningstar-c.png" alt="MORNINGSTAR" class="hide_Indark" />
+                      <img data-lazy="img/morningstar.png" alt="MORNINGSTAR" class="hide_Inlight" />
+                    </div>
+                  </li>
+                  <li>
+                    <div class="outer_box">
+                      <img data-lazy="img/msn-c.png" alt="MSN" class="hide_Indark" />
+                      <img data-lazy="img/msn.png" alt="MSN" class="hide_Inlight" />
+                    </div>
+                  </li>
+                  <li>
+                    <div class="outer_box">
+                      <img data-lazy="img/BENZINGA-c.png" alt="BENZINGA" class="hide_Indark" />
+                      <img data-lazy="img/BENZINGA.png" alt="BENZINGA" class="hide_Inlight" />
+                    </div>
+                  </li>
+                  <li>
+                    <div class="outer_box">
+                      <img data-lazy="img/REUTERS-c.png" alt="REUTERS" class="hide_Indark" />
+                      <img data-lazy="img/REUTERS.png" alt="REUTERS" class="hide_Inlight" />
+                    </div>
+                  </li>
+                  <li>
+                    <div class="outer_box">
+                      <img data-lazy="img/yahoo-finance-c.png" alt="Yahoo Finance" class="hide_Indark" />
+                      <img data-lazy="img/yahoo-finance.png" alt="Yahoo Finance" class="hide_Inlight" />
+                    </div>
+                  </li>
+                  <li>
+                    <div class="outer_box">
+                      <img data-lazy="img/ventureBeat-c.png" alt="VentureBeat" class="hide_Indark" />
+                      <img data-lazy="img/ventureBeat.png" alt="VentureBeat" class="hide_Inlight" />
+                    </div>
+                  </li>
+                  <li>
+                    <div class="outer_box">
+                      <img data-lazy="img/usa-today-c.png" alt="USA Today" class="hide_Indark" />
+                      <img data-lazy="img/usa-today.png" alt="USA Today" class="hide_Inlight" />
+                    </div>
+                  </li>
+                  <li>
+                    <div class="outer_box">
+                      <img data-lazy="img/acorns-cnbc-c.png" alt="Acorns + CNBC" class="hide_Indark" />
+                      <img data-lazy="img/acorns-cnbc.png" alt="Acorns + CNBC" class="hide_Inlight" />
+                    </div>
+                  </li>
+                  <li>
+                    <div class="outer_box">
+                      <img data-lazy="img/etf-c.png" alt="ETF.com" class="hide_Indark" />
+                      <img data-lazy="img/etf.png" alt="ETF.com" class="hide_Inlight" />
+                    </div>
+                  </li>
+                  <li>
+                    <div class="outer_box">
+                      <img data-lazy="img/proactive-c.png" alt="Proactive" class="hide_Indark" />
+                      <img data-lazy="img/proactive.png" alt="Proactive" class="hide_Inlight" />
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <section class="section-bg home_banner secPadd_100">
+          <div class="home_banner1">
+            <div class="container">
+              <div class="banner_slider">
+                <div id="ovtlyrBannerSlider" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                  <ol class="carousel-indicators">
+                    <li data-bs-target="#ovtlyrBannerSlider" data-bs-slide-to="0" class="active"></li>
+                    <li data-bs-target="#ovtlyrBannerSlider" data-bs-slide-to="1"></li>
+                    <li data-bs-target="#ovtlyrBannerSlider" data-bs-slide-to="2"></li>
+                  </ol>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active" data-interval="3000">
+                      <div class="home_banner2">
+                        <h3>Gut Instincts Don’t Build <span class="bg_blue">Winning Investments.</span></h3>
+                        <h4>Introducing OVTLYR Portfolio Solutions.</h4>
+                        <p>Build Better Portfolios with Groundbreaking Behavioral Analytics.</p>
+                      </div>
+                    </div>
+                    <div class="carousel-item" data-interval="3000">
+                      <div class="home_banner2">
+                        <h3>Make the <span class="bg_blue">Wisdom of Crowds</span> Work for You.</h3>
+                        <h4>Identify Overvalued and Undervalued Stocks.</h4>
+                        <p>Stay Up to Date with OVTLYR Daily Behavioral Rankings.</p>
+                      </div>
+                    </div>
+                    <div class="carousel-item" data-interval="3000">
+                      <div class="home_banner2">
+                        <h3>Markets are People. <span class="bg_blue">People are Predictable.</span></h3>
+                        <h4>Pinpoint Strategic Contrarian Opportunities.</h4>
+                        <p>See Which Assets are Leaning too Heavily Towards Fear & Greed with Unique Indicators.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <a href="#" class="blue_button">Join Our Free Pilot</a>
+                <span><a href="#" class="blueBorder_button ms-2">Watch Demo Video</a></span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- footer-->
+      <footer class="ovt_footer fixed_footerA">
+        <!-- <div class="container">
+          <div class="row">
+            <div class="col-lg-9 col-sm-8 col-12">
+              <div class="inner_footer">
+                <div class="footer_logo">
+                  <a class="black_theme" href="home.html"><img src="img/white.svg" alt="OVTLYR"></a>
+                  <a class="white_theme" href="home.html"><img src="img/black.svg" alt="OVTLYR"></a>
+                </div>
+                <ul class="footer_menu">
+                  <li><a href="terms-of-use.html">Terms of Use</a></li>
+                  <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                  <li><a href="#">Trademark</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-4 col-12">
+              <ul class="footer_socialMedia">
+                <li><a href="https://www.facebook.com/Ovtlyr/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://www.linkedin.com/company/ovtlyr" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="https://twitter.com/ovtlyr" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://www.instagram.com/ovtlyr/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div> -->
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 col-sm-4 col-12">
+              <div class="footer_logo">
+                <a class="black_theme" href="home.html"><img src="img/white.svg" alt="OVTLYR"></a>
+                <a class="white_theme" href="home.html"><img src="img/black.svg" alt="OVTLYR"></a>
+              </div>
+              <p class="logo_txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique illo adipisci natus quam.</p>
+            </div>
+            <div class="col-lg-3 col-sm-3 col-12">
+              <ul class="footer_menu footer_menu2">
+                <li><a href="#">News & Opinion</a></li>
+                <li><a href="#">My Watchlist</a></li>
+                <li><a href="#">Market & Sectors</a></li>
+                <li><a href="#">Build My Portfolio</a></li>
+                <li><a href="#">Daily Hot Stocks</a></li>
+                <li><a href="#">Plans & Pricing</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-2 col-sm-2 col-12">
+              <ul class="footer_menu footer_menu2">
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Join for Free</a></li>
+                <li><a href="#"> Check out our Real Portfolio</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-sm-3 col-12">
+              <ul class="footer_socialMedia">
+                <li><a href="https://www.facebook.com/Ovtlyr/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://www.linkedin.com/company/ovtlyr" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="https://twitter.com/ovtlyr" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://www.instagram.com/ovtlyr/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- scripts-->
+<script src="js/lib/jquery.min.js"></script>
+<script src="js/lib/slick.min.js"></script>
+<script src="js/lib/highcharts.js"></script>
+<script src="js/lib/jquery.nice-select.min.js"></script>
+<script src="js/lib/share-buttons.js"></script>
+<script src="js/lib/nouislider.min.js"></script>
+<script src="js/lib/wNumb.js"></script>
+<script src="js/lib/jquery.magnific-popup.min.js"></script>
+<script src="js/lib/moment.min.js"></script>
+<script src="js/lib/jquery.daterangepicker.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/demo.js"></script>
+<div style="display: none">
+  <svg width="0" height="0">
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="icon-theme-light">
+  <path d="M8 13.333c.368 0 .667.298.667.667s-.298.667-.667.667-.667-.298-.667-.667.298-.667.667-.667zm-4.714-1.562c.26-.26.682-.26.943 0s.26.682 0 .943-.682.26-.943 0-.26-.682 0-.943zm9.428 0c.26.26.26.682 0 .943s-.682.26-.943 0-.26-.682 0-.943.682-.26.943 0zM8 5.333c1.473 0 2.667 1.194 2.667 2.667S9.472 10.666 8 10.666 5.333 9.472 5.333 8 6.527 5.333 8 5.333zm0 1.333c-.736 0-1.333.597-1.333 1.333S7.263 9.333 8 9.333 9.333 8.736 9.333 8 8.736 6.666 8 6.666zm6 .667c.368 0 .667.298.667.667s-.298.667-.667.667-.667-.298-.667-.667.298-.667.667-.667zm-12 0c.368 0 .667.298.667.667s-.298.667-.667.667-.667-.298-.667-.667.298-.667.667-.667zm10.714-4.047c.26.26.26.682 0 .943s-.682.26-.943 0-.26-.682 0-.943.682-.26.943 0zm-9.428 0c.26-.26.682-.26.943 0s.26.682 0 .943-.682.26-.943 0-.26-.682 0-.943zM8 1.333c.368 0 .667.298.667.667s-.298.667-.667.667-.667-.298-.667-.667.298-.667.667-.667z"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="icon-theme-dark">
+  <path d="M8 12c.368 0 .667.298.667.667h0V14c0 .368-.298.667-.667.667s-.667-.298-.667-.667h0v-1.333c0-.368.298-.667.667-.667zm-3.771-1.171c.26-.26.682-.26.943 0s.26.682 0 .943h0l-.943.943c-.26.26-.682.26-.943 0s-.26-.682 0-.943h0zm7.542 0l.943.943c.26.26.26.682 0 .943s-.682.26-.943 0l-.943-.943c-.26-.26-.26-.682 0-.943s.682-.26.943 0zM8 5.333c1.473 0 2.667 1.194 2.667 2.667S9.472 10.666 8 10.666 5.333 9.472 5.333 8 6.527 5.333 8 5.333zm0 1.333c-.736 0-1.333.597-1.333 1.333S7.263 9.333 8 9.333 9.333 8.736 9.333 8 8.736 6.666 8 6.666zm6 .667c.368 0 .667.298.667.667s-.298.667-.667.667h-1.333C12.298 8.666 12 8.368 12 8s.298-.667.667-.667H14zm-10.667 0c.368 0 .667.298.667.667s-.298.667-.667.667h0H2c-.368 0-.667-.298-.667-.667s.298-.667.667-.667h0zm9.381-4.047c.26.26.26.682 0 .943l-.943.943c-.26.26-.682.26-.943 0s-.26-.682 0-.943l.943-.943c.26-.26.682-.26.943 0zm-9.428 0c.26-.26.682-.26.943 0h0l.943.943c.26.26.26.682 0 .943s-.682.26-.943 0h0l-.943-.943c-.26-.26-.26-.682 0-.943zM8 1.333c.368 0 .667.298.667.667h0v1.333C8.666 3.701 8.368 4 8 4s-.667-.298-.667-.667h0V2c0-.368.298-.667.667-.667z"></path>
+  </symbol>
+  </svg>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    $(document).ready(function(){
+    //Event for pushed the video
+    $('#ovtlyrBannerSlider').carousel({
+        interval: 3000
+});
+});
+
+</script>
+  <!--	Animated Text-->
+<script>
+$(document).ready(function(){
+   $('#myInput').focus(function(){
+       $('.searchbar_dropdown').fadeIn(250);
+   }).focusout(function(){
+       $('.searchbar_dropdown').fadeOut(250);
+   });
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js"></script> 
+<script>
+  $(function() {
+$(".text").typed({
+    strings: ["Shareholder Fear and Greed" ,"Better Stock Investments" , "Less Volatile Portfolios" , "Reducing Drawdowns"],
+    typeSpeed: 160,
+    backSpeed: 130,
+    backDelay: 2000,
+    showCursor: true,
+    loop: true
+  });
+});
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.js'></script>
+<script>
+  $(document).ready(function(){
+    //Event for pushed the video
+    $('#carouselControls').carousel({
+        pause: true,
+        interval: false
+    });
+});
+</script>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script>
+         //************* generate data ************
+         var data =
+       [
+       {
+         "Date": "15-Apr-20",
+         "BH": 2.7,
+         "DU": 5.34,
+         "Cash": 18.45
+       },
+       {
+         "Date": "16-Apr-20",
+         "BH": 50.44,
+         "DU": 55.08,
+         "Cash": 0
+       },
+       {
+         "Date": "20-Apr-20",
+         "BH": 4.67,
+         "DU": 44.42,
+         "Cash": 21.4
+       },
+       {
+         "Date": "21-Apr-20",
+         "BH": 33.4,
+         "DU": 33.01,
+         "Cash": 22.73
+       },
+       {
+         "Date": "22-Apr-20",
+         "BH": 66.53,
+         "DU": 88.77,
+         "Cash": 23.53
+       },
+       {
+         "Date": "23-Apr-20",
+         "BH": 88.54,
+         "DU": 88.12,
+         "Cash": 24.22
+       },
+       {
+         "Date": "24-Apr-20",
+         "BH": 88.15,
+         "DU": 77.57,
+         "Cash": 23.22
+       },
+       {
+         "Date": "27-Apr-20",
+         "BH": 91.04,
+         "DU": 52.07,
+         "Cash": 54.99
+       },
+       {
+         "Date": "28-Apr-20",
+         "BH": 330.52,
+         "DU": 221.35,
+         "Cash": 54.18
+       },
+       {
+         "Date": "29-Apr-20",
+         "BH": 440.08,
+         "DU": 341.63,
+         "Cash": 53.62
+       },
+       {
+         "Date": "30-Apr-20",
+         "BH": 241.77,
+         "DU": 456.41,
+         "Cash": 52.93,ZeroLine:0
+       },
+       {
+         "Date": "01-May-20",
+         "BH": 400.19,
+         "DU": 450.61,
+         "Cash": 51.67,ZeroLine:0
+       },
+       {
+         "Date": "04-May-20",
+         "BH": 555.94,
+         "DU": 590.98,
+         "Cash": 51.09,ZeroLine:0
+       },
+       {
+         "Date": "05-May-20",
+         "BH": 600.81,
+         "DU": 500.43,
+         "Cash": 51.51,ZeroLine:0
+       },
+       {
+         "Date": "06-May-20",
+         "BH": 700.65,
+         "DU": -1.89,
+         "Cash": 52.93,ZeroLine:0
+       },
+       {
+         "Date": "07-May-20",
+         "BH": 768.71,
+         "DU": -1.92,
+         "Cash": 54.09,ZeroLine:0
+       },
+       {
+         "Date": "08-May-20",
+         "BH": 834.3,
+         "DU": -1.74,
+         "Cash": 54.8,ZeroLine:0
+       },
+       {
+         "Date": "11-May-20",
+         "BH": 888.09,
+         "DU": -2.1,
+         "Cash": 55.38,ZeroLine:0
+       },
+       {
+         "Date": "12-May-20",
+         "BH": 890.29,
+         "DU": -2.03,
+         "Cash": 0,ZeroLine:0
+       },
+       {
+         "Date": "13-May-20",
+         "BH": 920.57,
+         "DU": -2.47,
+         "Cash": 0,ZeroLine:0
+       },
+       {
+         "Date": "14-May-20",
+         "BH": 951.36,
+         "DU": -2.55,
+         "Cash": 0,ZeroLine:0
+       },
+       {
+         "Date": "15-May-20",
+         "BH": 980.63,
+         "DU": -2.67,
+         "Cash": 59.79,ZeroLine:0
+       },
+       {
+         "Date": "18-May-20",
+         "BH": 999.96,
+         "DU": -2.45,
+         "Cash": 60.97,ZeroLine:0
+       },
+       {
+         "Date": "19-May-20",
+         "BH": 980.09,
+         "DU": -2.51,
+         "Cash": 61.65,ZeroLine:0
+       },
+       {
+         "Date": "20-May-20",
+         "BH": 1000.04,
+         "DU": -2.1,
+         "Cash": 0,ZeroLine:0
+       },
+       {
+         "Date": "21-May-20",
+         "BH": 1110.7,
+         "DU": -1.56,
+         "Cash": 0,ZeroLine:0
+       },
+       {
+         "Date": "22-May-20",
+         "BH": 1129.04,
+         "DU": -0.5,
+         "Cash": 0,ZeroLine:0
+       },
+       {
+         "Date": "26-May-20",
+         "BH": 1233.05,
+         "DU": -0.87,
+         "Cash": 0,ZeroLine:0
+       },
+       {
+         "Date": "27-May-20",
+         "BH": 1298.46,
+         "DU": -0.72,
+         "Cash": 16.37,ZeroLine:0
+       },
+       {
+         "Date": "28-May-20",
+         "BH": 1300.26,
+         "DU": -0.42,
+         "Cash": 19.28,ZeroLine:0
+       },
+       {
+         "Date": "29-May-20",
+         "BH": 1399.54,
+         "DU": -0.14,
+         "Cash": 0,ZeroLine:0
+       },
+       {
+         "Date": "01-Jun-20",
+         "BH": 1420.91,
+         "DU": 0.04,
+         "Cash": 0,ZeroLine:0
+       },
+       {
+         "Date": "02-Jun-20",
+         "BH": 1483.03,
+         "DU": 1.27,
+         "Cash": 0,ZeroLine:0
+       },
+       {
+         "Date": "03-Jun-20",
+         "BH": 1543.22,
+         "DU": 1.34,
+         "Cash": 0,ZeroLine:0
+       },
+       {
+         "Date": "04-Jun-20",
+         "BH": 1533.79,
+         "DU": 1.98,
+         "Cash": 0,ZeroLine:0
+       },
+       {
+         "Date": "05-Jun-20",
+         "BH": 1499.08,
+         "DU": 2.78,
+         "Cash": 0,ZeroLine:0
+       }
+     ]
+        
+         var margin = {
+             top: 10,
+             right: 10,
+             bottom: 10,
+             left: 10
+           },
+           width = 100 - margin.left - margin.right,
+          /*width = parseInt(d3.select(".Strategy_View").style("width")) - margin.left - margin.right,
+        */   height = 70 - margin.top - margin.bottom;
+         
+     
+       // set the ranges
+     var x = d3.scaleBand()
+               .range([0, width]) 
+     .domain(data.map(function(d) { return d.Date; }))
+               
+     var y = d3.scaleLinear()
+     .domain([0,d3.max(data, function (d) { return d.Cash; })])
+              .range([height, 0]);
+     
+     
+     var yRightDU = d3.scaleLinear()
+     .domain([-1500,1500, d3.max(data, function (d) { return d.DU; })])
+              .range([height, 0]);
+     
+         var yRightBH = d3.scaleLinear()
+     .domain([-1500,1500, d3.max(data, function (d) { return d.BH; })])
+              .range([height, 0]);  
+         
+         
+         var yRightZeroLine = d3.scaleLinear()
+         .domain([-1400, 1400, d3.max(data, function (d) { return d.ZeroLine; })])
+              .range([height, 0]);
+         
+      
+         
+     var svg = d3.select(".chart_1").append("svg")
+         .attr("width", width + margin.left + margin.right)
+         .attr("height", height + margin.top + margin.bottom)
+       .append("g")
+         .attr("transform", 
+               "translate(" + margin.left + "," + margin.top + ")");
+      var focus = svg.append("g")
+           .attr("class", "focus")
+           .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+     
+      var lineBH = d3.line()
+       .x(function(d) { return x(d.Date); })
+       .y(function(d) { return yRightBH(d.BH); })
+      
+      var lineDU = d3.line()
+       .x(function(d) { return x(d.Date); })
+       .y(function(d) { return yRightDU(d.DU); });
+     
+     
+      var ZeroLine = d3.line()
+       .x(function(d) { return x(d.Date); })
+       .y(function(d) { return yRightZeroLine(d.ZeroLine); });
+         
+       focus.append("rect")
+         .attr("class", "zoom")
+         .attr("width", width)
+         .attr("height", height)
+         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+        
+         svg.append("defs")
+           .append("rect")
+           .attr("width", width)
+           .attr("height", height);
+     
+     focus.append("path")
+         .datum(data)
+         .attr("class", "lineBH") 
+         .attr("d", lineBH)
+       
+     
+           
+          focus.append("path")
+         .datum(data)
+         .attr("class", "ZeroLine") 
+         .attr("d", ZeroLine)
+         
+       
+       // add the x Axis
+       focus.append("g")
+           .attr("transform", "translate(0," + height + ")")
+           .call(d3.axisBottom(x).tickValues(x.domain().filter(function(d,i){ return !(i%8)})))
+         .selectAll("text")	
+             .style("text-anchor", "end")
+             .attr("dx", "-.8em")
+             .attr("dy", ".15em")
+             .attr("transform", "rotate(-65)");
+     
+     
+     
+         // Add the Y Axis
+         focus.append("g")
+           .attr("class", "axis")
+           .call(d3.axisLeft(y).tickFormat(function(d) { return d + "%"; }).tickPadding([5]))
+        
+     // Add the YRight Axis
+         focus.append("g")
+         .attr("class", "y axis")	
+     .attr("transform", "translate(" + width + " , 0)")	
+           .call(d3.axisRight(yRightDU).ticks(8).tickFormat(function(d) { return d + "%"; }).tickPadding([5]))
+         
+         
+         focus.append("g")
+         .attr("class", "y axis")	.attr("opacity",0)
+     .attr("transform", "translate(" + width + " , 0)")	
+           .call(d3.axisRight(yRightBH).ticks(8).tickFormat(function(d) { return d + "%"; }).tickPadding([5]))
+         focus.append("g")
+</script>
+<script>
+  //************* generate data ************
+  var data =
+[
+{
+  "Date": "15-Apr-20",
+  "BH": 2.7,
+  "DU": 5.34,
+  "Cash": 18.45
+},
+{
+  "Date": "16-Apr-20",
+  "BH": 50.44,
+  "DU": 55.08,
+  "Cash": 0
+},
+{
+  "Date": "20-Apr-20",
+  "BH": 4.67,
+  "DU": 44.42,
+  "Cash": 21.4
+},
+{
+  "Date": "21-Apr-20",
+  "BH": 33.4,
+  "DU": 33.01,
+  "Cash": 22.73
+},
+{
+  "Date": "22-Apr-20",
+  "BH": 66.53,
+  "DU": 88.77,
+  "Cash": 23.53
+},
+{
+  "Date": "23-Apr-20",
+  "BH": 88.54,
+  "DU": 88.12,
+  "Cash": 24.22
+},
+{
+  "Date": "24-Apr-20",
+  "BH": 88.15,
+  "DU": 77.57,
+  "Cash": 23.22
+},
+{
+  "Date": "27-Apr-20",
+  "BH": 91.04,
+  "DU": 52.07,
+  "Cash": 54.99
+},
+{
+  "Date": "28-Apr-20",
+  "BH": 330.52,
+  "DU": 221.35,
+  "Cash": 54.18
+},
+{
+  "Date": "29-Apr-20",
+  "BH": 440.08,
+  "DU": 341.63,
+  "Cash": 53.62
+},
+{
+  "Date": "30-Apr-20",
+  "BH": 241.77,
+  "DU": 456.41,
+  "Cash": 52.93,ZeroLine:0
+},
+{
+  "Date": "01-May-20",
+  "BH": 400.19,
+  "DU": 450.61,
+  "Cash": 51.67,ZeroLine:0
+},
+{
+  "Date": "04-May-20",
+  "BH": 555.94,
+  "DU": 590.98,
+  "Cash": 51.09,ZeroLine:0
+},
+{
+  "Date": "05-May-20",
+  "BH": 600.81,
+  "DU": 500.43,
+  "Cash": 51.51,ZeroLine:0
+},
+{
+  "Date": "06-May-20",
+  "BH": 700.65,
+  "DU": -1.89,
+  "Cash": 52.93,ZeroLine:0
+},
+{
+  "Date": "07-May-20",
+  "BH": 768.71,
+  "DU": -1.92,
+  "Cash": 54.09,ZeroLine:0
+},
+{
+  "Date": "08-May-20",
+  "BH": 834.3,
+  "DU": -1.74,
+  "Cash": 54.8,ZeroLine:0
+},
+{
+  "Date": "11-May-20",
+  "BH": 888.09,
+  "DU": -2.1,
+  "Cash": 55.38,ZeroLine:0
+},
+{
+  "Date": "12-May-20",
+  "BH": 890.29,
+  "DU": -2.03,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "13-May-20",
+  "BH": 920.57,
+  "DU": -2.47,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "14-May-20",
+  "BH": 951.36,
+  "DU": -2.55,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "15-May-20",
+  "BH": 980.63,
+  "DU": -2.67,
+  "Cash": 59.79,ZeroLine:0
+},
+{
+  "Date": "18-May-20",
+  "BH": 999.96,
+  "DU": -2.45,
+  "Cash": 60.97,ZeroLine:0
+},
+{
+  "Date": "19-May-20",
+  "BH": 980.09,
+  "DU": -2.51,
+  "Cash": 61.65,ZeroLine:0
+},
+{
+  "Date": "20-May-20",
+  "BH": 1000.04,
+  "DU": -2.1,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "21-May-20",
+  "BH": 1110.7,
+  "DU": -1.56,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "22-May-20",
+  "BH": 1129.04,
+  "DU": -0.5,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "26-May-20",
+  "BH": 1233.05,
+  "DU": -0.87,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "27-May-20",
+  "BH": 1298.46,
+  "DU": -0.72,
+  "Cash": 16.37,ZeroLine:0
+},
+{
+  "Date": "28-May-20",
+  "BH": 1300.26,
+  "DU": -0.42,
+  "Cash": 19.28,ZeroLine:0
+},
+{
+  "Date": "29-May-20",
+  "BH": 1399.54,
+  "DU": -0.14,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "01-Jun-20",
+  "BH": 1420.91,
+  "DU": 0.04,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "02-Jun-20",
+  "BH": 1483.03,
+  "DU": 1.27,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "03-Jun-20",
+  "BH": 1543.22,
+  "DU": 1.34,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "04-Jun-20",
+  "BH": 1533.79,
+  "DU": 1.98,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "05-Jun-20",
+  "BH": 1499.08,
+  "DU": 2.78,
+  "Cash": 0,ZeroLine:0
+}
+]
+ 
+  var margin = {
+      top: 10,
+      right: 10,
+      bottom: 10,
+      left: 10
+    },
+    width = 100 - margin.left - margin.right,
+          /*width = parseInt(d3.select(".Strategy_View").style("width")) - margin.left - margin.right,
+        */   height = 70 - margin.top - margin.bottom;
+  
+
+// set the ranges
+var x = d3.scaleBand()
+        .range([0, width]) 
+.domain(data.map(function(d) { return d.Date; }))
+        
+var y = d3.scaleLinear()
+.domain([0,d3.max(data, function (d) { return d.Cash; })])
+       .range([height, 0]);
+
+
+var yRightDU = d3.scaleLinear()
+.domain([-1500,1500, d3.max(data, function (d) { return d.DU; })])
+       .range([height, 0]);
+
+  var yRightBH = d3.scaleLinear()
+.domain([-1500,1500, d3.max(data, function (d) { return d.BH; })])
+       .range([height, 0]);  
+  
+  
+  var yRightZeroLine = d3.scaleLinear()
+  .domain([-1400, 1400, d3.max(data, function (d) { return d.ZeroLine; })])
+       .range([height, 0]);
+  
+
+  
+var svg = d3.select(".chart_2").append("svg")
+  .attr("width", width + margin.left + margin.right)
+  .attr("height", height + margin.top + margin.bottom)
+.append("g")
+  .attr("transform", 
+        "translate(" + margin.left + "," + margin.top + ")");
+var focus = svg.append("g")
+    .attr("class", "focus")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+var lineBH = d3.line()
+.x(function(d) { return x(d.Date); })
+.y(function(d) { return yRightBH(d.BH); })
+
+var lineDU = d3.line()
+.x(function(d) { return x(d.Date); })
+.y(function(d) { return yRightDU(d.DU); });
+
+
+var ZeroLine = d3.line()
+.x(function(d) { return x(d.Date); })
+.y(function(d) { return yRightZeroLine(d.ZeroLine); });
+  
+focus.append("rect")
+  .attr("class", "zoom")
+  .attr("width", width)
+  .attr("height", height)
+  .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+ 
+  svg.append("defs")
+    .append("rect")
+    .attr("width", width)
+    .attr("height", height);
+
+focus.append("path")
+  .datum(data)
+  .attr("class", "lineBH") 
+  .attr("d", lineBH)
+
+
+    
+   focus.append("path")
+  .datum(data)
+  .attr("class", "ZeroLine") 
+  .attr("d", ZeroLine)
+  
+
+// add the x Axis
+focus.append("g")
+    .attr("transform", "translate(0," + height + ")")
+    .call(d3.axisBottom(x).tickValues(x.domain().filter(function(d,i){ return !(i%8)})))
+  .selectAll("text")	
+      .style("text-anchor", "end")
+      .attr("dx", "-.8em")
+      .attr("dy", ".15em")
+      .attr("transform", "rotate(-65)");
+
+
+
+  // Add the Y Axis
+  focus.append("g")
+    .attr("class", "axis")
+    .call(d3.axisLeft(y).tickFormat(function(d) { return d + "%"; }).tickPadding([5]))
+ 
+// Add the YRight Axis
+  focus.append("g")
+  .attr("class", "y axis")	
+.attr("transform", "translate(" + width + " , 0)")	
+    .call(d3.axisRight(yRightDU).ticks(8).tickFormat(function(d) { return d + "%"; }).tickPadding([5]))
+  
+  
+  focus.append("g")
+  .attr("class", "y axis")	.attr("opacity",0)
+.attr("transform", "translate(" + width + " , 0)")	
+    .call(d3.axisRight(yRightBH).ticks(8).tickFormat(function(d) { return d + "%"; }).tickPadding([5]))
+  focus.append("g")
+</script>
+<script>
+  //************* generate data ************
+  var data =
+[
+{
+  "Date": "15-Apr-20",
+  "BH": 2.7,
+  "DU": 5.34,
+  "Cash": 18.45
+},
+{
+  "Date": "16-Apr-20",
+  "BH": 50.44,
+  "DU": 55.08,
+  "Cash": 0
+},
+{
+  "Date": "20-Apr-20",
+  "BH": 4.67,
+  "DU": 44.42,
+  "Cash": 21.4
+},
+{
+  "Date": "21-Apr-20",
+  "BH": 33.4,
+  "DU": 33.01,
+  "Cash": 22.73
+},
+{
+  "Date": "22-Apr-20",
+  "BH": 66.53,
+  "DU": 88.77,
+  "Cash": 23.53
+},
+{
+  "Date": "23-Apr-20",
+  "BH": 88.54,
+  "DU": 88.12,
+  "Cash": 24.22
+},
+{
+  "Date": "24-Apr-20",
+  "BH": 88.15,
+  "DU": 77.57,
+  "Cash": 23.22
+},
+{
+  "Date": "27-Apr-20",
+  "BH": 91.04,
+  "DU": 52.07,
+  "Cash": 54.99
+},
+{
+  "Date": "28-Apr-20",
+  "BH": 330.52,
+  "DU": 221.35,
+  "Cash": 54.18
+},
+{
+  "Date": "29-Apr-20",
+  "BH": 440.08,
+  "DU": 341.63,
+  "Cash": 53.62
+},
+{
+  "Date": "30-Apr-20",
+  "BH": 241.77,
+  "DU": 456.41,
+  "Cash": 52.93,ZeroLine:0
+},
+{
+  "Date": "01-May-20",
+  "BH": 400.19,
+  "DU": 450.61,
+  "Cash": 51.67,ZeroLine:0
+},
+{
+  "Date": "04-May-20",
+  "BH": 555.94,
+  "DU": 590.98,
+  "Cash": 51.09,ZeroLine:0
+},
+{
+  "Date": "05-May-20",
+  "BH": 600.81,
+  "DU": 500.43,
+  "Cash": 51.51,ZeroLine:0
+},
+{
+  "Date": "06-May-20",
+  "BH": 700.65,
+  "DU": -1.89,
+  "Cash": 52.93,ZeroLine:0
+},
+{
+  "Date": "07-May-20",
+  "BH": 768.71,
+  "DU": -1.92,
+  "Cash": 54.09,ZeroLine:0
+},
+{
+  "Date": "08-May-20",
+  "BH": 834.3,
+  "DU": -1.74,
+  "Cash": 54.8,ZeroLine:0
+},
+{
+  "Date": "11-May-20",
+  "BH": 888.09,
+  "DU": -2.1,
+  "Cash": 55.38,ZeroLine:0
+},
+{
+  "Date": "12-May-20",
+  "BH": 890.29,
+  "DU": -2.03,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "13-May-20",
+  "BH": 920.57,
+  "DU": -2.47,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "14-May-20",
+  "BH": 951.36,
+  "DU": -2.55,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "15-May-20",
+  "BH": 980.63,
+  "DU": -2.67,
+  "Cash": 59.79,ZeroLine:0
+},
+{
+  "Date": "18-May-20",
+  "BH": 999.96,
+  "DU": -2.45,
+  "Cash": 60.97,ZeroLine:0
+},
+{
+  "Date": "19-May-20",
+  "BH": 980.09,
+  "DU": -2.51,
+  "Cash": 61.65,ZeroLine:0
+},
+{
+  "Date": "20-May-20",
+  "BH": 1000.04,
+  "DU": -2.1,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "21-May-20",
+  "BH": 1110.7,
+  "DU": -1.56,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "22-May-20",
+  "BH": 1129.04,
+  "DU": -0.5,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "26-May-20",
+  "BH": 1233.05,
+  "DU": -0.87,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "27-May-20",
+  "BH": 1298.46,
+  "DU": -0.72,
+  "Cash": 16.37,ZeroLine:0
+},
+{
+  "Date": "28-May-20",
+  "BH": 1300.26,
+  "DU": -0.42,
+  "Cash": 19.28,ZeroLine:0
+},
+{
+  "Date": "29-May-20",
+  "BH": 1399.54,
+  "DU": -0.14,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "01-Jun-20",
+  "BH": 1420.91,
+  "DU": 0.04,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "02-Jun-20",
+  "BH": 1483.03,
+  "DU": 1.27,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "03-Jun-20",
+  "BH": 1543.22,
+  "DU": 1.34,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "04-Jun-20",
+  "BH": 1533.79,
+  "DU": 1.98,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "05-Jun-20",
+  "BH": 1499.08,
+  "DU": 2.78,
+  "Cash": 0,ZeroLine:0
+}
+]
+ 
+  var margin = {
+      top: 10,
+      right: 10,
+      bottom: 10,
+      left: 10
+    },
+    width = 100 - margin.left - margin.right,
+          /*width = parseInt(d3.select(".Strategy_View").style("width")) - margin.left - margin.right,
+        */   height = 70 - margin.top - margin.bottom;
+  
+
+// set the ranges
+var x = d3.scaleBand()
+        .range([0, width]) 
+.domain(data.map(function(d) { return d.Date; }))
+        
+var y = d3.scaleLinear()
+.domain([0,d3.max(data, function (d) { return d.Cash; })])
+       .range([height, 0]);
+
+
+var yRightDU = d3.scaleLinear()
+.domain([-1500,1500, d3.max(data, function (d) { return d.DU; })])
+       .range([height, 0]);
+
+  var yRightBH = d3.scaleLinear()
+.domain([-1500,1500, d3.max(data, function (d) { return d.BH; })])
+       .range([height, 0]);  
+  
+  
+  var yRightZeroLine = d3.scaleLinear()
+  .domain([-1400, 1400, d3.max(data, function (d) { return d.ZeroLine; })])
+       .range([height, 0]);
+  
+
+  
+var svg = d3.select(".chart_3").append("svg")
+  .attr("width", width + margin.left + margin.right)
+  .attr("height", height + margin.top + margin.bottom)
+.append("g")
+  .attr("transform", 
+        "translate(" + margin.left + "," + margin.top + ")");
+var focus = svg.append("g")
+    .attr("class", "focus")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+var lineBH = d3.line()
+.x(function(d) { return x(d.Date); })
+.y(function(d) { return yRightBH(d.BH); })
+
+var lineDU = d3.line()
+.x(function(d) { return x(d.Date); })
+.y(function(d) { return yRightDU(d.DU); });
+
+
+var ZeroLine = d3.line()
+.x(function(d) { return x(d.Date); })
+.y(function(d) { return yRightZeroLine(d.ZeroLine); });
+  
+focus.append("rect")
+  .attr("class", "zoom")
+  .attr("width", width)
+  .attr("height", height)
+  .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+ 
+  svg.append("defs")
+    .append("rect")
+    .attr("width", width)
+    .attr("height", height);
+
+focus.append("path")
+  .datum(data)
+  .attr("class", "lineBH") 
+  .attr("d", lineBH)
+
+
+    
+   focus.append("path")
+  .datum(data)
+  .attr("class", "ZeroLine") 
+  .attr("d", ZeroLine)
+  
+
+// add the x Axis
+focus.append("g")
+    .attr("transform", "translate(0," + height + ")")
+    .call(d3.axisBottom(x).tickValues(x.domain().filter(function(d,i){ return !(i%8)})))
+  .selectAll("text")	
+      .style("text-anchor", "end")
+      .attr("dx", "-.8em")
+      .attr("dy", ".15em")
+      .attr("transform", "rotate(-65)");
+
+
+
+  // Add the Y Axis
+  focus.append("g")
+    .attr("class", "axis")
+    .call(d3.axisLeft(y).tickFormat(function(d) { return d + "%"; }).tickPadding([5]))
+ 
+// Add the YRight Axis
+  focus.append("g")
+  .attr("class", "y axis")	
+.attr("transform", "translate(" + width + " , 0)")	
+    .call(d3.axisRight(yRightDU).ticks(8).tickFormat(function(d) { return d + "%"; }).tickPadding([5]))
+  
+  
+  focus.append("g")
+  .attr("class", "y axis")	.attr("opacity",0)
+.attr("transform", "translate(" + width + " , 0)")	
+    .call(d3.axisRight(yRightBH).ticks(8).tickFormat(function(d) { return d + "%"; }).tickPadding([5]))
+  focus.append("g")
+</script>
+<script>
+  //************* generate data ************
+  var data =
+[
+{
+  "Date": "15-Apr-20",
+  "BH": 2.7,
+  "DU": 5.34,
+  "Cash": 18.45
+},
+{
+  "Date": "16-Apr-20",
+  "BH": 50.44,
+  "DU": 55.08,
+  "Cash": 0
+},
+{
+  "Date": "20-Apr-20",
+  "BH": 4.67,
+  "DU": 44.42,
+  "Cash": 21.4
+},
+{
+  "Date": "21-Apr-20",
+  "BH": 33.4,
+  "DU": 33.01,
+  "Cash": 22.73
+},
+{
+  "Date": "22-Apr-20",
+  "BH": 66.53,
+  "DU": 88.77,
+  "Cash": 23.53
+},
+{
+  "Date": "23-Apr-20",
+  "BH": 88.54,
+  "DU": 88.12,
+  "Cash": 24.22
+},
+{
+  "Date": "24-Apr-20",
+  "BH": 88.15,
+  "DU": 77.57,
+  "Cash": 23.22
+},
+{
+  "Date": "27-Apr-20",
+  "BH": 91.04,
+  "DU": 52.07,
+  "Cash": 54.99
+},
+{
+  "Date": "28-Apr-20",
+  "BH": 330.52,
+  "DU": 221.35,
+  "Cash": 54.18
+},
+{
+  "Date": "29-Apr-20",
+  "BH": 440.08,
+  "DU": 341.63,
+  "Cash": 53.62
+},
+{
+  "Date": "30-Apr-20",
+  "BH": 241.77,
+  "DU": 456.41,
+  "Cash": 52.93,ZeroLine:0
+},
+{
+  "Date": "01-May-20",
+  "BH": 400.19,
+  "DU": 450.61,
+  "Cash": 51.67,ZeroLine:0
+},
+{
+  "Date": "04-May-20",
+  "BH": 555.94,
+  "DU": 590.98,
+  "Cash": 51.09,ZeroLine:0
+},
+{
+  "Date": "05-May-20",
+  "BH": 600.81,
+  "DU": 500.43,
+  "Cash": 51.51,ZeroLine:0
+},
+{
+  "Date": "06-May-20",
+  "BH": 700.65,
+  "DU": -1.89,
+  "Cash": 52.93,ZeroLine:0
+},
+{
+  "Date": "07-May-20",
+  "BH": 768.71,
+  "DU": -1.92,
+  "Cash": 54.09,ZeroLine:0
+},
+{
+  "Date": "08-May-20",
+  "BH": 834.3,
+  "DU": -1.74,
+  "Cash": 54.8,ZeroLine:0
+},
+{
+  "Date": "11-May-20",
+  "BH": 888.09,
+  "DU": -2.1,
+  "Cash": 55.38,ZeroLine:0
+},
+{
+  "Date": "12-May-20",
+  "BH": 890.29,
+  "DU": -2.03,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "13-May-20",
+  "BH": 920.57,
+  "DU": -2.47,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "14-May-20",
+  "BH": 951.36,
+  "DU": -2.55,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "15-May-20",
+  "BH": 980.63,
+  "DU": -2.67,
+  "Cash": 59.79,ZeroLine:0
+},
+{
+  "Date": "18-May-20",
+  "BH": 999.96,
+  "DU": -2.45,
+  "Cash": 60.97,ZeroLine:0
+},
+{
+  "Date": "19-May-20",
+  "BH": 980.09,
+  "DU": -2.51,
+  "Cash": 61.65,ZeroLine:0
+},
+{
+  "Date": "20-May-20",
+  "BH": 1000.04,
+  "DU": -2.1,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "21-May-20",
+  "BH": 1110.7,
+  "DU": -1.56,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "22-May-20",
+  "BH": 1129.04,
+  "DU": -0.5,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "26-May-20",
+  "BH": 1233.05,
+  "DU": -0.87,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "27-May-20",
+  "BH": 1298.46,
+  "DU": -0.72,
+  "Cash": 16.37,ZeroLine:0
+},
+{
+  "Date": "28-May-20",
+  "BH": 1300.26,
+  "DU": -0.42,
+  "Cash": 19.28,ZeroLine:0
+},
+{
+  "Date": "29-May-20",
+  "BH": 1399.54,
+  "DU": -0.14,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "01-Jun-20",
+  "BH": 1420.91,
+  "DU": 0.04,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "02-Jun-20",
+  "BH": 1483.03,
+  "DU": 1.27,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "03-Jun-20",
+  "BH": 1543.22,
+  "DU": 1.34,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "04-Jun-20",
+  "BH": 1533.79,
+  "DU": 1.98,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "05-Jun-20",
+  "BH": 1499.08,
+  "DU": 2.78,
+  "Cash": 0,ZeroLine:0
+}
+]
+ 
+  var margin = {
+      top: 10,
+      right: 10,
+      bottom: 10,
+      left: 10
+    },
+    width = 100 - margin.left - margin.right,
+          /*width = parseInt(d3.select(".Strategy_View").style("width")) - margin.left - margin.right,
+        */   height = 70 - margin.top - margin.bottom;
+  
+
+// set the ranges
+var x = d3.scaleBand()
+        .range([0, width]) 
+.domain(data.map(function(d) { return d.Date; }))
+        
+var y = d3.scaleLinear()
+.domain([0,d3.max(data, function (d) { return d.Cash; })])
+       .range([height, 0]);
+
+
+var yRightDU = d3.scaleLinear()
+.domain([-1500,1500, d3.max(data, function (d) { return d.DU; })])
+       .range([height, 0]);
+
+  var yRightBH = d3.scaleLinear()
+.domain([-1500,1500, d3.max(data, function (d) { return d.BH; })])
+       .range([height, 0]);  
+  
+  
+  var yRightZeroLine = d3.scaleLinear()
+  .domain([-1400, 1400, d3.max(data, function (d) { return d.ZeroLine; })])
+       .range([height, 0]);
+  
+
+  
+var svg = d3.select(".chart_4").append("svg")
+  .attr("width", width + margin.left + margin.right)
+  .attr("height", height + margin.top + margin.bottom)
+.append("g")
+  .attr("transform", 
+        "translate(" + margin.left + "," + margin.top + ")");
+var focus = svg.append("g")
+    .attr("class", "focus")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+var lineBH = d3.line()
+.x(function(d) { return x(d.Date); })
+.y(function(d) { return yRightBH(d.BH); })
+
+var lineDU = d3.line()
+.x(function(d) { return x(d.Date); })
+.y(function(d) { return yRightDU(d.DU); });
+
+
+var ZeroLine = d3.line()
+.x(function(d) { return x(d.Date); })
+.y(function(d) { return yRightZeroLine(d.ZeroLine); });
+  
+focus.append("rect")
+  .attr("class", "zoom")
+  .attr("width", width)
+  .attr("height", height)
+  .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+ 
+  svg.append("defs")
+    .append("rect")
+    .attr("width", width)
+    .attr("height", height);
+
+focus.append("path")
+  .datum(data)
+  .attr("class", "lineBH") 
+  .attr("d", lineBH)
+
+
+    
+   focus.append("path")
+  .datum(data)
+  .attr("class", "ZeroLine") 
+  .attr("d", ZeroLine)
+  
+
+// add the x Axis
+focus.append("g")
+    .attr("transform", "translate(0," + height + ")")
+    .call(d3.axisBottom(x).tickValues(x.domain().filter(function(d,i){ return !(i%8)})))
+  .selectAll("text")	
+      .style("text-anchor", "end")
+      .attr("dx", "-.8em")
+      .attr("dy", ".15em")
+      .attr("transform", "rotate(-65)");
+
+
+
+  // Add the Y Axis
+  focus.append("g")
+    .attr("class", "axis")
+    .call(d3.axisLeft(y).tickFormat(function(d) { return d + "%"; }).tickPadding([5]))
+ 
+// Add the YRight Axis
+  focus.append("g")
+  .attr("class", "y axis")	
+.attr("transform", "translate(" + width + " , 0)")	
+    .call(d3.axisRight(yRightDU).ticks(8).tickFormat(function(d) { return d + "%"; }).tickPadding([5]))
+  
+  
+  focus.append("g")
+  .attr("class", "y axis")	.attr("opacity",0)
+.attr("transform", "translate(" + width + " , 0)")	
+    .call(d3.axisRight(yRightBH).ticks(8).tickFormat(function(d) { return d + "%"; }).tickPadding([5]))
+  focus.append("g")
+</script>
+<script>
+$(".regular").slick({
+  dots: false,
+  infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 2
+});
+$('.slider-nav').slick({
+   slidesToShow: 5,
+   slidesToScroll: 2,
+   asNavFor: '.slider-for',
+   dots: false,
+   focusOnSelect: false
+ });
+
+ $('a[data-slide]').click(function(e) {
+   e.preventDefault();
+   var slideno = $(this).data('slide');
+   $('.slider-nav').slick('slickGoTo', slideno - 1);
+ });
+</script>
+
+  </body>
+</html>

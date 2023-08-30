@@ -1,0 +1,2658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>OVTLYR | Portfolio </title>
+<meta name="description" content="Updates and statistics" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no">
+<link rel="icon" type="img/png" sizes="32x32" href="img/trident-favicon.png" />
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+<link rel='stylesheet' href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css" />
+<link rel='stylesheet' href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/chart-style.css" />
+<link rel="stylesheet" media="all" href="css/app.min.css" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/responsive.css" />
+<script>
+  var viewportmeta = document.querySelector('meta[name="viewport"]');
+  if (viewportmeta) {
+    if (screen.width < 320) {
+      var newScale = screen.width / 320;
+      viewportmeta.content = 'width=320, minimum-scale=' + newScale + ', maximum-scale=1.0, user-scalable=no, initial-scale=' + newScale + '';
+    } else {
+      viewportmeta.content = 'width=device-width, maximum-scale=1.0, initial-scale=1.0';
+    }
+  }
+</script>
+</head>
+<body>
+    <script>
+      console.log(localStorage.getItem('darkMode'));
+      if (localStorage.getItem('darkMode') === "on") {
+        document.body.classList.add("dark");
+        document.addEventListener("DOMContentLoaded", function() {
+        document.querySelector('.js-theme input').checked = true;
+        });
+      }
+    </script>
+    <!-- outer-->
+    <div class="outer">
+      <!-- header-->
+      <header class="header js-header" data-id="#header">
+        <div class="header_front">
+        <div class="container-fluid">
+          <div class="header__center center">
+            <a class="header__logo" href="index.html">
+              <img class="header__pic header__pic_desktop some-icon" src="img/login_trident.svg" alt="OVTLYR" /><img class="header__pic header__pic_desktop some-icon-dark" src="img/outlyr-white-logo.svg" alt="OVTLYR" />
+              <img class="header__pic header__pic_mobile some-icon" src="img/black.svg" alt="OVTLYR" /><img class="header__pic header__pic_mobile some-icon-dark" src="img/white.svg" alt="OVTLYR" />
+            </a>
+            <div class="header__wrapper">
+              <div class="header__wrap js-header-wrap">
+                <div class="mobile_profile">
+                  <button class="mobile_headP"><img src="img/profile.svg" alt="Profile"><span class="user_nme">Shivani Chandel</span></button>
+                  <div class="mobile__btns" style="display: none;">
+                    <a class="mobile_btn" href="login.html">Login</a>
+                    <a class="mobile_btn blue_btn" href="signup.html">Sign Up</a>
+                  </div>
+                </div>
+                <div class="mobile_search">
+                  <input class="field__input headerSearch" type="email" name="email" placeholder="Symbols or Companies...">
+                  <button class="header_searchIcon"><i class="fas fa-search"></i></button>
+                </div>
+                <nav class="header__nav ovtlyr_menu">
+                  <!-- <a class="header__item active" href="#"><i class="las la-newspaper"></i>News & Opinion</a> -->
+                  <a class="header__item" href="sectors.html"><i class="las la-chart-pie"></i>Sectors</a>
+                  <a class="header__item" href="industries.html"><i class="las la-building"></i>Industries</a>
+                  <a class="header__item" href="leaderboards.html"><i class="las la-chart-bar"></i>Leaderboards</a>
+                  <a class="header__item" href="watchlist.html"><i class="las la-list"></i>Watchlist</a>
+                  <a class="header__item active" href="portfolio.html"><i class="las la-pen"></i>Portfolio</a>
+                </nav>
+              </div>
+              <div class="header__btns">
+                <div class="header_Search">
+                  <div class="field">
+                    <div class="field__wrap">
+                      <input class="field__input headerSearch" id="headerSearch_input" type="email" name="email" placeholder="Symbols or Companies...">
+                      <button class="header_searchIcon"><i class="fas fa-search"></i></button>
+                    </div>
+                  </div>
+                  <div class="search_popup">
+                    <div class="popup_input">
+                      <input class="field__input headerSearch" type="email" name="email" placeholder="Symbols or Companies...">
+                      <button class="header_searchIcon"><i class="fas fa-search"></i></button>
+                    </div>
+                    <h4>Stocks</h4>
+                    <ul>
+                      <li><a href="#"><p><span class="port_symbol">PYPL</span><span class="port_company">Paypal Holdings</span></p></a></li>
+                      <li><a href="#"><p><span class="port_symbol">NBEV</span><span class="port_company">NewAge Inc.</span></p></a></li>
+                      <li><a href="#"><p><span class="port_symbol">ISPC</span><span class="port_company">iSpecimen Inc.</span></p></a></li>
+                      <li><a href="#"><p><span class="port_symbol">LGVN</span><span class="port_company">Longeveron Inc.</span></p></a></li>
+                      <li><a href="#"><p><span class="port_symbol">NVDA</span><span class="port_company">Nvidia</span></p></a></li>
+                      <li><a href="#"><p><span class="port_symbol">NBEV</span><span class="port_company">NewAge Inc.</span></p></a></li>
+                      <li><a href="#"><p><span class="port_symbol">ISPC</span><span class="port_company">iSpecimen Inc.</span></p></a></li>
+                      <li><a href="#"><p><span class="port_symbol">LGVN</span><span class="port_company">Longeveron Inc.</span></p></a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="header__control">
+                  <label class="theme js-theme">
+                    <input class="theme__input" type="checkbox"/><span class="theme__icon">
+                      <svg class="icon icon-theme-light">
+                        <use xlink:href="#icon-theme-light"></use>
+                      </svg>
+                      <svg class="icon icon-theme-dark">
+                        <use xlink:href="#icon-theme-dark"></use>
+                      </svg></span>
+                  </label>
+                </div>
+                <a class="header__item ms-2 mobile_hideL" href="login.html" style="display: none;">Login</a>
+                <a class="button-small header__button ms-3 blue_button mobile_hideL" href="signup.html" style="display: none;">Join for Free</a> 
+                <div class="header__item header__item_user js-header-item mobile_hideL">
+                  <button class="header__head js-header-head"><img src="img/profile.svg" alt="Profile"><span class="user_nme">Shivani Chandel</span></button>
+                  <div class="header__body js-header-body">
+                    <a class="header__el" href="profile.html">
+                      <div class="header__icon">
+                        <i class="las la-user"></i>
+                      </div>
+                      <div class="header__details">
+                        <div class="header__title">Profile</div>
+                        <div class="header__content">Important account details</div>
+                      </div>
+                    </a>
+                    <div class="header__el">
+                      <div class="header__icon">
+                        <i class="las la-sun"></i>
+                      </div>
+                      <div class="header__details">
+                        <div class="header__line">
+                          <div class="header__title">Dark mode</div>
+                          <label class="theme js-theme">
+                            <input class="theme__input" type="checkbox"/><span class="theme__inner"><span class="theme__box"></span></span>
+                          </label>
+                        </div>
+                        <div class="header__content">Switch dark/light mode</div>
+                      </div>
+                    </div>
+                    <a class="header__el" href="change-password.html">
+                      <div class="header__icon">
+                        <i class="las la-edit"></i>
+                      </div>
+                      <div class="header__details">
+                        <div class="header__title">Change Password</div>
+                      </div>
+                    </a>
+                    <a class="header__el" href="#">
+                      <div class="header__icon">
+                        <i class="las la-sign-in-alt"></i>
+                      </div>
+                      <div class="header__details">
+                        <div class="header__title">Log out</div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <button class="header__burger js-header-burger"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      </header>
+      <!-- container-->
+      <div class="outer__inner">
+        <div class="section minSec_height main industries secPadd_100">
+          <div class="learn__center center">
+            <!-- <div class="welcomeSec_list">
+              <div class="empty_watchlist" style="display: block;">
+                <h3 class="h2 mb-3">Welcome!</h3>
+                <p class="create_list">Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                <div class="empty_watchSlide">
+                  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item backgroundDiv bg_red active">
+                        <img src="img/watchlist-light.png" class="d-block" alt="Wishlist" />
+                        <div class="footer_text">
+                          <p>It is a long established fact that a reader will be distracted by the readable content of a page.</p>
+                        </div>
+                      </div>
+                      <div class="carousel-item backgroundDiv bg_yellow">
+                        <img src="img/watchlist-light.png" class="d-block" alt="Wishlist" />
+                        <div class="footer_text">
+                          <p>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.</p>
+                        </div>
+                      </div>
+                      <div class="carousel-item backgroundDiv bg_blue">
+                        <img src="img/watchlist-light.png" class="d-block" alt="Wishlist" />
+                        <div class="footer_text">
+                          <p>All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="email_left mb-0">
+                  <p class="loginOr_add">
+                    <a href="#" class="blue_button"><i class="las la-plus"></i> Add Stocks</a>
+                    <span class="display_block1">or</span>
+                    <a href="login.html">Login</a>
+                    <span class="display_block">or</span>
+                    <a href="#">Connect Your Existing Portfolio</a>
+                  </p>
+                </div>
+              </div>
+            </div> -->
+            <div class="welcomeSec_list secPaddB_80">
+              <div class="empty_watchlist">
+                <h3 class="h3 mb-3">Build & Model your <span class="blue_color">Portfolio</span></h3>
+                <p class="create_list">Outcomes reflect your selected assets & risk tolerance over the recent history</p>
+                <div class="email_left mb-0">
+                  <!-- <a href="login.html" class="blue_button me-2">Login</a>or --><a href="signup.html" class="blue_button ms-2">Join for Free</a>
+                  <p class="small_italicFont">Login is required to save your selections</p>
+                </div>
+              </div>
+            </div>
+            <div class="industries_sec create_Myportfolio">
+              <div class="learn__head">
+                <div class="learn__wrap">
+                  <h3 class="learn__title h3 mb-0">Portfolio</h3>
+                  <span class="border_sec"></span>
+                </div>
+                <a href="#" class="blue_button show_sideBar"><i class="las la-plus"></i> Add</a>
+                <a href="#" class="blue_button show_sideBar ms-2"> Cancel</a>
+              </div>
+              <div class="bargaining">
+                <div class="bargaining__container">
+                  <div class="table_scroll">
+                    <table class="table ovtlyr_table portfolio_table">
+                      <thead>
+                        <tr>
+                          <th style="width: 15%;" class="align__items">Symbol</th>
+                          <th style="width: 25%;" class="align__items">Name</th>
+                          <th style="width: 35%;">OVTLYR Rating</th>
+                          <th style="width: 20%;">Sector</th>
+                          <th style="width: 5%;"></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="align__items"><a href="#"><p><span class="port_symbol">HTZWW</span></p></a></td>
+                          <td class="align__items"><a href="#">HERTZ GLOBAL HLD</a></td>
+                          <td>
+                            <div class="footLeft11 rating_slider">
+                              <div class="slidecontainer">
+                                <span class="values">Bullish</span>
+                                <div class="RangeSlider_div">
+                                  <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                                </div>
+                                <span class="values">Bearish</span>
+                              </div>
+                            </div>
+                          </td>
+                          <td><p>Energy</p></td>
+                          <td>
+                            <div class="edit_butns">
+                              <button type="button" class="clickTo_remove js-popup-open" href="#removeStock_Popup" data-effect="mfp-zoom-in"><i class="fas fa-minus-circle"></i></button>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="align__items"><a href="#"><p><span class="port_symbol">HTZ</span></p></a></td>
+                          <td class="align__items"><a href="#">HERTZ GLOBAL HLD</a></td>
+                          <td>
+                            <div class="footLeft11 rating_slider">
+                              <div class="slidecontainer">
+                                <span class="values">Bullish</span>
+                                <div class="RangeSlider_div">
+                                  <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                                </div>
+                                <span class="values">Bearish</span>
+                              </div>
+                            </div>
+                          </td>
+                          <td><p>Healthcare</p></td>
+                          <td>
+                            <div class="edit_butns">
+                              <button type="button" class="clickTo_add"><i class="fas fa-plus-circle"></i></button>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="align__items"><a href="#"><p><span class="port_symbol">HYRE</span></p></a></td>
+                          <td class="align__items"><a href="#">HyreCar</a></td>
+                          <td>
+                            <div class="footLeft11 rating_slider">
+                              <div class="slidecontainer">
+                                <span class="values">Bullish</span>
+                                <div class="RangeSlider_div">
+                                  <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                                </div>
+                                <span class="values">Bearish</span>
+                              </div>
+                            </div>
+                          </td>
+                          <td><p>Technology</p></td>
+                          <td>
+                            <div class="edit_butns">
+                              <button type="button" class="clickTo_add"><i class="fas fa-plus-circle"></i></button>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="align__items"><a href="#"><p><span class="port_symbol">GLG</span></p></a></td>
+                          <td class="align__items"><a href="#">TD Holdings Inc</a></td>
+                          <td>
+                            <div class="footLeft11 rating_slider">
+                              <div class="slidecontainer">
+                                <span class="values">Bullish</span>
+                                <div class="RangeSlider_div">
+                                  <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                                </div>
+                                <span class="values">Bearish</span>
+                              </div>
+                            </div>
+                          </td>
+                          <td><p>Energy</p></td>
+                          <td>
+                            <div class="edit_butns">
+                              <button type="button" class="clickTo_add"><i class="fas fa-plus-circle"></i></button>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="align__items"><a href="#"><p><span class="port_symbol">CAR</span></p></a></td>
+                          <td class="align__items"><a href="#">Avis Budget Grp</a></td>
+                          <td>
+                            <div class="footLeft11 rating_slider">
+                              <div class="slidecontainer">
+                                <span class="values">Bullish</span>
+                                <div class="RangeSlider_div">
+                                  <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                                </div>
+                                <span class="values">Bearish</span>
+                              </div>
+                            </div>
+                          </td>
+                          <td><p>Communication</p></td>
+                          <td>
+                            <div class="edit_butns">
+                              <button type="button" class="clickTo_add"><i class="fas fa-plus-circle"></i></button>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="leftPie_chart">
+                    <div class="result_listHead">
+                      <div class="result_listHead1">
+                        <span class="text_a">Account Value:</span>
+                        <div class="right_div">
+                          <div class="input_divF mb-0">
+                            <span>$</span>
+                            <input type="text" class="filterInput" placeholder="120000" /> 
+                          </div>
+                        </div>
+                      </div>
+                      <div class="result_listHead1">
+                        <span class="text_a">MAR:<span class="MAR_Tooltip"><i class="la la-question-circle"></i></span></span>
+                        <div class="right_div">
+                          <div class="input_divF mb-0">
+                            <input type="text" class="filterInput ms-0 me-2" placeholder="7.00" /> 
+                          </div>
+                        </div>
+                      </div>
+                      <div class="result_listHead1">
+                        <span class="text_a">R<sub>f</sub>:<span class="rf_Tooltip"><i class="la la-question-circle"></i></span></span>
+                        <div class="right_div">
+                          <div class="input_divF mb-0">
+                            <input type="text" class="filterInput ms-0 me-2" placeholder="2.00" /> 
+                            <span>%</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="result_listHead1 maxwidth_fix">
+                        <span class="text_a">Risk Tolerance:</span>
+                        <div class="right_div">
+                          <div class="input_divF">
+                            <label class="contain_box">
+                              <input type="checkbox" name="radios1" class="form_check_add" checked />
+                              <span class="checkmark"></span>
+                            </label>
+                            <label class="contain_box">
+                              <input type="checkbox" name="radios1" class="form_check_add" checked />
+                              <span class="checkmark"></span>
+                            </label>
+                            <label class="contain_box">
+                              <input type="checkbox" name="radios1" class="form_check_add" checked />
+                              <span class="checkmark"></span>
+                            </label>
+                            <label class="contain_box">
+                              <input type="checkbox" name="radios1" class="form_check_add" checked />
+                              <span class="checkmark"></span>
+                            </label>
+                            <label class="contain_box">
+                              <input type="checkbox" name="radios1" class="form_check_add" />
+                              <span class="checkmark"></span>
+                            </label>
+                          </div>
+                          <div class="risk_labels">
+                            <span>Conservative</span>
+                            <span>Balanced</span>
+                            <span>Aggressive</span>
+                          </div>
+                        </div>
+                      </div> 
+                    </div>
+                    <div class="chartFil_left">
+                      <ul class="runbacktest_check">
+                        <li>
+                          <label class="checkbox">
+                            <input class="checkbox__input" type="checkbox">
+                            <span class="checkbox__in">
+                              <span class="checkbox__tick"></span>
+                              <span class="checkbox__text">Run Backtest</span>
+                            </span>
+                          </label>
+                        </li>
+                        <li class="runBacktest">
+                          <a href="#">Build Portfolio</a>  
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="runBacktest2">
+                <a href="#" class="blue_button">Edit Portfolio</a>  
+              </div> -->
+            </div>
+            <div class="myPortfolio_edit secPaddT_50">
+              <div class="learn__head">
+                <div class="learn__wrap">
+                  <h3 class="learn__title h3 mb-0">Portfolio <span class="blue_color h6">[Sample]</span></h3>
+                  <span class="border_sec"></span>
+                </div>
+                <a href="#" class="blue_button">Customize</a>  
+              </div>
+              <div class="bargaining mb-4">
+                <div class="bargaining__container">
+                  <div class="bargaining__wrapper">
+                    <div class="portfolio_results">
+                      <div class="filteredSec_tbl">
+                        <div class="leftPie_chart pb-0">
+                          <div class="result_listHead">
+                            <div class="result_listHead1">
+                              <span class="text_a">Account Value:</span>
+                              <span class="input_value">$120000</span>
+                            </div>
+                            <div class="result_listHead1">
+                              <span class="text_a">MAR:<span class="MAR_Tooltip"><i class="la la-question-circle"></i></span></span>
+                              <span class="input_value">7.00%</span>
+                            </div>
+                            <div class="result_listHead1">
+                              <span class="text_a">R<sub>f</sub>:<span class="rf_Tooltip"><i class="la la-question-circle"></i></span></span>
+                              <span class="input_value">2.00%</span>
+                            </div>
+                            <div class="result_listHead1 maxwidth_fix">
+                              <span class="text_a">Risk Tolerance:</span>
+                              <div class="right_div">
+                                <div class="input_divF">
+                                  <label class="contain_box">
+                                    <input type="checkbox" name="radios1" disabled="disabled" class="form_check_add" checked />
+                                    <span class="checkmark"></span>
+                                  </label>
+                                  <label class="contain_box">
+                                    <input type="checkbox" name="radios1" disabled="disabled" class="form_check_add" checked />
+                                    <span class="checkmark"></span>
+                                  </label>
+                                  <label class="contain_box">
+                                    <input type="checkbox" name="radios1" disabled="disabled" class="form_check_add" checked />
+                                    <span class="checkmark"></span>
+                                  </label>
+                                  <label class="contain_box">
+                                    <input type="checkbox" name="radios1" disabled="disabled" class="form_check_add" checked />
+                                    <span class="checkmark"></span>
+                                  </label>
+                                  <label class="contain_box">
+                                    <input type="checkbox" name="radios1" disabled="disabled" class="form_check_add" />
+                                    <span class="checkmark"></span>
+                                  </label>
+                                </div>
+                                <div class="risk_labels">
+                                  <span>Conservative</span>
+                                  <span>Balanced</span>
+                                  <span>Aggressive</span>
+                                </div>
+                              </div>
+                            </div> 
+                          </div>
+                          <div class="filteredSec_chrt">
+                            <div id="home_piechart"></div>
+                            <div id="tooltip_pie" class="hidden"><span id="value"></span></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="filteredSec_dtl">
+                        <div class="port_backtestR">
+                          <div class="learn__head small_head">
+                            <div class="learn__wrap">
+                              <h3 class="learn__title h3 mb-0">Backtest Results</h3></a> 
+                            </div>
+                          </div>
+                          <table class="table ovtlyr_table">
+                            <thead>
+                              <tr>
+                                <th style="width: 40%;" class="align__items">Category</th>
+                                <th style="width: 30%;">Buy & Hold</th>
+                                <th style="width: 30%;">OVTLYR</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td class="align__items"><p>Duration [yr]</p></td>
+                                <td colspan="2"><p>21.21</p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p>ROI [%]</p></td>
+                                <td><p>392.71%</p></td>
+                                <td><p>771.29%</p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p>CAGR</p></td>
+                                <td><p>7.81%Y</p></td>
+                                <td><p>10.75%</p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p>Max Drawdown</p></td>
+                                <td><p>28.32%</p></td>
+                                <td><p>6.61%</p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p>Sharpe</p></td>
+                                <td><p>1.0188</p></td>
+                                <td><p>3.1030</p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p>Sortino</p></td>
+                                <td><p>1.1655</p></td>
+                                <td><p>4.7284</p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p>Jensen α</p></td>
+                                <td><p></p></td>
+                                <td><p>1.88%</p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p>β</p></td>
+                                <td><p></p></td>
+                                <td><p>0.5999</p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p>Treynor</p></td>
+                                <td><p></p></td>
+                                <td><p>0.0023</p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p>Avg. Cash</p></td>
+                                <td><p></p></td>
+                                <td><p>38.01%</p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p>Capital Efficiency<span class="capEfficiency"><i class="la la-question-circle"></i></span></p></td>
+                                <td><p></p></td>
+                                <td><p>362.01%</p></td>
+                              </tr> 
+                            </tbody> 
+                          </table>
+                        </div>
+                        <div class="portchart_result">
+                          <div class="Strategy_View2">
+                            <div id="Strategy_View2"></div>
+                          </div>
+                          <ul class="chart_labels">
+                            <li><span class="grey_box"></span>Cash</li>
+                            <li><span class="red_box"></span>Buy &amp; Hold</li>
+                            <li><span class="blue_box"></span>OVTLYR</li>
+                          </ul>
+                        </div>
+                      </div> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="bargaining">
+                <div class="bargaining__container">
+                  <div class="bargaining__wrapper">
+                    <div class="portfolio_results">
+                      <div class="filteredSec_tbl">
+                        <div class="leftPie_chart pb-0">
+                          <div class="result_listHead">
+                            <div class="result_listHead1">
+                              <span class="text_a">Account Value:</span>
+                              <span class="input_value">$120000</span>
+                            </div>
+                            <div class="result_listHead1">
+                              <span class="text_a">MAR:<span class="MAR_Tooltip"><i class="la la-question-circle"></i></span></span>
+                              <span class="input_value">7.00%</span>
+                            </div>
+                            <div class="result_listHead1">
+                              <span class="text_a">R<sub>f</sub>:<span class="rf_Tooltip"><i class="la la-question-circle"></i></span></span>
+                              <span class="input_value">2.00%</span>
+                            </div>
+                            <div class="result_listHead1 maxwidth_fix">
+                              <span class="text_a">Risk Tolerance:</span>
+                              <div class="right_div">
+                                <div class="input_divF">
+                                  <label class="contain_box">
+                                    <input type="checkbox" name="radios1" disabled="disabled" class="form_check_add" checked />
+                                    <span class="checkmark"></span>
+                                  </label>
+                                  <label class="contain_box">
+                                    <input type="checkbox" name="radios1" disabled="disabled" class="form_check_add" checked />
+                                    <span class="checkmark"></span>
+                                  </label>
+                                  <label class="contain_box">
+                                    <input type="checkbox" name="radios1" disabled="disabled" class="form_check_add" checked />
+                                    <span class="checkmark"></span>
+                                  </label>
+                                  <label class="contain_box">
+                                    <input type="checkbox" name="radios1" disabled="disabled" class="form_check_add" checked />
+                                    <span class="checkmark"></span>
+                                  </label>
+                                  <label class="contain_box">
+                                    <input type="checkbox" name="radios1" disabled="disabled" class="form_check_add" />
+                                    <span class="checkmark"></span>
+                                  </label>
+                                </div>
+                                <div class="risk_labels">
+                                  <span>Conservative</span>
+                                  <span>Balanced</span>
+                                  <span>Aggressive</span>
+                                </div>
+                              </div>
+                            </div> 
+                          </div>
+                          <div class="filteredSec_chrt">
+                            <div id="home_piechart"></div>
+                            <div id="tooltip_pie" class="hidden"><span id="value"></span></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="filteredSec_dtl2">
+                        <div class="port_backtestR">
+                          <table class="table ovtlyr_table">
+                            <thead>
+                              <tr>
+                                <th style="width: 22%;" class="align__items">Symbol</th>
+                                <th style="width: 29%;">Allocation / Change</th>
+                                <th style="width: 22%;">Last Close</th>
+                                <th style="width: 27%;">Shares / Change <span class="sharesChange"><i class="la la-question-circle"></i></span></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td class="align__items"><p>AAA</p></td>
+                                <td><p><span>28.37%</span> / <span class="red_color">-050%</span></p></td>
+                                <td><p>$52.50</p></td>
+                                <td><p><span>540</span> / <span class="red_color">-410</span></p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p>AAB</p></td>
+                                <td><p><span>21.45%</span> / <span class="green_color">+1.00%</span></p></td>
+                                <td><p>$23.98</p></td>
+                                <td><p><span>854</span> / <span class="red_color">-664</span></p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p>AAC</p></td>
+                                <td><p><span>15.57%</span> / <span class="green_color">+1.20%</span></p></td>
+                                <td><p>$77.10</p></td>
+                                <td><p><span>201</span> / <span class="red_color">-180</span></p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p>AAD</p></td>
+                                <td><p><span>11.07%</span> / <span class="red_color">-3.00%</span></p></td>
+                                <td><p>$213.50</p></td>
+                                <td><p><span>51</span> / <span class="red_color">-40</span></p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p>AAE</p></td>
+                                <td><p><span>8.30%</span> / <span class="green_color">+0.20%</span></p></td>
+                                <td><p>$24.44</p></td>
+                                <td><p><span>339</span> / <span class="red_color">-321</span></p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p>AAF</p></td>
+                                <td><p><span>6.23%</span> / <span class="red_color">-0.50%</span></p></td>
+                                <td><p>$158.13</p></td>
+                                <td><p><span>39</span> / <span class="red_color">-22</span></p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p>AAH</p></td>
+                                <td><p><span>4.15%</span> / <span class="red_color">-3.50%</span></p></td>
+                                <td><p>$86.20</p></td>
+                                <td><p><span>48</span> / <span class="red_color">-35</span></p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p>N/A</p></td>
+                                <td><p>N/A</p></td>
+                                <td><p>N/A</p></td>
+                                <td><p>N/A</p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p>N/A</p></td>
+                                <td><p>N/A</p></td>
+                                <td><p>N/A</p></td>
+                                <td><p>N/A</p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p>Cash</p></td>
+                                <td><p><span>0.2%</span> / <span class="text_redShow">-0.10%</span></p></td>
+                                <td><p>N/A</p></td>
+                                <td><p>$20.00</p></td>
+                              </tr>
+                            </tbody> 
+                          </table>
+                        </div>
+                      </div>
+                      <!-- <div class="filteredSec_dtl">
+                        <div class="port_backtestR">
+                          <div class="learn__head small_head">
+                            <div class="learn__wrap">
+                              <h3 class="learn__title h3 mb-0">Backtest Results</h3></a> 
+                            </div>
+                          </div>
+                          <table class="table ovtlyr_table">
+                            <thead>
+                              <tr>
+                                <th style="width: 40%;" class="align__items">Category</th>
+                                <th style="width: 30%;">Buy & Hold</th>
+                                <th style="width: 30%;">OVTLYR</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td class="align__items"><p>Duration [yr]</p></td>
+                                <td colspan="2"><p>21.21</p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p>ROI [%]</p></td>
+                                <td><p>392.71%</p></td>
+                                <td><p>771.29%</p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p>CAGR</p></td>
+                                <td><p>7.81%Y</p></td>
+                                <td><p>10.75%</p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p>Max Drawdown</p></td>
+                                <td><p>28.32%</p></td>
+                                <td><p>6.61%</p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p>Sharpe</p></td>
+                                <td><p>1.0188</p></td>
+                                <td><p>3.1030</p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p>Sortino</p></td>
+                                <td><p>1.1655</p></td>
+                                <td><p>4.7284</p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p>Jensen α</p></td>
+                                <td><p></p></td>
+                                <td><p>1.88%</p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p>β</p></td>
+                                <td><p></p></td>
+                                <td><p>0.5999</p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p>Treynor</p></td>
+                                <td><p></p></td>
+                                <td><p>0.0023</p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p>Avg. Cash</p></td>
+                                <td><p></p></td>
+                                <td><p>38.01%</p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p>Capital Efficiency<span class="capEfficiency"><i class="la la-question-circle"></i></span></p></td>
+                                <td><p></p></td>
+                                <td><p>362.01%</p></td>
+                              </tr> 
+                            </tbody> 
+                          </table>
+                        </div>
+                        <div class="portchart_result">
+                          <div class="Strategy_View2">
+                            <div id="Strategy_View2"></div>
+                          </div>
+                          <ul class="chart_labels">
+                            <li><span class="grey_box"></span>Cash</li>
+                            <li><span class="red_box"></span>Buy &amp; Hold</li>
+                            <li><span class="blue_box"></span>OVTLYR</li>
+                          </ul>
+                        </div>
+                      </div> --> 
+                    </div>
+                    <div class="portfolio_results2">
+                      <div class="filteredSec_dtl">
+                        <div class="port_backtestR">
+                          <div class="learn__head small_head">
+                            <div class="learn__wrap">
+                              <h3 class="learn__title h3 mb-0">Backtest Results</h3></a> 
+                            </div>
+                          </div>
+                          <table class="table ovtlyr_table">
+                            <thead>
+                              <tr>
+                                <th style="width: 40%;" class="align__items">Category</th>
+                                <th style="width: 30%;">Buy & Hold</th>
+                                <th style="width: 30%;">OVTLYR</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td class="align__items"><p>Duration [yr]</p></td>
+                                <td colspan="2"><p>21.21</p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p>ROI [%]</p></td>
+                                <td><p>392.71%</p></td>
+                                <td><p>771.29%</p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p>CAGR</p></td>
+                                <td><p>7.81%Y</p></td>
+                                <td><p>10.75%</p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p>Max Drawdown</p></td>
+                                <td><p>28.32%</p></td>
+                                <td><p>6.61%</p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p>Sharpe</p></td>
+                                <td><p>1.0188</p></td>
+                                <td><p>3.1030</p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p>Sortino</p></td>
+                                <td><p>1.1655</p></td>
+                                <td><p>4.7284</p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p>Jensen α</p></td>
+                                <td><p></p></td>
+                                <td><p>1.88%</p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p>β</p></td>
+                                <td><p></p></td>
+                                <td><p>0.5999</p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p>Treynor</p></td>
+                                <td><p></p></td>
+                                <td><p>0.0023</p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p>Avg. Cash</p></td>
+                                <td><p></p></td>
+                                <td><p>38.01%</p></td>
+                              </tr>
+                              <tr>
+                                <td class="align__items"><p>Capital Efficiency<span class="capEfficiency"><i class="la la-question-circle"></i></span></p></td>
+                                <td><p></p></td>
+                                <td><p>362.01%</p></td>
+                              </tr> 
+                            </tbody> 
+                          </table>
+                        </div>
+                        <div class="portchart_result">
+                          <div class="Strategy_View2">
+                            <div id="Strategy_View2"></div>
+                          </div>
+                          <ul class="chart_labels">
+                            <li><span class="grey_box"></span>Cash</li>
+                            <li><span class="red_box"></span>Buy &amp; Hold</li>
+                            <li><span class="blue_box"></span>OVTLYR</li>
+                          </ul>
+                        </div>
+                      </div> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="marketTab_content secPaddT_80">
+              <h3 class="learn__title h4 mb-0">Portfolio News</h3>
+              <ul>
+                <li>
+                  <h4><a href="#" target="_blank"><i class="la la-newspaper"></i> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text</a></h4>
+                  <p class="more_headline">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of 
+                    type and scrambled it to make a type specimen book.
+                  </p>
+                  <div class="detail_timings"> <span>Seekingalpha</span> <span> | </span> <span>Feb 18, 2021</span> <span> | </span> <span>03:30 pm</span> </div>
+                </li>
+                <li>
+                  <h4><a href="#" target="_blank"> <i class="la la-newspaper"></i> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</a></h4>
+                    <p class="more_headline">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of 
+                      type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and 
+                      typesetting industry. 
+                    </p>
+                  <div class="detail_timings"> <span>Seekingalpha</span> <span> | </span> <span>Feb 18, 2021</span> <span> | </span> <span>03:30 pm</span> </div>
+                </li>
+                <li> 
+                  <h4><a href="#" target="_blank"><i class="la la-newspaper"></i> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</a></h4>
+                  <p class="more_headline">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of 
+                    type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and 
+                    typesetting industry. Lorem Ipsum has been the industry's standard dummy text.
+                  </p>
+                  <div class="detail_timings"> <span>Seekingalpha</span> <span> | </span> <span>Feb 18, 2021</span> <span> | </span> <span>03:30 pm</span> </div>
+                </li>
+                <li>
+                  <h4><a href="#" target="_blank"><i class="la la-newspaper"></i> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text</a></h4>
+                  <p class="more_headline">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of 
+                    type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and 
+                    typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                  </p>
+                  <div class="detail_timings"> <span>Seekingalpha</span> <span> | </span> <span>Feb 18, 2021</span> <span> | </span> <span>03:30 pm</span> </div>
+                </li>
+              </ul>
+              <a href="#" class="fold_moreBtn">More <i class="fas fa-chevron-right"></i></a> 
+            </div>
+          </div>
+        </div>
+        <div class="watchlist_sidebar watchlistScroll">
+          <button type="button" class="cross_button show_sideBar2"><i class="las la-times"></i></button>
+          <div class="js-tabs2"> 
+            <div class="nav">
+              <button class="MYnav__link2 js-tabs-link2 active">Search by Filters</button>
+              <button class="MYnav__link2 js-tabs-link2">Search by Stock</button> 
+            </div> 
+            <div class="bargaining__container">
+              <div class="bargaining__item js-tabs-item2" style="display: block;">
+                <div class="bargaining__wrapper js-bargaining-wrapper">
+                  <div class="sidebar_nav js-tabs newSide_filters">
+                    <div class="bargaining__main">
+                      <div class="nav mb-0">
+                        <button class="MYnav__link js-tabs-link active">Sector</button>
+                        <button class="MYnav__link js-tabs-link">Industry</button> 
+                        <button class="MYnav__link js-tabs-link">Market Cap</button> 
+                      </div> 
+                    </div>
+                    <div class="bargaining__container">
+                      <div class="bargaining__item js-tabs-item" style="display: block;">
+                        <div class="bargaining__wrapper js-bargaining-wrapper">
+                          <div class="sector_tab1 watchlistScroll">
+                            <label class="checkbox">
+                              <input class="checkbox__input" type="checkbox">
+                              <span class="checkbox__in">
+                                <span class="checkbox__tick"></span>
+                                <span class="checkbox__text">Communication</span>
+                              </span>
+                            </label>
+                            <label class="checkbox">
+                              <input class="checkbox__input" type="checkbox">
+                              <span class="checkbox__in">
+                                <span class="checkbox__tick"></span>
+                                <span class="checkbox__text">Discretionary</span>
+                              </span>
+                            </label>
+                            <label class="checkbox">
+                              <input class="checkbox__input" type="checkbox">
+                              <span class="checkbox__in">
+                                <span class="checkbox__tick"></span>
+                                <span class="checkbox__text">Energy</span>
+                              </span>
+                            </label>
+                            <label class="checkbox">
+                              <input class="checkbox__input" type="checkbox">
+                              <span class="checkbox__in">
+                                <span class="checkbox__tick"></span>
+                                <span class="checkbox__text">Financials</span>
+                              </span>
+                            </label>
+                            <label class="checkbox">
+                              <input class="checkbox__input" type="checkbox">
+                              <span class="checkbox__in">
+                                <span class="checkbox__tick"></span>
+                                <span class="checkbox__text">Healthcare</span>
+                              </span>
+                            </label>
+                            <label class="checkbox">
+                              <input class="checkbox__input" type="checkbox">
+                              <span class="checkbox__in">
+                                <span class="checkbox__tick"></span>
+                                <span class="checkbox__text">Industrial</span>
+                              </span>
+                            </label>
+                            <label class="checkbox">
+                              <input class="checkbox__input" type="checkbox">
+                              <span class="checkbox__in">
+                                <span class="checkbox__tick"></span>
+                                <span class="checkbox__text">Materials</span>
+                              </span>
+                            </label>
+                            <label class="checkbox">
+                              <input class="checkbox__input" type="checkbox">
+                              <span class="checkbox__in">
+                                <span class="checkbox__tick"></span>
+                                <span class="checkbox__text">Real Estate</span>
+                              </span>
+                            </label>
+                            <label class="checkbox">
+                              <input class="checkbox__input" type="checkbox">
+                              <span class="checkbox__in">
+                                <span class="checkbox__tick"></span>
+                                <span class="checkbox__text">Staples</span>
+                              </span>
+                            </label>
+                            <label class="checkbox">
+                              <input class="checkbox__input" type="checkbox">
+                              <span class="checkbox__in">
+                                <span class="checkbox__tick"></span>
+                                <span class="checkbox__text">Technology</span>
+                              </span>
+                            </label>
+                            <label class="checkbox">
+                              <input class="checkbox__input" type="checkbox">
+                              <span class="checkbox__in">
+                                <span class="checkbox__tick"></span>
+                                <span class="checkbox__text">Utilities</span>
+                              </span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="bargaining__item js-tabs-item">
+                        <div class="bargaining__wrapper js-bargaining-wrapper">
+                          <div class="sector_tab1 watchlistScroll">
+                            <label class="checkbox">
+                              <input class="checkbox__input" type="checkbox">
+                              <span class="checkbox__in">
+                                <span class="checkbox__tick"></span>
+                                <span class="checkbox__text">Technology Hardware, Storage &amp; Peripherals</span>
+                              </span>
+                            </label>
+                            <label class="checkbox">
+                              <input class="checkbox__input" type="checkbox">
+                              <span class="checkbox__in">
+                                <span class="checkbox__tick"></span>
+                                <span class="checkbox__text">Hotels, Restaurants &amp; Leisure</span>
+                              </span>
+                            </label>
+                            <label class="checkbox">
+                              <input class="checkbox__input" type="checkbox">
+                              <span class="checkbox__in">
+                                <span class="checkbox__tick"></span>
+                                <span class="checkbox__text">IT Services</span>
+                              </span>
+                            </label>
+                            <label class="checkbox">
+                              <input class="checkbox__input" type="checkbox">
+                              <span class="checkbox__in">
+                                <span class="checkbox__tick"></span>
+                                <span class="checkbox__text">Electrical Equipment</span>
+                              </span>
+                            </label>
+                            <label class="checkbox">
+                              <input class="checkbox__input" type="checkbox">
+                              <span class="checkbox__in">
+                                <span class="checkbox__tick"></span>
+                                <span class="checkbox__text">Metals &amp; Mining</span>
+                              </span>
+                            </label>
+                            <label class="checkbox">
+                              <input class="checkbox__input" type="checkbox">
+                              <span class="checkbox__in">
+                                <span class="checkbox__tick"></span>
+                                <span class="checkbox__text">Hotels, Restaurants &amp; Leisure</span>
+                              </span>
+                            </label>
+                            <label class="checkbox">
+                              <input class="checkbox__input" type="checkbox">
+                              <span class="checkbox__in">
+                                <span class="checkbox__tick"></span>
+                                <span class="checkbox__text">IT Services</span>
+                              </span>
+                            </label>
+                            <label class="checkbox">
+                              <input class="checkbox__input" type="checkbox">
+                              <span class="checkbox__in">
+                                <span class="checkbox__tick"></span>
+                                <span class="checkbox__text">Electrical Equipment</span>
+                              </span>
+                            </label>
+                            <label class="checkbox">
+                              <input class="checkbox__input" type="checkbox">
+                              <span class="checkbox__in">
+                                <span class="checkbox__tick"></span>
+                                <span class="checkbox__text">Metals &amp; Mining</span>
+                              </span>
+                            </label>
+                            <label class="checkbox">
+                              <input class="checkbox__input" type="checkbox">
+                              <span class="checkbox__in">
+                                <span class="checkbox__tick"></span>
+                                <span class="checkbox__text">Hotels, Restaurants &amp; Leisure</span>
+                              </span>
+                            </label>
+                            <label class="checkbox">
+                              <input class="checkbox__input" type="checkbox">
+                              <span class="checkbox__in">
+                                <span class="checkbox__tick"></span>
+                                <span class="checkbox__text">IT Services</span>
+                              </span>
+                            </label>
+                            <label class="checkbox">
+                              <input class="checkbox__input" type="checkbox">
+                              <span class="checkbox__in">
+                                <span class="checkbox__tick"></span>
+                                <span class="checkbox__text">Electrical Equipment</span>
+                              </span>
+                            </label>
+                            <label class="checkbox">
+                              <input class="checkbox__input" type="checkbox">
+                              <span class="checkbox__in">
+                                <span class="checkbox__tick"></span>
+                                <span class="checkbox__text">Software</span>
+                              </span>
+                            </label>
+                            <label class="checkbox">
+                              <input class="checkbox__input" type="checkbox">
+                              <span class="checkbox__in">
+                                <span class="checkbox__tick"></span>
+                                <span class="checkbox__text">Hotels, Restaurants &amp; Leisure</span>
+                              </span>
+                            </label>
+                            <label class="checkbox">
+                              <input class="checkbox__input" type="checkbox">
+                              <span class="checkbox__in">
+                                <span class="checkbox__tick"></span>
+                                <span class="checkbox__text">IT Services</span>
+                              </span>
+                            </label>
+                            <label class="checkbox">
+                              <input class="checkbox__input" type="checkbox">
+                              <span class="checkbox__in">
+                                <span class="checkbox__tick"></span>
+                                <span class="checkbox__text">Electrical Equipment</span>
+                              </span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="bargaining__item js-tabs-item">
+                        <div class="bargaining__wrapper js-bargaining-wrapper">
+                          <div class="sector_tab1">
+                            <label class="checkbox">
+                              <input class="checkbox__input" type="checkbox">
+                              <span class="checkbox__in">
+                                <span class="checkbox__tick"></span>
+                                <span class="checkbox__text">&lt;$10B</span>
+                              </span>
+                            </label>
+                            <label class="checkbox">
+                              <input class="checkbox__input" type="checkbox">
+                              <span class="checkbox__in">
+                                <span class="checkbox__tick"></span>
+                                <span class="checkbox__text">$10B - $100B</span>
+                              </span>
+                            </label>
+                            <label class="checkbox">
+                              <input class="checkbox__input" type="checkbox">
+                              <span class="checkbox__in">
+                                <span class="checkbox__tick"></span>
+                                <span class="checkbox__text">&gt;$100B</span>
+                              </span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="apply_filter">
+                    <a href="javascript:void(0);" class="blue_button">Apply</a>
+                  </div>
+                </div>
+              </div>
+              <div class="bargaining__item js-tabs-item2">
+                <div class="bargaining__wrapper js-bargaining-wrapper">
+                  <div class="searchBy_stock">
+                    <div class="field">
+                      <div class="field__wrap">
+                        <input class="field__input headerSearch" id="headerSearch_input" type="email" name="email" placeholder="Symbols or Companies...">
+                        <button class="header_searchIcon"><i class="fas fa-search"></i></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h4 class="h5 mb-3">Results:</h4>
+          <div class="filtered_results watchlistScroll">
+            <div class="card_item">
+              <div class="card_details">
+                <div class="card_line">
+                  <span class="card_category port_symbol">AAPL</span>
+                  <div class="card_date"><button type="button" class="clickTo_add"><i class="fas fa-plus-circle"></i></button></div>
+                </div>
+                <div class="card_status">TD Holdings Inc</div>
+              </div>
+              <div class="">
+                <div class="footLeft11 rating_slider">
+                  <div class="slidecontainer">
+                    <span class="values">Bullish</span>
+                    <div class="RangeSlider_div">
+                      <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                    </div>
+                    <span class="values">Bearish</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card_item">
+              <div class="card_details">
+                <div class="card_line">
+                  <span class="card_category port_symbol">AAPL</span>
+                  <div class="card_date"><button type="button" class="clickTo_add"><i class="fas fa-plus-circle"></i></button></div>
+                </div>
+                <div class="card_status">Avis Budget Grp</div>
+              </div>
+              <div class="">
+                <div class="footLeft11 rating_slider">
+                  <div class="slidecontainer">
+                    <span class="values">Bullish</span>
+                    <div class="RangeSlider_div">
+                      <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                    </div>
+                    <span class="values">Bearish</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card_item">
+              <div class="card_details">
+                <div class="card_line">
+                  <span class="card_category port_symbol">AAPL</span>
+                  <div class="card_date"><button type="button" class="clickTo_add"><i class="fas fa-plus-circle"></i></button></div>
+                </div>
+                <div class="card_status">HyreCar</div>
+              </div>
+              <div class="">
+                <div class="footLeft11 rating_slider">
+                  <div class="slidecontainer">
+                    <span class="values">Bullish</span>
+                    <div class="RangeSlider_div">
+                      <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                    </div>
+                    <span class="values">Bearish</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card_item">
+              <div class="card_details">
+                <div class="card_line">
+                  <span class="card_category port_symbol">AAPL</span>
+                  <div class="card_date"><button type="button" class="clickTo_add"><i class="fas fa-plus-circle"></i></button></div>
+                </div>
+                <div class="card_status">HERTZ GLOBAL HLD</div>
+              </div>
+              <div class="">
+                <div class="footLeft11 rating_slider">
+                  <div class="slidecontainer">
+                    <span class="values">Bullish</span>
+                    <div class="RangeSlider_div">
+                      <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                    </div>
+                    <span class="values">Bearish</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card_item">
+              <div class="card_details">
+                <div class="card_line">
+                  <span class="card_category port_symbol">AAPL</span>
+                  <div class="card_date"><button type="button" class="clickTo_add"><i class="fas fa-plus-circle"></i></button></div>
+                </div>
+                <div class="card_status">Apple Inc</div>
+              </div>
+              <div class="">
+                <div class="footLeft11 rating_slider">
+                  <div class="slidecontainer">
+                    <span class="values">Bullish</span>
+                    <div class="RangeSlider_div">
+                      <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                    </div>
+                    <span class="values">Bearish</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+       <!-- REMOVE STOCK POPUP START -->
+       <div class="popup popup_settings mfp-hide" id="removeStock_Popup">
+         <div class="popup_body">
+          <div class="popup__form">
+              <div class="popup__field removeStock_content">
+                <h3 class="h4">Do you want to continue?</h3>
+                <p>This will change assets & allocations from your current selections</p>
+              </div>
+              <div class="signUp_btns">
+                <button class="popup__btn">Cancel</button>
+                <button class="popup__btn blue_button">Continue</button>
+              </div>
+            </div>
+        </div>
+      </div>
+      <!-- REMOVE STOCK POPUP END -->
+      <!-- footer-->
+      <footer class="ovt_footer fixed_footerA">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 col-sm-12 col-12 border_bottom">
+              <div class="footer_logo">
+                <a class="black_theme" href="home.html"><img src="img/white.svg" alt="OVTLYR"></a>
+                <a class="white_theme" href="home.html"><img src="img/black.svg" alt="OVTLYR"></a>
+              </div>
+              <h4 class="h4 mb-4">Leading Market Behavioral Data</h4>
+              <ul class="footer_socialMedia">
+                <li><a href="https://www.facebook.com/Ovtlyr/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://www.linkedin.com/company/ovtlyr" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="https://twitter.com/ovtlyr" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://www.instagram.com/ovtlyr/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-sm-12 col-12 border_bottom">
+              <h4 class="h4">Resources</h4>
+              <ul class="footer_menu footer_menu2">
+                <li><a href="#">News & Opinion</a></li>
+                <li><a href="coverage-list.html">Coverage List</a></li>
+                <!-- <li><a href="#">Guide</a></li> -->
+                <li><a href="faqs.html">FAQs</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-sm-12 col-12 border_bottom">
+              <h4 class="h4">Company</h4>
+              <ul class="footer_menu footer_menu2">
+                <!-- <li><a href="#">About Us</a></li>
+                <li><a href="#">Employment</a></li> -->
+                <li><a href="contact-us.html">Contact Us</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-2 col-sm-12 col-12">
+              <h4 class="h4">Legal</h4>
+              <ul class="footer_menu footer_menu2">
+                <li><a href="terms-of-use.html">Terms of Use</a></li>
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+<!-- scripts-->
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.nice-select.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/jquery.daterangepicker.min.js"></script>
+<script src="js/app.js"></script>
+<div style="display: none">
+  <svg width="0" height="0">
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="icon-theme-light">
+  <path d="M8 13.333c.368 0 .667.298.667.667s-.298.667-.667.667-.667-.298-.667-.667.298-.667.667-.667zm-4.714-1.562c.26-.26.682-.26.943 0s.26.682 0 .943-.682.26-.943 0-.26-.682 0-.943zm9.428 0c.26.26.26.682 0 .943s-.682.26-.943 0-.26-.682 0-.943.682-.26.943 0zM8 5.333c1.473 0 2.667 1.194 2.667 2.667S9.472 10.666 8 10.666 5.333 9.472 5.333 8 6.527 5.333 8 5.333zm0 1.333c-.736 0-1.333.597-1.333 1.333S7.263 9.333 8 9.333 9.333 8.736 9.333 8 8.736 6.666 8 6.666zm6 .667c.368 0 .667.298.667.667s-.298.667-.667.667-.667-.298-.667-.667.298-.667.667-.667zm-12 0c.368 0 .667.298.667.667s-.298.667-.667.667-.667-.298-.667-.667.298-.667.667-.667zm10.714-4.047c.26.26.26.682 0 .943s-.682.26-.943 0-.26-.682 0-.943.682-.26.943 0zm-9.428 0c.26-.26.682-.26.943 0s.26.682 0 .943-.682.26-.943 0-.26-.682 0-.943zM8 1.333c.368 0 .667.298.667.667s-.298.667-.667.667-.667-.298-.667-.667.298-.667.667-.667z"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="icon-theme-dark">
+  <path d="M8 12c.368 0 .667.298.667.667h0V14c0 .368-.298.667-.667.667s-.667-.298-.667-.667h0v-1.333c0-.368.298-.667.667-.667zm-3.771-1.171c.26-.26.682-.26.943 0s.26.682 0 .943h0l-.943.943c-.26.26-.682.26-.943 0s-.26-.682 0-.943h0zm7.542 0l.943.943c.26.26.26.682 0 .943s-.682.26-.943 0l-.943-.943c-.26-.26-.26-.682 0-.943s.682-.26.943 0zM8 5.333c1.473 0 2.667 1.194 2.667 2.667S9.472 10.666 8 10.666 5.333 9.472 5.333 8 6.527 5.333 8 5.333zm0 1.333c-.736 0-1.333.597-1.333 1.333S7.263 9.333 8 9.333 9.333 8.736 9.333 8 8.736 6.666 8 6.666zm6 .667c.368 0 .667.298.667.667s-.298.667-.667.667h-1.333C12.298 8.666 12 8.368 12 8s.298-.667.667-.667H14zm-10.667 0c.368 0 .667.298.667.667s-.298.667-.667.667h0H2c-.368 0-.667-.298-.667-.667s.298-.667.667-.667h0zm9.381-4.047c.26.26.26.682 0 .943l-.943.943c-.26.26-.682.26-.943 0s-.26-.682 0-.943l.943-.943c.26-.26.682-.26.943 0zm-9.428 0c.26-.26.682-.26.943 0h0l.943.943c.26.26.26.682 0 .943s-.682.26-.943 0h0l-.943-.943c-.26-.26-.26-.682 0-.943zM8 1.333c.368 0 .667.298.667.667h0v1.333C8.666 3.701 8.368 4 8 4s-.667-.298-.667-.667h0V2c0-.368.298-.667.667-.667z"></path>
+  </symbol>
+  </svg>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+$(document).ready(function(){
+  $('.header_Search #headerSearch_input').click(function(){
+  $(".search_popup").css("display" , "block");
+   });
+  });
+  $(document).click(function() {
+  var container = $(".header_Search");
+  if (!container.is(event.target) && !container.has(event.target).length) {
+    $(".search_popup").css("display" , "none");
+  }
+});
+</script>
+<script>
+document.querySelector('.show_sideBar').addEventListener('click', function(event) {
+  event.preventDefault();
+  var target1 = document.querySelector('.watchlist_sidebar');
+  if (target1.classList.contains('open')) {
+    target1.classList.remove('open');
+  } 
+  else {
+    target1.classList.add('open');
+  }
+});
+document.querySelector('.show_sideBar2').addEventListener('click', function(event) {
+  var target1 = document.querySelector('.watchlist_sidebar');
+  if (target1.classList.contains('open')) {
+    target1.classList.remove('open');
+  } 
+  else {
+    target1.classList.add('open');
+  }
+});  
+</script>
+<!--====== Resources ======-->
+<script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+<!--============ PIE CHART START ============-->
+<script>
+  am5.ready(function() {
+  am5.addLicense("AM5C311897715");
+  var root = am5.Root.new("home_piechart");
+  root.setThemes([
+    am5themes_Animated.new(root)
+  ]);
+  var chart = root.container.children.push(am5percent.PieChart.new(root, {
+    layout: root.verticalLayout
+  }));
+  root.interfaceColors.set("grid", am5.color(0x808191));
+  var series = chart.series.push(am5percent.PieSeries.new(root, {
+    valueField: "Allocation",
+    categoryField: "Labels",
+    alignLabels: false
+  }));
+    
+  series.slices.template.adapters.add("fill", function(fill, target) {
+    return target.dataItem.get("category") == "cash" ? am5.color(0x555d66) : fill;
+  })	
+    series.get("colors").set("colors", [
+    am5.color(0x468999),
+    am5.color(0x519DAF),
+    am5.color(0x5CB1C5),
+    am5.color(0x73CAE1),
+    am5.color(0x82D0E4),
+    am5.color(0x91D6E7),
+    am5.color(0xA0DCEA),
+    am5.color(0xAFE2ED),
+    am5.color(0xBEE8F0),
+    am5.color(0xCDEEF3),
+    am5.color(0xDCF4F6)
+  ]);
+    series.labels.template.setAll({
+    fontSize: 12,
+    text: "{category}",
+    textType: "radial",
+    radius: 0,
+    centerX: am5.percent(100),
+    fill: am5.color(0xffffff)
+  });
+    
+  series.data.setAll( [
+  {
+  "Labels": "cash",
+  "Quotedate": "2021-07-29",
+  "Allocation": 0.20,
+  "Delta_Allocation": 5.55111512312578e-17
+  },
+  {
+  "Labels": "FANG",
+  "Quotedate": "2021-07-29",
+  "Allocation":  0.20,
+  "Delta_Allocation": 0.0109090194901649
+  },
+  {
+  "Labels": "MSI",
+  "Quotedate": "2021-07-29",
+  "Allocation":  0.20,
+  "Delta_Allocation": -0.00421904374798759
+  },
+  {
+  "Labels": "RHP",
+  "Quotedate": "2021-07-29",
+  "Allocation":  0.70,
+  "Delta_Allocation": -0.000183027813774342
+  },
+  {
+  "Labels": "WU",
+  "Quotedate": "2021-07-29",
+  "Allocation":  0.30,
+  "Delta_Allocation": -0.00156506958872218
+  },
+  {
+  "Labels": "A",
+  "Quotedate": "2021-07-29",
+  "Allocation":  0.30,
+  "Delta_Allocation": -0.00156506958872218
+  },
+  {
+  "Labels": "AA",
+  "Quotedate": "2021-07-29",
+  "Allocation":  0.30,
+  "Delta_Allocation": -0.00156506958872218
+  }
+  ,
+  {
+  "Labels": "SS",
+  "Quotedate": "2021-07-29",
+  "Allocation":  0.30,
+  "Delta_Allocation": -0.00156506958872218
+  }
+  ,
+  {
+  "Labels": "E",
+  "Quotedate": "2021-07-29",
+  "Allocation":  0.30,
+  "Delta_Allocation": -0.00156506958872218
+  }
+  ,
+  {
+  "Labels": "U",
+  "Quotedate": "2021-07-29",
+  "Allocation":  0.30,
+  "Delta_Allocation": -0.00156506958872218
+  }
+  ,
+  {
+  "Labels": "W",
+  "Quotedate": "2021-07-29",
+  "Allocation":  0.30,
+  "Delta_Allocation": -0.00156506958872218
+  }
+  ]);
+  series.appear(1000, 100);
+  
+  }); 
+</script>
+<!--============ PIE CHART END =============-->
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<!--=========== BAR CHART START ============-->
+<script>
+  //************* generate data ************
+  var data =
+[
+{
+  "Date": "15-Apr-20",
+  "BH": 0.7,
+  "DU": 0.34,
+  "Cash": 18.45
+},
+{
+  "Date": "16-Apr-20",
+  "BH": 0.44,
+  "DU": 0.08,
+  "Cash": 0
+},
+{
+  "Date": "20-Apr-20",
+  "BH": -0.67,
+  "DU": -0.42,
+  "Cash": 21.4
+},
+{
+  "Date": "21-Apr-20",
+  "BH": -1.4,
+  "DU": -1.01,
+  "Cash": 22.73
+},
+{
+  "Date": "22-Apr-20",
+  "BH": -0.53,
+  "DU": -0.77,
+  "Cash": 23.53
+},
+{
+  "Date": "23-Apr-20",
+  "BH": -1.54,
+  "DU": -2.12,
+  "Cash": 24.22
+},
+{
+  "Date": "24-Apr-20",
+  "BH": -2.15,
+  "DU": -2.57,
+  "Cash": 23.22
+},
+{
+  "Date": "27-Apr-20",
+  "BH": -1.04,
+  "DU": -2.07,
+  "Cash": 54.99
+},
+{
+  "Date": "28-Apr-20",
+  "BH": 0.52,
+  "DU": -1.35,
+  "Cash": 54.18
+},
+{
+  "Date": "29-Apr-20",
+  "BH": -0.08,
+  "DU": -1.63,
+  "Cash": 53.62
+},
+{
+  "Date": "30-Apr-20",
+  "BH": -1.77,
+  "DU": -2.41,
+  "Cash": 52.93,ZeroLine:0
+},
+{
+  "Date": "01-May-20",
+  "BH": -2.19,
+  "DU": -2.61,
+  "Cash": 51.67,ZeroLine:0
+},
+{
+  "Date": "04-May-20",
+  "BH": -2.94,
+  "DU": -2.98,
+  "Cash": 51.09,ZeroLine:0
+},
+{
+  "Date": "05-May-20",
+  "BH": -1.81,
+  "DU": -2.43,
+  "Cash": 51.51,ZeroLine:0
+},
+{
+  "Date": "06-May-20",
+  "BH": -0.65,
+  "DU": -1.89,
+  "Cash": 52.93,ZeroLine:0
+},
+{
+  "Date": "07-May-20",
+  "BH": -0.71,
+  "DU": -1.92,
+  "Cash": 54.09,ZeroLine:0
+},
+{
+  "Date": "08-May-20",
+  "BH": -0.3,
+  "DU": -1.74,
+  "Cash": 54.8,ZeroLine:0
+},
+{
+  "Date": "11-May-20",
+  "BH": -1.09,
+  "DU": -2.1,
+  "Cash": 55.38,ZeroLine:0
+},
+{
+  "Date": "12-May-20",
+  "BH": -1.29,
+  "DU": -2.03,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "13-May-20",
+  "BH": -1.57,
+  "DU": -2.47,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "14-May-20",
+  "BH": -1.36,
+  "DU": -2.55,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "15-May-20",
+  "BH": -1.63,
+  "DU": -2.67,
+  "Cash": 59.79,ZeroLine:0
+},
+{
+  "Date": "18-May-20",
+  "BH": -0.96,
+  "DU": -2.45,
+  "Cash": 60.97,ZeroLine:0
+},
+{
+  "Date": "19-May-20",
+  "BH": -1.09,
+  "DU": -2.51,
+  "Cash": 61.65,ZeroLine:0
+},
+{
+  "Date": "20-May-20",
+  "BH": -1.04,
+  "DU": -2.1,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "21-May-20",
+  "BH": -0.7,
+  "DU": -1.56,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "22-May-20",
+  "BH": -0.04,
+  "DU": -0.5,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "26-May-20",
+  "BH": 0.05,
+  "DU": -0.87,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "27-May-20",
+  "BH": 0.46,
+  "DU": -0.72,
+  "Cash": 16.37,ZeroLine:0
+},
+{
+  "Date": "28-May-20",
+  "BH": 1.26,
+  "DU": -0.42,
+  "Cash": 19.28,ZeroLine:0
+},
+{
+  "Date": "29-May-20",
+  "BH": 1.54,
+  "DU": -0.14,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "01-Jun-20",
+  "BH": 1.91,
+  "DU": 0.04,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "02-Jun-20",
+  "BH": 3.03,
+  "DU": 1.27,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "03-Jun-20",
+  "BH": 3.22,
+  "DU": 1.34,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "04-Jun-20",
+  "BH": 3.79,
+  "DU": 1.98,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "05-Jun-20",
+  "BH": 4.08,
+  "DU": 2.78,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "08-Jun-20",
+  "BH": 5.08,
+  "DU": 3.2,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "09-Jun-20",
+  "BH": 3.72,
+  "DU": 2.44,
+  "Cash": 32.92,ZeroLine:0
+},
+{
+  "Date": "10-Jun-20",
+  "BH": 4.15,
+  "DU": 2.48,
+  "Cash": 36.33,ZeroLine:0
+},
+{
+  "Date": "11-Jun-20",
+  "BH": 6.66,
+  "DU": 4.11,
+  "Cash": 40.06,ZeroLine:0
+},
+{
+  "Date": "12-Jun-20",
+  "BH": 7.57,
+  "DU": 4.12,
+  "Cash": 45.77,ZeroLine:0
+},
+{
+  "Date": "13-Jun-20",
+  "BH": 6.85,
+  "DU": 3.89,
+  "Cash": 51.56,ZeroLine:0
+},
+{
+  "Date": "14-Dec-20",
+  "BH": 714.4819914,
+  "DU": 1420.552346,
+  "Cash": 57.09,ZeroLine:0
+},
+{
+  "Date": "15-Dec-20",
+  "BH": 716.5375733,
+  "DU": 1421.131535,
+  "Cash": 56.62,ZeroLine:0
+},
+{
+  "Date": "16-Dec-20",
+  "BH": 716.3597697,
+  "DU": 1421.479762,
+  "Cash": 57.06,ZeroLine:0
+},
+{
+  "Date": "17-Dec-20",
+  "BH": 717.2298276,
+  "DU": 1422.144823,
+  "Cash": 38.35,ZeroLine:0
+},
+{
+  "Date": "18-Dec-20",
+  "BH": 717.4510459,
+  "DU": 1422.31335,
+  "Cash": 61.15,ZeroLine:0
+},
+{
+  "Date": "21-Dec-20",
+  "BH": 717.1690252,
+  "DU": 1422.333447,
+  "Cash": 62.05,ZeroLine:0
+},
+{
+  "Date": "22-Dec-20",
+  "BH": 717.084628,
+  "DU": 1422.585067,
+  "Cash": 57.8,ZeroLine:0
+},
+{
+  "Date": "23-Dec-20",
+  "BH": 718.1938148,
+  "DU": 1423.643548,
+  "Cash": 41.08,ZeroLine:0
+},
+{
+  "Date": "24-Dec-20",
+  "BH": 718.5276331,
+  "DU": 1423.773778,
+  "Cash": 39.96,ZeroLine:0
+},
+{
+  "Date": "28-Dec-20",
+  "BH": 719.2366293,
+  "DU": 1424.0081,
+  "Cash": 51.74,ZeroLine:0
+},
+{
+  "Date": "29-Dec-20",
+  "BH": 718.840013,
+  "DU": 1423.930593,
+  "Cash": 46.24,ZeroLine:0
+},
+{
+  "Date": "30-Dec-20",
+  "BH": 719.2015213,
+  "DU": 1423.948635,
+  "Cash": 51.81,ZeroLine:0
+},
+{
+  "Date": "31-Dec-20",
+  "BH": 720.4263018,
+  "DU": 1424.640702,
+  "Cash": 52.82,ZeroLine:0
+},
+{
+  "Date": "22-Apr-81",
+  "BH": -0.53,
+  "DU": -0.77,
+  "Cash": 23.53,ZeroLine:0
+},
+{
+  "Date": "23-Apr-81",
+  "BH": -1.54,
+  "DU": -2.12,
+  "Cash": 24.22,ZeroLine:0
+},
+{
+  "Date": "24-Apr-81",
+  "BH": -2.15,
+  "DU": -2.57,
+  "Cash": 23.22,ZeroLine:0
+},
+{
+  "Date": "27-Apr-81",
+  "BH": -1.04,
+  "DU": -2.07,
+  "Cash": 54.99,ZeroLine:0
+},
+{
+  "Date": "28-Apr-81",
+  "BH": 0.52,
+  "DU": -1.35,
+  "Cash": 54.18,ZeroLine:0
+},
+{
+  "Date": "29-Apr-81",
+  "BH": -0.08,
+  "DU": -1.63,
+  "Cash": 53.62,ZeroLine:0
+},
+{
+  "Date": "30-Apr-81",
+  "BH": -1.77,
+  "DU": -2.41,
+  "Cash": 52.93,ZeroLine:0
+},
+{
+  "Date": "01-May-81",
+  "BH": -2.19,
+  "DU": -2.61,
+  "Cash": 51.67,ZeroLine:0
+},
+{
+  "Date": "04-May-81",
+  "BH": -2.94,
+  "DU": -2.98,
+  "Cash": 51.09,ZeroLine:0
+},
+{
+  "Date": "05-May-81",
+  "BH": -1.81,
+  "DU": -2.43,
+  "Cash": 51.51,ZeroLine:0
+},
+{
+  "Date": "06-May-81",
+  "BH": -0.65,
+  "DU": -1.89,
+  "Cash": 52.93,ZeroLine:0
+},
+{
+  "Date": "07-May-81",
+  "BH": -0.71,
+  "DU": -1.92,
+  "Cash": 54.09,ZeroLine:0
+},
+{
+  "Date": "08-May-81",
+  "BH": -0.3,
+  "DU": -1.74,
+  "Cash": 54.8,ZeroLine:0
+},
+{
+  "Date": "11-May-81",
+  "BH": -1.09,
+  "DU": -2.1,
+  "Cash": 55.38,ZeroLine:0
+},
+{
+  "Date": "12-May-81",
+  "BH": -1.29,
+  "DU": -2.03,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "13-May-81",
+  "BH": -1.57,
+  "DU": -2.47,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "14-May-81",
+  "BH": -1.36,
+  "DU": -2.55,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "15-May-81",
+  "BH": -1.63,
+  "DU": -2.67,
+  "Cash": 59.79,ZeroLine:0
+},
+{
+  "Date": "18-May-81",
+  "BH": -0.96,
+  "DU": -2.45,
+  "Cash": 60.97,ZeroLine:0
+},
+{
+  "Date": "19-May-81",
+  "BH": -1.09,
+  "DU": -2.51,
+  "Cash": 61.65,ZeroLine:0
+},
+{
+  "Date": "20-May-81",
+  "BH": -1.04,
+  "DU": -2.1,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "21-May-81",
+  "BH": -0.7,
+  "DU": -1.56,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "22-May-81",
+  "BH": -0.04,
+  "DU": -0.5,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "26-May-81",
+  "BH": 0.05,
+  "DU": -0.87,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "27-May-81",
+  "BH": 0.46,
+  "DU": -0.72,
+  "Cash": 16.37,ZeroLine:0
+},
+{
+  "Date": "28-May-81",
+  "BH": 1.26,
+  "DU": -0.42,
+  "Cash": 19.28,ZeroLine:0
+},
+{
+  "Date": "29-May-81",
+  "BH": 1.54,
+  "DU": -0.14,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "01-Jun-81",
+  "BH": 1.91,
+  "DU": 0.04,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "02-Jun-81",
+  "BH": 3.03,
+  "DU": 1.27,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "03-Jun-81",
+  "BH": 3.22,
+  "DU": 1.34,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "04-Jun-81",
+  "BH": 3.79,
+  "DU": 1.98,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "05-Jun-81",
+  "BH": 4.08,
+  "DU": 2.78,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "08-Jun-81",
+  "BH": 5.08,
+  "DU": 3.2,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "09-Jun-81",
+  "BH": 3.72,
+  "DU": 2.44,
+  "Cash": 32.92,ZeroLine:0
+},
+{
+  "Date": "10-Jun-81",
+  "BH": 4.15,
+  "DU": 2.48,
+  "Cash": 36.33,ZeroLine:0
+},
+{
+  "Date": "11-Jun-81",
+  "BH": 6.66,
+  "DU": 4.11,
+  "Cash": 40.06,ZeroLine:0
+},
+{
+  "Date": "12-Jun-81",
+  "BH": 7.57,
+  "DU": 4.12,
+  "Cash": 45.77,ZeroLine:0
+},
+{
+  "Date": "15-Jun-81",
+  "BH": 6.85,
+  "DU": 3.89,
+  "Cash": 51.56,ZeroLine:0
+},
+{
+  "Date": "16-Jun-81",
+  "BH": 5.31,
+  "DU": 2.74,
+  "Cash": 56.95,ZeroLine:0
+},
+{
+  "Date": "17-Jun-81",
+  "BH": 5.09,
+  "DU": 2.52,
+  "Cash": 76.32,ZeroLine:0
+},
+{
+  "Date": "18-Jun-81",
+  "BH": 4.61,
+  "DU": 2.57,
+  "Cash": 76.57,ZeroLine:0
+},
+{
+  "Date": "19-Jun-81",
+  "BH": 4.49,
+  "DU": 2.51,
+  "Cash": 75.44,ZeroLine:0
+},
+{
+  "Date": "22-Jun-81",
+  "BH": 3.77,
+  "DU": 2.33,
+  "Cash": 77.36,ZeroLine:0
+},
+{
+  "Date": "23-Jun-81",
+  "BH": 4.85,
+  "DU": 2.79,
+  "Cash": 78.59,ZeroLine:0
+},
+{
+  "Date": "24-Jun-81",
+  "BH": 4.32,
+  "DU": 2.58,
+  "Cash": 79.85,ZeroLine:0
+},
+{
+  "Date": "25-Jun-81",
+  "BH": 3.79,
+  "DU": 2.38,
+  "Cash": 80.54,ZeroLine:0
+},
+{
+  "Date": "26-Jun-81",
+  "BH": 2.73,
+  "DU": 2.27,
+  "Cash": 79.79,ZeroLine:0
+},
+{
+  "Date": "29-Jun-81",
+  "BH": 1.9,
+  "DU": 2.17,
+  "Cash": 76.82,ZeroLine:0
+},
+{
+  "Date": "30-Jun-81",
+  "BH": 1.22,
+  "DU": 2,
+  "Cash": 74.09,ZeroLine:0
+},
+{
+  "Date": "01-Jul-81",
+  "BH": 0.77,
+  "DU": 1.87,
+  "Cash": 73.55,ZeroLine:0
+},
+{
+  "Date": "02-Jul-81",
+  "BH": -0.91,
+  "DU": 1.6,
+  "Cash": 74.09,ZeroLine:0
+},
+{
+  "Date": "06-Jul-81",
+  "BH": -3.42,
+  "DU": 1.53,
+  "Cash": 74.52,ZeroLine:0
+},
+{
+  "Date": "07-Jul-81",
+  "BH": -0.47,
+  "DU": 2.4,
+  "Cash": 75.53,ZeroLine:0
+},
+{
+  "Date": "08-Jul-81",
+  "BH": 0.46,
+  "DU": 2.69,
+  "Cash": 77.07,ZeroLine:0
+},
+{
+  "Date": "09-Jul-81",
+  "BH": -0.47,
+  "DU": 2.28,
+  "Cash": 78.18,ZeroLine:0
+},
+{
+  "Date": "10-Jul-81",
+  "BH": -1.23,
+  "DU": 2.15,
+  "Cash": 79.17,ZeroLine:0
+},
+{
+  "Date": "13-Jul-81",
+  "BH": -1.2,
+  "DU": 2.28,
+  "Cash": 79.48,ZeroLine:0
+},
+{
+  "Date": "14-Jul-81",
+  "BH": -1.22,
+  "DU": 2.15,
+  "Cash": 80.14,ZeroLine:0
+},
+{
+  "Date": "15-Jul-81",
+  "BH": -1.33,
+  "DU": 2.28,
+  "Cash": 80.64,ZeroLine:0
+},
+{
+  "Date": "16-Jul-81",
+  "BH": -1.19,
+  "DU": 2.28,
+  "Cash": 80.93,ZeroLine:0
+},
+{
+  "Date": "17-Jul-81",
+  "BH": -1.19,
+  "DU": 2.28,
+  "Cash": 81.11,ZeroLine:0
+},
+{
+  "Date": "20-Jul-81",
+  "BH": -3.06,
+  "DU": 1.66,
+  "Cash": 82.11,ZeroLine:0
+},
+{
+  "Date": "21-Jul-81",
+  "BH": -3.06,
+  "DU": 1.66,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "22-Jul-81",
+  "BH": -3.06,
+  "DU": 1.66,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "23-Jul-81",
+  "BH": -2.74,
+  "DU": 1.73,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "24-Jul-81",
+  "BH": -2.49,
+  "DU": 2.73,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "27-Jul-81",
+  "BH": -2.49,
+  "DU": 2.73,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "28-Jul-81",
+  "BH": -2.34,
+  "DU": 3.03,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "16-Feb-84",
+  "BH": 45.07,
+  "DU": 79.38,
+  "Cash": 91.9,ZeroLine:0
+},
+{
+  "Date": "17-Feb-84",
+  "BH": 44.57,
+  "DU": 79.29,
+  "Cash": 94.13,ZeroLine:0
+},
+{
+  "Date": "21-Feb-84",
+  "BH": 44.36,
+  "DU": 79.27,
+  "Cash": 96.03,ZeroLine:0
+},
+{
+  "Date": "22-Feb-84",
+  "BH": 43.95,
+  "DU": 79.25,
+  "Cash": 97.51,ZeroLine:0
+},
+{
+  "Date": "23-Feb-84",
+  "BH": 42.93,
+  "DU": 79.24,
+  "Cash": 98.76,ZeroLine:0
+},
+{
+  "Date": "24-Feb-84",
+  "BH": 45.42,
+  "DU": 82.54,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "27-Feb-84",
+  "BH": 46.63,
+  "DU": 85.37,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "28-Feb-84",
+  "BH": 44.08,
+  "DU": 83.99,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "29-Feb-84",
+  "BH": 45.4,
+  "DU": 83.6,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "01-Mar-84",
+  "BH": 43.75,
+  "DU": 82.4,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "02-Mar-84",
+  "BH": 45.73,
+  "DU": 84.38,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "05-Mar-84",
+  "BH": 45.22,
+  "DU": 83.87,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "06-Mar-84",
+  "BH": 44.62,
+  "DU": 83.27,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "07-Mar-84",
+  "BH": 44.32,
+  "DU": 82.98,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "08-Mar-84",
+  "BH": 44.64,
+  "DU": 83.29,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "09-Mar-84",
+  "BH": 43.61,
+  "DU": 82.26,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "12-Mar-84",
+  "BH": 44.64,
+  "DU": 83.42,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "13-Mar-84",
+  "BH": 44.95,
+  "DU": 83.73,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "14-Mar-84",
+  "BH": 45.46,
+  "DU": 84.23,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "15-Mar-84",
+  "BH": 45.98,
+  "DU": 84.75,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "16-Mar-84",
+  "BH": 47.21,
+  "DU": 85.98,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "19-Mar-84",
+  "BH": 45.69,
+  "DU": 84.46,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "29-Jul-87",
+  "BH": 117.3573953,
+  "DU": 177.6140719,
+  "Cash": 61.18,ZeroLine:0
+},
+{
+  "Date": "30-Jul-87",
+  "BH": 117.7141148,
+  "DU": 177.6538492,
+  "Cash": 63.79,ZeroLine:0
+},
+{
+  "Date": "31-Jul-87",
+  "BH": 118.1095252,
+  "DU": 178.35456,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "03-Aug-87",
+  "BH": 117.8706058,
+  "DU": 178.4163182,
+  "Cash": 2.66,ZeroLine:0
+},
+{
+  "Date": "04-Aug-87",
+  "BH": 116.5961283,
+  "DU": 177.1697328,
+  "Cash": 7.41,ZeroLine:0
+},
+{
+  "Date": "05-Aug-87",
+  "BH": 118.9144846,
+  "DU": 180.2017467,
+  "Cash": 10.78,ZeroLine:0
+},
+{
+  "Date": "06-Aug-87",
+  "BH": 120.7908652,
+  "DU": 183.3725786,
+  "Cash": 14.7,ZeroLine:0
+},
+{
+  "Date": "07-Aug-87",
+  "BH": 121.6359075,
+  "DU": 184.2176209,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "10-Aug-87",
+  "BH": 123.4472945,
+  "DU": 186.0290079,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "11-Aug-87",
+  "BH": 125.2906741,
+  "DU": 187.9249786,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "12-Aug-87",
+  "BH": 126.6679672,
+  "DU": 189.4307394,
+  "Cash": 0,ZeroLine:0
+},
+{
+  "Date": "13-Aug-87",
+  "BH": 127.9544752,
+  "DU": 190.7696376,
+  "Cash": 12.1,ZeroLine:0
+},
+{
+  "Date": "14-Aug-87",
+  "BH": 127.3422869,
+  "DU": 190.2035798,
+  "Cash": 23.98,ZeroLine:0
+},
+{
+  "Date": "17-Aug-87",
+  "BH": 127.5388705,
+  "DU": 190.3266424,
+  "Cash": 50.98,ZeroLine:0
+},
+{
+  "Date": "21-Jun-21",
+  "BH": 732.033653,
+  "DU": 1440.298257,
+  "Cash": 16.81,ZeroLine:0
+}
+]
+ 
+  var margin = {
+      top: 40,
+      right: 100,
+      bottom: 100,
+      left: 40
+    },
+ /*   width = 500 - margin.left - margin.right, */
+   width = parseInt(d3.select("#Strategy_View2").style("width")) - margin.left - margin.right,
+    height = 500 - margin.top - margin.bottom;
+  
+
+// set the ranges
+var x = d3.scaleBand()
+        .range([0, width]) 
+.domain(data.map(function(d) { return d.Date; }))
+        
+var y = d3.scaleLinear()
+.domain([0,d3.max(data, function (d) { return d.Cash; })])
+       .range([height, 0]);
+
+
+var yRightDU = d3.scaleLinear()
+.domain([-1500,1500, d3.max(data, function (d) { return d.DU; })])
+       .range([height, 0]);
+
+  var yRightBH = d3.scaleLinear()
+.domain([-1500,1500, d3.max(data, function (d) { return d.BH; })])
+       .range([height, 0]);  
+  
+  
+  var yRightZeroLine = d3.scaleLinear()
+  .domain([-1400, 1400, d3.max(data, function (d) { return d.ZeroLine; })])
+       .range([height, 0]);
+  
+
+  
+var svg = d3.select("#Strategy_View2").append("svg")
+  .attr("width", width + margin.left + margin.right)
+  .attr("height", height + margin.top + margin.bottom)
+.append("g")
+  .attr("transform", 
+        "translate(" + margin.left + "," + margin.top + ")");
+var focus = svg.append("g")
+    .attr("class", "focus")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+var lineBH = d3.line()
+.x(function(d) { return x(d.Date); })
+.y(function(d) { return yRightBH(d.BH); })
+
+var lineDU = d3.line()
+.x(function(d) { return x(d.Date); })
+.y(function(d) { return yRightDU(d.DU); });
+
+
+var ZeroLine = d3.line()
+.x(function(d) { return x(d.Date); })
+.y(function(d) { return yRightZeroLine(d.ZeroLine); });
+  
+focus.append("rect")
+  .attr("class", "zoom")
+  .attr("width", width)
+  .attr("height", height)
+  .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+ 
+  svg.append("defs")
+    .append("rect")
+    .attr("width", width)
+    .attr("height", height);
+
+  
+  
+  
+// append the rectangles for the bar chart
+focus.selectAll(".bar_strategy")
+    .data(data)
+  .enter().append("rect")
+    .attr("class", "bar_strategy")
+    .attr("x", function(d) { return x(d.Date); })
+    .attr("width", x.bandwidth())
+    .attr("y", function(d) { return y(d.Cash); })
+    /*.attr("height", function(d) { return y(0) - y(d.Cash); })*/
+  .attr("height", function(d) {
+return Math.abs(y(d.Cash) - y(0));
+})
+
+focus.append("path")
+  .datum(data)
+  .attr("class", "lineBH") 
+  .attr("d", lineBH)
+
+  
+  focus.append("path")
+  .datum(data)
+  .attr("class", "lineDU") 
+  .attr("d", lineDU)
+  
+   
+    
+   focus.append("path")
+  .datum(data)
+  .attr("class", "ZeroLine") 
+  .attr("d", ZeroLine)
+  
+
+// add the x Axis
+focus.append("g")
+    .attr("transform", "translate(0," + height + ")")
+    .call(d3.axisBottom(x).tickValues(x.domain().filter(function(d,i){ return !(i%8)})))
+  .selectAll("text")	
+      .style("text-anchor", "end")
+      .attr("dx", "-.8em")
+      .attr("dy", ".15em")
+      .attr("transform", "rotate(-65)");
+
+
+
+  // Add the Y Axis
+  focus.append("g")
+    .attr("class", "axis")
+    .call(d3.axisLeft(y).tickFormat(function(d) { return d + "%"; }).tickPadding([5]))
+ 
+// Add the YRight Axis
+  focus.append("g")
+  .attr("class", "y axis")	
+.attr("transform", "translate(" + width + " , 0)")	
+    .call(d3.axisRight(yRightDU).ticks(8).tickFormat(function(d) { return d + "%"; }).tickPadding([5]))
+  
+  
+  focus.append("g")
+  .attr("class", "y axis")	.attr("opacity",0)
+.attr("transform", "translate(" + width + " , 0)")	
+    .call(d3.axisRight(yRightBH).ticks(8).tickFormat(function(d) { return d + "%"; }).tickPadding([5]))
+  focus.append("g")
+
+ 
+
+  
+</script>
+<!--============ BAR CHART END =============-->
+</body>
+</html>
