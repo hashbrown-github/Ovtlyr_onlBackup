@@ -1,0 +1,2405 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@media(max-width:2200px) {
+.desk_rightTxt {
+    width: 36%;
+    top: 22%;
+}
+    .desk_rightTxt {
+    width: 36%;
+    top: 20%;
+}
+.content__Box .left_imgBox {
+    height: 350px;
+}
+}
+@media(max-width:2000px) {
+.desk_rightTxt {
+    top: 20%;
+}
+.content__Box .left_imgBox {
+    height: 395px;
+    width: 49%;
+}
+.product_dl .desk_rightTxt {
+    top: 30%;
+}
+}
+@media(max-width:1920px) {
+.stats_box img {
+	width: 35%;
+}
+.tri_text {
+	float: left;
+	margin-bottom: 0;
+	margin-top: 0;
+	width: 32%;
+}
+.kie_banner img {
+	width: 28%;
+}
+.newsletter-text {
+	padding-right: 29%;
+}
+.newsletter-img img {
+    width: 4%;
+}
+.abouUs_banner .center-box {
+    width: 48%;
+}
+/*=========== LOGIN PAGE ==========*/
+.kie_loginBox {
+    width: 35%;
+}
+.Checkbox_field span {
+    vertical-align: top;
+}
+/*=========== LOGIN PAGE ==========*/
+/*=========== NEW PRODUCT PAGE ==========*/
+.banner_cell .trident_con {
+    padding-top: 70px;
+}
+.left_menu .menu_list li a img {
+    width: 20%;
+}
+.trident_logoTxt img {
+    width: 75%;
+}
+.desk_rightTxt {
+    width: 36%;
+    top: 18%;
+}
+.content__Box .left_imgBox {
+    height: 395px;
+}
+.features_icons.pro_features ul li .icons_bg {
+    width: 20%;
+}
+.beta_mBoxSec .first_para {
+    padding-right: 35%;
+}
+.beta_mBoxSec .sec_para {
+    text-align: left;
+    width: 55%;
+    float: right;
+    padding-right: 50px;
+}
+.product_dl .desk_rightTxt {
+    width: 38%;
+}
+/*=========== NEW PRODUCT PAGE ==========*/
+}
+@media(max-width: 1800px) {
+.abouUs_banner .center-box {
+    width: 50%;
+}
+/*=========== NEW INDEX PAGE ==========*/
+.index_NewSec , .index_NewSec img {
+    height: 500px;
+}
+.content_whiteBg {
+    height: 570px;
+}
+.desk_rightTxt {
+    padding: 50px;
+}
+/*=========== NEW INDEX PAGE ==========*/
+/*=========== NEW PRODUCT PAGE ==========*/
+.content__Box .dark__Box {
+    padding: 70px 90px;
+    padding-left: 25%;
+}
+.detl_grid .dtl_LeftG p {
+    padding-right: 15%;
+}
+.graph_secBox h1 {
+    margin-bottom: 30px;
+}
+.product_dl .desk_rightTxt {
+    top: 29%;
+    padding: 60px;
+}
+/*=========== NEW PRODUCT PAGE ==========*/
+}
+@media(max-width: 1700px) {
+.abouUs_banner .center-box {
+    width: 54%;
+}
+/*=========== NEW PRODUCTS PAGE ==========*/
+.desk_rightTxt {
+    width: 37%;
+}
+.index_features ul li {
+    margin: 0 8%;
+}
+.content__Box .left_imgBox {
+    width: 45%;
+}
+.content__Box .dark__Box {
+    padding: 70px;
+    padding-left: 21%;
+}
+.features_icons.pro_features ul li {
+    padding-right: 10%;
+}
+.features_icons.pro_features .product_cont {
+    padding-top: 0;
+}
+.features_icons.pro_features ul li .icons_bg {
+    width: 26%;
+}
+.product_dl .desk_rightTxt {
+    width: 42%;
+}
+.product_dl .desk_rightTxt {
+    top: 28%;
+    width: 38%;
+}
+.product_dl .study_img img {
+    height: 550px;
+}
+/*=========== NEW PRODUCTS PAGE ==========*/
+}
+@media(max-width:1680px) {
+.stats_box img 
+	{
+	width: 40%;
+}
+.blue-stripe {
+    padding: 60px 0;
+    top: 33%;
+}
+.trident-box {
+	top: 55%;
+}
+.tri_text {
+    width: 42%;
+}
+.kie_banner img {
+    width: 33%;
+}
+.trident-box {
+    top: 60%;
+}
+.trident_logoTxt img {
+    width: 80%;
+}
+}
+@media (max-width: 1600px) {
+.abouUs_banner .center-box {
+    width: 56%;
+}
+/*=========== NEW PRODUCTS PAGE ==========*/
+.content__Box .left_imgBox {
+    width: 44%;
+    height: 388px;
+}  
+.content__Box .dark__Box p {
+    font-size: 34px;
+    line-height: 44px;
+}
+.features_icons.pro_features ul li .icons_bg {
+    width: 28%;
+}
+.features_icons.pro_features .product_cont {
+    width: 72%;
+}
+.beta_mBoxSec .first_para {
+    padding-right: 20%;
+}
+.product_dl .study_img img {
+    height: 500px;
+}
+.desk_rightTxt {
+    width: 36%;
+}
+/*=========== NEW PRODUCTS PAGE ==========*/
+}
+@media (max-width: 1540px) {
+.abouUs_banner .center-box {
+    width: 58%;
+}
+/*=========== NEW INDEX PAGE ==========*/
+.index_NewSec, .index_NewSec img {
+    height: 450px;
+}
+.content_whiteBg {
+    height: 520px;
+}
+.index_NewSec .Indexgrey_bg {
+    width: 63%;
+}
+.index_NewSec .content_Box {
+    left: 38%;
+}
+.content__Box .dark__Box p:last-child {
+    margin-bottom: 0;
+}
+.content__Box .left_imgBox {
+    width: 45%;
+    height: 392px;
+}
+.detl_grid .dtl_LeftG p {
+    padding-right: 10%;
+}
+.pro_features .icons_bg .border_line {
+    margin-top: 28px;
+}
+.beta_mBoxSec .sec_para {
+    width: 59%;
+}
+.desk_rightTxt {
+    top: 16%;
+}
+.left_menu .menu_list li a img {
+    width: 25%;
+}
+/*=========== NEW INDEX PAGE ==========*/
+/*=========== NEW PRODUCTS PAGE ==========*/
+.product_dl .desk_rightTxt {
+    top: 29%;
+    width: 39%;
+}
+.product_dl .desk_rightTxt {
+    top: 27%;
+    width: 38%;
+}
+.banner_cell .trident_con {
+    padding-top: 60px;
+}
+.detl_grid .dtl_rightG img {
+    width: 95%;
+    margin-top: 30px;
+}
+/*=========== NEW PRODUCTS PAGE ==========*/
+}
+@media (max-width: 1440px) {
+.abouUs_banner .center-box {
+    width: 63%;
+}
+.stats_box img {
+	width: 47%;
+}
+	.kie_banner img {
+    width: 30%;
+}
+.trident-box h3 {
+		font-size: 34px;}
+.tri_text {
+    width: 51%;
+}
+.trident-box {
+	top: 52%;
+}
+.newsletter-text {
+	padding-right: 0;
+}
+.input_field {
+	width: 90%;
+}
+.kie_loginBox {
+    width: 45%;
+}
+.services_box img {
+    height: 385px;
+}
+.blue-stripe {
+    padding: 40px 0;
+    top: 38%;
+}
+/*=========== NEW INDEX PAGE ==========*/
+.index_NewSec, .index_NewSec img {
+    height: 430px;
+}
+.content_whiteBg {
+    height: 500px;
+}
+.dots_stripe h1 , .index_NewSec .content_Box h2 , .desk_rightTxt h2 , .index_features h1 , .demoBox_txt h1 {
+    font-size: 40px;
+    line-height: 50px;
+}
+.desk_rightTxt {
+    top: 65px;
+}
+.index_features ul {
+    padding-top: 20px;
+}
+.index_NewSec .Indexgrey_bg {
+    width: 70%;
+}
+.banner_cell .trident_con {
+    padding-top: 50px;
+}
+/*=========== NEW PRODUCTS PAGE ==========*/
+.content__Box .dark__Box p {
+    font-size: 33px;
+    line-height: 44px;
+}
+.detl_grid .dtl_LeftG p {
+    padding-right: 4%;
+}
+.features_icons.pro_features ul li .icons_bg {
+    width: 30%;
+}
+.features_icons.pro_features .product_cont {
+    width: 70%;
+}
+.beta_mBoxSec .sec_para {
+    width: 62%;
+}
+.product_dl .desk_rightTxt {
+    top: 31%;
+    padding: 45px;
+}
+.content__Box .left_imgBox {
+    width: 44%;
+    height: 392px;
+}
+.product_dl .study_img img {
+    height: 450px;
+}
+.trident_DtlBox h1 , .graph_secBox h1 , .beta_mBoxSec h1 {
+    font-size: 40px;
+    line-height: 50px;
+}
+.detl_grid .dtl_rightG img {
+    width: 93%;
+    margin-top: 5px;
+}
+/*=========== NEW PRODUCTS PAGE ==========*/
+}
+@media(max-width:1366px) {
+.abouUs_banner .center-box {
+    width: 65%;
+}
+.stats_box img {
+	width: 47%;
+}
+.container-kiev {
+	padding: 0 44px;
+}
+.header {
+	padding: 10px 29px;
+}
+.scrolled {
+	padding: 10px 29px;
+}
+.button-box {
+	margin-top: 29px;
+}
+.banner-box .banner_img {
+	height: 490px;
+	object-fit: cover;
+}
+.arrow_img img {
+	width: 40px;
+}
+.space-box {
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+.small_heading {
+	margin-bottom: 22px;
+}
+.service_content p {
+	margin-top: 15px;
+}
+.kie_banner {
+	padding: 0 44px;
+}
+.newsletter-img {
+	right: -125px;
+}
+.kie_banner {
+	height: 490px;
+}
+.kie_banner img {
+    width: 33%;
+}
+.kie_bannerNew {
+    padding: 0 44px;
+}
+.services_box img {
+    height: 319px;
+}
+.trident-box {
+    top: 60%;
+}
+.grey-padding {
+    padding: 50px 0;
+}
+/*=========== LOGIN PAGE ==========*/
+.kie_loginBanner {
+    padding: 0 44px;
+}
+.kie_loginBox {
+    width: 45%;
+    top: 120px;
+}
+.kie_loginBanner {
+    height: 700px;
+}
+.tri_text {
+    width: 46%;
+}
+/*=========== NEW INDEX PAGE ==========*/
+.index_banner , .banner_content .banner_cell {
+    height: 500px;
+}
+.index_banner {
+    padding: 0 44px;
+}
+.index_NewSec img {
+    width: 55%;
+    padding-top: 50px;
+}
+.index_NewSec .Indexgrey_bg {
+    width: 65%;
+}
+.index_NewSec .content_Box {
+    left: 44%;
+}
+.content_whiteBg {
+    height: 480px;
+}
+.desk_rightTxt {
+    padding: 40px;
+    width: 36%;
+}
+.index_features ul {
+    padding-top: 10px;
+    margin: 0 auto;
+    width: 75%;
+    float: none;
+}
+.index_features ul li {
+    margin: 0 6%;
+}
+.index_features {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.demo_Box {
+    background-color: #f1f1f1;
+    padding: 40px 144px;
+}
+/*========== NEW INDEX PAGE ==========*/
+.product_banner {
+    height: 500px;
+    padding: 0 44px;
+}
+.content__Box .left_imgBox {
+    width: 45%;
+    height: 348px;
+}
+.product_dl .desk_rightTxt {
+    top: 30%;
+    padding: 50px;
+}
+.machines_content , .trident_DtlBox , .graph_secBox , .beta_mBoxSec , .product_dl {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.dotes_bg {
+    height: 100px;
+    padding: 22px 44px;
+}
+.header_kievanos {
+    padding: 15px 29px;
+}
+.demo_Box {
+    padding: 40px 44px;
+}
+}
+@media (max-width: 1280px) {
+.right_p {
+	padding-right: 4%;
+}
+.left_p {
+	padding-left: 4%;
+}
+.newsletter-img {
+    right: -175px;
+}
+.abouUs_banner .center-box {
+    width: 70%;
+}
+/*============= NEW INDEX PAGE START ===========*/
+.desk_rightTxt {
+    padding: 30px;
+    width: 37%;
+    top: 60px;
+}
+/*============= NEW INDEX PAGE END ===========*/
+/*============= NEW PRODUCTS PAGE START===========*/
+.content__Box .dark__Box {
+    padding: 50px;
+    padding-left: 21%;
+}
+.content__Box .left_imgBox {
+    width: 45%;
+    height: 352px;
+}
+/*============= NEW PRODUCTS PAGE END ===========*/
+/*============= PRODUCT PAGE ===========*/
+.blue-stripe {
+    padding: 30px 0;
+}
+.tri_text {
+    width: 46%;
+}
+.tri_statsBox img {
+    width: 55%;
+}
+.tri_statsBox {
+    margin-top: 40px;
+}
+section .result-box {
+    padding-bottom: 50px;
+}
+.heading {
+    font-size: 28px;
+}
+.result-box .heading {
+    line-height: 37px;
+}
+.tab-content {
+    width: 100%;    
+}
+.tab-left {
+    width: 45%;
+    padding-right: 3%;
+}
+.tab-right {
+    width: 55%;     
+}
+/*=========== LOGIN PAGE ==========*/
+.kie_loginBanner {
+    height: 680px;
+}
+.kie_loginBox {
+    width: 44%;
+    padding: 30px 50px;
+}
+.kie_loginBox .Log_heading {
+    font-size: 26px;
+    line-height: 34px;
+}
+.kie_loginBox .login_triLogo img {
+    width: 45%;
+}
+/*=========== LOGIN PAGE ==========*/
+/*=========== NEW INDEX AND PRODUCT PAGE ==========*/
+.index_banner, .banner_content .banner_cell {
+    height: 400px;
+}   
+.banner_content .banner_cell {
+    padding-top: 50px;
+}
+.product_banner {
+    height: 400px;
+}
+.dots_stripe h1, .index_NewSec .content_Box h2, .desk_rightTxt h2, .index_features h1, .demoBox_txt h1 {
+    font-size: 38px;
+    line-height: 48px;
+}
+/*=========== NEW INDEX AND PRODUCT PAGE END ==========*/
+}
+@media (max-width: 1200px) {
+.abouUs_banner .center-box {
+    width: 75%;
+}
+}
+@media (max-width: 1199px) {
+/*============= NEW INDEX PAGE START ===========*/
+.banner_cell .trident_con {
+    padding-top: 50px;
+}
+.icons_bg .icon_pos {
+    top: 19px;
+    left: 134px;
+}
+.features_icons ul li {
+    padding: 0 1%;
+}
+.features_icons ul li p {
+    font-size: 23px;
+    line-height: 30px;
+}
+.index_NewSec, .index_NewSec img {
+    height: 400px;
+}
+.content_whiteBg {
+    height: 450px;
+}
+.index_NewSec .Indexgrey_bg {
+    width: 70%;
+}
+.index_NewSec .content_Box {
+    padding: 30px;
+    padding-left: 90px;
+}
+.dotes_bg {
+    height: 90px;
+    padding: 20px 44px;
+}
+.dots_stripe h1, .index_NewSec .content_Box h2, .desk_rightTxt h2, .index_features h1, .demoBox_txt h1 {
+    font-size: 36px;
+    line-height: 46px;
+}
+.index_NewSec .content_Box h2 {
+    margin-bottom: 15px;
+}
+.desk_rightTxt h2 {
+    margin-bottom: 15px;    
+}
+.desk_rightTxt p {
+    margin-bottom: 25px;
+}
+.trident_study .study_tableImg {
+    width: 70%;
+}
+.desk_rightTxt {
+    padding: 30px;
+    width: 33%;
+    top: 40px;
+}
+.trident_logoTxt img {
+    width: 82%;
+}
+/*=============== NEW PRODUCT PAGE START ==============*/
+.trident_DtlBox h1, .graph_secBox h1, .beta_mBoxSec h1 {
+    font-size: 36px;
+    line-height: 46px;
+}
+.content__Box .dark__Box p {
+    font-size: 30px;
+    line-height: 42.66px;
+}
+.content__Box .left_imgBox {
+    height: 336px;
+}
+.trident_DtlBox .detl_grid h2 {
+    font-size: 34px;
+    line-height: 40px;
+}
+.trident_DtlBox .detl_grid h3 {
+    font-size: 30px;
+}
+.graph_secBox h1 {
+    margin-bottom: 20px;
+}
+.pro_features .product_cont h3 {
+    font-size: 33px;
+}
+.beta_mBoxSec .sec_para {
+    width: 65%;
+}
+.product_dl .desk_rightTxt {
+    width: 39%;
+    top: 28%;
+}
+.product_dl .study_img img {
+    height: 430px;
+}
+.left_menu .menu_list li a img {
+    width: 25%;
+}
+.features_icons.pro_features ul li .icons_bg {
+    width: 34%;
+}
+.features_icons.pro_features .product_cont {
+    width: 66%;
+}
+.beta_mBoxSec .first_para {
+    padding-right: 18%;
+}
+.beta_mBoxSec .sec_para {
+    width: 70%;
+}
+.product_dl .study_img img {
+    height: 400px;
+}
+}
+@media (max-width: 1116px) {
+.banner-box .banner_img {
+	height: 510px;
+	object-fit: cover;
+}
+.arrow_img img {
+	width: 35px;
+}
+.arrow_img {
+	bottom: 10px;
+}
+.heading {
+	font-size: 28px;
+}
+.heading-sub {
+	font-size: 26px;
+}
+.service_content p {
+	margin-top: 18px;
+}
+.services_box img {
+    object-fit: cover;
+    height: 338px;
+}
+.stats_box img {
+	width: 51%;
+	bottom: -32px;
+	left: 20px;
+}
+.small_heading {
+	margin-bottom: 20px;
+}
+.right_p {
+	padding-right: 3%;
+}
+.left_p {
+	padding-left: 3%;
+}
+.container-kiev {
+	padding: 0 44px;
+}
+.scrolled {
+	padding: 10px 29px;
+}
+.header {
+	padding: 10px 29px;
+}
+section .result-box {
+    padding-top: 50px;
+}
+.tab-left {
+    width: 50%;
+}
+.tab-right {
+    width: 50%;     
+}
+
+}
+@media(max-width:984px) {
+.banner-box .banner_img {
+	height: 440px;
+}
+.small_heading {
+	margin-bottom: 20px;
+}
+.service_content p {
+	margin-top: 15px;
+}
+.services_box img {
+	height: 364px;
+}
+.button-box {
+	margin-top: 30px;
+}
+.middle-section p {
+	padding: 0 8%;
+}
+.footer_logo {
+	width: 100%;
+}
+.kie_banner {
+    height: 370px;
+}
+.tri_text {
+    width: 50%;
+}
+.tri_statsBox img {
+    width: 55%;
+}
+#footer {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+.input_field {
+    width: 100%;
+}
+.services_box img {
+    object-fit: cover;
+    height: 365px;
+}
+.stats_box img {
+    width: 52%;
+    left: 0;
+}
+.blue-stripe {
+    padding: 20px 0;
+    top: 45%;
+}
+.result-box img {
+    object-fit: cover;
+    height: 340px;
+}
+.tab-label {
+    padding: 10px;
+}
+.tab-left {
+    width: 44%;
+    padding-right: 3%;
+}
+.tab-right {
+    width: 56%;
+}
+.kie_bannerNew {
+    height: 370px;
+}
+.features-content .tab-left {
+    width: 55%;
+    padding-right: 3%;
+}
+.features-content .tab-right {
+    width: 45%;
+}
+.features-content .tab-right img {
+    height: 356px;
+}
+/*=========== LOGIN PAGE ==========*/
+.kie_loginBox {
+    width: 52%;
+    padding: 50px;
+    top: 110px;
+}
+.kie_loginBanner {
+    height: 730px;
+}
+.kie_loginBox .Log_heading {
+    font-size: 24px;
+    line-height: 32px;
+}
+/*=========== LOGIN PAGE ==========*/
+/*=========== NEW INDEX START PAGE ==========*/
+.trident_logoTxt img {
+    width: 87%;
+}
+.banner_cell .trident_con {
+    padding-top: 40px;
+}
+.index_banner, .banner_content .banner_cell {
+    height: 370px;
+}
+.trident_con p {
+    font-size: 36px;
+    line-height: 40px;
+}
+.dots_stripe h1, .index_NewSec .content_Box h2, .desk_rightTxt h2, .index_features h1, .demoBox_txt h1 {
+    font-size: 33px;
+    line-height: 44px;
+}
+.icons_bg img {
+    width: 110px;
+}
+.icons_bg .icon_pos {
+    left: 100px;
+    width: 40px;
+    top: 17px;
+}
+.features_icons ul li {
+    padding: 0 4%;
+}
+.icons_bg .border_line {
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+.index_NewSec img {
+    width: 50%;
+}
+.index_NewSec .Indexgrey_bg {
+    width: 75%;
+}
+.index_NewSec .content_Box {
+    left: 35%;
+}
+.index_NewSec .content_Box p , .desk_rightTxt p {
+    font-size: 24px;
+    line-height: 32px;
+}
+.trident_study .study_tableImg {
+    width: 70%;
+}
+.desk_rightTxt {
+    padding: 20px;
+    width: 34%;
+    top: 30px;
+}
+.index_features ul li {
+    margin: 0 4%;
+}
+.index_features ul {
+    width: 100%;
+}
+/*=========== NEW INDEX END PAGE ==========*/
+/*=========== NEW PRODUCT START PAGE ==========*/
+.product_banner {
+    height: 370px;
+}
+.content__Box .dark__Box {
+    padding: 35px;
+    padding-left: 21%;
+}
+.content__Box .dark__Box p {
+    font-size: 28px;
+    line-height: 37.33px;
+    margin-bottom: 25px;
+}
+.content__Box .left_imgBox {
+    height: 291px;
+    top: 50px;
+}
+.trident_DtlBox h1, .graph_secBox h1, .beta_mBoxSec h1 {
+    font-size: 33px;
+    line-height: 44px;
+}
+.detl_grid .dtl_LeftG p , .detl_grid .dtl_rightG p {
+    font-size: 24px;
+    line-height: 32px;
+}
+.detl_grid .dtl_LeftG p {
+    padding-right: 0;
+}
+.detl_grid .dtl_rightG p {
+    padding-left: 10%;
+}
+.trident_DtlBox .detl_grid h2 {
+    font-size: 30px;
+    line-height: 38px;
+}
+.trident_DtlBox .detl_grid h3 {
+    font-size: 28px;
+    line-height: 38px;
+    margin-top: 25px;
+}
+.graph_content p {
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 20px;
+}
+.pro_features .icons_bg .icon_pos {
+    position: absolute;
+    top: 19px;
+    left: 35px;
+}
+.pro_features .product_cont h3 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.features_icons.pro_features ul li .icons_bg {
+    width: 32%;
+}
+.features_icons.pro_features .product_cont {
+    width: 68%;
+}
+.beta_mBoxSec .first_para {
+    padding-right: 8%;
+    font-size: 24px;
+    line-height: 32px;
+}
+.beta_mBoxSec .sec_para {
+    width: 74%;
+    padding-right: 0;
+    font-size: 24px;
+    line-height: 32px;
+}
+.product_dl .study_img img {
+    height: 350px;
+}
+.product_dl .desk_rightTxt {
+    top: 26%;
+}
+.left_menu .menu_list li {
+    padding-right: 10%;
+}
+.left_menu .menu_list li a img {
+    width: 28%;
+}
+/*=========== NEW PRODUCT END PAGE ==========*/
+}
+@media (max-width: 980px) {
+.arrow_img img {
+	width: 30px;
+}
+.logo img {
+	margin-right: 0px;
+}
+.banner-box .banner_img {
+	height: 376px
+}
+.heading {
+	font-size: 26px;
+}
+.heading-sub {
+	font-size: 24px;
+}
+.mobile-nav {
+	display: none;
+}
+.right_p {
+	padding-right: 3%;
+}
+.left_p {
+	padding-left: 3%;
+}
+.small_heading {
+	margin-bottom: 17px;
+}
+.service_content p {
+	margin-top: 15px;
+}
+.services_box {
+	margin: 30px 0;
+}
+.middle-section p {
+	padding: 0 5%;
+}
+.services_box img {
+    object-fit: cover;
+    height: 386px;
+}
+.stats_box img {
+	width: 60%;
+	left: 0;
+}
+.result-box img {
+    height: 370px;    
+}
+.newsletter-img img {
+    width: 5%;
+}
+.newsletter-img {
+    right: -188px;
+}
+.tab-left {
+    width: 34%;
+    padding-right: 3%;
+}
+.tab-right {
+    width: 66%;
+}
+.features-content .tab-left .features_list li {
+    padding: 20px 0;
+}
+.features_list li .features_img .icon_features {
+    margin-right: 10px;
+}
+.features-content .tab-right img {
+    height: 371px;
+}
+/*=========== LOGIN PAGE ==========*/
+.kie_loginBox {
+    width: 60%;
+    top: 120px;
+}
+.kie_loginBanner {
+    height: 700px;
+}
+/*=========== LOGIN PAGE ==========*/
+/*=========== NEW PRODUCTS START ==========*/
+.content__Box .left_imgBox {
+    height: 328px;
+}
+/*=========== NEW PRODUCTS END ==========*/
+}
+@media(max-width: 883px) {
+.dots_stripe h1 {
+    font-size: 29px;
+    line-height: 38px;
+}
+.header_content .right_menu {
+    width: 40%;
+}
+.header_content .left_menu {
+    width: 60%;
+}
+.dotes_bg {
+    height: 80px;
+    padding: 20px 20px;
+}
+.index_NewSec, .index_NewSec img {
+    height: 350px;
+}
+.content_whiteBg {
+    height: 400px;
+}
+.index_features ul li {
+    margin: 0 6%;
+}
+.trident_study .study_tableImg {
+    width: 80%;
+}
+.desk_rightTxt {
+    width: 36%;
+    top: 11px;
+}
+.demoBox_txt h1 {
+    font-size: 32px;
+}
+.index_NewSec .content_Box {
+    padding: 20px;
+    padding-left: 70px;
+}
+.content__Box .dark__Box {
+    padding: 20px;
+    padding-left: 18%;
+}
+.content__Box .dark__Box p {
+    font-size: 25px;
+    line-height: 33.33px;
+}
+.content__Box .left_imgBox {
+    height: 229px;
+    width: 44%;
+}
+.graph_content a {
+    font-size: 18px;
+    line-height: 24px;
+}
+.features_icons.pro_features ul li {
+    padding-right: 5%;
+}
+.beta_mBoxSec .first_para {
+    padding-right: 2%;
+}
+.beta_mBoxSec .sec_para {
+    width: 84%;
+}
+.product_dl .study_img img {
+    height: 310px;
+}
+.product_dl .desk_rightTxt {
+    top: 25%;
+    padding: 35px;
+}
+.icons_bg .icon_pos {
+    width: 38px;
+    top: 16px;
+    left: 101px;
+}
+}
+@media(max-width:767px) {
+/* mObile Menu CSS Start */
+.header {
+	padding: 10px 5px;
+}
+.b-nav, body:after {
+	position: absolute;
+	right: 0;
+}
+.b-brand, .b-link {
+    margin-top: 0;
+    font-size: 16px;
+    line-height: 50px;
+    font-family: 'canada-type-gibson, sans-serif';
+}
+body:after {
+	background: #000;
+	content: '';
+	height: 100%;
+	left: 0;
+	opacity: 0;
+	padding: 0;
+	top: 0;
+	visibility: hidden;
+	-webkit-transition: all .6s ease;
+	transition: all .6s ease;
+	width: 100%;
+}
+body.open:after {
+	z-index: 10;
+	opacity: 0.65;
+	height: 100%;
+	visibility: visible;
+}
+.b-nav {
+	background: #0F3043 none repeat scroll 0 0;
+	position: absolute;
+	top: 0;
+	width: 280px;
+	padding: 50px 0;
+    box-shadow: 0 5px 50px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0 5px 50px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0 5px 50px rgba(0, 0, 0, 0.75);
+}
+.b-nav:not(.open) {
+	animation-duration: 0.4s;
+	animation-fill-mode: both;
+	-webkit-animation-name: slideOutLeft;
+	animation-name: slideOutLeft;
+}
+.b-nav {
+	animation-duration: .4s;
+	animation-fill-mode: both;
+	-webkit-animation-name: slideInLeft;
+	animation-name: slideInLeft;
+	position: fixed;
+	right: 0;
+	bottom: 0;
+}
+.b-nav ul {
+	padding-left: 0px;
+	margin-bottom: 0;
+}
+.b-nav li {
+	color: #fff;
+	list-style-type: none;
+	text-align: left;
+	-webkit-transform: translateX(345px);
+	-ms-transform: translateX(345px);
+	transform: translateX(345px);
+}
+.b-nav li {
+    border-bottom: 1px solid #0c2132;
+    margin-top: 0;
+    padding-bottom: 5px;
+}
+.b-nav li:not(.open) {
+	animation-duration: 0.4s;
+	animation-fill-mode: both;
+	-webkit-animation-name: slideOutLeft;
+	animation-name: slideOutLeft
+}
+.b-nav li:not(.open), .b-nav.open li {
+    animation-duration: 0.4s;
+	-webkit-animation-duration: 0.4s;
+    animation-fill-mode: both;
+	-webkit-animation-fill-mode: both;
+}
+.b-nav li:first-child {
+	margin-top: 0px;
+}
+.b-nav.open {
+	visibility: visible;
+	animation-duration: 0.4s;
+	animation-fill-mode: both;
+	-webkit-animation-name: slideInLeft;
+	animation-name: slideInLeft;
+}
+.b-nav:not(.open) {
+	visibility: hidden;
+	animation-duration: 0.4s;
+	animation-fill-mode: backwards;
+	-webkit-animation-name: slideOutLeft;
+	animation-name: slideOutLeft;
+}
+.b-nav.open li {
+	animation-duration: 0.2s;
+	animation-fill-mode: both;
+	-webkit-animation-name: slideInLeft;
+	animation-name: slideInLeft;    padding: 0 20px;
+}
+.b-link {
+	background: 0 0;
+	color: #fff;
+	transition: all .4s ease;
+	width: auto;
+}
+.scrolled .b-link {
+	color: #ffffff;
+}
+.b-link:hover, .b-link:focus {
+	text-decoration: none;
+	color: #ffffff;
+}
+.b-link, .b-menu {
+    transition: all .4s ease;
+	-webkit-transition: all .4s ease;
+}
+.b-menu {
+	cursor: pointer;
+	display: block;
+	height: 66px;
+	padding-top: 20px;
+	position: relative;
+	top: -20px;
+	transition: all 0.4s ease 0s;
+	width: 43px;
+	z-index: 12;
+	right: 2px;
+}
+.b-bun--bottom, .b-bun--mid, .b-bun--top {
+	height: 2px;
+	width: 25px;
+}
+.scrolled .b-bun {
+	background: #000;
+}
+.b-bun {
+    background: #ffffff;
+    transition: all .4s ease;
+}
+.b-brand, .b-bun {
+	position: relative;
+    transition: all .4s ease;
+	-webkit-transition: all .4s ease;
+}
+.b-bun--top {
+	top: 0;
+}
+.b-bun--mid {
+	top: 6px;
+}
+.b-bun--bottom {
+	top: 12px;
+}
+.b-brand {
+	color: #2196f3;
+	top: -21.43px;
+	transition: all .4s ease;
+	z-index: 13;
+}
+.b-container {
+	position: absolute;
+	right: 0;
+	top: 20px;
+}
+.b-container:hover:not(.open) .bun-bottom, .b-container:hover:not(.open) .bun-mid, .b-container:hover:not(.open) .bun-top {
+	background: #2196f3;
+}
+.b-container.open .b-bun--top {
+	background: #ffffff;
+	top: 9px;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+.b-container.open .b-bun--mid {
+	opacity: 0;
+}
+.b-container.open .b-bun--bottom {
+	background: #ffffff;
+	top: 5px;
+	-webkit-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+.b-container.open .b-brand {
+	color: #fff;
+}
+.mobile-nav {
+	display: block;
+}
+.menu_box {
+	display: none
+}
+.banner-box .banner_img {
+	height: 210px;
+    margin-top: 55px;
+    object-fit: cover;
+    object-position: bottom;
+}
+.arrow_img {
+	bottom: 0;
+}
+.space-box {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+.service_img, .right_p, .left_p {
+	width: 100%;
+}
+.services_box {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-moz-box-orient: vertical;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-align: start;
+	-moz-box-align: start;
+	-ms-flex-align: start;
+	-webkit-align-items: flex-start;
+	align-items: flex-start;
+	margin-bottom: 0;
+	margin-top: 25px;
+}
+.service_content {
+	-webkit-box-ordinal-group: 2;
+	-moz-box-ordinal-group: 2;
+	-ms-flex-order: 2;
+	-webkit-order: 2;
+	order: 2;
+	margin-top: 20px;
+	padding: 0;
+}
+.service_img {
+	float: right;
+	-webkit-box-ordinal-group: 1;
+	-moz-box-ordinal-group: 1;
+	-ms-flex-order: 1;
+	-webkit-order: 1;
+	order: 1;
+}
+.services_box img {
+	height: auto;
+}
+.container-kiev {
+    padding: 0 20px;
+}
+.small_heading {
+	margin-bottom: 20px;
+}
+.button-box {
+	margin-top: 20px;
+}
+.dashboard_section {
+	text-align: center;
+	margin-top: 0;
+}
+.stats_box {
+    height: 520px;
+}
+.schedule_button {
+	margin: 0px auto 10px;
+	float: none;
+	width: 50%;
+}
+.stats_box img {
+	width: 100%;
+}
+/* End Mobile Menu CSS */
+.middle-section {
+	padding-top: 50px;
+}
+#footer {
+	position: relative;
+	padding-top: 40px;
+	padding-bottom: 20px;
+}
+.header {
+	background: white;
+	color: #000000;
+	height: 55px;
+}
+.footer_list li a, .footer_list li {
+	margin-top: 10px;
+}
+#wrapper {
+	overflow: visible;
+}
+.footer_list li {
+	margin-top: 0;
+	border-bottom: 1px solid #353232;
+}
+.footer_list {
+	width: 100%;
+}
+.footer_logo {
+	width: 55%;
+	margin-bottom: 20px;
+}
+.footer .follow-box {
+	border-bottom: 0;
+}
+.footer .follow-box {
+    display: none;
+}
+.linked_inn {
+	width: 11%;
+}
+.footer p {
+    font-size: 14px;
+    border-top: 0;
+    padding-top: 10px;
+}
+.footer .bottom-footer p {
+    border-top: 1px solid #353232;
+    padding-top: 20px;
+}
+.middle-section p {
+    padding: 0;
+}
+.kie_banner {
+    padding: 0 20px;
+    height: 210px;
+    object-fit: cover;
+    margin-top: 55px;
+}
+
+.kievanor-bg .white_line {
+    margin-bottom: 20px;
+}
+.trident-box {
+    top: 47%;
+    padding: 9px;
+}
+.trident-box p {
+    border-left: 3px solid #000;
+    color: #707070;
+}
+.trident-box h3 {
+    color: #000000;
+}
+.text-black {
+    font-size: 16px;
+    color: #000000;
+}
+.kie_banner img {
+    width: 35%;
+    top: 30%;
+}
+.newsletter-img {
+    right: 0px;
+}
+.newsletter-img img {
+    width: 8%;
+    float: right;
+}
+.blue-stripe {
+    position: unset;
+    padding: 25px 0;
+}
+.tri_statsBox {
+    margin-top: 25px;
+}
+.stats-box .Box_Visibility {
+    text-align: center;    
+}
+.tri_statsBox img {
+    width: 93%;
+    float: none;
+}
+.tri_text {
+    width: 100%;
+}
+.tab-content {
+    display: block;
+}
+.tab-left {
+    width: 100%;
+    padding-right: 0;
+    margin-bottom: 15px;
+}
+.tab-right {
+    width: 100%;
+}
+.features_list li .features_img i {
+    margin-top: 25px;
+}
+.result-box img {
+    height: 200px;
+    margin-bottom: 15px;
+}
+section .result-box {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.result-box .padding0 .col-xs-12 , .kievanor-bg .container-kiev .col-xs-12 {
+    padding: 0;    
+}
+.white-background .container-kiev .text-center {
+    line-height: 37px;
+}
+.product-heading {
+    line-height: 27px;
+    font-size: 20px;
+}
+.kie_bannerNew {
+    padding: 0 20px;
+    height: 300px;
+}
+.space-box .container-kiev .box {
+    padding: 0;    
+}
+.text-wrapper {
+    width: 100%;
+    height: 200px;
+}
+.gallery-item img {
+    width: 99%;
+}
+.mar--bootom-20 {
+    margin-bottom: 20px;    
+}
+.box_visibility {
+    display: none;    
+}
+.Box_Visibility {
+    display: block;
+}
+.trident-box {
+    padding: 30px 20px;
+    position: relative;
+    background-color: #ffffff;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.14901960784313725);
+    z-index: 9;
+}
+.Box_Visibility p br:first-child , .tri_statsBox .trident-stats p br {
+    display: none;
+}
+.mid_line {
+    width: 20%;
+}
+.trident-stats p {
+    margin-bottom: 22px;
+}
+.grey-padding {
+    padding: 30px 0;
+}
+.features-content {
+    display: block;
+    padding: 10px 0;
+}
+.features-content .tab-left {
+    width: 100%;
+    padding-right: 0;
+}
+.features-content .tab-left .features_list li {
+    padding: 20px 0;
+    margin-bottom: 0;
+}
+.features-content .tab-left .features_list li:first-child {
+    padding-top: 0;
+}
+.features-content .tab-right {
+    width: 100%;
+}
+.features-content .tab-right img {
+    height: 220px;
+}
+/*=========== LOGIN PAGE ==========*/
+.kie_loginBox .login_triLogo img {
+    width: 40%;
+}
+.kie_loginBanner {
+    height: 588px;
+    padding: 0 20px;
+}
+.kie_loginBox {
+    width: 93%;
+    padding: 30px 20px;
+    top: 95px;
+}
+.Input_Fields .Field_name {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 5px;
+}
+.features-content .features_list li .features_img i {
+    margin-top: 11px;
+}
+.trident-stats p,.trident-box p, .tri_text p, .features-content .tab-left .features_list li, .tab-left, .list_subText, .result-box p, body .result-section p,.newsletter-text, .service_content p, .middle-section p, .footer_list li a, .footer_list li {
+	font-size:17px;
+    line-height: 27.2px;
+}
+.heading {
+    line-height: 41px;
+}
+/*=========== LOGIN PAGE ==========*/
+/*=========== NEW INDEX PAGE START ==========*/
+.header_content {
+    display: none;
+} 
+.header_kievanos {
+    padding: 15px 5px;
+}
+.index_banner {
+    padding: 0 20px;
+}
+.mobile_logo img {
+    width: 18%;
+}
+.new_header {
+    padding-bottom: 58px;
+}
+.dotes_bg {
+    height: 90px;
+    padding: 20px 20px;
+}
+.demo_Box {
+    padding: 40px 20px;
+}
+.index_banner, .banner_content .banner_cell {
+    height: 300px;
+}
+.banner_cell .trident_con {
+    padding-top: 30px;
+}
+.trident_con p {
+    font-size: 32px;
+    line-height: 40px;
+    margin-bottom: 10px;
+}
+.trident_logoTxt img {
+    width: 90%;
+}
+.banner_content .banner_cell {
+    padding-top: 35px;
+}
+.dots_stripe h1 {
+    font-size: 27px;
+    line-height: 36px;
+}
+.Kievanos_btn {
+    padding: 10px 20px;
+}
+.dotes_bg {
+    height: 75px;
+    padding: 15px;
+}
+.icons_bg .icon_pos {
+    top: 17px;
+    left: 104px;
+}
+.index_NewSec .content_Box p, .desk_rightTxt p {
+    font-size: 22px;
+    line-height: 29.33px;
+}
+.index_NewSec .content_Box h2, .desk_rightTxt h2, .index_features h1 {
+    font-size: 32px;
+    line-height: 42px;
+}
+.trident_study .study_tableImg {
+    width: 83%;
+}
+.desk_rightTxt {
+    width: 37%;
+    top: 27px;
+}
+.index_features ul li {
+    margin: 0 7%;
+    padding: 15px;
+}
+.demoBox_txt h1 {
+    font-size: 30px;
+    line-height: 40px;
+}
+.icons_bg img {
+    width: 110px;
+}
+/*=========== NEW INDEX PAGE END ==========*/
+/*=========== NEW PRODUCT PAGE START ==========*/
+.product_banner {
+    height: 300px;
+    padding: 0 20px;
+}   
+.content__Box .dark__Box p {
+    font-size: 23px;
+    line-height: 30.66px;
+}
+.content__Box .left_imgBox {
+    width: 43%;
+    top: 38px;
+}
+.trident_DtlBox h1, .graph_secBox h1, .beta_mBoxSec h1 {
+    font-size: 32px;
+    line-height: 42px;
+}
+.detl_grid .dtl_LeftG p, .detl_grid .dtl_rightG p {
+    font-size: 22px;
+    line-height: 29.33px;
+}
+.graph_content p {
+    font-size: 22px;
+    line-height: 29.33px;
+    margin-bottom: 20px;
+}
+.graph_content img {
+    margin-bottom: 10px;
+}
+.features_icons ul li p {
+    font-size: 22px;
+    line-height: 29.33px;
+}
+.features_icons.pro_features ul li {
+    margin-bottom: 30px;
+}
+.pro_features .icons_bg .icon_pos {
+    position: absolute;
+    top: 13px;
+    left: 27px;
+    width: 36px;
+}
+.pro_features .product_cont h3 {
+    font-size: 28px;
+    line-height: 37px;
+}
+.beta_mBoxSec h1 {
+    margin-bottom: 20px;
+}
+.beta_mBoxSec .first_para {
+    padding-right: 0px;
+    font-size: 22px;
+    line-height: 29.33px;
+    padding-left: 3%;
+}
+.beta_mBoxSec .sec_para {
+    font-size: 22px;
+    line-height: 29.33px;
+}
+.product_dl .study_img img {
+    height: 260px;
+}
+.index_NewSec, .index_NewSec img {
+    height: 300px;
+}
+.index_NewSec img {
+    padding-top: 30px;
+}
+.content_whiteBg {
+    height: 330px;
+}
+.index_features {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.index_features .feat_line {
+    margin-bottom: 20px;
+}
+.demo_Box {
+    padding: 30px 20px;
+}
+.machines_content, .trident_DtlBox, .graph_secBox, .beta_mBoxSec, .product_dl {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.pro_features .icons_bg img {
+    width: 90px;
+}
+.product_dl .desk_rightTxt h2 {
+    margin-bottom: 20px;
+}
+.product_dl .desk_rightTxt {
+    top: 24%;
+}
+/*=========== NEW PRODUCT PAGE END ==========*/
+}
+@media(max-width:540px) {
+.mobile_logo img {
+    width: 26%;
+}
+.index_banner, .banner_content .banner_cell {
+    height: 250px;
+}
+.banner_content .banner_cell {
+    padding-top: 30px;
+}
+.trident_con p {
+    font-size: 25px;
+    line-height: 33.33px;
+}
+.trident_con p.padd_left {
+    padding-left: 35px;
+}
+.trident_con p {
+    font-size: 23px;
+    line-height: 28.33px;
+}
+.trident_con p.padd_left {
+    padding-left: 32px;
+}
+.trident_con .padd_btn {
+    padding-left: 62px;
+    margin-top: 22px;
+}
+.trident_logoTxt img {
+    width: 100%;
+}
+.dots_stripe h1 {
+    font-size: 25px;
+    line-height: 33.33px;
+}
+.dotes_bg {
+    height: 100px;
+}
+.features_icons ul li p {
+    font-size: 18px;
+    line-height: 24px;
+}
+.icons_bg .icon_pos {
+    left: 66px;
+}
+.index_NewSec, .index_NewSec img {
+    height: 250px;
+}
+.content_whiteBg {
+    height: 280px;
+}
+.index_NewSec .content_Box h2, .desk_rightTxt h2, .index_features h1 {
+    font-size: 30px;
+    line-height: 40px;
+}
+.bordered_line {
+    top: 30px;
+    border-bottom: 3px solid #0f3043;
+}
+.index_NewSec .content_Box p, .desk_rightTxt p {
+    font-size: 20px;
+    line-height: 26.66px;
+}
+.index_NewSec .content_Box {
+    padding: 15px;
+    padding-left: 50px;
+}
+.trident_study .study_tableImg {
+    width: 100%;
+}
+.study_tableImg .study_img img {
+    height: 370px;
+    object-fit: cover;
+    object-position: right;
+}
+.desk_rightTxt {
+    width: 70%;
+    top: 130px;
+}
+.index_features ul li {
+    margin: 0 3%;
+    padding: 12px;
+}
+.product_banner {
+    height: 250px;
+}
+.content__Box .dark__Box p {
+    font-size: 20px;
+    line-height: 26.66px;
+}
+.content__Box .left_imgBox {
+    width: 42%;
+    top: 40px;
+    height: 245px;
+}
+.trident_DtlBox h1, .graph_secBox h1, .beta_mBoxSec h1 {
+    font-size: 30px;
+    line-height: 40px;
+}
+.trident_DtlBox .detl_grid h2 {
+    font-size: 28px;
+    line-height: 35px;
+}
+.trident_DtlBox .detl_grid h3 {
+    font-size: 25px;
+    line-height: 33.33px;
+    margin-top: 20px;
+}
+.detl_grid .dtl_LeftG p, .detl_grid .dtl_rightG p {
+    font-size: 20px;
+    line-height: 26.66px;
+}
+.detl_grid .dtl_LeftG p {
+    padding-right: 5%;
+}
+.detl_grid .dtl_rightG p {
+    padding-left: 4%;
+}
+.graph_content p {
+    font-size: 20px;
+    line-height: 26.66px;
+    margin-bottom: 15px;
+}
+.graph_content a {
+    font-size: 16px;
+    line-height: 21.33px;
+}
+.graph_secBox .graph_content {
+    padding-left: 3%;
+}
+.pro_features {
+    display: block;
+}
+.features_icons.pro_features ul {
+    width: 100%;
+    margin-bottom: 35px;
+}
+.features_icons.pro_features ul:last-child {
+    margin-bottom: 0;    
+}
+.features_icons.pro_features ul li {
+    margin-bottom: 35px;
+    padding-right: 0;
+}
+.pro_features .icons_bg img {
+    width: 100px;
+}
+.pro_features .icons_bg .icon_pos {
+    top: 16px;
+    left: 32px;
+}
+.pro_features .icons_bg .border_line {
+    margin-top: 20px;
+    width: 25%;
+    margin-left: 35px;
+}
+.features_icons.pro_features ul li .icons_bg {
+    width: 25%;
+}
+.features_icons.pro_features .product_cont {
+    width: 75%;
+}
+.pro_features .product_cont h3 {
+    font-size: 26px;
+    line-height: 34.66px;
+}
+.beta_mBoxSec .first_para , .beta_mBoxSec .sec_para {
+    font-size: 20px;
+    line-height: 26.66px;
+}
+.product_dl .study_img img {
+    height: 220px;
+}
+.product_dl .desk_rightTxt {
+    top: 22%;
+    padding: 30px;
+    width: 50%;
+}
+}
+@media(max-width:480px) {
+.trident_con p.padd_left {
+    padding-left: 15px;
+}
+.trident_con .padd_btn {
+    padding-left: 35px;
+    margin-top: 20px;
+    display: none;
+}
+.trident_con .padd_btn {
+    padding-left: 35px;    
+}
+.banner_cell .trident_con {
+    padding-top: 18px;
+}
+.dotes_bg {
+    height: 102px;
+}
+.new_header {
+    padding-bottom: 54px;
+}
+.trident_logoTxt img {
+    width: 90%;
+}
+.index_banner, .banner_content .banner_cell {
+    height: 200px;
+}
+.trident_con p {
+    font-size: 21px;
+    line-height: 28px;
+    margin-bottom: 8px;
+}
+.icons_bg .icon_pos {
+    left: 52px;
+}
+.mobile_logo img {
+    width: 32%;
+}
+.icons_bg img {
+    width: 100px;
+}
+.icons_bg .icon_pos {
+    top: 14px;
+    left: 57px;
+    width: 36px;
+}
+.icons_bg .border_line {
+    width: 30%;
+}
+.index_NewSec, .index_NewSec img {
+    height: 200px;
+}
+.content_whiteBg {
+    height: 230px;
+}
+.index_NewSec .content_Box {
+    padding: 10px;
+    padding-left: 40px;
+    left: 20%;
+}
+.bordered_line {
+    top: 15px;
+    border-bottom: 2px solid #0f3043;
+}
+.index_NewSec .content_Box h2, .desk_rightTxt h2, .index_features h1 {
+    font-size: 25px;
+    line-height: 33.33px;
+    margin-bottom: 10px;
+}
+.study_tableImg .study_img img {
+    height: 290px;
+}
+.desk_rightTxt {
+    width: 60%;
+    top: 32px;
+}
+.demoBox_txt h1 {
+    font-size: 25px;
+    line-height: 33.33px;
+}
+.product_banner {
+    height: 200px;
+}
+.content__Box .dark__Box {
+    padding: 20px;
+    width: 100%;
+    text-align: left;
+}
+.content__Box .dark__Box p {
+    margin-bottom: 15px;
+}
+.content__Box .left_imgBox {
+    width: 100%;
+    height: 200px;
+    position: unset;
+    margin-top: 20px;
+}
+.trident_DtlBox h1, .graph_secBox h1, .beta_mBoxSec h1 {
+    font-size: 25px;
+    line-height: 33.33px;
+}
+.detl_grid .dtl_LeftG {
+    width: 100%;
+}
+.detl_grid .dtl_rightG {
+    width: 100%;
+    text-align: left;
+}
+.detl_grid .dtl_rightG p {
+    padding-left: 0;
+    text-align: left;
+}
+.features_icons.pro_features ul li .icons_bg {
+    width: 28%;
+}
+.features_icons.pro_features .product_cont {
+    width: 72%;
+}
+.beta_mBoxSec .first_para {
+    padding-right: 0px;
+}
+.beta_mBoxSec .first_para {
+    padding: 0px;
+}
+.beta_mBoxSec .sec_para {
+    width: 100%;
+    float: left;
+}
+.product_dl .desk_rightTxt {
+    width: 55%;
+}
+.trident_DtlBox .detl_grid h2 {
+    font-size: 25px;
+    line-height: 33.33px;
+}
+.trident_DtlBox .detl_grid h3 {
+    font-size: 24px;
+}
+.pro_features .product_cont h3 {
+    font-size: 25px;
+    line-height: 33.33px;
+}
+.desk_rightTxt {
+    width: 100%;
+    float: left;
+    top: 0;
+    position: unset;
+    background-color: #f8f8f8;
+}
+.desk_rightTxt h2 , .desk_rightTxt p {
+    color: #000000;    
+}
+.desk_rightTxt .Kievanos_btn {
+    background-color: #0f3043;
+    color: #fff;
+}
+.study_tableImg .study_img img {
+    height: 200px;
+}
+.icons_bg .icon_pos {
+    left: 51px;
+}
+.index_features ul li {
+    margin: 0 2%;
+}
+.trident_study {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -moz-box-align: start;
+    -ms-flex-align: start;
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+}
+.study_tableImg { 
+    -webkit-box-ordinal-group: 2; 
+    -moz-box-ordinal-group: 2; 
+    -ms-flex-order: 2; 
+    -webkit-order: 2; 
+    order: 2; 
+}
+.desk_rightTxt { 
+    -webkit-box-ordinal-group: 1; 
+    -moz-box-ordinal-group: 1; 
+    -ms-flex-order: 1; 
+    -webkit-order: 1; 
+    order: 1; 
+}
+.detl_grid .dtl_LeftG img {
+    width: 100%;
+}
+.trident_DtlBox h1 {
+    margin-bottom: 0;
+}
+.product_dl .desk_rightTxt {
+    width: 55%;
+    position: absolute;
+    background-color: #0f3043;
+}
+.product_dl .desk_rightTxt h2{
+    color: #ffffff;  
+}
+.product_dl .desk_rightTxt .Kievanos_btn {
+    background-color: #ffffff;
+    color: #000;
+}
+.trident_con p.padd_left {
+    padding-left: 10px;
+}
+.detl_grid .dtl_rightG img {
+    width: 100%;
+}
+.detl_grid .dtl_LeftG p {
+    padding-right: 0;
+}
+}
+@media(max-width: 440px) {
+.features_icons.pro_features ul li .icons_bg {
+    width: 31%;
+}
+.features_icons.pro_features .product_cont {
+    width: 69%;
+}
+}
+@media(max-width: 420px) {
+.icons_bg .icon_pos {
+    left: 47px;
+}
+}
+@media(max-width:400px) {
+.trident_con p {
+    font-size: 18px;
+    line-height: 24px;
+}
+.icons_bg .icon_pos {
+    top: 14px;
+    left: 47px;
+    width: 36px;
+}
+}
+@media(max-width:380px) {
+.mobile_logo img {
+    width: 34%;
+}
+.dots_stripe h1 {
+    font-size: 24px;
+    line-height: 32px;
+}
+.icons_bg .icon_pos {
+    left: 46px;
+}
+.index_NewSec .content_Box {
+    left: 10%;
+    padding-left: 30px;
+}
+.study_tableImg .study_img img {
+    height: 170px;
+}
+.bordered_line {
+    border-bottom: 1px solid #0f3043;
+    width: 6%;
+}
+.index_NewSec img {
+    width: 60%;
+}
+.index_NewSec, .index_NewSec img {
+    height: 250px;
+}
+.content_whiteBg {
+    height: 280px;
+}
+.pro_features .icons_bg img {
+    width: 90px;
+}
+.pro_features .icons_bg .icon_pos {
+    top: 14px;
+    left: 29px;
+    width: 34px;
+}
+}
+@media(max-width: 360px) {
+.schedule_button {
+	width: 53%;
+}
+.stats_box {
+	height: 455px;
+}
+.middle-section p {
+	padding: 0;
+}
+.kie_banner {
+    height: 280px;
+}
+.kie_banner img {
+    top: 22%;
+}
+.trident-box {
+    top: 40%;
+}
+.kie_loginBox {
+    padding: 30px 15px;
+}
+.result-section {
+    display: block;
+}
+.new_header {
+    padding-bottom: 50px;
+}
+.trident_con p.padd_left {
+    padding-left: 0;
+}
+.index_banner, .banner_content .banner_cell {
+    height: 180px;
+}
+.dots_stripe h1 {
+    font-size: 22px;
+}
+.dotes_bg {
+    height: 100px;
+}
+.icons_bg img {
+    width: 80px;
+}
+.icons_bg .icon_pos {
+    top: 10px;
+    left: 40px;
+    width: 30px;
+}
+.features_icons ul li p {
+    font-size: 17px;
+    line-height: 22px;
+}
+.index_NewSec .content_Box {
+    left: 10px;
+}
+.product_dl .desk_rightTxt {
+    width: 58%;
+}
+body .result-section p {
+    border-right: 0;
+    padding-right: 0;
+    margin-top: 10px;
+}
+body .result-section p:last-child {
+    padding-left: 0;
+}
+}
