@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>OVTLYR | Resources</title>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#fff">
+<meta name="format-detection" content="telephone=no">
+<link rel="icon" type="image/png" sizes="32x32" href="imgages/trident-favicon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/trident-favicon.png">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+<meta name="description" content="Updates and Statistics">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css">
+<link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Poppins:wght@500;600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" media="all" href="css/app.css">
+<link rel="stylesheet" media="all" href="css/style.css">
+<link rel="stylesheet" media="all" href="css/responsive.css">
+<link href="css/chart-style.css" rel="stylesheet" type="text/css" />
+<script>
+var viewportmeta = document.querySelector('meta[name="viewport"]');
+if (viewportmeta) {
+  if (screen.width < 375) {
+    var newScale = screen.width / 375;
+    viewportmeta.content = 'width=375, minimum-scale=' + newScale + ', maximum-scale=1.0, user-scalable=no, initial-scale=' + newScale + '';
+  } else {
+    viewportmeta.content = 'width=device-width, maximum-scale=1.0, initial-scale=1.0';
+  }
+}</script>
+</head>
+<body>
+<script>console.log(localStorage.getItem('darkMode'));
+if (localStorage.getItem('darkMode') === "on") {
+		document.body.classList.add("dark");
+		document.addEventListener("DOMContentLoaded", function() {
+		  document.querySelector('.js-switch-theme input').checked = true;
+		});
+}
+</script>
+  <div class="page">
+    <div class="sidebar">
+    <div class="sidebar__head"><a class="sidebar__logo" href="index.html"><img class="sidebar__pic sidebar__pic_light" src="images/login_trident.svg" alt="" /><img class="sidebar__pic sidebar__pic_dark" src="images/outlyr-white-logo.png" alt="" /></a>
+      <button class="sidebar__toggle">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+        <path d="M22 12H3" stroke="#11142d"></path>
+        <g stroke="#808191">
+          <path d="M22 4H13"></path>
+          <path opacity=".301" d="M22 20H13"></path>
+        </g>
+        <path d="M7 7l-5 5 5 5" stroke="#11142d"></path>
+      </svg>
+      </button>
+      <button class="sidebar__close"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="sidebar__logo_small">
+          <a href="index.html">
+            <img src="images/black.svg" class="whiteSmall_logo" alt="OVTLYR" />
+            <img src="images/white.svg" class="blackSmall_logo" alt="OVTLYR" />
+          </a>
+        </div>
+        <div class="sidebar__body">
+          <nav class="sidebar__nav">
+            <a class="sidebar__item" href="market-&-sectors.html">
+              <div class="sidebar__icon">
+                <img src="images/market-&-sectors.svg" alt="Market & Sectors" />
+              </div>
+              <div class="sidebar__text">Market & Sectors</div>
+            </a>
+            <a class="sidebar__item" href="daily-rankings.html">
+              <div class="sidebar__icon">
+                <img src="images/daily-rankings.svg" alt="Daily Rankings" />
+              </div>
+              <div class="sidebar__text">Daily Rankings</div>
+            </a>
+            <a class="sidebar__item" href="watchlist.html">
+              <div class="sidebar__icon">
+                <img src="images/watchlist.svg" alt="Watchlist" />
+              </div>
+              <div class="sidebar__text">My Watchlist</div>
+            </a>
+            <a class="sidebar__item" href="portfolio.html">
+              <div class="sidebar__icon">
+                <img src="images/portfolio.svg" alt="Portfolio" />
+              </div>
+              <div class="sidebar__text">My Portfolio</div>
+            </a>
+            <a class="sidebar__item active" href="resources.html">
+              <div class="sidebar__icon">
+                <img src="images/resources.svg" alt="Resources" />
+              </div>
+              <div class="sidebar__text">Resources</div>
+            </a>
+          </nav>
+          <div class="sidebar__profile">
+              <div class="sidebar__details">
+                <a class="sidebar__link js-popup-open" href="#popup-settings" data-effect="mfp-zoom-in">
+                  <div class="sidebar__icon"><img class="sidebar__pic" src="images/account.svg" alt="Profile"></div>
+                  <div class="sidebar__text">My Account</div>
+                </a>
+                <a class="sidebar__link" href="#">
+                  <div class="sidebar__icon"><img src="images/change-password.svg" alt="Change Password"></div>
+                  <div class="sidebar__text">Change Password</div>
+                </a>
+                <a class="sidebar__link" href="#">
+                  <div class="sidebar__icon"><img class="sidebar__pic" src="images/logout.svg" alt="Logout"></div>
+                  <div class="sidebar__text">Logout</div>
+                </a>
+                </div>
+                <a class="sidebar__user1" href="#">
+                <div class="sidebar__ava"><img class="sidebar__pic" src="images/profile.svg" alt="Profile"></div>
+                <div class="sidebar__desc">
+                  <div class="sidebar__man">Shivani Chandel</div>
+                </div>
+                <div class="sidebar__arrow"><i class="la la-angle-double-up"></i></div>
+              </a>
+            </div>
+        </div>
+        <div class="sidebar__bottom">
+      <label class="switch switch_theme js-switch-theme">
+        <input class="switch__input" type="checkbox" />
+        <span class="switch__in"><span class="switch__box"></span><span class="switch__icon">
+        <i class="fas fa-moon icon icon-theme-light"> </i>
+        <i class="fas fa-sun icon icon-theme-dark"> </i>
+        </span></span></label>
+      <a class="sidebar__user" href="sign-in.html"><img src="images/profile.svg" alt="" /></a></div>
+  </div>
+      <div class="page__content">
+        <div class="header header_border">
+        <form class="header__search">
+         <span class="serach_mainAuto">
+          <div class="autocomplete_div">
+            <input class="header__input" id="myInput" type="text" name="myCountry" placeholder="SYMBOL...">
+          </div>
+          <div class="searchbar_dropdown" style="display: none;">
+            <ul>
+              <li>
+                <p class="search_name"><b>AD</b>VANCE AUTO PARTS INC.</p>
+                <p class="search_symbol"><span><b>AAP</b> :</span><span class="search_ComName"> CONSUMER DISCRETIONARY</span></p>
+              </li>
+              <li class="active">
+                <p class="search_name"><b>AD</b>VANCE AUTO PARTS INC.</p>
+                <p class="search_symbol"><span><b>AAP</b> :</span><span class="search_ComName"> CONSUMER DISCRETIONARY</span></p>
+              </li>
+              <li>
+                <p class="search_name"><b>AD</b>VANCE AUTO PARTS INC.</p>
+                <p class="search_symbol"><span><b>AAP</b> :</span><span class="search_ComName"> CONSUMER DISCRETIONARY</span></p>
+              </li>
+              <li>
+                <p class="search_name"><b>AD</b>VANCE AUTO PARTS INC.</p>
+                <p class="search_symbol"><span><b>AAP</b> :</span><span class="search_ComName"> CONSUMER DISCRETIONARY</span></p>
+              </li>
+              <li>
+                <p class="search_name"><b>AD</b>VANCE AUTO PARTS INC.</p>
+                <p class="search_symbol"><span><b>AAP</b> :</span><span class="search_ComName"> CONSUMER DISCRETIONARY</span></p>
+              </li>
+              <li class="active">
+                <p class="search_name"><b>AD</b>VANCE AUTO PARTS INC.</p>
+                <p class="search_symbol"><span><b>AAP</b> :</span><span class="search_ComName"> CONSUMER DISCRETIONARY</span></p>
+              </li>
+              <li>
+                <p class="search_name"><b>AD</b>VANCE AUTO PARTS INC.</p>
+                <p class="search_symbol"><span><b>AAP</b> :</span><span class="search_ComName"> CONSUMER DISCRETIONARY</span></p>
+              </li>
+              <li>
+                <p class="search_name"><b>AD</b>VANCE AUTO PARTS INC.</p>
+                <p class="search_symbol"><span><b>AAP</b> :</span><span class="search_ComName"> CONSUMER DISCRETIONARY</span></p>
+              </li>
+            </ul>
+          </div>
+        </span>
+        <button class="header__start"><i class="fas fa-search"></i></button>
+      </form>
+      <a class="header__logo black_theme" href="index.html"><img src="images/white.svg" alt="OVTLYR" /></a>
+      <a class="header__logo white_theme" href="index.html"><img src="images/black.svg" alt="OVTLYR" /></a>
+      <button class="header__toggle">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+        <path d="M22 12H3" stroke="#11142d"></path>
+        <g stroke="#808191">
+          <path d="M22 4H13"></path>
+          <path opacity=".301" d="M22 20H13"></path>
+        </g>
+        <path d="M7 7l-5 5 5 5" stroke="#11142d"></path>
+      </svg>
+      </button>
+        </div>
+    <!--Popup Start -->
+      <div>  <a class="btn btn-bule_btn js-popup-open" href="#popup-massages" data-effect="mfp-zoom-in">Popup</a></div>
+      <div class="popup popup_settings mfp-hide" id="popup-massages" style="display: block; opacity: 1;">
+        <div class="popup_body">
+          <div class=""><i class="las la-exclamation-circle"></i></div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+          <a href="#" class="btn btn-bule_btn">Cancel</a>
+        </div>
+      </div>
+      <!--Popup End -->
+</div>
+<script src="js/jquery.min.js"></script> 
+<script src="js/svg4everybody.min.js"></script> 
+<script src="js/jquery.nice-select.min.js"></script> 
+<script src="js/jquery.magnific-popup.min.js"></script> 
+<script src="js/app.js"></script>
+<script> 
+  $(document).ready(function(){
+   $('#myInput').focus(function(){
+       $('.searchbar_dropdown').fadeIn(250);
+   }).focusout(function(){
+       $('.searchbar_dropdown').fadeOut(250);
+   });
+});
+</script>
+  </body>
+</html>

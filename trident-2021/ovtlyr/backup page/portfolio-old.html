@@ -1,0 +1,2693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>OVTLYR | Portfolio</title>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#fff">
+<meta name="format-detection" content="telephone=no">
+<link rel="icon" type="image/png" sizes="32x32" href="imgages/trident-favicon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/trident-favicon.png">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+<meta name="description" content="Updates and Statistics">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css">
+<link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Poppins:wght@500;600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" media="all" href="css/app.css">
+<link rel="stylesheet" media="all" href="css/style.css">
+<link rel="stylesheet" media="all" href="css/responsive.css">
+<link href="css/chart-style.css" rel="stylesheet" type="text/css" />
+<script>var viewportmeta = document.querySelector('meta[name="viewport"]');
+if (viewportmeta) {
+  if (screen.width < 375) {
+    var newScale = screen.width / 375;
+    viewportmeta.content = 'width=375, minimum-scale=' + newScale + ', maximum-scale=1.0, user-scalable=no, initial-scale=' + newScale + '';
+  } else {
+    viewportmeta.content = 'width=device-width, maximum-scale=1.0, initial-scale=1.0';
+  }
+}</script>
+</head>
+<body>
+<script>console.log(localStorage.getItem('darkMode'));
+if (localStorage.getItem('darkMode') === "on") {
+		document.body.classList.add("dark");
+		document.addEventListener("DOMContentLoaded", function() {
+		  document.querySelector('.js-switch-theme input').checked = true;
+		});
+}
+</script>
+<div class="page">
+  <div class="sidebar">
+    <div class="sidebar__head"><a class="sidebar__logo" href="index.html"><img class="sidebar__pic sidebar__pic_light" src="images/login_trident.svg" alt="" /><img class="sidebar__pic sidebar__pic_dark" src="images/outlyr-white-logo.png" alt="" /></a>
+      <button class="sidebar__toggle">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+          <path d="M22 12H3" stroke="#11142d"></path>
+          <g stroke="#808191">
+            <path d="M22 4H13"></path>
+            <path opacity=".301" d="M22 20H13"></path>
+          </g>
+          <path d="M7 7l-5 5 5 5" stroke="#11142d"></path>
+        </svg>
+      </button>
+      <button class="sidebar__close"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="sidebar__logo_small">
+      <a href="index.html">
+        <img src="images/black.svg" class="whiteSmall_logo" alt="OVTLYR" />
+        <img src="images/white.svg" class="blackSmall_logo" alt="OVTLYR" />
+      </a>
+    </div>
+    <div class="sidebar__body">
+      <nav class="sidebar__nav">
+        <a class="sidebar__item" href="market-&-sectors.html">
+          <div class="sidebar__icon">
+            <img src="images/market-&-sectors.svg" alt="Market & Sectors" />
+          </div>
+          <div class="sidebar__text">Market & Sectors</div>
+        </a>
+        <a class="sidebar__item" href="daily-rankings.html">
+          <div class="sidebar__icon">
+            <img src="images/daily-rankings.svg" alt="Daily Rankings" />
+          </div>
+          <div class="sidebar__text">Daily Rankings</div>
+        </a>
+        <a class="sidebar__item" href="watchlist.html">
+          <div class="sidebar__icon">
+            <img src="images/watchlist.svg" alt="Watchlist" />
+          </div>
+          <div class="sidebar__text">My Watchlist</div>
+        </a>
+        <a class="sidebar__item active" href="portfolio.html">
+          <div class="sidebar__icon">
+            <img src="images/portfolio.svg" alt="Portfolio" />
+          </div>
+          <div class="sidebar__text">My Portfolio</div>
+        </a>
+        <a class="sidebar__item" href="resources.html">
+          <div class="sidebar__icon">
+            <img src="images/resources.svg" alt="Resources" />
+          </div>
+          <div class="sidebar__text">Resources</div>
+        </a>
+      </nav>
+      <div class="sidebar__profile">
+        <div class="sidebar__details">
+          <a class="sidebar__link js-popup-open" href="#popup-settings" data-effect="mfp-zoom-in">
+            <div class="sidebar__icon"><img class="sidebar__pic" src="images/account.svg" alt="Profile"></div>
+            <div class="sidebar__text">My Account</div>
+          </a>
+          <a class="sidebar__link" href="#">
+            <div class="sidebar__icon"><img src="images/change-password.svg" alt="Change Password"></div>
+            <div class="sidebar__text">Change Password</div>
+          </a>
+          <a class="sidebar__link" href="#">
+            <div class="sidebar__icon"><img class="sidebar__pic" src="images/logout.svg" alt="Logout"></div>
+            <div class="sidebar__text">Logout</div>
+          </a>
+        </div>
+        <a class="sidebar__user1" href="#">
+          <div class="sidebar__ava"><img class="sidebar__pic" src="images/profile.svg" alt="Profile"></div>
+          <div class="sidebar__desc">
+            <div class="sidebar__man">Shivani Chandel</div>
+          </div>
+          <div class="sidebar__arrow"><i class="la la-angle-double-up"></i></div>
+        </a>
+      </div>
+    </div>
+    <div class="sidebar__bottom">
+      <label class="switch switch_theme js-switch-theme">
+        <input class="switch__input" type="checkbox" />
+        <span class="switch__in">
+          <span class="switch__box"></span>
+          <span class="switch__icon">
+            <i class="fas fa-moon icon icon-theme-light"> </i>
+            <i class="fas fa-sun icon icon-theme-dark"> </i>
+          </span>
+        </span>
+      </label>
+      <a class="sidebar__user" href="sign-in.html"><img src="images/profile.svg" alt="" /></a>
+    </div>
+  </div>
+  <div class="page__content">
+    <div class="header header_border">
+      <form class="header__search">
+        <span class="serach_mainAuto">
+          <div class="autocomplete_div">
+            <input class="header__input" id="myInput" type="text" name="myCountry" placeholder="SYMBOL...">
+          </div>
+          <div class="searchbar_dropdown" style="display: none;">
+            <ul>
+              <li>
+                <p class="search_name"><b>AD</b>VANCE AUTO PARTS INC.</p>
+                <p class="search_symbol"><span><b>AAP</b> :</span><span class="search_ComName"> CONSUMER DISCRETIONARY</span></p>
+              </li>
+              <li class="active">
+                <p class="search_name"><b>AD</b>VANCE AUTO PARTS INC.</p>
+                <p class="search_symbol"><span><b>AAP</b> :</span><span class="search_ComName"> CONSUMER DISCRETIONARY</span></p>
+              </li>
+              <li>
+                <p class="search_name"><b>AD</b>VANCE AUTO PARTS INC.</p>
+                <p class="search_symbol"><span><b>AAP</b> :</span><span class="search_ComName"> CONSUMER DISCRETIONARY</span></p>
+              </li>
+              <li>
+                <p class="search_name"><b>AD</b>VANCE AUTO PARTS INC.</p>
+                <p class="search_symbol"><span><b>AAP</b> :</span><span class="search_ComName"> CONSUMER DISCRETIONARY</span></p>
+              </li>
+              <li>
+                <p class="search_name"><b>AD</b>VANCE AUTO PARTS INC.</p>
+                <p class="search_symbol"><span><b>AAP</b> :</span><span class="search_ComName"> CONSUMER DISCRETIONARY</span></p>
+              </li>
+              <li class="active">
+                <p class="search_name"><b>AD</b>VANCE AUTO PARTS INC.</p>
+                <p class="search_symbol"><span><b>AAP</b> :</span><span class="search_ComName"> CONSUMER DISCRETIONARY</span></p>
+              </li>
+              <li>
+                <p class="search_name"><b>AD</b>VANCE AUTO PARTS INC.</p>
+                <p class="search_symbol"><span><b>AAP</b> :</span><span class="search_ComName"> CONSUMER DISCRETIONARY</span></p>
+              </li>
+              <li>
+                <p class="search_name"><b>AD</b>VANCE AUTO PARTS INC.</p>
+                <p class="search_symbol"><span><b>AAP</b> :</span><span class="search_ComName"> CONSUMER DISCRETIONARY</span></p>
+              </li>
+            </ul>
+          </div>
+        </span>
+        <button class="header__start"><i class="fas fa-search"></i></button>
+      </form>
+      <a class="header__logo black_theme" href="index.html"><img src="images/white.svg" alt="OVTLYR" /></a>
+      <a class="header__logo white_theme" href="index.html"><img src="images/black.svg" alt="OVTLYR" /></a>
+      <button class="header__toggle">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+          <path d="M22 12H3" stroke="#11142d"></path>
+          <g stroke="#808191">
+            <path d="M22 4H13"></path>
+            <path opacity=".301" d="M22 20H13"></path>
+          </g>
+          <path d="M7 7l-5 5 5 5" stroke="#11142d"></path>
+        </svg>
+      </button>
+    </div>
+    <div class="page__row watchlistPart">
+      <div class="wallets__container watchlistSec portfolio_Sec">
+        <div class="wallets__wrapper watchlistSec1">
+          <div class="prices portfolioR_table">
+            <div class="prices__head">
+              <div class="prices__title h5">Build My Portfolio<span class="portfolio_Tooltip"><i class="la la-question-circle"></i></span></div>
+              <div>
+                <a href="javascript:void(0);" class="btn btn-bule_btn add_more margin-10 small-btn"><span class="addStock_portfolio"><i class="la la-plus"></i> Add</span></a>
+                <button class="wallets_close" onclick="seeWatchlist()" id="more-button"> <i class="fas fa-angle-down" id="collapse_icon1"></i></button>
+              </div>
+            </div>
+            <div class="" id="watchList_1" style="height: auto;">
+              <div class="prices__container">
+                <table class="table ovtlyr_table">
+                  <thead>
+                    <tr>
+                      <th>
+                        <label class="checkbox">
+                          <input class="checkbox__input" type="checkbox" />
+                          <span class="checkbox__in">
+                            <span class="checkbox__tick"></span>
+                          </span>
+                        </label>
+                      </th>
+                      <th>Symbol</th>
+                      <th>Company Name</th>
+                      <th style="width: 25%;">OVTLYR Rating</th>
+                      <th>Sector</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td colspan="6">
+                        <div class="portfolio_head empty_SavedNews">
+                          <div class="empty_box_div"> 
+                            <img src="images/empty-watchlist-grey.svg" class="light_svg" alt="Empty Watchlist">
+                            <img src="images/empty-watchlist-dark.svg" class="dark_svg" alt="Empty Watchlist">
+                            <p>Your Portfolio is Empty</p>
+                            <a href="javascript:void(0)" class="btn btn-bule_btn add_more">Add Stocks</a>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label class="checkbox">
+                          <input class="checkbox__input" type="checkbox" />
+                          <span class="checkbox__in">
+                            <span class="checkbox__tick"></span>
+                          </span>
+                        </label>
+                      </td>
+                      <td><a href="stock-detail.html"><p><span class="port_symbol">AAPL</span></p></a></td>
+                      <td><a href="stock-detail.html"><p>Apple Inc</p></a></td>
+                      <td>
+                        <div class="footLeft11 rating_slider">
+                          <div class="slidecontainer">
+                            <span class="card__category values">Bullish</span>
+                              <div class="RangeSlider_div">
+                                <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                              </div>
+                            <span class="card__category values">Bearish</span>
+                          </div>
+                        </div>
+                      </td>
+                      <td><p>IT Services</p></td>
+                      <td>
+                        <div class="edit_butns">
+                          <button type="button" class="removeSym"><i class="la la-minus-circle"></i> </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label class="checkbox">
+                          <input class="checkbox__input" type="checkbox" />
+                          <span class="checkbox__in">
+                            <span class="checkbox__tick"></span>
+                          </span>
+                        </label>
+                      </td>
+                      <td><a href="stock-detail.html"><p><span class="port_symbol">AAPL</span></p></a></td>
+                      <td><a href="stock-detail.html"><p>Apple Inc</p></a></td>
+                      <td>
+                        <div class="footLeft11 rating_slider">
+                          <div class="slidecontainer">
+                            <span class="card__category values">Bullish</span>
+                              <div class="RangeSlider_div">
+                                <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                              </div>
+                            <span class="card__category values">Bearish</span>
+                          </div>
+                        </div>
+                      </td>
+                      <td><p>IT Services</p></td>
+                      <td>
+                        <div class="edit_butns">
+                          <button type="button" class="removeSym"><i class="la la-minus-circle"></i> </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label class="checkbox">
+                          <input class="checkbox__input" type="checkbox" />
+                          <span class="checkbox__in">
+                            <span class="checkbox__tick"></span>
+                          </span>
+                        </label>
+                      </td>
+                      <td><a href="stock-detail.html"><p><span class="port_symbol">AAPL</span></p></a></td>
+                      <td><a href="stock-detail.html"><p>Apple Inc</p></a></td>
+                      <td>
+                        <div class="footLeft11 rating_slider">
+                          <div class="slidecontainer">
+                            <span class="card__category values">Bullish</span>
+                              <div class="RangeSlider_div">
+                                <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                              </div>
+                            <span class="card__category values">Bearish</span>
+                          </div>
+                        </div>
+                      </td>
+                      <td><p>IT Services</p></td>
+                      <td>
+                        <div class="edit_butns">
+                          <button type="button" class="removeSym"><i class="la la-minus-circle"></i> </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label class="checkbox">
+                          <input class="checkbox__input" type="checkbox" />
+                          <span class="checkbox__in">
+                            <span class="checkbox__tick"></span>
+                          </span>
+                        </label>
+                      </td>
+                      <td><a href="stock-detail.html"><p><span class="port_symbol">AAPL</span></p></a></td>
+                      <td><a href="stock-detail.html"><p>Apple Inc</p></a></td>
+                      <td>
+                        <div class="footLeft11 rating_slider">
+                          <div class="slidecontainer">
+                            <span class="card__category values">Bullish</span>
+                              <div class="RangeSlider_div">
+                                <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                              </div>
+                            <span class="card__category values">Bearish</span>
+                          </div>
+                        </div>
+                      </td>
+                      <td><p>IT Services</p></td>
+                      <td>
+                        <div class="edit_butns">
+                          <button type="button" class="removeSym"><i class="la la-minus-circle"></i> </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label class="checkbox">
+                          <input class="checkbox__input" type="checkbox" />
+                          <span class="checkbox__in">
+                            <span class="checkbox__tick"></span>
+                          </span>
+                        </label>
+                      </td>
+                      <td><a href="stock-detail.html"><p><span class="port_symbol">AAPL</span></p></a></td>
+                      <td><a href="stock-detail.html"><p>Apple Inc</p></a></td>
+                      <td>
+                        <div class="footLeft11 rating_slider">
+                          <div class="slidecontainer">
+                            <span class="card__category values">Bullish</span>
+                              <div class="RangeSlider_div">
+                                <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                              </div>
+                            <span class="card__category values">Bearish</span>
+                          </div>
+                        </div>
+                      </td>
+                      <td><p>IT Services</p></td>
+                      <td>
+                        <div class="edit_butns">
+                          <button type="button" class="removeSym"><i class="la la-minus-circle"></i> </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label class="checkbox">
+                          <input class="checkbox__input" type="checkbox" />
+                          <span class="checkbox__in">
+                            <span class="checkbox__tick"></span>
+                          </span>
+                        </label>
+                      </td>
+                      <td><a href="stock-detail.html"><p><span class="port_symbol">AAPL</span></p></a></td>
+                      <td><a href="stock-detail.html"><p>Apple Inc</p></a></td>
+                      <td>
+                        <div class="footLeft11 rating_slider">
+                          <div class="slidecontainer">
+                            <span class="card__category values">Bullish</span>
+                              <div class="RangeSlider_div">
+                                <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                              </div>
+                            <span class="card__category values">Bearish</span>
+                          </div>
+                        </div>
+                      </td>
+                      <td><p>IT Services</p></td>
+                      <td>
+                        <div class="edit_butns">
+                          <button type="button" class="removeSym"><i class="la la-minus-circle"></i> </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label class="checkbox">
+                          <input class="checkbox__input" type="checkbox" />
+                          <span class="checkbox__in">
+                            <span class="checkbox__tick"></span>
+                          </span>
+                        </label>
+                      </td>
+                      <td><a href="stock-detail.html"><p><span class="port_symbol">AAPL</span></p></a></td>
+                      <td><a href="stock-detail.html"><p>Apple Inc</p></a></td>
+                      <td>
+                        <div class="footLeft11 rating_slider">
+                          <div class="slidecontainer">
+                            <span class="card__category values">Bullish</span>
+                              <div class="RangeSlider_div">
+                                <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                              </div>
+                            <span class="card__category values">Bearish</span>
+                          </div>
+                        </div>
+                      </td>
+                      <td><p>IT Services</p></td>
+                      <td>
+                        <div class="edit_butns">
+                          <button type="button" class="removeSym"><i class="la la-minus-circle"></i> </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label class="checkbox">
+                          <input class="checkbox__input" type="checkbox" />
+                          <span class="checkbox__in">
+                            <span class="checkbox__tick"></span>
+                          </span>
+                        </label>
+                      </td>
+                      <td><a href="stock-detail.html"><p><span class="port_symbol">AAPL</span></p></a></td>
+                      <td><a href="stock-detail.html"><p>Apple Inc</p></a></td>
+                      <td>
+                        <div class="footLeft11 rating_slider">
+                          <div class="slidecontainer">
+                            <span class="card__category values">Bullish</span>
+                              <div class="RangeSlider_div">
+                                <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                              </div>
+                            <span class="card__category values">Bearish</span>
+                          </div>
+                        </div>
+                      </td>
+                      <td><p>IT Services</p></td>
+                      <td>
+                        <div class="edit_butns">
+                          <button type="button" class="removeSym"><i class="la la-minus-circle"></i> </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label class="checkbox">
+                          <input class="checkbox__input" type="checkbox" />
+                          <span class="checkbox__in">
+                            <span class="checkbox__tick"></span>
+                          </span>
+                        </label>
+                      </td>
+                      <td><a href="stock-detail.html"><p><span class="port_symbol">AAPL</span></p></a></td>
+                      <td><a href="stock-detail.html"><p>Apple Inc</p></a></td>
+                      <td>
+                        <div class="footLeft11 rating_slider">
+                          <div class="slidecontainer">
+                            <span class="card__category values">Bullish</span>
+                              <div class="RangeSlider_div">
+                                <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                              </div>
+                            <span class="card__category values">Bearish</span>
+                          </div>
+                        </div>
+                      </td>
+                      <td><p>IT Services</p></td>
+                      <td>
+                        <div class="edit_butns">
+                          <button type="button" class="removeSym"><i class="la la-minus-circle"></i> </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label class="checkbox">
+                          <input class="checkbox__input" type="checkbox" />
+                          <span class="checkbox__in">
+                            <span class="checkbox__tick"></span>
+                          </span>
+                        </label>
+                      </td>
+                      <td><a href="stock-detail.html"><p><span class="port_symbol">AAPL</span></p></a></td>
+                      <td><a href="stock-detail.html"><p>Apple Inc</p></a></td>
+                      <td>
+                        <div class="footLeft11 rating_slider">
+                          <div class="slidecontainer">
+                            <span class="card__category values">Bullish</span>
+                              <div class="RangeSlider_div">
+                                <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                              </div>
+                            <span class="card__category values">Bearish</span>
+                          </div>
+                        </div>
+                      </td>
+                      <td><p>IT Services</p></td>
+                      <td>
+                        <div class="edit_butns">
+                          <button type="button" class="removeSym"><i class="la la-minus-circle"></i> </button>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="piechart_filter">
+              <div class="chartFilter_right">
+                <div class="result_listHead">
+                  <div class="result_listHead1">
+                    <span class="text_a">Account Value:</span>
+                    <div class="input_divF">
+                      <span>$</span>
+                      <input type="text" class="filterInput" placeholder="120000"> 
+                    </div>
+                  </div>
+                  <div class="result_listHead1">
+                    <span class="text_a">MAR:</span>
+                    <div class="input_divF">
+                      <input type="text" class="filterInput" value="7.00"> 
+                      <span>%</span>
+                    </div>
+                  </div>
+                  <div class="result_listHead1">
+                    <span class="text_a">R<sub>f</sub>:</span>
+                    <div class="input_divF">
+                      <input type="text" class="filterInput" value="2.00"> 
+                      <span>%</span>
+                    </div>
+                  </div>
+                  <div class="result_listHead1 maxwidth_fix">
+                    <span class="text_a">Risk Tolerance:</span>
+                    <div class="right_div">
+                      <div class="input_divF">
+                        <div id="icon_range" class="rating pmd-material-rating"></div>
+                      </div>
+                      <div class="risk_labels">
+                        <span>Conservative</span>
+                        <span>Balanced</span>
+                        <span>Aggressive</span>
+                      </div>
+                    </div>
+                  </div> 
+                </div>
+              </div>
+              <div class="chartFil_left">
+                <ul class="runbacktest_check">
+                  <li>
+                    <label class="checkbox">
+                      <input class="checkbox__input" type="checkbox">
+                      <span class="checkbox__in">
+                        <span class="checkbox__tick"></span>
+                      </span>
+                    </label>
+                    <p>Run Backtest</p>
+                  </li>
+                </ul>
+                <div class="runBacktest">
+                  <a href="" class="btn btn-bule_btn">Build Portfolio</a>  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="wallets__sidebar watchlistSec2 sidebar_tab newSide_filters">
+        <button class="Wallets__Close wallets_close">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+            <path d="M22 12H3" stroke="#11142d"></path>
+            <g stroke="#808191">
+              <path d="M22 4H13"></path>
+              <path opacity=".9" d="M22 20H13"></path>
+            </g>
+            <path d="M7 7l-5 5 5 5" stroke="#11142d"></path>
+          </svg>
+        </button>
+        <div class="wallets__wrap">
+          <div class="card wallets__body portfolioSide_11">
+            <div class="js-tabs">
+              <div class="card__head" onclick="growDiv()" id="more-button">
+                <div class="widgets__variants portfolioSide_22">
+                  <a class="market__link js-tabs-link widgets__link active" href="#">Search Filter</a>
+                  <a class="market__link js-tabs-link widgets__link" href="#">Watchlist</a>
+                </div>
+                <button class="wallets_close"> <i class="fas fa-angle-down" id="collapse_icon"></i></button>
+              </div>
+              <div class="market__body card__list" id="grow">
+                <div class="js-tabs-item" style="display: block;">
+                  <div class="upper_filterTabs">
+                    <div class="market__tabs">
+                      <div class="market__tabs js-tabs2">
+                        <div class="market__head">
+                          <div class="widgets__variants market__menu">
+                            <a class="market__link js-tabs-link2 widgets__link active" href="#">Sector</a>
+                            <a class="market__link js-tabs-link2 widgets__link" href="#">Industry</a>
+                            <a class="market__link js-tabs-link2 widgets__link" href="#">Market Cap</a>
+                          </div>
+                        </div>
+                        <div class="market__body wrap_sideSlider watchlistScroll">
+                          <div class="market__container">
+                            <div class="market__item js-tabs-item2" style="display: block;">
+                              <div class="sector_tab1">
+                                <div class="sector_tab11">
+                                  <label class="checkbox">
+                                    <input class="checkbox__input" type="checkbox">
+                                    <span class="checkbox__in">
+                                      <span class="checkbox__tick"></span>
+                                      <span class="checkbox__text">Communication</span>
+                                    </span>
+                                  </label>
+                                  <label class="checkbox">
+                                    <input class="checkbox__input" type="checkbox">
+                                    <span class="checkbox__in">
+                                      <span class="checkbox__tick"></span>
+                                      <span class="checkbox__text">Discretionary</span>
+                                    </span>
+                                  </label>
+                                  <label class="checkbox">
+                                      <input class="checkbox__input" type="checkbox">
+                                      <span class="checkbox__in">
+                                        <span class="checkbox__tick"></span>
+                                        <span class="checkbox__text">Energy</span>
+                                      </span>
+                                    </label>
+                                  <label class="checkbox">
+                                    <input class="checkbox__input" type="checkbox">
+                                    <span class="checkbox__in">
+                                      <span class="checkbox__tick"></span>
+                                      <span class="checkbox__text">Financials</span>
+                                    </span>
+                                  </label>
+                                </div>
+                                <div class="sector_tab11">
+                                  <label class="checkbox">
+                                    <input class="checkbox__input" type="checkbox">
+                                    <span class="checkbox__in">
+                                      <span class="checkbox__tick"></span>
+                                      <span class="checkbox__text">Healthcare</span>
+                                    </span>
+                                  </label>
+                                  <label class="checkbox">
+                                    <input class="checkbox__input" type="checkbox">
+                                    <span class="checkbox__in">
+                                      <span class="checkbox__tick"></span>
+                                      <span class="checkbox__text">Industrial</span>
+                                    </span>
+                                  </label>
+                                  <label class="checkbox">
+                                    <input class="checkbox__input" type="checkbox">
+                                    <span class="checkbox__in">
+                                      <span class="checkbox__tick"></span>
+                                      <span class="checkbox__text">Materials</span>
+                                    </span>
+                                  </label>
+                                  <label class="checkbox">
+                                    <input class="checkbox__input" type="checkbox">
+                                    <span class="checkbox__in">
+                                      <span class="checkbox__tick"></span>
+                                      <span class="checkbox__text">Real Estate</span>
+                                     </span>
+                                  </label>
+                                </div>
+                                <div class="sector_tab11">
+                                  <label class="checkbox">
+                                    <input class="checkbox__input" type="checkbox">
+                                    <span class="checkbox__in">
+                                      <span class="checkbox__tick"></span>
+                                      <span class="checkbox__text">Staples</span>
+                                    </span>
+                                  </label>
+                                  <label class="checkbox">
+                                    <input class="checkbox__input" type="checkbox">
+                                    <span class="checkbox__in">
+                                      <span class="checkbox__tick"></span>
+                                      <span class="checkbox__text">Technology</span>
+                                    </span>
+                                  </label>
+                                  <label class="checkbox">
+                                    <input class="checkbox__input" type="checkbox">
+                                    <span class="checkbox__in">
+                                      <span class="checkbox__tick"></span>
+                                      <span class="checkbox__text">Utilities</span>
+                                    </span>
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="market__item js-tabs-item2" style="display: none;">
+                              <div class="sector_tab1">
+                                <div class="sector_tab11">
+                                  <label class="checkbox">
+                                    <input class="checkbox__input" type="checkbox">
+                                    <span class="checkbox__in">
+                                      <span class="checkbox__tick"></span>
+                                      <span class="checkbox__text">Technology Hardware, Storage & Peripherals</span>
+                                    </span>
+                                  </label>
+                                  <label class="checkbox">
+                                    <input class="checkbox__input" type="checkbox">
+                                    <span class="checkbox__in">
+                                      <span class="checkbox__tick"></span>
+                                      <span class="checkbox__text">Hotels, Restaurants & Leisure</span>
+                                    </span>
+                                  </label>
+                                  <label class="checkbox">
+                                      <input class="checkbox__input" type="checkbox">
+                                      <span class="checkbox__in">
+                                        <span class="checkbox__tick"></span>
+                                        <span class="checkbox__text">IT Services</span>
+                                      </span>
+                                    </label>
+                                  <label class="checkbox">
+                                    <input class="checkbox__input" type="checkbox">
+                                    <span class="checkbox__in">
+                                      <span class="checkbox__tick"></span>
+                                      <span class="checkbox__text">Electrical Equipment</span>
+                                    </span>
+                                  </label>
+                                </div>
+                                <div class="sector_tab11">
+                                  <label class="checkbox">
+                                    <input class="checkbox__input" type="checkbox">
+                                    <span class="checkbox__in">
+                                      <span class="checkbox__tick"></span>
+                                      <span class="checkbox__text">Metals & Mining</span>
+                                    </span>
+                                  </label>
+                                  <label class="checkbox">
+                                    <input class="checkbox__input" type="checkbox">
+                                    <span class="checkbox__in">
+                                      <span class="checkbox__tick"></span>
+                                      <span class="checkbox__text">Hotels, Restaurants & Leisure</span>
+                                    </span>
+                                  </label>
+                                  <label class="checkbox">
+                                    <input class="checkbox__input" type="checkbox">
+                                    <span class="checkbox__in">
+                                      <span class="checkbox__tick"></span>
+                                      <span class="checkbox__text">IT Services</span>
+                                    </span>
+                                  </label>
+                                  <label class="checkbox">
+                                    <input class="checkbox__input" type="checkbox">
+                                    <span class="checkbox__in">
+                                      <span class="checkbox__tick"></span>
+                                      <span class="checkbox__text">Electrical Equipment</span>
+                                    </span>
+                                  </label>
+                                </div>
+                                <div class="sector_tab11">
+                                  <label class="checkbox">
+                                    <input class="checkbox__input" type="checkbox">
+                                    <span class="checkbox__in">
+                                      <span class="checkbox__tick"></span>
+                                      <span class="checkbox__text">Software</span>
+                                    </span>
+                                  </label>
+                                  <label class="checkbox">
+                                    <input class="checkbox__input" type="checkbox">
+                                    <span class="checkbox__in">
+                                      <span class="checkbox__tick"></span>
+                                      <span class="checkbox__text">Hotels, Restaurants & Leisure</span>
+                                    </span>
+                                  </label>
+                                  <label class="checkbox">
+                                    <input class="checkbox__input" type="checkbox">
+                                    <span class="checkbox__in">
+                                      <span class="checkbox__tick"></span>
+                                      <span class="checkbox__text">IT Services</span>
+                                    </span>
+                                  </label>
+                                  <label class="checkbox">
+                                    <input class="checkbox__input" type="checkbox">
+                                    <span class="checkbox__in">
+                                      <span class="checkbox__tick"></span>
+                                      <span class="checkbox__text">Electrical Equipment</span>
+                                    </span>
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="market__item js-tabs-item2" style="display: none;">
+                              <div class="sector_tab1">
+                                <div class="sector_tab11">
+                                  <label class="checkbox">
+                                    <input class="checkbox__input" type="checkbox">
+                                    <span class="checkbox__in">
+                                      <span class="checkbox__tick"></span>
+                                      <span class="checkbox__text">&lt;$10B</span>
+                                    </span>
+                                  </label>
+                                  <label class="checkbox">
+                                    <input class="checkbox__input" type="checkbox">
+                                    <span class="checkbox__in">
+                                      <span class="checkbox__tick"></span>
+                                      <span class="checkbox__text">$10B - $100B</span>
+                                    </span>
+                                  </label>
+                                  <label class="checkbox">
+                                    <input class="checkbox__input" type="checkbox">
+                                    <span class="checkbox__in">
+                                      <span class="checkbox__tick"></span>
+                                      <span class="checkbox__text">&gt;$100B</span>
+                                    </span>
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="apply_filter">
+                      <a href="javascript:void(0);" class="btn btn-bule_btn">Apply</a>
+                    </div>
+                  </div>
+                  <div class="card wallets__body">
+                    <div class="card__head" onclick="growupDiv()" id="more-button">
+                      <div class="card__title h6">Results</div>
+                      <button class="wallets_close"> <i class="fas fa-angle-down" id="collapseup_icon"></i></button>
+                    </div>
+                    <div class="card__list wrap_sideSlider watchlistScroll" id="growup">
+                      <div class="card__item">
+                        <div class="card__details">
+                          <div class="card__line">
+                            <div class="card__category">AAPL</div>
+                            <div class="card__date"><button type="button" class="clickTo_add"><i class="fas fa-check-circle"></i></button></div>
+                          </div>
+                          <div class="card__status color-green">Apple Inc</div>
+                        </div>
+                        <div class="footLeft11 rating_slider">
+                          <div class="slidecontainer">
+                            <span class="card__category values">Bullish</span>
+                            <div class="RangeSlider_div">
+                              <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                            </div>
+                            <span class="card__category values">Bearish</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card__item">
+                        <div class="card__details">
+                          <div class="card__line">
+                            <div class="card__category">AAPL</div>
+                            <div class="card__date"><button type="button" class="clickTo_add"><i class="fas fa-check-circle"></i></button></div>
+                          </div>
+                          <div class="card__status color-green">Apple Inc</div>
+                        </div>
+                        <div class="footLeft11 rating_slider">
+                          <div class="slidecontainer">
+                            <span class="card__category values">Bullish</span>
+                            <div class="RangeSlider_div">
+                              <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                            </div>
+                            <span class="card__category values">Bearish</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card__item">
+                        <div class="card__details">
+                          <div class="card__line">
+                            <div class="card__category">AAPL</div>
+                            <div class="card__date"><button type="button" class="clickTo_add"><i class="fas fa-check-circle"></i></button></div>
+                          </div>
+                          <div class="card__status color-green">Apple Inc</div>
+                        </div>
+                        <div class="footLeft11 rating_slider">
+                          <div class="slidecontainer">
+                            <span class="card__category values">Bullish</span>
+                            <div class="RangeSlider_div">
+                              <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                            </div>
+                            <span class="card__category values">Bearish</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card__item">
+                        <div class="card__details">
+                          <div class="card__line">
+                            <div class="card__category">AAPL</div>
+                            <div class="card__date"><button type="button" class="clickTo_add addPortfolio"><i class="fas fa-plus-circle"></i></button></div>
+                          </div>
+                          <div class="card__status color-green">Apple Inc</div>
+                        </div>
+                        <div class="footLeft11 rating_slider">
+                          <div class="slidecontainer">
+                            <span class="card__category values">Bullish</span>
+                            <div class="RangeSlider_div">
+                              <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                            </div>
+                            <span class="card__category values">Bearish</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card__item">
+                        <div class="card__details">
+                          <div class="card__line">
+                            <div class="card__category">AAPL</div>
+                            <div class="card__date"><button type="button" class="clickTo_add addPortfolio"><i class="fas fa-plus-circle"></i></button></div>
+                          </div>
+                          <div class="card__status color-green">Apple Inc</div>
+                        </div>
+                        <div class="footLeft11 rating_slider">
+                          <div class="slidecontainer">
+                            <span class="card__category values">Bullish</span>
+                            <div class="RangeSlider_div">
+                              <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                            </div>
+                            <span class="card__category values">Bearish</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card__item">
+                        <div class="card__details">
+                          <div class="card__line">
+                            <div class="card__category">AAPL</div>
+                            <div class="card__date"><button type="button" class="clickTo_add addPortfolio"><i class="fas fa-plus-circle"></i></button></div>
+                          </div>
+                          <div class="card__status color-green">Apple Inc</div>
+                        </div>
+                        <div class="footLeft11 rating_slider">
+                          <div class="slidecontainer">
+                            <span class="card__category values">Bullish</span>
+                            <div class="RangeSlider_div">
+                              <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                            </div>
+                            <span class="card__category values">Bearish</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card__item">
+                        <div class="card__details">
+                          <div class="card__line">
+                            <div class="card__category">AAPL</div>
+                            <div class="card__date"><button type="button" class="clickTo_add addPortfolio"><i class="fas fa-plus-circle"></i></button></div>
+                          </div>
+                          <div class="card__status color-green">Apple Inc</div>
+                        </div>
+                        <div class="footLeft11 rating_slider">
+                          <div class="slidecontainer">
+                            <span class="card__category values">Bullish</span>
+                            <div class="RangeSlider_div">
+                              <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                            </div>
+                            <span class="card__category values">Bearish</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="js-tabs-item" style="display: none;">
+                  <div class="card__list wrap_sideSlider watchlistScroll" id="growup">
+                    <div class="card__item">
+                      <div class="card__details">
+                        <div class="card__line">
+                          <div class="card__category">AAPL</div>
+                          <div class="card__date"><button type="button" class="clickTo_add addPortfolio"><i class="fas fa-plus-circle"></i></button></div>
+                        </div>
+                        <div class="card__status color-green">Apple Inc</div>
+                      </div>
+                      <div class="footLeft11 rating_slider">
+                        <div class="slidecontainer">
+                          <span class="card__category values">Bullish</span>
+                          <div class="RangeSlider_div">
+                            <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                          </div>
+                          <span class="card__category values">Bearish</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card__item">
+                      <div class="card__details">
+                        <div class="card__line">
+                          <div class="card__category">AAPL</div>
+                          <div class="card__date"><button type="button" class="clickTo_add addPortfolio"><i class="fas fa-plus-circle"></i></button></div>
+                        </div>
+                        <div class="card__status color-green">Apple Inc</div>
+                      </div>
+                      <div class="footLeft11 rating_slider">
+                        <div class="slidecontainer">
+                          <span class="card__category values">Bullish</span>
+                          <div class="RangeSlider_div">
+                            <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                          </div>
+                          <span class="card__category values">Bearish</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card__item">
+                      <div class="card__details">
+                        <div class="card__line">
+                          <div class="card__category">AAPL</div>
+                          <div class="card__date"><button type="button" class="clickTo_add addPortfolio"><i class="fas fa-plus-circle"></i></button></div>
+                        </div>
+                        <div class="card__status color-green">Apple Inc</div>
+                      </div>
+                      <div class="footLeft11 rating_slider">
+                        <div class="slidecontainer">
+                          <span class="card__category values">Bullish</span>
+                          <div class="RangeSlider_div">
+                            <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                          </div>
+                          <span class="card__category values">Bearish</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card__item">
+                      <div class="card__details">
+                        <div class="card__line">
+                          <div class="card__category">AAPL</div>
+                          <div class="card__date"><button type="button" class="clickTo_add addPortfolio"><i class="fas fa-plus-circle"></i></button></div>
+                        </div>
+                        <div class="card__status color-green">Apple Inc</div>
+                      </div>
+                      <div class="footLeft11 rating_slider">
+                        <div class="slidecontainer">
+                          <span class="card__category values">Bullish</span>
+                          <div class="RangeSlider_div">
+                            <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                          </div>
+                          <span class="card__category values">Bearish</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card__item">
+                      <div class="card__details">
+                        <div class="card__line">
+                          <div class="card__category">AAPL</div>
+                          <div class="card__date"><button type="button" class="clickTo_add addPortfolio"><i class="fas fa-plus-circle"></i></button></div>
+                        </div>
+                        <div class="card__status color-green">Apple Inc</div>
+                      </div>
+                      <div class="footLeft11 rating_slider">
+                        <div class="slidecontainer">
+                          <span class="card__category values">Bullish</span>
+                          <div class="RangeSlider_div">
+                            <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                          </div>
+                          <span class="card__category values">Bearish</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card__item">
+                      <div class="card__details">
+                        <div class="card__line">
+                          <div class="card__category">AAPL</div>
+                          <div class="card__date"><button type="button" class="clickTo_add addPortfolio"><i class="fas fa-plus-circle"></i></button></div>
+                        </div>
+                        <div class="card__status color-green">Apple Inc</div>
+                      </div>
+                      <div class="footLeft11 rating_slider">
+                        <div class="slidecontainer">
+                          <span class="card__category values">Bullish</span>
+                          <div class="RangeSlider_div">
+                            <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                          </div>
+                          <span class="card__category values">Bearish</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card__item">
+                      <div class="card__details">
+                        <div class="card__line">
+                          <div class="card__category">AAPL</div>
+                          <div class="card__date"><button type="button" class="clickTo_add addPortfolio"><i class="fas fa-plus-circle"></i></button></div>
+                        </div>
+                        <div class="card__status color-green">Apple Inc</div>
+                      </div>
+                      <div class="footLeft11 rating_slider">
+                        <div class="slidecontainer">
+                          <span class="card__category values">Bullish</span>
+                          <div class="RangeSlider_div">
+                            <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                          </div>
+                          <span class="card__category values">Bearish</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="runBacktest2">
+      <a href="" class="btn btn-bule_btn">Edit Portfolio</a>  
+      <div class="prices__head">
+        <div class="prices__title h5">My Portfolio</div>
+      </div>
+    </div>
+    <div class="page__row watchlistPart">
+      <div class="watchlistSec portfolio_Sec">
+        <div class="piechart_filter_Sec">
+          <div class="piechart_filter porfolioPie_fil">
+            <div class="chartFilter_right">
+              <div class="result_listHead">
+                <div class="result_listHead1">
+                  <span class="text_a">Account Value:</span>
+                  <span class="input_value">$120000</span>
+                </div>
+                <div class="result_listHead1">
+                  <span class="text_a">MAR:</span>
+                  <span class="input_value">7.00%</span>
+                </div>
+                <div class="result_listHead1">
+                  <span class="text_a">R<sub>f</sub>:</span>
+                  <span class="input_value">2.00%</span>
+                </div>
+                <div class="result_listHead1 max_width_fix">
+                  <span class="text_a">Risk Tolerance:</span>
+                  <div class="right_div">
+                    <div class="input_divF">
+                      <div id="icon_range2" class="rating1 pmd-material-rating"></div>
+                    </div>
+                    <div class="risk_labels">
+                      <span>Conservative</span>
+                      <span>Balanced</span>
+                      <span>Aggressive</span>
+                    </div>
+                  </div>
+                </div> 
+              </div>
+            </div>
+          </div>
+          <div class="filteredSec_dtl">
+            <div class="filteredSec_chrt">
+              <svg width="304" height="304"></svg>
+              <div id="tooltip_pie" class="hidden"><span id="value"></span></div>
+            </div>
+            <div class="filteredSec_tbl piechart_table">
+              <div class="prices__container">
+                <table class="table ovtlyr_table">
+                  <thead>
+                    <tr>
+                      <th>Symbol</>
+                      <th>Allocation / Change</>
+                      <th>Last Close</>
+                      <th>Shares / Change <span class="sharesChange"><i class="la la-question-circle"></i></span></>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><p>AAA</p></td>
+                      <td><p><span>28.37%</span> / <span class="text_redShow">-050%</span></p></td>
+                      <td><p>$52.50</p></td>
+                      <td><p><span>540</span> / <span class="text_redShow">-410</span></p></td>
+                    </tr>
+                    <tr>
+                      <td><p>AAB</p></td>
+                      <td><p><span>21.45%</span> / <span class="text_greeShow">+1.00%</span></p></td>
+                      <td><p>$23.98</p></td>
+                      <td><p><span>854</span> / <span class="text_redShow">-664</span></p></td>
+                    </tr>
+                    <tr>
+                      <td><p>AAC</p></td>
+                      <td><p><span>15.57%</span> / <span class="text_greeShow">+1.20%</span></p></td>
+                      <td><p>$77.10</p></td>
+                      <td><p><span>201</span> / <span class="text_redShow">-180</span></p></td>
+                    </tr>
+                    <tr>
+                      <td><p>AAD</p></td>
+                      <td><p><span>11.07%</span> / <span class="text_redShow">-3.00%</span></p></td>
+                      <td><p>$213.50</p></td>
+                      <td><p><span>51</span> / <span class="text_redShow">-40</span></p></td>
+                    </tr>
+                    <tr>
+                      <td><p>AAE</p></td>
+                      <td><p><span>8.30%</span> / <span class="text_greeShow">+0.20%</span></p></td>
+                      <td><p>$24.44</p></td>
+                      <td><p><span>339</span> / <span class="text_redShow">-321</span></p></td>
+                    </tr>
+                    <tr>
+                      <td><p>AAF</p></td>
+                      <td><p><span>6.23%</span> / <span class="text_redShow">-0.50%</span></p></td>
+                      <td><p>$158.13</p></td>
+                      <td><p><span>39</span> / <span class="text_redShow">-22</span></p></td>
+                    </tr>
+                    <tr>
+                      <td><p>AAH</p></td>
+                      <td><p><span>4.15%</span> / <span class="text_redShow">-3.50%</span></p></td>
+                      <td><p>$86.20</p></td>
+                      <td><p><span>48</span> / <span class="text_redShow">-35</span></p></td>
+                    </tr>
+                    <tr>
+                      <td><p>N/A</p></td>
+                      <td><p>N/A</p></td>
+                      <td><p>N/A</p></td>
+                      <td><p>N/A</p></td>
+                    </tr>
+                    <tr>
+                      <td><p>N/A</p></td>
+                      <td><p>N/A</p></td>
+                      <td><p>N/A</p></td>
+                      <td><p>N/A</p></td>
+                    </tr>
+                    <tr>
+                      <td><p>Cash</p></td>
+                      <td><p><span>0.2%</span> / <span class="text_redShow">-0.10%</span></p></td>
+                      <td><p>N/A</p></td>
+                      <td><p>$20.00</p></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page__row watchlistSec_2">
+      <div class="filteredSec_tbl">
+        <div class="result_listHead">
+          <div class="prices__title h6">Backtest Results:</div>
+        </div>
+        <table class="table ovtlyr_table">
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Buy & Hold</th>
+              <th>OVTLYR</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><p>Duration[yr]</p></td>
+              <td colspan="2" class="center_value"><p>21.21</p></td>
+            </tr>
+            <tr>
+              <td><p>ROI</p></td>
+              <td><p>392.71%</p></td>
+              <td><p>771.29%</p></td>
+            </tr>
+            <tr>
+              <td><p>CAGR</p></td>
+              <td><p>7.81%</p></td>
+              <td><p>10.75%</p></td>
+            </tr>
+            <tr>
+              <td><p>Max Drawdown</p></td>
+              <td><p>28.32%</p></td>
+              <td><p>6.61%</p></td>
+            </tr>
+            <tr>
+              <td><p>Sharpe</p></td>
+              <td><p>1.0188</p></td>
+              <td><p>3.1030</p></td>
+            </tr>
+            <tr>
+              <td><p>Sortino</p></td>
+              <td><p>1.1655</p></td>
+              <td><p>4.7284</p></td>
+            </tr>
+            <tr>
+              <td><p>Jensen α</p></td>
+              <td><p></p></td>
+              <td><p>1.88%</p></td>
+            </tr>
+            <tr>
+              <td><p>β</p></td>
+              <td><p></p></td>
+              <td><p>0.5999</p></td>
+            </tr>
+            <tr>
+              <td><p>Treynor</p></td>
+              <td><p></p></td>
+              <td><p>0.0023</p></td>
+            </tr>
+            <tr>
+              <td><p>Avg. Cash</p></td>
+              <td><p></p></td>
+              <td><p>38.01%</p></td>
+            </tr>
+            <tr>
+              <td><p>Capital Efficiency<span class="capEfficiency"><i class="la la-question-circle"></i></span></p></td>
+              <td><p></p></td>
+              <td><p>362.01%</p></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="backtest_res"><p><sup>*</sup>R<sub>f</sub>= 2.00%, MAR = 7.00%</p></div>
+      </div>
+      <div class="portListChart_1">
+        <div class="Strategy_View">
+          <div id="Strategy_View"></div>
+        </div>
+        <ul class="chart_labels">
+          <li>Cash<span class="green_box"></span></li>
+          <li>BH<span class="pink_box"></span></li>
+          <li>OVTLYR<span class="blue_box"></span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="popup popup_settings mfp-hide" id="popup-settings">
+  <div class="popup__title h6">My Account</div>
+  <div class="popup__tabs js-tabs">
+    <div class="popup__select mobile-show">
+      <select class="select js-tabs-select">
+        <option>Profile</option>
+        <option>Password</option>
+      </select>
+    </div>
+    <div class="popup__nav">
+      <a class="popup__link js-tabs-link active" href="#">Profile</a>
+      <a class="popup__link js-tabs-link" href="#">Password</a>
+    </div>
+    <div class="popup__container">
+      <div class="popup__item js-tabs-item" style="display: block;">
+        <div class="popup__user">
+          <div class="popup__label popup__label_mb32">Your Avatar</div>
+          <div class="popup__line">
+            <div class="popup__ava"><img class="popup__pic" src="images/profile.svg" alt=""></div>
+            <div class="popup__details">
+              <div class="popup__btns">
+                <div class="popup__loading"><input class="popup__file" type="file"><button class="popup__upload">Upload New</button></div><button class="popup__btn btn btn_gray">Delete Avatar</button>
+              </div><a class="popup__default" href="#">Use default avatar</a>
+            </div>
+          </div>
+        </div>
+        <div class="popup__fieldset">
+          <div class="popup__row">
+            <div class="popup__field">
+              <div class="popup__label">Your Full Name</div>
+              <div class="popup__wrap"><input class="popup__input" type="text"></div>
+            </div>
+            <div class="popup__field">
+              <div class="popup__label">Display Name</div>
+              <div class="popup__wrap"><input class="popup__input" type="text"></div>
+            </div>
+          </div>
+          <div class="popup__row">
+            <div class="popup__field">
+              <div class="popup__label">Email</div>
+              <div class="popup__wrap"><input class="popup__input" type="email"></div>
+            </div>
+            <div class="popup__field">
+              <div class="popup__label">Location</div>
+              <div class="popup__wrap"><input class="popup__input" type="text"></div>
+            </div>
+          </div>
+        </div>
+        <button class="popup__btn btn btn_blue" type="submit">Update Profile</button>
+      </div>
+      <div class="popup__item js-tabs-item">
+        <form class="popup__form">
+          <div class="popup__title h6">Change Password</div>
+          <div class="popup__field field js-field">
+            <div class="field__label">current Password</div>
+            <div class="field__wrap"><input class="field__input js-field-input" type="password"></div>
+          </div>
+          <div class="popup__field field js-field">
+            <div class="field__label">new Password</div>
+            <div class="field__wrap"><input class="field__input js-field-input" type="password"></div>
+          </div>
+          <div class="popup__field field js-field">
+            <div class="field__label">Confirm new Password</div>
+            <div class="field__wrap"><input class="field__input js-field-input" type="password"></div>
+          </div>
+          <button class="popup__btn btn btn_blue btn_wide">Change Password</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="js/jquery.min.js"></script> 
+<script src="js/svg4everybody.min.js"></script> 
+<script src="js/jquery.nice-select.min.js"></script> 
+<script src="js/jquery.magnific-popup.min.js"></script> 
+<script src="js/app.js"></script>
+<script>
+  $(document).ready(function(){
+   $('#myInput').focus(function(){
+       $('.searchbar_dropdown').fadeIn(250);
+   }).focusout(function(){
+       $('.searchbar_dropdown').fadeOut(250);
+   });
+});
+</script>
+<script>
+  var slider_two = document.getElementById("ovtlyr_rating");
+  var rangepos_two = document.querySelector('.RangeSlider_div .rating_value');
+  var rangeCalc_two  = slider_two.value * 33;
+  rangepos_two.style.left = "calc(" + (rangeCalc_two + 1) + "px)";
+</script>
+<script>
+  function seeWatchlist() {
+  var seeWatchlist = document.getElementById('watchList_1');
+  if (seeWatchlist.clientHeight) {
+    seeWatchlist.style.height = 0;
+  } else {
+    seeWatchlist.style.height = "auto";
+  }
+  var iconClass = document.getElementById("collapse_icon1");
+  iconClass.classList.toggle("fa-angle-up"); 
+}
+</script>
+<script>
+function growDiv() {
+var growDiv = document.getElementById('grow');
+if (growDiv.clientHeight) {
+growDiv.style.height = 0;
+} else {
+growDiv.style.height = "auto";
+}
+var iconClass = document.getElementById("collapse_icon");
+iconClass.classList.toggle("fa-angle-up"); 
+}
+</script>
+<script>
+function growupDiv() {
+var growupDiv = document.getElementById('growup');
+if (growupDiv.clientHeight) {
+growupDiv.style.height = 0;
+} else {
+growupDiv.style.height = "auto";
+}
+var iconClass = document.getElementById("collapseup_icon");
+iconClass.classList.toggle("fa-angle-up"); 
+}
+</script>
+<!--  MY RATINGS SCRIPTS -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+ <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/raty/2.8.0/jquery.raty.min.js"></script>
+ <script>
+  $('.rating1').raty(
+  {
+    path: 'images/',
+    starOff:  'unfilled-circle.svg',
+    starOn:   'filled-circle.svg',
+    starType:   'img',
+    score: 3,
+    readOnly: true
+  });
+</script>
+<script>
+  $('.rating').raty(
+  {
+    path: 'images/',
+    starOff:  'unfilled-circle.svg',
+    starOn:   'filled-circle.svg',
+    score: 3,
+    starType:   'img'
+  });
+</script>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script>
+var svg = d3.select(".filteredSec_chrt svg"),
+width = svg.attr("width"),
+height = svg.attr("height"),
+radius = 152;
+var data = [
+{
+"Labels": "cash",
+"Quotedate": "2021-07-29",
+"Allocation": 0,
+"Delta_Allocation": 5.55111512312578e-17
+},
+{
+"Labels": "AMAT",
+"Quotedate": "2021-07-29",
+"Allocation": 0.202669049589091,
+"Delta_Allocation": -0.00317809147389775
+},
+{
+"Labels": "CMCSA",
+"Quotedate": "2021-07-29",
+"Allocation": 0.0676913382448157,
+"Delta_Allocation": 0.000172178549326205
+},
+{
+"Labels": "CPB",
+"Quotedate": "2021-07-29",
+"Allocation": 0.0462421288806397,
+"Delta_Allocation": -0.00193596541510917
+},
+{
+"Labels": "FANG",
+"Quotedate": "2021-07-29",
+"Allocation": 0.389626906384447,
+"Delta_Allocation": 0.0109090194901649
+},
+{
+"Labels": "MSI",
+"Quotedate": "2021-07-29",
+"Allocation": 0.0671825504998507,
+"Delta_Allocation": -0.00421904374798759
+},
+{
+"Labels": "RHP",
+"Quotedate": "2021-07-29",
+"Allocation": 0.0658652087597647,
+"Delta_Allocation": -0.000183027813774342
+},
+{
+"Labels": "WU",
+"Quotedate": "2021-07-29",
+"Allocation": 0.160722817641391,
+"Delta_Allocation": -0.00156506958872218
+}
+];
+
+var g = svg.append("g")
+.attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+var ordScale = d3.scaleOrdinal()
+.domain(data)
+.range(['#045baa','#056ac6','#0579e2','#0688fe','#1a91fe','#2d9bfe','#41a4fe','#55adfe','#68b7fe','#7cc0fe','#00ff4e']);
+
+var pie = d3.pie().value(function(d) {  return d.Allocation; })
+.sort(null)
+
+var arc = g.selectAll("arc")
+.data(pie(data))
+.enter();
+
+var path = d3.arc()
+.outerRadius(radius)
+.innerRadius(0);
+
+
+arc.append("path")
+.attr("fill", function(d) { return ordScale(d.data.Labels); })
+.style("fill",function(d) { 
+if (d.data.Labels === "FANG" ) {
+return "#00ff4e" ;
+} 
+else{return "true"}
+})
+
+
+.attr("d", path)
+.on("mouseover", function (d) {
+d3.select("#tooltip_pie")
+.style("left", d3.event.pageX + "px")
+.style("top", d3.event.pageY + "px")
+.style("opacity", 1)
+.select("#value")
+.html(d.data.Labels + " - " +d.data.Allocation.toFixed(4) +"%")
+})
+
+var label = d3.arc()
+.outerRadius(radius)
+.innerRadius(0);
+arc.append("text")
+.attr("transform", function(d)
+{ 
+var midAngle = d.endAngle < Math.PI ? d.startAngle/2 + d.endAngle/2 : d.startAngle/2  + d.endAngle/2 + Math.PI ;
+return "translate(" + label.centroid(d)[0] + "," + label.centroid(d)[1] + ") rotate(-90) rotate(" + (midAngle * 180/Math.PI) + ")"; })
+.attr("dy", ".35em")
+.attr('text-anchor','middle')
+.html(function(d) { return d.data.Labels})
+.style("font-family", "arial")
+.style("fill", "#ffffff")
+.style("font-size", 11)
+
+</script>
+<script>
+    //************* generate data ************
+    var data =
+	[
+	{
+    "Date": "15-Apr-20",
+    "BH": 0.7,
+    "DU": 0.34,
+    "Cash": 18.45
+  },
+  {
+    "Date": "16-Apr-20",
+    "BH": 0.44,
+    "DU": 0.08,
+    "Cash": 0
+  },
+  {
+    "Date": "20-Apr-20",
+    "BH": -0.67,
+    "DU": -0.42,
+    "Cash": 21.4
+  },
+  {
+    "Date": "21-Apr-20",
+    "BH": -1.4,
+    "DU": -1.01,
+    "Cash": 22.73
+  },
+  {
+    "Date": "22-Apr-20",
+    "BH": -0.53,
+    "DU": -0.77,
+    "Cash": 23.53
+  },
+  {
+    "Date": "23-Apr-20",
+    "BH": -1.54,
+    "DU": -2.12,
+    "Cash": 24.22
+  },
+  {
+    "Date": "24-Apr-20",
+    "BH": -2.15,
+    "DU": -2.57,
+    "Cash": 23.22
+  },
+  {
+    "Date": "27-Apr-20",
+    "BH": -1.04,
+    "DU": -2.07,
+    "Cash": 54.99
+  },
+  {
+    "Date": "28-Apr-20",
+    "BH": 0.52,
+    "DU": -1.35,
+    "Cash": 54.18
+  },
+  {
+    "Date": "29-Apr-20",
+    "BH": -0.08,
+    "DU": -1.63,
+    "Cash": 53.62
+  },
+  {
+    "Date": "30-Apr-20",
+    "BH": -1.77,
+    "DU": -2.41,
+    "Cash": 52.93,ZeroLine:0
+  },
+  {
+    "Date": "01-May-20",
+    "BH": -2.19,
+    "DU": -2.61,
+    "Cash": 51.67,ZeroLine:0
+  },
+  {
+    "Date": "04-May-20",
+    "BH": -2.94,
+    "DU": -2.98,
+    "Cash": 51.09,ZeroLine:0
+  },
+  {
+    "Date": "05-May-20",
+    "BH": -1.81,
+    "DU": -2.43,
+    "Cash": 51.51,ZeroLine:0
+  },
+  {
+    "Date": "06-May-20",
+    "BH": -0.65,
+    "DU": -1.89,
+    "Cash": 52.93,ZeroLine:0
+  },
+  {
+    "Date": "07-May-20",
+    "BH": -0.71,
+    "DU": -1.92,
+    "Cash": 54.09,ZeroLine:0
+  },
+  {
+    "Date": "08-May-20",
+    "BH": -0.3,
+    "DU": -1.74,
+    "Cash": 54.8,ZeroLine:0
+  },
+  {
+    "Date": "11-May-20",
+    "BH": -1.09,
+    "DU": -2.1,
+    "Cash": 55.38,ZeroLine:0
+  },
+  {
+    "Date": "12-May-20",
+    "BH": -1.29,
+    "DU": -2.03,
+    "Cash": 0,ZeroLine:0
+  },
+  {
+    "Date": "13-May-20",
+    "BH": -1.57,
+    "DU": -2.47,
+    "Cash": 0,ZeroLine:0
+  },
+  {
+    "Date": "14-May-20",
+    "BH": -1.36,
+    "DU": -2.55,
+    "Cash": 0,ZeroLine:0
+  },
+  {
+    "Date": "15-May-20",
+    "BH": -1.63,
+    "DU": -2.67,
+    "Cash": 59.79,ZeroLine:0
+  },
+  {
+    "Date": "18-May-20",
+    "BH": -0.96,
+    "DU": -2.45,
+    "Cash": 60.97,ZeroLine:0
+  },
+  {
+    "Date": "19-May-20",
+    "BH": -1.09,
+    "DU": -2.51,
+    "Cash": 61.65,ZeroLine:0
+  },
+  {
+    "Date": "20-May-20",
+    "BH": -1.04,
+    "DU": -2.1,
+    "Cash": 0,ZeroLine:0
+  },
+  {
+    "Date": "21-May-20",
+    "BH": -0.7,
+    "DU": -1.56,
+    "Cash": 0,ZeroLine:0
+  },
+  {
+    "Date": "22-May-20",
+    "BH": -0.04,
+    "DU": -0.5,
+    "Cash": 0,ZeroLine:0
+  },
+  {
+    "Date": "26-May-20",
+    "BH": 0.05,
+    "DU": -0.87,
+    "Cash": 0,ZeroLine:0
+  },
+  {
+    "Date": "27-May-20",
+    "BH": 0.46,
+    "DU": -0.72,
+    "Cash": 16.37,ZeroLine:0
+  },
+  {
+    "Date": "28-May-20",
+    "BH": 1.26,
+    "DU": -0.42,
+    "Cash": 19.28,ZeroLine:0
+  },
+  {
+    "Date": "29-May-20",
+    "BH": 1.54,
+    "DU": -0.14,
+    "Cash": 0,ZeroLine:0
+  },
+  {
+    "Date": "01-Jun-20",
+    "BH": 1.91,
+    "DU": 0.04,
+    "Cash": 0,ZeroLine:0
+  },
+  {
+    "Date": "02-Jun-20",
+    "BH": 3.03,
+    "DU": 1.27,
+    "Cash": 0,ZeroLine:0
+  },
+  {
+    "Date": "03-Jun-20",
+    "BH": 3.22,
+    "DU": 1.34,
+    "Cash": 0,ZeroLine:0
+  },
+  {
+    "Date": "04-Jun-20",
+    "BH": 3.79,
+    "DU": 1.98,
+    "Cash": 0,ZeroLine:0
+  },
+  {
+    "Date": "05-Jun-20",
+    "BH": 4.08,
+    "DU": 2.78,
+    "Cash": 0,ZeroLine:0
+  },
+  {
+    "Date": "08-Jun-20",
+    "BH": 5.08,
+    "DU": 3.2,
+    "Cash": 0,ZeroLine:0
+  },
+  {
+    "Date": "09-Jun-20",
+    "BH": 3.72,
+    "DU": 2.44,
+    "Cash": 32.92,ZeroLine:0
+  },
+  {
+    "Date": "10-Jun-20",
+    "BH": 4.15,
+    "DU": 2.48,
+    "Cash": 36.33,ZeroLine:0
+  },
+  {
+    "Date": "11-Jun-20",
+    "BH": 6.66,
+    "DU": 4.11,
+    "Cash": 40.06,ZeroLine:0
+  },
+  {
+    "Date": "12-Jun-20",
+    "BH": 7.57,
+    "DU": 4.12,
+    "Cash": 45.77,ZeroLine:0
+  },
+  {
+    "Date": "13-Jun-20",
+    "BH": 6.85,
+    "DU": 3.89,
+    "Cash": 51.56,ZeroLine:0
+  },
+ {
+    "Date": "14-Dec-20",
+    "BH": 714.4819914,
+    "DU": 1420.552346,
+    "Cash": 57.09,ZeroLine:0
+  },
+  {
+    "Date": "15-Dec-20",
+    "BH": 716.5375733,
+    "DU": 1421.131535,
+    "Cash": 56.62,ZeroLine:0
+  },
+  {
+    "Date": "16-Dec-20",
+    "BH": 716.3597697,
+    "DU": 1421.479762,
+    "Cash": 57.06,ZeroLine:0
+  },
+  {
+    "Date": "17-Dec-20",
+    "BH": 717.2298276,
+    "DU": 1422.144823,
+    "Cash": 38.35,ZeroLine:0
+  },
+  {
+    "Date": "18-Dec-20",
+    "BH": 717.4510459,
+    "DU": 1422.31335,
+    "Cash": 61.15,ZeroLine:0
+  },
+  {
+    "Date": "21-Dec-20",
+    "BH": 717.1690252,
+    "DU": 1422.333447,
+    "Cash": 62.05,ZeroLine:0
+  },
+  {
+    "Date": "22-Dec-20",
+    "BH": 717.084628,
+    "DU": 1422.585067,
+    "Cash": 57.8,ZeroLine:0
+  },
+  {
+    "Date": "23-Dec-20",
+    "BH": 718.1938148,
+    "DU": 1423.643548,
+    "Cash": 41.08,ZeroLine:0
+  },
+  {
+    "Date": "24-Dec-20",
+    "BH": 718.5276331,
+    "DU": 1423.773778,
+    "Cash": 39.96,ZeroLine:0
+  },
+  {
+    "Date": "28-Dec-20",
+    "BH": 719.2366293,
+    "DU": 1424.0081,
+    "Cash": 51.74,ZeroLine:0
+  },
+  {
+    "Date": "29-Dec-20",
+    "BH": 718.840013,
+    "DU": 1423.930593,
+    "Cash": 46.24,ZeroLine:0
+  },
+  {
+    "Date": "30-Dec-20",
+    "BH": 719.2015213,
+    "DU": 1423.948635,
+    "Cash": 51.81,ZeroLine:0
+  },
+  {
+    "Date": "31-Dec-20",
+    "BH": 720.4263018,
+    "DU": 1424.640702,
+    "Cash": 52.82,ZeroLine:0
+  },
+  {
+    "Date": "22-Apr-81",
+    "BH": -0.53,
+    "DU": -0.77,
+    "Cash": 23.53,ZeroLine:0
+  },
+  {
+    "Date": "23-Apr-81",
+    "BH": -1.54,
+    "DU": -2.12,
+    "Cash": 24.22,ZeroLine:0
+  },
+  {
+    "Date": "24-Apr-81",
+    "BH": -2.15,
+    "DU": -2.57,
+    "Cash": 23.22,ZeroLine:0
+  },
+  {
+    "Date": "27-Apr-81",
+    "BH": -1.04,
+    "DU": -2.07,
+    "Cash": 54.99,ZeroLine:0
+  },
+  {
+    "Date": "28-Apr-81",
+    "BH": 0.52,
+    "DU": -1.35,
+    "Cash": 54.18,ZeroLine:0
+  },
+  {
+    "Date": "29-Apr-81",
+    "BH": -0.08,
+    "DU": -1.63,
+    "Cash": 53.62,ZeroLine:0
+  },
+  {
+    "Date": "30-Apr-81",
+    "BH": -1.77,
+    "DU": -2.41,
+    "Cash": 52.93,ZeroLine:0
+  },
+  {
+    "Date": "01-May-81",
+    "BH": -2.19,
+    "DU": -2.61,
+    "Cash": 51.67,ZeroLine:0
+  },
+  {
+    "Date": "04-May-81",
+    "BH": -2.94,
+    "DU": -2.98,
+    "Cash": 51.09,ZeroLine:0
+  },
+  {
+    "Date": "05-May-81",
+    "BH": -1.81,
+    "DU": -2.43,
+    "Cash": 51.51,ZeroLine:0
+  },
+  {
+    "Date": "06-May-81",
+    "BH": -0.65,
+    "DU": -1.89,
+    "Cash": 52.93,ZeroLine:0
+  },
+  {
+    "Date": "07-May-81",
+    "BH": -0.71,
+    "DU": -1.92,
+    "Cash": 54.09,ZeroLine:0
+  },
+  {
+    "Date": "08-May-81",
+    "BH": -0.3,
+    "DU": -1.74,
+    "Cash": 54.8,ZeroLine:0
+  },
+  {
+    "Date": "11-May-81",
+    "BH": -1.09,
+    "DU": -2.1,
+    "Cash": 55.38,ZeroLine:0
+  },
+  {
+    "Date": "12-May-81",
+    "BH": -1.29,
+    "DU": -2.03,
+    "Cash": 0,ZeroLine:0
+  },
+  {
+    "Date": "13-May-81",
+    "BH": -1.57,
+    "DU": -2.47,
+    "Cash": 0,ZeroLine:0
+  },
+  {
+    "Date": "14-May-81",
+    "BH": -1.36,
+    "DU": -2.55,
+    "Cash": 0,ZeroLine:0
+  },
+  {
+    "Date": "15-May-81",
+    "BH": -1.63,
+    "DU": -2.67,
+    "Cash": 59.79,ZeroLine:0
+  },
+  {
+    "Date": "18-May-81",
+    "BH": -0.96,
+    "DU": -2.45,
+    "Cash": 60.97,ZeroLine:0
+  },
+  {
+    "Date": "19-May-81",
+    "BH": -1.09,
+    "DU": -2.51,
+    "Cash": 61.65,ZeroLine:0
+  },
+  {
+    "Date": "20-May-81",
+    "BH": -1.04,
+    "DU": -2.1,
+    "Cash": 0,ZeroLine:0
+  },
+  {
+    "Date": "21-May-81",
+    "BH": -0.7,
+    "DU": -1.56,
+    "Cash": 0,ZeroLine:0
+  },
+  {
+    "Date": "22-May-81",
+    "BH": -0.04,
+    "DU": -0.5,
+    "Cash": 0,ZeroLine:0
+  },
+  {
+    "Date": "26-May-81",
+    "BH": 0.05,
+    "DU": -0.87,
+    "Cash": 0,ZeroLine:0
+  },
+  {
+    "Date": "27-May-81",
+    "BH": 0.46,
+    "DU": -0.72,
+    "Cash": 16.37,ZeroLine:0
+  },
+  {
+    "Date": "28-May-81",
+    "BH": 1.26,
+    "DU": -0.42,
+    "Cash": 19.28,ZeroLine:0
+  },
+  {
+    "Date": "29-May-81",
+    "BH": 1.54,
+    "DU": -0.14,
+    "Cash": 0,ZeroLine:0
+  },
+  {
+    "Date": "01-Jun-81",
+    "BH": 1.91,
+    "DU": 0.04,
+    "Cash": 0,ZeroLine:0
+  },
+  {
+    "Date": "02-Jun-81",
+    "BH": 3.03,
+    "DU": 1.27,
+    "Cash": 0,ZeroLine:0
+  },
+  {
+    "Date": "03-Jun-81",
+    "BH": 3.22,
+    "DU": 1.34,
+    "Cash": 0,ZeroLine:0
+  },
+  {
+    "Date": "04-Jun-81",
+    "BH": 3.79,
+    "DU": 1.98,
+    "Cash": 0,ZeroLine:0
+  },
+  {
+    "Date": "05-Jun-81",
+    "BH": 4.08,
+    "DU": 2.78,
+    "Cash": 0,ZeroLine:0
+  },
+  {
+    "Date": "08-Jun-81",
+    "BH": 5.08,
+    "DU": 3.2,
+    "Cash": 0,ZeroLine:0
+  },
+  {
+    "Date": "09-Jun-81",
+    "BH": 3.72,
+    "DU": 2.44,
+    "Cash": 32.92,ZeroLine:0
+  },
+  {
+    "Date": "10-Jun-81",
+    "BH": 4.15,
+    "DU": 2.48,
+    "Cash": 36.33,ZeroLine:0
+  },
+  {
+    "Date": "11-Jun-81",
+    "BH": 6.66,
+    "DU": 4.11,
+    "Cash": 40.06,ZeroLine:0
+  },
+  {
+    "Date": "12-Jun-81",
+    "BH": 7.57,
+    "DU": 4.12,
+    "Cash": 45.77,ZeroLine:0
+  },
+  {
+    "Date": "15-Jun-81",
+    "BH": 6.85,
+    "DU": 3.89,
+    "Cash": 51.56,ZeroLine:0
+  },
+  {
+    "Date": "16-Jun-81",
+    "BH": 5.31,
+    "DU": 2.74,
+    "Cash": 56.95,ZeroLine:0
+  },
+  {
+    "Date": "17-Jun-81",
+    "BH": 5.09,
+    "DU": 2.52,
+    "Cash": 76.32,ZeroLine:0
+  },
+  {
+    "Date": "18-Jun-81",
+    "BH": 4.61,
+    "DU": 2.57,
+    "Cash": 76.57,ZeroLine:0
+  },
+  {
+    "Date": "19-Jun-81",
+    "BH": 4.49,
+    "DU": 2.51,
+    "Cash": 75.44,ZeroLine:0
+  },
+  {
+    "Date": "22-Jun-81",
+    "BH": 3.77,
+    "DU": 2.33,
+    "Cash": 77.36,ZeroLine:0
+  },
+  {
+    "Date": "23-Jun-81",
+    "BH": 4.85,
+    "DU": 2.79,
+    "Cash": 78.59,ZeroLine:0
+  },
+  {
+    "Date": "24-Jun-81",
+    "BH": 4.32,
+    "DU": 2.58,
+    "Cash": 79.85,ZeroLine:0
+  },
+  {
+    "Date": "25-Jun-81",
+    "BH": 3.79,
+    "DU": 2.38,
+    "Cash": 80.54,ZeroLine:0
+  },
+  {
+    "Date": "26-Jun-81",
+    "BH": 2.73,
+    "DU": 2.27,
+    "Cash": 79.79,ZeroLine:0
+  },
+  {
+    "Date": "29-Jun-81",
+    "BH": 1.9,
+    "DU": 2.17,
+    "Cash": 76.82,ZeroLine:0
+  },
+  {
+    "Date": "30-Jun-81",
+    "BH": 1.22,
+    "DU": 2,
+    "Cash": 74.09,ZeroLine:0
+  },
+  {
+    "Date": "01-Jul-81",
+    "BH": 0.77,
+    "DU": 1.87,
+    "Cash": 73.55,ZeroLine:0
+  },
+  {
+    "Date": "02-Jul-81",
+    "BH": -0.91,
+    "DU": 1.6,
+    "Cash": 74.09,ZeroLine:0
+  },
+  {
+    "Date": "06-Jul-81",
+    "BH": -3.42,
+    "DU": 1.53,
+    "Cash": 74.52,ZeroLine:0
+  },
+  {
+    "Date": "07-Jul-81",
+    "BH": -0.47,
+    "DU": 2.4,
+    "Cash": 75.53,ZeroLine:0
+  },
+  {
+    "Date": "08-Jul-81",
+    "BH": 0.46,
+    "DU": 2.69,
+    "Cash": 77.07,ZeroLine:0
+  },
+  {
+    "Date": "09-Jul-81",
+    "BH": -0.47,
+    "DU": 2.28,
+    "Cash": 78.18,ZeroLine:0
+  },
+  {
+    "Date": "10-Jul-81",
+    "BH": -1.23,
+    "DU": 2.15,
+    "Cash": 79.17,ZeroLine:0
+  },
+  {
+    "Date": "13-Jul-81",
+    "BH": -1.2,
+    "DU": 2.28,
+    "Cash": 79.48,ZeroLine:0
+  },
+  {
+    "Date": "14-Jul-81",
+    "BH": -1.22,
+    "DU": 2.15,
+    "Cash": 80.14,ZeroLine:0
+  },
+  {
+    "Date": "15-Jul-81",
+    "BH": -1.33,
+    "DU": 2.28,
+    "Cash": 80.64,ZeroLine:0
+  },
+  {
+    "Date": "16-Jul-81",
+    "BH": -1.19,
+    "DU": 2.28,
+    "Cash": 80.93,ZeroLine:0
+  },
+  {
+    "Date": "17-Jul-81",
+    "BH": -1.19,
+    "DU": 2.28,
+    "Cash": 81.11,ZeroLine:0
+  },
+  {
+    "Date": "20-Jul-81",
+    "BH": -3.06,
+    "DU": 1.66,
+    "Cash": 82.11,ZeroLine:0
+  },
+  {
+    "Date": "21-Jul-81",
+    "BH": -3.06,
+    "DU": 1.66,
+    "Cash": 0,ZeroLine:0
+  },
+  {
+    "Date": "22-Jul-81",
+    "BH": -3.06,
+    "DU": 1.66,
+    "Cash": 0,ZeroLine:0
+  },
+  {
+    "Date": "23-Jul-81",
+    "BH": -2.74,
+    "DU": 1.73,
+    "Cash": 0,ZeroLine:0
+  },
+  {
+    "Date": "24-Jul-81",
+    "BH": -2.49,
+    "DU": 2.73,
+    "Cash": 0,ZeroLine:0
+  },
+  {
+    "Date": "27-Jul-81",
+    "BH": -2.49,
+    "DU": 2.73,
+    "Cash": 0,ZeroLine:0
+  },
+  {
+    "Date": "28-Jul-81",
+    "BH": -2.34,
+    "DU": 3.03,
+    "Cash": 0,ZeroLine:0
+  },
+  {
+    "Date": "16-Feb-84",
+    "BH": 45.07,
+    "DU": 79.38,
+    "Cash": 91.9,ZeroLine:0
+  },
+  {
+    "Date": "17-Feb-84",
+    "BH": 44.57,
+    "DU": 79.29,
+    "Cash": 94.13,ZeroLine:0
+  },
+  {
+    "Date": "21-Feb-84",
+    "BH": 44.36,
+    "DU": 79.27,
+    "Cash": 96.03,ZeroLine:0
+  },
+  {
+    "Date": "22-Feb-84",
+    "BH": 43.95,
+    "DU": 79.25,
+    "Cash": 97.51,ZeroLine:0
+  },
+  {
+    "Date": "23-Feb-84",
+    "BH": 42.93,
+    "DU": 79.24,
+    "Cash": 98.76,ZeroLine:0
+  },
+  {
+    "Date": "24-Feb-84",
+    "BH": 45.42,
+    "DU": 82.54,
+    "Cash": 0,ZeroLine:0
+  },
+  {
+    "Date": "27-Feb-84",
+    "BH": 46.63,
+    "DU": 85.37,
+    "Cash": 0,ZeroLine:0
+  },
+  {
+    "Date": "28-Feb-84",
+    "BH": 44.08,
+    "DU": 83.99,
+    "Cash": 0,ZeroLine:0
+  },
+  {
+    "Date": "29-Feb-84",
+    "BH": 45.4,
+    "DU": 83.6,
+    "Cash": 0,ZeroLine:0
+  },
+  {
+    "Date": "01-Mar-84",
+    "BH": 43.75,
+    "DU": 82.4,
+    "Cash": 0,ZeroLine:0
+  },
+  {
+    "Date": "02-Mar-84",
+    "BH": 45.73,
+    "DU": 84.38,
+    "Cash": 0,ZeroLine:0
+  },
+  {
+    "Date": "05-Mar-84",
+    "BH": 45.22,
+    "DU": 83.87,
+    "Cash": 0,ZeroLine:0
+  },
+  {
+    "Date": "06-Mar-84",
+    "BH": 44.62,
+    "DU": 83.27,
+    "Cash": 0,ZeroLine:0
+  },
+  {
+    "Date": "07-Mar-84",
+    "BH": 44.32,
+    "DU": 82.98,
+    "Cash": 0,ZeroLine:0
+  },
+  {
+    "Date": "08-Mar-84",
+    "BH": 44.64,
+    "DU": 83.29,
+    "Cash": 0,ZeroLine:0
+  },
+  {
+    "Date": "09-Mar-84",
+    "BH": 43.61,
+    "DU": 82.26,
+    "Cash": 0,ZeroLine:0
+  },
+  {
+    "Date": "12-Mar-84",
+    "BH": 44.64,
+    "DU": 83.42,
+    "Cash": 0,ZeroLine:0
+  },
+  {
+    "Date": "13-Mar-84",
+    "BH": 44.95,
+    "DU": 83.73,
+    "Cash": 0,ZeroLine:0
+  },
+  {
+    "Date": "14-Mar-84",
+    "BH": 45.46,
+    "DU": 84.23,
+    "Cash": 0,ZeroLine:0
+  },
+  {
+    "Date": "15-Mar-84",
+    "BH": 45.98,
+    "DU": 84.75,
+    "Cash": 0,ZeroLine:0
+  },
+  {
+    "Date": "16-Mar-84",
+    "BH": 47.21,
+    "DU": 85.98,
+    "Cash": 0,ZeroLine:0
+  },
+  {
+    "Date": "19-Mar-84",
+    "BH": 45.69,
+    "DU": 84.46,
+    "Cash": 0,ZeroLine:0
+  },
+  {
+    "Date": "29-Jul-87",
+    "BH": 117.3573953,
+    "DU": 177.6140719,
+    "Cash": 61.18,ZeroLine:0
+  },
+  {
+    "Date": "30-Jul-87",
+    "BH": 117.7141148,
+    "DU": 177.6538492,
+    "Cash": 63.79,ZeroLine:0
+  },
+  {
+    "Date": "31-Jul-87",
+    "BH": 118.1095252,
+    "DU": 178.35456,
+    "Cash": 0,ZeroLine:0
+  },
+  {
+    "Date": "03-Aug-87",
+    "BH": 117.8706058,
+    "DU": 178.4163182,
+    "Cash": 2.66,ZeroLine:0
+  },
+  {
+    "Date": "04-Aug-87",
+    "BH": 116.5961283,
+    "DU": 177.1697328,
+    "Cash": 7.41,ZeroLine:0
+  },
+  {
+    "Date": "05-Aug-87",
+    "BH": 118.9144846,
+    "DU": 180.2017467,
+    "Cash": 10.78,ZeroLine:0
+  },
+  {
+    "Date": "06-Aug-87",
+    "BH": 120.7908652,
+    "DU": 183.3725786,
+    "Cash": 14.7,ZeroLine:0
+  },
+  {
+    "Date": "07-Aug-87",
+    "BH": 121.6359075,
+    "DU": 184.2176209,
+    "Cash": 0,ZeroLine:0
+  },
+  {
+    "Date": "10-Aug-87",
+    "BH": 123.4472945,
+    "DU": 186.0290079,
+    "Cash": 0,ZeroLine:0
+  },
+  {
+    "Date": "11-Aug-87",
+    "BH": 125.2906741,
+    "DU": 187.9249786,
+    "Cash": 0,ZeroLine:0
+  },
+  {
+    "Date": "12-Aug-87",
+    "BH": 126.6679672,
+    "DU": 189.4307394,
+    "Cash": 0,ZeroLine:0
+  },
+  {
+    "Date": "13-Aug-87",
+    "BH": 127.9544752,
+    "DU": 190.7696376,
+    "Cash": 12.1,ZeroLine:0
+  },
+  {
+    "Date": "14-Aug-87",
+    "BH": 127.3422869,
+    "DU": 190.2035798,
+    "Cash": 23.98,ZeroLine:0
+  },
+  {
+    "Date": "17-Aug-87",
+    "BH": 127.5388705,
+    "DU": 190.3266424,
+    "Cash": 50.98,ZeroLine:0
+  },
+  {
+    "Date": "21-Jun-21",
+    "BH": 732.033653,
+    "DU": 1440.298257,
+    "Cash": 16.81,ZeroLine:0
+  }
+]
+   
+    var margin = {
+        top: 40,
+        right: 100,
+        bottom: 100,
+        left: 40
+      },
+   /*   width = 500 - margin.left - margin.right, */
+		 width = parseInt(d3.select(".Strategy_View").style("width")) - margin.left - margin.right,
+      height = 500 - margin.top - margin.bottom;
+    
+
+  // set the ranges
+var x = d3.scaleBand()
+          .range([0, width]) 
+.domain(data.map(function(d) { return d.Date; }))
+          
+var y = d3.scaleLinear()
+.domain([0,d3.max(data, function (d) { return d.Cash; })])
+         .range([height, 0]);
+
+
+var yRightDU = d3.scaleLinear()
+.domain([-1500,1500, d3.max(data, function (d) { return d.DU; })])
+         .range([height, 0]);
+
+	  var yRightBH = d3.scaleLinear()
+.domain([-1500,1500, d3.max(data, function (d) { return d.BH; })])
+         .range([height, 0]);  
+	  
+	  
+	  var yRightZeroLine = d3.scaleLinear()
+	  .domain([-1400, 1400, d3.max(data, function (d) { return d.ZeroLine; })])
+         .range([height, 0]);
+	  
+ 
+	  
+var svg = d3.select(".Strategy_View").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", 
+          "translate(" + margin.left + "," + margin.top + ")");
+ var focus = svg.append("g")
+      .attr("class", "focus")
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+ var lineBH = d3.line()
+	.x(function(d) { return x(d.Date); })
+	.y(function(d) { return yRightBH(d.BH); })
+ 
+ var lineDU = d3.line()
+	.x(function(d) { return x(d.Date); })
+	.y(function(d) { return yRightDU(d.DU); });
+
+
+ var ZeroLine = d3.line()
+	.x(function(d) { return x(d.Date); })
+	.y(function(d) { return yRightZeroLine(d.ZeroLine); });
+	  
+  focus.append("rect")
+    .attr("class", "zoom")
+    .attr("width", width)
+    .attr("height", height)
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+   
+    svg.append("defs")
+      .append("rect")
+      .attr("width", width)
+      .attr("height", height);
+
+	  
+	  
+	  
+// append the rectangles for the bar chart
+  focus.selectAll(".bar_strategy")
+      .data(data)
+    .enter().append("rect")
+      .attr("class", "bar_strategy")
+      .attr("x", function(d) { return x(d.Date); })
+      .attr("width", x.bandwidth())
+      .attr("y", function(d) { return y(d.Cash); })
+      /*.attr("height", function(d) { return y(0) - y(d.Cash); })*/
+	  .attr("height", function(d) {
+return Math.abs(y(d.Cash) - y(0));
+})
+
+focus.append("path")
+    .datum(data)
+    .attr("class", "lineBH") 
+    .attr("d", lineBH)
+	
+	  
+	  focus.append("path")
+    .datum(data)
+    .attr("class", "lineDU") 
+    .attr("d", lineDU)
+	  
+     
+	    
+	   focus.append("path")
+    .datum(data)
+    .attr("class", "ZeroLine") 
+    .attr("d", ZeroLine)
+    
+	
+  // add the x Axis
+  focus.append("g")
+      .attr("transform", "translate(0," + height + ")")
+      .call(d3.axisBottom(x).tickValues(x.domain().filter(function(d,i){ return !(i%8)})))
+	  .selectAll("text")	
+        .style("text-anchor", "end")
+        .attr("dx", "-.8em")
+        .attr("dy", ".15em")
+        .attr("transform", "rotate(-65)");
+
+
+
+    // Add the Y Axis
+    focus.append("g")
+      .attr("class", "axis")
+      .call(d3.axisLeft(y).tickFormat(function(d) { return d + "%"; }).tickPadding([5]))
+   
+// Add the YRight Axis
+    focus.append("g")
+    .attr("class", "y axis")	
+.attr("transform", "translate(" + width + " , 0)")	
+      .call(d3.axisRight(yRightDU).ticks(8).tickFormat(function(d) { return d + "%"; }).tickPadding([5]))
+	  
+	  
+    focus.append("g")
+    .attr("class", "y axis")	.attr("opacity",0)
+.attr("transform", "translate(" + width + " , 0)")	
+      .call(d3.axisRight(yRightBH).ticks(8).tickFormat(function(d) { return d + "%"; }).tickPadding([5]))
+    focus.append("g")
+  
+   
+
+	  
+  </script>
+</body>
+</html>

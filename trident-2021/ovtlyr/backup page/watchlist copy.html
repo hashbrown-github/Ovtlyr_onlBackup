@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>OVTLYR | Watchlist</title>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#fff">
+<meta name="format-detection" content="telephone=no">
+<link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="imgages/trident-favicon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/trident-favicon.png">
+<link rel="manifest" href="img/site.webmanifest">
+<link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+<meta name="description" content="Updates and Statistics">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css">
+<link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Poppins:wght@500;600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" media="all" href="css/app.css">
+<link rel="stylesheet" media="all" href="css/style.css">
+<link rel="stylesheet" media="all" href="css/responsive.css">
+<link href="css/chart-style.css" rel="stylesheet" type="text/css" />
+<script>var viewportmeta = document.querySelector('meta[name="viewport"]');
+if (viewportmeta) {
+  if (screen.width < 375) {
+    var newScale = screen.width / 375;
+    viewportmeta.content = 'width=375, minimum-scale=' + newScale + ', maximum-scale=1.0, user-scalable=no, initial-scale=' + newScale + '';
+  } else {
+    viewportmeta.content = 'width=device-width, maximum-scale=1.0, initial-scale=1.0';
+  }
+}</script>
+</head>
+<body>
+<script>console.log(localStorage.getItem('darkMode'));
+if (localStorage.getItem('darkMode') === "on") {
+		document.body.classList.add("dark");
+		document.addEventListener("DOMContentLoaded", function() {
+		  document.querySelector('.js-switch-theme input').checked = true;
+		});
+}
+</script>
+<div class="page">
+  <div class="sidebar">
+    <div class="sidebar__head"><a class="sidebar__logo" href="index.html"><img class="sidebar__pic sidebar__pic_light" src="images/login_trident.svg" alt="" /><img class="sidebar__pic sidebar__pic_dark" src="images/outlyr-white-logo.png" alt="" /></a>
+      <button class="sidebar__toggle">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+        <path d="M22 12H3" stroke="#11142d"></path>
+        <g stroke="#808191">
+          <path d="M22 4H13"></path>
+          <path opacity=".301" d="M22 20H13"></path>
+        </g>
+        <path d="M7 7l-5 5 5 5" stroke="#11142d"></path>
+      </svg>
+      </button>
+      <button class="sidebar__close"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="sidebar__logo_small">
+          <a href="index.html">
+            <img src="images/black.svg" class="whiteSmall_logo" alt="OVTLYR" />
+            <img src="images/white.svg" class="blackSmall_logo" alt="OVTLYR" />
+          </a>
+        </div>
+        <div class="sidebar__body">
+          <nav class="sidebar__nav">
+            <a class="sidebar__item" href="market-&-sectors.html">
+              <div class="sidebar__icon">
+                <img src="images/market-&-sectors.svg" alt="Market & Sectors" />
+              </div>
+              <div class="sidebar__text">Market & Sectors</div>
+            </a>
+            <a class="sidebar__item" href="daily-rankings.html">
+              <div class="sidebar__icon">
+                <img src="images/daily-rankings.svg" alt="Daily Rankings" />
+              </div>
+              <div class="sidebar__text">Daily Rankings</div>
+            </a>
+            <a class="sidebar__item active" href="watchlist.html">
+              <div class="sidebar__icon">
+                <img src="images/watchlist.svg" alt="Watchlist" />
+              </div>
+              <div class="sidebar__text">My Watchlist</div>
+            </a>
+            <a class="sidebar__item" href="portfolio.html">
+              <div class="sidebar__icon">
+                <img src="images/portfolio.svg" alt="Portfolio" />
+              </div>
+              <div class="sidebar__text">My Portfolio</div>
+            </a>
+            <a class="sidebar__item" href="resources.html">
+              <div class="sidebar__icon">
+                <img src="images/resources.svg" alt="Resources" />
+              </div>
+              <div class="sidebar__text">Resources</div>
+            </a>
+          </nav>
+          <div class="sidebar__profile">
+              <div class="sidebar__details">
+                <a class="sidebar__link js-popup-open" href="#popup-settings" data-effect="mfp-zoom-in">
+                  <div class="sidebar__icon"><img class="sidebar__pic" src="images/account.svg" alt="Profile"></div>
+                  <div class="sidebar__text">My Account</div>
+                </a>
+                <a class="sidebar__link" href="#">
+                  <div class="sidebar__icon"><img src="images/change-password.svg" alt="Change Password"></div>
+                  <div class="sidebar__text">Change Password</div>
+                </a>
+                <a class="sidebar__link" href="#">
+                  <div class="sidebar__icon"><img class="sidebar__pic" src="images/logout.svg" alt="Logout"></div>
+                  <div class="sidebar__text">Logout</div>
+                </a>
+                </div>
+                <a class="sidebar__user1" href="#">
+                <div class="sidebar__ava"><img class="sidebar__pic" src="images/profile.svg" alt="Profile"></div>
+                <div class="sidebar__desc">
+                  <div class="sidebar__man">Shivani Chandel</div>
+                </div>
+                <div class="sidebar__arrow"><i class="la la-angle-double-up"></i></div>
+              </a>
+            </div>
+        </div>
+        <div class="sidebar__bottom">
+      <label class="switch switch_theme js-switch-theme">
+        <input class="switch__input" type="checkbox" />
+        <span class="switch__in"><span class="switch__box"></span><span class="switch__icon">
+        <i class="fas fa-moon icon icon-theme-light"> </i>
+        <i class="fas fa-sun icon icon-theme-dark"> </i>
+        </span></span></label>
+      <a class="sidebar__user" href="sign-in.html"><img src="images/profile.svg" alt="" /></a></div>
+  </div>
+  <div class="page__content">
+    <div class="header header_border">
+      <form class="header__search">
+        <span class="serach_mainAuto">
+          <div class="autocomplete_div">
+            <input class="header__input" id="myInput" type="text" name="myCountry" placeholder="SYMBOL...">
+          </div>
+          <div class="searchbar_dropdown" style="display: none;">
+            <ul>
+              <li>
+                <p class="search_name"><b>AD</b>VANCE AUTO PARTS INC.</p>
+                <p class="search_symbol"><span><b>AAP</b> :</span><span class="search_ComName"> CONSUMER DISCRETIONARY</span></p>
+              </li>
+              <li class="active">
+                <p class="search_name"><b>AD</b>VANCE AUTO PARTS INC.</p>
+                <p class="search_symbol"><span><b>AAP</b> :</span><span class="search_ComName"> CONSUMER DISCRETIONARY</span></p>
+              </li>
+              <li>
+                <p class="search_name"><b>AD</b>VANCE AUTO PARTS INC.</p>
+                <p class="search_symbol"><span><b>AAP</b> :</span><span class="search_ComName"> CONSUMER DISCRETIONARY</span></p>
+              </li>
+              <li>
+                <p class="search_name"><b>AD</b>VANCE AUTO PARTS INC.</p>
+                <p class="search_symbol"><span><b>AAP</b> :</span><span class="search_ComName"> CONSUMER DISCRETIONARY</span></p>
+              </li>
+              <li>
+                <p class="search_name"><b>AD</b>VANCE AUTO PARTS INC.</p>
+                <p class="search_symbol"><span><b>AAP</b> :</span><span class="search_ComName"> CONSUMER DISCRETIONARY</span></p>
+              </li>
+              <li class="active">
+                <p class="search_name"><b>AD</b>VANCE AUTO PARTS INC.</p>
+                <p class="search_symbol"><span><b>AAP</b> :</span><span class="search_ComName"> CONSUMER DISCRETIONARY</span></p>
+              </li>
+              <li>
+                <p class="search_name"><b>AD</b>VANCE AUTO PARTS INC.</p>
+                <p class="search_symbol"><span><b>AAP</b> :</span><span class="search_ComName"> CONSUMER DISCRETIONARY</span></p>
+              </li>
+              <li>
+                <p class="search_name"><b>AD</b>VANCE AUTO PARTS INC.</p>
+                <p class="search_symbol"><span><b>AAP</b> :</span><span class="search_ComName"> CONSUMER DISCRETIONARY</span></p>
+              </li>
+            </ul>
+          </div>
+        </span>
+        <button class="header__start"><i class="fas fa-search"></i></button>
+      </form>
+      <a class="header__logo black_theme" href="index.html"><img src="images/white.svg" alt="OVTLYR" /></a>
+      <a class="header__logo white_theme" href="index.html"><img src="images/black.svg" alt="OVTLYR" /></a>
+      <button class="header__toggle">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+        <path d="M22 12H3" stroke="#11142d"></path>
+        <g stroke="#808191">
+          <path d="M22 4H13"></path>
+          <path opacity=".301" d="M22 20H13"></path>
+        </g>
+        <path d="M7 7l-5 5 5 5" stroke="#11142d"></path>
+      </svg>
+      </button>
+    </div>
+    <div class="page__row watchlistPart">
+      <div class="wallets__container watchlistSec">
+        <div class="wallets__wrapper watchlistSec1">
+          <div class="filter_head">
+            <p>Filter Sector, Industry & Market Cap to your Preference:</p>
+            <div>
+              <a href="" class="btn btn-bule_btn">Reset</a>
+              <a href="" class="btn btn-bule_btn">Apply Filters</a>
+            </div>
+          </div>
+          <div class="widgets__list dashChart_list">
+            <div class="widgets__item dashChart_3">
+              <div class="widgets__body">
+                <div class="market">
+                  <div class="market__tabs js-tabs">
+                    <div class="market__head" onclick="growDiv()" id="more-button">
+                      <div class="widgets__variants market__menu">
+                        <a class="market__link js-tabs-link widgets__link active" href="#">Sector</a>
+                        <a class="market__link js-tabs-link widgets__link" href="#">Industry</a>
+                        <a class="market__link js-tabs-link widgets__link" href="#">Market Cap</a>
+                      </div>
+                      <div class="filter_icon">
+                        <i class="fas fa-angle-down" id="collapse_icon"></i>
+                      </div>
+                    </div>
+                    <div class="market__body" id="grow">
+                      <div class="market__container">
+                        <div class="market__item js-tabs-item" style="display: block;">
+                          <div class="sector_tab1">
+                            <div class="sector_tab11">
+                            <label class="checkbox">
+                              <input class="checkbox__input" type="checkbox">
+                              <span class="checkbox__in">
+                                <span class="checkbox__tick"></span>
+                                <span class="checkbox__text">Communication</span>
+                              </span>
+                            </label>
+                            <label class="checkbox">
+                              <input class="checkbox__input" type="checkbox">
+                              <span class="checkbox__in">
+                                <span class="checkbox__tick"></span>
+                                <span class="checkbox__text">Discretionary</span>
+                              </span>
+                            </label>
+                            <label class="checkbox">
+                                <input class="checkbox__input" type="checkbox">
+                                <span class="checkbox__in">
+                                  <span class="checkbox__tick"></span>
+                                  <span class="checkbox__text">Energy</span>
+                                </span>
+                              </label>
+                            <label class="checkbox">
+                              <input class="checkbox__input" type="checkbox">
+                              <span class="checkbox__in">
+                                <span class="checkbox__tick"></span>
+                                <span class="checkbox__text">Financials</span>
+                              </span>
+                            </label>
+                          </div>
+                          <div class="sector_tab11">
+                            <label class="checkbox">
+                              <input class="checkbox__input" type="checkbox">
+                              <span class="checkbox__in">
+                                <span class="checkbox__tick"></span>
+                                <span class="checkbox__text">Healthcare</span>
+                              </span>
+                            </label>
+                            <label class="checkbox">
+                              <input class="checkbox__input" type="checkbox">
+                              <span class="checkbox__in">
+                                <span class="checkbox__tick"></span>
+                                <span class="checkbox__text">Industrial</span>
+                              </span>
+                            </label>
+                            <label class="checkbox">
+                              <input class="checkbox__input" type="checkbox">
+                              <span class="checkbox__in">
+                                <span class="checkbox__tick"></span>
+                                <span class="checkbox__text">Materials</span>
+                              </span>
+                            </label>
+                            <label class="checkbox">
+                              <input class="checkbox__input" type="checkbox">
+                              <span class="checkbox__in">
+                                <span class="checkbox__tick"></span>
+                                <span class="checkbox__text">Real Estate</span>
+                               </span>
+                            </label>
+                          </div>
+                          <div class="sector_tab11">
+                            <label class="checkbox">
+                              <input class="checkbox__input" type="checkbox">
+                              <span class="checkbox__in">
+                                <span class="checkbox__tick"></span>
+                                <span class="checkbox__text">Staples</span>
+                              </span>
+                            </label>
+                            <label class="checkbox">
+                              <input class="checkbox__input" type="checkbox">
+                              <span class="checkbox__in">
+                                <span class="checkbox__tick"></span>
+                                <span class="checkbox__text">Technology</span>
+                              </span>
+                            </label>
+                            <label class="checkbox">
+                              <input class="checkbox__input" type="checkbox">
+                              <span class="checkbox__in">
+                                <span class="checkbox__tick"></span>
+                                <span class="checkbox__text">Utilities</span>
+                              </span>
+                            </label>
+                          </div>
+                          </div>
+                        </div>
+                        <div class="market__item js-tabs-item">
+                          <div class="sector_tab1">
+                            <div class="sector_tab11">
+                            <label class="checkbox">
+                              <input class="checkbox__input" type="checkbox">
+                              <span class="checkbox__in">
+                                <span class="checkbox__tick"></span>
+                                <span class="checkbox__text">Technology Hardware, Storage & Peripherals</span>
+                              </span>
+                            </label>
+                            <label class="checkbox">
+                              <input class="checkbox__input" type="checkbox">
+                              <span class="checkbox__in">
+                                <span class="checkbox__tick"></span>
+                                <span class="checkbox__text">Hotels, Restaurants & Leisure</span>
+                              </span>
+                            </label>
+                            <label class="checkbox">
+                                <input class="checkbox__input" type="checkbox">
+                                <span class="checkbox__in">
+                                  <span class="checkbox__tick"></span>
+                                  <span class="checkbox__text">IT Services</span>
+                                </span>
+                              </label>
+                            <label class="checkbox">
+                              <input class="checkbox__input" type="checkbox">
+                              <span class="checkbox__in">
+                                <span class="checkbox__tick"></span>
+                                <span class="checkbox__text">Electrical Equipment</span>
+                              </span>
+                            </label>
+                            </div>
+                            <div class="sector_tab11">
+                            <label class="checkbox">
+                              <input class="checkbox__input" type="checkbox">
+                              <span class="checkbox__in">
+                                <span class="checkbox__tick"></span>
+                                <span class="checkbox__text">Metals & Mining</span>
+                              </span>
+                            </label>
+                            <label class="checkbox">
+                              <input class="checkbox__input" type="checkbox">
+                              <span class="checkbox__in">
+                                <span class="checkbox__tick"></span>
+                                <span class="checkbox__text">Hotels, Restaurants & Leisure</span>
+                              </span>
+                            </label>
+                            <label class="checkbox">
+                                <input class="checkbox__input" type="checkbox">
+                                <span class="checkbox__in">
+                                  <span class="checkbox__tick"></span>
+                                  <span class="checkbox__text">IT Services</span>
+                                </span>
+                              </label>
+                            <label class="checkbox">
+                              <input class="checkbox__input" type="checkbox">
+                              <span class="checkbox__in">
+                                <span class="checkbox__tick"></span>
+                                <span class="checkbox__text">Electrical Equipment</span>
+                              </span>
+                            </label>
+                            </div>
+                            <div class="sector_tab11">
+                            <label class="checkbox">
+                              <input class="checkbox__input" type="checkbox">
+                              <span class="checkbox__in">
+                                <span class="checkbox__tick"></span>
+                                <span class="checkbox__text">Software</span>
+                              </span>
+                            </label>
+                            <label class="checkbox">
+                              <input class="checkbox__input" type="checkbox">
+                              <span class="checkbox__in">
+                                <span class="checkbox__tick"></span>
+                                <span class="checkbox__text">Hotels, Restaurants & Leisure</span>
+                              </span>
+                            </label>
+                            <label class="checkbox">
+                                <input class="checkbox__input" type="checkbox">
+                                <span class="checkbox__in">
+                                  <span class="checkbox__tick"></span>
+                                  <span class="checkbox__text">IT Services</span>
+                                </span>
+                              </label>
+                            <label class="checkbox">
+                              <input class="checkbox__input" type="checkbox">
+                              <span class="checkbox__in">
+                                <span class="checkbox__tick"></span>
+                                <span class="checkbox__text">Electrical Equipment</span>
+                              </span>
+                            </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="market__item js-tabs-item">
+                          <div class="sector_tab1">
+                            <div class="sector_tab11">
+                            <label class="checkbox">
+                              <input class="checkbox__input" type="checkbox">
+                              <span class="checkbox__in">
+                                <span class="checkbox__tick"></span>
+                                <span class="checkbox__text">&lt;$10B</span>
+                              </span>
+                            </label>
+                            <label class="checkbox">
+                              <input class="checkbox__input" type="checkbox">
+                              <span class="checkbox__in">
+                                <span class="checkbox__tick"></span>
+                                <span class="checkbox__text">$10B - $100B</span>
+                              </span>
+                            </label>
+                            <label class="checkbox">
+                                <input class="checkbox__input" type="checkbox">
+                                <span class="checkbox__in">
+                                  <span class="checkbox__tick"></span>
+                                  <span class="checkbox__text">&gt;$100B</span>
+                                </span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div> 
+              </div>
+            </div>
+          </div>
+          <div class="selected_Filbox">
+                  <ul>
+                    <li><p>Healthcare</p>
+                      <span class="svg-icon svg-icon-primary svg-icon-2x">
+                        <i class="fas fa-times"></i>
+                      </span>
+                    </li>
+                    <li><p>Utilities</p>
+                      <span class="svg-icon svg-icon-primary svg-icon-2x">
+                        <i class="fas fa-times"></i>
+                      </span>
+                    </li>
+                    <li><p>Hotels, Restaurants &amp; Leisure</p>
+                      <span class="svg-icon svg-icon-primary svg-icon-2x">
+                        <i class="fas fa-times"></i>
+                      </span>
+                    </li>
+                    <li><p>IT Services</p>
+                      <span class="svg-icon svg-icon-primary svg-icon-2x">
+                        <i class="fas fa-times"></i>
+                      </span>
+                    </li>
+                    <li><p>Electrical Equipment</p>
+                      <span class="svg-icon svg-icon-primary svg-icon-2x">
+                        <i class="fas fa-times"></i>
+                      </span>
+                    </li>
+                    <li><p>&lt;$10B</p>
+                      <span class="svg-icon svg-icon-primary svg-icon-2x">
+                        <i class="fas fa-times"></i>
+                      </span>
+                    </li>
+                    <li><p>$10B - $100B</p>
+                      <span class="svg-icon svg-icon-primary svg-icon-2x">
+                        <i class="fas fa-times"></i>
+                      </span>
+                    </li>
+                  </ul>
+          </div>
+          <div class="prices watchlistR_table">
+            <div class="prices__head">
+              <div class="prices__title h5">Results:</div>
+              <a href="" class="btn btn-bule_btn faded">Add to Watchlist</a>
+            </div>
+            <div class="prices__container">
+              <div class="prices__table">
+                <div class="prices__row prices__row_head">
+                  <div class="prices__cell">
+                    <label class="checkbox">
+                      <input class="checkbox__input" type="checkbox" />
+                      <span class="checkbox__in">
+                        <span class="checkbox__tick"></span>
+                      </span>
+                    </label>
+                  </div>
+                  <div class="prices__cell">Symbol</div>
+                  <div class="prices__cell">Comapny Name</div>
+                  <div class="prices__cell" style="width: 25%;">OVTLYR Rating</div>
+                  <div class="prices__cell">Sector</div>
+                  <div class="prices__cell">Industry</div>
+                  <div class="prices__cell"> </div>
+                </div>
+                <div class="prices__row">
+                  <div class="prices__cell">
+                    <label class="checkbox">
+                      <input class="checkbox__input" type="checkbox" />
+                      <span class="checkbox__in">
+                        <span class="checkbox__tick"></span>
+                      </span>
+                    </label>
+                  </div>
+                  <div class="prices__cell"><a href="symbol-detail.html"><p><span class="port_symbol">AAPL</span></p></a></div>
+                  <div class="prices__cell">
+                    <a href="symbol-detail.html"><p>Apple Inc</p></a>
+                  </div>
+                  <div class="prices__cell">
+                    <div class="footLeft11 rating_slider">
+                      <div class="slidecontainer">
+                        <span class="card__category values">Bullish</span>
+                          <div class="RangeSlider_div">
+                            <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                          </div>
+                        <span class="card__category values">Bearish</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="prices__cell"><p>Financials</p></div>
+                  <div class="prices__cell"><p>IT Services</p></div>
+                  <div class="prices__cell"><button type="button" class="clickTo_add addWatchlist"><i class="fas fa-plus-circle"></i></button></div>
+                </div>
+                <div class="prices__row">
+                  <div class="prices__cell">
+                    <label class="checkbox">
+                      <input class="checkbox__input" type="checkbox" />
+                      <span class="checkbox__in">
+                        <span class="checkbox__tick"></span>
+                      </span>
+                    </label>
+                  </div>
+                  <div class="prices__cell"><a href="symbol-detail.html"><p><span class="port_symbol">AAPL</span></p></a></div>
+                  <div class="prices__cell">
+                    <a href="symbol-detail.html"><p>Apple Inc</p></a>
+                  </div>
+                  <div class="prices__cell">
+                    <div class="footLeft11 rating_slider">
+                      <div class="slidecontainer">
+                        <span class="card__category values">Bullish</span>
+                          <div class="RangeSlider_div">
+                            <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                          </div>
+                        <span class="card__category values">Bearish</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="prices__cell"><p>Financials</p></div>
+                  <div class="prices__cell"><p>Hotels, Restaurants & Leisure</p></div>
+                  <div class="prices__cell"><button type="button" class="clickTo_add addWatchlist"><i class="fas fa-plus-circle"></i></button></div>
+                </div>
+                <div class="prices__row">
+                  <div class="prices__cell">
+                    <label class="checkbox">
+                      <input class="checkbox__input" type="checkbox" />
+                      <span class="checkbox__in">
+                        <span class="checkbox__tick"></span>
+                      </span>
+                    </label>
+                  </div>
+                  <div class="prices__cell"><a href="symbol-detail.html"><p><span class="port_symbol">AAPL</span></p></a></div>
+                  <div class="prices__cell">
+                    <a href="symbol-detail.html"><p>Apple Inc</p></a>
+                  </div>
+                  <div class="prices__cell">
+                    <div class="footLeft11 rating_slider">
+                      <div class="slidecontainer">
+                        <span class="card__category values">Bullish</span>
+                          <div class="RangeSlider_div">
+                            <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                          </div>
+                        <span class="card__category values">Bearish</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="prices__cell"><p>Financials</p></div>
+                  <div class="prices__cell"><p>Electrical Equipment</p></div>
+                  <div class="prices__cell"><button type="button" class="clickTo_add addWatchlist"><i class="fas fa-plus-circle"></i></button></div>
+                </div>
+                <div class="prices__row">
+                  <div class="prices__cell">
+                    <label class="checkbox">
+                      <input class="checkbox__input" type="checkbox" />
+                      <span class="checkbox__in">
+                        <span class="checkbox__tick"></span>
+                      </span>
+                    </label>
+                  </div>
+                  <div class="prices__cell"><a href="symbol-detail.html"><p><span class="port_symbol">AAPL</span></p></a></div>
+                  <div class="prices__cell">
+                    <a href="symbol-detail.html"><p>Apple Inc</p></a>
+                  </div>
+                  <div class="prices__cell">
+                    <div class="footLeft11 rating_slider">
+                      <div class="slidecontainer">
+                        <span class="card__category values">Bullish</span>
+                          <div class="RangeSlider_div">
+                            <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                          </div>
+                        <span class="card__category values">Bearish</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="prices__cell"><p>Financials</p></div>
+                  <div class="prices__cell"><p>Electrical Equipment</p></div>
+                  <div class="prices__cell"><button type="button" class="clickTo_add addWatchlist"><i class="fas fa-plus-circle"></i></button></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="wallets__sidebar watchlistSec2 sidebar_tab">
+        <button class="Wallets__Close"> <i class="fas fa-times"></i></button>
+        <div class="wallets__wrap">
+          <div class="card wallets__body">
+              <div class="card__head" onclick="growupDiv()" id="more-button">
+                <div class="card__title h6">Watchlist</div>
+                <button class="wallets_close"> <i class="fas fa-angle-down" id="collapseup_icon"></i></button>
+              </div>
+              <div class="card__list watchlistScroll" id="growup">
+                <div class="card__item">
+                  <div class="card__details">
+                    <div class="card__line">
+                      <div class="card__category">AAPL</div>
+                      <div class="card__date"><button type="button" class="removeSym"><i class="la la-minus-circle"></i> </button></div>
+                    </div>
+                    <div class="card__status color-green">Apple Inc</div>
+                  </div>
+                  <div class="footLeft11 rating_slider">
+                    <div class="slidecontainer">
+                      <span class="card__category values">Bullish</span>
+                      <div class="RangeSlider_div">
+                        <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                      </div>
+                      <span class="card__category values">Bearish</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card__item">
+                  <div class="card__details">
+                    <div class="card__line">
+                      <div class="card__category">AAPL</div>
+                      <div class="card__date"><button type="button" class="removeSym"><i class="la la-minus-circle"></i> </button></div>
+                    </div>
+                    <div class="card__status color-green">Apple Inc</div>
+                  </div>
+                  <div class="footLeft11 rating_slider">
+                    <div class="slidecontainer">
+                      <span class="card__category values">Bullish</span>
+                      <div class="RangeSlider_div">
+                        <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                      </div>
+                      <span class="card__category values">Bearish</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card__item">
+                  <div class="card__details">
+                    <div class="card__line">
+                      <div class="card__category">AAPL</div>
+                      <div class="card__date"><button type="button" class="removeSym"><i class="la la-minus-circle"></i> </button></div>
+                    </div>
+                    <div class="card__status color-green">Apple Inc</div>
+                  </div>
+                  <div class="footLeft11 rating_slider">
+                    <div class="slidecontainer">
+                      <span class="card__category values">Bullish</span>
+                      <div class="RangeSlider_div">
+                        <input type="range" min="0" max="6" value="2" class="slider_range" id="ovtlyr_rating" disabled="">
+                      </div>
+                      <span class="card__category values">Bearish</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card__item">
+                  <div class="card__details">
+                    <div class="card__line">
+                      <div class="card__category">AAPL</div>
+                      <div class="card__date"><button type="button" class="removeSym"><i class="la la-minus-circle"></i> </button></div>
+                    </div>
+                    <div class="card__status color-green">Apple Inc</div>
+                  </div>
+                  <div class="footLeft11 rating_slider">
+                    <div class="slidecontainer">
+                      <span class="card__category values">Bullish</span>
+                      <div class="RangeSlider_div">
+                        <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                      </div>
+                      <span class="card__category values">Bearish</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card__item">
+                  <div class="card__details">
+                    <div class="card__line">
+                      <div class="card__category">AAPL</div>
+                      <div class="card__date"><button type="button" class="removeSym"><i class="la la-minus-circle"></i> </button></div>
+                    </div>
+                    <div class="card__status color-green">Apple Inc</div>
+                  </div>
+                  <div class="footLeft11 rating_slider">
+                    <div class="slidecontainer">
+                      <span class="card__category values">Bullish</span>
+                      <div class="RangeSlider_div">
+                        <input type="range" min="0" max="6" value="2" class="slider_range" id="ovtlyr_rating" disabled="">
+                      </div>
+                      <span class="card__category values">Bearish</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card__item">
+                  <div class="card__details">
+                    <div class="card__line">
+                      <div class="card__category">AAPL</div>
+                      <div class="card__date"><button type="button" class="removeSym"><i class="la la-minus-circle"></i> </button></div>
+                    </div>
+                    <div class="card__status color-green">Apple Inc</div>
+                  </div>
+                  <div class="footLeft11 rating_slider">
+                    <div class="slidecontainer">
+                      <span class="card__category values">Bullish</span>
+                      <div class="RangeSlider_div">
+                        <input type="range" min="0" max="6" value="3" class="slider_range" id="ovtlyr_rating" disabled="">
+                      </div>
+                      <span class="card__category values">Bearish</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card__item">
+                  <div class="card__details">
+                    <div class="card__line">
+                      <div class="card__category">AAPL</div>
+                      <div class="card__date"><button type="button" class="removeSym"><i class="la la-minus-circle"></i> </button></div>
+                    </div>
+                    <div class="card__status color-green">Apple Inc</div>
+                  </div>
+                  <div class="footLeft11 rating_slider">
+                    <div class="slidecontainer">
+                      <span class="card__category values">Bullish</span>
+                      <div class="RangeSlider_div">
+                        <input type="range" min="0" max="6" value="4" class="slider_range" id="ovtlyr_rating" disabled="">
+                      </div>
+                      <span class="card__category values">Bearish</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="popup popup_settings mfp-hide" id="popup-settings">
+  <div class="popup__title h6">My Account</div>
+      <div class="popup__tabs js-tabs">
+        <div class="popup__select mobile-show">
+          <select class="select js-tabs-select">
+            <option>Profile</option>
+            <option>Password</option>
+          </select>
+        </div>
+        <div class="popup__nav">
+          <a class="popup__link js-tabs-link active" href="#">Profile</a>
+          <a class="popup__link js-tabs-link" href="#">Password</a>
+        </div>
+        <div class="popup__container">
+          <div class="popup__item js-tabs-item" style="display: block;">
+            <div class="popup__user">
+              <div class="popup__label popup__label_mb32">Your Avatar</div>
+              <div class="popup__line">
+                <div class="popup__ava"><img class="popup__pic" src="images/profile.svg" alt=""></div>
+                <div class="popup__details">
+                  <div class="popup__btns">
+                    <div class="popup__loading"><input class="popup__file" type="file"><button class="popup__upload">Upload New</button></div><button class="popup__btn btn btn_gray">Delete Avatar</button>
+                  </div><a class="popup__default" href="#">Use default avatar</a>
+                </div>
+              </div>
+            </div>
+            <div class="popup__fieldset">
+              <div class="popup__row">
+                <div class="popup__field">
+                  <div class="popup__label">Your Full Name</div>
+                  <div class="popup__wrap"><input class="popup__input" type="text"></div>
+                </div>
+                <div class="popup__field">
+                  <div class="popup__label">Display Name</div>
+                  <div class="popup__wrap"><input class="popup__input" type="text"></div>
+                </div>
+              </div>
+              <div class="popup__row">
+                <div class="popup__field">
+                  <div class="popup__label">Email</div>
+                  <div class="popup__wrap"><input class="popup__input" type="email"></div>
+                </div>
+                <div class="popup__field">
+                  <div class="popup__label">Location</div>
+                  <div class="popup__wrap"><input class="popup__input" type="text"></div>
+                </div>
+              </div>
+            </div>
+            <button class="popup__btn btn btn_blue" type="submit">Update Profile</button>
+          </div>
+          <div class="popup__item js-tabs-item">
+            <form class="popup__form">
+              <div class="popup__title h6">Change Password</div>
+              <div class="popup__field field js-field">
+                <div class="field__label">current Password</div>
+                <div class="field__wrap"><input class="field__input js-field-input" type="password"></div>
+              </div>
+              <div class="popup__field field js-field">
+                <div class="field__label">new Password</div>
+                <div class="field__wrap"><input class="field__input js-field-input" type="password"></div>
+              </div>
+              <div class="popup__field field js-field">
+                <div class="field__label">Confirm new Password</div>
+                <div class="field__wrap"><input class="field__input js-field-input" type="password"></div>
+              </div><button class="popup__btn btn btn_blue btn_wide">Change Password</button>
+            </form>
+          </div>
+        </div>
+  </div>
+</div>
+<script src="js/lib/jquery.min.js"></script> 
+<script src="js/lib/svg4everybody.min.js"></script> 
+<script src="js/lib/owl.carousel.min.js"></script> 
+<script src="js/lib/jquery.nice-select.min.js"></script> 
+<script src="js/lib/apexcharts.min.js"></script> 
+<script src="js/lib/jquery.magnific-popup.min.js"></script> 
+<script src="js/charts.js"></script> 
+<script src="js/app.js"></script>
+<script>
+  $(document).ready(function(){
+   $('#myInput').focus(function(){
+       $('.searchbar_dropdown').fadeIn(250);
+   }).focusout(function(){
+       $('.searchbar_dropdown').fadeOut(250);
+   });
+});
+</script>
+<script>
+  function growDiv() {
+  var growDiv = document.getElementById('grow');
+  if (growDiv.clientHeight) {
+    growDiv.style.height = 0;
+  } else {
+    growDiv.style.height = "auto";
+  }
+  var iconClass = document.getElementById("collapse_icon");
+  iconClass.classList.toggle("fa-angle-up"); 
+}
+</script>
+<script>
+  function growupDiv() {
+  var growupDiv = document.getElementById('growup');
+  if (growupDiv.clientHeight) {
+    growupDiv.style.height = 0;
+  } else {
+    growupDiv.style.height = "auto";
+  }
+  var iconClass = document.getElementById("collapseup_icon");
+  iconClass.classList.toggle("fa-angle-up"); 
+}
+</script>
+<script>
+</script>
+</body>
+</html>

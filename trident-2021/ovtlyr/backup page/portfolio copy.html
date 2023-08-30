@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>OVTLYR | Portfolio</title>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#fff">
+<meta name="format-detection" content="telephone=no">
+<link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="imgages/trident-favicon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/trident-favicon.png">
+<link rel="manifest" href="img/site.webmanifest">
+<link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+<meta name="description" content="Updates and Statistics">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css">
+<link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Poppins:wght@500;600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" media="all" href="css/app.css">
+<link rel="stylesheet" media="all" href="css/style.css">
+<link rel="stylesheet" media="all" href="css/responsive.css">
+<link href="css/chart-style.css" rel="stylesheet" type="text/css" />
+<script>var viewportmeta = document.querySelector('meta[name="viewport"]');
+if (viewportmeta) {
+  if (screen.width < 375) {
+    var newScale = screen.width / 375;
+    viewportmeta.content = 'width=375, minimum-scale=' + newScale + ', maximum-scale=1.0, user-scalable=no, initial-scale=' + newScale + '';
+  } else {
+    viewportmeta.content = 'width=device-width, maximum-scale=1.0, initial-scale=1.0';
+  }
+}</script>
+</head>
+<body>
+<script>console.log(localStorage.getItem('darkMode'));
+if (localStorage.getItem('darkMode') === "on") {
+		document.body.classList.add("dark");
+		document.addEventListener("DOMContentLoaded", function() {
+		  document.querySelector('.js-switch-theme input').checked = true;
+		});
+}
+</script>
+<div class="page">
+  <div class="sidebar">
+    <div class="sidebar__head"><a class="sidebar__logo" href="index.html"><img class="sidebar__pic sidebar__pic_light" src="images/login_trident.svg" alt="" /><img class="sidebar__pic sidebar__pic_dark" src="images/outlyr-white-logo.png" alt="" /></a>
+      <button class="sidebar__toggle">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+        <path d="M22 12H3" stroke="#11142d"></path>
+        <g stroke="#808191">
+          <path d="M22 4H13"></path>
+          <path opacity=".301" d="M22 20H13"></path>
+        </g>
+        <path d="M7 7l-5 5 5 5" stroke="#11142d"></path>
+      </svg>
+      </button>
+      <button class="sidebar__close">
+      <svg class="icon icon-close">
+        <use xlink:href="img/sprite.svg#icon-close"></use>
+      </svg>
+      </button>
+    </div>
+    <div class="sidebar__logo_small">
+          <a href="index.html">
+            <img src="images/black.svg" class="whiteSmall_logo" alt="OVTLYR" />
+            <img src="images/white.svg" class="blackSmall_logo" alt="OVTLYR" />
+          </a>
+        </div>
+        <div class="sidebar__body">
+          <nav class="sidebar__nav">
+            <a class="sidebar__item" href="market-&-sectors.html">
+              <div class="sidebar__icon">
+                <img src="images/market-&-sectors.svg" alt="Market & Sectors" />
+              </div>
+              <div class="sidebar__text">Market & Sectors</div>
+            </a>
+            <a class="sidebar__item" href="daily-rankings.html">
+              <div class="sidebar__icon">
+                <img src="images/daily-rankings.svg" alt="Daily Rankings" />
+              </div>
+              <div class="sidebar__text">Daily Rankings</div>
+            </a>
+            <a class="sidebar__item" href="watchlist.html">
+              <div class="sidebar__icon">
+                <img src="images/watchlist.svg" alt="Watchlist" />
+              </div>
+              <div class="sidebar__text">My Watchlist</div>
+            </a>
+            <a class="sidebar__item active" href="portfolio.html">
+              <div class="sidebar__icon">
+                <img src="images/portfolio.svg" alt="Portfolio" />
+              </div>
+              <div class="sidebar__text">My Portfolio</div>
+            </a>
+            <a class="sidebar__item" href="resources.html">
+              <div class="sidebar__icon">
+                <img src="images/resources.svg" alt="Resources" />
+              </div>
+              <div class="sidebar__text">Resources</div>
+            </a>
+          </nav>
+          <div class="sidebar__profile">
+              <div class="sidebar__details">
+                <a class="sidebar__link js-popup-open" href="#popup-settings" data-effect="mfp-zoom-in">
+                  <div class="sidebar__icon"><img class="sidebar__pic" src="images/account.svg" alt="Profile"></div>
+                  <div class="sidebar__text">My Account</div>
+                </a>
+                <a class="sidebar__link" href="#">
+                  <div class="sidebar__icon"><img src="images/change-password.svg" alt="Change Password"></div>
+                  <div class="sidebar__text">Change Password</div>
+                </a>
+                <a class="sidebar__link" href="#">
+                  <div class="sidebar__icon"><img class="sidebar__pic" src="images/logout.svg" alt="Logout"></div>
+                  <div class="sidebar__text">Logout</div>
+                </a>
+                </div>
+                <a class="sidebar__user1" href="#">
+                <div class="sidebar__ava"><img class="sidebar__pic" src="images/profile.svg" alt="Profile"></div>
+                <div class="sidebar__desc">
+                  <div class="sidebar__man">Shivani Chandel</div>
+                </div>
+                <div class="sidebar__arrow"><i class="la la-angle-double-up"></i></div>
+              </a>
+            </div>
+        </div>
+        <div class="sidebar__bottom">
+      <label class="switch switch_theme js-switch-theme">
+        <input class="switch__input" type="checkbox" />
+        <span class="switch__in"><span class="switch__box"></span><span class="switch__icon">
+        <i class="fas fa-moon icon icon-theme-light"> </i>
+        <i class="fas fa-sun icon icon-theme-dark"> </i>
+        </span></span></label>
+      <a class="sidebar__user" href="sign-in.html"><img src="images/profile.svg" alt="" /></a></div>
+  </div>
+  <div class="page__content">
+    <div class="header header_border">
+      <form class="header__search">
+        <span class="serach_mainAuto">
+          <div class="autocomplete_div">
+            <input class="header__input" id="myInput" type="text" name="myCountry" placeholder="SYMBOL...">
+          </div>
+          <div class="searchbar_dropdown" style="display: none;">
+            <ul>
+              <li>
+                <p class="search_name"><b>AD</b>VANCE AUTO PARTS INC.</p>
+                <p class="search_symbol"><span><b>AAP</b> :</span><span class="search_ComName"> CONSUMER DISCRETIONARY</span></p>
+              </li>
+              <li class="active">
+                <p class="search_name"><b>AD</b>VANCE AUTO PARTS INC.</p>
+                <p class="search_symbol"><span><b>AAP</b> :</span><span class="search_ComName"> CONSUMER DISCRETIONARY</span></p>
+              </li>
+              <li>
+                <p class="search_name"><b>AD</b>VANCE AUTO PARTS INC.</p>
+                <p class="search_symbol"><span><b>AAP</b> :</span><span class="search_ComName"> CONSUMER DISCRETIONARY</span></p>
+              </li>
+              <li>
+                <p class="search_name"><b>AD</b>VANCE AUTO PARTS INC.</p>
+                <p class="search_symbol"><span><b>AAP</b> :</span><span class="search_ComName"> CONSUMER DISCRETIONARY</span></p>
+              </li>
+              <li>
+                <p class="search_name"><b>AD</b>VANCE AUTO PARTS INC.</p>
+                <p class="search_symbol"><span><b>AAP</b> :</span><span class="search_ComName"> CONSUMER DISCRETIONARY</span></p>
+              </li>
+              <li class="active">
+                <p class="search_name"><b>AD</b>VANCE AUTO PARTS INC.</p>
+                <p class="search_symbol"><span><b>AAP</b> :</span><span class="search_ComName"> CONSUMER DISCRETIONARY</span></p>
+              </li>
+              <li>
+                <p class="search_name"><b>AD</b>VANCE AUTO PARTS INC.</p>
+                <p class="search_symbol"><span><b>AAP</b> :</span><span class="search_ComName"> CONSUMER DISCRETIONARY</span></p>
+              </li>
+              <li>
+                <p class="search_name"><b>AD</b>VANCE AUTO PARTS INC.</p>
+                <p class="search_symbol"><span><b>AAP</b> :</span><span class="search_ComName"> CONSUMER DISCRETIONARY</span></p>
+              </li>
+            </ul>
+          </div>
+        </span>
+        <button class="header__start">
+        <svg class="icon icon-search">
+          <use xlink:href="img/sprite.svg#icon-search"></use>
+        </svg>
+        </button>
+      </form>
+      <a class="header__logo" href="index.html"><img src="images/black.svg" alt="" /></a>
+      <button class="header__toggle">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+        <path d="M22 12H3" stroke="#11142d"></path>
+        <g stroke="#808191">
+          <path d="M22 4H13"></path>
+          <path opacity=".301" d="M22 20H13"></path>
+        </g>
+        <path d="M7 7l-5 5 5 5" stroke="#11142d"></path>
+      </svg>
+      </button>
+    </div>
+    <div class="portfolio_head empty_SavedNews" style="display: none;">
+        <div class="empty_box_div"> 
+          <img src="images/empty_symbol.png" alt="">
+          <p>You need to create a watchlist first for Portfolio</p>
+          <a href="" class="btn btn-bule_btn">Create Watchlist</a>
+        </div>
+      </div>
+    <div class="page__row watchlistPart">
+      <div class="wallets__container watchlistSec portfolio_Sec">
+        <div class="wallets__wrapper watchlistSec1">
+          <div class="prices">
+            <div class="prices__head">
+              <div class="prices__title h5">Your Watchlist</div>
+            </div>
+            <div class="portfolio_Select">
+              <select class="select">
+              <option selected disabled>Filter By Sector</option>
+              <option>Communication</option>
+              <option>Discretionary</option>
+              <option>Energy</option>
+              <option>Financials</option>
+              <option>Healthcare</option>
+              <option>Industrial</option>
+              <option>Materials</option>
+              <option>Real Estate</option>
+              <option>Staples</option>
+              <option>Technology</option>
+              <option>Utilities</option>
+            </select>
+            <a href="" class="btn btn-bule_btn faded">Add to Portfolio</a>
+            </div>
+            <div class="prices__container">
+              <div class="prices__table">
+                <div class="prices__row prices__row_head">
+                  <div class="prices__cell">
+                    <label class="checkbox">
+                      <input class="checkbox__input" type="checkbox">
+                      <span class="checkbox__in">
+                        <span class="checkbox__tick"></span>
+                      </span>
+                    </label>
+                  </div>
+                  <div class="prices__cell">Symbol</div>
+                  <div class="prices__cell">Comapny Name</div>
+                  <div class="prices__cell">Sector</div>
+                  <div class="prices__cell">Industry</div>
+                  <div class="prices__cell"> </div>
+                </div>
+                <div class="prices__row">
+                  <div class="prices__cell">
+                    <label class="checkbox">
+                      <input class="checkbox__input" type="checkbox">
+                      <span class="checkbox__in">
+                        <span class="checkbox__tick"></span>
+                      </span>
+                    </label>
+                  </div>
+                  <div class="prices__cell"><a href="symbol-detail.html"><p><span class="port_symbol">AAPL</span></p></a></div>
+                  <div class="prices__cell">
+                    <a href="symbol-detail.html"><p>Apple Inc</p></a>
+                  </div>
+                  <div class="prices__cell"><p>Financials</p></div>
+                  <div class="prices__cell"><p>IT Services</p></div>
+                  <div class="prices__cell"><button type="button" class="clickTo_add addPortfolio"><i class="fas fa-plus-circle"></i></button></div>
+                </div>
+                <div class="prices__row">
+                  <div class="prices__cell">
+                    <label class="checkbox">
+                      <input class="checkbox__input" type="checkbox">
+                      <span class="checkbox__in">
+                        <span class="checkbox__tick"></span>
+                      </span>
+                    </label>
+                  </div>
+                  <div class="prices__cell"><a href="symbol-detail.html"><p><span class="port_symbol">AAPL</span></p></a></div>
+                  <div class="prices__cell">
+                    <a href="symbol-detail.html"><p>Apple Inc</p></a>
+                  </div>
+                  <div class="prices__cell"><p>Financials</p></div>
+                  <div class="prices__cell"><p>Hotels, Restaurants & Leisure</p></div>
+                  <div class="prices__cell"><button type="button" class="clickTo_add addPortfolio"><i class="fas fa-plus-circle"></i></button></div>
+                </div>
+                <div class="prices__row">
+                  <div class="prices__cell">
+                    <label class="checkbox">
+                      <input class="checkbox__input" type="checkbox">
+                      <span class="checkbox__in">
+                        <span class="checkbox__tick"></span>
+                      </span>
+                    </label>
+                  </div>
+                  <div class="prices__cell"><a href="symbol-detail.html"><p><span class="port_symbol">AAPL</span></p></a></div>
+                  <div class="prices__cell">
+                    <a href="symbol-detail.html"><p>Apple Inc</p></a>
+                  </div>
+                  <div class="prices__cell"><p>Financials</p></div>
+                  <div class="prices__cell"><p>Electrical Equipment</p></div>
+                  <div class="prices__cell"><button type="button" class="clickTo_add addPortfolio"><i class="fas fa-plus-circle"></i></button></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="filteredSec_dtl">
+            <div class="filteredSec_tbl">
+             <table class="table Filtered_table">
+                <thead class="table_header">
+                  <tr>
+                    <th scope="col" width="40%" colspan="2"><p><span class="bold_blk"> Account Value: </span></p></th>
+                    <th scope="col" width="60%" colspan="3"><p><span class="bold_blk"> <input type="text" class="filterInput" placeholder="" /> </span></p></th>
+                  </tr>
+                  <tr>
+                    <th scope="col"><p><span class="bold_blk">Symbol</span></p></th>
+                    <th scope="col"><p><span class="bold_blk">Allocation [%]</span></p></th>
+                    <th scope="col"><p><span class="bold_blk">Allocation Δ</span></p></th>
+                    <th scope="col"><p><span class="bold_blk">Last Close</span></p></th>
+                    <th scope="col"><p><span class="bold_blk">Shares [approx. #]</span></p></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>AAA</td>
+                    <td>28.37%</td>
+                    <td>-050%</td>
+                    <td>$52.50</td>
+                    <td>540</td>
+                  </tr>
+                  <tr>
+                    <td>AAB</td>
+                    <td>21.45%</td>
+                    <td>1.00%</td>
+                    <td>$23.98</td>
+                    <td>894</td>
+                  </tr>
+                  <tr>
+                    <td>AAC</td>
+                    <td>15.57%</td>
+                    <td>1.20%</td>
+                    <td>$77.10</td>
+                    <td>201</td>
+                  </tr>
+                  <tr>
+                    <td>AAD</td>
+                    <td>11.07%</td>
+                    <td>-3.00%</td>
+                    <td>$213.50</td>
+                    <td>51</td>
+                  </tr>
+                  <tr>
+                    <td>AAE</td>
+                    <td>8.30%</td>
+                    <td>0.20%</td>
+                    <td>$24.44</td>
+                    <td>339</td>
+                  </tr>
+                  <tr>
+                    <td>AAF</td>
+                    <td>6.23%</td>
+                    <td>-0.50%</td>
+                    <td>$158.13</td>
+                    <td>39</td>
+                  </tr>
+                  <tr>
+                    <td>AAG</td>
+                    <td>4.84%</td>
+                    <td>-1.80%</td>
+                    <td>$35.91</td>
+                    <td>134</td>
+                  </tr>
+                  <tr>
+                    <td>AAH</td>
+                    <td>4.15%</td>
+                    <td>-3.50%</td>
+                    <td>$86.20</td>
+                    <td>48</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="4" style="text-align: center;">N/A</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="4" style="text-align: center;">N/A</td>
+                  </tr>
+                  <tr>
+                    <td>Cash</td>
+                    <td>0.2%</td>
+                    <td>-0.10%</td>
+                    <td colspan="2" style="text-align: center;">$20.00</td>
+                  </tr>
+                </tbody>    
+              </table>    
+            </div>
+            <div class="filteredSec_chrt" style="display: none;">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="wallets__sidebar watchlistSec2">
+        <div class="wallets__wrap">
+          <div class="card wallets__body">
+              <div class="card__head" onclick="growDiv()" id="more-button">
+                <div class="card__title h6">Portfolio</div>
+                <button class="wallets_close"> <i class="fas fa-angle-down" id="collapse_icon"></i></button>
+              </div>
+              <div class="card__list" id="grow">
+                <div class="card__item">
+                  <div class="card__details">
+                    <div class="card__line">
+                      <div class="card__category">AAPL</div>
+                      <div class="card__date"><button type="button" class="removeSym"><i class="la la-minus-circle"></i> </button></div>
+                    </div>
+                    <div class="card__status color-green">Apple Inc</div>
+                  </div>
+                  <div class="footLeft11 rating_slider">
+                    <div class="slidecontainer">
+                      <span class="card__category values">Bullish</span>
+                      <div class="RangeSlider_div">
+                        <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                      </div>
+                      <span class="card__category values">Bearish</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card__item">
+                  <div class="card__details">
+                    <div class="card__line">
+                      <div class="card__category">AAPL</div>
+                      <div class="card__date"><button type="button" class="removeSym"><i class="la la-minus-circle"></i> </button></div>
+                    </div>
+                    <div class="card__status color-green">Apple Inc</div>
+                  </div>
+                  <div class="footLeft11 rating_slider">
+                    <div class="slidecontainer">
+                      <span class="card__category values">Bullish</span>
+                      <div class="RangeSlider_div">
+                        <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                      </div>
+                      <span class="card__category values">Bearish</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card__item">
+                  <div class="card__details">
+                    <div class="card__line">
+                      <div class="card__category">AAPL</div>
+                      <div class="card__date"><button type="button" class="removeSym"><i class="la la-minus-circle"></i> </button></div>
+                    </div>
+                    <div class="card__status color-green">Apple Inc</div>
+                  </div>
+                  <div class="footLeft11 rating_slider">
+                    <div class="slidecontainer">
+                      <span class="card__category values">Bullish</span>
+                      <div class="RangeSlider_div">
+                        <input type="range" min="0" max="6" value="2" class="slider_range" id="ovtlyr_rating" disabled="">
+                      </div>
+                      <span class="card__category values">Bearish</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card__item">
+                  <div class="card__details">
+                    <div class="card__line">
+                      <div class="card__category">AAPL</div>
+                      <div class="card__date"><button type="button" class="removeSym"><i class="la la-minus-circle"></i> </button></div>
+                    </div>
+                    <div class="card__status color-green">Apple Inc</div>
+                  </div>
+                  <div class="footLeft11 rating_slider">
+                    <div class="slidecontainer">
+                      <span class="card__category values">Bullish</span>
+                      <div class="RangeSlider_div">
+                        <input type="range" min="0" max="6" value="1" class="slider_range" id="ovtlyr_rating" disabled="">
+                      </div>
+                      <span class="card__category values">Bearish</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card__item">
+                  <div class="card__details">
+                    <div class="card__line">
+                      <div class="card__category">AAPL</div>
+                      <div class="card__date"><button type="button" class="removeSym"><i class="la la-minus-circle"></i> </button></div>
+                    </div>
+                    <div class="card__status color-green">Apple Inc</div>
+                  </div>
+                  <div class="footLeft11 rating_slider">
+                    <div class="slidecontainer">
+                      <span class="card__category values">Bullish</span>
+                      <div class="RangeSlider_div">
+                        <input type="range" min="0" max="6" value="2" class="slider_range" id="ovtlyr_rating" disabled="">
+                      </div>
+                      <span class="card__category values">Bearish</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card__item">
+                  <div class="card__details">
+                    <div class="card__line">
+                      <div class="card__category">AAPL</div>
+                      <div class="card__date"><button type="button" class="removeSym"><i class="la la-minus-circle"></i> </button></div>
+                    </div>
+                    <div class="card__status color-green">Apple Inc</div>
+                  </div>
+                  <div class="footLeft11 rating_slider">
+                    <div class="slidecontainer">
+                      <span class="card__category values">Bullish</span>
+                      <div class="RangeSlider_div">
+                        <input type="range" min="0" max="6" value="3" class="slider_range" id="ovtlyr_rating" disabled="">
+                      </div>
+                      <span class="card__category values">Bearish</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card__item">
+                  <div class="card__details">
+                    <div class="card__line">
+                      <div class="card__category">AAPL</div>
+                      <div class="card__date"><button type="button" class="removeSym"><i class="la la-minus-circle"></i> </button></div>
+                    </div>
+                    <div class="card__status color-green">Apple Inc</div>
+                  </div>
+                  <div class="footLeft11 rating_slider">
+                    <div class="slidecontainer">
+                      <span class="card__category values">Bullish</span>
+                      <div class="RangeSlider_div">
+                        <input type="range" min="0" max="6" value="4" class="slider_range" id="ovtlyr_rating" disabled="">
+                      </div>
+                      <span class="card__category values">Bearish</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+        <div class="wallets__wrap">
+          <div class="card__head">
+            <div class="h6">Risk Tolerance</div>
+          </div>
+          <ul class="risk_valuesList">
+            <li>
+              <label class="checkbox">
+                <input class="checkbox__input" type="checkbox">
+                <span class="checkbox__in">
+                  <span class="checkbox__tick"></span>
+                </span>
+              </label>
+              <p>Conservative</p>
+            </li>
+            <li>
+              <label class="checkbox">
+                <input class="checkbox__input" type="checkbox">
+                <span class="checkbox__in">
+                  <span class="checkbox__tick"></span>
+                </span>
+              </label>
+            </li>
+            <li>
+              <label class="checkbox">
+                <input class="checkbox__input" type="checkbox">
+                <span class="checkbox__in">
+                  <span class="checkbox__tick"></span>
+                </span>
+              </label>
+              <p>Balanced</p>
+            </li>
+            <li>
+              <label class="checkbox">
+                <input class="checkbox__input" type="checkbox">
+                <span class="checkbox__in">
+                  <span class="checkbox__tick"></span>
+                </span>
+              </label>
+            </li>
+            <li>
+              <label class="checkbox">
+                <input class="checkbox__input" type="checkbox">
+                <span class="checkbox__in">
+                  <span class="checkbox__tick"></span>
+                </span>
+              </label>
+              <p>Aggressive</p>
+            </li>
+          </ul>
+        </div>
+        <div class="wallets__wrap">
+          <div class="run_backtest">
+            <div class="run_backtest1">
+              <h5>NAR</h5>
+              <h6>Nominal Annual Rate</h6>
+            </div>
+            <div class="run_backtest2">
+              <input type="text" value="$213.50" />
+            </div>
+          </div>
+          <div class="run_backtest">
+            <div class="run_backtest1">
+              <h5>NAR</h5>
+              <h6>Nominal Annual Rate</h6>
+            </div>
+            <div class="run_backtest2">
+              <input type="text" value="$213.50" />
+            </div>
+          </div>
+          <div class="runBacktest">
+            <a href="" class="btn btn-bule_btn">Run Backtest</a>  
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="popup popup_settings mfp-hide" id="popup-settings">
+  <div class="popup__title h6">My Account</div>
+      <div class="popup__tabs js-tabs">
+        <div class="popup__select mobile-show">
+          <select class="select js-tabs-select">
+            <option>Profile</option>
+            <option>Password</option>
+          </select>
+        </div>
+        <div class="popup__nav">
+          <a class="popup__link js-tabs-link active" href="#">Profile</a>
+          <a class="popup__link js-tabs-link" href="#">Password</a>
+        </div>
+        <div class="popup__container">
+          <div class="popup__item js-tabs-item" style="display: block;">
+            <div class="popup__user">
+              <div class="popup__label popup__label_mb32">Your Avatar</div>
+              <div class="popup__line">
+                <div class="popup__ava"><img class="popup__pic" src="images/profile.svg" alt=""></div>
+                <div class="popup__details">
+                  <div class="popup__btns">
+                    <div class="popup__loading"><input class="popup__file" type="file"><button class="popup__upload">Upload New</button></div><button class="popup__btn btn btn_gray">Delete Avatar</button>
+                  </div><a class="popup__default" href="#">Use default avatar</a>
+                </div>
+              </div>
+            </div>
+            <div class="popup__fieldset">
+              <div class="popup__row">
+                <div class="popup__field">
+                  <div class="popup__label">Your Full Name</div>
+                  <div class="popup__wrap"><input class="popup__input" type="text"></div>
+                </div>
+                <div class="popup__field">
+                  <div class="popup__label">Display Name</div>
+                  <div class="popup__wrap"><input class="popup__input" type="text"></div>
+                </div>
+              </div>
+              <div class="popup__row">
+                <div class="popup__field">
+                  <div class="popup__label">Email</div>
+                  <div class="popup__wrap"><input class="popup__input" type="email"></div>
+                </div>
+                <div class="popup__field">
+                  <div class="popup__label">Location</div>
+                  <div class="popup__wrap"><input class="popup__input" type="text"></div>
+                </div>
+              </div>
+            </div>
+            <button class="popup__btn btn btn_blue" type="submit">Update Profile</button>
+          </div>
+          <div class="popup__item js-tabs-item">
+            <form class="popup__form">
+              <div class="popup__title h6">Change Password</div>
+              <div class="popup__field field js-field">
+                <div class="field__label">current Password</div>
+                <div class="field__wrap"><input class="field__input js-field-input" type="password"></div>
+              </div>
+              <div class="popup__field field js-field">
+                <div class="field__label">new Password</div>
+                <div class="field__wrap"><input class="field__input js-field-input" type="password"></div>
+              </div>
+              <div class="popup__field field js-field">
+                <div class="field__label">Confirm new Password</div>
+                <div class="field__wrap"><input class="field__input js-field-input" type="password"></div>
+              </div><button class="popup__btn btn btn_blue btn_wide">Change Password</button>
+            </form>
+          </div>
+        </div>
+  </div>
+</div>
+<script src="js/lib/jquery.min.js"></script> 
+<script src="js/lib/svg4everybody.min.js"></script> 
+<script src="js/lib/owl.carousel.min.js"></script> 
+<script src="js/lib/jquery.nice-select.min.js"></script> 
+<script src="js/lib/apexcharts.min.js"></script> 
+<script src="js/lib/jquery.magnific-popup.min.js"></script> 
+<script src="js/charts.js"></script> 
+<script src="js/app.js"></script>
+<script>
+  $(document).ready(function(){
+   $('#myInput').focus(function(){
+       $('.searchbar_dropdown').fadeIn(250);
+   }).focusout(function(){
+       $('.searchbar_dropdown').fadeOut(250);
+   });
+});
+</script>
+<script>
+  var slider_two = document.getElementById("ovtlyr_rating");
+  var rangepos_two = document.querySelector('.RangeSlider_div .rating_value');
+  var rangeCalc_two  = slider_two.value * 33;
+  rangepos_two.style.left = "calc(" + (rangeCalc_two + 1) + "px)";
+</script>
+<script>
+  function growDiv() {
+  var growDiv = document.getElementById('grow');
+  if (growDiv.clientHeight) {
+    growDiv.style.height = 0;
+  } else {
+    growDiv.style.height = "auto";
+  }
+  var iconClass = document.getElementById("collapse_icon");
+  iconClass.classList.toggle("fa-angle-up"); 
+}
+</script>
+
+</body>
+</html>

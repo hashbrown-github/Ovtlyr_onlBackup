@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<base href="">
+<meta charset="utf-8" />
+<title>OVTLYR | Home </title>
+<meta name="description" content="Updates and statistics" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<link rel="icon" type="image/png" sizes="32x32" href="imgages/trident-favicon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/trident-favicon.png">
+<link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css">
+<link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body class="sticky_footer">
+<header class="header">
+  <div class="header_front">
+    <div class="container">
+      <div class="row">
+       <div class="col-lg-4 col-md-4 col-sm-4 col-4">
+          <ul class="header_leftS">
+            <li><span class="logo"><a href="home.html"><img src="images/outlyr-white-logo.png" alt="OVTLYR" /></a> </span></li>
+          </ul>
+        </div>
+        <div class="col-lg-8 col-md-8 col-sm-8 col-8">
+          <ul class="header_rightS">
+            <li><a href="resources-front.html">Resources</a></li>
+            <li class="user_dropdown"> <a href="#">amar1328 <i class="las la-angle-down"></i></a> 
+              <ul class="userSe_list">
+                <li><a href="">Profile</a></li>
+                <li><a href="">Change Password</a></li>
+                <li><a href="">Settings</a></li>
+                <li><a href="">Logout</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!--============================ HEADER END ===============================-->
+<div class="form_body">
+  <section class="section home_banner">
+    <div class="home_banner1">
+      <div class="container">
+        <div class="banner_slider">
+          <div id="ovtlyrBannerSlider" class="carousel slide carousel-fade" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#ovtlyrBannerSlider" data-slide-to="0" class="active"></li>
+              <li data-target="#ovtlyrBannerSlider" data-slide-to="1"></li>
+              <li data-target="#ovtlyrBannerSlider" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-interval="5000">
+                <div class="home_banner2">
+                  <h1>Gut Instincts Don’t Build <span class="bg_blue">Winning Investments.</span></h1>
+                  <h5>Introducing OVTLYR Portfolio Solutions.</h5>
+                  <p>Build Better Portfolios with Groundbreaking Behavioral Analytics.</p>
+                </div>
+              </div>
+              <div class="carousel-item" data-interval="5000">
+                <div class="home_banner2">
+                  <h1>Make the <span class="bg_blue">Wisdom of Crowds</span> Work for You.</h1>
+                  <h5>Identify Overvalued and Undervalued Stocks.</h5>
+                  <p>Stay Up to Date with OVTLYR Daily Behavioral Rankings.</p>
+                </div>
+              </div>
+              <div class="carousel-item" data-interval="5000">
+                <div class="home_banner2">
+                  <h1>Markets are People. <span class="bg_blue">People are Predictable.</span></h1>
+                  <h5>Pinpoint Strategic Contrarian Opportunities.</h5>
+                  <p>See Which Assets are Leaning too Heavily Towards Fear & Greed with Unique Indicators.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="blue_button">Join Our Free Pilot</a>
+      </div>
+    </div>
+  </section>
+  <section class="section secPadd_100 index_sec3">
+    <div class="container">
+      <div class="screenshot_grid">
+        <div class="screenshot_grid1">
+          <div id="Market_Sectors" class="image_box w3-animate-top" style="display:block">
+            <div class="image_grid">
+              <img src="images/Market_Sectors.gif" alt="Market & Sectors" />
+            </div>
+          </div>
+          <div id="Daily_Rankings" class="image_box w3-animate-top" style="display:none">
+            <div class="image_grid">
+              <img src="images/2-Daily-Ranking.gif" alt="Daily Rankings" />
+            </div>
+          </div>
+          <div id="Stock_Detail" class="image_box w3-animate-top" style="display:none">
+            <div class="image_grid">
+              <img src="images/3-Market-Sector-SEARCH.gif" alt="Stock Detail" />
+            </div>
+          </div>
+          <div id="My_Watchlist" class="image_box w3-animate-top" style="display:none">
+            <div class="image_grid">
+              <img src="images/4-My-Watchlist.gif" alt="My Watchlist" />
+            </div>
+          </div>
+          <div id="My_portfolio" class="image_box w3-animate-top" style="display:none">
+            <div class="image_grid">
+              <img src="images/5-My-Portfolio.gif" alt="My portfolio" />
+            </div>
+          </div>
+          <div id="OVT_Resources" class="image_box w3-animate-top" style="display:none">
+            <div class="image_grid">
+              <img src="images/resources.gif" alt="Resources" />
+            </div>
+          </div>
+        </div>
+        <div class="screenshot_grid2">
+          <div>
+            <h3 class="work_text">Inside The Portal</h3>
+            <div class="pages_linksBox">
+              <button type="button" class="tablink w3-red" onclick="openLink(event, 'Market_Sectors')"><img src="images/market-&-sectors.svg" alt="Market & Sectors" />Market & Sectors</button>
+              <button type="button" class="tablink" onclick="openLink(event, 'Daily_Rankings')"><img src="images/daily-rankings.svg" alt="Daily Rankings" />Daily Rankings</button>
+              <button type="button" class="tablink" onclick="openLink(event, 'Stock_Detail')"><img src="images/Stock-Detail.svg" alt="Stock Detail" />Stock Detail</button>
+              <button type="button" class="tablink" onclick="openLink(event, 'My_Watchlist')"><img src="images/watchlist.svg" alt="My Watchlist" />My Watchlist</button>
+              <button type="button" class="tablink" onclick="openLink(event, 'My_portfolio')"><img src="images/portfolio.svg" alt="My portfolio" />My Portfolio</button>
+              <button type="button" class="tablink" onclick="openLink(event, 'OVT_Resources')"><img src="images/resources.svg" alt="Resources" />Resources</button>
+            </div>
+           <!-- <div class="learn-more-section">
+              <a class="list-item" href="#">
+                <span>Watch our video<i class="las la-arrow-right"></i></span>
+                <p>View full video</p>
+              </a>
+            </div>-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section secPadd_100 index_sec4">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 align_center">
+          <h2>Markets can be Irrational. Irrationality doesn’t have to be a <span class="bg_highlited">Surprise.</span></h2>
+        </div>
+        <div class="col-lg-6">
+          <p>Behavioral finance is the study of how psychology affects investment decisions. It picks up where "sentiment" leaves off, considering not just how investors feel, but how they are likely to act.</p>
+          <p>Measuring market behaviors can reveal participant irrationalities, leading to opportunities basic sentiment gauges often overlook.</p>
+          <p>OVTLYR is the first and only solution able to deliver the depth & breadth of daily market behavioral data necessary to improve stock selection and member portfolios.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section secPadd_100 index_sec5">
+    <div class="offset-lg-1 col-lg-10 offset-lg-1">
+      <p>As Seen On</p>
+      <ul>
+        <li>
+          <img src="images/marketwatch.png" alt="MrketWatch" />
+        </li>
+        <li>
+          <img src="images/FORBES.png" alt="Forbes" />
+        </li>
+        <li>
+          <img src="images/morningstar.png" alt="MORNINGSTAR" />
+        </li>
+		</ul>
+		<ul>
+        <li>
+          <img src="images/msn.png" alt="MSN" />
+        </li>
+        <li>
+          <img src="images/BENZINGA.png" alt="BENZINGA" />
+        </li>
+        <li>
+          <img src="images/REUTERS.png" alt="REUTERS" />
+        </li>
+		</ul>
+		<ul>
+        <li>
+          <img src="images/yahoo-finance.png" alt="Yahoo Finance" />
+        </li>
+        <li>
+          <img src="images/ventureBeat.png" alt="VentureBeat" />
+        </li>
+		  <li>
+          <img src="images/usa-today.png" alt="USA Today" />
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <img src="images/acorns-cnbc-2.png" alt="Acorns + CNBC" />
+        </li>
+        <li>
+          <img src="images/etf.png" alt="ETF.com" />
+        </li>
+        <li>
+          <img src="images/proactive.png" alt="Proactive" />
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="section secPadd_100 index_sec6">
+    <div class="container">
+      <div class="col-lg-12">
+        <!-- <h2>Try OVTLYR Absolutely <span>FREE</span> During Our Extended Pilot Launch Throughout 2021</h2> -->
+        <h2>Try OVTLYR Absolutely <span>FREE</span> during our 2021 Pilot!</h2>
+        <a href="#" class="blue_button">Join Our Free Pilot</a>
+       <!--  <p>We’re still adding features for the final release, but that’s no reason to use the already capable OVTLYR data to improve your equity positions.</p>
+        <ul>
+          <li>
+            <p><span><i class="las la-angle-right"></i></span> Sign up just with an email. No billing info necessary.</p>
+          </li>
+          <li>
+            <p><span><i class="las la-angle-right"></i></span> No contacts, No obligations. Month-to-month billing for premium plans after 2021.</p>
+          </li>
+          <li>
+            <p><span><i class="las la-angle-right"></i></span> Because it’s time to democratize the power of behavioral analytics and functionally change the way we all manage our investments.</p>
+          </li>
+        </ul>
+        <p class="paddingL40">It’s easy to say “Buy low & sell high,” but its far more difficult to do so when the pressure is on.</p>
+        <div class="signup_links">
+          <ul>
+            <li class="google_design">
+              <a href="">
+                <div class="social_links"><img src="images/google-icon.svg" alt="Google" /></div>
+                <p>Sign Up with Google</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <div class="social_links"><img src="images/fb-icon.svg" alt="Facebook" /></div>
+                <p>Sign Up with Facebook</p>
+              </a>
+            </li>
+          </ul>
+        </div> -->
+      </div>
+    </div>
+    <!-- <p class="astrick_note">*No credit card required</p> -->
+  </section>
+  <section class="section secPadd_100 index_sec7">
+    <div class="container">
+      <div class="heading_part">
+        <h2><span class="">Frequently </span>Asked Questions</h2>
+        <div class="index_latest_922"></div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+          <div class="accordion accordion-solid accordion-toggle-plus" id="accordionFAQ">
+            <div class="card">
+              <div class="card-header" id="headingOne6">
+                <div class="card-title" data-toggle="collapse" data-target="#collapseOne6">1. What Does a Typical Position Duration with OVTLYR Look Like?</div>
+              </div>
+              <div id="collapseOne6" class="collapse show" data-parent="#accordionFAQ">
+                <div class="card-body">
+                  <p>Behaviors take time to manifest into opportunities, and the amount of time can fluctuate. There is no crystal ball for the stock market, but in thorough testing we have observed the following:</p>
+                  <ul>
+                    <li><p><span> <i class="las la-angle-right"></i> </span> During periods of extreme volatility (or with generally more volatile assets), OVTLYR behavioral analytics reflect ideal holding periods of approximately a month on average.</p></li>
+                    <li><p><span> <i class="las la-angle-right"></i> </span> During periods of reduced or average volatility, ideal holding periods may last several months, quarters, even beyond a year in some cases.</p></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingTwo6">
+                <div class="card-title collapsed" data-toggle="collapse" data-target="#collapseTwo6">2. Does OVTLYR “Re-Paint” Charts?</div>
+              </div>
+              <div id="collapseTwo6" class="collapse" data-parent="#accordionFAQ">
+               <div class="card-body">
+                 <p>Generally no. During the 2021 Pilot Program, there may be instances where significant improvements to our models and/or additional datasets going live may prompt a re-paint in order to better portray the historical 
+                   impact of the given change. In these cases, we will communicate any alterations to historical charts in advance through both email and in the Updates section of the Resources menu so that you have time to collect data 
+                   you consider relevant.</p>
+               </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingThree6">
+                <div class="card-title collapsed" data-toggle="collapse" data-target="#collapseThree6">3. Why do I See a Different Close Price for a Stock on Another Website?</div>
+              </div>
+              <div id="collapseThree6" class="collapse" data-parent="#accordionFAQ">
+               <div class="card-body">
+                 <p>Consensus on end-of-day pricing (such as those used to indicate closing price on OVTLYR heatmaps) is something of a myth. Often, differences can be attributed to adjustment methodology. While we do not fully know the 
+                   unpublished methodologies used by other providers, OVTLYR follows the process outlined by Quandl <a href="https://blog.quandl.com/guide-to-stock-price-calculation" target="_blank">HERE</a>. This approach adds considerable visibility on the impact of corporate actions typically omitted by 
+                   other sources, and we feel best serves the OVTLYR community.</p>
+               </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingFour">
+                <div class="card-title collapsed" data-toggle="collapse" data-target="#collapseFour6">4. Why is Data Unavailable After a Stock Split?</div>
+              </div>
+              <div id="collapseFour6" class="collapse" data-parent="#accordionFAQ">
+               <div class="card-body">
+                 <p>After a stock splits, we will temporarily take down the symbol to update our model and to avoid confusion. We are continually speeding up this process to reduce the amount of down time our members experience and appreciate your 
+                   patience. </p>
+               </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingFive6">
+                <div class="card-title collapsed" data-toggle="collapse" data-target="#collapseFive6">5. What Assets Does OVTLYR Cover?</div>
+              </div>
+              <div id="collapseFive6" class="collapse" data-parent="#accordionFAQ">
+               <div class="card-body">
+                 <p>OVTLYR is continually training and adding new symbols to the coverage list (typically made available in bulk with major updates). Over 1,300 of the largest market cap, most liquid single-names are supported at present. 
+                   Names are chosen according to the following criteria:</p>
+                 <ul>
+                   <li><p><span> <i class="las la-angle-right"></i> </span> Market capitalization (larger market caps receiving priority).</p></li>
+                   <li><p><span> <i class="las la-angle-right"></i> </span> Diverse data availability.</p></li>
+                   <li><p><span> <i class="las la-angle-right"></i> </span> Minimum longevity requirement.</p></li>
+                 </ul>
+                 <p>It should be noted that assets failing to meet acceptable signal-to-noise ratio standards will be omitted from display.</p>
+                 <p>The current complete coverage list is available <a href="http://tiingo.ovtlyr.com/Resources" target="_blank">HERE</a>.</p>
+               </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingSix6">
+                <div class="card-title collapsed" data-toggle="collapse" data-target="#collapseSix6">6. Why Can’t I Find ____ Stock?</div>
+              </div>
+              <div id="collapseSix6" class="collapse" data-parent="#accordionFAQ">
+               <div class="card-body">
+                 <p>The decision was made to make OVTLYR publicly available before every symbol had been trained so that members could begin to learn how to leverage our data. This is one of the many reasons we are running the free pilot 
+                   through 2021.</p>
+                 <p>Please note that assets which fail to meet minimum requirements for inclusion will be omitted until the requirements are met.</p>
+               </div>
+              </div>
+             </div>
+           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<!--============================ FOOTER BEGIN ===============================-->
+<footer class="ovt_footer fixed_footerA">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-9 col-sm-8 col-12">
+        <div class="inner_footer">
+          <div class="footer_logo">
+            <a href="home.html"><img src="images/white.svg" alt="OVTLYR" /></a>
+          </div>
+          <ul class="footer_menu">
+            <li><a href="terms-of-use.html">Terms of Use</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="#">Trademark</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-3 col-sm-4 col-12">
+        <ul class="footer_socialMedia">
+          <li><a href="https://www.facebook.com/Ovtlyr/" target="_blank"><img src="images/fb-sm.svg" alt="Facebook"></a></li>
+          <li><a href="https://www.linkedin.com/company/ovtlyr" target="_blank"><img src="images/linkedin-sm.svg" alt="Linkedin" /></a></li>
+          <li><a href="https://twitter.com/ovtlyr" target="_blank"><img src="images/twitter-sm.svg" alt="Twitter" /></a></li>
+          <li><a href="https://www.instagram.com/ovtlyr/" target="_blank"><img src="images/insta-sm.svg" alt="Instagram" /></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+<div class="cookie_banner">
+  <div class="cookie_text">
+    This website uses cookies. By continuing to browse the site, you are agreeing to our <a href="#">Use of Cookies</a>.
+  </div>
+  <div class="cookie_button"><button type="button" id="hideCookies_div">Got It</button></div>
+</div>
+<!--============================ FOOTER END ===============================-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+      $('#ovtlyrBannerSlider').carousel({
+    interval: 4000
+});
+</script>
+<!--======== MOBILE MENU START =========-->
+<script>
+  (function() {
+    var body = document.body;
+    var burgerMenu = document.getElementsByClassName('b-menu')[0];
+    var burgerContain = document.getElementsByClassName('b-container')[0];
+    var burgerNav = document.getElementsByClassName('b-nav')[0];
+  
+    burgerMenu.addEventListener('click', function toggleClasses() {
+      [body, burgerContain, burgerNav].forEach(function (el) {
+        el.classList.toggle('open');
+      });
+    }, false);
+  });
+  </script>
+  <!--======== MOBILE MENU END =========-->
+<script>
+  function openLink(evt, animName) {
+    var i, x, tablinks;
+    x = document.getElementsByClassName("image_box");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < x.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+    }
+    document.getElementById(animName).style.display = "block";
+    evt.currentTarget.className += " w3-red";
+  }
+</script> 
+<script>
+  $(document).ready(function(){
+      $('#hideCookies_div').click(function() {
+        $('.cookie_banner').css({
+          "visibility": "hidden" , 
+          "opacity": "0"
+         });
+      });
+  });
+</script>
+</body>
+</html>
