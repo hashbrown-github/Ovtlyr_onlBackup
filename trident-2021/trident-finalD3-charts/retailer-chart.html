@@ -1,0 +1,7330 @@
+<!DOCTYPE html>
+
+<body>
+  <style>
+  
+.brush .overlay
+	  {
+		      opacity: 0.1;
+    fill: #9ca1b6;
+	  }
+	  .brush .selection
+	  {
+		  
+	  }
+ .handle 
+	  {
+		   fill: #9ca1b6;
+    stroke-width: 1px;
+    stroke: #7f8495;
+	  }
+.negative {
+		fill: #FE3957;
+	}
+	.positive
+	{
+		fill: #0CAF82;
+	}
+    .zoom {
+      cursor: move;
+      fill: none;
+      pointer-events: all;
+    }
+	  	.tooltip  {
+    text-align: right;
+    width: auto;
+    height: auto;
+    font-weight: 600;position:absolute;
+    padding: 6px;
+	border:1px solid #E62B47;
+    border-radius: 3px;
+    margin-top: -30px;
+    font: 10px sans-serif;
+    background: #ffffff;
+    color: #FE3957;
+}
+
+.tooltip-date, .tooltip-likes {
+  font-weight: bold;
+	}
+  </style>
+<div class="bar_chart">
+ <div id="bar_chart"></div>
+ </div>
+
+
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script>
+    //************* generate data ************
+    var data =  [
+	{
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "PEN",
+    "Value": 14,
+    "Category": "Buy",
+    "Rank": 1
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "SATS",
+    "Value": 15,
+    "Category": "Buy",
+    "Rank": 2
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ZTO",
+    "Value": 21,
+    "Category": "Buy",
+    "Rank": 3
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "BFAM",
+    "Value": 24,
+    "Category": "Buy",
+    "Rank": 4
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "UNVR",
+    "Value": 26,
+    "Category": "Buy",
+    "Rank": 5
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CHU",
+    "Value": 27,
+    "Category": "Buy",
+    "Rank": 6
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "APLE",
+    "Value": 27,
+    "Category": "Buy",
+    "Rank": 7
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "BPY",
+    "Value": 30,
+    "Category": "Buy",
+    "Rank": 8
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ED",
+    "Value": 30,
+    "Category": "Buy",
+    "Rank": 9
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CHL",
+    "Value": 30,
+    "Category": "Buy",
+    "Rank": 10
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "SF",
+    "Value": 31,
+    "Category": "Buy",
+    "Rank": 11
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "GILD",
+    "Value": 31,
+    "Category": "Buy",
+    "Rank": 12
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "MPC",
+    "Value": 31,
+    "Category": "Buy",
+    "Rank": 13
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "AZN",
+    "Value": 32,
+    "Category": "Buy",
+    "Rank": 14
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "HRL",
+    "Value": 32,
+    "Category": "Buy",
+    "Rank": 15
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "SWX",
+    "Value": 33,
+    "Category": "Buy",
+    "Rank": 16
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "WSO",
+    "Value": 33,
+    "Category": "Buy",
+    "Rank": 17
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "WEC",
+    "Value": 33,
+    "Category": "Buy",
+    "Rank": 18
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "SNY",
+    "Value": 33,
+    "Category": "Buy",
+    "Rank": 19
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "AWK",
+    "Value": 33,
+    "Category": "Buy",
+    "Rank": 20
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "JD",
+    "Value": 33,
+    "Category": "Buy",
+    "Rank": 21
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "SNX",
+    "Value": 34,
+    "Category": "Buy",
+    "Rank": 22
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "APA",
+    "Value": 34,
+    "Category": "Buy",
+    "Rank": 23
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "UTHR",
+    "Value": 34,
+    "Category": "Buy",
+    "Rank": 24
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "WPX",
+    "Value": 34,
+    "Category": "Buy",
+    "Rank": 25
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "GOLD",
+    "Value": 34,
+    "Category": "Buy",
+    "Rank": 26
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "BRX",
+    "Value": 34,
+    "Category": "Buy",
+    "Rank": 27
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "RNR",
+    "Value": 35,
+    "Category": "Buy",
+    "Rank": 28
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "HRB",
+    "Value": 36,
+    "Category": "Buy",
+    "Rank": 29
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "GBDC",
+    "Value": 36,
+    "Category": "Buy",
+    "Rank": 30
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "SPLK",
+    "Value": 37,
+    "Category": "Buy",
+    "Rank": 31
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "FANG",
+    "Value": 40,
+    "Category": "Buy",
+    "Rank": 32
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "WRI",
+    "Value": 40,
+    "Category": "Buy",
+    "Rank": 33
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "OUT",
+    "Value": 40,
+    "Category": "Buy",
+    "Rank": 34
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "GSK",
+    "Value": 40,
+    "Category": "Buy",
+    "Rank": 35
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "STOR",
+    "Value": 40,
+    "Category": "Buy",
+    "Rank": 36
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "PE",
+    "Value": 40,
+    "Category": "Buy",
+    "Rank": 37
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "D",
+    "Value": 41,
+    "Category": "Buy",
+    "Rank": 38
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CCI",
+    "Value": 41,
+    "Category": "Buy",
+    "Rank": 39
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "DG",
+    "Value": 41,
+    "Category": "Buy",
+    "Rank": 40
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "AGIO",
+    "Value": 41,
+    "Category": "Buy",
+    "Rank": 41
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ETR",
+    "Value": 41,
+    "Category": "Buy",
+    "Rank": 42
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "KR",
+    "Value": 41,
+    "Category": "Buy",
+    "Rank": 43
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CNP",
+    "Value": 41,
+    "Category": "Buy",
+    "Rank": 44
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "EQT",
+    "Value": 41,
+    "Category": "Buy",
+    "Rank": 45
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "PRGO",
+    "Value": 41,
+    "Category": "Buy",
+    "Rank": 46
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CRM",
+    "Value": 41,
+    "Category": "Buy",
+    "Rank": 47
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "FIZZ",
+    "Value": 41,
+    "Category": "Buy",
+    "Rank": 48
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "JKHY",
+    "Value": 41,
+    "Category": "Buy",
+    "Rank": 49
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "NBIX",
+    "Value": 41,
+    "Category": "Buy",
+    "Rank": 50
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "K",
+    "Value": 41,
+    "Category": "Buy",
+    "Rank": 51
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "VVV",
+    "Value": 42,
+    "Category": "Buy",
+    "Rank": 52
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "BLL",
+    "Value": 42,
+    "Category": "Buy",
+    "Rank": 53
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "TR",
+    "Value": 42,
+    "Category": "Buy",
+    "Rank": 54
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ESS",
+    "Value": 42,
+    "Category": "Buy",
+    "Rank": 55
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "MGP",
+    "Value": 42,
+    "Category": "Buy",
+    "Rank": 56
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "NJR",
+    "Value": 42,
+    "Category": "Buy",
+    "Rank": 57
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "XLRE",
+    "Value": 42,
+    "Category": "Buy",
+    "Rank": 58
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "TDS",
+    "Value": 42,
+    "Category": "Buy",
+    "Rank": 59
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CLX",
+    "Value": 43,
+    "Category": "Buy",
+    "Rank": 60
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "HPP",
+    "Value": 43,
+    "Category": "Buy",
+    "Rank": 61
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "RETA",
+    "Value": 43,
+    "Category": "Buy",
+    "Rank": 62
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "BRO",
+    "Value": 43,
+    "Category": "Buy",
+    "Rank": 63
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ABC",
+    "Value": 43,
+    "Category": "Buy",
+    "Rank": 64
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "TRNO",
+    "Value": 43,
+    "Category": "Buy",
+    "Rank": 65
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "AMGN",
+    "Value": 43,
+    "Category": "Buy",
+    "Rank": 66
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "SHEN",
+    "Value": 43,
+    "Category": "Buy",
+    "Rank": 67
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "WERN",
+    "Value": 43,
+    "Category": "Buy",
+    "Rank": 68
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "APD",
+    "Value": 43,
+    "Category": "Buy",
+    "Rank": 69
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "LII",
+    "Value": 43,
+    "Category": "Buy",
+    "Rank": 70
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "NOK",
+    "Value": 43,
+    "Category": "Buy",
+    "Rank": 71
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "MFG",
+    "Value": 44,
+    "Category": "Buy",
+    "Rank": 72
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "WRB",
+    "Value": 44,
+    "Category": "Buy",
+    "Rank": 73
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "QTS",
+    "Value": 44,
+    "Category": "Buy",
+    "Rank": 74
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "KMB",
+    "Value": 44,
+    "Category": "Buy",
+    "Rank": 75
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "GDS",
+    "Value": 44,
+    "Category": "Buy",
+    "Rank": 76
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "GPS",
+    "Value": 44,
+    "Category": "Buy",
+    "Rank": 77
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "BIIB",
+    "Value": 44,
+    "Category": "Buy",
+    "Rank": 78
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ABT",
+    "Value": 44,
+    "Category": "Buy",
+    "Rank": 79
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "DFS",
+    "Value": 44,
+    "Category": "Buy",
+    "Rank": 80
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CTAS",
+    "Value": 44,
+    "Category": "Buy",
+    "Rank": 81
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "USM",
+    "Value": 44,
+    "Category": "Buy",
+    "Rank": 82
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CHD",
+    "Value": 44,
+    "Category": "Buy",
+    "Rank": 83
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "LMT",
+    "Value": 44,
+    "Category": "Buy",
+    "Rank": 84
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ARMK",
+    "Value": 44,
+    "Category": "Buy",
+    "Rank": 85
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "LN",
+    "Value": 44,
+    "Category": "Buy",
+    "Rank": 86
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "HHC",
+    "Value": 44,
+    "Category": "Buy",
+    "Rank": 87
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "TMO",
+    "Value": 44,
+    "Category": "Buy",
+    "Rank": 88
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "PCRX",
+    "Value": 44,
+    "Category": "Buy",
+    "Rank": 89
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CPRI",
+    "Value": 44,
+    "Category": "Buy",
+    "Rank": 90
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "NEM",
+    "Value": 44,
+    "Category": "Buy",
+    "Rank": 91
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "EGP",
+    "Value": 44,
+    "Category": "Buy",
+    "Rank": 92
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "BLUE",
+    "Value": 45,
+    "Category": "Buy",
+    "Rank": 93
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "REG",
+    "Value": 45,
+    "Category": "Buy",
+    "Rank": 94
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "SRCL",
+    "Value": 45,
+    "Category": "Buy",
+    "Rank": 95
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "WMT",
+    "Value": 45,
+    "Category": "Buy",
+    "Rank": 96
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "LNT",
+    "Value": 45,
+    "Category": "Buy",
+    "Rank": 97
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CONE",
+    "Value": 45,
+    "Category": "Buy",
+    "Rank": 98
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "UMBF",
+    "Value": 45,
+    "Category": "Buy",
+    "Rank": 99
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "REGN",
+    "Value": 45,
+    "Category": "Buy",
+    "Rank": 100
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "PNW",
+    "Value": 45,
+    "Category": "Buy",
+    "Rank": 101
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "MOH",
+    "Value": 45,
+    "Category": "Buy",
+    "Rank": 102
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "MKL",
+    "Value": 45,
+    "Category": "Buy",
+    "Rank": 103
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "NKTR",
+    "Value": 45,
+    "Category": "Buy",
+    "Rank": 104
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "VSAT",
+    "Value": 45,
+    "Category": "Buy",
+    "Rank": 105
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "OLLI",
+    "Value": 45,
+    "Category": "Buy",
+    "Rank": 106
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "FTV",
+    "Value": 45,
+    "Category": "Buy",
+    "Rank": 107
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "NGG",
+    "Value": 45,
+    "Category": "Buy",
+    "Rank": 108
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "DLR",
+    "Value": 46,
+    "Category": "Buy",
+    "Rank": 109
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CNX",
+    "Value": 46,
+    "Category": "Buy",
+    "Rank": 110
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CBPO",
+    "Value": 46,
+    "Category": "Buy",
+    "Rank": 111
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "FRT",
+    "Value": 46,
+    "Category": "Buy",
+    "Rank": 112
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "COST",
+    "Value": 46,
+    "Category": "Buy",
+    "Rank": 113
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CB",
+    "Value": 46,
+    "Category": "Buy",
+    "Rank": 114
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CBSH",
+    "Value": 46,
+    "Category": "Buy",
+    "Rank": 115
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "XEL",
+    "Value": 48,
+    "Category": "Buy",
+    "Rank": 116
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "NWE",
+    "Value": 49,
+    "Category": "Buy",
+    "Rank": 117
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CERN",
+    "Value": 49,
+    "Category": "Buy",
+    "Rank": 118
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "BAX",
+    "Value": 49,
+    "Category": "Buy",
+    "Rank": 119
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "HTHT",
+    "Value": 49,
+    "Category": "Buy",
+    "Rank": 120
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ERIC",
+    "Value": 50,
+    "Category": "Buy",
+    "Rank": 121
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "UDR",
+    "Value": 50,
+    "Category": "Buy",
+    "Rank": 122
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ODFL",
+    "Value": 50,
+    "Category": "Buy",
+    "Rank": 123
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "EDIT",
+    "Value": 100,
+    "Category": "Sell",
+    "Rank": 1
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "PSTG",
+    "Value": 100,
+    "Category": "Sell",
+    "Rank": 2
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ALRM",
+    "Value": 100,
+    "Category": "Sell",
+    "Rank": 3
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "LIVN",
+    "Value": 100,
+    "Category": "Sell",
+    "Rank": 4
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ZG",
+    "Value": 100,
+    "Category": "Sell",
+    "Rank": 5
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "VRNS",
+    "Value": 100,
+    "Category": "Sell",
+    "Rank": 6
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "RARE",
+    "Value": 100,
+    "Category": "Sell",
+    "Rank": 7
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "NLSN",
+    "Value": 99,
+    "Category": "Sell",
+    "Rank": 8
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ETSY",
+    "Value": 98,
+    "Category": "Sell",
+    "Rank": 9
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "KEP",
+    "Value": 98,
+    "Category": "Sell",
+    "Rank": 10
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CROX",
+    "Value": 97,
+    "Category": "Sell",
+    "Rank": 11
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "FATE",
+    "Value": 97,
+    "Category": "Sell",
+    "Rank": 12
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "BL",
+    "Value": 97,
+    "Category": "Sell",
+    "Rank": 13
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "EVR",
+    "Value": 96,
+    "Category": "Sell",
+    "Rank": 14
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "TEAM",
+    "Value": 96,
+    "Category": "Sell",
+    "Rank": 15
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "DIS",
+    "Value": 96,
+    "Category": "Sell",
+    "Rank": 16
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "PANW",
+    "Value": 96,
+    "Category": "Sell",
+    "Rank": 17
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "RPD",
+    "Value": 95,
+    "Category": "Sell",
+    "Rank": 18
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CYBR",
+    "Value": 95,
+    "Category": "Sell",
+    "Rank": 19
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "PBR",
+    "Value": 94,
+    "Category": "Sell",
+    "Rank": 20
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "EFX",
+    "Value": 94,
+    "Category": "Sell",
+    "Rank": 21
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CSOD",
+    "Value": 94,
+    "Category": "Sell",
+    "Rank": 22
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "FCAU",
+    "Value": 94,
+    "Category": "Sell",
+    "Rank": 23
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CRSP",
+    "Value": 93,
+    "Category": "Sell",
+    "Rank": 24
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "XOM",
+    "Value": 93,
+    "Category": "Sell",
+    "Rank": 25
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "NTNX",
+    "Value": 93,
+    "Category": "Sell",
+    "Rank": 26
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "LAZ",
+    "Value": 93,
+    "Category": "Sell",
+    "Rank": 27
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "PFPT",
+    "Value": 93,
+    "Category": "Sell",
+    "Rank": 28
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "TRTN",
+    "Value": 92,
+    "Category": "Sell",
+    "Rank": 29
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "TRMB",
+    "Value": 92,
+    "Category": "Sell",
+    "Rank": 30
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "NVCR",
+    "Value": 92,
+    "Category": "Sell",
+    "Rank": 31
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "PVH",
+    "Value": 92,
+    "Category": "Sell",
+    "Rank": 32
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "MELI",
+    "Value": 91,
+    "Category": "Sell",
+    "Rank": 33
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "SQ",
+    "Value": 91,
+    "Category": "Sell",
+    "Rank": 34
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "MTSI",
+    "Value": 91,
+    "Category": "Sell",
+    "Rank": 35
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "EVTC",
+    "Value": 91,
+    "Category": "Sell",
+    "Rank": 36
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "SMG",
+    "Value": 91,
+    "Category": "Sell",
+    "Rank": 37
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "LLY",
+    "Value": 90,
+    "Category": "Sell",
+    "Rank": 38
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "SLAB",
+    "Value": 90,
+    "Category": "Sell",
+    "Rank": 39
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ACIW",
+    "Value": 90,
+    "Category": "Sell",
+    "Rank": 40
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "KEYS",
+    "Value": 90,
+    "Category": "Sell",
+    "Rank": 41
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "PDCO",
+    "Value": 90,
+    "Category": "Sell",
+    "Rank": 42
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "XPO",
+    "Value": 90,
+    "Category": "Sell",
+    "Rank": 43
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "RL",
+    "Value": 90,
+    "Category": "Sell",
+    "Rank": 44
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ITRI",
+    "Value": 90,
+    "Category": "Sell",
+    "Rank": 45
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "BB",
+    "Value": 88,
+    "Category": "Sell",
+    "Rank": 46
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "WFC",
+    "Value": 88,
+    "Category": "Sell",
+    "Rank": 47
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CNS",
+    "Value": 88,
+    "Category": "Sell",
+    "Rank": 48
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "SNPS",
+    "Value": 87,
+    "Category": "Sell",
+    "Rank": 49
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "VRNT",
+    "Value": 87,
+    "Category": "Sell",
+    "Rank": 50
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CR",
+    "Value": 87,
+    "Category": "Sell",
+    "Rank": 51
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "SBNY",
+    "Value": 87,
+    "Category": "Sell",
+    "Rank": 52
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "BX",
+    "Value": 87,
+    "Category": "Sell",
+    "Rank": 53
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CCJ",
+    "Value": 87,
+    "Category": "Sell",
+    "Rank": 54
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "NTRA",
+    "Value": 87,
+    "Category": "Sell",
+    "Rank": 55
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "MT",
+    "Value": 87,
+    "Category": "Sell",
+    "Rank": 56
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "MTZ",
+    "Value": 87,
+    "Category": "Sell",
+    "Rank": 57
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "HES",
+    "Value": 86,
+    "Category": "Sell",
+    "Rank": 58
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "BPMC",
+    "Value": 86,
+    "Category": "Sell",
+    "Rank": 59
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "TWTR",
+    "Value": 86,
+    "Category": "Sell",
+    "Rank": 60
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "IMO",
+    "Value": 86,
+    "Category": "Sell",
+    "Rank": 61
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CDK",
+    "Value": 86,
+    "Category": "Sell",
+    "Rank": 62
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "MRCY",
+    "Value": 86,
+    "Category": "Sell",
+    "Rank": 63
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "BRKR",
+    "Value": 86,
+    "Category": "Sell",
+    "Rank": 64
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "XLRN",
+    "Value": 86,
+    "Category": "Sell",
+    "Rank": 65
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ARES",
+    "Value": 86,
+    "Category": "Sell",
+    "Rank": 66
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CC",
+    "Value": 86,
+    "Category": "Sell",
+    "Rank": 67
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "TPL",
+    "Value": 86,
+    "Category": "Sell",
+    "Rank": 68
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "WK",
+    "Value": 86,
+    "Category": "Sell",
+    "Rank": 69
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "HPQ",
+    "Value": 86,
+    "Category": "Sell",
+    "Rank": 70
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "TTD",
+    "Value": 85,
+    "Category": "Sell",
+    "Rank": 71
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "WLK",
+    "Value": 85,
+    "Category": "Sell",
+    "Rank": 72
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "LPLA",
+    "Value": 85,
+    "Category": "Sell",
+    "Rank": 73
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ZEN",
+    "Value": 85,
+    "Category": "Sell",
+    "Rank": 74
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "FTI",
+    "Value": 85,
+    "Category": "Sell",
+    "Rank": 75
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "PNFP",
+    "Value": 85,
+    "Category": "Sell",
+    "Rank": 76
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "TXRH",
+    "Value": 85,
+    "Category": "Sell",
+    "Rank": 77
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "NEWR",
+    "Value": 85,
+    "Category": "Sell",
+    "Rank": 78
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CBRE",
+    "Value": 84,
+    "Category": "Sell",
+    "Rank": 79
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "PNC",
+    "Value": 84,
+    "Category": "Sell",
+    "Rank": 80
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "PFSI",
+    "Value": 84,
+    "Category": "Sell",
+    "Rank": 81
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "NCR",
+    "Value": 84,
+    "Category": "Sell",
+    "Rank": 82
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "MEDP",
+    "Value": 84,
+    "Category": "Sell",
+    "Rank": 83
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "KRNT",
+    "Value": 84,
+    "Category": "Sell",
+    "Rank": 84
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "URI",
+    "Value": 84,
+    "Category": "Sell",
+    "Rank": 85
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "VALE",
+    "Value": 84,
+    "Category": "Sell",
+    "Rank": 86
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "XLNX",
+    "Value": 84,
+    "Category": "Sell",
+    "Rank": 87
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "IPG",
+    "Value": 84,
+    "Category": "Sell",
+    "Rank": 88
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "EQNR",
+    "Value": 84,
+    "Category": "Sell",
+    "Rank": 89
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "LFUS",
+    "Value": 84,
+    "Category": "Sell",
+    "Rank": 90
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ARW",
+    "Value": 84,
+    "Category": "Sell",
+    "Rank": 91
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "GMED",
+    "Value": 84,
+    "Category": "Sell",
+    "Rank": 92
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "FLEX",
+    "Value": 83,
+    "Category": "Sell",
+    "Rank": 93
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "TER",
+    "Value": 83,
+    "Category": "Sell",
+    "Rank": 94
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "IIPR",
+    "Value": 83,
+    "Category": "Sell",
+    "Rank": 95
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "TM",
+    "Value": 83,
+    "Category": "Sell",
+    "Rank": 96
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "BKU",
+    "Value": 83,
+    "Category": "Sell",
+    "Rank": 97
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "AMAT",
+    "Value": 83,
+    "Category": "Sell",
+    "Rank": 98
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "WCC",
+    "Value": 83,
+    "Category": "Sell",
+    "Rank": 99
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "RAMP",
+    "Value": 83,
+    "Category": "Sell",
+    "Rank": 100
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "INFY",
+    "Value": 83,
+    "Category": "Sell",
+    "Rank": 101
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ENPH",
+    "Value": 83,
+    "Category": "Sell",
+    "Rank": 102
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "SU",
+    "Value": 83,
+    "Category": "Sell",
+    "Rank": 103
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "FHI",
+    "Value": 83,
+    "Category": "Sell",
+    "Rank": 104
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "MPW",
+    "Value": 83,
+    "Category": "Sell",
+    "Rank": 105
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "XEC",
+    "Value": 83,
+    "Category": "Sell",
+    "Rank": 106
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "KKR",
+    "Value": 82,
+    "Category": "Sell",
+    "Rank": 107
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "HLI",
+    "Value": 82,
+    "Category": "Sell",
+    "Rank": 108
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "TSLA",
+    "Value": 82,
+    "Category": "Sell",
+    "Rank": 109
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "GDDY",
+    "Value": 82,
+    "Category": "Sell",
+    "Rank": 110
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "TKR",
+    "Value": 82,
+    "Category": "Sell",
+    "Rank": 111
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "WWW",
+    "Value": 82,
+    "Category": "Sell",
+    "Rank": 112
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "STX",
+    "Value": 82,
+    "Category": "Sell",
+    "Rank": 113
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "HUBS",
+    "Value": 82,
+    "Category": "Sell",
+    "Rank": 114
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "AVGO",
+    "Value": 82,
+    "Category": "Sell",
+    "Rank": 115
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "WYNN",
+    "Value": 82,
+    "Category": "Sell",
+    "Rank": 116
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "PM",
+    "Value": 82,
+    "Category": "Sell",
+    "Rank": 117
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "TFSL",
+    "Value": 82,
+    "Category": "Sell",
+    "Rank": 118
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "FLS",
+    "Value": 82,
+    "Category": "Sell",
+    "Rank": 119
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "SLB",
+    "Value": 82,
+    "Category": "Sell",
+    "Rank": 120
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "HPE",
+    "Value": 82,
+    "Category": "Sell",
+    "Rank": 121
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CGNX",
+    "Value": 82,
+    "Category": "Sell",
+    "Rank": 122
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "DLTR",
+    "Value": 82,
+    "Category": "Sell",
+    "Rank": 123
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "KSS",
+    "Value": 82,
+    "Category": "Sell",
+    "Rank": 124
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "AEIS",
+    "Value": 82,
+    "Category": "Sell",
+    "Rank": 125
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "MIME",
+    "Value": 82,
+    "Category": "Sell",
+    "Rank": 126
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "NGVT",
+    "Value": 82,
+    "Category": "Sell",
+    "Rank": 127
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "SIGI",
+    "Value": 82,
+    "Category": "Sell",
+    "Rank": 128
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ALSN",
+    "Value": 81,
+    "Category": "Sell",
+    "Rank": 129
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "SBUX",
+    "Value": 81,
+    "Category": "Sell",
+    "Rank": 130
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "PRAH",
+    "Value": 81,
+    "Category": "Sell",
+    "Rank": 131
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "NYT",
+    "Value": 81,
+    "Category": "Sell",
+    "Rank": 132
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "FIVE",
+    "Value": 81,
+    "Category": "Sell",
+    "Rank": 133
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "XLE",
+    "Value": 81,
+    "Category": "Sell",
+    "Rank": 134
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "XLB",
+    "Value": 81,
+    "Category": "Sell",
+    "Rank": 135
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "MKSI",
+    "Value": 81,
+    "Category": "Sell",
+    "Rank": 136
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ARE",
+    "Value": 81,
+    "Category": "Sell",
+    "Rank": 137
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "LOGI",
+    "Value": 81,
+    "Category": "Sell",
+    "Rank": 138
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "BSBR",
+    "Value": 81,
+    "Category": "Sell",
+    "Rank": 139
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "AG",
+    "Value": 81,
+    "Category": "Sell",
+    "Rank": 140
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "AA",
+    "Value": 81,
+    "Category": "Sell",
+    "Rank": 141
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CNA",
+    "Value": 81,
+    "Category": "Sell",
+    "Rank": 142
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "DECK",
+    "Value": 81,
+    "Category": "Sell",
+    "Rank": 143
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "MANT",
+    "Value": 81,
+    "Category": "Sell",
+    "Rank": 144
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "EMN",
+    "Value": 81,
+    "Category": "Sell",
+    "Rank": 145
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "BG",
+    "Value": 81,
+    "Category": "Sell",
+    "Rank": 146
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "LECO",
+    "Value": 81,
+    "Category": "Sell",
+    "Rank": 147
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "MS",
+    "Value": 81,
+    "Category": "Sell",
+    "Rank": 148
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "AEO",
+    "Value": 81,
+    "Category": "Sell",
+    "Rank": 149
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "MU",
+    "Value": 80,
+    "Category": "Sell",
+    "Rank": 150
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "FE",
+    "Value": 80,
+    "Category": "Sell",
+    "Rank": 151
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CFG",
+    "Value": 80,
+    "Category": "Sell",
+    "Rank": 152
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "LRCX",
+    "Value": 80,
+    "Category": "Sell",
+    "Rank": 153
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "EMR",
+    "Value": 80,
+    "Category": "Sell",
+    "Rank": 154
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "JCOM",
+    "Value": 80,
+    "Category": "Sell",
+    "Rank": 155
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "LYB",
+    "Value": 80,
+    "Category": "Sell",
+    "Rank": 156
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "FDS",
+    "Value": 80,
+    "Category": "Sell",
+    "Rank": 157
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "EXLS",
+    "Value": 80,
+    "Category": "Sell",
+    "Rank": 158
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "AN",
+    "Value": 80,
+    "Category": "Sell",
+    "Rank": 159
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "JLL",
+    "Value": 80,
+    "Category": "Sell",
+    "Rank": 160
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "EPD",
+    "Value": 80,
+    "Category": "Sell",
+    "Rank": 161
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "EOG",
+    "Value": 80,
+    "Category": "Sell",
+    "Rank": 162
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "HII",
+    "Value": 80,
+    "Category": "Sell",
+    "Rank": 163
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "JWN",
+    "Value": 80,
+    "Category": "Sell",
+    "Rank": 164
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "BAP",
+    "Value": 80,
+    "Category": "Sell",
+    "Rank": 165
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "WDC",
+    "Value": 80,
+    "Category": "Sell",
+    "Rank": 166
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "KLAC",
+    "Value": 80,
+    "Category": "Sell",
+    "Rank": 167
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "TREX",
+    "Value": 80,
+    "Category": "Sell",
+    "Rank": 168
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CG",
+    "Value": 80,
+    "Category": "Sell",
+    "Rank": 169
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "PXD",
+    "Value": 80,
+    "Category": "Sell",
+    "Rank": 170
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "AXTA",
+    "Value": 79,
+    "Category": "Sell",
+    "Rank": 171
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "AJG",
+    "Value": 79,
+    "Category": "Sell",
+    "Rank": 172
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CF",
+    "Value": 79,
+    "Category": "Sell",
+    "Rank": 173
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "BCO",
+    "Value": 79,
+    "Category": "Sell",
+    "Rank": 174
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "RP",
+    "Value": 79,
+    "Category": "Sell",
+    "Rank": 175
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "KB",
+    "Value": 79,
+    "Category": "Sell",
+    "Rank": 176
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "QLYS",
+    "Value": 78,
+    "Category": "Sell",
+    "Rank": 177
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ST",
+    "Value": 78,
+    "Category": "Sell",
+    "Rank": 178
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "GS",
+    "Value": 77,
+    "Category": "Sell",
+    "Rank": 179
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "MGA",
+    "Value": 77,
+    "Category": "Sell",
+    "Rank": 180
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "BEN",
+    "Value": 77,
+    "Category": "Sell",
+    "Rank": 181
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "TRUP",
+    "Value": 77,
+    "Category": "Sell",
+    "Rank": 182
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "SITE",
+    "Value": 77,
+    "Category": "Sell",
+    "Rank": 183
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CREE",
+    "Value": 77,
+    "Category": "Sell",
+    "Rank": 184
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "NVRO",
+    "Value": 77,
+    "Category": "Sell",
+    "Rank": 185
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "TWLO",
+    "Value": 77,
+    "Category": "Sell",
+    "Rank": 186
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "MPWR",
+    "Value": 77,
+    "Category": "Sell",
+    "Rank": 187
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "GWRE",
+    "Value": 77,
+    "Category": "Sell",
+    "Rank": 188
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "PYPL",
+    "Value": 76,
+    "Category": "Sell",
+    "Rank": 189
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "AGCO",
+    "Value": 76,
+    "Category": "Sell",
+    "Rank": 190
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "JBT",
+    "Value": 76,
+    "Category": "Sell",
+    "Rank": 191
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "LSCC",
+    "Value": 76,
+    "Category": "Sell",
+    "Rank": 192
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "NOV",
+    "Value": 76,
+    "Category": "Sell",
+    "Rank": 193
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "QTWO",
+    "Value": 76,
+    "Category": "Sell",
+    "Rank": 194
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "TRN",
+    "Value": 76,
+    "Category": "Sell",
+    "Rank": 195
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ENSG",
+    "Value": 76,
+    "Category": "Sell",
+    "Rank": 196
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "WAT",
+    "Value": 76,
+    "Category": "Sell",
+    "Rank": 197
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CNMD",
+    "Value": 76,
+    "Category": "Sell",
+    "Rank": 198
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "GLOB",
+    "Value": 76,
+    "Category": "Sell",
+    "Rank": 199
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "YNDX",
+    "Value": 76,
+    "Category": "Sell",
+    "Rank": 200
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "JPM",
+    "Value": 76,
+    "Category": "Sell",
+    "Rank": 201
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "NXPI",
+    "Value": 76,
+    "Category": "Sell",
+    "Rank": 202
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "FOLD",
+    "Value": 76,
+    "Category": "Sell",
+    "Rank": 203
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ACC",
+    "Value": 76,
+    "Category": "Sell",
+    "Rank": 204
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CHGG",
+    "Value": 76,
+    "Category": "Sell",
+    "Rank": 205
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "IIVI",
+    "Value": 76,
+    "Category": "Sell",
+    "Rank": 206
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "KEX",
+    "Value": 76,
+    "Category": "Sell",
+    "Rank": 207
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "PWR",
+    "Value": 76,
+    "Category": "Sell",
+    "Rank": 208
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "AWI",
+    "Value": 75,
+    "Category": "Sell",
+    "Rank": 209
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ALLY",
+    "Value": 75,
+    "Category": "Sell",
+    "Rank": 210
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "SAIA",
+    "Value": 75,
+    "Category": "Sell",
+    "Rank": 211
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "POWI",
+    "Value": 75,
+    "Category": "Sell",
+    "Rank": 212
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "PKG",
+    "Value": 75,
+    "Category": "Sell",
+    "Rank": 213
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "SYNH",
+    "Value": 75,
+    "Category": "Sell",
+    "Rank": 214
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "NATI",
+    "Value": 75,
+    "Category": "Sell",
+    "Rank": 215
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "MOS",
+    "Value": 75,
+    "Category": "Sell",
+    "Rank": 216
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "FCX",
+    "Value": 75,
+    "Category": "Sell",
+    "Rank": 217
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "STLD",
+    "Value": 75,
+    "Category": "Sell",
+    "Rank": 218
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "AM",
+    "Value": 75,
+    "Category": "Sell",
+    "Rank": 219
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "GKOS",
+    "Value": 75,
+    "Category": "Sell",
+    "Rank": 220
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "VG",
+    "Value": 75,
+    "Category": "Sell",
+    "Rank": 221
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "RACE",
+    "Value": 75,
+    "Category": "Sell",
+    "Rank": 222
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "RH",
+    "Value": 75,
+    "Category": "Sell",
+    "Rank": 223
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "APO",
+    "Value": 75,
+    "Category": "Sell",
+    "Rank": 224
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "R",
+    "Value": 75,
+    "Category": "Sell",
+    "Rank": 225
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "LYV",
+    "Value": 75,
+    "Category": "Sell",
+    "Rank": 226
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "VLO",
+    "Value": 75,
+    "Category": "Sell",
+    "Rank": 227
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "COUP",
+    "Value": 75,
+    "Category": "Sell",
+    "Rank": 228
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "LPX",
+    "Value": 75,
+    "Category": "Sell",
+    "Rank": 229
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "EEFT",
+    "Value": 74,
+    "Category": "Sell",
+    "Rank": 230
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "PNR",
+    "Value": 74,
+    "Category": "Sell",
+    "Rank": 231
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "AMP",
+    "Value": 74,
+    "Category": "Sell",
+    "Rank": 232
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "NKE",
+    "Value": 74,
+    "Category": "Sell",
+    "Rank": 233
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "TFX",
+    "Value": 74,
+    "Category": "Sell",
+    "Rank": 234
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "SCCO",
+    "Value": 74,
+    "Category": "Sell",
+    "Rank": 235
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "PAYC",
+    "Value": 74,
+    "Category": "Sell",
+    "Rank": 236
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "HELE",
+    "Value": 74,
+    "Category": "Sell",
+    "Rank": 237
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "FTNT",
+    "Value": 74,
+    "Category": "Sell",
+    "Rank": 238
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "SPY",
+    "Value": 74,
+    "Category": "Sell",
+    "Rank": 239
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CHDN",
+    "Value": 74,
+    "Category": "Sell",
+    "Rank": 240
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ILMN",
+    "Value": 74,
+    "Category": "Sell",
+    "Rank": 241
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "FCFS",
+    "Value": 74,
+    "Category": "Sell",
+    "Rank": 242
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "SON",
+    "Value": 74,
+    "Category": "Sell",
+    "Rank": 243
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "QRVO",
+    "Value": 74,
+    "Category": "Sell",
+    "Rank": 244
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "IPGP",
+    "Value": 74,
+    "Category": "Sell",
+    "Rank": 245
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ORA",
+    "Value": 74,
+    "Category": "Sell",
+    "Rank": 246
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "SPSC",
+    "Value": 74,
+    "Category": "Sell",
+    "Rank": 247
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "SGMS",
+    "Value": 74,
+    "Category": "Sell",
+    "Rank": 248
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ROST",
+    "Value": 74,
+    "Category": "Sell",
+    "Rank": 249
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "SMTC",
+    "Value": 74,
+    "Category": "Sell",
+    "Rank": 250
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "PB",
+    "Value": 74,
+    "Category": "Sell",
+    "Rank": 251
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "XLK",
+    "Value": 74,
+    "Category": "Sell",
+    "Rank": 252
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "HL",
+    "Value": 74,
+    "Category": "Sell",
+    "Rank": 253
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "TTWO",
+    "Value": 74,
+    "Category": "Sell",
+    "Rank": 254
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "PNM",
+    "Value": 74,
+    "Category": "Sell",
+    "Rank": 255
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "KBR",
+    "Value": 74,
+    "Category": "Sell",
+    "Rank": 256
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "FIVN",
+    "Value": 74,
+    "Category": "Sell",
+    "Rank": 257
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "GPK",
+    "Value": 73,
+    "Category": "Sell",
+    "Rank": 258
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ZBRA",
+    "Value": 73,
+    "Category": "Sell",
+    "Rank": 259
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ACN",
+    "Value": 73,
+    "Category": "Sell",
+    "Rank": 260
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ATR",
+    "Value": 73,
+    "Category": "Sell",
+    "Rank": 261
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CSCO",
+    "Value": 73,
+    "Category": "Sell",
+    "Rank": 262
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "TXN",
+    "Value": 73,
+    "Category": "Sell",
+    "Rank": 263
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ICL",
+    "Value": 73,
+    "Category": "Sell",
+    "Rank": 264
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "PKI",
+    "Value": 73,
+    "Category": "Sell",
+    "Rank": 265
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ANSS",
+    "Value": 73,
+    "Category": "Sell",
+    "Rank": 266
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "HAE",
+    "Value": 73,
+    "Category": "Sell",
+    "Rank": 267
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "IBP",
+    "Value": 73,
+    "Category": "Sell",
+    "Rank": 268
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "JBHT",
+    "Value": 73,
+    "Category": "Sell",
+    "Rank": 269
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "SYY",
+    "Value": 73,
+    "Category": "Sell",
+    "Rank": 270
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "AVY",
+    "Value": 73,
+    "Category": "Sell",
+    "Rank": 271
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "FN",
+    "Value": 73,
+    "Category": "Sell",
+    "Rank": 272
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CAT",
+    "Value": 73,
+    "Category": "Sell",
+    "Rank": 273
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "MANH",
+    "Value": 73,
+    "Category": "Sell",
+    "Rank": 274
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ITT",
+    "Value": 73,
+    "Category": "Sell",
+    "Rank": 275
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "GDOT",
+    "Value": 73,
+    "Category": "Sell",
+    "Rank": 276
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "TRIP",
+    "Value": 73,
+    "Category": "Sell",
+    "Rank": 277
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "SNA",
+    "Value": 73,
+    "Category": "Sell",
+    "Rank": 278
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "BRKS",
+    "Value": 73,
+    "Category": "Sell",
+    "Rank": 279
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "BUD",
+    "Value": 73,
+    "Category": "Sell",
+    "Rank": 280
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ENS",
+    "Value": 73,
+    "Category": "Sell",
+    "Rank": 281
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ACIA",
+    "Value": 73,
+    "Category": "Sell",
+    "Rank": 282
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "XRAY",
+    "Value": 73,
+    "Category": "Sell",
+    "Rank": 283
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "PKX",
+    "Value": 73,
+    "Category": "Sell",
+    "Rank": 284
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "EC",
+    "Value": 73,
+    "Category": "Sell",
+    "Rank": 285
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "VICR",
+    "Value": 73,
+    "Category": "Sell",
+    "Rank": 286
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "DISCK",
+    "Value": 73,
+    "Category": "Sell",
+    "Rank": 287
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CTSH",
+    "Value": 73,
+    "Category": "Sell",
+    "Rank": 288
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "MDU",
+    "Value": 73,
+    "Category": "Sell",
+    "Rank": 289
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "KMT",
+    "Value": 73,
+    "Category": "Sell",
+    "Rank": 290
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "MDT",
+    "Value": 73,
+    "Category": "Sell",
+    "Rank": 291
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "EL",
+    "Value": 73,
+    "Category": "Sell",
+    "Rank": 292
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "PAYX",
+    "Value": 73,
+    "Category": "Sell",
+    "Rank": 293
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "SGEN",
+    "Value": 73,
+    "Category": "Sell",
+    "Rank": 294
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "LPSN",
+    "Value": 73,
+    "Category": "Sell",
+    "Rank": 295
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "MKTX",
+    "Value": 73,
+    "Category": "Sell",
+    "Rank": 296
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "DLB",
+    "Value": 73,
+    "Category": "Sell",
+    "Rank": 297
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ASGN",
+    "Value": 73,
+    "Category": "Sell",
+    "Rank": 298
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "GGG",
+    "Value": 72,
+    "Category": "Sell",
+    "Rank": 299
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "VOYA",
+    "Value": 72,
+    "Category": "Sell",
+    "Rank": 300
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "NOW",
+    "Value": 72,
+    "Category": "Sell",
+    "Rank": 301
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CBT",
+    "Value": 72,
+    "Category": "Sell",
+    "Rank": 302
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "IDA",
+    "Value": 72,
+    "Category": "Sell",
+    "Rank": 303
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "TNET",
+    "Value": 72,
+    "Category": "Sell",
+    "Rank": 304
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "LSTR",
+    "Value": 72,
+    "Category": "Sell",
+    "Rank": 305
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "BMCH",
+    "Value": 72,
+    "Category": "Sell",
+    "Rank": 306
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "APH",
+    "Value": 72,
+    "Category": "Sell",
+    "Rank": 307
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "MXIM",
+    "Value": 72,
+    "Category": "Sell",
+    "Rank": 308
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ENTG",
+    "Value": 72,
+    "Category": "Sell",
+    "Rank": 309
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "APPF",
+    "Value": 72,
+    "Category": "Sell",
+    "Rank": 310
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "HFC",
+    "Value": 72,
+    "Category": "Sell",
+    "Rank": 311
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "GIL",
+    "Value": 72,
+    "Category": "Sell",
+    "Rank": 312
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "TD",
+    "Value": 72,
+    "Category": "Sell",
+    "Rank": 313
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "TLK",
+    "Value": 72,
+    "Category": "Sell",
+    "Rank": 314
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "WRK",
+    "Value": 72,
+    "Category": "Sell",
+    "Rank": 315
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "COHR",
+    "Value": 72,
+    "Category": "Sell",
+    "Rank": 316
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "MCY",
+    "Value": 72,
+    "Category": "Sell",
+    "Rank": 317
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CRI",
+    "Value": 72,
+    "Category": "Sell",
+    "Rank": 318
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "TEL",
+    "Value": 72,
+    "Category": "Sell",
+    "Rank": 319
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CWH",
+    "Value": 72,
+    "Category": "Sell",
+    "Rank": 320
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "TROW",
+    "Value": 72,
+    "Category": "Sell",
+    "Rank": 321
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "TIGO",
+    "Value": 72,
+    "Category": "Sell",
+    "Rank": 322
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "RJF",
+    "Value": 72,
+    "Category": "Sell",
+    "Rank": 323
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "EA",
+    "Value": 72,
+    "Category": "Sell",
+    "Rank": 324
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "EWBC",
+    "Value": 72,
+    "Category": "Sell",
+    "Rank": 325
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "PRLB",
+    "Value": 72,
+    "Category": "Sell",
+    "Rank": 326
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "MTN",
+    "Value": 72,
+    "Category": "Sell",
+    "Rank": 327
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "IRM",
+    "Value": 72,
+    "Category": "Sell",
+    "Rank": 328
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "RDY",
+    "Value": 72,
+    "Category": "Sell",
+    "Rank": 329
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "MAN",
+    "Value": 72,
+    "Category": "Sell",
+    "Rank": 330
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "APAM",
+    "Value": 72,
+    "Category": "Sell",
+    "Rank": 331
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "IP",
+    "Value": 72,
+    "Category": "Sell",
+    "Rank": 332
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CXO",
+    "Value": 72,
+    "Category": "Sell",
+    "Rank": 333
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "SCHW",
+    "Value": 72,
+    "Category": "Sell",
+    "Rank": 334
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "STT",
+    "Value": 72,
+    "Category": "Sell",
+    "Rank": 335
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "HSIC",
+    "Value": 72,
+    "Category": "Sell",
+    "Rank": 336
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "SKX",
+    "Value": 72,
+    "Category": "Sell",
+    "Rank": 337
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "HMSY",
+    "Value": 72,
+    "Category": "Sell",
+    "Rank": 338
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ABBV",
+    "Value": 72,
+    "Category": "Sell",
+    "Rank": 339
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "FRC",
+    "Value": 72,
+    "Category": "Sell",
+    "Rank": 340
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CP",
+    "Value": 72,
+    "Category": "Sell",
+    "Rank": 341
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "AIT",
+    "Value": 71,
+    "Category": "Sell",
+    "Rank": 342
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ITCI",
+    "Value": 71,
+    "Category": "Sell",
+    "Rank": 343
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "DE",
+    "Value": 71,
+    "Category": "Sell",
+    "Rank": 344
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "LITE",
+    "Value": 71,
+    "Category": "Sell",
+    "Rank": 345
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ATVI",
+    "Value": 71,
+    "Category": "Sell",
+    "Rank": 346
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CPRT",
+    "Value": 71,
+    "Category": "Sell",
+    "Rank": 347
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "AMD",
+    "Value": 71,
+    "Category": "Sell",
+    "Rank": 348
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "SKM",
+    "Value": 71,
+    "Category": "Sell",
+    "Rank": 349
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CHE",
+    "Value": 71,
+    "Category": "Sell",
+    "Rank": 350
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CCEP",
+    "Value": 71,
+    "Category": "Sell",
+    "Rank": 351
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "BRC",
+    "Value": 71,
+    "Category": "Sell",
+    "Rank": 352
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "WDAY",
+    "Value": 71,
+    "Category": "Sell",
+    "Rank": 353
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ALGN",
+    "Value": 71,
+    "Category": "Sell",
+    "Rank": 354
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "AVT",
+    "Value": 71,
+    "Category": "Sell",
+    "Rank": 355
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "SEDG",
+    "Value": 71,
+    "Category": "Sell",
+    "Rank": 356
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "MRVL",
+    "Value": 71,
+    "Category": "Sell",
+    "Rank": 357
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "NTAP",
+    "Value": 71,
+    "Category": "Sell",
+    "Rank": 358
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CRL",
+    "Value": 71,
+    "Category": "Sell",
+    "Rank": 359
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "BAC",
+    "Value": 71,
+    "Category": "Sell",
+    "Rank": 360
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "XYL",
+    "Value": 71,
+    "Category": "Sell",
+    "Rank": 361
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "STAA",
+    "Value": 71,
+    "Category": "Sell",
+    "Rank": 362
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "KHC",
+    "Value": 71,
+    "Category": "Sell",
+    "Rank": 363
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "HOLX",
+    "Value": 71,
+    "Category": "Sell",
+    "Rank": 364
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "UMPQ",
+    "Value": 71,
+    "Category": "Sell",
+    "Rank": 365
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CMCSA",
+    "Value": 71,
+    "Category": "Sell",
+    "Rank": 366
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "MCHP",
+    "Value": 71,
+    "Category": "Sell",
+    "Rank": 367
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "WTFC",
+    "Value": 71,
+    "Category": "Sell",
+    "Rank": 368
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "TAK",
+    "Value": 71,
+    "Category": "Sell",
+    "Rank": 369
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "PRI",
+    "Value": 71,
+    "Category": "Sell",
+    "Rank": 370
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "BXS",
+    "Value": 71,
+    "Category": "Sell",
+    "Rank": 371
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "BLK",
+    "Value": 71,
+    "Category": "Sell",
+    "Rank": 372
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CCXI",
+    "Value": 71,
+    "Category": "Sell",
+    "Rank": 373
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "RXN",
+    "Value": 71,
+    "Category": "Sell",
+    "Rank": 374
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "UHS",
+    "Value": 71,
+    "Category": "Sell",
+    "Rank": 375
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ZION",
+    "Value": 71,
+    "Category": "Sell",
+    "Rank": 376
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ERIE",
+    "Value": 71,
+    "Category": "Sell",
+    "Rank": 377
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "RYN",
+    "Value": 71,
+    "Category": "Sell",
+    "Rank": 378
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "TJX",
+    "Value": 71,
+    "Category": "Sell",
+    "Rank": 379
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "BERY",
+    "Value": 71,
+    "Category": "Sell",
+    "Rank": 380
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CME",
+    "Value": 71,
+    "Category": "Sell",
+    "Rank": 381
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ALB",
+    "Value": 71,
+    "Category": "Sell",
+    "Rank": 382
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "MAR",
+    "Value": 71,
+    "Category": "Sell",
+    "Rank": 383
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "EPAM",
+    "Value": 71,
+    "Category": "Sell",
+    "Rank": 384
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ADI",
+    "Value": 71,
+    "Category": "Sell",
+    "Rank": 385
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "TSN",
+    "Value": 71,
+    "Category": "Sell",
+    "Rank": 386
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "RLI",
+    "Value": 71,
+    "Category": "Sell",
+    "Rank": 387
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "EVBG",
+    "Value": 71,
+    "Category": "Sell",
+    "Rank": 388
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "VSH",
+    "Value": 71,
+    "Category": "Sell",
+    "Rank": 389
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "EXPO",
+    "Value": 71,
+    "Category": "Sell",
+    "Rank": 390
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "MDC",
+    "Value": 71,
+    "Category": "Sell",
+    "Rank": 391
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "GNTX",
+    "Value": 71,
+    "Category": "Sell",
+    "Rank": 392
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "BURL",
+    "Value": 70,
+    "Category": "Sell",
+    "Rank": 393
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "AXP",
+    "Value": 70,
+    "Category": "Sell",
+    "Rank": 394
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "LKQ",
+    "Value": 70,
+    "Category": "Sell",
+    "Rank": 395
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "BLD",
+    "Value": 70,
+    "Category": "Sell",
+    "Rank": 396
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "MSA",
+    "Value": 70,
+    "Category": "Sell",
+    "Rank": 397
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CVS",
+    "Value": 70,
+    "Category": "Sell",
+    "Rank": 398
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "SIVB",
+    "Value": 70,
+    "Category": "Sell",
+    "Rank": 399
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "E",
+    "Value": 70,
+    "Category": "Sell",
+    "Rank": 400
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "SHOP",
+    "Value": 70,
+    "Category": "Sell",
+    "Rank": 401
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ZNGA",
+    "Value": 70,
+    "Category": "Sell",
+    "Rank": 402
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "GIB",
+    "Value": 70,
+    "Category": "Sell",
+    "Rank": 403
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "EXP",
+    "Value": 70,
+    "Category": "Sell",
+    "Rank": 404
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CRUS",
+    "Value": 70,
+    "Category": "Sell",
+    "Rank": 405
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "OSTK",
+    "Value": 70,
+    "Category": "Sell",
+    "Rank": 406
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "XLY",
+    "Value": 70,
+    "Category": "Sell",
+    "Rank": 407
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "FSLR",
+    "Value": 70,
+    "Category": "Sell",
+    "Rank": 408
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "GBCI",
+    "Value": 70,
+    "Category": "Sell",
+    "Rank": 409
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "VFC",
+    "Value": 70,
+    "Category": "Sell",
+    "Rank": 410
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "NVTA",
+    "Value": 70,
+    "Category": "Sell",
+    "Rank": 411
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "WING",
+    "Value": 70,
+    "Category": "Sell",
+    "Rank": 412
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "HLT",
+    "Value": 70,
+    "Category": "Sell",
+    "Rank": 413
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "HEI",
+    "Value": 70,
+    "Category": "Sell",
+    "Rank": 414
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ICE",
+    "Value": 70,
+    "Category": "Sell",
+    "Rank": 415
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ESE",
+    "Value": 70,
+    "Category": "Sell",
+    "Rank": 416
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "TSEM",
+    "Value": 70,
+    "Category": "Sell",
+    "Rank": 417
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "AZO",
+    "Value": 70,
+    "Category": "Sell",
+    "Rank": 418
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "RUN",
+    "Value": 70,
+    "Category": "Sell",
+    "Rank": 419
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "GE",
+    "Value": 70,
+    "Category": "Sell",
+    "Rank": 420
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CAJ",
+    "Value": 70,
+    "Category": "Sell",
+    "Rank": 421
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "INTC",
+    "Value": 69,
+    "Category": "Sell",
+    "Rank": 422
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "H",
+    "Value": 69,
+    "Category": "Sell",
+    "Rank": 423
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "LBRDK",
+    "Value": 69,
+    "Category": "Sell",
+    "Rank": 424
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "SRPT",
+    "Value": 69,
+    "Category": "Sell",
+    "Rank": 425
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "TAP",
+    "Value": 69,
+    "Category": "Sell",
+    "Rank": 426
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "OMC",
+    "Value": 68,
+    "Category": "Sell",
+    "Rank": 427
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CTLT",
+    "Value": 68,
+    "Category": "Sell",
+    "Rank": 428
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "AAL",
+    "Value": 68,
+    "Category": "Sell",
+    "Rank": 429
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "BOH",
+    "Value": 67,
+    "Category": "Sell",
+    "Rank": 430
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "EME",
+    "Value": 66,
+    "Category": "Sell",
+    "Rank": 431
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "AIMC",
+    "Value": 66,
+    "Category": "Sell",
+    "Rank": 432
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ETN",
+    "Value": 66,
+    "Category": "Sell",
+    "Rank": 433
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "IRBT",
+    "Value": 66,
+    "Category": "Sell",
+    "Rank": 434
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "THS",
+    "Value": 66,
+    "Category": "Sell",
+    "Rank": 435
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "WWD",
+    "Value": 66,
+    "Category": "Sell",
+    "Rank": 436
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "HMC",
+    "Value": 66,
+    "Category": "Sell",
+    "Rank": 437
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "WSM",
+    "Value": 66,
+    "Category": "Sell",
+    "Rank": 438
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "OC",
+    "Value": 66,
+    "Category": "Sell",
+    "Rank": 439
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "AGI",
+    "Value": 66,
+    "Category": "Sell",
+    "Rank": 440
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CMG",
+    "Value": 66,
+    "Category": "Sell",
+    "Rank": 441
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "PAAS",
+    "Value": 66,
+    "Category": "Sell",
+    "Rank": 442
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "SAGE",
+    "Value": 66,
+    "Category": "Sell",
+    "Rank": 443
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "FOXF",
+    "Value": 66,
+    "Category": "Sell",
+    "Rank": 444
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "PINC",
+    "Value": 66,
+    "Category": "Sell",
+    "Rank": 445
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "FL",
+    "Value": 66,
+    "Category": "Sell",
+    "Rank": 446
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CFX",
+    "Value": 66,
+    "Category": "Sell",
+    "Rank": 447
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "GEF",
+    "Value": 66,
+    "Category": "Sell",
+    "Rank": 448
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "YUMC",
+    "Value": 66,
+    "Category": "Sell",
+    "Rank": 449
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "DOV",
+    "Value": 66,
+    "Category": "Sell",
+    "Rank": 450
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "DCI",
+    "Value": 66,
+    "Category": "Sell",
+    "Rank": 451
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CDNS",
+    "Value": 66,
+    "Category": "Sell",
+    "Rank": 452
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "VLY",
+    "Value": 66,
+    "Category": "Sell",
+    "Rank": 453
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "HCA",
+    "Value": 66,
+    "Category": "Sell",
+    "Rank": 454
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "UNM",
+    "Value": 66,
+    "Category": "Sell",
+    "Rank": 455
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "XLP",
+    "Value": 66,
+    "Category": "Sell",
+    "Rank": 456
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "NOMD",
+    "Value": 65,
+    "Category": "Sell",
+    "Rank": 457
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "NEOG",
+    "Value": 65,
+    "Category": "Sell",
+    "Rank": 458
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "FBHS",
+    "Value": 65,
+    "Category": "Sell",
+    "Rank": 459
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "AXS",
+    "Value": 65,
+    "Category": "Sell",
+    "Rank": 460
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ADP",
+    "Value": 65,
+    "Category": "Sell",
+    "Rank": 461
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "DVA",
+    "Value": 65,
+    "Category": "Sell",
+    "Rank": 462
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CSL",
+    "Value": 65,
+    "Category": "Sell",
+    "Rank": 463
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "KSU",
+    "Value": 65,
+    "Category": "Sell",
+    "Rank": 464
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ARNA",
+    "Value": 65,
+    "Category": "Sell",
+    "Rank": 465
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "NXST",
+    "Value": 65,
+    "Category": "Sell",
+    "Rank": 466
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "EGO",
+    "Value": 65,
+    "Category": "Sell",
+    "Rank": 467
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "IBM",
+    "Value": 65,
+    "Category": "Sell",
+    "Rank": 468
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "TWOU",
+    "Value": 65,
+    "Category": "Sell",
+    "Rank": 469
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "MHK",
+    "Value": 65,
+    "Category": "Sell",
+    "Rank": 470
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "LAD",
+    "Value": 65,
+    "Category": "Sell",
+    "Rank": 471
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "MSM",
+    "Value": 65,
+    "Category": "Sell",
+    "Rank": 472
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "DORM",
+    "Value": 65,
+    "Category": "Sell",
+    "Rank": 473
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "FISV",
+    "Value": 65,
+    "Category": "Sell",
+    "Rank": 474
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "PUK",
+    "Value": 65,
+    "Category": "Sell",
+    "Rank": 475
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "HAS",
+    "Value": 65,
+    "Category": "Sell",
+    "Rank": 476
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ORCL",
+    "Value": 65,
+    "Category": "Sell",
+    "Rank": 477
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "FAF",
+    "Value": 65,
+    "Category": "Sell",
+    "Rank": 478
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "GRUB",
+    "Value": 65,
+    "Category": "Sell",
+    "Rank": 479
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "G",
+    "Value": 65,
+    "Category": "Sell",
+    "Rank": 480
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ZBH",
+    "Value": 65,
+    "Category": "Sell",
+    "Rank": 481
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "MAS",
+    "Value": 65,
+    "Category": "Sell",
+    "Rank": 482
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "J",
+    "Value": 65,
+    "Category": "Sell",
+    "Rank": 483
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "TRU",
+    "Value": 65,
+    "Category": "Sell",
+    "Rank": 484
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "STAG",
+    "Value": 65,
+    "Category": "Sell",
+    "Rank": 485
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "HTA",
+    "Value": 65,
+    "Category": "Sell",
+    "Rank": 486
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "PCTY",
+    "Value": 65,
+    "Category": "Sell",
+    "Rank": 487
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "TOL",
+    "Value": 65,
+    "Category": "Sell",
+    "Rank": 488
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "LOW",
+    "Value": 65,
+    "Category": "Sell",
+    "Rank": 489
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "HBI",
+    "Value": 65,
+    "Category": "Sell",
+    "Rank": 490
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "AME",
+    "Value": 65,
+    "Category": "Sell",
+    "Rank": 491
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "COLM",
+    "Value": 64,
+    "Category": "Sell",
+    "Rank": 492
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "VIPS",
+    "Value": 64,
+    "Category": "Sell",
+    "Rank": 493
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "RTX",
+    "Value": 64,
+    "Category": "Sell",
+    "Rank": 494
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "SUI",
+    "Value": 64,
+    "Category": "Sell",
+    "Rank": 495
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "POST",
+    "Value": 64,
+    "Category": "Sell",
+    "Rank": 496
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "HXL",
+    "Value": 64,
+    "Category": "Sell",
+    "Rank": 497
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "HOMB",
+    "Value": 64,
+    "Category": "Sell",
+    "Rank": 498
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CVX",
+    "Value": 64,
+    "Category": "Sell",
+    "Rank": 499
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "PEGA",
+    "Value": 64,
+    "Category": "Sell",
+    "Rank": 500
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "PH",
+    "Value": 64,
+    "Category": "Sell",
+    "Rank": 501
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "TYL",
+    "Value": 64,
+    "Category": "Sell",
+    "Rank": 502
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "LH",
+    "Value": 64,
+    "Category": "Sell",
+    "Rank": 503
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "COO",
+    "Value": 64,
+    "Category": "Sell",
+    "Rank": 504
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "SRNE",
+    "Value": 64,
+    "Category": "Sell",
+    "Rank": 505
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "GRMN",
+    "Value": 64,
+    "Category": "Sell",
+    "Rank": 506
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "KEY",
+    "Value": 64,
+    "Category": "Sell",
+    "Rank": 507
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "LHX",
+    "Value": 64,
+    "Category": "Sell",
+    "Rank": 508
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CNI",
+    "Value": 64,
+    "Category": "Sell",
+    "Rank": 509
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "PZZA",
+    "Value": 64,
+    "Category": "Sell",
+    "Rank": 510
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "WAB",
+    "Value": 64,
+    "Category": "Sell",
+    "Rank": 511
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "WAL",
+    "Value": 64,
+    "Category": "Sell",
+    "Rank": 512
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "IBKR",
+    "Value": 64,
+    "Category": "Sell",
+    "Rank": 513
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "HZNP",
+    "Value": 64,
+    "Category": "Sell",
+    "Rank": 514
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "BMRN",
+    "Value": 64,
+    "Category": "Sell",
+    "Rank": 515
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "FGEN",
+    "Value": 64,
+    "Category": "Sell",
+    "Rank": 516
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "IPHI",
+    "Value": 64,
+    "Category": "Sell",
+    "Rank": 517
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "YUM",
+    "Value": 64,
+    "Category": "Sell",
+    "Rank": 518
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "MMM",
+    "Value": 64,
+    "Category": "Sell",
+    "Rank": 519
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "NWSA",
+    "Value": 64,
+    "Category": "Sell",
+    "Rank": 520
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "NUS",
+    "Value": 64,
+    "Category": "Sell",
+    "Rank": 521
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "NICE",
+    "Value": 64,
+    "Category": "Sell",
+    "Rank": 522
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ALV",
+    "Value": 64,
+    "Category": "Sell",
+    "Rank": 523
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ULTA",
+    "Value": 64,
+    "Category": "Sell",
+    "Rank": 524
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "HI",
+    "Value": 64,
+    "Category": "Sell",
+    "Rank": 525
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "KWR",
+    "Value": 64,
+    "Category": "Sell",
+    "Rank": 526
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "LW",
+    "Value": 64,
+    "Category": "Sell",
+    "Rank": 527
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "OSK",
+    "Value": 64,
+    "Category": "Sell",
+    "Rank": 528
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "DEO",
+    "Value": 64,
+    "Category": "Sell",
+    "Rank": 529
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CMA",
+    "Value": 64,
+    "Category": "Sell",
+    "Rank": 530
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "BIO",
+    "Value": 64,
+    "Category": "Sell",
+    "Rank": 531
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CMP",
+    "Value": 64,
+    "Category": "Sell",
+    "Rank": 532
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "IT",
+    "Value": 64,
+    "Category": "Sell",
+    "Rank": 533
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "SYK",
+    "Value": 64,
+    "Category": "Sell",
+    "Rank": 534
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "AFL",
+    "Value": 64,
+    "Category": "Sell",
+    "Rank": 535
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "EXPD",
+    "Value": 64,
+    "Category": "Sell",
+    "Rank": 536
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "GWW",
+    "Value": 64,
+    "Category": "Sell",
+    "Rank": 537
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ALE",
+    "Value": 63,
+    "Category": "Sell",
+    "Rank": 538
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "TTC",
+    "Value": 63,
+    "Category": "Sell",
+    "Rank": 539
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "WBA",
+    "Value": 63,
+    "Category": "Sell",
+    "Rank": 540
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "AAXN",
+    "Value": 63,
+    "Category": "Sell",
+    "Rank": 541
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "RGEN",
+    "Value": 63,
+    "Category": "Sell",
+    "Rank": 542
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "HAIN",
+    "Value": 63,
+    "Category": "Sell",
+    "Rank": 543
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "HUN",
+    "Value": 63,
+    "Category": "Sell",
+    "Rank": 544
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CCMP",
+    "Value": 63,
+    "Category": "Sell",
+    "Rank": 545
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "FMX",
+    "Value": 63,
+    "Category": "Sell",
+    "Rank": 546
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "AMZN",
+    "Value": 63,
+    "Category": "Sell",
+    "Rank": 547
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "MCO",
+    "Value": 63,
+    "Category": "Sell",
+    "Rank": 548
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "TDC",
+    "Value": 63,
+    "Category": "Sell",
+    "Rank": 549
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "TRV",
+    "Value": 63,
+    "Category": "Sell",
+    "Rank": 550
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ICUI",
+    "Value": 63,
+    "Category": "Sell",
+    "Rank": 551
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ANET",
+    "Value": 63,
+    "Category": "Sell",
+    "Rank": 552
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "FFIV",
+    "Value": 63,
+    "Category": "Sell",
+    "Rank": 553
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "STZ",
+    "Value": 63,
+    "Category": "Sell",
+    "Rank": 554
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "XLI",
+    "Value": 63,
+    "Category": "Sell",
+    "Rank": 555
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "BAM",
+    "Value": 63,
+    "Category": "Sell",
+    "Rank": 556
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "MTB",
+    "Value": 63,
+    "Category": "Sell",
+    "Rank": 557
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CDW",
+    "Value": 63,
+    "Category": "Sell",
+    "Rank": 558
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "JNJ",
+    "Value": 63,
+    "Category": "Sell",
+    "Rank": 559
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "TFC",
+    "Value": 63,
+    "Category": "Sell",
+    "Rank": 560
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "MKC",
+    "Value": 63,
+    "Category": "Sell",
+    "Rank": 561
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "PPG",
+    "Value": 63,
+    "Category": "Sell",
+    "Rank": 562
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "AAP",
+    "Value": 63,
+    "Category": "Sell",
+    "Rank": 563
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "HRC",
+    "Value": 63,
+    "Category": "Sell",
+    "Rank": 564
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "AMKR",
+    "Value": 63,
+    "Category": "Sell",
+    "Rank": 565
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "RY",
+    "Value": 63,
+    "Category": "Sell",
+    "Rank": 566
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "PFE",
+    "Value": 63,
+    "Category": "Sell",
+    "Rank": 567
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "LOPE",
+    "Value": 63,
+    "Category": "Sell",
+    "Rank": 568
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "LBRDA",
+    "Value": 63,
+    "Category": "Sell",
+    "Rank": 569
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "HQY",
+    "Value": 63,
+    "Category": "Sell",
+    "Rank": 570
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "WHR",
+    "Value": 63,
+    "Category": "Sell",
+    "Rank": 571
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "MANU",
+    "Value": 63,
+    "Category": "Sell",
+    "Rank": 572
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "VMC",
+    "Value": 63,
+    "Category": "Sell",
+    "Rank": 573
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "JNPR",
+    "Value": 63,
+    "Category": "Sell",
+    "Rank": 574
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ORI",
+    "Value": 63,
+    "Category": "Sell",
+    "Rank": 575
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "THO",
+    "Value": 62,
+    "Category": "Sell",
+    "Rank": 576
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "NUE",
+    "Value": 62,
+    "Category": "Sell",
+    "Rank": 577
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "MGEE",
+    "Value": 62,
+    "Category": "Sell",
+    "Rank": 578
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "OGS",
+    "Value": 62,
+    "Category": "Sell",
+    "Rank": 579
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "FUL",
+    "Value": 62,
+    "Category": "Sell",
+    "Rank": 580
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "VMW",
+    "Value": 62,
+    "Category": "Sell",
+    "Rank": 581
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "MCK",
+    "Value": 62,
+    "Category": "Sell",
+    "Rank": 582
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "XLV",
+    "Value": 62,
+    "Category": "Sell",
+    "Rank": 583
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ECL",
+    "Value": 62,
+    "Category": "Sell",
+    "Rank": 584
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "TCO",
+    "Value": 62,
+    "Category": "Sell",
+    "Rank": 585
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "BLKB",
+    "Value": 62,
+    "Category": "Sell",
+    "Rank": 586
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ADBE",
+    "Value": 62,
+    "Category": "Sell",
+    "Rank": 587
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "WWE",
+    "Value": 62,
+    "Category": "Sell",
+    "Rank": 588
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CLR",
+    "Value": 62,
+    "Category": "Sell",
+    "Rank": 589
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "DAL",
+    "Value": 62,
+    "Category": "Sell",
+    "Rank": 590
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "WCN",
+    "Value": 62,
+    "Category": "Sell",
+    "Rank": 591
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "UI",
+    "Value": 62,
+    "Category": "Sell",
+    "Rank": 592
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "COKE",
+    "Value": 62,
+    "Category": "Sell",
+    "Rank": 593
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CWT",
+    "Value": 62,
+    "Category": "Sell",
+    "Rank": 594
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "MCD",
+    "Value": 62,
+    "Category": "Sell",
+    "Rank": 595
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "VRSK",
+    "Value": 62,
+    "Category": "Sell",
+    "Rank": 596
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ENR",
+    "Value": 62,
+    "Category": "Sell",
+    "Rank": 597
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "DGX",
+    "Value": 62,
+    "Category": "Sell",
+    "Rank": 598
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "TTEK",
+    "Value": 62,
+    "Category": "Sell",
+    "Rank": 599
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "INOV",
+    "Value": 62,
+    "Category": "Sell",
+    "Rank": 600
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "MNST",
+    "Value": 62,
+    "Category": "Sell",
+    "Rank": 601
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "HON",
+    "Value": 62,
+    "Category": "Sell",
+    "Rank": 602
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "IRTC",
+    "Value": 62,
+    "Category": "Sell",
+    "Rank": 603
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "QCOM",
+    "Value": 62,
+    "Category": "Sell",
+    "Rank": 604
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CAG",
+    "Value": 62,
+    "Category": "Sell",
+    "Rank": 605
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ESLT",
+    "Value": 62,
+    "Category": "Sell",
+    "Rank": 606
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "AYI",
+    "Value": 62,
+    "Category": "Sell",
+    "Rank": 607
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "BAH",
+    "Value": 62,
+    "Category": "Sell",
+    "Rank": 608
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "UBS",
+    "Value": 62,
+    "Category": "Sell",
+    "Rank": 609
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "GNRC",
+    "Value": 62,
+    "Category": "Sell",
+    "Rank": 610
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "LIN",
+    "Value": 62,
+    "Category": "Sell",
+    "Rank": 611
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "BLDP",
+    "Value": 62,
+    "Category": "Sell",
+    "Rank": 612
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "VIRT",
+    "Value": 62,
+    "Category": "Sell",
+    "Rank": 613
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "PGR",
+    "Value": 62,
+    "Category": "Sell",
+    "Rank": 614
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "KO",
+    "Value": 62,
+    "Category": "Sell",
+    "Rank": 615
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ROP",
+    "Value": 62,
+    "Category": "Sell",
+    "Rank": 616
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "PSX",
+    "Value": 62,
+    "Category": "Sell",
+    "Rank": 617
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "NLOK",
+    "Value": 62,
+    "Category": "Sell",
+    "Rank": 618
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "DHI",
+    "Value": 62,
+    "Category": "Sell",
+    "Rank": 619
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "RBC",
+    "Value": 62,
+    "Category": "Sell",
+    "Rank": 620
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "AOS",
+    "Value": 61,
+    "Category": "Sell",
+    "Rank": 621
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "EURN",
+    "Value": 61,
+    "Category": "Sell",
+    "Rank": 622
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "SCI",
+    "Value": 61,
+    "Category": "Sell",
+    "Rank": 623
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "GPN",
+    "Value": 61,
+    "Category": "Sell",
+    "Rank": 624
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "RS",
+    "Value": 61,
+    "Category": "Sell",
+    "Rank": 625
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "W",
+    "Value": 61,
+    "Category": "Sell",
+    "Rank": 626
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "PSA",
+    "Value": 61,
+    "Category": "Sell",
+    "Rank": 627
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "HIW",
+    "Value": 61,
+    "Category": "Sell",
+    "Rank": 628
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CWEN",
+    "Value": 61,
+    "Category": "Sell",
+    "Rank": 629
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "RSG",
+    "Value": 61,
+    "Category": "Sell",
+    "Rank": 630
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ROK",
+    "Value": 61,
+    "Category": "Sell",
+    "Rank": 631
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "SWK",
+    "Value": 61,
+    "Category": "Sell",
+    "Rank": 632
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "NTRS",
+    "Value": 61,
+    "Category": "Sell",
+    "Rank": 633
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CI",
+    "Value": 61,
+    "Category": "Sell",
+    "Rank": 634
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "MTH",
+    "Value": 61,
+    "Category": "Sell",
+    "Rank": 635
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "TECH",
+    "Value": 61,
+    "Category": "Sell",
+    "Rank": 636
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "GM",
+    "Value": 61,
+    "Category": "Sell",
+    "Rank": 637
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "FMS",
+    "Value": 61,
+    "Category": "Sell",
+    "Rank": 638
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "WTS",
+    "Value": 61,
+    "Category": "Sell",
+    "Rank": 639
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "FAST",
+    "Value": 61,
+    "Category": "Sell",
+    "Rank": 640
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "MLM",
+    "Value": 61,
+    "Category": "Sell",
+    "Rank": 641
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "SEE",
+    "Value": 61,
+    "Category": "Sell",
+    "Rank": 642
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "LAMR",
+    "Value": 61,
+    "Category": "Sell",
+    "Rank": 643
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "GD",
+    "Value": 61,
+    "Category": "Sell",
+    "Rank": 644
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "AKAM",
+    "Value": 61,
+    "Category": "Sell",
+    "Rank": 645
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "MMC",
+    "Value": 61,
+    "Category": "Sell",
+    "Rank": 646
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "NWS",
+    "Value": 61,
+    "Category": "Sell",
+    "Rank": 647
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "UNF",
+    "Value": 61,
+    "Category": "Sell",
+    "Rank": 648
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "AMX",
+    "Value": 61,
+    "Category": "Sell",
+    "Rank": 649
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "LHCG",
+    "Value": 61,
+    "Category": "Sell",
+    "Rank": 650
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "STM",
+    "Value": 61,
+    "Category": "Sell",
+    "Rank": 651
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "WTRG",
+    "Value": 61,
+    "Category": "Sell",
+    "Rank": 652
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ANTM",
+    "Value": 61,
+    "Category": "Sell",
+    "Rank": 653
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "SINA",
+    "Value": 61,
+    "Category": "Sell",
+    "Rank": 654
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ICLR",
+    "Value": 61,
+    "Category": "Sell",
+    "Rank": 655
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "SEIC",
+    "Value": 61,
+    "Category": "Sell",
+    "Rank": 656
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "SWKS",
+    "Value": 61,
+    "Category": "Sell",
+    "Rank": 657
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "COTY",
+    "Value": 61,
+    "Category": "Sell",
+    "Rank": 658
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "LEN",
+    "Value": 61,
+    "Category": "Sell",
+    "Rank": 659
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "TDY",
+    "Value": 61,
+    "Category": "Sell",
+    "Rank": 660
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "PBCT",
+    "Value": 61,
+    "Category": "Sell",
+    "Rank": 661
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CLGX",
+    "Value": 61,
+    "Category": "Sell",
+    "Rank": 662
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "UFPI",
+    "Value": 61,
+    "Category": "Sell",
+    "Rank": 663
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ALLE",
+    "Value": 61,
+    "Category": "Sell",
+    "Rank": 664
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CW",
+    "Value": 61,
+    "Category": "Sell",
+    "Rank": 665
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "BOKF",
+    "Value": 61,
+    "Category": "Sell",
+    "Rank": 666
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "PAG",
+    "Value": 61,
+    "Category": "Sell",
+    "Rank": 667
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "NWL",
+    "Value": 61,
+    "Category": "Sell",
+    "Rank": 668
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "TDG",
+    "Value": 61,
+    "Category": "Sell",
+    "Rank": 669
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "POOL",
+    "Value": 60,
+    "Category": "Sell",
+    "Rank": 670
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "EBS",
+    "Value": 60,
+    "Category": "Sell",
+    "Rank": 671
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "MDLZ",
+    "Value": 60,
+    "Category": "Sell",
+    "Rank": 672
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "PLXS",
+    "Value": 60,
+    "Category": "Sell",
+    "Rank": 673
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ISRG",
+    "Value": 60,
+    "Category": "Sell",
+    "Rank": 674
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "WLTW",
+    "Value": 60,
+    "Category": "Sell",
+    "Rank": 675
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "SHW",
+    "Value": 60,
+    "Category": "Sell",
+    "Rank": 676
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "LSXMK",
+    "Value": 60,
+    "Category": "Sell",
+    "Rank": 677
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "SCL",
+    "Value": 60,
+    "Category": "Sell",
+    "Rank": 678
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "FDX",
+    "Value": 60,
+    "Category": "Sell",
+    "Rank": 679
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "SLF",
+    "Value": 60,
+    "Category": "Sell",
+    "Rank": 680
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "FHN",
+    "Value": 60,
+    "Category": "Sell",
+    "Rank": 681
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "AEP",
+    "Value": 60,
+    "Category": "Sell",
+    "Rank": 682
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "AFG",
+    "Value": 60,
+    "Category": "Sell",
+    "Rank": 683
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "GOOGL",
+    "Value": 60,
+    "Category": "Sell",
+    "Rank": 684
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ATHM",
+    "Value": 60,
+    "Category": "Sell",
+    "Rank": 685
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "OTEX",
+    "Value": 60,
+    "Category": "Sell",
+    "Rank": 686
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "PEP",
+    "Value": 60,
+    "Category": "Sell",
+    "Rank": 687
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "TCOM",
+    "Value": 60,
+    "Category": "Sell",
+    "Rank": 688
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ALGT",
+    "Value": 60,
+    "Category": "Sell",
+    "Rank": 689
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "SXT",
+    "Value": 60,
+    "Category": "Sell",
+    "Rank": 690
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "BXP",
+    "Value": 60,
+    "Category": "Sell",
+    "Rank": 691
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "MUSA",
+    "Value": 60,
+    "Category": "Sell",
+    "Rank": 692
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "SRE",
+    "Value": 60,
+    "Category": "Sell",
+    "Rank": 693
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "EXC",
+    "Value": 60,
+    "Category": "Sell",
+    "Rank": 694
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CINF",
+    "Value": 60,
+    "Category": "Sell",
+    "Rank": 695
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "BDX",
+    "Value": 60,
+    "Category": "Sell",
+    "Rank": 696
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "TSCO",
+    "Value": 60,
+    "Category": "Sell",
+    "Rank": 697
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "URBN",
+    "Value": 60,
+    "Category": "Sell",
+    "Rank": 698
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "TEVA",
+    "Value": 60,
+    "Category": "Sell",
+    "Rank": 699
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CSGP",
+    "Value": 59,
+    "Category": "Sell",
+    "Rank": 700
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "EXR",
+    "Value": 59,
+    "Category": "Sell",
+    "Rank": 701
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "UPS",
+    "Value": 59,
+    "Category": "Sell",
+    "Rank": 702
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "AEM",
+    "Value": 59,
+    "Category": "Sell",
+    "Rank": 703
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "POR",
+    "Value": 59,
+    "Category": "Sell",
+    "Rank": 704
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "QGEN",
+    "Value": 59,
+    "Category": "Sell",
+    "Rank": 705
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ALNY",
+    "Value": 59,
+    "Category": "Sell",
+    "Rank": 706
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "HDS",
+    "Value": 59,
+    "Category": "Sell",
+    "Rank": 707
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "PG",
+    "Value": 59,
+    "Category": "Sell",
+    "Rank": 708
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "NNN",
+    "Value": 59,
+    "Category": "Sell",
+    "Rank": 709
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ANGI",
+    "Value": 59,
+    "Category": "Sell",
+    "Rank": 710
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "RBA",
+    "Value": 56,
+    "Category": "Sell",
+    "Rank": 711
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CL",
+    "Value": 56,
+    "Category": "Sell",
+    "Rank": 712
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ADM",
+    "Value": 56,
+    "Category": "Sell",
+    "Rank": 713
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "XLU",
+    "Value": 56,
+    "Category": "Sell",
+    "Rank": 714
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "NSC",
+    "Value": 56,
+    "Category": "Sell",
+    "Rank": 715
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "HLF",
+    "Value": 56,
+    "Category": "Sell",
+    "Rank": 716
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "LUV",
+    "Value": 56,
+    "Category": "Sell",
+    "Rank": 717
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "FB",
+    "Value": 56,
+    "Category": "Sell",
+    "Rank": 718
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "BRK/B",
+    "Value": 56,
+    "Category": "Sell",
+    "Rank": 719
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "HOG",
+    "Value": 56,
+    "Category": "Sell",
+    "Rank": 720
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ACM",
+    "Value": 56,
+    "Category": "Sell",
+    "Rank": 721
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "KMI",
+    "Value": 55,
+    "Category": "Sell",
+    "Rank": 722
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "HD",
+    "Value": 55,
+    "Category": "Sell",
+    "Rank": 723
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "SYF",
+    "Value": 55,
+    "Category": "Sell",
+    "Rank": 724
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "SAM",
+    "Value": 55,
+    "Category": "Sell",
+    "Rank": 725
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "JBLU",
+    "Value": 55,
+    "Category": "Sell",
+    "Rank": 726
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "MSFT",
+    "Value": 55,
+    "Category": "Sell",
+    "Rank": 727
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "WB",
+    "Value": 55,
+    "Category": "Sell",
+    "Rank": 728
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CMI",
+    "Value": 55,
+    "Category": "Sell",
+    "Rank": 729
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "NGHC",
+    "Value": 55,
+    "Category": "Sell",
+    "Rank": 730
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "RPM",
+    "Value": 55,
+    "Category": "Sell",
+    "Rank": 731
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "NUVA",
+    "Value": 55,
+    "Category": "Sell",
+    "Rank": 732
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "LEG",
+    "Value": 55,
+    "Category": "Sell",
+    "Rank": 733
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "RMD",
+    "Value": 55,
+    "Category": "Sell",
+    "Rank": 734
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "WOR",
+    "Value": 55,
+    "Category": "Sell",
+    "Rank": 735
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "NFLX",
+    "Value": 55,
+    "Category": "Sell",
+    "Rank": 736
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "VEEV",
+    "Value": 55,
+    "Category": "Sell",
+    "Rank": 737
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "STRA",
+    "Value": 55,
+    "Category": "Sell",
+    "Rank": 738
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ROL",
+    "Value": 55,
+    "Category": "Sell",
+    "Rank": 739
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "INCY",
+    "Value": 55,
+    "Category": "Sell",
+    "Rank": 740
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "WPC",
+    "Value": 55,
+    "Category": "Sell",
+    "Rank": 741
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "BK",
+    "Value": 55,
+    "Category": "Sell",
+    "Rank": 742
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "HSBC",
+    "Value": 55,
+    "Category": "Sell",
+    "Rank": 743
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ABB",
+    "Value": 55,
+    "Category": "Sell",
+    "Rank": 744
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "NRG",
+    "Value": 55,
+    "Category": "Sell",
+    "Rank": 745
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "IQV",
+    "Value": 55,
+    "Category": "Sell",
+    "Rank": 746
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "MRK",
+    "Value": 55,
+    "Category": "Sell",
+    "Rank": 747
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "IGT",
+    "Value": 55,
+    "Category": "Sell",
+    "Rank": 748
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "AMH",
+    "Value": 55,
+    "Category": "Sell",
+    "Rank": 749
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "KBH",
+    "Value": 55,
+    "Category": "Sell",
+    "Rank": 750
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CAH",
+    "Value": 55,
+    "Category": "Sell",
+    "Rank": 751
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "HUM",
+    "Value": 55,
+    "Category": "Sell",
+    "Rank": 752
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CPT",
+    "Value": 55,
+    "Category": "Sell",
+    "Rank": 753
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "VAR",
+    "Value": 55,
+    "Category": "Sell",
+    "Rank": 754
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "SYNA",
+    "Value": 54,
+    "Category": "Sell",
+    "Rank": 755
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "TGT",
+    "Value": 54,
+    "Category": "Sell",
+    "Rank": 756
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ORLY",
+    "Value": 54,
+    "Category": "Sell",
+    "Rank": 757
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "WTM",
+    "Value": 54,
+    "Category": "Sell",
+    "Rank": 758
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "UBSI",
+    "Value": 54,
+    "Category": "Sell",
+    "Rank": 759
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "AEE",
+    "Value": 54,
+    "Category": "Sell",
+    "Rank": 760
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "PCAR",
+    "Value": 54,
+    "Category": "Sell",
+    "Rank": 761
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "SC",
+    "Value": 54,
+    "Category": "Sell",
+    "Rank": 762
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ELS",
+    "Value": 54,
+    "Category": "Sell",
+    "Rank": 763
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "PII",
+    "Value": 54,
+    "Category": "Sell",
+    "Rank": 764
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "EW",
+    "Value": 54,
+    "Category": "Sell",
+    "Rank": 765
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "NFG",
+    "Value": 54,
+    "Category": "Sell",
+    "Rank": 766
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "PSB",
+    "Value": 54,
+    "Category": "Sell",
+    "Rank": 767
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "PHM",
+    "Value": 54,
+    "Category": "Sell",
+    "Rank": 768
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "BMY",
+    "Value": 54,
+    "Category": "Sell",
+    "Rank": 769
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "NMR",
+    "Value": 54,
+    "Category": "Sell",
+    "Rank": 770
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "NDSN",
+    "Value": 54,
+    "Category": "Sell",
+    "Rank": 771
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "RE",
+    "Value": 54,
+    "Category": "Sell",
+    "Rank": 772
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "TEF",
+    "Value": 54,
+    "Category": "Sell",
+    "Rank": 773
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CSX",
+    "Value": 54,
+    "Category": "Sell",
+    "Rank": 774
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "COG",
+    "Value": 54,
+    "Category": "Sell",
+    "Rank": 775
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ACAD",
+    "Value": 54,
+    "Category": "Sell",
+    "Rank": 776
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "TRI",
+    "Value": 54,
+    "Category": "Sell",
+    "Rank": 777
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "FCN",
+    "Value": 54,
+    "Category": "Sell",
+    "Rank": 778
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "RHI",
+    "Value": 54,
+    "Category": "Sell",
+    "Rank": 779
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CHH",
+    "Value": 54,
+    "Category": "Sell",
+    "Rank": 780
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "MAA",
+    "Value": 54,
+    "Category": "Sell",
+    "Rank": 781
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "XRX",
+    "Value": 54,
+    "Category": "Sell",
+    "Rank": 782
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "DXCM",
+    "Value": 54,
+    "Category": "Sell",
+    "Rank": 783
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ZTS",
+    "Value": 54,
+    "Category": "Sell",
+    "Rank": 784
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "OFC",
+    "Value": 54,
+    "Category": "Sell",
+    "Rank": 785
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "IFF",
+    "Value": 54,
+    "Category": "Sell",
+    "Rank": 786
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "BTG",
+    "Value": 54,
+    "Category": "Sell",
+    "Rank": 787
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "NSA",
+    "Value": 53,
+    "Category": "Sell",
+    "Rank": 788
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "UNH",
+    "Value": 53,
+    "Category": "Sell",
+    "Rank": 789
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "BKH",
+    "Value": 53,
+    "Category": "Sell",
+    "Rank": 790
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "DOC",
+    "Value": 53,
+    "Category": "Sell",
+    "Rank": 791
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "MTG",
+    "Value": 53,
+    "Category": "Sell",
+    "Rank": 792
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "AAON",
+    "Value": 53,
+    "Category": "Sell",
+    "Rank": 793
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "DVN",
+    "Value": 53,
+    "Category": "Sell",
+    "Rank": 794
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "BWA",
+    "Value": 53,
+    "Category": "Sell",
+    "Rank": 795
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "SJR",
+    "Value": 53,
+    "Category": "Sell",
+    "Rank": 796
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "V",
+    "Value": 53,
+    "Category": "Sell",
+    "Rank": 797
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "MPLX",
+    "Value": 53,
+    "Category": "Sell",
+    "Rank": 798
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "HSY",
+    "Value": 53,
+    "Category": "Sell",
+    "Rank": 799
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "GLW",
+    "Value": 53,
+    "Category": "Sell",
+    "Rank": 800
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "TIF",
+    "Value": 53,
+    "Category": "Sell",
+    "Rank": 801
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "DKS",
+    "Value": 53,
+    "Category": "Sell",
+    "Rank": 802
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CBOE",
+    "Value": 53,
+    "Category": "Sell",
+    "Rank": 803
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "SO",
+    "Value": 53,
+    "Category": "Sell",
+    "Rank": 804
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "MASI",
+    "Value": 53,
+    "Category": "Sell",
+    "Rank": 805
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "JEF",
+    "Value": 53,
+    "Category": "Sell",
+    "Rank": 806
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ABM",
+    "Value": 53,
+    "Category": "Sell",
+    "Rank": 807
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "KNX",
+    "Value": 53,
+    "Category": "Sell",
+    "Rank": 808
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "LBTYA",
+    "Value": 53,
+    "Category": "Sell",
+    "Rank": 809
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "OXY",
+    "Value": 53,
+    "Category": "Sell",
+    "Rank": 810
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CBU",
+    "Value": 53,
+    "Category": "Sell",
+    "Rank": 811
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "SFM",
+    "Value": 53,
+    "Category": "Sell",
+    "Rank": 812
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "TNDM",
+    "Value": 53,
+    "Category": "Sell",
+    "Rank": 813
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "OGE",
+    "Value": 53,
+    "Category": "Sell",
+    "Rank": 814
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "BSX",
+    "Value": 53,
+    "Category": "Sell",
+    "Rank": 815
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "SMFG",
+    "Value": 53,
+    "Category": "Sell",
+    "Rank": 816
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "AXSM",
+    "Value": 53,
+    "Category": "Sell",
+    "Rank": 817
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "AWR",
+    "Value": 53,
+    "Category": "Sell",
+    "Rank": 818
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "NVDA",
+    "Value": 53,
+    "Category": "Sell",
+    "Rank": 819
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "O",
+    "Value": 53,
+    "Category": "Sell",
+    "Rank": 820
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "STMP",
+    "Value": 53,
+    "Category": "Sell",
+    "Rank": 821
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "BGNE",
+    "Value": 52,
+    "Category": "Sell",
+    "Rank": 822
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "PEG",
+    "Value": 52,
+    "Category": "Sell",
+    "Rank": 823
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "WST",
+    "Value": 52,
+    "Category": "Sell",
+    "Rank": 824
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ATO",
+    "Value": 52,
+    "Category": "Sell",
+    "Rank": 825
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ITW",
+    "Value": 52,
+    "Category": "Sell",
+    "Rank": 826
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "TREE",
+    "Value": 52,
+    "Category": "Sell",
+    "Rank": 827
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "SSD",
+    "Value": 52,
+    "Category": "Sell",
+    "Rank": 828
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "FSV",
+    "Value": 52,
+    "Category": "Sell",
+    "Rank": 829
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "AVB",
+    "Value": 52,
+    "Category": "Sell",
+    "Rank": 830
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ATCO",
+    "Value": 52,
+    "Category": "Sell",
+    "Rank": 831
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "OZK",
+    "Value": 52,
+    "Category": "Sell",
+    "Rank": 832
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "EVRG",
+    "Value": 52,
+    "Category": "Sell",
+    "Rank": 833
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "GPC",
+    "Value": 52,
+    "Category": "Sell",
+    "Rank": 834
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "EV",
+    "Value": 52,
+    "Category": "Sell",
+    "Rank": 835
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "SEB",
+    "Value": 52,
+    "Category": "Sell",
+    "Rank": 836
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "MCRB",
+    "Value": 52,
+    "Category": "Sell",
+    "Rank": 837
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "VRTX",
+    "Value": 52,
+    "Category": "Sell",
+    "Rank": 838
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "MA",
+    "Value": 52,
+    "Category": "Sell",
+    "Rank": 839
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "UGI",
+    "Value": 52,
+    "Category": "Sell",
+    "Rank": 840
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "MUFG",
+    "Value": 52,
+    "Category": "Sell",
+    "Rank": 841
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "WU",
+    "Value": 52,
+    "Category": "Sell",
+    "Rank": 842
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "HE",
+    "Value": 52,
+    "Category": "Sell",
+    "Rank": 843
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CNC",
+    "Value": 52,
+    "Category": "Sell",
+    "Rank": 844
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CVBF",
+    "Value": 52,
+    "Category": "Sell",
+    "Rank": 845
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "BLDR",
+    "Value": 52,
+    "Category": "Sell",
+    "Rank": 846
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "EXEL",
+    "Value": 52,
+    "Category": "Sell",
+    "Rank": 847
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "NOC",
+    "Value": 52,
+    "Category": "Sell",
+    "Rank": 848
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CASY",
+    "Value": 52,
+    "Category": "Sell",
+    "Rank": 849
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "TPH",
+    "Value": 51,
+    "Category": "Sell",
+    "Rank": 850
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ACGL",
+    "Value": 51,
+    "Category": "Sell",
+    "Rank": 851
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "SJM",
+    "Value": 51,
+    "Category": "Sell",
+    "Rank": 852
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CHRW",
+    "Value": 51,
+    "Category": "Sell",
+    "Rank": 853
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "HR",
+    "Value": 51,
+    "Category": "Sell",
+    "Rank": 854
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "MTD",
+    "Value": 51,
+    "Category": "Sell",
+    "Rank": 855
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "BRK/A",
+    "Value": 51,
+    "Category": "Sell",
+    "Rank": 856
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "VZ",
+    "Value": 51,
+    "Category": "Sell",
+    "Rank": 857
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "TDOC",
+    "Value": 51,
+    "Category": "Sell",
+    "Rank": 858
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "GBT",
+    "Value": 51,
+    "Category": "Sell",
+    "Rank": 859
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "DSGX",
+    "Value": 51,
+    "Category": "Sell",
+    "Rank": 860
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "WDFC",
+    "Value": 51,
+    "Category": "Sell",
+    "Rank": 861
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "ESNT",
+    "Value": 51,
+    "Category": "Sell",
+    "Rank": 862
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "LANC",
+    "Value": 51,
+    "Category": "Sell",
+    "Rank": 863
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "EIX",
+    "Value": 51,
+    "Category": "Sell",
+    "Rank": 864
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "LNG",
+    "Value": 51,
+    "Category": "Sell",
+    "Rank": 865
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "KRC",
+    "Value": 51,
+    "Category": "Sell",
+    "Rank": 866
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "DTE",
+    "Value": 51,
+    "Category": "Sell",
+    "Rank": 867
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "CMC",
+    "Value": 51,
+    "Category": "Sell",
+    "Rank": 868
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "BBY",
+    "Value": 51,
+    "Category": "Sell",
+    "Rank": 869
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "DEI",
+    "Value": 51,
+    "Category": "Sell",
+    "Rank": 870
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "REXR",
+    "Value": 51,
+    "Category": "Sell",
+    "Rank": 871
+  },
+  {
+    "Quotedate": "23/12/2020",
+    "StockSymbol": "FLO",
+    "Value": 51,
+    "Category": "Sell",
+    "Rank": 872
+  }
+]
+   
+    var margin = {
+        top: 10,
+        right: 10,
+        bottom: 170,
+        left: 10
+      },
+      margin2 = {
+        top: 350,
+        right: 10,
+        bottom: 120,
+        left: 10
+      },
+     /* width = 1200 - margin.left - margin.right,*/
+		 width = parseInt(d3.select(".bar_chart").style("width")) - margin.left - margin.right,
+      height = 400 - margin.top - margin.bottom,
+      height2 = 500 - margin2.top - margin2.bottom;
+
+    var x = d3.scaleBand()
+      .domain(data.map(function(d) {return d.StockSymbol}))
+      .range([0, width]);
+
+    var x2 = d3.scaleBand()
+      .domain(data.map(function(d) {return d.StockSymbol}))
+      .range([0, width]);
+
+    var y = d3.scaleLinear()
+    /*  .domain([0, d3.max(data, function(d) {
+        return d.Value
+      })])*/
+	 .domain([0,100, d3.max(data, function(d) { return d.Value;})])
+      .range([height, 0]);
+
+    var y2 = d3.scaleLinear()
+      .domain([0,100, d3.max(data, function(d) { return d.Value;})])
+      .range([height2, 0]);
+
+    var brush = d3.brushX()
+      .extent([[0, 0],[width, height2]])
+     /* .on("brush", brushed);*/
+ .on("start brush end", brushed);
+    var zoom = d3.zoom()
+      .scaleExtent([1, Infinity])
+      .translateExtent([[0, 0],[width, height] ])
+      .extent([[0, 0],[width, height]])
+      .on("zoom", zoomed);
+
+    var svg = d3.select(".bar_chart")
+      // .data(data)
+      .append("svg")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom);
+
+
+  svg.append("rect")
+    .attr("class", "zoom")
+    .attr("width", width)
+    .attr("height", height)
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+    .call(zoom);
+	  
+    svg.append("defs")
+      .append("rect")
+      .attr("width", width)
+      .attr("height", height);
+
+    var focus = svg.append("g")
+      .attr("class", "focus")
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    var context = svg.append("g")
+      .attr("class", "context")
+      .attr("transform", "translate(" + margin2.left + "," + margin2.top + ")");
+
+   
+
+    var xAxis = d3.axisBottom(x);
+    var xAxis2 = d3.axisBottom(x2);
+	  
+	  
+
+    focus.append("g")
+      .attr("class", "x axis")
+	  .attr("opacity", 0)
+      .call(xAxis);
+
+    // Add the Y Axis
+    focus.append("g")
+      .attr("class", "axis").attr("opacity", 0)
+      .call(d3.axisLeft(y)
+        );
+
+
+var Tooltip = d3.select("body")
+.append("div")
+.style("opacity", 0)
+.attr("class", "tooltip")
+	  
+var mouseover = function(d) {
+Tooltip
+.style("opacity", 1)
+d3.select(this)
+.style("opacity", 1)
+}
+
+var mousemove = function(d) {
+Tooltip
+.text(d.StockSymbol + ":" + d.Value)
+.style("left", (d3.mouse(this)[0]+100) + "px")
+.style("top", (d3.mouse(this)[1]+110) + "px")
+.style("font-weight", "600").style("font-size", "13px")
+}
+var mouseleave = function(d) {
+Tooltip
+.style("opacity", 0)
+d3.select(this) 
+}
+
+
+
+    var focus_group = focus.append("g");
+    focus_group.attr("clip-path", "url(#clip)");
+
+    var rects = focus_group.selectAll('rect')
+      .data(data);
+
+    //********* Bar Chart 1 ****************
+    var newRects1 = rects.enter();
+
+    newRects1.append('rect')
+      .attr('class', 'bar mainBars')
+      .attr('x', function(d, i) {
+        return x(d.StockSymbol);
+      })
+      .attr('y', function(d, i) {
+        return y(d.Value);
+      })
+      .attr('height', function(d, i) {
+        return height - y(d.Value)
+      })
+      .attr("width", function(d,i)
+			 { return x.bandwidth() })
+	  .on("mouseover", mouseover)
+		.on("mousemove", mousemove) 
+		.on("mouseleave", mouseleave);
+     
+
+    var focus_group = context.append("g");
+    focus_group.attr("clip-path", "url(#clip)");
+
+    var brushRects = focus_group.selectAll('rect')
+      .data(data);
+
+    //********* Brush Bar Chart ****************
+    var brushRects1 = brushRects.enter();
+
+    brushRects1.append('rect')
+      .attr('class', 'bar mainBars')
+      .attr('x', function(d, i) {
+        return x2(d.StockSymbol);
+      })
+      .attr('y', function(d, i) {
+        return y2(d.Value);
+      })
+      .attr('height', function(d, i) {
+        return height2 - y2(d.Value)
+      })
+	  .attr("fill", function(d) {
+	if (d.Value < 50){
+		return "#FE3957";
+	} else {
+		return "#0CAF82";
+	}})
+      .attr("width", function(d,i)
+			 { return x.bandwidth() })
+    
+	  .on("mouseover", mouseover)
+		.on("mousemove", mousemove) 
+		.on("mouseleave", mouseleave);
+
+    //append brush xAxis2
+    context.append("g")
+      .attr("class", "axis x-axis").attr("opacity", 0)
+      .attr("transform", "translate(0," + height2 + ")")
+      .call(xAxis2);
+
+    context.append("g")
+      .attr("class", "brush")
+      .call(brush)
+      .call(brush.move, x.range());
+
+
+
+
+
+    //create brush function redraw scatterplot with selection
+    function brushed() {
+      if (d3.event.sourceEvent && d3.event.sourceEvent.type === "zoom") return; // ignore brush-by-zoom
+		   // get bounds of selection
+      var s = d3.event.selection,
+        nD = [];
+      x2.domain().forEach((d) => {
+        var pos = x2(d) + x2.bandwidth() / 2;
+        if (pos > s[0] && pos < s[1]) {
+          console.log(nD);
+          nD.push(d);
+        }
+      });
+
+      x.domain(nD);
+ focus.selectAll(".mainBars")
+        .style("opacity", function(d) {
+          return x.domain().indexOf(d.StockSymbol) === -1 ? 0 : 100;
+        })
+		.attr("fill", function(d) {
+	if (d.Value <= 50){ 
+		return "#FE3957";
+	} else {
+		return "#0CAF82";
+	}})
+		
+        .attr("x", function(d) {
+          return x(d.StockSymbol) + x.bandwidth() / 2 ;
+        })
+        .attr("y", function(d) {
+          return y(d.Value);
+        })
+        .attr("height", function(d, i) {
+          return height - y(d.Value)
+        })
+        .attr("width", function(d,i)
+			 { return x.bandwidth() })
+.attr("y", function(d) {
+
+if (d.Value > 50){
+	return y(d.Value);
+} else {
+	return y(0);
+}
+})
+   
+
+     
+focus.select(".x.axis").call(xAxis);
+}
+function zoomed() {
+	
+	var zoomFactor = 1.25;
+	
+    if (d3.event.deltaY > 0) {
+        viewport.size = Math.min(
+            data.length,
+            viewport.size * zoomFactor
+        );
+    } else if (d3.event.deltaY < 0) {
+        viewport.size = Math.round(
+            Math.max(1,
+                viewport.size / zoomFactor
+            ));
+    }
+      if (d3.event.sourceEvent && d3.event.sourceEvent.type === "brush") return; // ignore zoom-by-brush
+      var t = d3.event.transform;
+      x.domain(t.rescaleX(x2).domain());
+
+	focus.selectAll(".mainBars")
+      .attr("x", function(d) {
+        return x(d.StockSymbol);
+      })
+      .attr("y", function(d) {
+        return y(d.Value);
+      })
+      .attr("width", function(d) {
+        return x.bandwidth();
+      })
+      .attr("height", function(d) {
+        return height - y(d.Value);
+      })
+      
+       
+.attr("y", function(d) {
+
+if (d.Value > 50){
+	return y(d.Value);
+} else {
+	return y(0);
+}
+})
+   
+
+      focus.select(".x-axis").call(xAxis);
+      context.select(".brush").call(brush.move, x.range().map(t.invertX, t));
+	
+	svg.select(".zoom").call(zoom.transform, d3.zoomIdentity
+      .scale(width / (s[1] - s[0]))
+      .translate(-s[0], 0));
+	var e = d3.event.selection;
+    var selectedrects = focus.selectAll('.mainBars').filter(function() {
+      var xValue = this.getAttribute('x');
+      return e[0] <= xValue && xValue <= e[1];
+    });
+	
+	
+    }
+  </script>
+</body>

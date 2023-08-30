@@ -1,0 +1,5673 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script> 
+<script src="https://d3js.org/d3.v3.min.js"></script>
+
+<style>
+body {
+	background: #393945;
+}
+svg {
+	font: 10px sans-serif;
+}
+	.x .axis 
+	{
+	transform: translate(0px, 263px);
+	}
+.positive {
+	fill: #40c4ff;
+	stroke-width: 2px;
+	stroke: #40c4ff;
+}
+.negative {
+	fill: #FF4497;
+	stroke-width: 2px;
+	stroke: #FF4497;
+}
+.subBar {
+	fill: #CCC9C9;
+	opacity: 0.5;
+}
+.axis path, .axis line {
+	fill: none;
+	stroke: #000;
+	shape-rendering: crispEdges;
+}
+
+.brush .extent {
+	stroke: #fff;
+	fill: steelblue;
+	fill-opacity: .25;
+	shape-rendering: crispEdges;
+}
+rect.mover {
+	stroke: #555555;
+	stroke-opacity: 1;
+	fill: lightSteelBlue;
+	fill-opacity: 1;
+	stroke-width: 2px;
+}
+.extent {
+	stroke: #fff;
+	fill: steelblue;
+	fill-opacity: .25;
+	shape-rendering: crispEdges;
+}
+.container {
+	width: 100%;
+	padding: 0 25px;
+}
+#bar_chart {
+	height: 500px;
+	width: 100%;
+}
+</style>
+<div class="">
+  <div id="bar_chart"> </div>
+</div>
+
+<script>
+	
+	var data = [{
+    "name": "A",
+    "Value": 0.020752637
+  },
+  {
+    "name": "AA",
+    "Value": -0.020752637
+  },
+  {
+    "name": "AAL",
+    "Value": -0.07617161
+  },
+  {
+    "name": "AAN",
+    "Value": 0.204696463
+  },
+  {
+    "name": "AAON",
+    "Value": 0.050230814
+  },
+  {
+    "name": "AAP",
+    "Value": 0.083600111
+  },
+  {
+    "name": "AAPL",
+    "Value": 0.050820378
+  },
+  {
+    "name": "AAXN",
+    "Value": 0.025587058
+  },
+  {
+    "name": "ABBV",
+    "Value": -0.000117913
+  },
+  {
+    "name": "ABC",
+    "Value": 0.077822388
+  },
+  {
+    "name": "ABM",
+    "Value": 0.039854496
+  },
+  {
+    "name": "ABMD",
+    "Value": 0.102112406
+  },
+  {
+    "name": "ABT",
+    "Value": 0.097749636
+  },
+  {
+    "name": "ACAD",
+    "Value": -0.039854496
+  },
+  {
+    "name": "ACC",
+    "Value": 0.060371307
+  },
+  {
+    "name": "ACGL",
+    "Value": -0.009550929
+  },
+  {
+    "name": "ACHC",
+    "Value": 0.020398899
+  },
+  {
+    "name": "ACIA",
+    "Value": 0.076407436
+  },
+  {
+    "name": "ACIW",
+    "Value": -0.042094837
+  },
+  {
+    "name": "ACM",
+    "Value": 0.087962881
+  },
+  {
+    "name": "ACN",
+    "Value": -0.036317114
+  },
+  {
+    "name": "ADBE",
+    "Value": 0.0491696
+  },
+  {
+    "name": "ADC",
+    "Value": -0.038439543
+  },
+  {
+    "name": "ADI",
+    "Value": 0.063672863
+  },
+  {
+    "name": "ADM",
+    "Value": 0.141731076
+  },
+  {
+    "name": "ADP",
+    "Value": -0.0213422
+  },
+  {
+    "name": "ADS",
+    "Value": -0.056833926
+  },
+  {
+    "name": "ADSK",
+    "Value": 0.002358254
+  },
+  {
+    "name": "ADSW",
+    "Value": -0.021106375
+  },
+  {
+    "name": "ADT",
+    "Value": 0.080770206
+  },
+  {
+    "name": "AEE",
+    "Value": 0.000943302
+  },
+  {
+    "name": "AEIS",
+    "Value": -0.084661325
+  },
+  {
+    "name": "AEM",
+    "Value": 0.152696958
+  },
+  {
+    "name": "AEO",
+    "Value": 0.303743139
+  },
+  {
+    "name": "AEP",
+    "Value": 0.008135977
+  },
+  {
+    "name": "AER",
+    "Value": -0.001768691
+  },
+  {
+    "name": "AES",
+    "Value": 0.139136997
+  },
+  {
+    "name": "AFG",
+    "Value": -0.031482693
+  },
+  {
+    "name": "AFL",
+    "Value": -0.017215256
+  },
+  {
+    "name": "AG",
+    "Value": -0.089495746
+  },
+  {
+    "name": "AGCO",
+    "Value": 0.05789514
+  },
+  {
+    "name": "AGI",
+    "Value": 0.022049677
+  },
+  {
+    "name": "AGIO",
+    "Value": -0.078647777
+  },
+  {
+    "name": "AGNC",
+    "Value": 0.083482198
+  },
+  {
+    "name": "AGR",
+    "Value": 0.077114912
+  },
+  {
+    "name": "AIG",
+    "Value": -0.076761174
+  },
+  {
+    "name": "AIMT",
+    "Value": 0.978439661
+  },
+  {
+    "name": "AIT",
+    "Value": -0.00695685
+  },
+  {
+    "name": "AIV",
+    "Value": -0.008135977
+  },
+  {
+    "name": "AIZ",
+    "Value": 0.082538896
+  },
+  {
+    "name": "AJG",
+    "Value": 0.029360265
+  },
+  {
+    "name": "AJRD",
+    "Value": 0.074638745
+  },
+  {
+    "name": "AKAM",
+    "Value": 0.083835936
+  },
+  {
+    "name": "ALB",
+    "Value": 0.110955859
+  },
+  {
+    "name": "ALE",
+    "Value": -0.063083299
+  },
+  {
+    "name": "ALGN",
+    "Value": 0.165195706
+  },
+  {
+    "name": "ALGT",
+    "Value": 0.122039654
+  },
+  {
+    "name": "ALK",
+    "Value": -0.046339695
+  },
+  {
+    "name": "ALKS",
+    "Value": -0.04480683
+  },
+  {
+    "name": "ALL",
+    "Value": -0.007192675
+  },
+  {
+    "name": "ALLE",
+    "Value": -0.028534876
+  },
+  {
+    "name": "ALLK",
+    "Value": 0.055301061
+  },
+  {
+    "name": "ALLY",
+    "Value": 0.184061739
+  },
+  {
+    "name": "ALNY",
+    "Value": 0.053886108
+  },
+  {
+    "name": "ALRM",
+    "Value": 0.07617161
+  },
+  {
+    "name": "ALSN",
+    "Value": -0.05789514
+  },
+  {
+    "name": "ALTR",
+    "Value": 0.118856011
+  },
+  {
+    "name": "ALV",
+    "Value": 0.052824894
+  },
+  {
+    "name": "ALXN",
+    "Value": 0.104234835
+  },
+  {
+    "name": "AM",
+    "Value": -0.027827399
+  },
+  {
+    "name": "AMAT",
+    "Value": 0.075935785
+  },
+  {
+    "name": "AMD",
+    "Value": 0.059074267
+  },
+  {
+    "name": "AME",
+    "Value": 0.098575025
+  },
+  {
+    "name": "AMED",
+    "Value": 0.094330167
+  },
+  {
+    "name": "AMG",
+    "Value": -0.029360265
+  },
+  {
+    "name": "AMGN",
+    "Value": 0.073223792
+  },
+  {
+    "name": "AMH",
+    "Value": 0.028063225
+  },
+  {
+    "name": "AMKR",
+    "Value": -0.056833926
+  },
+  {
+    "name": "AMN",
+    "Value": 0.077940301
+  },
+  {
+    "name": "AMP",
+    "Value": 0.054004021
+  },
+  {
+    "name": "AMT",
+    "Value": -0.010730057
+  },
+  {
+    "name": "AMTD",
+    "Value": 0.02653036
+  },
+  {
+    "name": "AMZN",
+    "Value": 0.025115407
+  },
+  {
+    "name": "AN",
+    "Value": 0.02959609
+  },
+  {
+    "name": "ANET",
+    "Value": -0.004716508
+  },
+  {
+    "name": "ANGI",
+    "Value": -0.093622691
+  },
+  {
+    "name": "ANSS",
+    "Value": 0.094919731
+  },
+  {
+    "name": "ANTM",
+    "Value": -0.071573014
+  },
+  {
+    "name": "AON",
+    "Value": 0.004598596
+  },
+  {
+    "name": "AOS",
+    "Value": 0.035137987
+  },
+  {
+    "name": "APA",
+    "Value": -0.132651798
+  },
+  {
+    "name": "APAM",
+    "Value": 0.060607133
+  },
+  {
+    "name": "APD",
+    "Value": 0.056716013
+  },
+  {
+    "name": "APH",
+    "Value": 0.096452596
+  },
+  {
+    "name": "APLE",
+    "Value": 0.006013548
+  },
+  {
+    "name": "APLS",
+    "Value": 0.09574512
+  },
+  {
+    "name": "APO",
+    "Value": 0.005777723
+  },
+  {
+    "name": "APPF",
+    "Value": 0.000589564
+  },
+  {
+    "name": "APPN",
+    "Value": 0.013677874
+  },
+  {
+    "name": "APPS",
+    "Value": 0.697099937
+  },
+  {
+    "name": "APTV",
+    "Value": 0.118620185
+  },
+  {
+    "name": "AQN",
+    "Value": 0.014857001
+  },
+  {
+    "name": "AQUA",
+    "Value": 0.074520832
+  },
+  {
+    "name": "ARCC",
+    "Value": -0.071926753
+  },
+  {
+    "name": "ARD",
+    "Value": -0.031718519
+  },
+  {
+    "name": "ARE",
+    "Value": -0.000117913
+  },
+  {
+    "name": "ARES",
+    "Value": 0.056951839
+  },
+  {
+    "name": "ARMK",
+    "Value": 0.106475176
+  },
+  {
+    "name": "ARNA",
+    "Value": 0.21978929
+  },
+  {
+    "name": "ARW",
+    "Value": 0.065677379
+  },
+  {
+    "name": "ARWR",
+    "Value": 0.118973924
+  },
+  {
+    "name": "ASB",
+    "Value": -0.006838937
+  },
+  {
+    "name": "ASGN",
+    "Value": 0.081949333
+  },
+  {
+    "name": "ASH",
+    "Value": -0.024172105
+  },
+  {
+    "name": "ATCO",
+    "Value": 0.091146524
+  },
+  {
+    "name": "ATH",
+    "Value": 0.081477682
+  },
+  {
+    "name": "ATO",
+    "Value": -0.01131962
+  },
+  {
+    "name": "ATR",
+    "Value": -0.02393628
+  },
+  {
+    "name": "ATUS",
+    "Value": 0.063083299
+  },
+  {
+    "name": "ATVI",
+    "Value": 0.033840948
+  },
+  {
+    "name": "AUY",
+    "Value": 0.058720529
+  },
+  {
+    "name": "AVA",
+    "Value": -0.001179127
+  },
+  {
+    "name": "AVB",
+    "Value": -0.009550929
+  },
+  {
+    "name": "AVGO",
+    "Value": 0.02700201
+  },
+  {
+    "name": "AVLR",
+    "Value": 0.004126945
+  },
+  {
+    "name": "AVT",
+    "Value": -0.049994989
+  },
+  {
+    "name": "AVTR",
+    "Value": 0.134302576
+  },
+  {
+    "name": "AVY",
+    "Value": 0.016036128
+  },
+  {
+    "name": "AWI",
+    "Value": -0.004598596
+  },
+  {
+    "name": "AWK",
+    "Value": 0.017922732
+  },
+  {
+    "name": "AWR",
+    "Value": -0.027237836
+  },
+  {
+    "name": "AXP",
+    "Value": -0.022167589
+  },
+  {
+    "name": "AXSM",
+    "Value": 0.081595595
+  },
+  {
+    "name": "AXTA",
+    "Value": -0.069804324
+  },
+  {
+    "name": "AY",
+    "Value": -0.000117913
+  },
+  {
+    "name": "AYI",
+    "Value": -0.051056203
+  },
+  {
+    "name": "AYX",
+    "Value": -0.012145009
+  },
+  {
+    "name": "AZO",
+    "Value": 0.024997494
+  },
+  {
+    "name": "AZPN",
+    "Value": 0.157649292
+  },
+  {
+    "name": "BA",
+    "Value": -0.075110396
+  },
+  {
+    "name": "BAC",
+    "Value": -0.044571004
+  },
+  {
+    "name": "BAH",
+    "Value": 0.099872065
+  },
+  {
+    "name": "BAM",
+    "Value": -0.016743605
+  },
+  {
+    "name": "BAND",
+    "Value": 0.133948838
+  },
+  {
+    "name": "BAP",
+    "Value": -0.020752637
+  },
+  {
+    "name": "BAX",
+    "Value": -0.004952334
+  },
+  {
+    "name": "BB",
+    "Value": 0.073931269
+  },
+  {
+    "name": "BBY",
+    "Value": 0.046457607
+  },
+  {
+    "name": "BC",
+    "Value": 0.04221275
+  },
+  {
+    "name": "BCO",
+    "Value": -0.012970398
+  },
+  {
+    "name": "BDX",
+    "Value": -0.000353738
+  },
+  {
+    "name": "BE",
+    "Value": 0.286056233
+  },
+  {
+    "name": "BEN",
+    "Value": 0.014621176
+  },
+  {
+    "name": "BERY",
+    "Value": 0.061904172
+  },
+  {
+    "name": "BFAM",
+    "Value": 0.158120943
+  },
+  {
+    "name": "BG",
+    "Value": 0.079826904
+  },
+  {
+    "name": "BHC",
+    "Value": -0.077114912
+  },
+  {
+    "name": "BHF",
+    "Value": -0.092443564
+  },
+  {
+    "name": "BHVN",
+    "Value": 0.01568239
+  },
+  {
+    "name": "BIIB",
+    "Value": -0.024761669
+  },
+  {
+    "name": "BIO",
+    "Value": 0.100697454
+  },
+  {
+    "name": "BJ",
+    "Value": 0.000471651
+  },
+  {
+    "name": "BK",
+    "Value": -0.010612144
+  },
+  {
+    "name": "BKH",
+    "Value": -0.006603112
+  },
+  {
+    "name": "BKI",
+    "Value": 0.021813851
+  },
+  {
+    "name": "BKNG",
+    "Value": -0.056833926
+  },
+  {
+    "name": "BKR",
+    "Value": -0.090203223
+  },
+  {
+    "name": "BKU",
+    "Value": 0.060017569
+  },
+  {
+    "name": "BL",
+    "Value": 0.138429521
+  },
+  {
+    "name": "BLD",
+    "Value": 0.255398928
+  },
+  {
+    "name": "BLDP",
+    "Value": 0.033369297
+  },
+  {
+    "name": "BLDR",
+    "Value": 0.205639765
+  },
+  {
+    "name": "BLK",
+    "Value": 0.005306072
+  },
+  {
+    "name": "BLKB",
+    "Value": -0.076643261
+  },
+  {
+    "name": "BLL",
+    "Value": 0.037732067
+  },
+  {
+    "name": "BLUE",
+    "Value": -0.027827399
+  },
+  {
+    "name": "BMCH",
+    "Value": 0.346545452
+  },
+  {
+    "name": "BMO",
+    "Value": 0.080298555
+  },
+  {
+    "name": "BMRN",
+    "Value": -0.081241857
+  },
+  {
+    "name": "BNS",
+    "Value": -0.003773207
+  },
+  {
+    "name": "BOH",
+    "Value": -0.003891119
+  },
+  {
+    "name": "BOKF",
+    "Value": -0.014503263
+  },
+  {
+    "name": "BPMC",
+    "Value": 0.219907203
+  },
+  {
+    "name": "BPOP",
+    "Value": -0.024172105
+  },
+  {
+    "name": "BR",
+    "Value": 0.031011043
+  },
+  {
+    "name": "BRC",
+    "Value": -0.075228308
+  },
+  {
+    "name": "BRK/A",
+    "Value": 0.029478177
+  },
+  {
+    "name": "BRK/B",
+    "Value": 0.023582542
+  },
+  {
+    "name": "BRKR",
+    "Value": -0.059545918
+  },
+  {
+    "name": "BRKS",
+    "Value": 0.089495746
+  },
+  {
+    "name": "BRO",
+    "Value": 0.074049181
+  },
+  {
+    "name": "BRX",
+    "Value": -0.025822883
+  },
+  {
+    "name": "BSX",
+    "Value": -0.017215256
+  },
+  {
+    "name": "BTG",
+    "Value": 0.015328652
+  },
+  {
+    "name": "BURL",
+    "Value": 0.07310588
+  },
+  {
+    "name": "BWA",
+    "Value": 0.007546413
+  },
+  {
+    "name": "BWXT",
+    "Value": 0.078294039
+  },
+  {
+    "name": "BX",
+    "Value": -0.007310588
+  },
+  {
+    "name": "BXMT",
+    "Value": -0.035491725
+  },
+  {
+    "name": "BXP",
+    "Value": -0.036788765
+  },
+  {
+    "name": "BXS",
+    "Value": -0.065677379
+  },
+  {
+    "name": "BYD",
+    "Value": 0.270138017
+  },
+  {
+    "name": "C",
+    "Value": -0.074285007
+  },
+  {
+    "name": "CABO",
+    "Value": 0.000117913
+  },
+  {
+    "name": "CACC",
+    "Value": -0.007782239
+  },
+  {
+    "name": "CACI",
+    "Value": -0.072987967
+  },
+  {
+    "name": "CAE",
+    "Value": -0.001061214
+  },
+  {
+    "name": "CAG",
+    "Value": 0.08053438
+  },
+  {
+    "name": "CARG",
+    "Value": -0.116851495
+  },
+  {
+    "name": "CASY",
+    "Value": 0.1057677
+  },
+  {
+    "name": "CAT",
+    "Value": 0.078529864
+  },
+  {
+    "name": "CB",
+    "Value": -0.000235825
+  },
+  {
+    "name": "CBOE",
+    "Value": -0.031364781
+  },
+  {
+    "name": "CBPO",
+    "Value": 0.007074763
+  },
+  {
+    "name": "CBRE",
+    "Value": 0.04350979
+  },
+  {
+    "name": "CBRL",
+    "Value": 0.041976924
+  },
+  {
+    "name": "CBSH",
+    "Value": -0.008135977
+  },
+  {
+    "name": "CBT",
+    "Value": -0.091618175
+  },
+  {
+    "name": "CBU",
+    "Value": -0.059545918
+  },
+  {
+    "name": "CC",
+    "Value": 0.092325651
+  },
+  {
+    "name": "CCC",
+    "Value": 0.02393628
+  },
+  {
+    "name": "CCEP",
+    "Value": -0.013795787
+  },
+  {
+    "name": "CCI",
+    "Value": 0.001650778
+  },
+  {
+    "name": "CCJ",
+    "Value": -0.009786755
+  },
+  {
+    "name": "CCK",
+    "Value": 0.042802313
+  },
+  {
+    "name": "CCL",
+    "Value": -0.053886108
+  },
+  {
+    "name": "CCMP",
+    "Value": 0
+  },
+  {
+    "name": "CCOI",
+    "Value": -0.055536886
+  },
+  {
+    "name": "CCXI",
+    "Value": 0.072870054
+  },
+  {
+    "name": "CDAY",
+    "Value": 0.08053438
+  },
+  {
+    "name": "CDK",
+    "Value": 0.057305577
+  },
+  {
+    "name": "CDNS",
+    "Value": 0.115200717
+  },
+  {
+    "name": "CDW",
+    "Value": 0.004009032
+  },
+  {
+    "name": "CE",
+    "Value": 0.116144019
+  },
+  {
+    "name": "CENT",
+    "Value": 0.083953849
+  },
+  {
+    "name": "CERN",
+    "Value": -0.006838937
+  },
+  {
+    "name": "CF",
+    "Value": -0.006131461
+  },
+  {
+    "name": "CFG",
+    "Value": -0.035845464
+  },
+  {
+    "name": "CFR",
+    "Value": -0.00695685
+  },
+  {
+    "name": "CFX",
+    "Value": 0.068978935
+  },
+  {
+    "name": "CG",
+    "Value": -0.0213422
+  },
+  {
+    "name": "CGC",
+    "Value": -0.107536391
+  },
+  {
+    "name": "CGNX",
+    "Value": 0.098339199
+  },
+  {
+    "name": "CHD",
+    "Value": 0.109776732
+  },
+  {
+    "name": "CHDN",
+    "Value": 0.110484209
+  },
+  {
+    "name": "CHE",
+    "Value": 0.012027096
+  },
+  {
+    "name": "CHGG",
+    "Value": 0.076879086
+  },
+  {
+    "name": "CHH",
+    "Value": -0.002476167
+  },
+  {
+    "name": "CHKP",
+    "Value": 0.039382845
+  },
+  {
+    "name": "CHRW",
+    "Value": 0.189603636
+  },
+  {
+    "name": "CHTR",
+    "Value": 0.116615669
+  },
+  {
+    "name": "CI",
+    "Value": -0.000707476
+  },
+  {
+    "name": "CIEN",
+    "Value": -0.098928763
+  },
+  {
+    "name": "CIGI",
+    "Value": 0.106593089
+  },
+  {
+    "name": "CIM",
+    "Value": -0.026884098
+  },
+  {
+    "name": "CINF",
+    "Value": 0.008607628
+  },
+  {
+    "name": "CL",
+    "Value": 0.026412447
+  },
+  {
+    "name": "CLDR",
+    "Value": 0.00129704
+  },
+  {
+    "name": "CLGX",
+    "Value": 0.016743605
+  },
+  {
+    "name": "CLH",
+    "Value": -0.003655294
+  },
+  {
+    "name": "CLR",
+    "Value": -0.089024095
+  },
+  {
+    "name": "CLX",
+    "Value": 0.05919218
+  },
+  {
+    "name": "CMA",
+    "Value": -0.010494231
+  },
+  {
+    "name": "CMC",
+    "Value": 0.087137492
+  },
+  {
+    "name": "CMCSA",
+    "Value": 0.059310093
+  },
+  {
+    "name": "CME",
+    "Value": -0.009550929
+  },
+  {
+    "name": "CMG",
+    "Value": 0.117558971
+  },
+  {
+    "name": "CMI",
+    "Value": 0.146919236
+  },
+  {
+    "name": "CMP",
+    "Value": 0.082303071
+  },
+  {
+    "name": "CMS",
+    "Value": 0.017097343
+  },
+  {
+    "name": "CNA",
+    "Value": -0.000589564
+  },
+  {
+    "name": "CNC",
+    "Value": -0.001886603
+  },
+  {
+    "name": "CNHI",
+    "Value": 0.043863528
+  },
+  {
+    "name": "CNI",
+    "Value": 0.016389867
+  },
+  {
+    "name": "CNMD",
+    "Value": -0.072987967
+  },
+  {
+    "name": "CNNE",
+    "Value": -0.006367286
+  },
+  {
+    "name": "CNO",
+    "Value": 0.044924742
+  },
+  {
+    "name": "CNP",
+    "Value": -0.075228308
+  },
+  {
+    "name": "CNQ",
+    "Value": -0.086076278
+  },
+  {
+    "name": "CNS",
+    "Value": -0.005070246
+  },
+  {
+    "name": "CNX",
+    "Value": 0.039854496
+  },
+  {
+    "name": "COF",
+    "Value": 0.091146524
+  },
+  {
+    "name": "COG",
+    "Value": -0.023818367
+  },
+  {
+    "name": "COHR",
+    "Value": -0.047047171
+  },
+  {
+    "name": "COKE",
+    "Value": -0.086076278
+  },
+  {
+    "name": "COLD",
+    "Value": -0.000117913
+  },
+  {
+    "name": "COLM",
+    "Value": 0.134538401
+  },
+  {
+    "name": "CONE",
+    "Value": -0.082185158
+  },
+  {
+    "name": "COO",
+    "Value": 0.124162083
+  },
+  {
+    "name": "COP",
+    "Value": -0.047754647
+  },
+  {
+    "name": "COR",
+    "Value": -0.001061214
+  },
+  {
+    "name": "CORT",
+    "Value": 0.109422994
+  },
+  {
+    "name": "COST",
+    "Value": 0.000707476
+  },
+  {
+    "name": "COTY",
+    "Value": -0.010494231
+  },
+  {
+    "name": "COUP",
+    "Value": 0.005423985
+  },
+  {
+    "name": "CP",
+    "Value": 0.131944322
+  },
+  {
+    "name": "CPA",
+    "Value": 0.149984966
+  },
+  {
+    "name": "CPRI",
+    "Value": 0.164606142
+  },
+  {
+    "name": "CPRT",
+    "Value": 0.07440292
+  },
+  {
+    "name": "CPT",
+    "Value": 0.002004516
+  },
+  {
+    "name": "CR",
+    "Value": -0.065559466
+  },
+  {
+    "name": "CREE",
+    "Value": 0.099518327
+  },
+  {
+    "name": "CRI",
+    "Value": 0.030539392
+  },
+  {
+    "name": "CRL",
+    "Value": 0.177340715
+  },
+  {
+    "name": "CRM",
+    "Value": 0.185240866
+  },
+  {
+    "name": "CROX",
+    "Value": 0.241838967
+  },
+  {
+    "name": "CRSP",
+    "Value": 0.048815862
+  },
+  {
+    "name": "CRUS",
+    "Value": 0.051174116
+  },
+  {
+    "name": "CSCO",
+    "Value": -0.079826904
+  },
+  {
+    "name": "CSGP",
+    "Value": 0.021224288
+  },
+  {
+    "name": "CSL",
+    "Value": -0.067681895
+  },
+  {
+    "name": "CSOD",
+    "Value": -0.02523332
+  },
+  {
+    "name": "CSX",
+    "Value": 0.019691422
+  },
+  {
+    "name": "CTAS",
+    "Value": 0.053414457
+  },
+  {
+    "name": "CTLT",
+    "Value": 0.097277985
+  },
+  {
+    "name": "CTSH",
+    "Value": 0.141259426
+  },
+  {
+    "name": "CTXS",
+    "Value": 0.005777723
+  },
+  {
+    "name": "CUBE",
+    "Value": 0.023110891
+  },
+  {
+    "name": "CUZ",
+    "Value": -0.05353237
+  },
+  {
+    "name": "CVBF",
+    "Value": -0.000353738
+  },
+  {
+    "name": "CVE",
+    "Value": -0.069450586
+  },
+  {
+    "name": "CVNA",
+    "Value": 0.289947352
+  },
+  {
+    "name": "CVS",
+    "Value": -0.023700455
+  },
+  {
+    "name": "CVX",
+    "Value": -0.079001515
+  },
+  {
+    "name": "CW",
+    "Value": -0.019219772
+  },
+  {
+    "name": "CWEN",
+    "Value": 0.075582047
+  },
+  {
+    "name": "CWH",
+    "Value": 0.15800303
+  },
+  {
+    "name": "CWK",
+    "Value": -0.041859012
+  },
+  {
+    "name": "CWST",
+    "Value": 0.001061214
+  },
+  {
+    "name": "CWT",
+    "Value": -0.001532865
+  },
+  {
+    "name": "CXO",
+    "Value": -0.055418973
+  },
+  {
+    "name": "CYBR",
+    "Value": -0.062611649
+  },
+  {
+    "name": "CZR",
+    "Value": 0.336522872
+  },
+  {
+    "name": "CZZ",
+    "Value": -0.042566488
+  },
+  {
+    "name": "D",
+    "Value": -0.012027096
+  },
+  {
+    "name": "DAL",
+    "Value": 0.068978935
+  },
+  {
+    "name": "DAR",
+    "Value": 0.11531863
+  },
+  {
+    "name": "DB",
+    "Value": -0.076289523
+  },
+  {
+    "name": "DBX",
+    "Value": -0.082892635
+  },
+  {
+    "name": "DCI",
+    "Value": -0.084897151
+  },
+  {
+    "name": "DCPH",
+    "Value": 0.085604627
+  },
+  {
+    "name": "DD",
+    "Value": 0.000235825
+  },
+  {
+    "name": "DE",
+    "Value": 0.229929783
+  },
+  {
+    "name": "DECK",
+    "Value": 0.043156052
+  },
+  {
+    "name": "DEI",
+    "Value": -0.001061214
+  },
+  {
+    "name": "DFS",
+    "Value": 0.092915215
+  },
+  {
+    "name": "DG",
+    "Value": 0.096216771
+  },
+  {
+    "name": "DGX",
+    "Value": 0.064734077
+  },
+  {
+    "name": "DHI",
+    "Value": 0.111781248
+  },
+  {
+    "name": "DHR",
+    "Value": 0.070629713
+  },
+  {
+    "name": "DIOD",
+    "Value": 0.056833926
+  },
+  {
+    "name": "DIS",
+    "Value": 0.086312103
+  },
+  {
+    "name": "DISCA",
+    "Value": -0.024407931
+  },
+  {
+    "name": "DISCK",
+    "Value": -0.020045161
+  },
+  {
+    "name": "DISH",
+    "Value": -0.038203718
+  },
+  {
+    "name": "DKS",
+    "Value": 0.298437067
+  },
+  {
+    "name": "DLB",
+    "Value": 0
+  },
+  {
+    "name": "DLR",
+    "Value": -0.000235825
+  },
+  {
+    "name": "DLTR",
+    "Value": 0.095391382
+  },
+  {
+    "name": "DNKN",
+    "Value": 0.179227318
+  },
+  {
+    "name": "DNLI",
+    "Value": 0.27898147
+  },
+  {
+    "name": "DOC",
+    "Value": 0.051409941
+  },
+  {
+    "name": "DOCU",
+    "Value": 0.096098858
+  },
+  {
+    "name": "DOOO",
+    "Value": 0.209648797
+  },
+  {
+    "name": "DOOR",
+    "Value": 0.165077793
+  },
+  {
+    "name": "DORM",
+    "Value": 0.132180147
+  },
+  {
+    "name": "DOV",
+    "Value": 0.051999505
+  },
+  {
+    "name": "DOX",
+    "Value": -0.021813851
+  },
+  {
+    "name": "DPZ",
+    "Value": 0.00872554
+  },
+  {
+    "name": "DRE",
+    "Value": 0.005777723
+  },
+  {
+    "name": "DRI",
+    "Value": 0.234646291
+  },
+  {
+    "name": "DSGX",
+    "Value": 0.092915215
+  },
+  {
+    "name": "DTE",
+    "Value": 0.055065235
+  },
+  {
+    "name": "DUK",
+    "Value": -0.016625692
+  },
+  {
+    "name": "DVA",
+    "Value": 0.005541897
+  },
+  {
+    "name": "DVN",
+    "Value": -0.048697949
+  },
+  {
+    "name": "DXC",
+    "Value": -0.113432026
+  },
+  {
+    "name": "DXCM",
+    "Value": 0.000235825
+  },
+  {
+    "name": "EA",
+    "Value": 0.064969903
+  },
+  {
+    "name": "EAF",
+    "Value": 0.091146524
+  },
+  {
+    "name": "EAT",
+    "Value": 0.399370346
+  },
+  {
+    "name": "EBAY",
+    "Value": 0.071219276
+  },
+  {
+    "name": "EBS",
+    "Value": 0.10010789
+  },
+  {
+    "name": "ECL",
+    "Value": 0
+  },
+  {
+    "name": "ED",
+    "Value": 0.017804819
+  },
+  {
+    "name": "EDIT",
+    "Value": 0.009315104
+  },
+  {
+    "name": "EEFT",
+    "Value": -0.034784249
+  },
+  {
+    "name": "EFX",
+    "Value": 0.000117913
+  },
+  {
+    "name": "EGO",
+    "Value": 0.04527848
+  },
+  {
+    "name": "EGP",
+    "Value": 0.057423489
+  },
+  {
+    "name": "EHC",
+    "Value": -0.075699959
+  },
+  {
+    "name": "EIX",
+    "Value": 0.005423985
+  },
+  {
+    "name": "EL",
+    "Value": 0.03784998
+  },
+  {
+    "name": "ELS",
+    "Value": 0
+  },
+  {
+    "name": "EME",
+    "Value": -0.06614903
+  },
+  {
+    "name": "EMN",
+    "Value": 0.045632218
+  },
+  {
+    "name": "EMR",
+    "Value": 0.007310588
+  },
+  {
+    "name": "ENB",
+    "Value": -0.000825389
+  },
+  {
+    "name": "ENPH",
+    "Value": 0.087609143
+  },
+  {
+    "name": "ENR",
+    "Value": -0.077940301
+  },
+  {
+    "name": "ENS",
+    "Value": -0.07617161
+  },
+  {
+    "name": "ENSG",
+    "Value": 0.15800303
+  },
+  {
+    "name": "ENTG",
+    "Value": 0.078883602
+  },
+  {
+    "name": "ENV",
+    "Value": 0.077114912
+  },
+  {
+    "name": "EOG",
+    "Value": -0.02263924
+  },
+  {
+    "name": "EPAM",
+    "Value": 0.193612669
+  },
+  {
+    "name": "EPR",
+    "Value": -0.041741099
+  },
+  {
+    "name": "EQC",
+    "Value": -0.041033623
+  },
+  {
+    "name": "EQH",
+    "Value": -0.012970398
+  },
+  {
+    "name": "EQIX",
+    "Value": 0.07876569
+  },
+  {
+    "name": "EQR",
+    "Value": -0.010140493
+  },
+  {
+    "name": "EQT",
+    "Value": 0.006013548
+  },
+  {
+    "name": "EQX",
+    "Value": 0.062139998
+  },
+  {
+    "name": "ERIE",
+    "Value": 0.014267438
+  },
+  {
+    "name": "ES",
+    "Value": -0.000235825
+  },
+  {
+    "name": "ESE",
+    "Value": -0.00129704
+  },
+  {
+    "name": "ESGR",
+    "Value": -0.065205728
+  },
+  {
+    "name": "ESLT",
+    "Value": -0.050584552
+  },
+  {
+    "name": "ESNT",
+    "Value": 0.093740604
+  },
+  {
+    "name": "ESS",
+    "Value": -0.041741099
+  },
+  {
+    "name": "ETN",
+    "Value": 0.103527359
+  },
+  {
+    "name": "ETR",
+    "Value": 0.000353738
+  },
+  {
+    "name": "ETSY",
+    "Value": 0.103763184
+  },
+  {
+    "name": "EURN",
+    "Value": -0.085132976
+  },
+  {
+    "name": "EV",
+    "Value": -0.06048922
+  },
+  {
+    "name": "EVBG",
+    "Value": 0.009315104
+  },
+  {
+    "name": "EVR",
+    "Value": 0.092325651
+  },
+  {
+    "name": "EVRG",
+    "Value": -0.076879086
+  },
+  {
+    "name": "EVTC",
+    "Value": 0.145504283
+  },
+  {
+    "name": "EW",
+    "Value": 0.003419469
+  },
+  {
+    "name": "EWBC",
+    "Value": -0.058720529
+  },
+  {
+    "name": "EXAS",
+    "Value": 0.105178137
+  },
+  {
+    "name": "EXC",
+    "Value": -0.032425995
+  },
+  {
+    "name": "EXEL",
+    "Value": 0.093622691
+  },
+  {
+    "name": "EXLS",
+    "Value": 0.057069751
+  },
+  {
+    "name": "EXP",
+    "Value": 0.099164588
+  },
+  {
+    "name": "EXPD",
+    "Value": 0.040679885
+  },
+  {
+    "name": "EXPE",
+    "Value": 0.090910699
+  },
+  {
+    "name": "EXPI",
+    "Value": 0.491460172
+  },
+  {
+    "name": "EXPO",
+    "Value": -0.000235825
+  },
+  {
+    "name": "EXR",
+    "Value": 0.009433017
+  },
+  {
+    "name": "EYE",
+    "Value": 0.176751151
+  },
+  {
+    "name": "FAF",
+    "Value": -0.003773207
+  },
+  {
+    "name": "FANG",
+    "Value": -0.098221287
+  },
+  {
+    "name": "FAST",
+    "Value": 0.095037644
+  },
+  {
+    "name": "FATE",
+    "Value": 0.137132481
+  },
+  {
+    "name": "FB",
+    "Value": 0.104116922
+  },
+  {
+    "name": "FBHS",
+    "Value": 0.055772711
+  },
+  {
+    "name": "FCAU",
+    "Value": 0.16319119
+  },
+  {
+    "name": "FCFS",
+    "Value": -0.053296545
+  },
+  {
+    "name": "FCN",
+    "Value": -0.005306072
+  },
+  {
+    "name": "FCNCA",
+    "Value": -0.013206223
+  },
+  {
+    "name": "FCX",
+    "Value": 0.049523338
+  },
+  {
+    "name": "FDS",
+    "Value": 0.07487457
+  },
+  {
+    "name": "FDX",
+    "Value": 0.371189209
+  },
+  {
+    "name": "FE",
+    "Value": -0.047518822
+  },
+  {
+    "name": "FELE",
+    "Value": 0.058838442
+  },
+  {
+    "name": "FFIN",
+    "Value": -0.021106375
+  },
+  {
+    "name": "FFIV",
+    "Value": -0.006013548
+  },
+  {
+    "name": "FGEN",
+    "Value": 0.003773207
+  },
+  {
+    "name": "FHI",
+    "Value": -0.005423985
+  },
+  {
+    "name": "FHN",
+    "Value": -0.02653036
+  },
+  {
+    "name": "FICO",
+    "Value": 0.035373813
+  },
+  {
+    "name": "FIS",
+    "Value": 0.006721024
+  },
+  {
+    "name": "FISV",
+    "Value": 0.02700201
+  },
+  {
+    "name": "FITB",
+    "Value": 0.087373318
+  },
+  {
+    "name": "FIVE",
+    "Value": 0.221440068
+  },
+  {
+    "name": "FIVN",
+    "Value": 0.031246868
+  },
+  {
+    "name": "FIZZ",
+    "Value": 0.092915215
+  },
+  {
+    "name": "FL",
+    "Value": 0.082892635
+  },
+  {
+    "name": "FLEX",
+    "Value": 0.003773207
+  },
+  {
+    "name": "FLIR",
+    "Value": -0.078176126
+  },
+  {
+    "name": "FLO",
+    "Value": 0.006367286
+  },
+  {
+    "name": "FLS",
+    "Value": -0.090792786
+  },
+  {
+    "name": "FLT",
+    "Value": -0.074756658
+  },
+  {
+    "name": "FMC",
+    "Value": 0.059781744
+  },
+  {
+    "name": "FN",
+    "Value": -0.051645767
+  },
+  {
+    "name": "FNB",
+    "Value": -0.053296545
+  },
+  {
+    "name": "FND",
+    "Value": 0.134774227
+  },
+  {
+    "name": "FNF",
+    "Value": -0.052824894
+  },
+  {
+    "name": "FNV",
+    "Value": 0.047400909
+  },
+  {
+    "name": "FOCS",
+    "Value": 0.075582047
+  },
+  {
+    "name": "FOLD",
+    "Value": 0.037024591
+  },
+  {
+    "name": "FOXF",
+    "Value": -0.015328652
+  },
+  {
+    "name": "FR",
+    "Value": 0.000589564
+  },
+  {
+    "name": "FRPT",
+    "Value": 0.12663825
+  },
+  {
+    "name": "FRT",
+    "Value": -0.107418478
+  },
+  {
+    "name": "FSLR",
+    "Value": 0.042802313
+  },
+  {
+    "name": "FSV",
+    "Value": 0.18583043
+  },
+  {
+    "name": "FTDR",
+    "Value": -0.08006273
+  },
+  {
+    "name": "FTI",
+    "Value": -0.124633734
+  },
+  {
+    "name": "FTNT",
+    "Value": -0.001532865
+  },
+  {
+    "name": "FTS",
+    "Value": 0.054947322
+  },
+  {
+    "name": "FTV",
+    "Value": 0.049287512
+  },
+  {
+    "name": "FUL",
+    "Value": 0.056362275
+  },
+  {
+    "name": "FWONA",
+    "Value": 0.006603112
+  },
+  {
+    "name": "FWONK",
+    "Value": 0.074520832
+  },
+  {
+    "name": "G",
+    "Value": 0.076879086
+  },
+  {
+    "name": "GATX",
+    "Value": -0.034194686
+  },
+  {
+    "name": "GBCI",
+    "Value": -0.073931269
+  },
+  {
+    "name": "GBDC",
+    "Value": 0.041033623
+  },
+  {
+    "name": "GBT",
+    "Value": -0.008843453
+  },
+  {
+    "name": "GD",
+    "Value": -0.002358254
+  },
+  {
+    "name": "GDDY",
+    "Value": 0.047282996
+  },
+  {
+    "name": "GDOT",
+    "Value": 0.022403415
+  },
+  {
+    "name": "GE",
+    "Value": -0.074638745
+  },
+  {
+    "name": "GEF",
+    "Value": 0.083600111
+  },
+  {
+    "name": "GGG",
+    "Value": 0.156941816
+  },
+  {
+    "name": "GHC",
+    "Value": 0.124987472
+  },
+  {
+    "name": "GIB",
+    "Value": -0.006721024
+  },
+  {
+    "name": "GIL",
+    "Value": 0.052824894
+  },
+  {
+    "name": "GILD",
+    "Value": -0.076407436
+  },
+  {
+    "name": "GIS",
+    "Value": -0.000117913
+  },
+  {
+    "name": "GKOS",
+    "Value": 0.048108385
+  },
+  {
+    "name": "GL",
+    "Value": -0.020398899
+  },
+  {
+    "name": "GLOB",
+    "Value": 0.125105384
+  },
+  {
+    "name": "GLPI",
+    "Value": 0.08312846
+  },
+  {
+    "name": "GLW",
+    "Value": 0.081595595
+  },
+  {
+    "name": "GM",
+    "Value": 0.121096352
+  },
+  {
+    "name": "GMED",
+    "Value": -0.078883602
+  },
+  {
+    "name": "GNRC",
+    "Value": 0.001179127
+  },
+  {
+    "name": "GNTX",
+    "Value": -0.072044665
+  },
+  {
+    "name": "GOLD",
+    "Value": 0.111781248
+  },
+  {
+    "name": "GOLF",
+    "Value": 0.074992483
+  },
+  {
+    "name": "GOOG",
+    "Value": 0.006485199
+  },
+  {
+    "name": "GOOGL",
+    "Value": -0.019337684
+  },
+  {
+    "name": "GOOS",
+    "Value": 0.168025611
+  },
+  {
+    "name": "GPC",
+    "Value": 0.073341705
+  },
+  {
+    "name": "GPK",
+    "Value": -0.005777723
+  },
+  {
+    "name": "GPN",
+    "Value": 0.041387361
+  },
+  {
+    "name": "GPS",
+    "Value": 0.234174641
+  },
+  {
+    "name": "GRA",
+    "Value": -0.018040645
+  },
+  {
+    "name": "GRMN",
+    "Value": -0.076879086
+  },
+  {
+    "name": "GRUB",
+    "Value": 0.124633734
+  },
+  {
+    "name": "GS",
+    "Value": -0.000353738
+  },
+  {
+    "name": "GSHD",
+    "Value": 0.103291533
+  },
+  {
+    "name": "GTES",
+    "Value": 0.025115407
+  },
+  {
+    "name": "GTLS",
+    "Value": 0.039972408
+  },
+  {
+    "name": "GWRE",
+    "Value": -0.073813356
+  },
+  {
+    "name": "GWW",
+    "Value": 0.064144514
+  },
+  {
+    "name": "H",
+    "Value": -0.043863528
+  },
+  {
+    "name": "HAE",
+    "Value": 0.076996999
+  },
+  {
+    "name": "HAIN",
+    "Value": 0.116615669
+  },
+  {
+    "name": "HAL",
+    "Value": -0.111309598
+  },
+  {
+    "name": "HALO",
+    "Value": 0.085250889
+  },
+  {
+    "name": "HAS",
+    "Value": 0.05223533
+  },
+  {
+    "name": "HASI",
+    "Value": 0.108715518
+  },
+  {
+    "name": "HBAN",
+    "Value": -0.052353243
+  },
+  {
+    "name": "HBI",
+    "Value": 0.192079803
+  },
+  {
+    "name": "HCA",
+    "Value": 0.081123944
+  },
+  {
+    "name": "HD",
+    "Value": 0.02087055
+  },
+  {
+    "name": "HDS",
+    "Value": 0.140905688
+  },
+  {
+    "name": "HE",
+    "Value": -0.000353738
+  },
+  {
+    "name": "HEI",
+    "Value": 0.015918216
+  },
+  {
+    "name": "HELE",
+    "Value": 0.022285502
+  },
+  {
+    "name": "HES",
+    "Value": -0.036435027
+  },
+  {
+    "name": "HFC",
+    "Value": -0.083246373
+  },
+  {
+    "name": "HHC",
+    "Value": -0.074992483
+  },
+  {
+    "name": "HI",
+    "Value": -0.059781744
+  },
+  {
+    "name": "HIG",
+    "Value": -0.030067741
+  },
+  {
+    "name": "HII",
+    "Value": -0.06614903
+  },
+  {
+    "name": "HIW",
+    "Value": -0.002004516
+  },
+  {
+    "name": "HL",
+    "Value": 0.039854496
+  },
+  {
+    "name": "HLF",
+    "Value": 0.064616165
+  },
+  {
+    "name": "HLI",
+    "Value": 0.042920226
+  },
+  {
+    "name": "HLNE",
+    "Value": -0.074049181
+  },
+  {
+    "name": "HLT",
+    "Value": 0.091028612
+  },
+  {
+    "name": "HMSY",
+    "Value": -0.081713507
+  },
+  {
+    "name": "HOG",
+    "Value": -0.073341705
+  },
+  {
+    "name": "HOLX",
+    "Value": 0.082067246
+  },
+  {
+    "name": "HOMB",
+    "Value": -0.004126945
+  },
+  {
+    "name": "HON",
+    "Value": 0.034784249
+  },
+  {
+    "name": "HPE",
+    "Value": -0.033487209
+  },
+  {
+    "name": "HPP",
+    "Value": -0.047400909
+  },
+  {
+    "name": "HPQ",
+    "Value": 0.086783754
+  },
+  {
+    "name": "HQY",
+    "Value": -0.048697949
+  },
+  {
+    "name": "HR",
+    "Value": 0.011201707
+  },
+  {
+    "name": "HRB",
+    "Value": 0.079001515
+  },
+  {
+    "name": "HRC",
+    "Value": -0.012970398
+  },
+  {
+    "name": "HRL",
+    "Value": 0.046339695
+  },
+  {
+    "name": "HSIC",
+    "Value": -0.07180884
+  },
+  {
+    "name": "HST",
+    "Value": -0.079591079
+  },
+  {
+    "name": "HSY",
+    "Value": 0.002476167
+  },
+  {
+    "name": "HTA",
+    "Value": -0.008961366
+  },
+  {
+    "name": "HUBB",
+    "Value": 0.075935785
+  },
+  {
+    "name": "HUBS",
+    "Value": 0.223208759
+  },
+  {
+    "name": "HUM",
+    "Value": 0.053296545
+  },
+  {
+    "name": "HUN",
+    "Value": 0.133830925
+  },
+  {
+    "name": "HXL",
+    "Value": -0.088670357
+  },
+  {
+    "name": "HZNP",
+    "Value": 0.319425529
+  },
+  {
+    "name": "IAC",
+    "Value": -0.081477682
+  },
+  {
+    "name": "IART",
+    "Value": 0.004716508
+  },
+  {
+    "name": "IBKR",
+    "Value": 0.079119428
+  },
+  {
+    "name": "IBM",
+    "Value": -0.001650778
+  },
+  {
+    "name": "IBP",
+    "Value": 0.288414487
+  },
+  {
+    "name": "ICE",
+    "Value": 0.022167589
+  },
+  {
+    "name": "ICL",
+    "Value": 0.082303071
+  },
+  {
+    "name": "ICLR",
+    "Value": 0.064262427
+  },
+  {
+    "name": "ICUI",
+    "Value": -0.070158062
+  },
+  {
+    "name": "IDA",
+    "Value": -0.001414953
+  },
+  {
+    "name": "IDXX",
+    "Value": 0.049877076
+  },
+  {
+    "name": "IEX",
+    "Value": 0.084071762
+  },
+  {
+    "name": "IFF",
+    "Value": -0.056362275
+  },
+  {
+    "name": "IGT",
+    "Value": 0.068389371
+  },
+  {
+    "name": "IIPR",
+    "Value": 0.094801818
+  },
+  {
+    "name": "IIVI",
+    "Value": 0.075582047
+  },
+  {
+    "name": "ILMN",
+    "Value": -0.091146524
+  },
+  {
+    "name": "IMMU",
+    "Value": 1.191507927
+  },
+  {
+    "name": "IMO",
+    "Value": -0.11272455
+  },
+  {
+    "name": "INCY",
+    "Value": -0.001650778
+  },
+  {
+    "name": "INFO",
+    "Value": 0.043038139
+  },
+  {
+    "name": "INGR",
+    "Value": -0.077704475
+  },
+  {
+    "name": "INO",
+    "Value": 0.191961891
+  },
+  {
+    "name": "INOV",
+    "Value": 0.126402424
+  },
+  {
+    "name": "INSM",
+    "Value": 0.197032137
+  },
+  {
+    "name": "INSP",
+    "Value": 0.296432551
+  },
+  {
+    "name": "INTC",
+    "Value": -0.000353738
+  },
+  {
+    "name": "INTU",
+    "Value": 0.060842958
+  },
+  {
+    "name": "INVH",
+    "Value": 0.000235825
+  },
+  {
+    "name": "IONS",
+    "Value": -0.092679389
+  },
+  {
+    "name": "IOVA",
+    "Value": 0.110720034
+  },
+  {
+    "name": "IP",
+    "Value": 0.152107395
+  },
+  {
+    "name": "IPG",
+    "Value": -0.068389371
+  },
+  {
+    "name": "IPGP",
+    "Value": 0.110366296
+  },
+  {
+    "name": "IPHI",
+    "Value": 0.075699959
+  },
+  {
+    "name": "IQV",
+    "Value": 0.016625692
+  },
+  {
+    "name": "IR",
+    "Value": 0.122511305
+  },
+  {
+    "name": "IRBT",
+    "Value": 0.044453091
+  },
+  {
+    "name": "IRDM",
+    "Value": -0.080770206
+  },
+  {
+    "name": "IRM",
+    "Value": -0.092679389
+  },
+  {
+    "name": "IRTC",
+    "Value": 0.451487764
+  },
+  {
+    "name": "ISRG",
+    "Value": 0.059310093
+  },
+  {
+    "name": "IT",
+    "Value": 0.075346221
+  },
+  {
+    "name": "ITCI",
+    "Value": 0.258818397
+  },
+  {
+    "name": "ITRI",
+    "Value": -0.017922732
+  },
+  {
+    "name": "ITT",
+    "Value": 0.011555446
+  },
+  {
+    "name": "ITW",
+    "Value": 0.081006031
+  },
+  {
+    "name": "IVZ",
+    "Value": 0.018040645
+  },
+  {
+    "name": "J",
+    "Value": 0.054711497
+  },
+  {
+    "name": "JAZZ",
+    "Value": 0.203281511
+  },
+  {
+    "name": "JBGS",
+    "Value": -0.039500758
+  },
+  {
+    "name": "JBHT",
+    "Value": 0.025587058
+  },
+  {
+    "name": "JBL",
+    "Value": 0.036670853
+  },
+  {
+    "name": "JBLU",
+    "Value": 0.095155556
+  },
+  {
+    "name": "JBT",
+    "Value": 0.065795292
+  },
+  {
+    "name": "JCI",
+    "Value": 0.058484704
+  },
+  {
+    "name": "JCOM",
+    "Value": 0.077114912
+  },
+  {
+    "name": "JEF",
+    "Value": 0.116851495
+  },
+  {
+    "name": "JELD",
+    "Value": 0.143499767
+  },
+  {
+    "name": "JHG",
+    "Value": 0.003301556
+  },
+  {
+    "name": "JJSF",
+    "Value": 0.012262922
+  },
+  {
+    "name": "JKHY",
+    "Value": -0.018512295
+  },
+  {
+    "name": "JLL",
+    "Value": -0.013442049
+  },
+  {
+    "name": "JNJ",
+    "Value": 0.025115407
+  },
+  {
+    "name": "JNPR",
+    "Value": -0.079001515
+  },
+  {
+    "name": "JPM",
+    "Value": -0.012027096
+  },
+  {
+    "name": "JWN",
+    "Value": -0.033723035
+  },
+  {
+    "name": "K",
+    "Value": -0.015564478
+  },
+  {
+    "name": "KBH",
+    "Value": 0.066266943
+  },
+  {
+    "name": "KBR",
+    "Value": -0.077350737
+  },
+  {
+    "name": "KDP",
+    "Value": -0.073577531
+  },
+  {
+    "name": "KEX",
+    "Value": -0.026412447
+  },
+  {
+    "name": "KEY",
+    "Value": -0.00129704
+  },
+  {
+    "name": "KEYS",
+    "Value": 0.079001515
+  },
+  {
+    "name": "KHC",
+    "Value": -0.102584057
+  },
+  {
+    "name": "KIM",
+    "Value": -0.001414953
+  },
+  {
+    "name": "KKR",
+    "Value": 0.093740604
+  },
+  {
+    "name": "KL",
+    "Value": 0.120624702
+  },
+  {
+    "name": "KLAC",
+    "Value": 0.084307587
+  },
+  {
+    "name": "KMB",
+    "Value": 0.023582542
+  },
+  {
+    "name": "KMI",
+    "Value": -0.003891119
+  },
+  {
+    "name": "KMPR",
+    "Value": -0.076996999
+  },
+  {
+    "name": "KMT",
+    "Value": 0.088080794
+  },
+  {
+    "name": "KMX",
+    "Value": 0.085015063
+  },
+  {
+    "name": "KNSL",
+    "Value": 0.095627207
+  },
+  {
+    "name": "KNX",
+    "Value": 0.062139998
+  },
+  {
+    "name": "KO",
+    "Value": 0.035020075
+  },
+  {
+    "name": "KR",
+    "Value": 0.059663831
+  },
+  {
+    "name": "KRC",
+    "Value": -0.062729561
+  },
+  {
+    "name": "KRNT",
+    "Value": 0.028416963
+  },
+  {
+    "name": "KSS",
+    "Value": -0.0491696
+  },
+  {
+    "name": "KSU",
+    "Value": 0.08006273
+  },
+  {
+    "name": "KTOS",
+    "Value": 0.013088311
+  },
+  {
+    "name": "KW",
+    "Value": -0.000589564
+  },
+  {
+    "name": "KWR",
+    "Value": -0.081123944
+  },
+  {
+    "name": "L",
+    "Value": -0.007310588
+  },
+  {
+    "name": "LAD",
+    "Value": 0.017568994
+  },
+  {
+    "name": "LAMR",
+    "Value": 0.079708991
+  },
+  {
+    "name": "LANC",
+    "Value": 0.090910699
+  },
+  {
+    "name": "LAUR",
+    "Value": 0.083835936
+  },
+  {
+    "name": "LAZ",
+    "Value": 0.08572254
+  },
+  {
+    "name": "LB",
+    "Value": 0.327443594
+  },
+  {
+    "name": "LBRDA",
+    "Value": 0.038911194
+  },
+  {
+    "name": "LBRDK",
+    "Value": 0.002122429
+  },
+  {
+    "name": "LBTYA",
+    "Value": -0.025940796
+  },
+  {
+    "name": "LBTYK",
+    "Value": -0.012852485
+  },
+  {
+    "name": "LCII",
+    "Value": 0.061904172
+  },
+  {
+    "name": "LEA",
+    "Value": -0.083835936
+  },
+  {
+    "name": "LECO",
+    "Value": 0.077704475
+  },
+  {
+    "name": "LEG",
+    "Value": 0.060960871
+  },
+  {
+    "name": "LEN",
+    "Value": 0.128524853
+  },
+  {
+    "name": "LFUS",
+    "Value": 0.074520832
+  },
+  {
+    "name": "LGIH",
+    "Value": 0.000117913
+  },
+  {
+    "name": "LH",
+    "Value": 0.031364781
+  },
+  {
+    "name": "LHCG",
+    "Value": 0.010376318
+  },
+  {
+    "name": "LHX",
+    "Value": -0.003419469
+  },
+  {
+    "name": "LII",
+    "Value": 0.105178137
+  },
+  {
+    "name": "LIN",
+    "Value": 0.03089313
+  },
+  {
+    "name": "LITE",
+    "Value": -0.004952334
+  },
+  {
+    "name": "LIVN",
+    "Value": -0.083835936
+  },
+  {
+    "name": "LKQ",
+    "Value": -0.071573014
+  },
+  {
+    "name": "LLY",
+    "Value": 0.073341705
+  },
+  {
+    "name": "LMT",
+    "Value": 0.001179127
+  },
+  {
+    "name": "LNC",
+    "Value": -0.002476167
+  },
+  {
+    "name": "LNG",
+    "Value": 0.009904668
+  },
+  {
+    "name": "LNT",
+    "Value": 0.015918216
+  },
+  {
+    "name": "LOGI",
+    "Value": 0.101287017
+  },
+  {
+    "name": "LOPE",
+    "Value": -0.080416468
+  },
+  {
+    "name": "LOW",
+    "Value": 0.037967892
+  },
+  {
+    "name": "LPLA",
+    "Value": 0.035020075
+  },
+  {
+    "name": "LPSN",
+    "Value": 0.171798817
+  },
+  {
+    "name": "LPX",
+    "Value": 0.02263924
+  },
+  {
+    "name": "LRCX",
+    "Value": 0.074756658
+  },
+  {
+    "name": "LSCC",
+    "Value": 0.031011043
+  },
+  {
+    "name": "LSTR",
+    "Value": 0.020280986
+  },
+  {
+    "name": "LSXMA",
+    "Value": -0.045868044
+  },
+  {
+    "name": "LSXMK",
+    "Value": -0.01131962
+  },
+  {
+    "name": "LULU",
+    "Value": 0.081595595
+  },
+  {
+    "name": "LUV",
+    "Value": 0.074285007
+  },
+  {
+    "name": "LVS",
+    "Value": -0.076761174
+  },
+  {
+    "name": "LW",
+    "Value": 0.021460113
+  },
+  {
+    "name": "LXP",
+    "Value": -0.002004516
+  },
+  {
+    "name": "LYB",
+    "Value": 0.076053697
+  },
+  {
+    "name": "M",
+    "Value": -0.061196696
+  },
+  {
+    "name": "MA",
+    "Value": 0.010730057
+  },
+  {
+    "name": "MAA",
+    "Value": 0.024997494
+  },
+  {
+    "name": "MAN",
+    "Value": 0.010140493
+  },
+  {
+    "name": "MANH",
+    "Value": 0.131708496
+  },
+  {
+    "name": "MANT",
+    "Value": -0.062022085
+  },
+  {
+    "name": "MANU",
+    "Value": -0.088434532
+  },
+  {
+    "name": "MAR",
+    "Value": -0.029242352
+  },
+  {
+    "name": "MAS",
+    "Value": 0.113785764
+  },
+  {
+    "name": "MASI",
+    "Value": 0.00306573
+  },
+  {
+    "name": "MCD",
+    "Value": 0.137722044
+  },
+  {
+    "name": "MCHP",
+    "Value": 0.075110396
+  },
+  {
+    "name": "MCK",
+    "Value": 0.076525348
+  },
+  {
+    "name": "MCO",
+    "Value": 0.010965882
+  },
+  {
+    "name": "MCRB",
+    "Value": 2.709751971
+  },
+  {
+    "name": "MCY",
+    "Value": -0.004244858
+  },
+  {
+    "name": "MDB",
+    "Value": 0.002711992
+  },
+  {
+    "name": "MDC",
+    "Value": 0.080652293
+  },
+  {
+    "name": "MDLZ",
+    "Value": 0.049994989
+  },
+  {
+    "name": "MDT",
+    "Value": 0.093386866
+  },
+  {
+    "name": "MDU",
+    "Value": -0.064616165
+  },
+  {
+    "name": "MED",
+    "Value": 0.191254414
+  },
+  {
+    "name": "MEDP",
+    "Value": 0.052589068
+  },
+  {
+    "name": "MELI",
+    "Value": 0.111663336
+  },
+  {
+    "name": "MET",
+    "Value": -0.013795787
+  },
+  {
+    "name": "MFC",
+    "Value": -0.009550929
+  },
+  {
+    "name": "MGA",
+    "Value": -0.075699959
+  },
+  {
+    "name": "MGEE",
+    "Value": -0.002711992
+  },
+  {
+    "name": "MGM",
+    "Value": 0.118148535
+  },
+  {
+    "name": "MGP",
+    "Value": 0.013795787
+  },
+  {
+    "name": "MHK",
+    "Value": 0.083246373
+  },
+  {
+    "name": "MIC",
+    "Value": -0.011909184
+  },
+  {
+    "name": "MIDD",
+    "Value": 0.127227813
+  },
+  {
+    "name": "MIME",
+    "Value": 0.035373813
+  },
+  {
+    "name": "MKC",
+    "Value": 0.095627207
+  },
+  {
+    "name": "MKL",
+    "Value": -0.077232825
+  },
+  {
+    "name": "MKSI",
+    "Value": 0.058130966
+  },
+  {
+    "name": "MKTX",
+    "Value": 0.07440292
+  },
+  {
+    "name": "MLM",
+    "Value": 0.063908688
+  },
+  {
+    "name": "MMC",
+    "Value": 0.043038139
+  },
+  {
+    "name": "MMM",
+    "Value": 0.045042655
+  },
+  {
+    "name": "MMS",
+    "Value": -0.093858517
+  },
+  {
+    "name": "MMSI",
+    "Value": -0.076525348
+  },
+  {
+    "name": "MNST",
+    "Value": 0.097513811
+  },
+  {
+    "name": "MNTA",
+    "Value": 0.411515355
+  },
+  {
+    "name": "MO",
+    "Value": -0.068743109
+  },
+  {
+    "name": "MOH",
+    "Value": -0.078647777
+  },
+  {
+    "name": "MOS",
+    "Value": 0.215662345
+  },
+  {
+    "name": "MPC",
+    "Value": -0.053650283
+  },
+  {
+    "name": "MPW",
+    "Value": -0.004244858
+  },
+  {
+    "name": "MPWR",
+    "Value": 0.05789514
+  },
+  {
+    "name": "MRCY",
+    "Value": 0.008961366
+  },
+  {
+    "name": "MRK",
+    "Value": 0.066266943
+  },
+  {
+    "name": "MRO",
+    "Value": -0.127581551
+  },
+  {
+    "name": "MRTX",
+    "Value": 0.338999039
+  },
+  {
+    "name": "MRVL",
+    "Value": 0.043863528
+  },
+  {
+    "name": "MS",
+    "Value": -0.0139137
+  },
+  {
+    "name": "MSA",
+    "Value": 0.058838442
+  },
+  {
+    "name": "MSCI",
+    "Value": 0.034666337
+  },
+  {
+    "name": "MSFT",
+    "Value": 0.002829905
+  },
+  {
+    "name": "MSI",
+    "Value": 0.038085805
+  },
+  {
+    "name": "MSM",
+    "Value": -0.081123944
+  },
+  {
+    "name": "MTB",
+    "Value": -0.045750131
+  },
+  {
+    "name": "MTD",
+    "Value": 0.129586067
+  },
+  {
+    "name": "MTG",
+    "Value": 0.003891119
+  },
+  {
+    "name": "MTH",
+    "Value": 0.130765195
+  },
+  {
+    "name": "MTN",
+    "Value": 0.16189415
+  },
+  {
+    "name": "MTSI",
+    "Value": 0.075228308
+  },
+  {
+    "name": "MTZ",
+    "Value": 0.076053697
+  },
+  {
+    "name": "MU",
+    "Value": 0.027591574
+  },
+  {
+    "name": "MUSA",
+    "Value": 0.097513811
+  },
+  {
+    "name": "MXIM",
+    "Value": 0.083364285
+  },
+  {
+    "name": "MYL",
+    "Value": -0.06178626
+  },
+  {
+    "name": "MYOK",
+    "Value": 0.237122458
+  },
+  {
+    "name": "NATI",
+    "Value": -0.081595595
+  },
+  {
+    "name": "NAV",
+    "Value": 0.365293573
+  },
+  {
+    "name": "NBIX",
+    "Value": -0.000707476
+  },
+  {
+    "name": "NBL",
+    "Value": -0.031954344
+  },
+  {
+    "name": "NCLH",
+    "Value": 0.096098858
+  },
+  {
+    "name": "NCR",
+    "Value": 0.026884098
+  },
+  {
+    "name": "NDAQ",
+    "Value": 0.04480683
+  },
+  {
+    "name": "NDSN",
+    "Value": 0.081713507
+  },
+  {
+    "name": "NEE",
+    "Value": 0.006131461
+  },
+  {
+    "name": "NEM",
+    "Value": 0.023228804
+  },
+  {
+    "name": "NEO",
+    "Value": 0.076643261
+  },
+  {
+    "name": "NEOG",
+    "Value": 0.002004516
+  },
+  {
+    "name": "NEU",
+    "Value": -0.05223533
+  },
+  {
+    "name": "NEWR",
+    "Value": -0.080180642
+  },
+  {
+    "name": "NFG",
+    "Value": -0.032779733
+  },
+  {
+    "name": "NFLX",
+    "Value": 0.085486714
+  },
+  {
+    "name": "NG",
+    "Value": 0.162601626
+  },
+  {
+    "name": "NGHC",
+    "Value": 0.162955364
+  },
+  {
+    "name": "NGVT",
+    "Value": -0.051409941
+  },
+  {
+    "name": "NI",
+    "Value": -0.018866033
+  },
+  {
+    "name": "NJR",
+    "Value": -0.00436277
+  },
+  {
+    "name": "NKE",
+    "Value": 0.234056728
+  },
+  {
+    "name": "NKTR",
+    "Value": -0.096924247
+  },
+  {
+    "name": "NLOK",
+    "Value": -0.037967892
+  },
+  {
+    "name": "NLSN",
+    "Value": -0.018512295
+  },
+  {
+    "name": "NLY",
+    "Value": 0.010612144
+  },
+  {
+    "name": "NNI",
+    "Value": 0.107418478
+  },
+  {
+    "name": "NNN",
+    "Value": -0.063083299
+  },
+  {
+    "name": "NOC",
+    "Value": 0.011791271
+  },
+  {
+    "name": "NOMD",
+    "Value": 0.146565498
+  },
+  {
+    "name": "NOV",
+    "Value": -0.110720034
+  },
+  {
+    "name": "NOVT",
+    "Value": 0.051174116
+  },
+  {
+    "name": "NOW",
+    "Value": 0.088434532
+  },
+  {
+    "name": "NRG",
+    "Value": -0.077822388
+  },
+  {
+    "name": "NRZ",
+    "Value": 0.081713507
+  },
+  {
+    "name": "NSA",
+    "Value": 0.040797797
+  },
+  {
+    "name": "NSC",
+    "Value": 0.175925762
+  },
+  {
+    "name": "NSP",
+    "Value": 0.079708991
+  },
+  {
+    "name": "NTAP",
+    "Value": -0.012970398
+  },
+  {
+    "name": "NTNX",
+    "Value": 0.081359769
+  },
+  {
+    "name": "NTR",
+    "Value": 0.179816882
+  },
+  {
+    "name": "NTRA",
+    "Value": 0.351144048
+  },
+  {
+    "name": "NTRS",
+    "Value": -0.064734077
+  },
+  {
+    "name": "NUAN",
+    "Value": 0.269430541
+  },
+  {
+    "name": "NUE",
+    "Value": 0.065677379
+  },
+  {
+    "name": "NUS",
+    "Value": 0.24502261
+  },
+  {
+    "name": "NUVA",
+    "Value": -0.07746865
+  },
+  {
+    "name": "NVAX",
+    "Value": 0.375669892
+  },
+  {
+    "name": "NVCR",
+    "Value": 0.368123478
+  },
+  {
+    "name": "NVDA",
+    "Value": 0.071455102
+  },
+  {
+    "name": "NVR",
+    "Value": 0.038557456
+  },
+  {
+    "name": "NVRO",
+    "Value": 0.090203223
+  },
+  {
+    "name": "NVT",
+    "Value": -0.024879582
+  },
+  {
+    "name": "NVTA",
+    "Value": 0.328504808
+  },
+  {
+    "name": "NWE",
+    "Value": -0.010612144
+  },
+  {
+    "name": "NWL",
+    "Value": 0.082774722
+  },
+  {
+    "name": "NWS",
+    "Value": 0.010494231
+  },
+  {
+    "name": "NWSA",
+    "Value": 0.014974914
+  },
+  {
+    "name": "NXPI",
+    "Value": 0.072280491
+  },
+  {
+    "name": "NXST",
+    "Value": 0.048108385
+  },
+  {
+    "name": "NYCB",
+    "Value": -0.074756658
+  },
+  {
+    "name": "NYT",
+    "Value": 0.034430511
+  },
+  {
+    "name": "O",
+    "Value": -0.002829905
+  },
+  {
+    "name": "OC",
+    "Value": 0.025587058
+  },
+  {
+    "name": "ODFL",
+    "Value": 0.101876581
+  },
+  {
+    "name": "OFC",
+    "Value": -0.002829905
+  },
+  {
+    "name": "OGE",
+    "Value": -0.006131461
+  },
+  {
+    "name": "OGS",
+    "Value": -0.001768691
+  },
+  {
+    "name": "OHI",
+    "Value": -0.074992483
+  },
+  {
+    "name": "OKE",
+    "Value": -0.031600606
+  },
+  {
+    "name": "OKTA",
+    "Value": 0.026766185
+  },
+  {
+    "name": "OLED",
+    "Value": 0.051174116
+  },
+  {
+    "name": "OLLI",
+    "Value": 0.084307587
+  },
+  {
+    "name": "OMC",
+    "Value": -0.02087055
+  },
+  {
+    "name": "OMCL",
+    "Value": 0.025587058
+  },
+  {
+    "name": "OMF",
+    "Value": 0.013206223
+  },
+  {
+    "name": "ON",
+    "Value": 0.013559962
+  },
+  {
+    "name": "ONB",
+    "Value": -0.052117417
+  },
+  {
+    "name": "OPCH",
+    "Value": 0.078529864
+  },
+  {
+    "name": "OPK",
+    "Value": 0.128524853
+  },
+  {
+    "name": "OR",
+    "Value": 0.069922237
+  },
+  {
+    "name": "ORA",
+    "Value": -0.000825389
+  },
+  {
+    "name": "ORCL",
+    "Value": 0.126874075
+  },
+  {
+    "name": "ORI",
+    "Value": -0.000353738
+  },
+  {
+    "name": "ORLY",
+    "Value": 0.025587058
+  },
+  {
+    "name": "OSB",
+    "Value": 0.012380834
+  },
+  {
+    "name": "OSK",
+    "Value": -0.077114912
+  },
+  {
+    "name": "OSTK",
+    "Value": 0.46658059
+  },
+  {
+    "name": "OTEX",
+    "Value": -0.000353738
+  },
+  {
+    "name": "OUT",
+    "Value": 0.000825389
+  },
+  {
+    "name": "OVV",
+    "Value": 0.03395886
+  },
+  {
+    "name": "OXY",
+    "Value": -0.068035633
+  },
+  {
+    "name": "OZK",
+    "Value": -0.001414953
+  },
+  {
+    "name": "PAAS",
+    "Value": 0.067799808
+  },
+  {
+    "name": "PAG",
+    "Value": 0.01957351
+  },
+  {
+    "name": "PAGS",
+    "Value": 0.115200717
+  },
+  {
+    "name": "PANW",
+    "Value": 0.088552445
+  },
+  {
+    "name": "PAYC",
+    "Value": 0.010965882
+  },
+  {
+    "name": "PAYX",
+    "Value": 0.105531875
+  },
+  {
+    "name": "PB",
+    "Value": -0.000117913
+  },
+  {
+    "name": "PBA",
+    "Value": -0.005895635
+  },
+  {
+    "name": "PBCT",
+    "Value": -0.00129704
+  },
+  {
+    "name": "PCAR",
+    "Value": 0.058130966
+  },
+  {
+    "name": "PCG",
+    "Value": 0.105531875
+  },
+  {
+    "name": "PCH",
+    "Value": 0.059663831
+  },
+  {
+    "name": "PCRX",
+    "Value": 0.144325156
+  },
+  {
+    "name": "PCTY",
+    "Value": 0.059899656
+  },
+  {
+    "name": "PDCO",
+    "Value": 0.087255405
+  },
+  {
+    "name": "PE",
+    "Value": -0.109540907
+  },
+  {
+    "name": "PEAK",
+    "Value": -0.010494231
+  },
+  {
+    "name": "PEG",
+    "Value": 0.10447066
+  },
+  {
+    "name": "PEGA",
+    "Value": 0.03655294
+  },
+  {
+    "name": "PEN",
+    "Value": 0.074992483
+  },
+  {
+    "name": "PENN",
+    "Value": 0.619513374
+  },
+  {
+    "name": "PEP",
+    "Value": 0.001650778
+  },
+  {
+    "name": "PFE",
+    "Value": -0.040444059
+  },
+  {
+    "name": "PFG",
+    "Value": -0.015446565
+  },
+  {
+    "name": "PFGC",
+    "Value": 0.129114417
+  },
+  {
+    "name": "PFPT",
+    "Value": -0.008843453
+  },
+  {
+    "name": "PFSI",
+    "Value": 0.046339695
+  },
+  {
+    "name": "PG",
+    "Value": 0.11402159
+  },
+  {
+    "name": "PGR",
+    "Value": 0.069686411
+  },
+  {
+    "name": "PH",
+    "Value": 0.011555446
+  },
+  {
+    "name": "PHM",
+    "Value": 0.026412447
+  },
+  {
+    "name": "PII",
+    "Value": 0.080652293
+  },
+  {
+    "name": "PINC",
+    "Value": -0.027945312
+  },
+  {
+    "name": "PJT",
+    "Value": 0.296432551
+  },
+  {
+    "name": "PK",
+    "Value": 0.095273469
+  },
+  {
+    "name": "PKG",
+    "Value": 0.128524853
+  },
+  {
+    "name": "PKI",
+    "Value": 0.077704475
+  },
+  {
+    "name": "PLD",
+    "Value": 0.035020075
+  },
+  {
+    "name": "PLNT",
+    "Value": 0.050230814
+  },
+  {
+    "name": "PLUG",
+    "Value": 0.360223327
+  },
+  {
+    "name": "PLXS",
+    "Value": 0.075464134
+  },
+  {
+    "name": "PM",
+    "Value": -0.012970398
+  },
+  {
+    "name": "PNC",
+    "Value": -0.003183643
+  },
+  {
+    "name": "PNFP",
+    "Value": 0
+  },
+  {
+    "name": "PNM",
+    "Value": -0.015328652
+  },
+  {
+    "name": "PNR",
+    "Value": 0.120153051
+  },
+  {
+    "name": "PNW",
+    "Value": -0.000235825
+  },
+  {
+    "name": "PODD",
+    "Value": 0.058956355
+  },
+  {
+    "name": "POOL",
+    "Value": 0.126402424
+  },
+  {
+    "name": "POR",
+    "Value": -0.074756658
+  },
+  {
+    "name": "POST",
+    "Value": -0.017922732
+  },
+  {
+    "name": "POWI",
+    "Value": -0.009315104
+  },
+  {
+    "name": "PPC",
+    "Value": -0.025351232
+  },
+  {
+    "name": "PPG",
+    "Value": 0.106593089
+  },
+  {
+    "name": "PPL",
+    "Value": -0.076053697
+  },
+  {
+    "name": "PRAH",
+    "Value": -0.073223792
+  },
+  {
+    "name": "PRGO",
+    "Value": -0.022049677
+  },
+  {
+    "name": "PRI",
+    "Value": -0.014267438
+  },
+  {
+    "name": "PRLB",
+    "Value": 0.125459123
+  },
+  {
+    "name": "PRMW",
+    "Value": 0.026412447
+  },
+  {
+    "name": "PRNB",
+    "Value": 0.256224317
+  },
+  {
+    "name": "PRSP",
+    "Value": -0.004480683
+  },
+  {
+    "name": "PRU",
+    "Value": -0.068743109
+  },
+  {
+    "name": "PS",
+    "Value": -0.079237341
+  },
+  {
+    "name": "PSA",
+    "Value": 0.051292029
+  },
+  {
+    "name": "PSB",
+    "Value": -0.001768691
+  },
+  {
+    "name": "PSTG",
+    "Value": -0.078529864
+  },
+  {
+    "name": "PSX",
+    "Value": -0.078294039
+  },
+  {
+    "name": "PTC",
+    "Value": 0.078058214
+  },
+  {
+    "name": "PTCT",
+    "Value": -0.001886603
+  },
+  {
+    "name": "PVG",
+    "Value": 0.265893159
+  },
+  {
+    "name": "PVH",
+    "Value": 0.161658324
+  },
+  {
+    "name": "PWR",
+    "Value": 0.197385875
+  },
+  {
+    "name": "PXD",
+    "Value": -0.106239351
+  },
+  {
+    "name": "PYPL",
+    "Value": 0.080770206
+  },
+  {
+    "name": "PZZA",
+    "Value": 0.07746865
+  },
+  {
+    "name": "QCOM",
+    "Value": 0.002947818
+  },
+  {
+    "name": "QDEL",
+    "Value": 0.091028612
+  },
+  {
+    "name": "QGEN",
+    "Value": 0.141966902
+  },
+  {
+    "name": "QLYS",
+    "Value": -0.018394383
+  },
+  {
+    "name": "QRVO",
+    "Value": 0.034784249
+  },
+  {
+    "name": "QSR",
+    "Value": 0.010494231
+  },
+  {
+    "name": "QTS",
+    "Value": 0
+  },
+  {
+    "name": "QTWO",
+    "Value": 0.095155556
+  },
+  {
+    "name": "R",
+    "Value": 0.043391877
+  },
+  {
+    "name": "RACE",
+    "Value": 0.019219772
+  },
+  {
+    "name": "RAMP",
+    "Value": 0.011083795
+  },
+  {
+    "name": "RARE",
+    "Value": 0.122982956
+  },
+  {
+    "name": "RBA",
+    "Value": 0.15234322
+  },
+  {
+    "name": "RBC",
+    "Value": 0.038203718
+  },
+  {
+    "name": "RCI",
+    "Value": -0.045632218
+  },
+  {
+    "name": "RCL",
+    "Value": 0.133948838
+  },
+  {
+    "name": "RDFN",
+    "Value": 0.045985957
+  },
+  {
+    "name": "RDN",
+    "Value": -0.055183148
+  },
+  {
+    "name": "RE",
+    "Value": -0.001414953
+  },
+  {
+    "name": "REG",
+    "Value": -0.077232825
+  },
+  {
+    "name": "REGN",
+    "Value": 0.045632218
+  },
+  {
+    "name": "RETA",
+    "Value": -0.09574512
+  },
+  {
+    "name": "REXR",
+    "Value": 0.020988462
+  },
+  {
+    "name": "RF",
+    "Value": -0.047990473
+  },
+  {
+    "name": "RGA",
+    "Value": 0.079237341
+  },
+  {
+    "name": "RGEN",
+    "Value": 0.012262922
+  },
+  {
+    "name": "RGLD",
+    "Value": -0.068507284
+  },
+  {
+    "name": "RH",
+    "Value": 0.344776762
+  },
+  {
+    "name": "RHI",
+    "Value": 0.011555446
+  },
+  {
+    "name": "RHP",
+    "Value": 0.049641251
+  },
+  {
+    "name": "RJF",
+    "Value": -0.027591574
+  },
+  {
+    "name": "RL",
+    "Value": 0.006367286
+  },
+  {
+    "name": "RLI",
+    "Value": -0.068035633
+  },
+  {
+    "name": "RMD",
+    "Value": -0.000117913
+  },
+  {
+    "name": "RNG",
+    "Value": 0.014385351
+  },
+  {
+    "name": "RNR",
+    "Value": -0.034784249
+  },
+  {
+    "name": "ROCK",
+    "Value": 0.143146029
+  },
+  {
+    "name": "ROK",
+    "Value": 0.084071762
+  },
+  {
+    "name": "ROKU",
+    "Value": 0.214836956
+  },
+  {
+    "name": "ROL",
+    "Value": 0.075582047
+  },
+  {
+    "name": "ROLL",
+    "Value": -0.000353738
+  },
+  {
+    "name": "ROP",
+    "Value": 0.030067741
+  },
+  {
+    "name": "ROST",
+    "Value": -0.008371802
+  },
+  {
+    "name": "RP",
+    "Value": -0.012145009
+  },
+  {
+    "name": "RPD",
+    "Value": 0.057187664
+  },
+  {
+    "name": "RPM",
+    "Value": 0.098692938
+  },
+  {
+    "name": "RS",
+    "Value": 0.080888119
+  },
+  {
+    "name": "RSG",
+    "Value": 0.070747626
+  },
+  {
+    "name": "RTX",
+    "Value": -0.07487457
+  },
+  {
+    "name": "RUN",
+    "Value": 0.537917779
+  },
+  {
+    "name": "RXN",
+    "Value": 0.00436277
+  },
+  {
+    "name": "RY",
+    "Value": 0.026412447
+  },
+  {
+    "name": "RYN",
+    "Value": -0.011201707
+  },
+  {
+    "name": "SABR",
+    "Value": -0.045160568
+  },
+  {
+    "name": "SAFE",
+    "Value": 0.097867549
+  },
+  {
+    "name": "SAFM",
+    "Value": 0.080888119
+  },
+  {
+    "name": "SAGE",
+    "Value": 0.359633763
+  },
+  {
+    "name": "SAIA",
+    "Value": 0.025469145
+  },
+  {
+    "name": "SAIC",
+    "Value": -0.005423985
+  },
+  {
+    "name": "SAIL",
+    "Value": 0.223562497
+  },
+  {
+    "name": "SAM",
+    "Value": 0.117794797
+  },
+  {
+    "name": "SATS",
+    "Value": -0.027827399
+  },
+  {
+    "name": "SBAC",
+    "Value": 0.001650778
+  },
+  {
+    "name": "SBNY",
+    "Value": -0.001414953
+  },
+  {
+    "name": "SBRA",
+    "Value": -0.063319125
+  },
+  {
+    "name": "SBUX",
+    "Value": 0.127817377
+  },
+  {
+    "name": "SC",
+    "Value": -0.06048922
+  },
+  {
+    "name": "SCCO",
+    "Value": 0.02700201
+  },
+  {
+    "name": "SCHW",
+    "Value": 0.006721024
+  },
+  {
+    "name": "SCI",
+    "Value": 0.000471651
+  },
+  {
+    "name": "SCL",
+    "Value": 0.090910699
+  },
+  {
+    "name": "SDGR",
+    "Value": 0.023582542
+  },
+  {
+    "name": "SEB",
+    "Value": 0.059074267
+  },
+  {
+    "name": "SEDG",
+    "Value": 0.169440563
+  },
+  {
+    "name": "SEE",
+    "Value": 0.10965882
+  },
+  {
+    "name": "SEIC",
+    "Value": -0.002358254
+  },
+  {
+    "name": "SEM",
+    "Value": 0.097395898
+  },
+  {
+    "name": "SERV",
+    "Value": 0.110012558
+  },
+  {
+    "name": "SF",
+    "Value": 0.055654799
+  },
+  {
+    "name": "SFIX",
+    "Value": 0.001061214
+  },
+  {
+    "name": "SFM",
+    "Value": -0.084779238
+  },
+  {
+    "name": "SGEN",
+    "Value": 0.11708732
+  },
+  {
+    "name": "SGMS",
+    "Value": 0.710659898
+  },
+  {
+    "name": "SHEN",
+    "Value": -0.108951343
+  },
+  {
+    "name": "SHOP",
+    "Value": 0.006838937
+  },
+  {
+    "name": "SHW",
+    "Value": 0.120860527
+  },
+  {
+    "name": "SINA",
+    "Value": 0.041387361
+  },
+  {
+    "name": "SIRI",
+    "Value": -0.003773207
+  },
+  {
+    "name": "SITE",
+    "Value": 0.073695443
+  },
+  {
+    "name": "SIVB",
+    "Value": 0.078529864
+  },
+  {
+    "name": "SIX",
+    "Value": 0.083364285
+  },
+  {
+    "name": "SJM",
+    "Value": 0.083364285
+  },
+  {
+    "name": "SJR",
+    "Value": 0.078647777
+  },
+  {
+    "name": "SKX",
+    "Value": 0.008489715
+  },
+  {
+    "name": "SLAB",
+    "Value": 0.073931269
+  },
+  {
+    "name": "SLB",
+    "Value": -0.109069256
+  },
+  {
+    "name": "SLF",
+    "Value": 0.007074763
+  },
+  {
+    "name": "SLG",
+    "Value": -0.010494231
+  },
+  {
+    "name": "SLGN",
+    "Value": 0.074049181
+  },
+  {
+    "name": "SLM",
+    "Value": 0.106711002
+  },
+  {
+    "name": "SMAR",
+    "Value": 0.066266943
+  },
+  {
+    "name": "SMPL",
+    "Value": 0.075464134
+  },
+  {
+    "name": "SMTC",
+    "Value": -0.076289523
+  },
+  {
+    "name": "SNA",
+    "Value": 0.000235825
+  },
+  {
+    "name": "SNAP",
+    "Value": 0.140198211
+  },
+  {
+    "name": "SNDR",
+    "Value": 0.034784249
+  },
+  {
+    "name": "SNPS",
+    "Value": 0.055065235
+  },
+  {
+    "name": "SNV",
+    "Value": -0.032543908
+  },
+  {
+    "name": "SNX",
+    "Value": 0.013795787
+  },
+  {
+    "name": "SO",
+    "Value": 0.022049677
+  },
+  {
+    "name": "SON",
+    "Value": -0.065205728
+  },
+  {
+    "name": "SPB",
+    "Value": 0.12663825
+  },
+  {
+    "name": "SPCE",
+    "Value": 0.042330663
+  },
+  {
+    "name": "SPG",
+    "Value": 0.011083795
+  },
+  {
+    "name": "SPGI",
+    "Value": 0.103173621
+  },
+  {
+    "name": "SPLK",
+    "Value": 0.029124439
+  },
+  {
+    "name": "SPOT",
+    "Value": 0.076643261
+  },
+  {
+    "name": "SPR",
+    "Value": 0.075817872
+  },
+  {
+    "name": "SPSC",
+    "Value": 0.064380339
+  },
+  {
+    "name": "SQ",
+    "Value": 0.264478207
+  },
+  {
+    "name": "SR",
+    "Value": -0.017568994
+  },
+  {
+    "name": "SRC",
+    "Value": 0.03266182
+  },
+  {
+    "name": "SRCL",
+    "Value": 0.048108385
+  },
+  {
+    "name": "SRE",
+    "Value": -0.007900152
+  },
+  {
+    "name": "SRNE",
+    "Value": 0.467288067
+  },
+  {
+    "name": "SRPT",
+    "Value": 0.029478177
+  },
+  {
+    "name": "SSB",
+    "Value": -0.040444059
+  },
+  {
+    "name": "SSD",
+    "Value": 0.11142751
+  },
+  {
+    "name": "SSRM",
+    "Value": -0.080888119
+  },
+  {
+    "name": "ST",
+    "Value": 0.012380834
+  },
+  {
+    "name": "STAA",
+    "Value": 0.017097343
+  },
+  {
+    "name": "STAG",
+    "Value": 0.07617161
+  },
+  {
+    "name": "STE",
+    "Value": 0.112017074
+  },
+  {
+    "name": "STL",
+    "Value": -0.025351232
+  },
+  {
+    "name": "STLD",
+    "Value": 0.070865538
+  },
+  {
+    "name": "STMP",
+    "Value": 0.022757153
+  },
+  {
+    "name": "STN",
+    "Value": -0.000353738
+  },
+  {
+    "name": "STOR",
+    "Value": 0.074992483
+  },
+  {
+    "name": "STRA",
+    "Value": -0.077940301
+  },
+  {
+    "name": "STT",
+    "Value": -0.069096848
+  },
+  {
+    "name": "STWD",
+    "Value": 0.049287512
+  },
+  {
+    "name": "STX",
+    "Value": 0.078294039
+  },
+  {
+    "name": "STZ",
+    "Value": 0.00695685
+  },
+  {
+    "name": "SU",
+    "Value": -0.034076773
+  },
+  {
+    "name": "SUI",
+    "Value": 0.0565981
+  },
+  {
+    "name": "SWCH",
+    "Value": -0.065205728
+  },
+  {
+    "name": "SWI",
+    "Value": 0.093622691
+  },
+  {
+    "name": "SWK",
+    "Value": 0.069332673
+  },
+  {
+    "name": "SWKS",
+    "Value": 0.078176126
+  },
+  {
+    "name": "SWX",
+    "Value": -0.031718519
+  },
+  {
+    "name": "SXT",
+    "Value": 0.023818367
+  },
+  {
+    "name": "SYF",
+    "Value": 0.109305081
+  },
+  {
+    "name": "SYK",
+    "Value": 0.055301061
+  },
+  {
+    "name": "SYNA",
+    "Value": 0.030657304
+  },
+  {
+    "name": "SYNH",
+    "Value": -0.000117913
+  },
+  {
+    "name": "SYY",
+    "Value": 0.051292029
+  },
+  {
+    "name": "TAP",
+    "Value": -0.086430016
+  },
+  {
+    "name": "TARO",
+    "Value": -0.014621176
+  },
+  {
+    "name": "TCF",
+    "Value": -0.001886603
+  },
+  {
+    "name": "TCO",
+    "Value": -0.130883107
+  },
+  {
+    "name": "TD",
+    "Value": -0.071337189
+  },
+  {
+    "name": "TDC",
+    "Value": 0.146919236
+  },
+  {
+    "name": "TDG",
+    "Value": 0.075817872
+  },
+  {
+    "name": "TDOC",
+    "Value": 0.076289523
+  },
+  {
+    "name": "TDS",
+    "Value": -0.101640755
+  },
+  {
+    "name": "TDY",
+    "Value": -0.007074763
+  },
+  {
+    "name": "TEAM",
+    "Value": 0.034548424
+  },
+  {
+    "name": "TECH",
+    "Value": -0.000707476
+  },
+  {
+    "name": "TECK",
+    "Value": 0.251507809
+  },
+  {
+    "name": "TEL",
+    "Value": 0.062729561
+  },
+  {
+    "name": "TENB",
+    "Value": 0.034430511
+  },
+  {
+    "name": "TER",
+    "Value": 0.079001515
+  },
+  {
+    "name": "TFC",
+    "Value": -0.019337684
+  },
+  {
+    "name": "TFII",
+    "Value": 0.080416468
+  },
+  {
+    "name": "TFSL",
+    "Value": -0.054593584
+  },
+  {
+    "name": "TFX",
+    "Value": -0.074638745
+  },
+  {
+    "name": "TGNA",
+    "Value": -0.007310588
+  },
+  {
+    "name": "TGT",
+    "Value": 0.199508304
+  },
+  {
+    "name": "TGTX",
+    "Value": 0.00825389
+  },
+  {
+    "name": "THC",
+    "Value": 0.063083299
+  },
+  {
+    "name": "THG",
+    "Value": -0.054947322
+  },
+  {
+    "name": "THO",
+    "Value": 0.050820378
+  },
+  {
+    "name": "THS",
+    "Value": -0.023228804
+  },
+  {
+    "name": "TIF",
+    "Value": -0.01827647
+  },
+  {
+    "name": "TIGO",
+    "Value": -0.092207739
+  },
+  {
+    "name": "TJX",
+    "Value": 0.048697949
+  },
+  {
+    "name": "TKR",
+    "Value": 0.153758173
+  },
+  {
+    "name": "TMHC",
+    "Value": 0.118973924
+  },
+  {
+    "name": "TMO",
+    "Value": 0.095391382
+  },
+  {
+    "name": "TMUS",
+    "Value": 0.106239351
+  },
+  {
+    "name": "TNDM",
+    "Value": 0.06921476
+  },
+  {
+    "name": "TNET",
+    "Value": 0.076643261
+  },
+  {
+    "name": "TOL",
+    "Value": 0.288414487
+  },
+  {
+    "name": "TPH",
+    "Value": 0.096570509
+  },
+  {
+    "name": "TPL",
+    "Value": -0.005306072
+  },
+  {
+    "name": "TPR",
+    "Value": 0.123218781
+  },
+  {
+    "name": "TPX",
+    "Value": 0.116379844
+  },
+  {
+    "name": "TR",
+    "Value": -0.003183643
+  },
+  {
+    "name": "TREE",
+    "Value": 0.077586563
+  },
+  {
+    "name": "TREX",
+    "Value": -0.138193695
+  },
+  {
+    "name": "TRGP",
+    "Value": -0.028770701
+  },
+  {
+    "name": "TRI",
+    "Value": 0.108243867
+  },
+  {
+    "name": "TRIP",
+    "Value": 0.003655294
+  },
+  {
+    "name": "TRMB",
+    "Value": 0.036906678
+  },
+  {
+    "name": "TRN",
+    "Value": -0.031954344
+  },
+  {
+    "name": "TRNO",
+    "Value": -0.000353738
+  },
+  {
+    "name": "TROW",
+    "Value": 0.009786755
+  },
+  {
+    "name": "TRP",
+    "Value": -0.003891119
+  },
+  {
+    "name": "TRTN",
+    "Value": 0.009433017
+  },
+  {
+    "name": "TRU",
+    "Value": -0.024879582
+  },
+  {
+    "name": "TRUP",
+    "Value": 0.382390916
+  },
+  {
+    "name": "TRV",
+    "Value": -0.024290018
+  },
+  {
+    "name": "TSCO",
+    "Value": 0.022521327
+  },
+  {
+    "name": "TSEM",
+    "Value": -0.074285007
+  },
+  {
+    "name": "TSLA",
+    "Value": 0.020398899
+  },
+  {
+    "name": "TSN",
+    "Value": -0.024172105
+  },
+  {
+    "name": "TT",
+    "Value": 0.040797797
+  },
+  {
+    "name": "TTC",
+    "Value": 0.165313618
+  },
+  {
+    "name": "TTD",
+    "Value": 0.086901667
+  },
+  {
+    "name": "TTEC",
+    "Value": 0.115554455
+  },
+  {
+    "name": "TTEK",
+    "Value": 0.042330663
+  },
+  {
+    "name": "TTWO",
+    "Value": 0.004480683
+  },
+  {
+    "name": "TU",
+    "Value": 0.014857001
+  },
+  {
+    "name": "TWLO",
+    "Value": 0.066620681
+  },
+  {
+    "name": "TWOU",
+    "Value": 0.088198706
+  },
+  {
+    "name": "TWTR",
+    "Value": 0.203399423
+  },
+  {
+    "name": "TXN",
+    "Value": 0.072752142
+  },
+  {
+    "name": "TXRH",
+    "Value": 0.086076278
+  },
+  {
+    "name": "TXT",
+    "Value": 0.020280986
+  },
+  {
+    "name": "TYL",
+    "Value": 0.02263924
+  },
+  {
+    "name": "UA",
+    "Value": 0.037732067
+  },
+  {
+    "name": "UAA",
+    "Value": 0.041033623
+  },
+  {
+    "name": "UAL",
+    "Value": 0.076289523
+  },
+  {
+    "name": "UBS",
+    "Value": -0.11272455
+  },
+  {
+    "name": "UBSI",
+    "Value": -0.081359769
+  },
+  {
+    "name": "UDR",
+    "Value": -0.060135482
+  },
+  {
+    "name": "UFPI",
+    "Value": 0.045868044
+  },
+  {
+    "name": "UGI",
+    "Value": 0.003773207
+  },
+  {
+    "name": "UHAL",
+    "Value": 0.118738098
+  },
+  {
+    "name": "UHS",
+    "Value": -0.069096848
+  },
+  {
+    "name": "UI",
+    "Value": -0.076643261
+  },
+  {
+    "name": "ULTA",
+    "Value": 0.077586563
+  },
+  {
+    "name": "UMBF",
+    "Value": -0.006485199
+  },
+  {
+    "name": "UMPQ",
+    "Value": -0.015564478
+  },
+  {
+    "name": "UNF",
+    "Value": 0.067681895
+  },
+  {
+    "name": "UNH",
+    "Value": 0.052824894
+  },
+  {
+    "name": "UNM",
+    "Value": -0.100343716
+  },
+  {
+    "name": "UNP",
+    "Value": 0.006485199
+  },
+  {
+    "name": "UNVR",
+    "Value": -0.088198706
+  },
+  {
+    "name": "UPS",
+    "Value": 0.228161092
+  },
+  {
+    "name": "URBN",
+    "Value": 0.124515821
+  },
+  {
+    "name": "URI",
+    "Value": 0.031600606
+  },
+  {
+    "name": "USB",
+    "Value": -0.011437533
+  },
+  {
+    "name": "USFD",
+    "Value": 0.063908688
+  },
+  {
+    "name": "USM",
+    "Value": -0.096688422
+  },
+  {
+    "name": "UTHR",
+    "Value": -0.046221782
+  },
+  {
+    "name": "V",
+    "Value": 0.067681895
+  },
+  {
+    "name": "VAC",
+    "Value": 0.076407436
+  },
+  {
+    "name": "VAR",
+    "Value": 0.330745149
+  },
+  {
+    "name": "VEEV",
+    "Value": 0.099518327
+  },
+  {
+    "name": "VER",
+    "Value": -0.079001515
+  },
+  {
+    "name": "VFC",
+    "Value": 0.11579028
+  },
+  {
+    "name": "VG",
+    "Value": 0.055301061
+  },
+  {
+    "name": "VIAC",
+    "Value": 0.191961891
+  },
+  {
+    "name": "VIAV",
+    "Value": -0.082303071
+  },
+  {
+    "name": "VICI",
+    "Value": 0.033487209
+  },
+  {
+    "name": "VICR",
+    "Value": 0.119327662
+  },
+  {
+    "name": "VIRT",
+    "Value": -0.08619419
+  },
+  {
+    "name": "VLO",
+    "Value": -0.055301061
+  },
+  {
+    "name": "VLY",
+    "Value": -0.029006526
+  },
+  {
+    "name": "VMC",
+    "Value": 0.115200717
+  },
+  {
+    "name": "VMI",
+    "Value": -0.050348727
+  },
+  {
+    "name": "VMW",
+    "Value": 0.026412447
+  },
+  {
+    "name": "VNO",
+    "Value": -0.004834421
+  },
+  {
+    "name": "VOYA",
+    "Value": -0.001768691
+  },
+  {
+    "name": "VRNS",
+    "Value": 0.144678894
+  },
+  {
+    "name": "VRNT",
+    "Value": 0.091971913
+  },
+  {
+    "name": "VRSK",
+    "Value": 0.001532865
+  },
+  {
+    "name": "VRSN",
+    "Value": 0.030539392
+  },
+  {
+    "name": "VRT",
+    "Value": 0.220260941
+  },
+  {
+    "name": "VRTX",
+    "Value": 0.020045161
+  },
+  {
+    "name": "VSAT",
+    "Value": -0.103645271
+  },
+  {
+    "name": "VSH",
+    "Value": -0.02263924
+  },
+  {
+    "name": "VSLR",
+    "Value": 0.569872124
+  },
+  {
+    "name": "VTR",
+    "Value": 0.000235825
+  },
+  {
+    "name": "VVV",
+    "Value": -0.031836431
+  },
+  {
+    "name": "VZ",
+    "Value": 0.090203223
+  },
+  {
+    "name": "W",
+    "Value": 0.025940796
+  },
+  {
+    "name": "WAB",
+    "Value": -0.034312598
+  },
+  {
+    "name": "WAL",
+    "Value": -0.001061214
+  },
+  {
+    "name": "WAT",
+    "Value": -0.000471651
+  },
+  {
+    "name": "WBA",
+    "Value": -0.02829905
+  },
+  {
+    "name": "WBS",
+    "Value": -0.049051687
+  },
+  {
+    "name": "WCC",
+    "Value": 0.017215256
+  },
+  {
+    "name": "WCN",
+    "Value": 0.073577531
+  },
+  {
+    "name": "WDAY",
+    "Value": 0.149395403
+  },
+  {
+    "name": "WDC",
+    "Value": 0.01261666
+  },
+  {
+    "name": "WDFC",
+    "Value": 0.010965882
+  },
+  {
+    "name": "WEC",
+    "Value": 0.029478177
+  },
+  {
+    "name": "WELL",
+    "Value": -0.001768691
+  },
+  {
+    "name": "WERN",
+    "Value": 0.024407931
+  },
+  {
+    "name": "WEX",
+    "Value": -0.011083795
+  },
+  {
+    "name": "WFC",
+    "Value": 0.022285502
+  },
+  {
+    "name": "WH",
+    "Value": 0.053414457
+  },
+  {
+    "name": "WHR",
+    "Value": 0.038203718
+  },
+  {
+    "name": "WING",
+    "Value": 0.091500262
+  },
+  {
+    "name": "WIX",
+    "Value": 0.109069256
+  },
+  {
+    "name": "WK",
+    "Value": 0.121803829
+  },
+  {
+    "name": "WKHS",
+    "Value": 0.885406534
+  },
+  {
+    "name": "WLK",
+    "Value": 0.144089331
+  },
+  {
+    "name": "WLTW",
+    "Value": 0.002358254
+  },
+  {
+    "name": "WM",
+    "Value": 0.077704475
+  },
+  {
+    "name": "WMB",
+    "Value": 0.083010547
+  },
+  {
+    "name": "WMGI",
+    "Value": 0.096098858
+  },
+  {
+    "name": "WMS",
+    "Value": 0.177930278
+  },
+  {
+    "name": "WMT",
+    "Value": 0.098575025
+  },
+  {
+    "name": "WOR",
+    "Value": 0.047754647
+  },
+  {
+    "name": "WPC",
+    "Value": -0.071219276
+  },
+  {
+    "name": "WPM",
+    "Value": 0.006131461
+  },
+  {
+    "name": "WPX",
+    "Value": -0.107536391
+  },
+  {
+    "name": "WRB",
+    "Value": 0.007900152
+  },
+  {
+    "name": "WRI",
+    "Value": -0.006838937
+  },
+  {
+    "name": "WRK",
+    "Value": 0.185005041
+  },
+  {
+    "name": "WSC",
+    "Value": 0.11579028
+  },
+  {
+    "name": "WSM",
+    "Value": 0.077704475
+  },
+  {
+    "name": "WSO",
+    "Value": 0.111899161
+  },
+  {
+    "name": "WST",
+    "Value": 0.032308082
+  },
+  {
+    "name": "WTFC",
+    "Value": -0.013795787
+  },
+  {
+    "name": "WTM",
+    "Value": -0.000471651
+  },
+  {
+    "name": "WTRG",
+    "Value": -0.008961366
+  },
+  {
+    "name": "WTS",
+    "Value": 0.034666337
+  },
+  {
+    "name": "WU",
+    "Value": -0.075582047
+  },
+  {
+    "name": "WWD",
+    "Value": -0.010258406
+  },
+  {
+    "name": "WWE",
+    "Value": -0.042330663
+  },
+  {
+    "name": "WWW",
+    "Value": 0.105296049
+  },
+  {
+    "name": "WY",
+    "Value": 0.094212255
+  },
+  {
+    "name": "WYND",
+    "Value": 0.093033128
+  },
+  {
+    "name": "WYNN",
+    "Value": -0.081123944
+  },
+  {
+    "name": "XEC",
+    "Value": -0.04480683
+  },
+  {
+    "name": "XEL",
+    "Value": 0.002240341
+  },
+  {
+    "name": "XLNX",
+    "Value": 0.084897151
+  },
+  {
+    "name": "XLRN",
+    "Value": 0.040797797
+  },
+  {
+    "name": "XNCR",
+    "Value": 0.141613164
+  },
+  {
+    "name": "XOM",
+    "Value": -0.016036128
+  },
+  {
+    "name": "XPO",
+    "Value": 0.138665346
+  },
+  {
+    "name": "XRAY",
+    "Value": -0.054004021
+  },
+  {
+    "name": "XRX",
+    "Value": 0.017451081
+  },
+  {
+    "name": "XYL",
+    "Value": 0.14927749
+  },
+  {
+    "name": "Y",
+    "Value": -0.041976924
+  },
+  {
+    "name": "YNDX",
+    "Value": 0.170265952
+  },
+  {
+    "name": "YUM",
+    "Value": 0.024172105
+  },
+  {
+    "name": "YUMC",
+    "Value": 0.082774722
+  },
+  {
+    "name": "Z",
+    "Value": 0.394064274
+  },
+  {
+    "name": "ZBH",
+    "Value": 0.020634724
+  },
+  {
+    "name": "ZBRA",
+    "Value": 0.079708991
+  },
+  {
+    "name": "ZEN",
+    "Value": 0.033251384
+  },
+  {
+    "name": "ZG",
+    "Value": 0.392177671
+  },
+  {
+    "name": "ZION",
+    "Value": -0.032425995
+  },
+  {
+    "name": "ZNGA",
+    "Value": 0.074638745
+  },
+  {
+    "name": "ZS",
+    "Value": 0.044453091
+  },
+  {
+    "name": "ZTS",
+    "Value": 0.050348727
+  },
+  {
+    "name": "ZYME",
+    "Value": 0.168143523
+  }
+]
+
+                     
+var margin = { top: 30, right: 10, bottom: 50, left: 40 };
+var marginOverview = { top: 30, right: 10, bottom: 20, left: 0 };
+var selectorHeight = 30;
+var width = parseInt(d3.select("#bar_chart").style("width"))  - margin.left - margin.right,
+	height = parseInt(d3.select("#bar_chart").style("height"))  - margin.top - margin.bottom;
+var heightOverview = 80 - marginOverview.top - marginOverview.bottom;
+var maxLength = d3.max(data.map(function (d) { return 6 }))
+var barWidth = maxLength * 7;
+var numBars = Math.round(width / barWidth);
+var isScrollDisplayed = barWidth * data.length > width;
+
+var xscale = d3.scale.ordinal()
+.domain(data.slice(0,numBars).map(function (d) { return d.name; }))
+.rangeBands([0, width], .06)
+var yscale = d3.scale.linear()
+.domain([-0.3, 1,  d3.max(data, function (d) { return d.Value; })])
+.range([height, 0]);
+var xAxis  = d3.svg.axis().scale(xscale).orient("bottom");
+var yAxis  = d3.svg.axis().scale(yscale).orient("left").tickFormat(function(d) {return d + "%"});
+
+var Tooltip = d3.select("#bar_chart")
+.append("div")
+.style("opacity", 0)
+.attr("class", "tooltip")
+
+var mouseover = function(d) {
+Tooltip
+.style("opacity", 1)
+d3.select(this)
+.style("opacity", 1)
+}
+var mousemove = function(d) {
+Tooltip       
+.text(d.name + ":" + d.Value + "%")
+.style("left", (d3.mouse(this)[0]+30) + "px")
+.style("top", (d3.mouse(this)[1]) + "px")
+.style("font-weight", "600")
+}
+var mouseleave = function(d) {
+Tooltip
+.style("opacity", 0)
+d3.select(this)
+}
+	
+var svg = d3.select("#bar_chart").append("svg")
+.attr("width", width + margin.left + margin.right)
+.attr("height", height + margin.top + margin.bottom + selectorHeight)
+.append("g")
+.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+var diagram = svg.append("g")
+ bars = diagram.append("g"); 
+bars.selectAll("rect")
+.data(data.slice(0, numBars), function (d) {return d.name; })
+.enter().append("rect")
+.attr("class", "extent")
+.attr("x", function (d) { return xscale(d.name); })
+.attr("y", function (d) { return yscale(d.Value); })
+.attr("width", xscale.rangeBand())
+.attr("height", function (d) { return height - yscale(d.Value); })
+.attr("class", function(d) {
+if (d.Value < 0){
+	return "negative";
+} else {
+	return "positive";
+}}) 
+.attr("data-yr", function(d){
+return d.name;
+})
+.attr("data-c", function(d){
+return d.Value;
+})
+.attr("title", function(d){
+return (d.name + ": " + d.Value + " %")
+})
+.attr("y", function(d) {
+
+if (d.Value > 0){
+	return yscale(d.Value);
+} else {
+	return yscale(0);
+}
+})
+.attr("x", function(d) {
+return xscale(d.name);
+})
+.attr("width", xscale.rangeBand())
+
+.attr("height", function(d) {
+return Math.abs(yscale(d.Value) - yscale(0));
+})
+
+
+.on("mouseover", mouseover)
+.on("mousemove", mousemove) 
+.on("mouseleave", mouseleave)
+
+  
+  
+var diagram = svg.append("g")
+diagram.append("g")
+.attr("class", "X axis")
+.attr("transform", "translate(0" + margin.right + ","  + height + ")") 
+.call(xAxis)
+.selectAll("text")	
+.style("text-anchor", "end")
+.attr("dx", "-.8em")
+.attr("dy", ".15em")
+.attr("transform", function(d) {
+	return "rotate(-65)" 
+	});
+
+
+	
+diagram.append("g")
+.attr("class", "y axis")  
+.call(yAxis);
+	
+if (isScrollDisplayed)
+{
+  var xOverview = d3.scale.ordinal()
+  .domain(data.map(function (d) { return d.name; }))
+  .rangeBands([0, width], .2);
+  yOverview = d3.scale.linear().range([heightOverview, 0]);
+  yOverview.domain(yscale.domain());
+  var subBars = diagram.selectAll('path')
+  .data(data)
+  subBars.enter().append("rect")
+.attr("class", function(d) {
+if (d.Value < 0){
+return "negative";
+} else {
+return "positive";
+}})
+.attr("width", xscale.rangeBand())
+.attr("height", function(d) {
+return Math.abs(yscale(d.Value) - yscale(0));
+})
+.attr({
+width: function(d) {
+return xOverview.rangeBand()
+},
+x: function(d) {
+return xOverview(d.name);
+},
+y: function(d) {
+return height + heightOverview + yOverview(d.Value)
+}
+})
+
+var displayed = d3.scale.quantize()
+.domain([0, width])
+.range(d3.range(data.length));
+diagram.append("rect")
+.attr("transform", "translate(0, " + (height + margin.bottom) + ")")
+.attr("class", "mover")
+.attr("x", 0)
+.attr("y", 0)
+.attr("height", selectorHeight)
+.attr("width", Math.round(parseFloat(numBars * width )/data.length))
+.attr("pointer-events", "all")
+.attr("cursor", "ew-resize")
+.call(d3.behavior.drag().on("drag", display))
+}
+function display () {
+var x = parseInt(d3.select(this).attr("x")),
+nx = x + d3.event.dx,
+w = parseInt(d3.select(this).attr("width")),
+f, nf, new_data, rects;
+if ( nx < 0 || nx + w > width ) return;
+d3.select(this).attr("x", nx);
+f = displayed(x);
+nf = displayed(nx);
+if ( f === nf ) return;
+new_data = data.slice(nf, nf + numBars);
+xscale.domain(new_data.map(function (d) { return d.name; }));
+diagram.select(".x.axis").call(xAxis);
+rects = bars.selectAll("rect")
+.data(new_data, function (d) {return d.name; });
+rects.attr("x", function (d) { return xscale(d.name); });
+rects.enter().append("rect")
+
+.attr("width", xscale.rangeBand())
+.attr("height", function (d) { return height - yscale(d.Value); })
+.attr("class", function(d) {
+if (d.Value < 0){
+return "negative";
+} else {
+return "positive";
+}}) 
+
+.attr("y", function(d) {
+
+if (d.Value > 0){
+return yscale(d.Value);
+} else {
+return yscale(0);
+}
+})
+
+
+.attr("x", function(d) {
+return xscale(d.name);
+})
+.attr("width", xscale.rangeBand())
+
+.attr("height", function(d) {
+return Math.abs(yscale(d.Value) - yscale(0));
+})
+
+.on("mouseover", mouseover)
+.on("mousemove", mousemove)
+.on("mouseleave", mouseleave)
+rects.exit().remove();
+};
+
+</script>
+
+
+
+
+
+<style>
+.tooltip {
+    text-align: right;
+    width: auto;
+    height: auto;
+    font-weight: 600;position:absolute;
+    padding: 6px;
+    border: 2px solid #e2e23d;
+    border-radius: 3px;
+    margin-top: -30px;
+    font: 10px sans-serif;
+    background: #32323e;
+    color: #FFFF4C;
+}
+.tooltip {
+    fill: white;
+    stroke: #000;
+}
+.tooltip {
+  fill: white;
+  stroke: #000;
+}
+.tooltip-date, .tooltip-likes {
+  font-weight: bold;
+}
+</style>

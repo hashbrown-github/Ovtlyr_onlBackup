@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+<style>
+#chartdiv {
+width: 100%;
+height: 500px;background: #393945;
+}
+#filter-id-66, #filter-id-1644, #filter-id-6818, #filter-id-31080
+{
+opacity:0;
+display:none;
+}
+</style>
+</head>
+<body>
+<div id="chartdiv"></div>
+<script>
+var Oscillator;
+var month;
+var price;
+var std_heatmap;
+am4core.useTheme(am4themes_animated);
+var chart = am4core.create("chartdiv", am4charts.XYChart);
+chart.data=[
+{
+"month": "2001-07-12",
+"price": 300,
+"Oscillator": 10,
+"Heatmap": 0,
+"std_heatmap" : 0.9099
+},
+{
+"month": "2002-30-11",
+"price": 310,
+"Oscillator": 20,
+"Heatmap": 0.293037564,
+"std_heatmap" : 0.801791079
+},
+{
+"month": "2003-09-03",
+"price": 231,
+"Oscillator": 13,
+"Heatmap": 1.935390755,
+"std_heatmap" : 2
+},
+{
+"month": "2004-02-01",
+"price": 222,
+"Oscillator": 33,
+"Heatmap": 0.357037725,
+"std_heatmap" : 4
+},
+
+{
+"month": "2005-07-02",
+"price": 342,
+"Oscillator": 10,
+"Heatmap": 0.250268393,
+"std_heatmap" : 6.049
+},
+
+{
+"month": "2006-07-03",
+"price":220,
+"Oscillator": 4,
+"Heatmap": 0.222731596,
+"std_heatmap" : 10.333
+},
+
+{
+"month":"2007-10-09",
+"price": 180,
+"Oscillator":19,
+"Heatmap": 0.211907867,
+"std_heatmap" : 13.2313444
+},
+{
+"month":"2008-10-07",
+"price": 480,
+"Oscillator":19,
+"Heatmap": 0.211907867,
+"std_heatmap" : 17.2313444
+},
+{
+"month":"2009-10-02",
+"price": 80,
+"Oscillator":10,
+"Heatmap": 0.211907867,
+"std_heatmap" :18
+},
+{
+"month":"2010-11-05",
+"price": 280,
+"Oscillator":13,
+"Heatmap": 0.211907867,
+"std_heatmap" : 14.22
+},
+{
+"month":"2011-10-03",
+"price": 220,
+"Oscillator":19,
+"Heatmap": 0.211907867,
+"std_heatmap" : 5.455
+},
+{
+"month":"2012-10-02",
+"price": 340,
+"Oscillator":29,
+"Heatmap": 0.211907867,
+"std_heatmap" : 2.2313444
+}];
+chart.dateFormatter.inputDateFormat = "yyyy";
+var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
+dateAxis.renderer.minGridDistance = 50;
+dateAxis.tooltip.disabled = false;
+dateAxis.skipEmptyPeriods = true;
+dateAxis.renderer.grid.template.disabled = true;
+dateAxis.renderer.labels.template.fill = am4core.color("#fff");
+dateAxis.renderer.labels.template.rotation = 290;
+dateAxis.renderer.labels.template.fontSize = 12;
+
+var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+valueAxis.tooltip.disabled = true;
+valueAxis.renderer.grid.template.disabled = true;
+valueAxis.renderer.labels.template.disabled = true;
+
+var valueAxis2 = chart.yAxes.push(new am4charts.ValueAxis());
+valueAxis2.renderer.opposite = true;
+valueAxis2.renderer.grid.template.disabled = true;
+valueAxis2.tooltip.disabled = true;
+valueAxis2.renderer.labels.template.adapter.add("text", function(text) {return "$" + " " + text;});
+valueAxis2.renderer.labels.template.fill = am4core.color("#fff");
+valueAxis2.renderer.labels.template.fontSize = 12;
+	
+var valueAxisHeatmap = chart.yAxes.push(new am4charts.ValueAxis());
+valueAxisHeatmap.renderer.opposite = true;
+valueAxisHeatmap.renderer.grid.template.disabled = true;
+valueAxisHeatmap.tooltip.disabled = true;
+
+var series2 = chart.series.push(new am4charts.LineSeries());
+series2.dataFields.dateX = "month";
+series2.dataFields.valueY = "price";
+series2.tooltipText = "[#000]${valueY.value}[/]\n";
+series2.tooltip.getStrokeFromObject = true;
+series2.tooltip.background.strokeWidth = 3;
+series2.tooltip.getFillFromObject = false;
+series2.strokeWidth = 0;
+series2.yAxis = valueAxis2;
+series2.stacked = false;
+series2.fillOpacity = 1;
+series2.fill = am4core.color("#32323e");
+series2.marginRight = 30;
+
+var series3 = chart.series.push(new am4charts.ColumnSeries());
+series3.dataFields.valueY = "price";
+series3.dataFields.dateX = "month";
+series3.dataFields.Std = "std_heatmap";
+series3.columns.template.fillOpacity = 1;
+series3.yAxis = valueAxisHeatmap;
+series3.columns.template.width = am4core.percent(100);
+series3.columns.template.adapter.add("fill", function (fill, target) {
+if (target.dataItem && (target.dataItem.Std >= 0 && target.dataItem.Std <= 5)) {
+return am4core.color("#ff4497");
+}
+else if (target.dataItem && (target.dataItem.Std > 5 && target.dataItem.Std <= 10)) {
+return am4core.color("#ff58a2");
+}
+else if (target.dataItem && (target.dataItem.Std > 10 && target.dataItem.Std <= 15)) {
+return am4core.color("#ff6bad");
+}
+else if (target.dataItem && (target.dataItem.Std > 15 && target.dataItem.Std <= 20)) {
+return am4core.color("#ff7fb8");
+}
+else if (target.dataItem && (target.dataItem.Std > 20 && target.dataItem.Std <= 25)) {
+return am4core.color("#ff92c3");
+}
+else if (target.dataItem && (target.dataItem.Std > 25 && target.dataItem.Std <= 30)) {
+return am4core.color("#ffa6ce");
+}
+else if (target.dataItem && (target.dataItem.Std > 30 && target.dataItem.Std <= 35)) {
+return am4core.color("#ffbad8");
+
+
+
+}
+else if (target.dataItem && (target.dataItem.Std > 35 && target.dataItem.Std <= 40)) {
+return am4core.color("#ffcde3");
+
+
+
+}
+else if (target.dataItem && (target.dataItem.Std > 40 && target.dataItem.Std <= 45)) {
+return am4core.color("#ffe1ee");
+
+
+
+}
+else if (target.dataItem && (target.dataItem.Std > 45 && target.dataItem.Std <= 50)) {
+return am4core.color("#fff5f9");
+
+
+
+}
+else if (target.dataItem && (target.dataItem.Std > 50 && target.dataItem.Std <= 55)) {
+return am4core.color("#f1fbff");
+
+
+
+}
+else if (target.dataItem && (target.dataItem.Std > 55 && target.dataItem.Std <= 60)) {
+return am4core.color("#ddf4ff");
+
+
+
+}
+else if (target.dataItem && (target.dataItem.Std > 60 && target.dataItem.Std <= 65)) {
+return am4core.color("#c9eeff");
+
+
+
+}
+else if (target.dataItem && (target.dataItem.Std > 65 && target.dataItem.Std <= 70)) {
+return am4core.color("#b6e8ff");
+
+
+
+}
+else if (target.dataItem && (target.dataItem.Std > 70 && target.dataItem.Std <= 75)) {
+return am4core.color("#a2e2ff");
+
+
+
+}
+else if (target.dataItem && (target.dataItem.Std > 75 && target.dataItem.Std <= 80)) {
+return am4core.color("#8edcff");
+
+
+
+}
+else if (target.dataItem && (target.dataItem.Std > 80 && target.dataItem.Std <= 85)) {
+return am4core.color("#7bd6ff");
+
+
+
+}
+else if (target.dataItem && (target.dataItem.Std > 85 && target.dataItem.Std <= 90)) {
+return am4core.color("#67d0ff");
+
+
+
+}
+else if (target.dataItem && (target.dataItem.Std > 90 && target.dataItem.Std <= 95)) {
+return am4core.color("#54caff");
+
+
+
+}
+else if (target.dataItem && (target.dataItem.Std > 95 && target.dataItem.Std <= 100)) {
+return am4core.color("#40c4ff");
+
+
+
+}
+});
+series3.columns.template.strokeOpacity = 0;
+var series = chart.series.push(new am4charts.LineSeries());
+series.dataFields.dateX = "month";
+series.dataFields.valueY = "Oscillator";
+series.tooltip.getStrokeFromObject = true;
+series.tooltip.background.strokeWidth = 3;
+series.tooltip.getFillFromObject = false;
+series.strokeWidth = 3;
+series.stroke = am4core.color("rgb(255, 255, 76)");
+
+var scrollbar = new am4charts.XYChartScrollbar();
+scrollbar.series.push(series)
+chart.scrollbarX = scrollbar;
+function customizeGrip(grip) 
+{
+grip.icon.disabled = true;
+grip.background.disabled = true;
+var line = grip.createChild(am4core.Rectangle);
+line.height = 40;
+line.width = 3;					
+line.fill = am4core.color("#555");
+line.align = "center";
+line.valign = "middle";
+var img = grip.createChild(am4core.Rectangle);
+img.width = 6;
+img.height = 22;
+img.fill = am4core.color("#fff");
+img.align = "center";
+img.valign = "middle";
+}
+chart.cursor = new am4charts.XYCursor();
+chart.cursor.xAxis = dateAxis;
+chart.scrollbarX = new am4core.Scrollbar();
+chart.scrollbarX = new am4charts.XYChartScrollbar();
+chart.scrollbarX.parent = chart.bottomAxesContainer;
+chart.strokeWidth = 0.1;
+chart.scrollbarX.minHeight = 50;
+chart.scrollbarX.thumb.minWidth = 40; 
+chart.scrollbarX.unselectedOverlay.fill = am4core.color("#393945");
+chart.scrollbarX.background.fill = am4core.color("#3a3e4d");
+customizeGrip(chart.scrollbarX.startGrip);
+customizeGrip(chart.scrollbarX.endGrip);  
+chart.zoomOutButton.disabled = true;
+	
+</script>
+</body>
+

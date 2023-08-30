@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<script src="https://d3js.org/d3.v3.js"></script>
+<style>
+#normal_density {
+	background: #000000;
+}
+#normal_density .tick text, #normal_density .tick {
+	opacity: 0!important;
+}
+#normal_density .line_blue {
+	stroke: #40c4ff;
+	fill: none;
+	stroke-width: 4px;
+}
+#normal_density .line_pink {
+	stroke: #FF4497;
+	fill: none;
+	stroke-width: 1px;
+}
+#normal_density .axis {
+	fill: none;
+	stroke-width: 1px;
+	stroke: #fff;
+}
+.yellow_text {
+	fill: #ffff4c;
+	font-size: 14px;
+	stroke-width: 0;
+}
+.StreightlineBlue {
+	stroke-width: 12px;
+	stroke: #40c4ff;
+	fill: none;
+}
+.StreightlinePink {
+	stroke-width: 2px;
+	stroke: #FF4497;
+	fill: none;
+}
+</style>
+<div class="bell-chart">
+<div id="normal_density"></div></div>
+<script>
+	var svg = d3.select("svg");
+var margin = {top: 20, right: 20, bottom: 30, left: 50};
+ var width = parseInt(d3.select(".bell-chart").style("width")) - margin.left - margin.right,
+height = 320 - margin.top - margin.bottom;
+
+	
+ var x = d3.scale.linear()
+.range([0, width]);
+  var xAxis = d3.svg.axis()
+.scale(x)
+.orient("bottom");
+	
+   var y = d3.scale.linear()
+.range([height, 0]);
+var yAxis = d3.svg.axis()
+.scale(y)
+.orient("left");
+
+ var linePink = d3.svg.line()
+.interpolate("monotone")
+.x(function(d) { return x(d.X); })
+.y(function(d) { return y(d.Y); });
+
+var lineBlue = d3.svg.line() 
+.interpolate("monotone")
+.x(function(d) { return x(d.XBlue); })
+.y(function(d) { return y(d.YBlue); });
+	
+	
+	
+	 	 
+	var distribution = d3.svg.line()
+	.x(function(d) { return x(d.X); }) 
+	.y(function(d) { return y(d.Y); })
+	
+		var arraydata =[]; 
+	var line_ver = "";
+	
+ var svg = d3.select("#normal_density").append("svg")
+.attr("width", width + margin.left + margin.right)
+.attr("height", height + margin.top + margin.bottom)
+ .append("g")
+.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+		  
+ d3.csv("msft_tab1_o2.csv", function(error, data) {
+data.forEach(function(d, i) {
+	
+		d.X = +d.X;
+		d.Y = +d.Y;
+	d.XBlue = +d.XBlue;
+		d.YBlue = +d.YBlue;
+		});console.log(data);
+  
+    x.domain(d3.extent(data, function(d) { return d.X; }));
+y.domain([0, d3.max(data, function(d) { return d.Y;})]);	 
+	 
+	var StreightlineBlue = d3.svg.line()
+	.x(function(d) { return x(d.X1); })
+.y(function(d) { return y(d.Y1); });
+	 
+	var StreightlinePink = d3.svg.line()  
+.x(function(d) { return x(d.X1); })
+.y(function(d) { return y(d.Y1); });	
+	 
+   svg.append("g")
+  .attr("class", "x axis")
+  .attr("transform", "translate(0," + height + ")")
+  .call(xAxis);
+
+   svg.append("g")
+  .attr("class", "y axis")
+  .call(yAxis)
+	 
+ svg
+      .append("path")
+      .datum(data) 
+       .attr("class", "line_blue").attr("d", lineBlue)
+      .attr("d", d3.svg.line()
+        .x(function(d) { return x(d.XBlue) })
+        .y(function(d) { return y(d.YBlue) })
+        )
+	 
+	svg
+      .append("path")
+      .datum(data)
+       .attr("class", "line_pink").attr("d", linePink)
+      .attr("d", d3.svg.line()
+        .x(function(d) { return x(d.X) })
+        .y(function(d) { return y(d.Y) })
+        )
+ 
+	 
+var lineOne =[]; 
+data.forEach(function(d,i) 
+{ 
+	if(d.X === -0.028713814 || d.Y === 14.82597127){
+		lineOne.push(d);
+}
+});
+svg.append("path")
+	 .data(data)
+	 .attr("stroke-width", 7)
+	 .attr("stroke-linejoin", "round")
+	 .attr("stroke-linecap", "round")	
+	 .attr("class", "StreightlineBlue")
+	 .attr("d", StreightlineBlue(lineOne))
+	 
+svg.append("text")     
+        .attr("x", 0)
+        .attr("y", 310)
+	 .attr("transform", "translate(" + (width/2) +  ")")
+        .style("text-anchor", "end")
+	 .style("font-size", "11")
+	 .style("stroke-width", "0")
+	.style("fill","#ffffff")
+        .text("0");
+	
+
+	 
+	/* svg.append("line")
+    .attr("fill", "none")
+    .attr("stroke-dasharray", "3, 3")
+	 .attr("stroke", "#5d5d5d") .attr("stroke-width", 2)
+    .attr("x", width/2)
+    .attr("y1", 0)
+    .attr("y2", height)
+    .attr("transform", "translate(" + (width/2) +  ")");
+	 
+	 
+	 svg.append("text")     
+        .attr("x", 30)
+        .attr("y", -10)
+	 .attr("transform", "translate(" + (width/2) +  ")")
+        .style("text-anchor", "end")
+	 .style("font-size", "14")
+	 .style("stroke-width", "0")
+	.style("fill","#ffffff")
+        .text("Distribution");*/
+	 
+	 
+svg.append("text")
+    .attr("class", "y axis title")      
+    .text("Frequency")
+    .attr("x", (-(height/2)))
+    .attr("y", -17)
+	.style("font-size", "11")
+	 .style("stroke-width", "0")
+	.style("fill","#ffffff")
+    .attr("dy", ".6em")
+    .attr("transform", "rotate(-90)")
+    .style("text-anchor", "middle");
+	 
+ svg.append("text")             
+      .attr("transform", "translate(" + (width) + "," +  (height + margin.top + 0) + ")")
+      .style("text-anchor", "end")
+	 .style("font-size", "11")
+	 .style("stroke-width", "0")
+	.style("fill","#ffffff")
+      .text("Rp");
+	 
+	 svg.append("text")     
+        .attr("x", 0)
+        .attr("y", 310)
+        .style("text-anchor", "end")
+	 .style("font-size", "11")
+	 .style("stroke-width", "0")
+	.style("fill","#ffffff")
+        .text("Rn");
+	 
+
+	var stock_1=""; 
+	 data.forEach(function(d,i) 
+{ 
+	if(d.X === 0)
+	   {
+		stock_1=d.Stock;
+		arraydata.push(d);
+	}
+});  
+	 var d_origion={X:0, Y:0, Stock:stock_1};
+	 arraydata.push(d_origion);
+
+svg.append("path")
+	 .attr("fill", "none")
+    .attr("stroke-dasharray", "3, 3")
+	 .attr("stroke", "red") .attr("stroke-width", 4)
+	 .attr("y2", height)
+.attr("d", distribution(arraydata))
+	 
+	 svg.selectAll("g").append("text")
+	 .data(data)
+	 .attr("x2", 0)
+        .attr("y2", height)
+	.style("fill","#ffffff")
+        .text("0")	 .attr("y2", height)
+.attr("d", distribution(arraydata))
+		
+ });
+
+</script>

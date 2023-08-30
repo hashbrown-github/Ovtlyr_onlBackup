@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script> 
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<style>
+
+#spy_chart .metric-chart text {
+	fill: #ffffff;
+	font-size: 9px;
+	font-family: Helvetica, Arial, "sans serif";
+}
+#spy_chart .metric-chart text.no-data {
+	font-size: 16px;
+	font-weight: 100;
+	fill: #d0d0d0;
+}
+#spy_chart .metric-chart rect.no-data {
+	fill: #f5f5f5;
+}
+#spy_chart {
+	padding: 10px;
+	background: #393945;
+}
+#spy_chart .metric-chart rect.plot-background {
+	fill: red;
+}
+
+#spy_chart .metric-chart .axis {
+}
+#spy_chart .metric-chart .x.axis .domain {
+	display: none;
+}
+#spy_chart .metric-chart .x.axis line {
+}
+#spy_chart .metric-chart .context .x.axis line {
+	display: none;
+}
+#spy_chart .metric-chart .y.axis .domain {
+	display: none;
+}
+#spy_chart .metric-chart .y.axis.title {
+	font-size: 13px;
+	font-weight: 100;
+}
+#spy_chart .metric-chart .y.axis line {
+	stroke: #565656;
+	stroke-dasharray: 2, 2;
+	stroke-opacity: 0.3;
+}
+#spy_chart .metric-chart .brush .extent {
+	fill-opacity: .07;
+	shape-rendering: crispEdges;
+	clip-path: url(#clip);
+}
+.brush {
+	opacity: 1;
+	stroke-width: 2px;
+	fill: #fff;
+}
+#spy_chart .metric-chart rect.pane {
+	fill: none;
+	pointer-events: all;
+}
+
+#spy_chart .metric-chart .resize .handle {
+	fill: #555;
+}
+#spy_chart .metric-chart .resize .handle-mini {
+	fill: white;
+	stroke-width: 1px;
+	stroke: #555;
+}
+#spy_chart .metric-chart .scale_button {
+	cursor: pointer;
+}
+#spy_chart .metric-chart .scale_button rect {
+	fill: #eaeaea;
+}
+#spy_chart .metric-chart .scale_button:hover text {
+	fill: #417DD6;
+	transition: all 0.1s cubic-bezier(.25, .8, .25, 1);
+}
+#spy_chart .metric-chart text#displayDates {
+	font-weight: bold;
+	clip-path: url(#clip);
+}
+
+.line_average {
+	fill: none;
+	stroke: #FF4497;
+	stroke-width: 3px;
+}
+
+	.line_valueGreen
+	{
+		fill: none;
+	stroke: #66FF66;
+	stroke-width: 3px;
+	}
+</style>
+<div class="correlation-chart">
+<div id="spy_chart"></div>
+	</div>
+<script>
+	var value;
+	var date;
+	var average;
+	var obj=[{"value":35,"date":"2001-07","average":2}, 
+			 {"value":40,"date":"2002-07","average":2}, 
+			 {"value":20,"date":"2003-07","average":2}, 
+			 {"value":10,"date":"2004-07","average":2}, 
+			 {"value":-30,"date":"2005-07","average":2}, 
+			 {"value":90,"date":"2006-07","average":2}]
+var optwidth;
+var optheight = 420;
+	
+var margin	= {top: 20, right: 50, bottom: 160, left: 30},
+width	= optwidth - margin.left - margin.right,
+height	= optheight - margin.top - margin.bottom;
+var width = parseInt(d3.select(".correlation-chart").style("width")) - margin.left - margin.right;
+	
+	
+var dataset = [];
+dataset=obj;
+dataset.forEach(function(d) {
+    d.date = d3.time.format("%Y-%d").parse(d.date);
+});
+
+dataset.sort(function(x, y){
+   return d3.ascending(x.date, y.date);
+});
+
+
+var margin_context = {top: 320, right: 30, bottom: 60, left: 20},
+    height_context = optheight - margin_context.top - margin_context.bottom;
+
+var dataXrange = d3.extent(dataset, function(d) { return d.date; });
+var dataYrange = d3.extent(dataset, function(d) { return d.value; });
+   
+var mindate = dataXrange[0], 
+    maxdate = dataXrange[1];
+
+	var DateFormat = d3.time.format("%d-%b-%Y");
+
+var dynamicDateFormat = timeFormat([
+    [d3.time.format("%Y"), function() { return true; }],
+    [d3.time.format("%d-%b-%Y"), function(d) { return d.getMonth(); }],
+    [function(){return ""}, function(d) { return d.getDate() != 1;}]]);
+
+var x = d3.time.scale()
+	.range([0, (width)])
+    .domain(dataXrange);
+
+var y = d3.scale.linear()
+	.range([height, 0])
+  .domain([-100,100]);
+	
+	
+var xAxis = d3.svg.axis()
+                .scale(x)
+                .orient("bottom")
+                .tickSize(-(height))
+                .ticks(customTickFunction)
+                .tickFormat(dynamicDateFormat);
+
+var yAxis = d3.svg.axis()
+	.scale(y)
+    .tickSize((width)).ticks(6).tickFormat(function(d) {return d + "%"})
+	.orient("left");
+
+var x2 = d3.time.scale()
+    .range([0, width])
+    .domain([mindate, maxdate]);
+
+var y2 = d3.scale.linear()
+	.range([height_context, 0])
+    .domain(y.domain());
+
+var xAxis_context = d3.svg.axis()
+    .scale(x2)
+    .orient("bottom")
+    .ticks(customTickFunction)
+    .tickFormat(dynamicDateFormat);
+
+var line = d3.svg.line()
+	.x(function(d) { return x(d.date); })
+	.y(function(d) { return y(d.value); })
+
+var line_average = d3.svg.line()
+    .x(function(d) { return x(d.date); })
+    .y(function(d) { return y(d.average); });
+
+	var line_context = d3.svg.line()
+    .x(function(d) { return x2(d.date); })
+    .y(function(d) { return y2(d.value); });
+  
+var brush = d3.svg.brush()
+    .x(x2)
+    .on("brush", brushed)
+    .on("brushend", brushend);
+
+var zoom = d3.behavior.zoom()
+    .on("zoom", draw)
+    .on("zoomend", brushend);
+
+var vis = d3.select("#spy_chart").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  	.attr("class", "metric-chart"); 
+
+vis.append("defs").append("clipPath")
+    .attr("id", "clip")
+    .append("rect")
+    .attr("width", width)
+    .attr("height", height);
+
+var context = vis.append("g")
+    .attr("class", "context")
+    .attr("transform", "translate(" + margin_context.left + "," + margin_context.top + ")");
+
+var focus = vis.append("g")
+    .attr("class", "focus")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+var rect = vis.append("svg:rect")
+    .attr("class", "pane")
+    .attr("width", width)
+    .attr("height", height)
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+    .call(zoom)
+    .call(draw)
+
+	
+focus.append("g")
+    .attr("class", "y axis")
+    .call(yAxis)
+   	.attr("transform", "translate(" + (width) + ", 0)");
+	
+focus.append("g")
+    .attr("class", "x axis")
+    .attr("transform", "translate(0, " + height + ")")  
+.call(xAxis)
+.selectAll("text")	
+.style("text-anchor", "end")
+.attr("dx", "-.8em")
+.attr("dy", ".15em")
+.attr("transform", function(d) {
+	return "rotate(-65)" 
+	});
+	
+	
+focus.append("path")
+    .datum(dataset)
+        .attr("class", "line_average") .attr("d", line_average)
+	
+focus.append("path")
+    .datum(dataset)
+        .attr("class", "line_valueGreen").attr("d", line)
+        
+context.append("g")
+    .attr("class", "x axis")
+	.attr("opacity", 0)
+	    .attr("transform", "translate(0, " + height_context + ")")  
+ .call(xAxis_context)
+.selectAll("text")	
+.style("text-anchor", "end")
+.attr("dx", "-.8em")
+.attr("dy", ".15em")
+.attr("transform", function(d) {
+	return "rotate(-65)" 
+	});
+	
+
+var brushg = context.append("g")
+    .attr("class", "x brush")
+    .call(brush);
+
+brushg.selectAll(".extent")
+   .attr("y", -6)
+   .attr("height", height_context + 8);
+
+brushg.selectAll(".resize")
+    .append("rect")
+    .attr("class", "handle")
+    .attr("transform", "translate(0," +  -3 + ")")
+    .attr('rx', 2)
+	.attr('ry', 2)
+    .attr("height", height_context + 6)
+    .attr("width", 3);
+
+brushg.selectAll(".resize")
+    .append("rect")
+    .attr("class", "handle-mini")
+    .attr("transform", "translate(-2,8)")
+    .attr('rx', 3)
+    .attr('ry', 3)
+    .attr("height", (height_context/2))
+    .attr("width", 7);
+
+function timeFormat(formats) {
+  return function(date) {
+    var i = formats.length - 1, f = formats[i];
+    while (!f[1](date)) f = formats[--i];
+    return f[0](date);
+  };
+};
+
+function customTickFunction(t0, t1, dt)  {
+    var labelSize = 28; 
+    var maxTotalLabels = Math.floor(width / labelSize);
+
+    function step(date, offset)
+    {
+        date.setMonth(date.getMonth() + offset);
+    }
+	var time = d3.time.month.ceil(t0), times = [], monthFactors = [1,3,15];
+	while (time < t1) times.push(new Date(+time)), step(time, 1);
+    var timesCopy = times;
+    var i;
+    for(i=0 ; times.length > maxTotalLabels ; i++)
+        times = _.filter(timesCopy, function(d){
+            return (d.getMonth()) % monthFactors[i] == 0;
+        });
+	return times;
+};
+
+function brushed() {
+	x.domain(brush.empty() ? x2.domain() : brush.extent())
+	focus.select(".line_valueGreen").attr("d", line);
+	focus.select(".line_average").attr("d", line_average);
+    focus.select(".x.axis").call(xAxis)
+	.selectAll("text")	
+.style("text-anchor", "end")
+.attr("dx", "-.8em")
+.attr("dy", ".15em")
+.attr("transform", function(d) {
+	return "rotate(-65)" 
+	})
+    zoom.x(x);
+    updateDisplayDates();
+    setYdomain();
+};
+
+function draw() {
+    setYdomain();
+	focus.select(".line_valueGreen").attr("d", line);
+	focus.select(".line_average").attr("d", line_average);
+    focus.select(".x.axis").call(xAxis);
+    brush.extent(x.domain());
+    vis.select(".brush").call(brush);
+    updateDisplayDates();
+	
+};	
+function brushend() {
+    var b = brush.extent();
+    var out_of_bounds = brush.extent().some(function(e) { return e < mindate | e > maxdate; });
+    if (out_of_bounds){ b = moveInBounds(b) };
+};
+
+function updateDisplayDates() {
+	var b = brush.extent();
+    var localBrushDateStart = (brush.empty()) ? DateFormat(dataXrange[0]) : DateFormat(b[0]),
+        localBrushDateEnd   = (brush.empty()) ? DateFormat(dataXrange[1]) : DateFormat(b[1]);
+	d3.select("#displayDates")
+        .text(localBrushDateStart == localBrushDateEnd ? localBrushDateStart : localBrushDateStart + " - " + localBrushDateEnd);
+};
+
+function moveInBounds(b) {
+    var ms_in_year = 31536000000,
+        brush_start_new,
+        brush_end_new;
+
+    if (b[0] < mindate) { brush_start_new = mindate; }
+    else if (b[0] > maxdate){ brush_start_new = new Date(maxdate.getTime() - ms_in_year); }
+    else { brush_start_new = b[0]; };
+	if (b[1] > maxdate)   { brush_end_new = maxdate; }
+    else if (b[1] < mindate) { brush_end_new = new Date(mindate.getTime() + ms_in_year); }
+    else { brush_end_new = b[1]; };
+
+    brush.extent([brush_start_new, brush_end_new]);
+    brush(d3.select(".brush").transition());
+    brushed();
+    draw();
+    return(brush.extent())
+};
+
+function setYdomain(){
+    var xleft = new Date(x.domain()[0]);
+    var xright = new Date(x.domain()[1]);
+	var bisectDate = d3.bisector(function(d) { return d.date; }).right;
+    var iL = bisectDate(dataset, xleft);
+    if (dataset[iL] !== undefined && dataset[iL-1] !== undefined) {
+
+        var left_dateBefore = dataset[iL-1].date,
+            left_dateAfter = dataset[iL].date;
+
+        var intfun = d3.interpolateNumber(dataset[iL-1].value, dataset[iL].value);
+        var yleft = intfun((xleft-left_dateBefore)/(left_dateAfter-left_dateBefore));
+    } else {
+        var yleft = 0;
+    }
+
+    var iR = bisectDate(dataset, xright);
+
+    if (dataset[iR] !== undefined && dataset[iR-1] !== undefined) {
+
+        var right_dateBefore = dataset[iR-1].date,
+            right_dateAfter = dataset[iR].date;
+
+        var intfun = d3.interpolateNumber(dataset[iR-1].value, dataset[iR].value);
+        var yright = intfun((xright-right_dateBefore)/(right_dateAfter-right_dateBefore));
+    } else {
+        var yright = 0;
+    }
+    var dataSubset = dataset.filter(function(d){ return d.date >= xleft && d.date <= xright; });
+    var countSubset = [];
+    dataSubset.map(function(d) {countSubset.push(d.value);});
+    countSubset.push(yleft);
+    countSubset.push(yright);
+    var ymax_new = d3.max(countSubset);
+    if(ymax_new == 0){
+        ymax_new = dataYrange[1];
+    }
+	y.range([height, 0])
+    focus.select(".y.axis").call(yAxis);
+	
+	
+	var tooltip= vis.append("g")
+	.attr("class", "focus_tips")
+    .attr("transform", "translate(" + margin.left + "," + margin.right + ")");
+
+        tooltip.append("rect")
+            .attr("class", "hover_bg")
+            .attr("width", 100)
+            .attr("height", 40)
+            .attr("x", -30)
+            .attr("y", 0)
+            .attr("rx", 4)
+            .attr("ry", 4);
+
+tooltip.append("text")
+            .attr("x", -25)
+            .attr("y", 15)
+            .text("Date:");
+	tooltip.append("text")
+            .attr("x", -25)
+            .attr("y", 30)
+	.attr("class", "y4")
+            .text("Value:");
+	
+        tooltip.append("text")
+            .attr("class", "tooltip-date")
+            .attr("x", 20)
+            .attr("y", 15);
+
+        
+        tooltip.append("text")
+            .attr("class", "tooltip-likes")
+            .attr("x", 20)
+            .attr("y", 30);
+
+        vis.append("rect")
+            .attr("class", "overlay")
+            .attr("width", width)
+            .attr("height", height)
+	 .on("mouseover", function() { tooltip.style("display", "block"); })
+            .on("mouseout", function() { tooltip.style("display", "none"); })
+            .on("mousemove", mousemove)
+		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+        function mousemove() {
+            var x0 = x.invert(d3.mouse(this)[0]),
+                i = bisectDate(dataset, x0, 1),
+                d0 = dataset[i - 1],
+                d1 = dataset[i],
+                d = x0 - d0.date > d1.date - x0 ? d1 : d0;
+         tooltip.attr("transform", "translate(" + x(d.date) + "," + y(d.value) + ")");
+            tooltip.select(".tooltip-date").text(DateFormat(d.date));
+            tooltip.select(".tooltip-likes").text((d.value));
+			
+        }
+		
+	
+	
+	
+};
+
+</script>
+<style>
+.overlay {
+        fill: none;
+        pointer-events: all;
+    }
+
+  .focus_tips
+	{
+		display:none;
+	}
+
+    .focus text {
+        font-size: 14px;
+    }
+	.hover_bg
+	{
+	stroke: yellow;
+    fill: #393945;
+    stroke-width: 2px;
+	}
+    .tooltip {
+        fill: white;
+        stroke: #000;
+    }
+    .tooltip-date, .tooltip-likes 
+	{
+        font-weight: bold;
+    }</style>
