@@ -1,0 +1,1160 @@
+@charset "UTF-8";
+/* CSS Document */
+@media (max-width: 2200px){
+.Right_content_sec .r-video iframe {
+    height: 480px;
+}
+}
+@media (max-width: 2000px){
+.Right_content_sec .r-video iframe {
+    height: 420px;
+}
+}
+@media (max-width: 1920px){
+.Right_content_sec .r-video iframe {
+    height: 400px;
+}
+}
+@media (min-width: 1366px){
+.index_sec3 .container {
+    max-width: 1250px;
+}
+}
+@media (min-width: 1540px){
+.index_sec3 .container {
+    max-width: 1300px;
+}
+}
+@media (min-width: 1680px){
+.index_sec3 .container {
+    max-width: 1350px;
+}
+}
+@media (max-width: 1680px) {
+    .pages_linksBox button {
+        margin-bottom: 20px;
+    }
+}
+@media (min-width: 1860px){
+.index_sec3 .container {
+    max-width: 1500px;
+}
+.index_sec5 ul li {
+    width: 24%;
+}
+}
+@media (min-width: 1920px){
+.index_sec3 .container {
+    max-width: 1600px;
+}
+}
+@media (max-width: 1860px) {
+
+.Right_content_sec .r-video iframe {
+    height: 380px;
+}
+}
+@media (max-width: 1750px) {
+.Right_content_sec .r-video iframe {
+    height: 350px;
+}
+}
+@media (max-width: 1680px) {
+
+.index_sec3 ul li {
+    width: 22%;
+}
+
+.index_sec5 ul li {
+    padding: 20px 10px;
+    width: 24%;
+}
+.Right_content_sec .r-video iframe {
+    height: 330px;
+}
+}
+@media (max-width: 1588px) {
+.dashChart_4 .widgets__variants .widgets__link {
+    max-width: 160px;
+}
+.dashChart_4 .widgets__variants {
+    flex-wrap: unset;
+}
+.Right_content_sec .r-video iframe {
+    height: 320px;
+}
+}
+@media (max-width: 1480px) {
+.filteredSec_tbl .center_value {
+    padding-right: 5%;
+}
+.pages_linksBox button
+	{
+		line-height:32px;
+	}
+.index_sec3 ul li {
+    width: 24%;
+}
+.Right_content_sec .r-video iframe {
+    height: 300px;
+}
+}
+@media (max-width: 1339px){
+.prices__cell:nth-child(3) {
+    display: flex;
+    align-items: center;
+}
+.watchlistPart .wallets__sidebar {
+    padding-right: 20px;
+}
+.result_listHead1 {
+    width: 50%;
+}
+body.dark .result_listHead .result_listHead1:first-child, body.dark .result_listHead .result_listHead1:nth-child(2) {
+    border-color: rgba(228, 228, 228, 0.1);
+}
+}
+@media (max-width: 1399px){
+.Right_content_sec .r-video iframe {
+    height: 280px;
+}
+}
+@media (max-width: 1366px){
+.widgets__variants .widgets__link {
+    padding: 10px 15px;
+}
+.market_tab22 .market_tab33 .market__link {
+    width: 24%;
+    margin: 0 0.5%;
+}
+
+}
+@media (max-width: 1280px) {
+.dashChart_4 .widgets__variants {
+    flex-wrap: wrap;
+}
+.dashChart_4 .widgets__variants .widgets__link {
+    max-width: unset;
+}
+.dashChart_3 .market__head, .dashChart_4 .widgets__head {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+}
+.dashChart_3 .market__item, .dashChart_4 .market__item {
+    padding: 20px;
+}
+.marketTabs_data .widgets__item h3 {
+    margin-bottom: 12px;
+}
+/* .dashChart_list {
+    display: flex;
+    flex-direction: column;
+}
+.dashChart_list .widgets__item {
+    max-width: 100%;
+    width: 100%;
+} */
+.dashboard_mem h3 {
+    margin-bottom: 12px;
+}
+.dashChart_3 {
+    margin-right: 0;
+}
+.dashChart_4 {
+    margin-left: 0;
+}
+.market_newBanner .char_footerDtl11 {
+    flex-wrap: wrap;
+}
+.market_newBanner .footLeft11 {
+    width: 50%;
+    border-bottom: 1px solid #e4e4e4;
+}
+.char_footerDtl11 .footLeft11:nth-child(3) {
+    border: 0;
+}
+.char_footerDtl11 .footLeft11:nth-child(4) {
+    border-bottom: 0;
+}
+body.dark .market_newBanner .footLeft11 {
+    border-color: rgba(228, 228, 228, 0.1);
+}
+/*====== STOCK DETAIL ======*/
+.marketTab_content h4.headline_head {
+    font-size: 23px;
+    line-height: 30px;
+    margin-bottom: 5px;
+}
+.marketTab_content ul li h4, .marketTab_content ul li h4 a {
+    font-size: 16px;
+    line-height: 24px;
+}
+.data_dropdowns44 {
+    padding: 0 20px;
+    padding-left: 0;
+}
+.data_dropdowns443 {
+    padding: 0;
+}
+/*=========== END ==========*/
+/*======= HOME PAGE ========*/
+.home_banner {
+    height: 500px;
+}
+.home_banner2 p {
+    margin-bottom: 60px;
+}
+.secPadd_100 {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.secPadd_100.index_sec5 {
+    padding-bottom: 40px;
+}
+/*=========== END ==========*/
+.index_sec5 ul li {
+    padding: 10px 5px;
+}
+.Right_content_sec .r-video iframe {
+    height: 230px;
+}
+}
+@media (max-width: 1269px) {
+.dashChart_list {
+    display: flex;
+    flex-direction: column;
+}
+.dashChart_list .widgets__item {
+    max-width: 100%;
+    width: 100%;
+} 
+.dashChart_3 .market__head, .dashChart_4 .widgets__head {
+    flex-direction: row;
+    align-items: center;
+}
+.dashboard_mem h3 {
+    margin-bottom: 0;
+}
+
+}
+@media (max-width: 1259px) {
+.page__col:first-child {
+    margin-bottom: 0;
+}
+.portListChart_1 {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 30px;
+}
+.watchlistSec_2 .filteredSec_tbl {
+    width: 100%;
+    margin-right: 0;
+}
+.filteredSec_tbl .center_value {
+    padding-right: 8%;
+}
+
+}
+@media (max-width: 1240px) {
+.filteredSec_dtl {
+    flex-direction: column;
+}
+.filteredSec_chrt {
+    width: 100%;
+    margin-bottom: 30px;
+    margin-right: 0;
+}
+.filteredSec_tbl {
+    width: 100%;
+}
+}
+@media (max-width: 1225px) {
+.chartFil_left {
+    width: 160px;
+}
+.runbacktest_check li {
+    padding: 12px 10px;
+}
+}
+@media (max-width: 1199px) {
+.Right_content_sec .r-video iframe {
+    height: 200px;
+}
+.pages_linksBox {
+    padding-top: 10px;
+}
+.pages_linksBox button {
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 15px;
+}
+.resources_list {
+    margin-bottom: 30px;
+}
+/*======= HOME PAGE ========*/
+.index_sec4 h2 {
+    padding-right: 0;
+}
+/*=========== END ==========*/
+}
+@media (max-width: 1179px) {
+.page.full .sidebar .sidebar__logo_small, .page.wide .sidebar.active .sidebar__logo_small {
+    display: none;
+}
+.page .sidebar .sidebar__logo_small, .page.full.wide .sidebar.active .sidebar__logo_small {
+    display: block;
+}
+.Heading_Popup .heading_popup {
+    width: 95%;
+}
+/*====== DAILY RANKINGS ======*/
+.rankings_tableData .clickTo_add {
+    right: 10px;
+}
+/*============ END ===========*/
+}
+@media (max-width: 1023px) {
+.page .sidebar .sidebar__logo_small, .page.full.wide .sidebar.active .sidebar__logo_small {
+    display: none;
+}
+.sidebar__head .sidebar__close {
+    color: #808191;
+}
+.black_theme {
+    display: none;
+}
+body.dark .white_theme {
+    display: none;
+}
+body.dark .black_theme {
+    display: block;
+}
+/*====== DAILY RANKINGS ======*/
+.prices__table {
+    width: 100%;
+}
+.header {
+    padding-bottom: 50px;
+}
+/*============ END ===========*/
+.watchlistR_table .prices__container {
+    width: 100%;
+    float: left;
+    margin: 0;
+}
+.watchlistR_table .prices__container:before, .watchlistR_table .prices__container:after, .portfolioR_table .prices__container:before, .portfolioR_table .prices__container:after,
+.piechart_table .prices__container:before, .piechart_table .prices__container:after {
+    display: none;
+}
+.portfolioR_table .prices__container , .piechart_table .prices__container {
+    margin: 0;
+}
+/*======= HOME PAGE ========*/
+.home_banner {
+    height: 450px;
+}
+.cookie_banner {
+    height: auto;
+    padding: 20px;
+}
+/*=========== END ==========*/
+}
+@media (max-width: 991px) {
+.ovtlyr_introDiv2.mb_Mob2 {
+    margin-bottom: 30px;
+}
+.ovtlyr_introDiv.mb_Mob {
+    margin-bottom: 30px;
+}
+.Right_content_sec .r-video iframe {
+    height: 520px;
+}
+.resourcesList_pg .row_list {
+    display: block;
+}
+.resourcesList_pg .col_item {
+    width: 100%;
+    padding: 0;
+}
+.resourcesList_pg {
+    padding: 30px;
+    padding-top: 0;
+}
+.sector_btn .left_secBtn {
+    width: 230px;
+}
+.footer_menu li {
+    padding-right: 30px;
+}
+.footer_logo {
+    margin-right: 30px;
+}
+}
+@media (max-width: 900px) {
+.Right_content_sec .r-video iframe {
+    height: 430px;
+}
+.portfolioR_table .prices__container {
+    overflow: auto;
+    display: unset;
+}
+.portfolioR_table .prices__table {
+    width: 900px;
+}
+.watchlistR_table .prices__container {
+    overflow: auto;
+    display: unset;
+}
+.watchlistR_table .prices__table {
+    width: 900px;
+}
+/*====== DAILY RANKINGS ======*/
+.rankings_tableData .market__item {
+    overflow: auto;
+}
+.rankings_tableData .prices__table {
+    width: 830px;
+}
+/*============ END ===========*/
+/*====== DAILY RANKINGS ======*/
+.data_dropdowns441 {
+    width: 100%;
+}
+.data_dropdowns442 {
+    width: 50%;
+    margin-top: 30px;
+}
+.data_dropdowns44 {
+    padding: 0 12px;
+}
+.data_dropdowns443 {
+    padding: 0 12px;
+}
+/*============ END ===========*/
+}
+@media (max-width: 883px) {
+.Right_content_sec .r-video iframe {
+    height: 428px;
+}
+.dashChart_2 .widgets__head {
+    flex-wrap: wrap;
+}
+.dashChart_2 .widgets__company {
+    width: 100%;
+    float: left;
+    margin-bottom: 15px;
+}
+
+.piechart_filter .chartFilter_right {
+    width: 100%;
+}
+.piechart_filter {
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+.chartFil_left {
+    width: 350px;
+    padding-left: 0;
+    margin-top: 20px;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+.runbacktest_check li {
+    padding: 12px 20px;
+    margin-bottom: 0;
+}
+.runBacktest {
+    margin-left: 15px;
+}
+.runbacktest_check, .runBacktest {
+    width: unset;
+}
+.piechart_filter.porfolioPie_fil .chartFilter_right {
+    width: 100%;
+}
+.result_listHead1.max_width_fix {
+    min-width: 300px;
+}
+}
+@media (max-width: 866px) {
+.cookie_text a {
+    margin-left: 0;
+}
+.cookie_text {
+    display: block;
+}
+.result_listHead {
+    flex-wrap: wrap;
+}
+.result_listHead .result_listHead1:first-child, .result_listHead .result_listHead1:nth-child(2) {
+    border-bottom: 1px solid #E4E4E4;
+}
+.result_listHead .result_listHead1:nth-child(2) {
+    border-right: 0;
+}
+.rankings_tableData .ovtlyr_table {
+    width: 758px;
+}
+.watchlistR_table .ovtlyr_table {
+    width: 806px;
+}
+.portfolioR_table .ovtlyr_table {
+    width: 758px;
+}
+}
+@media (max-width: 817px) {
+.Right_content_sec .r-video iframe {
+    height: 390px;
+}
+.sector_btn .left_secBtn {
+    width: 260px;
+    padding-right: 10px;
+    margin-right: 10px;
+}
+/*====== DAILY RANKINGS ======*/
+.market_tab22 .market_tab33 .market__link {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px;
+}
+/*============ END ===========*/
+}
+@media (max-width: 767px) {
+.widgets__variants {
+    display: block;
+    margin: 0;
+}
+.widgets__sorting .widgets__variants {
+    width: 100%;
+    float: left;
+}
+.widgets__sorting {
+    margin: 0;
+    margin-bottom: 25px;
+    width: 100%;
+    float: left;
+}
+.widgets__list {
+    width: 100%;
+    float: left;
+}
+.market__tabs {
+    border: 0;
+    background: unset;
+    border-radius: 0;
+}
+.market__menu {
+    margin: 0;
+}
+.dashboard_mem {
+    padding: 30px 16px;
+    padding-top: 0;
+}
+.heading_popup p, .heading_popup input {
+    font-size: 14px;
+    line-height: 20px;
+}
+.dashChart_1.widgets__item, .dashChart_2.widgets__item {
+    margin-bottom: 30px;
+}
+.Heading_Popup .heading_popup {
+    padding: 10px 10px;
+}
+.dashChart_3 .market__head {
+    display: flex;
+}
+/*====== DAILY RANKINGS ======*/
+.rankings_tableData .market__tabs .market__head {
+    display: flex;
+}
+.rankings_tableData .widgets__variants {
+    display: flex;
+}
+.daily_rankings {
+    padding: 30px 16px;
+    padding-top: 0;
+}
+/*============ END ===========*/
+/*====== STOCK DETAIL ======*/
+.market_newBanner h2 {
+    font-size: 38px;
+    line-height: 50px;
+}
+.marketCount34 {
+    font-size: 35px;
+    line-height: 45px;
+}
+.marketCount55 {
+    margin-top: 5px;
+}
+.market_tab22 .market_tab33 .market__link {
+    width: auto;
+    margin: 0 1%;
+}
+.stock_data ul li {
+    width: auto;
+    padding: 20px 10px;
+}
+/*============ END ===========*/
+.watchlistSec {
+    padding: 30px 16px;
+    padding-top: 0;
+}
+.market__menu .market__link {
+    width: auto;
+}
+.watchlistSec2.wallets__sidebar {
+    padding: 20px;
+}
+.sector_tab1 {
+    flex-wrap: wrap;
+}
+.sector_tab1 .sector_tab11 {
+    width: 50%;
+    padding-right: 20px;
+}
+.watchlistSec_2 {
+    padding: 30px 16px;
+    padding-top: 0;
+}
+.piechart_filter {
+    flex-direction: column;
+}
+.piechart_filter .chartFilter_right {
+    width: 100%;
+}
+.piechart_filter.porfolioPie_fil .chartFilter_right {
+    width: 100%;
+}
+.chartFil_left {
+    width: auto;
+    padding-left: 0;
+    margin-top: 20px;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.header_rightS li {
+    padding-left: 30px;
+}
+.wallets__sidebar
+{
+    width: 370px;
+}
+	.watchlistSec2 .wallets__wrap {
+    padding: 10px;
+	}
+	.newSide_filters .widgets__variants .widgets__link
+	{
+		padding: 10px 4px;margin-right:2px
+	}
+	.portfolioSide_11 .portfolioSide_22 .widgets__link
+	{
+		min-width: 65px;
+	}
+	.widgets__variants .widgets__link
+	{
+		font-weight: 600;
+	}
+	.card__title
+	{
+		font-size:14px;
+	}
+	.js-tabs2 .market__head .market__link
+	{
+		padding:10px 19px;
+	}
+	.checkbox__text
+	{
+		padding-top:1px;
+	}
+	.watchlistSec2 .color-green
+	{
+		width:80%;
+		margin-bottom:2px;font-size: 13px;
+	}
+	.MAR_Tooltip:hover:after, .rf_Tooltip:hover:after {
+		width:220px;left:250%;
+	}
+}
+@media (max-width: 737px) {
+.Right_content_sec .r-video iframe {
+    height: 340px;
+}
+.resources_item {
+    width: 48%;
+    margin: 0 1%;
+}
+.dashChart_2 .widgets__company {
+    margin-bottom: 8px;
+}
+}
+@media (max-width: 673px) {
+.result_listHead1 {
+    width: 100%;
+}
+.result_listHead1 {
+    border-right: 0;
+}
+.result_listHead .result_listHead1:nth-child(3) {
+    border-right: 0;
+    border-bottom: 1px solid #E4E4E4;
+}
+body.dark .result_listHead .result_listHead1:nth-child(3) {
+    border-color: rgba(228, 228, 228, 0.1);
+}
+.result_listHead1.maxwidth_fix {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+}
+@media (max-width: 650px) {
+.Right_content_sec .r-video iframe {
+    height: 290px;
+}
+.resources_item {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 20px;
+}
+.resources_list {
+    margin-bottom: 0;
+}
+.ovtlyr_introDiv.mb_Mob {
+    margin-bottom: 20px;
+}
+.dashChart_1 .market__menu .market__link {
+    padding: 0;
+}
+.dashboard_mem h3 {
+    font-size: 18px;
+    line-height: 24px;
+}
+.widgets__variants .widgets__link {
+    margin: 4px 2px;
+}
+/*====== STOCK DETAIL ======*/
+.marketCount11 {
+    flex-direction: column;
+}
+.market_newBanner h2 {
+    margin-bottom: 5px;
+}
+.market_tab22 .market_tab33 .market__link {
+    font-size: 15px;
+    padding: 5px 10px;
+    padding-top: 0;
+}
+.stock_data ul {
+    flex-wrap: wrap;
+}
+.stock_data ul li {
+    width: 50%;
+    border-bottom: 1px solid #eeeeee;
+}
+.stock_data ul li:nth-child(3) {
+    border: 0;
+}
+.stock_data ul li:nth-child(4) {
+    border-bottom: 0;
+}
+.marketTabs_data .dashChart_4 .widgets__head {
+    flex-wrap: wrap;
+}
+.marketTabs_data .dashChart_4 .widgets__company {
+    width: 100%;
+    float: left;
+    margin-bottom: 8px;
+}
+.data_dropdowns44 {
+    padding: 0;
+    width: 100%;
+}
+.lastUpdated_date {
+    padding: 0;
+}
+.data_dropdowns443 {
+    padding: 0;
+}
+.data_dropdowns442 {
+    width: 100%;
+}
+/*============ END ===========*/
+.filter_head div {
+    width: 250px;
+    float: right;
+    text-align: right;
+    flex-shrink: 0;
+}
+.piechart_table .prices__container {
+    overflow: auto;
+    display: unset;
+}
+.piechart_table .prices__table {
+    width: 578px;
+}
+.piechart_table .ovtlyr_table {
+    width: 536px;
+}
+}
+@media (max-width: 600px) {
+.runbacktest_check li, .runBacktest a {
+    height: auto;
+}
+.filteredSec_tbl .center_value {
+    padding-right: 5%;
+}
+
+.piechart_filter {
+    flex-direction: column;
+}
+.chartFil_left {
+    width: 100%;
+    padding: 0;
+}
+.result_listHead {
+    border-bottom: 0;
+    flex-direction: column;
+}
+.header {
+    padding-bottom: 40px;
+}
+}
+@media (max-width: 575px) {
+.ovt_footer {
+    padding: 30px 0;
+}
+.inner_footer {
+    align-items: flex-start;
+    flex-direction: column;
+}
+.footer_logo {
+    margin-right: 0;
+    width: 50px;
+    height: auto;
+    margin-bottom: 23px;
+}
+.footer_menu {
+    margin-bottom: 25px;
+}
+.footer_socialMedia {
+    justify-content: flex-start;
+}
+.footer_menu li {
+    padding-right: 15px;
+    margin-right: 15px;
+    border-right: 1px solid #e4e4e4;
+    line-height: 18px;
+}
+.footer_menu li:last-child {
+    padding-right: 0;
+    margin-right: 0;
+    border-right: 0;
+}
+}
+@media (max-width: 550px) {
+.sector_btn .left_secBtn {
+    width: 370px;
+}
+.dashChart_4 .widgets__head {
+    flex-wrap: wrap;
+}
+.dashChart_4 .widgets__company {
+    width: 100%;
+    float: left;
+    margin-bottom: 5px;
+}
+/*====== STOCK DETAIL ======*/
+.market_tab22 .market_tab33 .market__link {
+    font-size: 13px;
+    padding: 5px;
+    padding-top: 0;
+    margin: 0 5px;
+}
+.market_newBanner .footLeft11 {
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid #e4e4e4;
+    padding: 8px;
+}
+.char_footerDtl11 .footLeft11:nth-child(3) {
+    border-bottom: 1px solid #e4e4e4;
+}
+/*============ END ===========*/
+}
+@media (max-width: 500px) {
+.widgets__body, .widgets__head {
+    padding: 20px;
+}
+.dashboard_mem .tabs_heading {
+    font-size: 16px;
+    line-height: 22px;
+}
+.sector_btn {
+    flex-direction: column;
+    align-items: center;
+}
+.sector_btn .left_secBtn {
+    width: 95%;
+    padding-right: 0;
+    margin-right: 0;
+    border: 0;
+    border-bottom: 1px solid #E4E4E4;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+.right_secBtn {
+    text-align: center;
+}
+.Heading_Popup .heading_popup {
+    padding: 5px;
+}
+.tabs_heading i {
+    vertical-align: bottom;
+}
+.dashChart_3 .widgets__company {
+    width: 100%;
+    float: left;
+    margin-bottom: 8px;
+}
+.dashChart_3 .market__head {
+    flex-direction: column;
+    padding: 20px;
+}
+.widgets__variants .widgets__link {
+    width: auto;
+}
+.market__item {
+    padding: 20px;
+}
+.dashChart_1.widgets__item, .dashChart_2.widgets__item {
+    margin-bottom: 20px;
+}
+.widgets__item:not(:last-child) {
+    margin-bottom: 20px;
+}
+.widgets__variants .widgets__link {
+    font-size: 14px;
+    line-height: 18px;
+}
+/*====== DAILY RANKINGS ======*/
+.rankings_tableData .market__tabs {
+    padding: 20px;
+}
+.rankings_tableData .widgets__variants .widgets__link {
+    padding: 5px 10px;
+}
+.rankings_tableData {
+    margin-top: 20px;
+}
+/*============ END ===========*/
+/*====== STOCK DETAIL ======*/
+.market_tab22 .market_tab33 {
+    padding: 20px;
+    padding-bottom: 0;
+}
+.dashChart_3 .market__head {
+    align-items: flex-start;
+}
+.lastUpdated_date p {
+    margin-bottom: 12px;
+}
+.data_dropdowns442 {
+    margin-top: 20px;
+}
+/*============ END ===========*/
+.filter_head {
+    align-items: flex-start;
+    margin-bottom: 20px;
+    flex-direction: column;
+}
+.filter_head div {
+    width: auto;
+    text-align: left;
+    margin-top: 15px;
+}
+.watchlistSec1 .dashChart_3 .market__head {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.sector_tab1 .sector_tab11 {
+    width: 100%;
+    padding-right: 0;
+}
+.chartFil_left {
+    justify-content: flex-start;
+}
+
+.portfolioR_table {
+    padding: 20px;
+}
+}
+@media (max-width: 480px) {
+.heading_popup p, .heading_popup input {
+    font-size: 12px;
+    line-height: 18px;
+}
+.dashboard_mem .tabs_heading {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+}
+.dashboard_mem h1 {
+    font-size: 22px;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+.widgets__variants .widgets__link {
+    font-size: 14px;
+    line-height: 18px;
+}
+.dashChart_1 .widgets__body {
+    padding: 20px 5px;
+}
+/*====== DAILY RANKINGS ======*/
+.rankings_tableData .widgets__variants .widgets__link {
+    font-size: 15px;
+    font-weight: 600;
+}
+.rankings_tableData .widgets__variants .widgets__link i {
+    margin-left: 3px;
+    font-size: 18px;
+}
+.rankings_tableData .widgets__variants .widgets__link {
+    padding: 5px 8px;
+}
+/*============ END ===========*/
+/*======= STOCK DETAIL =======*/
+.stock_data {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.market_newBanner .char_footerDtl11 {
+    margin-bottom: 20px;
+}
+.stock_data ul li {
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid #eeeeee;
+    padding: 8px;
+}
+.stock_data ul li:nth-child(3) {
+    border-bottom: 1px solid #eeeeee;
+}
+.market_tab22 .market_tab33 .market__link {
+    font-size: 14px;
+    margin: 0 3px;
+}
+/*============ END ===========*/
+.filteredSec_dtl {
+    margin-top: 20px;
+}
+.filteredSec_chrt {
+    margin-bottom: 20px;
+}
+.portListChart_1 {
+    margin-bottom: 20px;
+}
+.filteredSec_tbl .center_value {
+    padding-right: 1%;
+}
+.header {
+    padding-bottom: 30px;
+}
+	.prices__title
+	{
+	 display: grid;
+	}
+}
+@media (max-width: 450px) {
+.market_tab22 .market_tab33 .market__link {
+    border: 1px solid #e4e4e4;
+    border-radius: 12px;
+    padding: 5px 15px;
+    margin: 0;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    min-width: 79px;
+}
+.market_tab22 .market_tab33 .market__link.active {
+    color: #41a4fe;
+    border: 1px solid #41a4fe;
+}
+.result_listHead .result_listHead1:first-child, .result_listHead .result_listHead1:nth-child(2) {
+    border-right: 0;
+    border-bottom: 1px solid #E4E4E4;
+}
+}
+@media (max-width: 420px) {
+.dashboard_mem .tabs_heading {
+    font-size: 13px;
+}
+/*====== DAILY RANKINGS ======*/
+.rankings_tableData .widgets__variants .widgets__link {
+    font-size: 14px;
+}
+.dashboard_mem h3 {
+    font-size: 16px;
+    line-height: 22px;
+}
+.market_newBanner h2 {
+    font-size: 32px;
+    line-height: 45px;
+}
+.marketCount34 {
+    font-size: 30px;
+    line-height: 45px;
+}
+.marketCount44 {
+    font-size: 14px;
+}
+/*============ END ===========*/
+.portfolio_Sec .portfolio_Select {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+.portfolio_Sec .portfolio_Select a {
+    margin-left: 0;
+}
+.portfolio_Sec .select {
+    margin-bottom: 20px;
+}
+.filteredSec_tbl .center_value {
+    padding-right: 0;
+}
+
+.filteredSec_dtl {
+    align-items: center;
+}
+.filteredSec_chrt {
+    border: 0;
+    padding: 0;
+}
+.watchlistR_table .prices__head {
+    flex-direction: column;
+    align-items: flex-start;
+}
+.watchlistR_table .prices__title {
+    margin-bottom: 15px;
+}
+}
+@media (max-width: 380px) {
+.dashboard_mem .tabs_heading {
+    font-size: 12px;
+}
+/*====== DAILY RANKINGS ======*/
+.rankings_tableData .widgets__variants .widgets__link {
+    font-size: 17px;
+    line-height: 28px;
+}
+/*============ END ===========*/
+
+.chartFil_left {
+    justify-content: space-between;
+}
+}
