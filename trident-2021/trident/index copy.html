@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<base href="">
+<meta charset="utf-8" />
+<title>Trident | Dashboard</title>
+<meta name="description" content="Updates and statistics" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
+<link href="assets/plugins/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
+<link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+<link href="assets/plugins/custom/prismjs/prismjs.bundle.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="assets/css/style.css" />
+<style>
+#line_chart .metric-chart text {
+	fill: #ffffff;
+shag font-size: 9px;
+	font-family: Helvetica, Arial, "sans serif";
+}
+#line_chart .metric-chart text.no-data {
+	font-size: 16px;
+	font-weight: 100;
+	fill: #d0d0d0;
+}
+#line_chart .metric-chart rect.no-data {
+	fill: #f5f5f5;
+}
+#line_chart {
+	background: #393945;
+}
+#line_chart .metric-chart rect.plot-background {
+	fill: red;
+}
+#line_chart .metric-chart path.line {
+	fill: none;
+	stroke: #40c4ff;
+	stroke-width: 1.5px;
+	clip-path: url(#clip);
+}
+#line_chart .metric-chart path.area {
+	/*opacity: 0.6;*/fill: none;
+	clip-path: url(#clip);
+}
+#line_chart .metric-chart .axis {
+}
+#line_chart .metric-chart .x.axis .domain {
+	display: none;
+}
+#line_chart .metric-chart .x.axis line {
+}
+#line_chart .metric-chart .context .x.axis line {
+	display: none;
+}
+#line_chart .metric-chart .y.axis .domain {
+	display: none;
+}
+#line_chart .metric-chart .y.axis.title {
+	font-size: 13px;
+	font-weight: 100;
+}
+#line_chart .metric-chart .y.axis line {
+	stroke: #565656;
+	stroke-dasharray: 2, 2;
+	stroke-opacity: 0.3;
+}
+#line_chart .metric-chart .brush .extent {
+	fill-opacity: .07;
+	shape-rendering: crispEdges;
+	clip-path: url(#clip);
+}
+.brush {
+	opacity: 1;
+	stroke-width: 2px;
+	fill: #fff;
+}
+#line_chart .metric-chart rect.pane {
+	fill: none;
+	pointer-events: all;
+}
+.bar_historic {
+	fill: #8C90A1;
+	opacity: 0.6;
+	stroke-width: 2px;
+	stroke: #8C90A1;
+}
+#line_chart .metric-chart .resize .handle {
+	fill: #555;
+}
+#line_chart .metric-chart .resize .handle-mini {
+	fill: white;
+	stroke-width: 1px;
+	stroke: #555;
+}
+#line_chart .metric-chart .scale_button {
+	cursor: pointer;
+}
+#line_chart .metric-chart .scale_button rect {
+	fill: #eaeaea;
+}
+#line_chart .metric-chart .scale_button:hover text {
+	fill: #417DD6;
+	transition: all 0.1s cubic-bezier(.25, .8, .25, 1);
+}
+#line_chart .metric-chart text#displayDates {
+	font-weight: bold;
+	clip-path: url(#clip);
+}
+.line_positive {
+	fill: none;
+	stroke: #40c4ff;
+	stroke-width: 2px;
+}
+.line_negative {
+	fill: none;
+	stroke: #FF4497;
+	stroke-width: 2px;
+}
+.positiveLine {
+	fill: #40c4ff;
+	stroke: #40c4ff;
+	opacity: 0.6;
+	clip-path: url(#clip);
+}
+.negativeLine {
+	fill: #FF4497;
+	stroke: #FF4497;
+	opacity: 0.6;
+	clip-path: url(#clip);
+}
+}
+</style>
+</head>
+<body id="kt_body" class="quick-panel-right demo-panel-right offcanvas-right header-fixed header-mobile-fixed aside-enabled aside-static page-loading trident_body">
+<div id="kt_header_mobile" class="header-mobile header-mobile-fixed"> <a href="index.html"> <img alt="Logo" src="assets/media/login_trident.png" class="logo-default max-h-30px" /> </a>
+  <div class="d-flex align-items-center">
+    <button class="btn p-0 burger-icon rounded-0 burger-icon-left" id="kt_aside_tablet_and_mobile_toggle"> <span></span> </button>
+    <button class="btn btn-hover-text-primary p-0 ml-3" id="kt_header_mobile_topbar_toggle"> <span class="svg-icon svg-icon-xl">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <polygon points="0 0 24 0 24 24 0 24" />
+        <path d="M12,11 C9.790861,11 8,9.209139 8,7 C8,4.790861 9.790861,3 12,3 C14.209139,3 16,4.790861 16,7 C16,9.209139 14.209139,11 12,11 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" />
+        <path d="M3.00065168,20.1992055 C3.38825852,15.4265159 7.26191235,13 11.9833413,13 C16.7712164,13 20.7048837,15.2931929 20.9979143,20.2 C21.0095879,20.3954741 20.9979143,21 20.2466999,21 C16.541124,21 11.0347247,21 3.72750223,21 C3.47671215,21 2.97953825,20.45918 3.00065168,20.1992055 Z" fill="#000000" fill-rule="nonzero" />
+      </g>
+    </svg>
+    <!--end::Svg Icon--> 
+    </span> </button>
+  </div>
+</div>
+<div class="d-flex flex-column flex-root">
+  <div class="d-flex flex-row flex-column-fluid page">
+    <div class="aside aside-left d-flex flex-column flex-row-auto" id="kt_aside">
+      <div class="aside-menu-wrapper flex-column-fluid" id="kt_aside_menu_wrapper">
+        <div id="kt_aside_menu" class="aside-menu min-h-lg-800px" data-menu-vertical="1" data-menu-scroll="1" data-menu-dropdown-timeout="500">
+          <ul class="menu-nav">
+            <li class="menu-section">
+              <h4 class="menu-text">Main</h4>
+              <i class="menu-icon ki ki-bold-more-hor icon-md"></i> </li>
+            <li class="menu-section">
+              <h4 class="menu-text">Custom Basket</h4>
+              <i class="menu-icon ki ki-bold-more-hor icon-md"></i> </li>
+            <li class="menu-section">
+              <h4 class="menu-text">Document</h4>
+              <i class="menu-icon ki ki-bold-more-hor icon-md"></i> </li>
+            <li class="menu-section">
+              <h4 class="menu-text">Feedback</h4>
+              <i class="menu-icon ki ki-bold-more-hor icon-md"></i> </li>
+            <li class="menu-section">
+              <h4 class="menu-text">OldCHarts</h4>
+              <i class="menu-icon ki ki-bold-more-hor icon-md"></i> </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper">
+      <div id="kt_header" class="header header-fixed">
+        <div class="container d-flex align-items-stretch justify-content-between">
+          <div class="d-none d-lg-flex align-items-center mr-3"> <a href="index.html"> <img alt="Logo" src="assets/media/login_trident.png" class="logo-sticky max-h-35px" /> </a> </div>
+          <div class="topbar">
+            <div class="dropdown"> 
+              <!--begin::Toggle-->
+              <div class="topbar-item mr-4">
+                <div><a href="#" class="text-white main_menu">Main</a></div>
+              </div>
+              <div class="topbar-item mr-4">
+                <div><a href="#" class="text-white main_menu">Custom Basket</a></div>
+              </div>
+              <div class="topbar-item mr-4">
+                <div><a href="#" class="text-white main_menu">Document</a></div>
+              </div>
+              <div class="topbar-item mr-4">
+                <div><a href="#" class="text-white main_menu">Feedback</a></div>
+              </div>
+              <!--<div class="topbar-item mr-4">
+                <div><a href="#" class="text-white main_menu">Old Chart</a></div>
+              </div>-->
+              <div class="dropdown float-right">
+                <div class="topbar-item ml-4" data-toggle="dropdown" data-offset="10px,0px">
+                  <div class="font-weight-bolder text-white"> <a href="#" class="text-white login_email"> Shagun@hashbrown.com<i class="ki ki-arrow-down ml-4 text-white arrow_down"></i> </a></div>
+                </div>
+                <div class="dropdown-menu p-0 m-0 dropdown-menu-right dropdown-menu-anim-up dropdown-menu-md mt-4">
+                  <ul class="navi navi-hover py-5">
+                    <li class="navi-item"> <a href="#" class="navi-link"> <span class="navi-icon"> <i class="flaticon-list"></i> </span> <span class="navi-text">Change Password</span> </a> </li>
+                    <li class="navi-item"> <a href="#" class="navi-link"> <span class="navi-icon"> <i class="flaticon-logout"></i> </span> <span class="navi-text">Logout</span> </a> </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex flex-column flex-column-fluid" id="kt_content">
+        <div class="container">
+          <div class="col-xl-12">
+            <div class="quick-search quick-search-inline mb-5">
+              <div class="row">
+                <div class="col-lg-8">
+                  <div class="quick-search-form">
+                    <div class="input-group rounded">
+                      <div class="input-group-prepend"> <span class="input-group-text"> <span class="svg-icon svg-icon-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <rect x="0" y="0" width="24" height="24" />
+                            <path d="M14.2928932,16.7071068 C13.9023689,16.3165825 13.9023689,15.6834175 14.2928932,15.2928932 C14.6834175,14.9023689 15.3165825,14.9023689 15.7071068,15.2928932 L19.7071068,19.2928932 C20.0976311,19.6834175 20.0976311,20.3165825 19.7071068,20.7071068 C19.3165825,21.0976311 18.6834175,21.0976311 18.2928932,20.7071068 L14.2928932,16.7071068 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" />
+                            <path d="M11,16 C13.7614237,16 16,13.7614237 16,11 C16,8.23857625 13.7614237,6 11,6 C8.23857625,6 6,8.23857625 6,11 C6,13.7614237 8.23857625,16 11,16 Z M11,18 C7.13400675,18 4,14.8659932 4,11 C4,7.13400675 7.13400675,4 11,4 C14.8659932,4 18,7.13400675 18,11 C18,14.8659932 14.8659932,18 11,18 Z" fill="#000000" fill-rule="nonzero" />
+                          </g>
+                        </svg>
+                        </span> </span> </div>
+                      <input type="text" class="form-control h-45px" placeholder="Search..." />
+                      <div class="nav-item relative_pos w-100" style="display:none">
+                        <div class="dropdown_search_bar">
+                          <div class="font-size-sm text-primary font-weight-bolder text-uppercase mb-2"> Symbols </div>
+                          <div class="d-flex align-items-center flex-grow-1 mb-2">
+                            <div class="d-flex flex-column ml-3 mt-2 mb-2"> <a href="#" class="font-weight-bold text-dark text-hover-primary"> AAPL </a> <span class="font-size-sm font-weight-bold text-muted"> Apple Inc. </span> </div>
+                          </div>
+                          <div class="d-flex align-items-center flex-grow-1 mb-2">
+                            <div class="d-flex flex-column ml-3 mt-2 mb-2"> <a href="#" class="font-weight-bold text-dark text-hover-primary"> AMZN </a> <span class="font-size-sm font-weight-bold text-muted"> Amazon.com, Inc. </span> </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="dropdown-menu dropdown-menu-left dropdown-menu-lg dropdown-menu-anim-up">
+                    <div class="quick-search-wrapper scroll" data-scroll="true" data-height="350" data-mobile-height="200"></div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="form-group float-right w-100">
+                    <div class="row">
+                      <div class="col"> <a href="#download_csv" data-toggle="modal" class="btn btn-blue text-white w-100 lh-26">Download CSV</a> </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex flex-column-fluid row">
+                <div class="col-xl-12">
+                  <div class="card card-custom dark_trident gutter-b card-stretch card-shadowless ">
+                    <div class="card-header h-auto border-0">
+                      <div class="card-toolbar">
+                        <ul class="nav nav-pills nav-pills-sm nav-dark-75" role="tablist">
+                          <li class="nav-item"> <a class="nav-link mr-3 active" data-toggle="tab" href="#kt_charts_widget_2_chart_tab_1"> <span class="font-size-sm green-pill green-text">All Assets</span> </a> </li>
+                          <li class="nav-item"> <a class="nav-link py-2 px-4 mr-3" href="#sector_modal" data-toggle="modal"> <span class="font-size-sm blue-text" >Sectors</span> </a> </li>
+                          <li class="nav-item"> <a class="nav-link py-2 px-4" data-toggle="modal" href="#custom_modal"> <span class="font-size-sm pink-text">Custom</span> </a> </li>
+                        </ul>
+                      </div>
+                      <div class="text-right">
+                        <h3 class="font-size-lg py-2 font-weight-bold text-white pt-7">Factor:
+                          <date>10-Aug-2020</date>
+                        </h3>
+                      </div>
+                    </div>
+                    <div class="card-body dark_trident scroll_chart">
+                      <div class="box">
+                        <div id="bar_chart"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer bg_trident py-4 d-flex flex-lg-column" id="kt_footer">
+            <div class=" text-center">
+              <div class="text-dark order-2 order-md-1"> <span class="text-muted font-weight-bold mr-2">© 2020</span> <a href="http://keenthemes.com/metronic" target="_blank" class="text-dark-75 text-hover-primary">Trident All rights reserved by Kievanos</a> </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Sector::Modal-->
+<div class="modal fade" id="sector_modal" tabindex="-1" role="dialog" aria-hidden="true" style="display:none;">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Sector wise Sector weight chart</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">×</span> </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group mb-0">
+          <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="input-daterange input-group"> <a href="#" class="btn btn-blue text-white mr-2">Index factor weight chart</a> </div>
+            <div class="mt-4 d-flex">
+              <select class="form-control rounded-sm form-control-lg form-control-solid mr-5">
+                <option>Select Sectors</option>
+                <option value="energy">Energy</option>
+                <option value="xlre">XLRE</option>
+                <option value="spy">SPY</option>
+              </select>
+              <button type="button" class="btn btn-blue text-white" data-dismiss="modal">OK</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--end::Modal--> 
+<!--Download CSV::Modal-->
+<div class="modal fade" id="download_csv" tabindex="-1" role="dialog" aria-hidden="true" style="display:none;">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header d-block">
+        <h5 class="modal-title">Download CSV</h5>
+        <p class="mb-0">Select your Date Range</p>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">×</span> </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group mb-0">
+          <div class="col-lg-12 col-md-12 col-sm-12 p-0">
+            <div class="input-daterange input-group" id="kt_datepicker_5">
+              <p class="form-text text-muted col-lg-6">Start Date
+                <input type="text" class="form-control" name="start" />
+              </p>
+              <p class="form-text text-muted col-lg-6">End Date
+                <input type="text" class="form-control" name="end" />
+              </p>
+            </div>
+          </div>
+          <div class="grey_box">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-1 d-flex p-0">
+              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <input type="radio" id="Historical" name="range" value="Historical">
+                <label for="male" class="mt-3">Factor Weights</label>
+              </div>
+              <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 d-flex">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 pl-0">
+                  <div class="nav-item relative_pos"> <span class="font-size-sm">
+                    <input type="text" class="form-control searchHis_list">
+                    <span class="spinner spinner-right spinner_pos"></span> </span>
+                    <ul class="dropdown_search historic_search" style="display:none;">
+                      <li><a href="#">SPY</a></li>
+                      <li><a href="#">SPY</a></li>
+                      <li><a href="#">SPY</a></li>
+                      <li><a href="#">SPY</a></li>
+                      <li><a href="#">SPY</a></li>
+                      <li><a href="#">SPY</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 pr-0"> <span>
+                  <select class="form-control correlation_list">
+                    <option selected="selected" value="0">All</option>
+                    <option value="1">By Sectors</option>
+                  </select>
+                  </span> </div>
+              </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-1 d-flex p-0">
+              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <input type="radio" id="Correlation" name="range" value="Correlation" />
+                <label for="female" class="mt-3">Correlation</label>
+              </div>
+              <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 d-flex">
+                <div class="nav-item relative_pos input_width"> <span class="font-size-sm">
+                  <input type="text" class="form-control searchHis_list">
+                  <span class="spinner spinner-right spinner_pos"></span> </span>
+                  <ul class="dropdown_search historic_search" style="display:none;">
+                    <li><a href="#">SPY</a></li>
+                    <li><a href="#">SPY</a></li>
+                    <li><a href="#">SPY</a></li>
+                    <li><a href="#">SPY</a></li>
+                    <li><a href="#">SPY</a></li>
+                    <li><a href="#">SPY</a></li>
+                  </ul>
+                </div>
+                <span class="vs_text">Vs</span>
+                <div class="nav-item relative_pos input_width"> <span class="font-size-sm">
+                  <input type="text" class="form-control searchHis_list">
+                  <span class="spinner spinner-right spinner_pos"></span> </span>
+                  <ul class="dropdown_search historic_search" style="display:none;">
+                    <li><a href="#">SPY</a></li>
+                    <li><a href="#">SPY</a></li>
+                    <li><a href="#">SPY</a></li>
+                    <li><a href="#">SPY</a></li>
+                    <li><a href="#">SPY</a></li>
+                    <li><a href="#">SPY</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-blue text-white" data-dismiss="modal">Download</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--end::Modal-->
+
+<div class="modal fade" id="custom_modal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Select Your Basket </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">×</span> </button>
+      </div>
+      <div class="modal-body">
+        <div class="mt-4 d-flex">
+          <select class="form-control rounded-sm form-control-lg form-control-solid mr-5">
+            <option>Select Basket</option>
+            <option value="Basket1">Basket 1</option>
+            <option value="Basket2">Basket 2</option>
+            <option value="Basket3">Basket 3</option>
+          </select>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-blue text-white" data-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--end::Modal--> 
+
+<script>var HOST_URL = "https://keenthemes.com/metronic/tools/preview";</script> 
+<script>var KTAppSettings = { "breakpoints": { "sm": 576, "md": 768, "lg": 992, "xl": 1200, "xxl": 1200 }, "colors": { "theme": { "base": { "white": "#ffffff", "primary": "#6993FF", "secondary": "#E5EAEE", "success": "#1BC5BD", "info": "#8950FC", "warning": "#FFA800", "danger": "#F64E60", "light": "#F3F6F9", "dark": "#212121" }, "light": { "white": "#ffffff", "primary": "#E1E9FF", "secondary": "#ECF0F3", "success": "#C9F7F5", "info": "#EEE5FF", "warning": "#FFF4DE", "danger": "#FFE2E5", "light": "#F3F6F9", "dark": "#D6D6E0" }, "inverse": { "white": "#ffffff", "primary": "#ffffff", "secondary": "#212121", "success": "#ffffff", "info": "#ffffff", "warning": "#ffffff", "danger": "#ffffff", "light": "#464E5F", "dark": "#ffffff" } }, "gray": { "gray-100": "#F3F6F9", "gray-200": "#ECF0F3", "gray-300": "#E5EAEE", "gray-400": "#D6D6E0", "gray-500": "#B5B5C3", "gray-600": "#80808F", "gray-700": "#464E5F", "gray-800": "#1B283F", "gray-900": "#212121" } }, "font-family": "Poppins" };</script> 
+<script src="assets/plugins/global/plugins.bundle.js"></script> 
+<script src="assets/plugins/custom/prismjs/prismjs.bundle.js"></script> 
+<script src="assets/js/scripts.bundle.js"></script> 
+<script src="assets/plugins/custom/fullcalendar/fullcalendar.bundle.js"></script> 
+<script src="assets/js/pages/widgets.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script> 
+<script src="assets/js/pages/crud/forms/widgets/bootstrap-datepicker.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script> 
+<script>
+    $('.select2').select2();
+</script> 
+<script>
+	$("#type").bind("change", function () {
+    $('#historic_date').modal('show')(this.value === 'donations'); 
+});
+</script>
+
+
+<!--Trident Bar chart--> 
+
+<script>
+	var svg = d3.select("svg");
+	var margin = {top: 10, right: 10, bottom:20, left: 100};
+ 	var width = parseInt(d3.select("#bar_chart").style("width")) - margin.left - margin.right,
+    height = parseInt(d3.select("#bar_chart").style("height")) - margin.top - margin.bottom;
+	
+	var formatPercent = d3.format("");
+	
+	var x = d3.scale.ordinal()  
+    .rangeRoundBands([0, width], .1)
+	var xAxis = d3.svg.axis()
+	.scale(x)
+	.orient("bottom");
+	
+	var y = d3.scale.linear()
+	.range([height, 0]);
+	var yAxis = d3.svg.axis()
+	.scale(y)
+	.orient("left")
+	.ticks("5")
+	.tickFormat(function(d) {return d + "%"});
+	
+	var Tooltip = d3.select("#bar_chart")
+    .append("div")
+    .style("opacity", 0)
+    .attr("class", "tooltip")
+    
+		
+		
+	var mouseover = function(d) {
+    Tooltip
+      .style("opacity", 1)
+    d3.select(this)
+      .style("opacity", 1)
+  }
+  var mousemove = function(d) {
+    Tooltip
+      .text(d.year + ":" + d.value + "%")
+      .style("left", (d3.mouse(this)[0]+70) + "px")
+      .style("top", (d3.mouse(this)[1]) + "px")
+	  .style("font-weight", "600")
+  }
+  var mouseleave = function(d) {
+    Tooltip
+      .style("opacity", 0)
+    d3.select(this)
+  }
+	
+	var svg = d3.select("#bar_chart").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+	d3.csv("TridentLive.csv", function(error, data){
+    x.domain(data.map(function(d) {
+        return d.year;
+    }));
+    y.domain(d3.extent(data, function(d) {
+        return d.value;
+    }));
+
+	
+		
+   svg.append("g")
+  .attr("class", "line")
+  .append("line")
+  .attr("y1", y(0))
+  .attr("y2", y(0))
+  .attr("x1", 0)
+  .attr("x2", width);
+
+    svg.selectAll(".bar")
+        .data(data)
+        .enter().append("rect")
+        .attr("class", function(d) {
+			if (d.value < 0){
+                return "bar negative";
+            } else {
+                return "bar positive";
+            }})
+        .attr("data-yr", function(d){
+            return d.year;
+        })
+        .attr("data-c", function(d){
+            return d.value;
+        })
+        .attr("title", function(d){
+            return (d.year + ": " + d.value + " %")
+        })
+        .attr("y", function(d) {
+
+            if (d.value > 0){
+                return y(d.value);
+            } else {
+                return y(0);
+            }
+
+        })
+        .attr("x", function(d) {
+            return x(d.year);
+	
+        })
+        .attr("width", x.range())
+        .attr("height", function(d) {
+            return Math.abs(y(d.value) - y(0));
+        })
+        /*.on("mouseover", function(d){
+            d3.select("#_yr")
+                .text("" + d.year);
+            d3.select("#degrree")
+                .text(d.value + "%");
+        })*/
+	
+		.on("mouseover", mouseover)
+    .on("mousemove", mousemove)
+    .on("mouseleave", mouseleave)
+		
+  
+  
+		svg.append("g")
+			.attr("class", "y axis")
+			.call(yAxis);
+
+
+      
+ 
+	
+		svg.append("g")
+			.attr("class", "X axis")
+			.attr("transform", "translate(" + (margin.right - 0) + "," + height +  ")")
+	.attr("transform", "translate(0,270)")
+			.call(xAxis);
+
+		svg.append("g")
+			.attr("class", "infowin")
+			.attr("transform", "translate(50, 0)")
+			.append("text")
+			.attr("id", "_yr");
+	
+svg.append("g")
+        .attr("transform", "translate(0," + height + ")")
+	  .append("text")
+		.attr("class", "xAxis-text")
+	
+		svg.append("g")
+			.attr("class", "infowin")
+			.attr("transform", "translate(90, 0)")
+			.append("text")
+			.attr("id","degrree");
+		svg.selectAll(".text")  		
+		  .data(data)
+		  .enter()
+		  .append("text")
+		  .attr("class","label")
+		  .attr("x", (function(d) { return x(d.year)}  ))
+		  .attr("y", function(d) { return y(d.value) })
+		  .attr("dx", "3")
+		 .attr("dy", "0")
+		  .text(function(d) { return d.value + "%" });
+		
+	
+		
+		
+	function type(d) 
+		{
+			d.value = +d.value;
+			return d;
+		};
+	});
+
+		
+</script>
+<!--<style>
+	#line_chart svg
+	{
+	width:100%;height:300px;
+	}
+</style>-->
+</body>
+<!--end::Body-->
+
+</html>

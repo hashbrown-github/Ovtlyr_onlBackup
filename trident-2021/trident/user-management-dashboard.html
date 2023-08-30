@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<base href="">
+<meta charset="utf-8" />
+<title>Trident | User Management </title>
+<meta name="description" content="Updates and statistics" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<link rel="icon" href="assets/media/trident-favicon.png" type="image/gif" sizes="32x32">
+<link href="assets/plugins/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
+<link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+<link href="assets/plugins/custom/prismjs/prismjs.bundle.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body id="kt_body" class="quick-panel-right demo-panel-right offcanvas-right header-fixed header-mobile-fixed subheader-enabled aside-enabled aside-static page-loading trident_body">
+<div class="d-flex flex-column flex-root">
+  <header class="menu_topSetting">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> <img class="auth_logo" src="assets/media/login_trident.png" alt="logo" /> </div>
+    </div>
+  </header>
+  <div class="d-flex flex-column-fluid mt-6 mt-lg-0">
+	  <!--begin::Header Mobile-->
+<div id="kt_header_mobile" class="header-mobile header-mobile-fixed"> <a href="index.html"> <img alt="Logo" src="assets/media/login_trident.png" class="logo-default max-h-30px" /> </a>
+  <div class="d-flex align-items-center">
+    <button class="btn p-0 burger-icon rounded-0 burger-icon-left" id="kt_aside_tablet_and_mobile_toggle"> <span></span> </button>
+  </div>
+</div>
+<!--Left side bar on mobile-->
+<div class="aside aside-left d-flex flex-column flex-row-auto" id="kt_aside">
+  <div class="aside-menu-wrapper flex-column-fluid" id="kt_aside_menu_wrapper">
+    <div class="aside-menu min-h-lg-800px" data-menu-vertical="1" data-menu-scroll="1" data-menu-dropdown-timeout="500">
+      <div class="userProfile">
+        <h1 class="font-size-h5 font-weight-bold green-text ">Welcome Company</h1>
+        <a href="#" class="company_name"> <i class="flaticon2-pen blue-text icon-edit"></i> <span class="svg-icon svg-icon-8x">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <polygon points="0 0 24 0 24 24 0 24"></polygon>
+            <path d="M12,11 C9.790861,11 8,9.209139 8,7 C8,4.790861 9.790861,3 12,3 C14.209139,3 16,4.790861 16,7 C16,9.209139 14.209139,11 12,11 Z" fill="#000000" fill-rule="nonzero" opacity="0.3"></path>
+            <path d="M3.00065168,20.1992055 C3.38825852,15.4265159 7.26191235,13 11.9833413,13 C16.7712164,13 20.7048837,15.2931929 20.9979143,20.2 C21.0095879,20.3954741 20.9979143,21 20.2466999,21 C16.541124,21 11.0347247,21 3.72750223,21 C3.47671215,21 2.97953825,20.45918 3.00065168,20.1992055 Z" fill="#ffffff" fill-rule="nonzero"></path>
+          </g>
+        </svg>
+        </span> </a>
+        <p class="text-white"> shivani@meradesh.org</p>
+      </div>
+      <ul class="menu-nav tri_sidebarList">
+        <li><a href="#"  class="text-muted">Dashboard</a></li>
+        <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover"> <a href="javascript:;" class="menu-toggle text-muted"> <span class="menu-text text-muted">Document</span> <i class="ki ki-arrow-down icon_submenu"></i> </a>
+          <div class="menu-submenu"> <i class="menu-arrow"></i>
+            <ul class="menu-subnav">
+              <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover"> <a href="javascript:;" class="menu-toggle text-muted"> <i class="menu-bullet menu-bullet-line"> <span></span> </i> <span class="menu-text sub_menuText">- Terms of Service</span> <i class="menu-arrow"></i> </a> </li>
+              <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover"> <a href="javascript:;" class="menu-toggle text-muted"> <i class="menu-bullet menu-bullet-line"> <span></span> </i> <span class="menu-text sub_menuText">- Privacy Policy</span> <i class="menu-arrow"></i> </a> </li>
+            </ul>
+          </div>
+        </li>
+        <li class="mt-5"><a href="#"  class="text-muted">Licenses Management</a></li>
+        <li><a href="#"  class="text-muted">Susbscription Management</a></li>
+        <li class="menu-item menu-item-submenu pt-5" aria-haspopup="true" data-menu-toggle="hover"> <a href="javascript:;" class="menu-toggle text-muted"> <span class="menu-text text-muted">My Account</span> <i class="ki ki-arrow-down icon_submenu"></i> </a>
+          <div class="menu-submenu"> <i class="menu-arrow"></i>
+            <ul class="menu-subnav">
+              <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover"> <a href="javascript:;" class="menu-toggle text-muted"> <i class="menu-bullet menu-bullet-line"> <span></span> </i> <span class="menu-text sub_menuText">- Change Password</span> <i class="menu-arrow"></i> </a> </li>
+            </ul>
+          </div>
+        </li>
+        <li class="mt-5"><a href="#" class="text-muted">Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!--End Left side bar on mobile--> 
+<!--end::Header Mobile-->
+    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 sidebar_list mobile_display">
+<div id="kt_aside_menu" class="aside-menu min-h-lg-800px" data-menu-vertical="1" data-menu-scroll="1" data-menu-dropdown-timeout="500">
+      <div class="userProfile">
+        <h1 class="font-size-h5 font-weight-bold green-text ">Welcome Company</h1>
+        <a href="#" class="company_name"> <i class="flaticon2-pen blue-text icon-edit"></i> <span class="svg-icon svg-icon-8x">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <polygon points="0 0 24 0 24 24 0 24"></polygon>
+            <path d="M12,11 C9.790861,11 8,9.209139 8,7 C8,4.790861 9.790861,3 12,3 C14.209139,3 16,4.790861 16,7 C16,9.209139 14.209139,11 12,11 Z" fill="#000000" fill-rule="nonzero" opacity="0.3"></path>
+            <path d="M3.00065168,20.1992055 C3.38825852,15.4265159 7.26191235,13 11.9833413,13 C16.7712164,13 20.7048837,15.2931929 20.9979143,20.2 C21.0095879,20.3954741 20.9979143,21 20.2466999,21 C16.541124,21 11.0347247,21 3.72750223,21 C3.47671215,21 2.97953825,20.45918 3.00065168,20.1992055 Z" fill="#ffffff" fill-rule="nonzero"></path>
+          </g>
+        </svg>
+        </span> </a>
+        <p class="text-white">shivani@meradesh.org</p>
+      </div>
+      <div class="aside-menu-wrapper flex-column-fluid">
+        <div class="aside-menu" data-menu-vertical="1" data-menu-scroll="1" >
+          <ul class="menu-nav tri_sidebarList">
+            <li><a href="#"  class="text-muted">Dashboard</a></li>
+            <li class="mt-5"><a href="#"  class="text-muted">Licenses Management</a></li>
+            <li><a href="#"  class="text-muted">Susbscription Management</a></li>
+            <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover"> <a href="javascript:;" class="menu-toggle text-muted"> <span class="menu-text text-muted">Document</span> <i class="ki ki-arrow-down icon_submenu"></i> </a>
+              <div class="menu-submenu"> <i class="menu-arrow"></i>
+                <ul class="menu-subnav">
+                  <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover"> <a href="javascript:;" class="menu-toggle text-muted"> <i class="menu-bullet menu-bullet-line"> <span></span> </i> <span class="menu-text sub_menuText">- Terms of Service</span> <i class="menu-arrow"></i> </a> </li>
+                  <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover"> <a href="javascript:;" class="menu-toggle text-muted"> <i class="menu-bullet menu-bullet-line"> <span></span> </i> <span class="menu-text sub_menuText">- Privacy Policy</span> <i class="menu-arrow"></i> </a> </li>
+                </ul>
+              </div>
+            </li>
+            <li class="menu-item menu-item-submenu pt-5" aria-haspopup="true" data-menu-toggle="hover"> <a href="javascript:;" class="menu-toggle text-muted"> <span class="menu-text text-muted">My Account</span> <i class="ki ki-arrow-down icon_submenu"></i> </a>
+              <div class="menu-submenu"> <i class="menu-arrow"></i>
+                <ul class="menu-subnav">
+                  <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover"> <a href="javascript:;" class="menu-toggle text-muted"> <i class="menu-bullet menu-bullet-line"> <span></span> </i> <span class="menu-text sub_menuText">- Change Password</span> <i class="menu-arrow"></i> </a> </li>
+                </ul>
+              </div>
+            </li>
+            <li class="mt-5"><a href="#" class="text-muted">Logout</a></li>
+          </ul>
+        </div>
+      </div>
+		</div></div>
+  <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 main_pannel">
+    <div class="card-title">
+      <h1 class="card-label heading_text text-white text-left">User Management Dashboard</h1>
+    </div>
+    <div class="pannel_box">
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 mb-4">
+          <div class="dark_box box_overflow"> <a href="#" class="font-size-sm text-muted font-weight-bold">Current Subscription</a>
+            <p class="font-size-h5 font-weight-bold green-text card_text">30 Licenses</p>
+            <span class="svg-icon box_overflow-absolute  svg-icon-9x">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+              <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <rect x="0" y="0" width="24" height="24"/>
+                <path d="M4.00246329,12.2004927 L13,14 L13,4.06189375 C16.9463116,4.55399184 20,7.92038235 20,12 C20,16.418278 16.418278,20 12,20 C7.64874861,20 4.10886412,16.5261253 4.00246329,12.2004927 Z" fill="#000000" opacity="0.3"/>
+                <path d="M3.0603968,10.0120794 C3.54712466,6.05992157 6.91622084,3 11,3 L11,11.6 L3.0603968,10.0120794 Z" fill="#000000"/>
+              </g>
+            </svg>
+            </span> </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 mb-4">
+          <div class="dark_box box_overflow"> <a href="#" class="font-size-sm text-muted font-weight-bold">IN USE</a>
+            <p class="font-size-h5 font-weight-bold green-text card_text">15</p>
+            <span class="svg-icon box_overflow-absolute  svg-icon-9x">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+              <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <rect x="0" y="0" width="24" height="24"/>
+                <path d="M4.00246329,12.2004927 L13,14 L13,4.06189375 C16.9463116,4.55399184 20,7.92038235 20,12 C20,16.418278 16.418278,20 12,20 C7.64874861,20 4.10886412,16.5261253 4.00246329,12.2004927 Z" fill="#000000" opacity="0.3"/>
+                <path d="M3.0603968,10.0120794 C3.54712466,6.05992157 6.91622084,3 11,3 L11,11.6 L3.0603968,10.0120794 Z" fill="#000000"/>
+              </g>
+            </svg>
+            </span> </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 mb-4">
+          <div class="dark_box box_overflow"> <a href="#" class="font-size-sm text-muted font-weight-bold">NOT IN USE</a>
+            <p class="font-size-h5 font-weight-bold green-text card_text">15</p>
+            <span class="svg-icon box_overflow-absolute  svg-icon-9x">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+              <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <rect x="0" y="0" width="24" height="24"/>
+                <path d="M4.00246329,12.2004927 L13,14 L13,4.06189375 C16.9463116,4.55399184 20,7.92038235 20,12 C20,16.418278 16.418278,20 12,20 C7.64874861,20 4.10886412,16.5261253 4.00246329,12.2004927 Z" fill="#000000" opacity="0.3"/>
+                <path d="M3.0603968,10.0120794 C3.54712466,6.05992157 6.91622084,3 11,3 L11,11.6 L3.0603968,10.0120794 Z" fill="#000000"/>
+              </g>
+            </svg>
+            </span> </div>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-7">
+          <div class="float-right"> <span class="dashboard_btn mb-4"><a href="#" class="btn btn-blue text-white mb-1 btn_font"><span class="svg-icon svg-icon-white svg-icon-2x">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+              <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <polygon points="0 0 24 0 24 24 0 24"/>
+                <path d="M4.85714286,1 L11.7364114,1 C12.0910962,1 12.4343066,1.12568431 12.7051108,1.35473959 L17.4686994,5.3839416 C17.8056532,5.66894833 18,6.08787823 18,6.52920201 L18,19.0833333 C18,20.8738751 17.9795521,21 16.1428571,21 L4.85714286,21 C3.02044787,21 3,20.8738751 3,19.0833333 L3,2.91666667 C3,1.12612489 3.02044787,1 4.85714286,1 Z M8,12 C7.44771525,12 7,12.4477153 7,13 C7,13.5522847 7.44771525,14 8,14 L15,14 C15.5522847,14 16,13.5522847 16,13 C16,12.4477153 15.5522847,12 15,12 L8,12 Z M8,16 C7.44771525,16 7,16.4477153 7,17 C7,17.5522847 7.44771525,18 8,18 L11,18 C11.5522847,18 12,17.5522847 12,17 C12,16.4477153 11.5522847,16 11,16 L8,16 Z" fill="#000000" fill-rule="nonzero" opacity="0.3"/>
+                <path d="M6.85714286,3 L14.7364114,3 C15.0910962,3 15.4343066,3.12568431 15.7051108,3.35473959 L20.4686994,7.3839416 C20.8056532,7.66894833 21,8.08787823 21,8.52920201 L21,21.0833333 C21,22.8738751 20.9795521,23 19.1428571,23 L6.85714286,23 C5.02044787,23 5,22.8738751 5,21.0833333 L5,4.91666667 C5,3.12612489 5.02044787,3 6.85714286,3 Z M8,12 C7.44771525,12 7,12.4477153 7,13 C7,13.5522847 7.44771525,14 8,14 L15,14 C15.5522847,14 16,13.5522847 16,13 C16,12.4477153 15.5522847,12 15,12 L8,12 Z M8,16 C7.44771525,16 7,16.4477153 7,17 C7,17.5522847 7.44771525,18 8,18 L11,18 C11.5522847,18 12,17.5522847 12,17 C12,16.4477153 11.5522847,16 11,16 L8,16 Z" fill="#000000" fill-rule="nonzero"/>
+              </g>
+            </svg>
+            </span> User Dashboard URL </a> <br>
+            </span> <a href="#add_newuser" data-toggle="modal" class="btn btn-blue text-white margin-minus btn_font"><span class="svg-icon svg-icon-white svg-icon-2x">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+              <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <rect fill="#000000" x="4" y="11" width="16" height="2" rx="1"/>
+                <rect fill="#000000" opacity="0.3" transform="translate(12.000000, 12.000000) rotate(-270.000000) translate(-12.000000, -12.000000) " x="4" y="11" width="16" height="2" rx="1"/>
+              </g>
+            </svg>
+            </span> Add New User</a> </div>
+        </div>
+      </div>
+    </div>
+	  <div id="div_MemberAdminList">
+		  <div class="d-flex mb-5 filter_box"> 
+                 <span class="mr-5 mt-2 text-white">Filter By : </span>
+				 <span>
+					  <select name="ctl00$ContentPlaceHolder1$ddl_filterByStatus" id="ddl_filterByStatus" class="form-control">
+						<option selected="selected" value="0">All</option>
+						<option value="1">Active</option>
+						<option value="2">Deactive</option>
+
+					</select>
+                </span>
+					<div class="ml-3 d-flex">
+
+                    <input type="text" id="txt_searchMemberAdmin" class="form-control filter_search" placeholder="Search By Keyword">
+                 
+                     <a id="btn_GoMemberAdmin" class="btn btn-blue text-white ml-3">Go</a>
+
+                     <a id="btn_Refresh_MemberAdmin" class="btn btn-blue text-white ml-3">Refresh</a>
+
+                </div>
+             </div>
+    <div class="pannel_box">
+      <div class="col-lg-12 p-0">
+        <div id="kt_mixed_widget_5_chart" class="table_pannel">
+          <div class="dark_box">
+            <h4 class="font-size-h6 text-white font-weight-bold"> <span class="svg-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <polygon points="0 0 24 0 24 24 0 24"></polygon>
+                  <path d="M12,11 C9.790861,11 8,9.209139 8,7 C8,4.790861 9.790861,3 12,3 C14.209139,3 16,4.790861 16,7 C16,9.209139 14.209139,11 12,11 Z" fill="#000000" fill-rule="nonzero" opacity="0.3"></path>
+                  <path d="M3.00065168,20.1992055 C3.38825852,15.4265159 7.26191235,13 11.9833413,13 C16.7712164,13 20.7048837,15.2931929 20.9979143,20.2 C21.0095879,20.3954741 20.9979143,21 20.2466999,21 C16.541124,21 11.0347247,21 3.72750223,21 C3.47671215,21 2.97953825,20.45918 3.00065168,20.1992055 Z" fill="#ffffff" fill-rule="nonzero"></path>
+                </g>
+              </svg>
+              </span><span>Shagun Justa</span></h4>
+            <div class="box-position"> <span class="switch switch-sm float-right">
+              <label>
+                <input type="checkbox" checked="checked" name="email_notification_1">
+                <span></span> </label>
+              </span> </div>
+            <div class="row card-setBox">
+              <div class="col px-8 py-6 mr-8">
+                <div class="font-size-sm text-muted font-weight-bold">Email</div>
+                <div class="font-size-h5 font-weight-bold green-text ">shagunjusta@gmail.com</div>
+              </div>
+              <div class="col px-8 py-6">
+                <div class="font-size-sm text-muted font-weight-bold">Username</div>
+                <div class="font-size-h5 font-weight-bold green-text ">Shagunjusta</div>
+              </div>
+              <div class="col px-8 py-6 mr-8">
+                <div class="font-size-sm text-muted font-weight-bold">Password</div>
+                <div class="font-size-h5 font-weight-bold green-text ">******* <a class="btn btn-blue ml-2 text-white btn_resettable">Reset</a></div>
+              </div>
+            </div>
+            <div class="buttons_box">
+              <div class="font-weight-bolder"><a class="m-1" href="#target" title="Edit"><i class="flaticon2-pen green-text icon-action"></i></a><a class="m-1" href="#target" title="Email"><i class="flaticon-multimedia green-text icon-action icon-action"></i></a> <a class="m-1" href="#target" title="Delete" id="kt_sweetalert_demo_8"> <i class="flaticon-delete-1 green-text icon-action"></i> </a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pannel_box">
+      <div class="col-lg-12 p-0">
+        <div id="kt_mixed_widget_5_chart" class="table_pannel">
+          <div class="dark_box">
+            <h4 class="font-size-h6 text-white font-weight-bold"> <span class="svg-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <polygon points="0 0 24 0 24 24 0 24"></polygon>
+                  <path d="M12,11 C9.790861,11 8,9.209139 8,7 C8,4.790861 9.790861,3 12,3 C14.209139,3 16,4.790861 16,7 C16,9.209139 14.209139,11 12,11 Z" fill="#000000" fill-rule="nonzero" opacity="0.3"></path>
+                  <path d="M3.00065168,20.1992055 C3.38825852,15.4265159 7.26191235,13 11.9833413,13 C16.7712164,13 20.7048837,15.2931929 20.9979143,20.2 C21.0095879,20.3954741 20.9979143,21 20.2466999,21 C16.541124,21 11.0347247,21 3.72750223,21 C3.47671215,21 2.97953825,20.45918 3.00065168,20.1992055 Z" fill="#ffffff" fill-rule="nonzero"></path>
+                </g>
+              </svg>
+              </span><span>Shagun Justa</span></h4>
+            <div class="box-position"> <span class="switch switch-sm float-right">
+              <label>
+                <input type="checkbox" checked="checked" name="email_notification_1">
+                <span></span> </label>
+              </span> </div>
+            <div class="row card-setBox">
+              <div class="col px-8 py-6 mr-8">
+                <div class="font-size-sm text-muted font-weight-bold">Email</div>
+                <div class="font-size-h5 font-weight-bold green-text ">shagunjusta@gmail.com</div>
+              </div>
+              <div class="col px-8 py-6">
+                <div class="font-size-sm text-muted font-weight-bold">Username</div>
+                <div class="font-size-h5 font-weight-bold green-text ">Shagunjusta</div>
+              </div>
+              <div class="col px-8 py-6 mr-8">
+                <div class="font-size-sm text-muted font-weight-bold">Password</div>
+                <div class="font-size-h5 font-weight-bold green-text ">******* <a class="btn btn-blue ml-2 text-white btn_resettable">Reset</a></div>
+              </div>
+            </div>
+            <div class="buttons_box">
+              <div class="font-weight-bolder"><a class="m-1" href="#target" title="Edit"><i class="flaticon2-pen green-text icon-action"></i></a><a class="m-1" href="#target" title="Email"><i class="flaticon-multimedia green-text icon-action icon-action"></i></a> <a class="m-1" href="#target" title="Delete" id="kt_sweetalert_demo_8"> <i class="flaticon-delete-1 green-text icon-action"></i> </a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+	  </div>
+  </div>
+</div>
+<!--begin Add User Modal-->
+<div class="add_userModal">
+  <div class="modal fade" id="add_newuser" tabindex="-1" role="dialog" aria-hidden="true" style="display:none;">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content card-dark">
+        <div class="modal-header ad_user">
+          <h5 class="modal-title green-text">Add User</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">×</span> </button>
+        </div>
+        <div class="modal-body pb-0">
+          <div class="form-group mb-0">
+            <div class="col-lg-12 col-md-12 col-sm-12 p-0">
+              <div class="input-daterange input-group" id="kt_datepicker_5">
+                <p class="form-text text-muted col-lg-12 p-0">
+                  <input type="text" class="form-control dark_box border_dark mt-1" placeholder="Name" />
+                </p>
+                <p class="form-text text-muted col-lg-12 p-0">
+                  <input type="text" class="form-control dark_box border_dark mt-1"  placeholder="Username" />
+                </p>
+                <p class="form-text text-muted col-lg-12 p-0">
+                  <input type="password" class="form-control dark_box border_dark mt-1" placeholder="Password" />
+                </p>
+                <p class="form-text text-muted col-lg-12 p-0">
+                  <input type="email" class="form-control dark_box border_dark mt-1" placeholder="Email" />
+                </p>
+                <p class="form-text text-muted col-lg-12 p-0">
+                  <select class="form-control dark_box border_dark mt-1" placeholder="Map License">
+                    <option value="0">-Select License To Map-</option>
+                    <option value="">4oMl2MUG1I</option>
+                    <option value="">Map License</option>
+                    <option value="">ef5mARuvt3</option>
+                    <option value="">Map License</option>
+                  </select>
+                </p>
+                <div class="form-text text-muted col-lg-12 p-0">
+                  <p class="mb-0 mt-4">Action</p>
+                  <span class="switch switch-sm">
+                  <label>
+                    <input type="checkbox" checked="checked" name="email_notification_1">
+                    <span></span> </label>
+                  </span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer user-footer">
+          <button type="button" class="btn btn-blue text-white" data-dismiss="modal">ADD Notify User</button>
+          <button type="button" class="btn btn-default text-dark" data-dismiss="modal">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--end::Modal--> 
+
+<script>var HOST_URL = "https://keenthemes.com/metronic/towols/preview";</script> 
+<script>var KTAppSettings = { "breakpoints": { "sm": 576, "md": 768, "lg": 992, "xl": 1200, "xxl": 1200 }, "colors": { "theme": { "base": { "white": "#ffffff", "primary": "#6993FF", "secondary": "#E5EAEE", "success": "#1BC5BD", "info": "#8950FC", "warning": "#FFA800", "danger": "#F64E60", "light": "#F3F6F9", "dark": "#212121" }, "light": { "white": "#ffffff", "primary": "#E1E9FF", "secondary": "#ECF0F3", "success": "#C9F7F5", "info": "#EEE5FF", "warning": "#FFF4DE", "danger": "#FFE2E5", "light": "#F3F6F9", "dark": "#D6D6E0" }, "inverse": { "white": "#ffffff", "primary": "#ffffff", "secondary": "#212121", "success": "#ffffff", "info": "#ffffff", "warning": "#ffffff", "danger": "#ffffff", "light": "#464E5F", "dark": "#ffffff" } }, "gray": { "gray-100": "#F3F6F9", "gray-200": "#ECF0F3", "gray-300": "#E5EAEE", "gray-400": "#D6D6E0", "gray-500": "#B5B5C3", "gray-600": "#80808F", "gray-700": "#464E5F", "gray-800": "#1B283F", "gray-900": "#212121" } }, "font-family": "Poppins" };</script> 
+<script src="assets/plugins/global/plugins.bundle.js"></script> 
+<script src="assets/plugins/custom/prismjs/prismjs.bundle.js"></script> 
+<script src="assets/js/scripts.bundle.js"></script> 
+<script src="assets/js/pages/custom/login/login.js"></script> 
+<script src="https://js.stripe.com/v3/"></script> 
+<script type="text/javascript">
+       $(function () {
+           // Create a Stripe client.
+           var stripe = Stripe('pk_test_ryt6Rj4BnE6OSPmAiowpqm62');
+
+           // Create an instance of Elements.
+           var elements = stripe.elements();
+
+           // Custom styling can be passed to options when creating an Element.
+           // (Note that this demo uses a wider set of styles than the guide below.)
+           var style = {
+               base: {
+                   color: '#32325d',
+                   lineHeight: '18px',
+                   fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
+                   fontSmoothing: 'antialiased',
+                   fontSize: '16px',
+                   '::placeholder': {
+                       color: '#aab7c4'
+                   }
+               },
+               invalid: {
+                   color: '#fa755a',
+                   iconColor: '#fa755a'
+               }
+           };
+
+           // Create an instance of the card Element.
+           var card = elements.create('card', { style: style });
+
+           // Add an instance of the card Element into the `card-element` <div>.
+           card.mount('#card-element');
+
+           // Handle real-time validation errors from the card Element.
+           card.addEventListener('change', function (event) {
+               var displayError = document.getElementById('card-errors');
+               if (event.error) {
+                   displayError.textContent = event.error.message;
+               } else {
+                   displayError.textContent = '';
+               }
+           });
+
+           // Handle form submission.
+           var form = document.getElementById('payment-form');
+           form.addEventListener('submit', function (event) {
+               event.preventDefault();
+
+               stripe.createToken(card).then(function (result) {
+                   if (result.error) {
+// Inform the user if there was an error.
+                       var errorElement = document.getElementById('card-errors');
+                       errorElement.textContent = result.error.message;
+                   } else {
+                       // Send the token to your server.
+                       stripeTokenHandler(result.token);
+                   }
+               });
+           });
+
+           // Submit the form with the token ID.
+           function stripeTokenHandler(token) {
+               // Insert the token ID into the form so it gets submitted to the server
+               var form = document.getElementById('payment-form');
+               var hiddenInput = document.createElement('input');
+               hiddenInput.setAttribute('type', 'hidden');
+               hiddenInput.setAttribute('name', 'stripeToken');
+               hiddenInput.setAttribute('value', token.id);
+               form.appendChild(hiddenInput);
+               alert(token.id);
+               // Submit the form
+               form.submit();
+           }
+       });
+   </script> 
+<script>
+	$("#kt_sweetalert_demo_8").click(function(e) {
+    Swal.fire({
+       
+        title: "User will be unlinked from seat and will be deleted.",
+		 text: "Are you sure?",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonText: "Yes, delete it!"
+    }).then(function(result) {
+        if (result.value) {
+            Swal.fire(
+                "Deleted!",
+                "Your file has been deleted.",
+                "success"
+            )
+        }
+    });
+});
+	</script>
+</body>
+</html>

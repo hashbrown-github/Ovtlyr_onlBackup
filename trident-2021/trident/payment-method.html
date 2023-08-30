@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<base href="">
+<meta charset="utf-8" />
+<title>Trident | Payment </title>
+<meta name="description" content="Updates and statistics" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
+<link href="assets/plugins/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
+<link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+<link href="assets/plugins/custom/prismjs/prismjs.bundle.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body id="kt_body" class="quick-panel-right demo-panel-right offcanvas-right header-fixed header-mobile-fixed subheader-enabled aside-enabled aside-static page-loading">
+<div class="d-flex flex-column flex-root">
+  <header>
+    <div class="container">
+      <div class="row pt-1 pb-1">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12"> <img class="auth_logo" src="assets/media/login_trident.png" alt="logo" /></div>
+        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+          <div class="dropdown float-right">
+            <div class="topbar-item mr-4" data-toggle="dropdown" data-offset="10px,0px">
+              <div class="font-weight-bolder pt-4 text-white"> <a href="#" class="text-white login_email"> Shagun.justa@hashbrown.com<i class="ki ki-arrow-down ml-4 text-white arrow_down"></i> </a></div>
+            </div>
+            <div class="dropdown-menu p-0 m-0 dropdown-menu-right dropdown-menu-anim-up dropdown-menu-md mt-4">
+              <ul class="navi navi-hover py-5">
+                <li class="navi-item"> <a href="#" class="navi-link"> <span class="navi-icon"> <i class="flaticon-list"></i> </span> <span class="navi-text">Change Password</span> </a> </li>
+                <li class="navi-item"> <a href="#" class="navi-link"> <span class="navi-icon"> <i class="flaticon-logout"></i> </span> <span class="navi-text">Logout</span> </a> </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="d-flex flex-column-fluid bg-white">
+    <div class="container">
+      <div class="card card-custom gutter-b my-10 shadow_none">
+        <div class="card-body">
+          <div class="card-title text-left">
+            <h3 class="card-label font-size-h2 text-dark">Enter Your Billing Details</h3>
+            <span class="pull-right logoBrand"><img class="mr-5" src="assets/media/chargebee-logo.png" alt="Chargebee Logo"><img src="assets/media/stripe-logo.png" alt="Chargebee Logo"></span>
+            <p class="mb-10 text-left">Almost Done! Add your billing information below to access your company administrator profile. </p>
+            <h5 class="font-md text-dark">Select Plan: <span class="ont-weight-bold text-global ml-1 text-blue">Professional</span></h5>
+            <h5 class="font-md text-dark">Amount Per License:<span class="font-weight-bold text-global ml-1 text-blue"> $499 per month </span></h5>
+            <h5 class="font-md text-dark">Number of Licenses:<span class="font-weight-bold text-global ml-1 text-blue"> 3 </span></h5>
+            <h5 class="font-md text-dark">Total :<span class="font-weight-bold text-global ml-1 text-blue">$998.00&nbsp;</span></h5>
+          </div>
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-3 mb-5 p-0">
+            <div class="cardCoupon">
+              <h5 class="font-lg">Have any coupon code?</h5>
+              <div class="d-flex">
+                <input type="email" class="form-control btn_radius" required="" placeholder="Enter Coupon Code">
+                <a href="#" class="btn btn-sm btn-blue text-white">Apply</a> </div>
+              <div class="afterCoupon  d-flex">
+                <p><span class="codeC">TRI20</span><span class="font-dis">You have got 25% discount on subscription</span></p>
+                <p><i class="ki ki-close text-dark icon-Cross"></i></p>
+              </div>
+            </div>
+          </div>
+          <ul class="nav nav-tabs nav-tabs-line mt-10">
+            <li class="nav-item w-50"> <a class="nav-link text-blue active" data-toggle="tab" href="#kt_tab_pane_1">Credit/Debit</a> </li>
+            <li class="nav-item w-50"> <a class="nav-link text-blue" data-toggle="tab" href="#kt_tab_pane_2">ACH</a> </li>
+          </ul>
+          <div class="tab-content mt-5 body_tab" id="myTabContent">
+            <div class="tab-pane fade show active" id="kt_tab_pane_1" role="tabpanel" aria-labelledby="kt_tab_pane_2">
+              <div class="cardFinclub">
+                <form method="post" id="payment-form">
+                  <div class="form-row">
+                    <label class="formLabel" for="card-element"> Credit or debit card </label>
+                    <div id="card-element" class="col-lg-8 col-sm-8 col-md-8 col-xs-12"> </div>
+                    <span class="error_card"> <span id="card-errors" class="error_card" role="alert"></span></span>
+                    <div class="col-lg-4 col-sm-4 col-md-4 col-xs-12">
+                      <button type="button" class="btn btn-blue text-white btnSubmit p-3" href="#"><span class="freeText">Start my Trial</span></button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="kt_tab_pane_2" role="tabpanel" aria-labelledby="kt_tab_pane_2">
+              <div class="tabs_box">
+                <div class="row">
+                  <div class="form-group col-lg-6">
+                    <input class="form-control h-auto py-5 px-6 rounded-sm font-size-h6" type="text" placeholder="Name" name="Name" autocomplete="off">
+                  </div>
+                  <div class="form-group col-lg-6">
+                    <input class="form-control h-auto py-5 px-6 rounded-sm font-size-h6" type="text" placeholder="Bank Name " name="Account" autocomplete="off">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group col-lg-6">
+                    <input class="form-control h-auto py-5 px-6 rounded-sm font-size-h6" type="text" placeholder="Account number" name="Account" autocomplete="off">
+                  </div>
+                  <div class="form-group col-lg-6">
+                    <input class="form-control h-auto py-5 px-6 rounded-sm font-size-h6" type="text" placeholder="Re-enter Account number" name="Account" autocomplete="off">
+                  </div>
+                </div>
+                <button type="button" class="btn btn-blue text-white btnSubmit p-3" href="#"><span>Continue</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="footer p-10" id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"> <img class="footer_logo" src="assets/media/mini-logo.png" alt="kievanos Logo"> </div>
+      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+        <ul class="footer_list">
+          <li><a class="text-white" href="https://kievanos.com/about">About us</a></li>
+          <li><a class="text-white" href="https://medium.com/@kievanos" target="_blank">Blog</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+        <ul class="footer_list">
+          <li><a class="text-white" href="https://kievanos.com/terms-of-use">Terms of use</a></li>
+          <li><a class="text-white" href="https://kievanos.com/privacy-policy">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+        <ul class="footer_list">
+          <li class="follow-box">Follow Us</li>
+          <li><a href="https://www.linkedin.com/company/kievanos" target="_blank"> <img src="assets/media/linkeding-icon_short.png" class="linked_inn" alt="linkedinn"> </a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="color-grey">Kievanos is not an SEC registered broker-dealer or investment advisor. This website does not constitute an offer or solicitation to transact in any security. Contents of this website including downloadable materials are intended for informational purposes only. All information presented is deemed to be accurate, but accuracy is not guaranteed. Certain products provided by Kievanos incorporate forecasts and/or culminate in forecasted outcomes; such forecasts should not be solely relied upon when making investment decisions. Kievanos offers neither legal, financial, nor tax advice. You are entirely responsible for determining whether any security or investment strategy meets suitability requirements for your investment objectives, financial circumstances and risk tolerance. You should consult your attorney, financial planner, or tax and accounting advisor regarding your specific legal, financial, business or tax situation.</p>
+  </div>
+  <div class="bottom-footer">
+    <div class="container">
+      <p>© 2020  Trident All rights reserved by <a href="https://kievanos.com/" target="_blabk">Kievanos</a></p>
+    </div>
+  </div>
+</footer>
+<script>var HOST_URL = "https://keenthemes.com/metronic/tools/preview";</script> 
+<script>var KTAppSettings = { "breakpoints": { "sm": 576, "md": 768, "lg": 992, "xl": 1200, "xxl": 1200 }, "colors": { "theme": { "base": { "white": "#ffffff", "primary": "#6993FF", "secondary": "#E5EAEE", "success": "#1BC5BD", "info": "#8950FC", "warning": "#FFA800", "danger": "#F64E60", "light": "#F3F6F9", "dark": "#212121" }, "light": { "white": "#ffffff", "primary": "#E1E9FF", "secondary": "#ECF0F3", "success": "#C9F7F5", "info": "#EEE5FF", "warning": "#FFF4DE", "danger": "#FFE2E5", "light": "#F3F6F9", "dark": "#D6D6E0" }, "inverse": { "white": "#ffffff", "primary": "#ffffff", "secondary": "#212121", "success": "#ffffff", "info": "#ffffff", "warning": "#ffffff", "danger": "#ffffff", "light": "#464E5F", "dark": "#ffffff" } }, "gray": { "gray-100": "#F3F6F9", "gray-200": "#ECF0F3", "gray-300": "#E5EAEE", "gray-400": "#D6D6E0", "gray-500": "#B5B5C3", "gray-600": "#80808F", "gray-700": "#464E5F", "gray-800": "#1B283F", "gray-900": "#212121" } }, "font-family": "Poppins" };</script> 
+<!--end::Global Config--> 
+<!--begin::Global Theme Bundle(used by all pages)--> 
+<script src="assets/plugins/global/plugins.bundle.js"></script> 
+<script src="assets/plugins/custom/prismjs/prismjs.bundle.js"></script> 
+<script src="assets/js/scripts.bundle.js"></script> 
+<!--end::Global Theme Bundle--> 
+<!--begin::Page Scripts(used by this page)--> 
+<script src="assets/js/pages/custom/login/login.js"></script> 
+<script src="https://js.stripe.com/v3/"></script> 
+<script type="text/javascript">
+       $(function () {
+           var stripe = Stripe('pk_test_ryt6Rj4BnE6OSPmAiowpqm62');
+           var elements = stripe.elements();
+           var style = {
+               base: {
+                   color: '#32325d',
+                   lineHeight: '18px',
+                   fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
+                   fontSmoothing: 'antialiased',
+                   fontSize: '16px',
+                   '::placeholder': {
+                       color: '#aab7c4'
+                   }
+               },
+               invalid: {
+                   color: '#fa755a',
+                   iconColor: '#fa755a'
+               }
+           };
+           var card = elements.create('card', { style: style });
+           card.mount('#card-element');
+           card.addEventListener('change', function (event) {
+               var displayError = document.getElementById('card-errors');
+               if (event.error) {
+                   displayError.textContent = event.error.message;
+               } else {
+                   displayError.textContent = '';
+               }
+           });
+           var form = document.getElementById('payment-form');
+           form.addEventListener('submit', function (event) {
+               event.preventDefault();
+
+               stripe.createToken(card).then(function (result) {
+                   if (result.error) {
+                       var errorElement = document.getElementById('card-errors');
+                       errorElement.textContent = result.error.message;
+                   } else {
+                       stripeTokenHandler(result.token);
+                   }
+               });
+           });
+           function stripeTokenHandler(token) {
+               var form = document.getElementById('payment-form');
+               var hiddenInput = document.createElement('input');
+               hiddenInput.setAttribute('type', 'hidden');
+               hiddenInput.setAttribute('name', 'stripeToken');
+               hiddenInput.setAttribute('value', token.id);
+               form.appendChild(hiddenInput);
+               alert(token.id);
+               form.submit();
+           }
+       });
+   </script>
+</body>
+<!--end::Body-->
+</html>
