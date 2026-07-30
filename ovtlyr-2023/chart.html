@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Highcharts Horizontal Performance Chart</title>
+
+<script src="js/chart-js/highcharts.js"></script>
+
+  <style>
+    html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding-top: 20px;
+      background: #ffffff;
+      font-family: Arial, sans-serif;
+    }
+
+    #sector-performance {
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+  height: 250px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="sector-performance"></div>
+
+<script>
+
+const data = [
+  { category: "Basic Materials", value: 2.49 },
+  { category: "Industrials", value: 1.94 },
+  { category: "Technology", value: 1.70 },
+  { category: "Communication Services", value: 0.99 },
+  { category: "Real Estate", value: 0.48 },
+  { category: "Utilities", value: 0.40 },
+  { category: "Financial", value: 0.38 },
+  { category: "Consumer Cyclical", value: 0.35 },
+  { category: "Consumer Defensive", value: 1.44 },
+  { category: "Energy", value: -0.80 },
+  { category: "Healthcare", value: -0.67 }
+];
+
+// SORT DATA
+data.sort((a, b) => b.value - a.value);
+
+// STRONGEST VALUES
+const maxPositive = Math.max(
+  ...data.filter(d => d.value > 0).map(d => d.value)
+);
+
+const maxNegative = Math.abs(
+  Math.min(
+    ...data.filter(d => d.value < 0).map(d => d.value)
+  )
+);
+
+// HEX → RGB
+function hexToRgb(hex) {
+
+  hex = hex.replace('#', '');
+
+  return [
+    parseInt(hex.substring(0, 2), 16),
+    parseInt(hex.substring(2, 4), 16),
+    parseInt(hex.substring(4, 6), 16)
+  ];
+}
+
+// RGB → HEX
+function rgbToHex(rgb) {
+
+  return '#' + rgb.map(x => {
+
+    const hex = x.toString(16);
+
+    return hex.length === 1
+      ? '0' + hex
+      : hex;
+
+  }).join('');
+}
+
+// COLOR INTERPOLATION
+function interpolateColor(start, end, factor) {
+
+  const result = start.map((color, index) => {
+
+    return Math.round(
+      color + factor * (end[index] - color)
+    );
+
+  });
+
+  return rgbToHex(result);
+}
+
+// DYNAMIC BAR COLOR
+function getBarColor(value) {
+
+  // POSITIVE VALUES
+  if (value > 0) {
+
+    // Dark green near zero
+    const startGreen = hexToRgb('#1F5A28');
+
+    // Bright green for strongest positive
+    const endGreen = hexToRgb('#00FF00');
+
+    // Get all positive values
+    const positiveValues = data
+      .filter(d => d.value > 0)
+      .map(d => d.value)
+      .sort((a, b) => a - b);
+
+    // ONLY ONE POSITIVE VALUE
+    if (positiveValues.length === 1) {
+      return '#1F5A28';
+    }
+
+    // Smallest and largest positives
+    const minPositive = positiveValues[0];
+    const maxPositive = positiveValues[positiveValues.length - 1];
+
+    // Normalize
+    let factor =
+      (value - minPositive) /
+      (maxPositive - minPositive);
+
+    factor = Math.max(0, Math.min(factor, 1));
+
+    return interpolateColor(
+      startGreen,
+      endGreen,
+      factor
+    );
+  }
+
+  // NEGATIVE VALUES
+  if (value < 0) {
+
+    // Dark red near zero
+    const startRed = hexToRgb('#5A1111');
+
+    // Bright red for strongest negative
+    const endRed = hexToRgb('#FF0000');
+
+    // Get all negative values
+    const negativeValues = data
+      .filter(d => d.value < 0)
+      .map(d => Math.abs(d.value))
+      .sort((a, b) => a - b);
+
+    // ONLY ONE NEGATIVE VALUE
+    if (negativeValues.length === 1) {
+      return '#5A1111';
+    }
+
+    // Smallest and largest negative magnitudes
+    const minNegative = negativeValues[0];
+    const maxNegative = negativeValues[negativeValues.length - 1];
+
+    // Normalize
+    let factor =
+      (Math.abs(value) - minNegative) /
+      (maxNegative - minNegative);
+
+    factor = Math.max(0, Math.min(factor, 1));
+
+    return interpolateColor(
+      startRed,
+      endRed,
+      factor
+    );
+  }
+
+  // ZERO VALUE
+  return '#777777';
+}
+
+// PREPARE SERIES DATA
+const seriesData = data.map(item => ({
+  y: Math.abs(item.value),
+  actualValue: item.value,
+  color: getBarColor(item.value),
+  dataLabelText:
+    (item.value > 0 ? "+" : "") +
+    item.value.toFixed(2)
+}));
+
+Highcharts.chart('sector-performance', {
+
+  chart: {
+    type: 'bar',
+    spacing: [0, 0, 0, 0],
+    backgroundColor: 'transparent',
+    animation: true
+  },
+
+  title: {
+    text: '1 DAY PERFORMANCE',
+    align: 'left',
+    style: {
+      color: '#777E87',
+      fontSize: '14px',
+      fontWeight: '600'
+    }
+  },
+
+  credits: {
+    enabled: false
+  },
+
+  legend: {
+    enabled: false
+  },
+
+  xAxis: {
+    categories: data.map(d => d.category),
+    lineWidth: 0,
+    tickLength: 0,
+
+    labels: {
+      style: {
+        color: '#777E87',
+        fontSize: '10px',
+        fontWeight: 'normal'
+      }
+    }
+  },
+
+  yAxis: {
+    min: 0,
+    max: 2.5,
+    tickInterval: 0.5,
+
+    title: {
+      text: null
+    },
+
+    gridLineDashStyle: 'Dash',
+    gridLineColor: 'rgba(0,0,0,0.2)',
+
+    labels: {
+      formatter: function () {
+        return this.value + '%';
+      },
+
+      style: {
+        color: '#777E87',
+        fontSize: '10px'
+      }
+    }
+  },
+
+  tooltip: {
+    formatter: function () {
+
+      return `
+        <b>${this.category}</b><br/>
+        ${this.point.actualValue}%
+      `;
+
+    }
+  },
+
+  plotOptions: {
+    series: {
+      borderWidth: 0,
+      borderRadius: 0,
+      pointPadding: 0.05,
+      groupPadding: 0.05,
+
+      animation: {
+        duration: 1000
+      },
+
+      dataLabels: {
+        enabled: true,
+        inside: true,
+        align: 'right',
+        verticalAlign: 'middle',
+        x: -10,
+
+        formatter: function () {
+          return this.point.dataLabelText;
+        },
+
+        style: {
+          color: '#ffffff',
+          textOutline: 'none',
+          fontSize: '10px',
+          fontWeight: '400'
+        }
+      }
+    }
+  },
+
+  series: [{
+    data: seriesData
+  }]
+
+});
+
+</script>
+
+</body>
+</html>
