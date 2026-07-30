@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Highcharts Remove SMA from Indicators Popup</title>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/highcharts-more.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+<style>
+body {
+    margin: 0;
+}
+.highcharts-data-labels div span {
+    display: flex;
+}
+.flex_box {
+    display: flex;
+    justify-content: space-between;
+}
+#gauge_chart1, #gauge_chart2 {
+    width: 125px;
+    height: 60px;
+}
+</style>
+</head>
+<body>
+    <div class="flex_box">
+        <div id="gauge_chart1"></div>
+        <div id="gauge_chart2"></div>
+    </div>
+
+
+    
+<!--======= GAUGE CHARTS STARTS =======-->
+<script>
+    Highcharts.chart('gauge_chart1', {
+        credits: { enabled: false },
+        chart: {
+            backgroundColor: 'transparent',
+            type: 'gauge',
+            height: '80%',
+            events: {
+                load: function () {
+                    let chart = this;
+                    function updatePlotBandLabels() {
+                        let chartWidth = chart.chartWidth;
+                        let showText = chartWidth >= 500;
+                        chart.yAxis[0].update({
+                            plotBands: [
+                                {
+                                    from: 0,
+                                    to: 25,
+                                    color: '#be3362',
+                                    thickness: 30,
+                                    label: showText ? {
+                                        text: 'EXTREME FEAR',
+                                        align: 'center',
+                                        verticalAlign: 'middle',
+                                        rotation: -68,
+                                        y: 20, x: 50,
+                                        style: {
+                                            fontSize: '12px'
+                                        }
+                                    } : null
+                                },
+                                {
+                                    from: 25,
+                                    to: 45,
+                                    color: '#d94d78',
+                                    thickness: 30,
+                                    label: showText ? {
+                                        text: 'FEAR',
+                                        align: 'center',
+                                        verticalAlign: 'middle',
+                                        rotation: -30,
+                                        y: 30, x: 85,
+                                        style: {
+                                            fontSize: '12px'
+                                        }
+                                    } : null // Hide text when small
+                                },
+                                {
+                                    from: 45, to: 50,
+                                    color: '#f19fba',
+                                    thickness: 30,
+                                },
+                                {
+                                    from: 50, to: 55,
+                                    color: '#88c8b0',
+                                    thickness: 30,
+                                    label: showText ? {
+                                        rotation: 0, y: 30, x: -120,
+                                        text: 'NEUTRAL',
+                                        align: 'center',
+                                        verticalAlign: 'middle',
+                                        style: {
+                                            fontSize: '12px'
+                                        }
+                                    } : null
+                                },
+                                {
+                                    from: 55, to: 75,
+                                    color: '#41a681',
+                                    thickness: 30,
+                                    label: showText ? {
+                                        text: 'GREED',
+                                        align: 'center',
+                                        rotation: 30,
+                                        y: 30, x: -70,
+                                        verticalAlign: 'middle',
+                                        style: {
+                                            fontSize: '12px'
+                                        }
+                                    } : null
+                                },
+                                {
+                                    from: 75,
+                                    to: 100,
+                                    color: '#129061',
+                                    thickness: 30,
+                                    label: showText ? {
+                                        rotation: 63, y: 10, x: -42,
+                                        text: 'EXTREME GREED',
+                                        align: 'center',
+                                        verticalAlign: 'middle',
+                                        style: {
+                                            fontSize: '12px',
+                                            wordBreak: "break-word",
+                                            whiteSpace: 'normal',
+                                        }
+                                    } : null
+                                },
+                            ]
+                        });
+                    }
+                    updatePlotBandLabels();
+                    Highcharts.addEvent(chart, 'redraw', updatePlotBandLabels);
+                }
+            }
+        },
+        stockTools: { gui: { enabled: false } },
+        navigation: { enabled: false },
+        title: {
+            text: null
+        },
+        pane: {
+            startAngle: -90,
+            endAngle: 90,
+            background: null,
+            center: ['50%', '55%'],
+            size: '100%'
+        },
+        yAxis: {
+            min: 0,
+            max: 100,
+            tickPositions: [0, 25, 50, 75, 100],
+            tickInterval: 1,
+            tickWidth: 0,
+            labels: {
+                enabled: true,
+                distance: 10,
+                formatter: function () {
+                    return this.value;
+                },
+                style: {
+                    fontSize: '10px',
+                    fontWeight: 'normal'
+                }
+            },
+            lineWidth: 0,
+            plotBands: [
+                {
+                    from: 0,
+                    to: 25,
+                    color: '#be3362',
+                },
+                {
+                    from: 25,
+                    to: 45,
+                    color: '#d94d78'
+                },
+                {
+                    from: 45, to: 50,
+                    color: '#f19fba'
+                },
+                {
+                    from: 50, to: 55,
+                    color: '#88c8b0'
+                },
+                {
+                    from: 55, to: 75,
+                    color: '#41a681',
+                    thickness: 10
+                },
+                {
+                    from: 75,
+                    to: 100,
+                    color: '#129061',
+                    thickness: 10
+                },
+            ]
+        },
+        series: [{
+            name: 'Value',
+            data: [25],
+            dial: {
+                baseLength: '90%',
+                baseWidth: 3,
+                radius: '70%',
+                rearLength: '10%'
+            },
+
+            dataLabels: {
+                enabled: false,
+
+                borderWidth: 0,
+                useHTML: true,
+                formatter: function () {
+                    let value = this.y;
+                    let arrow = value <= 50
+                        ? '<span style="color: #be3362;">↓ </span>'
+                        : '<span style="color: #129061;">↑ </span>';
+
+
+                    return `${value} ${arrow}`;
+                },
+                style: {
+                    fontSize: '12px',
+                    fontWeight: 'normal'
+                }
+            }
+        }]
+    });
+
+</script>
+<script>
+    Highcharts.chart('gauge_chart2', {
+        credits: { enabled: false },
+        chart: {
+            backgroundColor: 'transparent',
+            type: 'gauge',
+            height: '80%',
+            events: {
+                load: function () {
+                    let chart = this;
+                    function updatePlotBandLabels() {
+                        let chartWidth = chart.chartWidth;
+                        let showText = chartWidth >= 500;
+                        chart.yAxis[0].update({
+                            plotBands: [
+                                {
+                                    from: 0,
+                                    to: 25,
+                                    color: '#be3362',
+                                    thickness: 30,
+                                    label: showText ? {
+                                        text: 'EXTREME FEAR',
+                                        align: 'center',
+                                        verticalAlign: 'middle',
+                                        rotation: -68,
+                                        y: 20, x: 50,
+                                        style: {
+                                            fontSize: '12px'
+                                        }
+                                    } : null
+                                },
+                                {
+                                    from: 25,
+                                    to: 45,
+                                    color: '#d94d78',
+                                    thickness: 30,
+                                    label: showText ? {
+                                        text: 'FEAR',
+                                        align: 'center',
+                                        verticalAlign: 'middle',
+                                        rotation: -30,
+                                        y: 30, x: 85,
+                                        style: {
+                                            fontSize: '12px'
+                                        }
+                                    } : null // Hide text when small
+                                },
+                                {
+                                    from: 45, to: 50,
+                                    color: '#f19fba',
+                                    thickness: 30,
+                                },
+                                {
+                                    from: 50, to: 55,
+                                    color: '#88c8b0',
+                                    thickness: 30,
+                                    label: showText ? {
+                                        rotation: 0, y: 30, x: -120,
+                                        text: 'NEUTRAL',
+                                        align: 'center',
+                                        verticalAlign: 'middle',
+                                        style: {
+                                            fontSize: '12px'
+                                        }
+                                    } : null
+                                },
+                                {
+                                    from: 55, to: 75,
+                                    color: '#41a681',
+                                    thickness: 30,
+                                    label: showText ? {
+                                        text: 'GREED',
+                                        align: 'center',
+                                        rotation: 30,
+                                        y: 30, x: -70,
+                                        verticalAlign: 'middle',
+                                        style: {
+                                            fontSize: '12px'
+                                        }
+                                    } : null
+                                },
+                                {
+                                    from: 75,
+                                    to: 100,
+                                    color: '#129061',
+                                    thickness: 30,
+                                    label: showText ? {
+                                        rotation: 63, y: 10, x: -42,
+                                        text: 'EXTREME GREED',
+                                        align: 'center',
+                                        verticalAlign: 'middle',
+                                        style: {
+                                            fontSize: '12px',
+                                            wordBreak: "break-word",
+                                            whiteSpace: 'normal',
+                                        }
+                                    } : null
+                                },
+                            ]
+                        });
+                    }
+                    updatePlotBandLabels();
+                    Highcharts.addEvent(chart, 'redraw', updatePlotBandLabels);
+                }
+            }
+        },
+        stockTools: { gui: { enabled: false } },
+        navigation: { enabled: false },
+        title: {
+            text: null
+        },
+        pane: {
+            startAngle: -90,
+            endAngle: 90,
+            background: null,
+            center: ['50%', '55%'],
+            size: '100%'
+        },
+        yAxis: {
+            min: 0,
+            max: 100,
+            tickPositions: [0, 25, 50, 75, 100],
+            tickInterval: 1,
+            tickWidth: 0,
+            labels: {
+                enabled: true,
+                distance: 10,
+                formatter: function () {
+                    return this.value;
+                },
+                style: {
+                    fontSize: '10px',
+                    fontWeight: 'normal'
+                }
+            },
+            lineWidth: 0,
+            plotBands: [
+                {
+                    from: 0,
+                    to: 25,
+                    color: '#be3362',
+                },
+                {
+                    from: 25,
+                    to: 45,
+                    color: '#d94d78'
+                },
+                {
+                    from: 45, to: 50,
+                    color: '#f19fba'
+                },
+                {
+                    from: 50, to: 55,
+                    color: '#88c8b0'
+                },
+                {
+                    from: 55, to: 75,
+                    color: '#41a681',
+                    thickness: 10
+                },
+                {
+                    from: 75,
+                    to: 100,
+                    color: '#129061',
+                    thickness: 10
+                },
+            ]
+        },
+        series: [{
+            name: 'Value',
+            data: [80],
+            dial: {
+                baseLength: '90%',
+                baseWidth: 3,
+                radius: '70%',
+                rearLength: '10%'
+            },
+
+            dataLabels: {
+                enabled: false,
+
+                borderWidth: 0,
+                useHTML: true,
+                formatter: function () {
+                    let value = this.y;
+                    let arrow = value <= 50
+                        ? '<span style="color: #be3362;">↓ </span>'
+                        : '<span style="color: #129061;">↑ </span>';
+
+                    return `${value} ${arrow}`;
+                },
+                style: {
+                    fontSize: '12px',
+                    fontWeight: 'normal'
+                }
+            }
+        }]
+    });
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,8131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ovtlyr | Performance Chart</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <script src="https://code.highcharts.com/stock/highstock.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <style>
+     #performance_chart .highcharts-label
+      {
+        display:block
+      }
+    </style>
+</head>
+<body>
+<div id="performance_chart" style="width:913px; height:400px;"></div>    
+<script>
+  var data = [
+    {
+      "Quotedate": "2019-12-18",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 69.2315,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2019-12-19",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 69.3008,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2019-12-20",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 69.1572,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2019-12-23",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 70.2858,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2019-12-24",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 70.3526,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2019-12-26",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 71.7484,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2019-12-27",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 71.7212,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2019-12-30",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 72.1469,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2019-12-31",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 72.674,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-01-02",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 74.3322,
+      "Ovtlyr_Return": 74.3322
+    },
+    {
+      "Quotedate": "2020-01-03",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 73.6095,
+      "Ovtlyr_Return": 73.6095
+    },
+    {
+      "Quotedate": "2020-01-06",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 74.196,
+      "Ovtlyr_Return": 74.196
+    },
+    {
+      "Quotedate": "2020-01-07",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 73.8471,
+      "Ovtlyr_Return": 73.8471
+    },
+    {
+      "Quotedate": "2020-01-08",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 75.035,
+      "Ovtlyr_Return": 75.035
+    },
+    {
+      "Quotedate": "2020-01-09",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 76.6288,
+      "Ovtlyr_Return": 76.6288
+    },
+    {
+      "Quotedate": "2020-01-10",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 76.8021,
+      "Ovtlyr_Return": 76.8021
+    },
+    {
+      "Quotedate": "2020-01-13",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 78.4429,
+      "Ovtlyr_Return": 78.4429
+    },
+    {
+      "Quotedate": "2020-01-14",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 77.3836,
+      "Ovtlyr_Return": 77.3836
+    },
+    {
+      "Quotedate": "2020-01-15",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 77.052,
+      "Ovtlyr_Return": 77.052
+    },
+    {
+      "Quotedate": "2020-01-16",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 78.0172,
+      "Ovtlyr_Return": 78.0172
+    },
+    {
+      "Quotedate": "2020-01-17",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 78.8809,
+      "Ovtlyr_Return": 78.8809
+    },
+    {
+      "Quotedate": "2020-01-21",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 78.3464,
+      "Ovtlyr_Return": 78.3464
+    },
+    {
+      "Quotedate": "2020-01-22",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 78.626,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-01-23",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 79.0047,
+      "Ovtlyr_Return": 79.0047
+    },
+    {
+      "Quotedate": "2020-01-24",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 78.777,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-01-27",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 76.4605,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-01-28",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 78.6235,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-01-29",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 80.2693,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-01-30",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 80.153,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-01-31",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 76.5991,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-02-03",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 76.3888,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-02-04",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 78.9106,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-02-05",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 79.5541,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-02-06",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 80.4846,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-02-07",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 79.3932,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-02-10",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 79.7703,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-02-11",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 79.289,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-02-12",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 81.172,
+      "Ovtlyr_Return": 81.172
+    },
+    {
+      "Quotedate": "2020-02-13",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 80.5939,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-02-14",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 80.6138,
+      "Ovtlyr_Return": 80.6138
+    },
+    {
+      "Quotedate": "2020-02-18",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 79.1377,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-02-19",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 80.2838,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-02-20",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 79.4602,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-02-21",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 77.6616,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-02-24",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 73.9727,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-02-25",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 71.467,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-02-26",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 72.6008,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-02-27",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 67.855,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-02-28",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 67.8153,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-03-02",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 74.129,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-03-03",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 71.7747,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-03-04",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 75.1039,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-03-05",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 72.6678,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-03-06",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 71.7027,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-03-09",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 66.0316,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-03-10",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 70.7873,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-03-11",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 68.3288,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-03-12",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 61.581,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-03-13",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 68.959,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-03-16",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 60.0876,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-03-17",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 62.7296,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-03-18",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 61.194,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-03-19",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 60.7252,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-03-20",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 56.87,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-03-23",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 55.6618,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-03-24",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 61.2461,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-03-25",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 60.9087,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-03-26",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 64.1139,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-03-27",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 61.4595,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-03-30",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 63.2134,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-03-31",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 63.0844,
+      "Ovtlyr_Return": 63.0844
+    },
+    {
+      "Quotedate": "2020-04-01",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 59.7651,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-04-02",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 60.7624,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-04-03",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 59.8891,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-04-06",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 65.1137,
+      "Ovtlyr_Return": 65.1137
+    },
+    {
+      "Quotedate": "2020-04-07",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 64.3595,
+      "Ovtlyr_Return": 64.3595
+    },
+    {
+      "Quotedate": "2020-04-08",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 66.0068,
+      "Ovtlyr_Return": 66.0068
+    },
+    {
+      "Quotedate": "2020-04-09",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 66.4831,
+      "Ovtlyr_Return": 66.4831
+    },
+    {
+      "Quotedate": "2020-04-13",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 67.788,
+      "Ovtlyr_Return": 67.788
+    },
+    {
+      "Quotedate": "2020-04-14",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 71.2115,
+      "Ovtlyr_Return": 71.2115
+    },
+    {
+      "Quotedate": "2020-04-15",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 70.5616,
+      "Ovtlyr_Return": 70.5616
+    },
+    {
+      "Quotedate": "2020-04-16",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 71.1222,
+      "Ovtlyr_Return": 71.1222
+    },
+    {
+      "Quotedate": "2020-04-17",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 70.1572,
+      "Ovtlyr_Return": 70.1572
+    },
+    {
+      "Quotedate": "2020-04-20",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 68.7009,
+      "Ovtlyr_Return": 68.7009
+    },
+    {
+      "Quotedate": "2020-04-21",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 66.5774,
+      "Ovtlyr_Return": 66.5774
+    },
+    {
+      "Quotedate": "2020-04-22",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 68.495,
+      "Ovtlyr_Return": 68.495
+    },
+    {
+      "Quotedate": "2020-04-23",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 68.2296,
+      "Ovtlyr_Return": 68.2296
+    },
+    {
+      "Quotedate": "2020-04-24",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 70.1994,
+      "Ovtlyr_Return": 70.1994
+    },
+    {
+      "Quotedate": "2020-04-27",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 70.249,
+      "Ovtlyr_Return": 70.249
+    },
+    {
+      "Quotedate": "2020-04-28",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 69.1103,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-04-29",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 71.3802,
+      "Ovtlyr_Return": 71.3802
+    },
+    {
+      "Quotedate": "2020-04-30",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 72.8861,
+      "Ovtlyr_Return": 72.8861
+    },
+    {
+      "Quotedate": "2020-05-01",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 71.7126,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-05-04",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 72.7273,
+      "Ovtlyr_Return": 72.7273
+    },
+    {
+      "Quotedate": "2020-05-05",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 73.8189,
+      "Ovtlyr_Return": 73.8189
+    },
+    {
+      "Quotedate": "2020-05-06",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 74.5805,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-05-07",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 75.352,
+      "Ovtlyr_Return": 75.352
+    },
+    {
+      "Quotedate": "2020-05-08",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 77.1406,
+      "Ovtlyr_Return": 77.1406
+    },
+    {
+      "Quotedate": "2020-05-11",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 78.3545,
+      "Ovtlyr_Return": 78.3545
+    },
+    {
+      "Quotedate": "2020-05-12",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 77.459,
+      "Ovtlyr_Return": 77.459
+    },
+    {
+      "Quotedate": "2020-05-13",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 76.5238,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-05-14",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 76.9939,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-05-15",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 76.5387,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-05-18",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 78.342,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-05-19",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 77.8893,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-05-20",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 79.4042,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-05-21",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 78.8122,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-05-22",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 79.3196,
+      "Ovtlyr_Return": 79.3196
+    },
+    {
+      "Quotedate": "2020-05-26",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 78.7823,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-05-27",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 79.1256,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-05-28",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 79.1604,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-05-29",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 79.0833,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-06-01",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 80.0558,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-06-02",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 80.4265,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-06-03",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 80.8692,
+      "Ovtlyr_Return": 80.8692
+    },
+    {
+      "Quotedate": "2020-06-04",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 80.1727,
+      "Ovtlyr_Return": 80.1727
+    },
+    {
+      "Quotedate": "2020-06-05",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 82.4561,
+      "Ovtlyr_Return": 82.4561
+    },
+    {
+      "Quotedate": "2020-06-08",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 82.9437,
+      "Ovtlyr_Return": 82.9437
+    },
+    {
+      "Quotedate": "2020-06-09",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 85.5629,
+      "Ovtlyr_Return": 85.5629
+    },
+    {
+      "Quotedate": "2020-06-10",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 87.7642,
+      "Ovtlyr_Return": 87.7642
+    },
+    {
+      "Quotedate": "2020-06-11",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 83.5506,
+      "Ovtlyr_Return": 83.5506
+    },
+    {
+      "Quotedate": "2020-06-12",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 84.2719,
+      "Ovtlyr_Return": 84.2719
+    },
+    {
+      "Quotedate": "2020-06-15",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 85.3141,
+      "Ovtlyr_Return": 85.3141
+    },
+    {
+      "Quotedate": "2020-06-16",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 87.5751,
+      "Ovtlyr_Return": 87.5751
+    },
+    {
+      "Quotedate": "2020-06-17",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 87.4533,
+      "Ovtlyr_Return": 87.4533
+    },
+    {
+      "Quotedate": "2020-06-18",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 87.4881,
+      "Ovtlyr_Return": 87.4881
+    },
+    {
+      "Quotedate": "2020-06-19",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 86.9881,
+      "Ovtlyr_Return": 86.9881
+    },
+    {
+      "Quotedate": "2020-06-22",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 89.2641,
+      "Ovtlyr_Return": 89.2641
+    },
+    {
+      "Quotedate": "2020-06-23",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 91.1694,
+      "Ovtlyr_Return": 91.1694
+    },
+    {
+      "Quotedate": "2020-06-24",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 89.5601,
+      "Ovtlyr_Return": 89.5601
+    },
+    {
+      "Quotedate": "2020-06-25",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 90.749,
+      "Ovtlyr_Return": 90.749
+    },
+    {
+      "Quotedate": "2020-06-26",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 87.9607,
+      "Ovtlyr_Return": 87.9607
+    },
+    {
+      "Quotedate": "2020-06-29",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 89.9879,
+      "Ovtlyr_Return": 89.9879
+    },
+    {
+      "Quotedate": "2020-06-30",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 90.7391,
+      "Ovtlyr_Return": 90.7391
+    },
+    {
+      "Quotedate": "2020-07-01",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 90.5674,
+      "Ovtlyr_Return": 90.5674
+    },
+    {
+      "Quotedate": "2020-07-02",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 90.5674,
+      "Ovtlyr_Return": 90.5674
+    },
+    {
+      "Quotedate": "2020-07-06",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 92.9901,
+      "Ovtlyr_Return": 92.9901
+    },
+    {
+      "Quotedate": "2020-07-07",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 92.7016,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-07-08",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 94.8606,
+      "Ovtlyr_Return": 94.8606
+    },
+    {
+      "Quotedate": "2020-07-09",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 95.2686,
+      "Ovtlyr_Return": 95.2686
+    },
+    {
+      "Quotedate": "2020-07-10",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 95.4352,
+      "Ovtlyr_Return": 95.4352
+    },
+    {
+      "Quotedate": "2020-07-13",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 94.995,
+      "Ovtlyr_Return": 94.995
+    },
+    {
+      "Quotedate": "2020-07-14",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 96.567,
+      "Ovtlyr_Return": 96.567
+    },
+    {
+      "Quotedate": "2020-07-15",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 97.2311,
+      "Ovtlyr_Return": 97.2311
+    },
+    {
+      "Quotedate": "2020-07-16",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 96.0347,
+      "Ovtlyr_Return": 96.0347
+    },
+    {
+      "Quotedate": "2020-07-17",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 95.8407,
+      "Ovtlyr_Return": 95.8407
+    },
+    {
+      "Quotedate": "2020-07-20",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 97.8604,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-07-21",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 96.5098,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-07-22",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 96.7809,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-07-23",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 92.3758,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-07-24",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 92.1469,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-07-27",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 94.3308,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-07-28",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 92.7812,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-07-29",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 94.5597,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-07-30",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 95.7039,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-07-31",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 105.723,
+      "Ovtlyr_Return": 105.723
+    },
+    {
+      "Quotedate": "2020-08-03",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 108.387,
+      "Ovtlyr_Return": 108.387
+    },
+    {
+      "Quotedate": "2020-08-04",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 109.111,
+      "Ovtlyr_Return": 109.111
+    },
+    {
+      "Quotedate": "2020-08-05",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 109.506,
+      "Ovtlyr_Return": 109.506
+    },
+    {
+      "Quotedate": "2020-08-06",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 113.327,
+      "Ovtlyr_Return": 113.327
+    },
+    {
+      "Quotedate": "2020-08-07",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 110.755,
+      "Ovtlyr_Return": 110.755
+    },
+    {
+      "Quotedate": "2020-08-10",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 112.365,
+      "Ovtlyr_Return": 112.365
+    },
+    {
+      "Quotedate": "2020-08-11",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 109.023,
+      "Ovtlyr_Return": 109.023
+    },
+    {
+      "Quotedate": "2020-08-12",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 112.646,
+      "Ovtlyr_Return": 112.646
+    },
+    {
+      "Quotedate": "2020-08-13",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 114.64,
+      "Ovtlyr_Return": 114.64
+    },
+    {
+      "Quotedate": "2020-08-14",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 114.538,
+      "Ovtlyr_Return": 114.538
+    },
+    {
+      "Quotedate": "2020-08-17",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 114.239,
+      "Ovtlyr_Return": 114.239
+    },
+    {
+      "Quotedate": "2020-08-18",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 115.191,
+      "Ovtlyr_Return": 115.191
+    },
+    {
+      "Quotedate": "2020-08-19",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 115.335,
+      "Ovtlyr_Return": 115.335
+    },
+    {
+      "Quotedate": "2020-08-20",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 117.894,
+      "Ovtlyr_Return": 117.894
+    },
+    {
+      "Quotedate": "2020-08-21",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 123.97,
+      "Ovtlyr_Return": 123.97
+    },
+    {
+      "Quotedate": "2020-08-24",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 125.452,
+      "Ovtlyr_Return": 125.452
+    },
+    {
+      "Quotedate": "2020-08-25",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 124.423,
+      "Ovtlyr_Return": 124.423
+    },
+    {
+      "Quotedate": "2020-08-26",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 126.115,
+      "Ovtlyr_Return": 126.115
+    },
+    {
+      "Quotedate": "2020-08-27",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 124.608,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-08-28",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 124.406,
+      "Ovtlyr_Return": 124.406
+    },
+    {
+      "Quotedate": "2020-08-31",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 128.625,
+      "Ovtlyr_Return": 128.625
+    },
+    {
+      "Quotedate": "2020-09-01",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 133.748,
+      "Ovtlyr_Return": 133.748
+    },
+    {
+      "Quotedate": "2020-09-02",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 130.977,
+      "Ovtlyr_Return": 130.977
+    },
+    {
+      "Quotedate": "2020-09-03",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 120.491,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-09-04",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 120.571,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-09-08",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 112.457,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-09-09",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 116.942,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-09-10",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 113.125,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-09-11",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 111.64,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-09-14",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 114.984,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-09-15",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 115.168,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-09-16",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 111.769,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-09-17",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 109.985,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-09-18",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 106.496,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-09-21",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 109.726,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-09-22",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 111.45,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-09-23",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 106.775,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-09-24",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 107.872,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-09-25",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 111.919,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-09-28",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 114.59,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-09-29",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 113.723,
+      "Ovtlyr_Return": 113.723
+    },
+    {
+      "Quotedate": "2020-09-30",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 115.437,
+      "Ovtlyr_Return": 115.437
+    },
+    {
+      "Quotedate": "2020-10-01",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 116.414,
+      "Ovtlyr_Return": 116.414
+    },
+    {
+      "Quotedate": "2020-10-02",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 112.656,
+      "Ovtlyr_Return": 112.656
+    },
+    {
+      "Quotedate": "2020-10-05",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 116.125,
+      "Ovtlyr_Return": 116.125
+    },
+    {
+      "Quotedate": "2020-10-06",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 112.796,
+      "Ovtlyr_Return": 112.796
+    },
+    {
+      "Quotedate": "2020-10-07",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 114.71,
+      "Ovtlyr_Return": 114.71
+    },
+    {
+      "Quotedate": "2020-10-08",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 114.6,
+      "Ovtlyr_Return": 114.6
+    },
+    {
+      "Quotedate": "2020-10-09",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 116.594,
+      "Ovtlyr_Return": 116.594
+    },
+    {
+      "Quotedate": "2020-10-12",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 124,
+      "Ovtlyr_Return": 124
+    },
+    {
+      "Quotedate": "2020-10-13",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 120.71,
+      "Ovtlyr_Return": 120.71
+    },
+    {
+      "Quotedate": "2020-10-14",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 120.8,
+      "Ovtlyr_Return": 120.8
+    },
+    {
+      "Quotedate": "2020-10-15",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 120.322,
+      "Ovtlyr_Return": 120.322
+    },
+    {
+      "Quotedate": "2020-10-16",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 118.637,
+      "Ovtlyr_Return": 118.637
+    },
+    {
+      "Quotedate": "2020-10-19",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 115.607,
+      "Ovtlyr_Return": 115.607
+    },
+    {
+      "Quotedate": "2020-10-20",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 117.132,
+      "Ovtlyr_Return": 117.132
+    },
+    {
+      "Quotedate": "2020-10-21",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 116.494,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-10-22",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 115.377,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-10-23",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 114.67,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-10-26",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 114.68,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-10-27",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 116.225,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-10-28",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 110.842,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-10-29",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 114.949,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-10-30",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 108.51,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-11-02",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 108.42,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-11-03",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 110.085,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-11-04",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 114.58,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-11-05",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 118.647,
+      "Ovtlyr_Return": 118.647
+    },
+    {
+      "Quotedate": "2020-11-06",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 118.512,
+      "Ovtlyr_Return": 118.512
+    },
+    {
+      "Quotedate": "2020-11-09",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 116.146,
+      "Ovtlyr_Return": 116.146
+    },
+    {
+      "Quotedate": "2020-11-10",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 115.796,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-11-11",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 119.311,
+      "Ovtlyr_Return": 119.311
+    },
+    {
+      "Quotedate": "2020-11-12",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 119.032,
+      "Ovtlyr_Return": 119.032
+    },
+    {
+      "Quotedate": "2020-11-13",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 119.081,
+      "Ovtlyr_Return": 119.081
+    },
+    {
+      "Quotedate": "2020-11-16",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 120.12,
+      "Ovtlyr_Return": 120.12
+    },
+    {
+      "Quotedate": "2020-11-17",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 119.211,
+      "Ovtlyr_Return": 119.211
+    },
+    {
+      "Quotedate": "2020-11-18",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 117.853,
+      "Ovtlyr_Return": 117.853
+    },
+    {
+      "Quotedate": "2020-11-19",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 118.462,
+      "Ovtlyr_Return": 118.462
+    },
+    {
+      "Quotedate": "2020-11-20",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 117.164,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-11-23",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 113.68,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-11-24",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 114.998,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-11-25",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 115.856,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-11-27",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 116.415,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-11-30",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 118.872,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2020-12-01",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 122.536,
+      "Ovtlyr_Return": 122.536
+    },
+    {
+      "Quotedate": "2020-12-02",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 122.896,
+      "Ovtlyr_Return": 122.896
+    },
+    {
+      "Quotedate": "2020-12-03",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 122.756,
+      "Ovtlyr_Return": 122.756
+    },
+    {
+      "Quotedate": "2020-12-04",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 122.067,
+      "Ovtlyr_Return": 122.067
+    },
+    {
+      "Quotedate": "2020-12-07",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 123.565,
+      "Ovtlyr_Return": 123.565
+    },
+    {
+      "Quotedate": "2020-12-08",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 124.194,
+      "Ovtlyr_Return": 124.194
+    },
+    {
+      "Quotedate": "2020-12-09",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 121.598,
+      "Ovtlyr_Return": 121.598
+    },
+    {
+      "Quotedate": "2020-12-10",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 123.056,
+      "Ovtlyr_Return": 123.056
+    },
+    {
+      "Quotedate": "2020-12-11",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 122.227,
+      "Ovtlyr_Return": 122.227
+    },
+    {
+      "Quotedate": "2020-12-14",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 121.598,
+      "Ovtlyr_Return": 121.598
+    },
+    {
+      "Quotedate": "2020-12-15",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 127.689,
+      "Ovtlyr_Return": 127.689
+    },
+    {
+      "Quotedate": "2020-12-16",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 127.619,
+      "Ovtlyr_Return": 127.619
+    },
+    {
+      "Quotedate": "2020-12-17",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 128.507,
+      "Ovtlyr_Return": 128.507
+    },
+    {
+      "Quotedate": "2020-12-18",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 126.465,
+      "Ovtlyr_Return": 126.465
+    },
+    {
+      "Quotedate": "2020-12-21",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 128.038,
+      "Ovtlyr_Return": 128.038
+    },
+    {
+      "Quotedate": "2020-12-22",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 131.683,
+      "Ovtlyr_Return": 131.683
+    },
+    {
+      "Quotedate": "2020-12-23",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 130.764,
+      "Ovtlyr_Return": 130.764
+    },
+    {
+      "Quotedate": "2020-12-24",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 131.772,
+      "Ovtlyr_Return": 131.772
+    },
+    {
+      "Quotedate": "2020-12-28",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 136.485,
+      "Ovtlyr_Return": 136.485
+    },
+    {
+      "Quotedate": "2020-12-29",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 134.668,
+      "Ovtlyr_Return": 134.668
+    },
+    {
+      "Quotedate": "2020-12-30",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 133.52,
+      "Ovtlyr_Return": 133.52
+    },
+    {
+      "Quotedate": "2020-12-31",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 132.491,
+      "Ovtlyr_Return": 132.491
+    },
+    {
+      "Quotedate": "2021-01-04",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 129.216,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-01-05",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 130.814,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-01-06",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 126.411,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-01-07",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 130.724,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-01-08",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 131.852,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-01-11",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 128.787,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-01-12",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 128.607,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-01-13",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 130.694,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-01-14",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 128.717,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-01-15",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 126.95,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-01-19",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 127.639,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-01-20",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 131.832,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-01-21",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 136.665,
+      "Ovtlyr_Return": 136.665
+    },
+    {
+      "Quotedate": "2021-01-22",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 138.862,
+      "Ovtlyr_Return": 138.862
+    },
+    {
+      "Quotedate": "2021-01-25",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 142.706,
+      "Ovtlyr_Return": 142.706
+    },
+    {
+      "Quotedate": "2021-01-26",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 142.946,
+      "Ovtlyr_Return": 142.946
+    },
+    {
+      "Quotedate": "2021-01-27",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 141.847,
+      "Ovtlyr_Return": 141.847
+    },
+    {
+      "Quotedate": "2021-01-28",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 136.885,
+      "Ovtlyr_Return": 136.885
+    },
+    {
+      "Quotedate": "2021-01-29",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 131.762,
+      "Ovtlyr_Return": 131.762
+    },
+    {
+      "Quotedate": "2021-02-01",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 133.939,
+      "Ovtlyr_Return": 133.939
+    },
+    {
+      "Quotedate": "2021-02-02",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 134.788,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-02-03",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 133.74,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-02-04",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 137.184,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-02-05",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 136.76,
+      "Ovtlyr_Return": 136.76
+    },
+    {
+      "Quotedate": "2021-02-08",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 136.91,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-02-09",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 136.01,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-02-10",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 135.39,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-02-11",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 135.13,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-02-12",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 135.37,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-02-16",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 133.19,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-02-17",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 130.84,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-02-18",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 129.71,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-02-19",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 129.87,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-02-22",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 126,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-02-23",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 125.86,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-02-24",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 125.35,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-02-25",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 120.99,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-02-26",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 121.26,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-03-01",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 127.79,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-03-02",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 125.12,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-03-03",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 122.06,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-03-04",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 120.13,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-03-05",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 121.42,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-03-08",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 116.36,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-03-09",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 121.085,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-03-10",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 119.98,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-03-11",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 121.96,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-03-12",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 121.03,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-03-15",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 123.99,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-03-16",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 125.57,
+      "Ovtlyr_Return": 125.57
+    },
+    {
+      "Quotedate": "2021-03-17",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 124.76,
+      "Ovtlyr_Return": 124.76
+    },
+    {
+      "Quotedate": "2021-03-18",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 120.53,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-03-19",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 119.99,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-03-22",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 123.39,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-03-23",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 122.54,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-03-24",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 120.09,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-03-25",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 120.59,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-03-26",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 121.21,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-03-29",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 121.39,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-03-30",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 119.9,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-03-31",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 122.15,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-04-01",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 123,
+      "Ovtlyr_Return": 123
+    },
+    {
+      "Quotedate": "2021-04-05",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 125.9,
+      "Ovtlyr_Return": 125.9
+    },
+    {
+      "Quotedate": "2021-04-06",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 126.21,
+      "Ovtlyr_Return": 126.21
+    },
+    {
+      "Quotedate": "2021-04-07",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 127.9,
+      "Ovtlyr_Return": 127.9
+    },
+    {
+      "Quotedate": "2021-04-08",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 130.36,
+      "Ovtlyr_Return": 130.36
+    },
+    {
+      "Quotedate": "2021-04-09",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 132.995,
+      "Ovtlyr_Return": 132.995
+    },
+    {
+      "Quotedate": "2021-04-12",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 131.24,
+      "Ovtlyr_Return": 131.24
+    },
+    {
+      "Quotedate": "2021-04-13",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 134.43,
+      "Ovtlyr_Return": 134.43
+    },
+    {
+      "Quotedate": "2021-04-14",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 132.03,
+      "Ovtlyr_Return": 132.03
+    },
+    {
+      "Quotedate": "2021-04-15",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 134.5,
+      "Ovtlyr_Return": 134.5
+    },
+    {
+      "Quotedate": "2021-04-16",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 134.16,
+      "Ovtlyr_Return": 134.16
+    },
+    {
+      "Quotedate": "2021-04-19",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 134.84,
+      "Ovtlyr_Return": 134.84
+    },
+    {
+      "Quotedate": "2021-04-20",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 133.11,
+      "Ovtlyr_Return": 133.11
+    },
+    {
+      "Quotedate": "2021-04-21",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 133.5,
+      "Ovtlyr_Return": 133.5
+    },
+    {
+      "Quotedate": "2021-04-22",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 131.94,
+      "Ovtlyr_Return": 131.94
+    },
+    {
+      "Quotedate": "2021-04-23",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 134.32,
+      "Ovtlyr_Return": 134.32
+    },
+    {
+      "Quotedate": "2021-04-26",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 134.72,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-04-27",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 134.39,
+      "Ovtlyr_Return": 134.39
+    },
+    {
+      "Quotedate": "2021-04-28",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 133.58,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-04-29",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 133.48,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-04-30",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 131.46,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-05-03",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 132.54,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-05-04",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 127.85,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-05-05",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 128.1,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-05-06",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 129.74,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-05-07",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 130.21,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-05-10",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 126.85,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-05-11",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 125.91,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-05-12",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 122.77,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-05-13",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 124.97,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-05-14",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 127.45,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-05-17",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 126.27,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-05-18",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 124.85,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-05-19",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 124.69,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-05-20",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 127.31,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-05-21",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 125.43,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-05-24",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 127.1,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-05-25",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 126.9,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-05-26",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 126.85,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-05-27",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 125.28,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-05-28",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 124.61,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-06-01",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 124.28,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-06-02",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 125.06,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-06-03",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 123.54,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-06-04",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 125.89,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-06-07",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 125.9,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-06-08",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 126.74,
+      "Ovtlyr_Return": 126.74
+    },
+    {
+      "Quotedate": "2021-06-09",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 127.13,
+      "Ovtlyr_Return": 127.13
+    },
+    {
+      "Quotedate": "2021-06-10",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 126.11,
+      "Ovtlyr_Return": 126.11
+    },
+    {
+      "Quotedate": "2021-06-11",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 127.35,
+      "Ovtlyr_Return": 127.35
+    },
+    {
+      "Quotedate": "2021-06-14",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 130.48,
+      "Ovtlyr_Return": 130.48
+    },
+    {
+      "Quotedate": "2021-06-15",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 129.64,
+      "Ovtlyr_Return": 129.64
+    },
+    {
+      "Quotedate": "2021-06-16",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 130.15,
+      "Ovtlyr_Return": 130.15
+    },
+    {
+      "Quotedate": "2021-06-17",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 131.79,
+      "Ovtlyr_Return": 131.79
+    },
+    {
+      "Quotedate": "2021-06-18",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 130.46,
+      "Ovtlyr_Return": 130.46
+    },
+    {
+      "Quotedate": "2021-06-21",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 132.3,
+      "Ovtlyr_Return": 132.3
+    },
+    {
+      "Quotedate": "2021-06-22",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 133.98,
+      "Ovtlyr_Return": 133.98
+    },
+    {
+      "Quotedate": "2021-06-23",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 133.7,
+      "Ovtlyr_Return": 133.7
+    },
+    {
+      "Quotedate": "2021-06-24",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 133.41,
+      "Ovtlyr_Return": 133.41
+    },
+    {
+      "Quotedate": "2021-06-25",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 133.11,
+      "Ovtlyr_Return": 133.11
+    },
+    {
+      "Quotedate": "2021-06-28",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 134.78,
+      "Ovtlyr_Return": 134.78
+    },
+    {
+      "Quotedate": "2021-06-29",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 136.33,
+      "Ovtlyr_Return": 136.33
+    },
+    {
+      "Quotedate": "2021-06-30",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 136.96,
+      "Ovtlyr_Return": 136.96
+    },
+    {
+      "Quotedate": "2021-07-01",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 137.27,
+      "Ovtlyr_Return": 137.27
+    },
+    {
+      "Quotedate": "2021-07-02",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 139.96,
+      "Ovtlyr_Return": 139.96
+    },
+    {
+      "Quotedate": "2021-07-06",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 142.02,
+      "Ovtlyr_Return": 142.02
+    },
+    {
+      "Quotedate": "2021-07-07",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 144.57,
+      "Ovtlyr_Return": 144.57
+    },
+    {
+      "Quotedate": "2021-07-08",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 143.24,
+      "Ovtlyr_Return": 143.24
+    },
+    {
+      "Quotedate": "2021-07-09",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 145.11,
+      "Ovtlyr_Return": 145.11
+    },
+    {
+      "Quotedate": "2021-07-12",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 144.5,
+      "Ovtlyr_Return": 144.5
+    },
+    {
+      "Quotedate": "2021-07-13",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 145.64,
+      "Ovtlyr_Return": 145.64
+    },
+    {
+      "Quotedate": "2021-07-14",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 149.15,
+      "Ovtlyr_Return": 149.15
+    },
+    {
+      "Quotedate": "2021-07-15",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 148.48,
+      "Ovtlyr_Return": 148.48
+    },
+    {
+      "Quotedate": "2021-07-16",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 146.39,
+      "Ovtlyr_Return": 146.39
+    },
+    {
+      "Quotedate": "2021-07-19",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 142.45,
+      "Ovtlyr_Return": 142.45
+    },
+    {
+      "Quotedate": "2021-07-20",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 146.15,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-07-21",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 145.4,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-07-22",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 146.8,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-07-23",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 148.56,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-07-26",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 148.99,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-07-27",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 146.77,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-07-28",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 144.98,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-07-29",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 145.64,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-07-30",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 145.86,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-08-02",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 145.52,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-08-03",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 147.36,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-08-04",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 146.95,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-08-05",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 147.06,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-08-06",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 146.14,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-08-09",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 146.09,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-08-10",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 145.6,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-08-11",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 145.86,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-08-12",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 148.89,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-08-13",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 149.1,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-08-16",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 151.12,
+      "Ovtlyr_Return": 151.12
+    },
+    {
+      "Quotedate": "2021-08-17",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 150.19,
+      "Ovtlyr_Return": 150.19
+    },
+    {
+      "Quotedate": "2021-08-18",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 146.36,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-08-19",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 146.7,
+      "Ovtlyr_Return": 146.7
+    },
+    {
+      "Quotedate": "2021-08-20",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 148.19,
+      "Ovtlyr_Return": 148.19
+    },
+    {
+      "Quotedate": "2021-08-23",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 149.71,
+      "Ovtlyr_Return": 149.71
+    },
+    {
+      "Quotedate": "2021-08-24",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 149.62,
+      "Ovtlyr_Return": 149.62
+    },
+    {
+      "Quotedate": "2021-08-25",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 148.36,
+      "Ovtlyr_Return": 148.36
+    },
+    {
+      "Quotedate": "2021-08-26",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 147.54,
+      "Ovtlyr_Return": 147.54
+    },
+    {
+      "Quotedate": "2021-08-27",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 148.6,
+      "Ovtlyr_Return": 148.6
+    },
+    {
+      "Quotedate": "2021-08-30",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 153.12,
+      "Ovtlyr_Return": 153.12
+    },
+    {
+      "Quotedate": "2021-08-31",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 151.83,
+      "Ovtlyr_Return": 151.83
+    },
+    {
+      "Quotedate": "2021-09-01",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 152.51,
+      "Ovtlyr_Return": 152.51
+    },
+    {
+      "Quotedate": "2021-09-02",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 153.65,
+      "Ovtlyr_Return": 153.65
+    },
+    {
+      "Quotedate": "2021-09-03",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 154.3,
+      "Ovtlyr_Return": 154.3
+    },
+    {
+      "Quotedate": "2021-09-07",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 156.69,
+      "Ovtlyr_Return": 156.69
+    },
+    {
+      "Quotedate": "2021-09-08",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 155.11,
+      "Ovtlyr_Return": 155.11
+    },
+    {
+      "Quotedate": "2021-09-09",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 154.07,
+      "Ovtlyr_Return": 154.07
+    },
+    {
+      "Quotedate": "2021-09-10",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 148.97,
+      "Ovtlyr_Return": 148.97
+    },
+    {
+      "Quotedate": "2021-09-13",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 149.55,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-09-14",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 148.12,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-09-15",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 149.03,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-09-16",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 148.79,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-09-17",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 146.06,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-09-20",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 142.94,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-09-21",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 143.43,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-09-22",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 145.85,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-09-23",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 146.83,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-09-24",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 146.92,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-09-27",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 145.37,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-09-28",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 141.91,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-09-29",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 142.83,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-09-30",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 141.5,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-10-01",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 142.65,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-10-04",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 139.14,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-10-05",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 141.11,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-10-06",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 142,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-10-07",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 143.29,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-10-08",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 142.9,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-10-11",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 142.81,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-10-12",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 141.51,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-10-13",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 140.91,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-10-14",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 143.76,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-10-15",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 144.84,
+      "Ovtlyr_Return": 144.84
+    },
+    {
+      "Quotedate": "2021-10-18",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 146.55,
+      "Ovtlyr_Return": 146.55
+    },
+    {
+      "Quotedate": "2021-10-19",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 148.76,
+      "Ovtlyr_Return": 148.76
+    },
+    {
+      "Quotedate": "2021-10-20",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 149.26,
+      "Ovtlyr_Return": 149.26
+    },
+    {
+      "Quotedate": "2021-10-21",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 149.48,
+      "Ovtlyr_Return": 149.48
+    },
+    {
+      "Quotedate": "2021-10-22",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 148.69,
+      "Ovtlyr_Return": 148.69
+    },
+    {
+      "Quotedate": "2021-10-25",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 148.64,
+      "Ovtlyr_Return": 148.64
+    },
+    {
+      "Quotedate": "2021-10-26",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 149.32,
+      "Ovtlyr_Return": 149.32
+    },
+    {
+      "Quotedate": "2021-10-27",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 148.85,
+      "Ovtlyr_Return": 148.85
+    },
+    {
+      "Quotedate": "2021-10-28",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 152.57,
+      "Ovtlyr_Return": 152.57
+    },
+    {
+      "Quotedate": "2021-10-29",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 149.8,
+      "Ovtlyr_Return": 149.8
+    },
+    {
+      "Quotedate": "2021-11-01",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 148.96,
+      "Ovtlyr_Return": 148.96
+    },
+    {
+      "Quotedate": "2021-11-02",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 150.02,
+      "Ovtlyr_Return": 150.02
+    },
+    {
+      "Quotedate": "2021-11-03",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 151.49,
+      "Ovtlyr_Return": 151.49
+    },
+    {
+      "Quotedate": "2021-11-04",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 150.96,
+      "Ovtlyr_Return": 150.96
+    },
+    {
+      "Quotedate": "2021-11-05",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 151.28,
+      "Ovtlyr_Return": 151.28
+    },
+    {
+      "Quotedate": "2021-11-08",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 150.44,
+      "Ovtlyr_Return": 150.44
+    },
+    {
+      "Quotedate": "2021-11-09",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 150.81,
+      "Ovtlyr_Return": 150.81
+    },
+    {
+      "Quotedate": "2021-11-10",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 147.92,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-11-11",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 147.87,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-11-12",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 149.99,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-11-15",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 150,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-11-16",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 151,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-11-17",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 153.49,
+      "Ovtlyr_Return": 153.49
+    },
+    {
+      "Quotedate": "2021-11-18",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 157.87,
+      "Ovtlyr_Return": 157.87
+    },
+    {
+      "Quotedate": "2021-11-19",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 160.55,
+      "Ovtlyr_Return": 160.55
+    },
+    {
+      "Quotedate": "2021-11-22",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 161.02,
+      "Ovtlyr_Return": 161.02
+    },
+    {
+      "Quotedate": "2021-11-23",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 161.41,
+      "Ovtlyr_Return": 161.41
+    },
+    {
+      "Quotedate": "2021-11-24",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 161.94,
+      "Ovtlyr_Return": 161.94
+    },
+    {
+      "Quotedate": "2021-11-26",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 156.81,
+      "Ovtlyr_Return": 156.81
+    },
+    {
+      "Quotedate": "2021-11-29",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 160.24,
+      "Ovtlyr_Return": 160.24
+    },
+    {
+      "Quotedate": "2021-11-30",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 165.3,
+      "Ovtlyr_Return": 165.3
+    },
+    {
+      "Quotedate": "2021-12-01",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 164.77,
+      "Ovtlyr_Return": 164.77
+    },
+    {
+      "Quotedate": "2021-12-02",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 163.76,
+      "Ovtlyr_Return": 163.76
+    },
+    {
+      "Quotedate": "2021-12-03",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 161.84,
+      "Ovtlyr_Return": 161.84
+    },
+    {
+      "Quotedate": "2021-12-06",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 165.32,
+      "Ovtlyr_Return": 165.32
+    },
+    {
+      "Quotedate": "2021-12-07",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 171.18,
+      "Ovtlyr_Return": 171.18
+    },
+    {
+      "Quotedate": "2021-12-08",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 175.08,
+      "Ovtlyr_Return": 175.08
+    },
+    {
+      "Quotedate": "2021-12-09",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 174.56,
+      "Ovtlyr_Return": 174.56
+    },
+    {
+      "Quotedate": "2021-12-10",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 179.45,
+      "Ovtlyr_Return": 179.45
+    },
+    {
+      "Quotedate": "2021-12-13",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 175.74,
+      "Ovtlyr_Return": 175.74
+    },
+    {
+      "Quotedate": "2021-12-14",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 174.33,
+      "Ovtlyr_Return": 174.33
+    },
+    {
+      "Quotedate": "2021-12-15",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 179.3,
+      "Ovtlyr_Return": 179.3
+    },
+    {
+      "Quotedate": "2021-12-16",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 172.26,
+      "Ovtlyr_Return": 172.26
+    },
+    {
+      "Quotedate": "2021-12-17",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 171.14,
+      "Ovtlyr_Return": 171.14
+    },
+    {
+      "Quotedate": "2021-12-20",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 169.75,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-12-21",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 172.99,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-12-22",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 175.64,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-12-23",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 176.28,
+      "Ovtlyr_Return": 176.28
+    },
+    {
+      "Quotedate": "2021-12-27",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 180.33,
+      "Ovtlyr_Return": 180.33
+    },
+    {
+      "Quotedate": "2021-12-28",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 179.29,
+      "Ovtlyr_Return": 179.29
+    },
+    {
+      "Quotedate": "2021-12-29",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 179.38,
+      "Ovtlyr_Return": 179.38
+    },
+    {
+      "Quotedate": "2021-12-30",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 178.2,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2021-12-31",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 177.57,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-01-03",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 182.01,
+      "Ovtlyr_Return": 182.01
+    },
+    {
+      "Quotedate": "2022-01-04",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 179.7,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-01-05",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 174.92,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-01-06",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 172,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-01-07",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 172.17,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-01-10",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 172.19,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-01-11",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 175.08,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-01-12",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 175.53,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-01-13",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 172.19,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-01-14",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 173.07,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-01-18",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 169.8,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-01-19",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 166.23,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-01-20",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 164.51,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-01-21",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 162.41,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-01-24",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 161.62,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-01-25",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 159.78,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-01-26",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 159.69,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-01-27",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 159.22,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-01-28",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 170.33,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-01-31",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 174.78,
+      "Ovtlyr_Return": 174.78
+    },
+    {
+      "Quotedate": "2022-02-01",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 174.61,
+      "Ovtlyr_Return": 174.61
+    },
+    {
+      "Quotedate": "2022-02-02",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 175.84,
+      "Ovtlyr_Return": 175.84
+    },
+    {
+      "Quotedate": "2022-02-03",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 172.9,
+      "Ovtlyr_Return": 172.9
+    },
+    {
+      "Quotedate": "2022-02-04",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 172.39,
+      "Ovtlyr_Return": 172.39
+    },
+    {
+      "Quotedate": "2022-02-07",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 171.66,
+      "Ovtlyr_Return": 171.66
+    },
+    {
+      "Quotedate": "2022-02-08",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 174.83,
+      "Ovtlyr_Return": 174.83
+    },
+    {
+      "Quotedate": "2022-02-09",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 176.28,
+      "Ovtlyr_Return": 176.28
+    },
+    {
+      "Quotedate": "2022-02-10",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 172.12,
+      "Ovtlyr_Return": 172.12
+    },
+    {
+      "Quotedate": "2022-02-11",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 168.64,
+      "Ovtlyr_Return": 168.64
+    },
+    {
+      "Quotedate": "2022-02-14",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 168.88,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-02-15",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 172.79,
+      "Ovtlyr_Return": 172.79
+    },
+    {
+      "Quotedate": "2022-02-16",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 172.55,
+      "Ovtlyr_Return": 172.55
+    },
+    {
+      "Quotedate": "2022-02-17",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 168.88,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-02-18",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 167.3,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-02-22",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 164.32,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-02-23",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 160.07,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-02-24",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 162.74,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-02-25",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 164.85,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-02-28",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 165.12,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-03-01",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 163.2,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-03-02",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 166.56,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-03-03",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 166.23,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-03-04",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 163.17,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-03-07",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 159.3,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-03-08",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 157.44,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-03-09",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 162.95,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-03-10",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 158.52,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-03-11",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 154.73,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-03-14",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 150.62,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-03-15",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 155.09,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-03-16",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 159.59,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-03-17",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 160.62,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-03-18",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 163.98,
+      "Ovtlyr_Return": 163.98
+    },
+    {
+      "Quotedate": "2022-03-21",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 165.38,
+      "Ovtlyr_Return": 165.38
+    },
+    {
+      "Quotedate": "2022-03-22",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 168.82,
+      "Ovtlyr_Return": 168.82
+    },
+    {
+      "Quotedate": "2022-03-23",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 170.21,
+      "Ovtlyr_Return": 170.21
+    },
+    {
+      "Quotedate": "2022-03-24",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 174.07,
+      "Ovtlyr_Return": 174.07
+    },
+    {
+      "Quotedate": "2022-03-25",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 174.72,
+      "Ovtlyr_Return": 174.72
+    },
+    {
+      "Quotedate": "2022-03-28",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 175.6,
+      "Ovtlyr_Return": 175.6
+    },
+    {
+      "Quotedate": "2022-03-29",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 178.96,
+      "Ovtlyr_Return": 178.96
+    },
+    {
+      "Quotedate": "2022-03-30",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 177.77,
+      "Ovtlyr_Return": 177.77
+    },
+    {
+      "Quotedate": "2022-03-31",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 174.61,
+      "Ovtlyr_Return": 174.61
+    },
+    {
+      "Quotedate": "2022-04-01",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 174.31,
+      "Ovtlyr_Return": 174.31
+    },
+    {
+      "Quotedate": "2022-04-04",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 178.44,
+      "Ovtlyr_Return": 178.44
+    },
+    {
+      "Quotedate": "2022-04-05",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 175.06,
+      "Ovtlyr_Return": 175.06
+    },
+    {
+      "Quotedate": "2022-04-06",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 171.83,
+      "Ovtlyr_Return": 171.83
+    },
+    {
+      "Quotedate": "2022-04-07",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 172.14,
+      "Ovtlyr_Return": 172.14
+    },
+    {
+      "Quotedate": "2022-04-08",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 170.09,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-04-11",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 165.75,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-04-12",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 167.66,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-04-13",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 170.4,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-04-14",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 165.29,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-04-18",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 165.07,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-04-19",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 167.4,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-04-20",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 167.23,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-04-21",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 166.42,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-04-22",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 161.79,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-04-25",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 162.88,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-04-26",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 156.8,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-04-27",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 156.57,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-04-28",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 163.64,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-04-29",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 157.65,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-05-02",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 157.96,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-05-03",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 159.48,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-05-04",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 166.02,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-05-05",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 156.77,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-05-06",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 157.28,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-05-09",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 152.06,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-05-10",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 154.51,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-05-11",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 146.5,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-05-12",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 142.56,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-05-13",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 147.11,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-05-16",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 145.54,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-05-17",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 149.24,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-05-18",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 140.82,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-05-19",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 137.35,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-05-20",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 137.59,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-05-23",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 143.11,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-05-24",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 140.36,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-05-25",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 140.52,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-05-26",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 143.78,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-05-27",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 149.64,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-05-31",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 148.84,
+      "Ovtlyr_Return": 148.84
+    },
+    {
+      "Quotedate": "2022-06-01",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 148.71,
+      "Ovtlyr_Return": 148.71
+    },
+    {
+      "Quotedate": "2022-06-02",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 151.21,
+      "Ovtlyr_Return": 151.21
+    },
+    {
+      "Quotedate": "2022-06-03",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 145.38,
+      "Ovtlyr_Return": 145.38
+    },
+    {
+      "Quotedate": "2022-06-06",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 146.14,
+      "Ovtlyr_Return": 146.14
+    },
+    {
+      "Quotedate": "2022-06-07",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 148.71,
+      "Ovtlyr_Return": 148.71
+    },
+    {
+      "Quotedate": "2022-06-08",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 147.96,
+      "Ovtlyr_Return": 147.96
+    },
+    {
+      "Quotedate": "2022-06-09",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 142.64,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-06-10",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 137.13,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-06-13",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 131.88,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-06-14",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 132.76,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-06-15",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 135.43,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-06-16",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 130.06,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-06-17",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 131.56,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-06-21",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 135.87,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-06-22",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 135.35,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-06-23",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 138.27,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-06-24",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 141.66,
+      "Ovtlyr_Return": 141.66
+    },
+    {
+      "Quotedate": "2022-06-27",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 141.66,
+      "Ovtlyr_Return": 141.66
+    },
+    {
+      "Quotedate": "2022-06-28",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 137.44,
+      "Ovtlyr_Return": 137.44
+    },
+    {
+      "Quotedate": "2022-06-29",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 139.23,
+      "Ovtlyr_Return": 139.23
+    },
+    {
+      "Quotedate": "2022-06-30",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 136.72,
+      "Ovtlyr_Return": 136.72
+    },
+    {
+      "Quotedate": "2022-07-01",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 138.93,
+      "Ovtlyr_Return": 138.93
+    },
+    {
+      "Quotedate": "2022-07-05",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 141.56,
+      "Ovtlyr_Return": 141.56
+    },
+    {
+      "Quotedate": "2022-07-06",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 142.92,
+      "Ovtlyr_Return": 142.92
+    },
+    {
+      "Quotedate": "2022-07-07",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 146.35,
+      "Ovtlyr_Return": 146.35
+    },
+    {
+      "Quotedate": "2022-07-08",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 147.04,
+      "Ovtlyr_Return": 147.04
+    },
+    {
+      "Quotedate": "2022-07-11",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 144.87,
+      "Ovtlyr_Return": 144.87
+    },
+    {
+      "Quotedate": "2022-07-12",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 145.86,
+      "Ovtlyr_Return": 145.86
+    },
+    {
+      "Quotedate": "2022-07-13",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 145.49,
+      "Ovtlyr_Return": 145.49
+    },
+    {
+      "Quotedate": "2022-07-14",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 148.47,
+      "Ovtlyr_Return": 148.47
+    },
+    {
+      "Quotedate": "2022-07-15",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 150.17,
+      "Ovtlyr_Return": 150.17
+    },
+    {
+      "Quotedate": "2022-07-18",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 147.07,
+      "Ovtlyr_Return": 147.07
+    },
+    {
+      "Quotedate": "2022-07-19",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 151,
+      "Ovtlyr_Return": 151
+    },
+    {
+      "Quotedate": "2022-07-20",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 153.04,
+      "Ovtlyr_Return": 153.04
+    },
+    {
+      "Quotedate": "2022-07-21",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 155.35,
+      "Ovtlyr_Return": 155.35
+    },
+    {
+      "Quotedate": "2022-07-22",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 154.09,
+      "Ovtlyr_Return": 154.09
+    },
+    {
+      "Quotedate": "2022-07-25",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 152.95,
+      "Ovtlyr_Return": 152.95
+    },
+    {
+      "Quotedate": "2022-07-26",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 151.6,
+      "Ovtlyr_Return": 151.6
+    },
+    {
+      "Quotedate": "2022-07-27",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 156.79,
+      "Ovtlyr_Return": 156.79
+    },
+    {
+      "Quotedate": "2022-07-28",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 157.35,
+      "Ovtlyr_Return": 157.35
+    },
+    {
+      "Quotedate": "2022-07-29",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 162.51,
+      "Ovtlyr_Return": 162.51
+    },
+    {
+      "Quotedate": "2022-08-01",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 161.51,
+      "Ovtlyr_Return": 161.51
+    },
+    {
+      "Quotedate": "2022-08-02",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 160.01,
+      "Ovtlyr_Return": 160.01
+    },
+    {
+      "Quotedate": "2022-08-03",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 166.13,
+      "Ovtlyr_Return": 166.13
+    },
+    {
+      "Quotedate": "2022-08-04",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 165.81,
+      "Ovtlyr_Return": 165.81
+    },
+    {
+      "Quotedate": "2022-08-05",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 165.35,
+      "Ovtlyr_Return": 165.35
+    },
+    {
+      "Quotedate": "2022-08-08",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 164.87,
+      "Ovtlyr_Return": 164.87
+    },
+    {
+      "Quotedate": "2022-08-09",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 164.92,
+      "Ovtlyr_Return": 164.92
+    },
+    {
+      "Quotedate": "2022-08-10",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 169.24,
+      "Ovtlyr_Return": 169.24
+    },
+    {
+      "Quotedate": "2022-08-11",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 168.49,
+      "Ovtlyr_Return": 168.49
+    },
+    {
+      "Quotedate": "2022-08-12",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 172.1,
+      "Ovtlyr_Return": 172.1
+    },
+    {
+      "Quotedate": "2022-08-15",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 173.19,
+      "Ovtlyr_Return": 173.19
+    },
+    {
+      "Quotedate": "2022-08-16",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 173.03,
+      "Ovtlyr_Return": 173.03
+    },
+    {
+      "Quotedate": "2022-08-17",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 174.55,
+      "Ovtlyr_Return": 174.55
+    },
+    {
+      "Quotedate": "2022-08-18",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 174.15,
+      "Ovtlyr_Return": 174.15
+    },
+    {
+      "Quotedate": "2022-08-19",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 171.52,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-08-22",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 167.57,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-08-23",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 167.23,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-08-24",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 167.53,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-08-25",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 170.03,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-08-26",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 163.62,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-08-29",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 161.38,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-08-30",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 158.91,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-08-31",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 157.22,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-09-01",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 157.96,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-09-02",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 155.81,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-09-06",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 154.53,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-09-07",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 155.96,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-09-08",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 154.46,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-09-09",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 157.37,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-09-12",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 163.43,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-09-13",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 153.84,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-09-14",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 155.31,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-09-15",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 152.37,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-09-16",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 150.7,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-09-19",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 154.48,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-09-20",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 156.9,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-09-21",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 153.72,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-09-22",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 152.74,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-09-23",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 150.43,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-09-26",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 150.77,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-09-27",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 151.76,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-09-28",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 149.84,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-09-29",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 142.48,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-09-30",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 138.2,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-10-03",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 142.45,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-10-04",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 146.1,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-10-05",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 146.4,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-10-06",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 145.43,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-10-07",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 140.09,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-10-10",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 140.42,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-10-11",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 138.98,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-10-12",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 138.34,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-10-13",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 142.99,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-10-14",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 138.38,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-10-17",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 142.41,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-10-18",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 143.75,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-10-19",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 143.86,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-10-20",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 143.39,
+      "Ovtlyr_Return": 143.39
+    },
+    {
+      "Quotedate": "2022-10-21",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 147.27,
+      "Ovtlyr_Return": 147.27
+    },
+    {
+      "Quotedate": "2022-10-24",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 149.45,
+      "Ovtlyr_Return": 149.45
+    },
+    {
+      "Quotedate": "2022-10-25",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 152.34,
+      "Ovtlyr_Return": 152.34
+    },
+    {
+      "Quotedate": "2022-10-26",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 149.35,
+      "Ovtlyr_Return": 149.35
+    },
+    {
+      "Quotedate": "2022-10-27",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 144.8,
+      "Ovtlyr_Return": 144.8
+    },
+    {
+      "Quotedate": "2022-10-28",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 155.74,
+      "Ovtlyr_Return": 155.74
+    },
+    {
+      "Quotedate": "2022-10-31",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 153.34,
+      "Ovtlyr_Return": 153.34
+    },
+    {
+      "Quotedate": "2022-11-01",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 150.65,
+      "Ovtlyr_Return": 150.65
+    },
+    {
+      "Quotedate": "2022-11-02",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 145.03,
+      "Ovtlyr_Return": 145.03
+    },
+    {
+      "Quotedate": "2022-11-03",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 138.88,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-11-04",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 138.38,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-11-07",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 138.92,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-11-08",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 139.5,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-11-09",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 134.87,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-11-10",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 146.87,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-11-11",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 149.7,
+      "Ovtlyr_Return": 149.7
+    },
+    {
+      "Quotedate": "2022-11-14",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 148.28,
+      "Ovtlyr_Return": 148.28
+    },
+    {
+      "Quotedate": "2022-11-15",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 150.04,
+      "Ovtlyr_Return": 150.04
+    },
+    {
+      "Quotedate": "2022-11-16",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 148.79,
+      "Ovtlyr_Return": 148.79
+    },
+    {
+      "Quotedate": "2022-11-17",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 150.72,
+      "Ovtlyr_Return": 150.72
+    },
+    {
+      "Quotedate": "2022-11-18",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 151.29,
+      "Ovtlyr_Return": 151.29
+    },
+    {
+      "Quotedate": "2022-11-21",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 148.01,
+      "Ovtlyr_Return": 148.01
+    },
+    {
+      "Quotedate": "2022-11-22",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 150.18,
+      "Ovtlyr_Return": 150.18
+    },
+    {
+      "Quotedate": "2022-11-23",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 151.07,
+      "Ovtlyr_Return": 151.07
+    },
+    {
+      "Quotedate": "2022-11-25",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 148.11,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-11-28",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 144.22,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-11-29",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 141.17,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-11-30",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 148.03,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-12-01",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 148.31,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-12-02",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 147.81,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-12-05",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 146.63,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-12-06",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 142.91,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-12-07",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 140.94,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-12-08",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 142.65,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-12-09",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 142.16,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-12-12",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 144.49,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-12-13",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 145.47,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-12-14",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 143.21,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-12-15",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 136.5,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-12-16",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 134.51,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-12-19",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 132.37,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-12-20",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 132.3,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-12-21",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 135.45,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-12-22",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 132.23,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-12-23",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 131.86,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-12-27",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 130.03,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-12-28",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 126.04,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-12-29",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 129.61,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2022-12-30",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 129.93,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-01-03",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 125.07,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-01-04",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 126.36,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-01-05",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 125.02,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-01-06",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 129.62,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-01-09",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 130.15,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-01-10",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 130.73,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-01-11",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 133.49,
+      "Ovtlyr_Return": 133.49
+    },
+    {
+      "Quotedate": "2023-01-12",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 133.41,
+      "Ovtlyr_Return": 133.41
+    },
+    {
+      "Quotedate": "2023-01-13",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 134.76,
+      "Ovtlyr_Return": 134.76
+    },
+    {
+      "Quotedate": "2023-01-17",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 135.94,
+      "Ovtlyr_Return": 135.94
+    },
+    {
+      "Quotedate": "2023-01-18",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 135.21,
+      "Ovtlyr_Return": 135.21
+    },
+    {
+      "Quotedate": "2023-01-19",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 135.27,
+      "Ovtlyr_Return": 135.27
+    },
+    {
+      "Quotedate": "2023-01-20",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 137.87,
+      "Ovtlyr_Return": 137.87
+    },
+    {
+      "Quotedate": "2023-01-23",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 141.11,
+      "Ovtlyr_Return": 141.11
+    },
+    {
+      "Quotedate": "2023-01-24",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 142.53,
+      "Ovtlyr_Return": 142.53
+    },
+    {
+      "Quotedate": "2023-01-25",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 141.86,
+      "Ovtlyr_Return": 141.86
+    },
+    {
+      "Quotedate": "2023-01-26",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 143.96,
+      "Ovtlyr_Return": 143.96
+    },
+    {
+      "Quotedate": "2023-01-27",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 145.93,
+      "Ovtlyr_Return": 145.93
+    },
+    {
+      "Quotedate": "2023-01-30",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 143,
+      "Ovtlyr_Return": 143
+    },
+    {
+      "Quotedate": "2023-01-31",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 144.29,
+      "Ovtlyr_Return": 144.29
+    },
+    {
+      "Quotedate": "2023-02-01",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 145.43,
+      "Ovtlyr_Return": 145.43
+    },
+    {
+      "Quotedate": "2023-02-02",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 150.82,
+      "Ovtlyr_Return": 150.82
+    },
+    {
+      "Quotedate": "2023-02-03",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 154.5,
+      "Ovtlyr_Return": 154.5
+    },
+    {
+      "Quotedate": "2023-02-06",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 151.73,
+      "Ovtlyr_Return": 151.73
+    },
+    {
+      "Quotedate": "2023-02-07",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 154.65,
+      "Ovtlyr_Return": 154.65
+    },
+    {
+      "Quotedate": "2023-02-08",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 151.92,
+      "Ovtlyr_Return": 151.92
+    },
+    {
+      "Quotedate": "2023-02-09",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 150.87,
+      "Ovtlyr_Return": 150.87
+    },
+    {
+      "Quotedate": "2023-02-10",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 151.01,
+      "Ovtlyr_Return": 151.01
+    },
+    {
+      "Quotedate": "2023-02-13",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 153.85,
+      "Ovtlyr_Return": 153.85
+    },
+    {
+      "Quotedate": "2023-02-14",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 153.2,
+      "Ovtlyr_Return": 153.2
+    },
+    {
+      "Quotedate": "2023-02-15",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 155.33,
+      "Ovtlyr_Return": 155.33
+    },
+    {
+      "Quotedate": "2023-02-16",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 153.71,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-02-17",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 152.55,
+      "Ovtlyr_Return": 152.55
+    },
+    {
+      "Quotedate": "2023-02-21",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 148.48,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-02-22",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 148.91,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-02-23",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 149.4,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-02-24",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 146.71,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-02-27",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 147.92,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-02-28",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 147.41,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-03-01",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 145.31,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-03-02",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 145.91,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-03-03",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 151.03,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-03-06",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 153.83,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-03-07",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 151.6,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-03-08",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 152.87,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-03-09",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 150.59,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-03-10",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 148.5,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-03-13",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 150.47,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-03-14",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 152.59,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-03-15",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 152.99,
+      "Ovtlyr_Return": 152.99
+    },
+    {
+      "Quotedate": "2023-03-16",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 155.85,
+      "Ovtlyr_Return": 155.85
+    },
+    {
+      "Quotedate": "2023-03-17",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 155,
+      "Ovtlyr_Return": 155
+    },
+    {
+      "Quotedate": "2023-03-20",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 157.4,
+      "Ovtlyr_Return": 157.4
+    },
+    {
+      "Quotedate": "2023-03-21",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 159.28,
+      "Ovtlyr_Return": 159.28
+    },
+    {
+      "Quotedate": "2023-03-22",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 157.83,
+      "Ovtlyr_Return": 157.83
+    },
+    {
+      "Quotedate": "2023-03-23",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 158.93,
+      "Ovtlyr_Return": 158.93
+    },
+    {
+      "Quotedate": "2023-03-24",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 160.25,
+      "Ovtlyr_Return": 160.25
+    },
+    {
+      "Quotedate": "2023-03-27",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 158.28,
+      "Ovtlyr_Return": 158.28
+    },
+    {
+      "Quotedate": "2023-03-28",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 157.65,
+      "Ovtlyr_Return": 157.65
+    },
+    {
+      "Quotedate": "2023-03-29",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 160.77,
+      "Ovtlyr_Return": 160.77
+    },
+    {
+      "Quotedate": "2023-03-30",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 162.36,
+      "Ovtlyr_Return": 162.36
+    },
+    {
+      "Quotedate": "2023-03-31",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 164.9,
+      "Ovtlyr_Return": 164.9
+    },
+    {
+      "Quotedate": "2023-04-03",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 166.17,
+      "Ovtlyr_Return": 166.17
+    },
+    {
+      "Quotedate": "2023-04-04",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 165.63,
+      "Ovtlyr_Return": 165.63
+    },
+    {
+      "Quotedate": "2023-04-05",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 163.76,
+      "Ovtlyr_Return": 163.76
+    },
+    {
+      "Quotedate": "2023-04-06",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 164.66,
+      "Ovtlyr_Return": 164.66
+    },
+    {
+      "Quotedate": "2023-04-10",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 162.03,
+      "Ovtlyr_Return": 162.03
+    },
+    {
+      "Quotedate": "2023-04-11",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 160.8,
+      "Ovtlyr_Return": 160.8
+    },
+    {
+      "Quotedate": "2023-04-12",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 160.1,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-04-13",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 165.56,
+      "Ovtlyr_Return": 165.56
+    },
+    {
+      "Quotedate": "2023-04-14",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 165.21,
+      "Ovtlyr_Return": 165.21
+    },
+    {
+      "Quotedate": "2023-04-17",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 165.23,
+      "Ovtlyr_Return": 165.23
+    },
+    {
+      "Quotedate": "2023-04-18",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 166.47,
+      "Ovtlyr_Return": 166.47
+    },
+    {
+      "Quotedate": "2023-04-19",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 167.63,
+      "Ovtlyr_Return": 167.63
+    },
+    {
+      "Quotedate": "2023-04-20",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 166.65,
+      "Ovtlyr_Return": 166.65
+    },
+    {
+      "Quotedate": "2023-04-21",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 165.02,
+      "Ovtlyr_Return": 165.02
+    },
+    {
+      "Quotedate": "2023-04-24",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 165.33,
+      "Ovtlyr_Return": 165.33
+    },
+    {
+      "Quotedate": "2023-04-25",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 163.77,
+      "Ovtlyr_Return": 163.77
+    },
+    {
+      "Quotedate": "2023-04-26",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 163.76,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-04-27",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 168.41,
+      "Ovtlyr_Return": 168.41
+    },
+    {
+      "Quotedate": "2023-04-28",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 169.68,
+      "Ovtlyr_Return": 169.68
+    },
+    {
+      "Quotedate": "2023-05-01",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 169.59,
+      "Ovtlyr_Return": 169.59
+    },
+    {
+      "Quotedate": "2023-05-02",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 168.54,
+      "Ovtlyr_Return": 168.54
+    },
+    {
+      "Quotedate": "2023-05-03",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 167.45,
+      "Ovtlyr_Return": 167.45
+    },
+    {
+      "Quotedate": "2023-05-04",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 165.79,
+      "Ovtlyr_Return": 165.79
+    },
+    {
+      "Quotedate": "2023-05-05",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 173.57,
+      "Ovtlyr_Return": 173.57
+    },
+    {
+      "Quotedate": "2023-05-08",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 173.5,
+      "Ovtlyr_Return": 173.5
+    },
+    {
+      "Quotedate": "2023-05-09",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 171.77,
+      "Ovtlyr_Return": 171.77
+    },
+    {
+      "Quotedate": "2023-05-10",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 173.555,
+      "Ovtlyr_Return": 173.555
+    },
+    {
+      "Quotedate": "2023-05-11",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 173.75,
+      "Ovtlyr_Return": 173.75
+    },
+    {
+      "Quotedate": "2023-05-12",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 172.57,
+      "Ovtlyr_Return": 172.57
+    },
+    {
+      "Quotedate": "2023-05-15",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 172.07,
+      "Ovtlyr_Return": 172.07
+    },
+    {
+      "Quotedate": "2023-05-16",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 172.07,
+      "Ovtlyr_Return": 172.07
+    },
+    {
+      "Quotedate": "2023-05-17",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 172.69,
+      "Ovtlyr_Return": 172.69
+    },
+    {
+      "Quotedate": "2023-05-18",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 175.05,
+      "Ovtlyr_Return": 175.05
+    },
+    {
+      "Quotedate": "2023-05-19",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 175.16,
+      "Ovtlyr_Return": 175.16
+    },
+    {
+      "Quotedate": "2023-05-22",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 174.2,
+      "Ovtlyr_Return": 174.2
+    },
+    {
+      "Quotedate": "2023-05-23",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 171.56,
+      "Ovtlyr_Return": 171.56
+    },
+    {
+      "Quotedate": "2023-05-24",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 171.84,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-05-25",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 172.99,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-05-26",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 175.43,
+      "Ovtlyr_Return": 175.43
+    },
+    {
+      "Quotedate": "2023-05-30",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 177.3,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-05-31",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 177.25,
+      "Ovtlyr_Return": 177.25
+    },
+    {
+      "Quotedate": "2023-06-01",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 180.09,
+      "Ovtlyr_Return": 180.09
+    },
+    {
+      "Quotedate": "2023-06-02",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 180.95,
+      "Ovtlyr_Return": 180.95
+    },
+    {
+      "Quotedate": "2023-06-05",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 179.58,
+      "Ovtlyr_Return": 179.58
+    },
+    {
+      "Quotedate": "2023-06-06",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 179.21,
+      "Ovtlyr_Return": 179.21
+    },
+    {
+      "Quotedate": "2023-06-07",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 177.82,
+      "Ovtlyr_Return": 177.82
+    },
+    {
+      "Quotedate": "2023-06-08",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 180.57,
+      "Ovtlyr_Return": 180.57
+    },
+    {
+      "Quotedate": "2023-06-09",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 180.96,
+      "Ovtlyr_Return": 180.96
+    },
+    {
+      "Quotedate": "2023-06-12",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 183.79,
+      "Ovtlyr_Return": 183.79
+    },
+    {
+      "Quotedate": "2023-06-13",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 183.31,
+      "Ovtlyr_Return": 183.31
+    },
+    {
+      "Quotedate": "2023-06-14",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 183.95,
+      "Ovtlyr_Return": 183.95
+    },
+    {
+      "Quotedate": "2023-06-15",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 186.01,
+      "Ovtlyr_Return": 186.01
+    },
+    {
+      "Quotedate": "2023-06-16",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 184.92,
+      "Ovtlyr_Return": 184.92
+    },
+    {
+      "Quotedate": "2023-06-20",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 185.01,
+      "Ovtlyr_Return": 185.01
+    },
+    {
+      "Quotedate": "2023-06-21",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 183.96,
+      "Ovtlyr_Return": 183.96
+    },
+    {
+      "Quotedate": "2023-06-22",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 187,
+      "Ovtlyr_Return": 187
+    },
+    {
+      "Quotedate": "2023-06-23",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 186.68,
+      "Ovtlyr_Return": 186.68
+    },
+    {
+      "Quotedate": "2023-06-26",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 185.27,
+      "Ovtlyr_Return": 185.27
+    },
+    {
+      "Quotedate": "2023-06-27",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 188.06,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-06-28",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 189.25,
+      "Ovtlyr_Return": 189.25
+    },
+    {
+      "Quotedate": "2023-06-29",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 189.59,
+      "Ovtlyr_Return": 189.59
+    },
+    {
+      "Quotedate": "2023-06-30",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 193.97,
+      "Ovtlyr_Return": 193.97
+    },
+    {
+      "Quotedate": "2023-07-03",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 192.46,
+      "Ovtlyr_Return": 192.46
+    },
+    {
+      "Quotedate": "2023-07-05",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 191.33,
+      "Ovtlyr_Return": 191.33
+    },
+    {
+      "Quotedate": "2023-07-06",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 191.81,
+      "Ovtlyr_Return": 191.81
+    },
+    {
+      "Quotedate": "2023-07-07",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 190.68,
+      "Ovtlyr_Return": 190.68
+    },
+    {
+      "Quotedate": "2023-07-10",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 188.61,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-07-11",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 188.08,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-07-12",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 189.77,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-07-13",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 190.54,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-07-14",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 190.69,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-07-17",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 193.99,
+      "Ovtlyr_Return": 193.99
+    },
+    {
+      "Quotedate": "2023-07-18",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 193.73,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-07-19",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 195.1,
+      "Ovtlyr_Return": 195.1
+    },
+    {
+      "Quotedate": "2023-07-20",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 193.13,
+      "Ovtlyr_Return": 193.13
+    },
+    {
+      "Quotedate": "2023-07-21",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 191.94,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-07-24",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 192.75,
+      "Ovtlyr_Return": 192.75
+    },
+    {
+      "Quotedate": "2023-07-25",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 193.62,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-07-26",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 194.5,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-07-27",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 193.22,
+      "Ovtlyr_Return": 193.22
+    },
+    {
+      "Quotedate": "2023-07-28",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 195.83,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-07-31",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 196.45,
+      "Ovtlyr_Return": 196.45
+    },
+    {
+      "Quotedate": "2023-08-01",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 195.605,
+      "Ovtlyr_Return": 195.605
+    },
+    {
+      "Quotedate": "2023-08-02",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 192.58,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-08-03",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 191.17,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-08-04",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 181.99,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-08-07",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 178.85,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-08-08",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 179.8,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-08-09",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 178.19,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-08-10",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 177.97,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-08-11",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 177.79,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-08-14",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 179.46,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-08-15",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 177.45,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-08-16",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 176.57,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-08-17",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 174,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-08-18",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 174.49,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-08-21",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 175.84,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-08-22",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 177.23,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-08-23",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 181.12,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-08-24",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 176.38,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-08-25",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 178.61,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-08-28",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 180.19,
+      "Ovtlyr_Return": 180.19
+    },
+    {
+      "Quotedate": "2023-08-29",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 184.12,
+      "Ovtlyr_Return": 184.12
+    },
+    {
+      "Quotedate": "2023-08-30",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 187.65,
+      "Ovtlyr_Return": 187.65
+    },
+    {
+      "Quotedate": "2023-08-31",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 187.87,
+      "Ovtlyr_Return": 187.87
+    },
+    {
+      "Quotedate": "2023-09-01",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 189.46,
+      "Ovtlyr_Return": 189.46
+    },
+    {
+      "Quotedate": "2023-09-05",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 189.7,
+      "Ovtlyr_Return": 189.7
+    },
+    {
+      "Quotedate": "2023-09-06",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 182.91,
+      "Ovtlyr_Return": 182.91
+    },
+    {
+      "Quotedate": "2023-09-07",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 177.56,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-09-08",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 178.18,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-09-11",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 179.36,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-09-12",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 176.3,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-09-13",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 174.21,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-09-14",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 175.74,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-09-15",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 175.01,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-09-18",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 177.97,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-09-19",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 179.07,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-09-20",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 175.49,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-09-21",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 173.93,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-09-22",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 174.79,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-09-25",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 176.08,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-09-26",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 171.96,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-09-27",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 170.43,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-09-28",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 170.69,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-09-29",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 171.21,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-10-02",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 173.75,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-10-03",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 172.4,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-10-04",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 173.66,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-10-05",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 174.91,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-10-06",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 177.49,
+      "Ovtlyr_Return": 177.49
+    },
+    {
+      "Quotedate": "2023-10-09",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 178.99,
+      "Ovtlyr_Return": 178.99
+    },
+    {
+      "Quotedate": "2023-10-10",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 178.39,
+      "Ovtlyr_Return": 178.39
+    },
+    {
+      "Quotedate": "2023-10-11",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 179.8,
+      "Ovtlyr_Return": 179.8
+    },
+    {
+      "Quotedate": "2023-10-12",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 180.71,
+      "Ovtlyr_Return": 180.71
+    },
+    {
+      "Quotedate": "2023-10-13",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 178.85,
+      "Ovtlyr_Return": 178.85
+    },
+    {
+      "Quotedate": "2023-10-16",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 178.72,
+      "Ovtlyr_Return": 178.72
+    },
+    {
+      "Quotedate": "2023-10-17",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 177.15,
+      "Ovtlyr_Return": 177.15
+    },
+    {
+      "Quotedate": "2023-10-18",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 175.84,
+      "Ovtlyr_Return": 175.84
+    },
+    {
+      "Quotedate": "2023-10-19",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 175.46,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-10-20",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 172.88,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-10-23",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 173,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-10-24",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 173.44,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-10-25",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 171.1,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-10-26",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 166.89,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-10-27",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 168.22,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-10-30",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 170.29,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-10-31",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 170.77,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-11-01",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 173.97,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-11-02",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 177.57,
+      "Ovtlyr_Return": 177.57
+    },
+    {
+      "Quotedate": "2023-11-03",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 176.65,
+      "Ovtlyr_Return": 176.65
+    },
+    {
+      "Quotedate": "2023-11-06",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 179.23,
+      "Ovtlyr_Return": 179.23
+    },
+    {
+      "Quotedate": "2023-11-07",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 181.82,
+      "Ovtlyr_Return": 181.82
+    },
+    {
+      "Quotedate": "2023-11-08",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 182.89,
+      "Ovtlyr_Return": 182.89
+    },
+    {
+      "Quotedate": "2023-11-09",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 182.41,
+      "Ovtlyr_Return": 182.41
+    },
+    {
+      "Quotedate": "2023-11-10",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 186.4,
+      "Ovtlyr_Return": 186.4
+    },
+    {
+      "Quotedate": "2023-11-13",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 184.8,
+      "Ovtlyr_Return": 184.8
+    },
+    {
+      "Quotedate": "2023-11-14",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 187.44,
+      "Ovtlyr_Return": 187.44
+    },
+    {
+      "Quotedate": "2023-11-15",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 188.01,
+      "Ovtlyr_Return": 188.01
+    },
+    {
+      "Quotedate": "2023-11-16",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 189.71,
+      "Ovtlyr_Return": 189.71
+    },
+    {
+      "Quotedate": "2023-11-17",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 189.69,
+      "Ovtlyr_Return": 189.69
+    },
+    {
+      "Quotedate": "2023-11-20",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 191.45,
+      "Ovtlyr_Return": 191.45
+    },
+    {
+      "Quotedate": "2023-11-21",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 190.64,
+      "Ovtlyr_Return": 190.64
+    },
+    {
+      "Quotedate": "2023-11-22",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 191.31,
+      "Ovtlyr_Return": 191.31
+    },
+    {
+      "Quotedate": "2023-11-24",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 189.97,
+      "Ovtlyr_Return": 189.97
+    },
+    {
+      "Quotedate": "2023-11-27",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 189.79,
+      "Ovtlyr_Return": 189.79
+    },
+    {
+      "Quotedate": "2023-11-28",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 190.4,
+      "Ovtlyr_Return": 190.4
+    },
+    {
+      "Quotedate": "2023-11-29",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 189.37,
+      "Ovtlyr_Return": 189.37
+    },
+    {
+      "Quotedate": "2023-11-30",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 189.95,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-12-01",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 191.24,
+      "Ovtlyr_Return": 191.24
+    },
+    {
+      "Quotedate": "2023-12-04",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 189.43,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-12-05",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 193.42,
+      "Ovtlyr_Return": 193.42
+    },
+    {
+      "Quotedate": "2023-12-06",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 192.32,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-12-07",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 194.27,
+      "Ovtlyr_Return": 194.27
+    },
+    {
+      "Quotedate": "2023-12-08",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 195.71,
+      "Ovtlyr_Return": 195.71
+    },
+    {
+      "Quotedate": "2023-12-11",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 193.18,
+      "Ovtlyr_Return": 193.18
+    },
+    {
+      "Quotedate": "2023-12-12",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 194.71,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-12-13",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 197.96,
+      "Ovtlyr_Return": 197.96
+    },
+    {
+      "Quotedate": "2023-12-14",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 198.11,
+      "Ovtlyr_Return": 198.11
+    },
+    {
+      "Quotedate": "2023-12-15",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 197.57,
+      "Ovtlyr_Return": 197.57
+    },
+    {
+      "Quotedate": "2023-12-18",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 195.89,
+      "Ovtlyr_Return": 195.89
+    },
+    {
+      "Quotedate": "2023-12-19",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 196.94,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-12-20",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 194.83,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-12-21",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 194.68,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-12-22",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 193.6,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-12-26",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 193.05,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-12-27",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 193.15,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-12-28",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 193.58,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2023-12-29",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 192.53,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-01-02",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 185.64,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-01-03",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 184.25,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-01-04",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 181.91,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-01-05",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 181.18,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-01-08",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 185.56,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-01-09",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 185.14,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-01-10",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 186.19,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-01-11",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 185.59,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-01-12",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 185.92,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-01-16",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 183.63,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-01-17",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 182.68,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-01-18",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 188.63,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-01-19",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 191.56,
+      "Ovtlyr_Return": 191.56
+    },
+    {
+      "Quotedate": "2024-01-22",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 193.89,
+      "Ovtlyr_Return": 193.89
+    },
+    {
+      "Quotedate": "2024-01-23",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 195.18,
+      "Ovtlyr_Return": 195.18
+    },
+    {
+      "Quotedate": "2024-01-24",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 194.5,
+      "Ovtlyr_Return": 194.5
+    },
+    {
+      "Quotedate": "2024-01-25",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 194.17,
+      "Ovtlyr_Return": 194.17
+    },
+    {
+      "Quotedate": "2024-01-26",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 192.42,
+      "Ovtlyr_Return": 192.42
+    },
+    {
+      "Quotedate": "2024-01-29",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 191.73,
+      "Ovtlyr_Return": 191.73
+    },
+    {
+      "Quotedate": "2024-01-30",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 188.04,
+      "Ovtlyr_Return": 188.04
+    },
+    {
+      "Quotedate": "2024-01-31",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 184.4,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-02-01",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 186.86,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-02-02",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 185.85,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-02-05",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 187.68,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-02-06",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 189.3,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-02-07",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 189.41,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-02-08",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 188.32,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-02-09",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 188.85,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-02-12",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 187.15,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-02-13",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 185.04,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-02-14",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 184.15,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-02-15",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 183.86,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-02-16",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 182.31,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-02-20",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 181.56,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-02-21",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 182.32,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-02-22",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 184.37,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-02-23",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 182.52,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-02-26",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 181.16,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-02-27",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 182.63,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-02-28",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 181.42,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-02-29",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 180.75,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-03-01",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 179.66,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-03-04",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 175.1,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-03-05",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 170.12,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-03-06",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 169.12,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-03-07",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 169,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-03-08",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 170.73,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-03-11",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 172.75,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-03-12",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 173.23,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-03-13",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 171.13,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-03-14",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 173,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-03-15",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 172.62,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-03-18",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 173.72,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-03-19",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 176.08,
+      "Ovtlyr_Return": 176.08
+    },
+    {
+      "Quotedate": "2024-03-20",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 178.67,
+      "Ovtlyr_Return": 178.67
+    },
+    {
+      "Quotedate": "2024-03-21",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 171.37,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-03-22",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 172.28,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-03-25",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 170.85,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-03-26",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 169.71,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-03-27",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 173.31,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-03-28",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 171.48,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-04-01",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 170.03,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-04-02",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 168.84,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-04-03",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 169.65,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-04-04",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 168.82,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-04-05",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 169.58,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-04-08",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 168.45,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-04-09",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 169.67,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-04-10",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 167.78,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-04-11",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 175.04,
+      "Ovtlyr_Return": 175.04
+    },
+    {
+      "Quotedate": "2024-04-12",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 176.55,
+      "Ovtlyr_Return": 176.55
+    },
+    {
+      "Quotedate": "2024-04-15",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 172.69,
+      "Ovtlyr_Return": 172.69
+    },
+    {
+      "Quotedate": "2024-04-16",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 169.38,
+      "Ovtlyr_Return": 169.38
+    },
+    {
+      "Quotedate": "2024-04-17",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 168,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-04-18",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 167.04,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-04-19",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 165,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-04-22",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 165.84,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-04-23",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 166.9,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-04-24",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 169.02,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-04-25",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 169.89,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-04-26",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 169.3,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-04-29",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 173.5,
+      "Ovtlyr_Return": 173.5
+    },
+    {
+      "Quotedate": "2024-04-30",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 170.33,
+      "Ovtlyr_Return": 170.33
+    },
+    {
+      "Quotedate": "2024-05-01",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 169.3,
+      "Ovtlyr_Return": 169.3
+    },
+    {
+      "Quotedate": "2024-05-02",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 173.03,
+      "Ovtlyr_Return": 173.03
+    },
+    {
+      "Quotedate": "2024-05-03",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 183.38,
+      "Ovtlyr_Return": 183.38
+    },
+    {
+      "Quotedate": "2024-05-06",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 181.71,
+      "Ovtlyr_Return": 181.71
+    },
+    {
+      "Quotedate": "2024-05-07",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 182.4,
+      "Ovtlyr_Return": 182.4
+    },
+    {
+      "Quotedate": "2024-05-08",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 182.74,
+      "Ovtlyr_Return": 182.74
+    },
+    {
+      "Quotedate": "2024-05-09",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 184.57,
+      "Ovtlyr_Return": 184.57
+    },
+    {
+      "Quotedate": "2024-05-10",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 183.05,
+      "Ovtlyr_Return": 183.05
+    },
+    {
+      "Quotedate": "2024-05-13",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 186.28,
+      "Ovtlyr_Return": 186.28
+    },
+    {
+      "Quotedate": "2024-05-14",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 187.43,
+      "Ovtlyr_Return": 187.43
+    },
+    {
+      "Quotedate": "2024-05-15",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 189.72,
+      "Ovtlyr_Return": 189.72
+    },
+    {
+      "Quotedate": "2024-05-16",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 189.84,
+      "Ovtlyr_Return": 189.84
+    },
+    {
+      "Quotedate": "2024-05-17",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 189.87,
+      "Ovtlyr_Return": 189.87
+    },
+    {
+      "Quotedate": "2024-05-20",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 191.04,
+      "Ovtlyr_Return": 191.04
+    },
+    {
+      "Quotedate": "2024-05-21",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 192.35,
+      "Ovtlyr_Return": 192.35
+    },
+    {
+      "Quotedate": "2024-05-22",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 190.9,
+      "Ovtlyr_Return": 190.9
+    },
+    {
+      "Quotedate": "2024-05-23",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 186.88,
+      "Ovtlyr_Return": 186.88
+    },
+    {
+      "Quotedate": "2024-05-24",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 189.98,
+      "Ovtlyr_Return": 189.98
+    },
+    {
+      "Quotedate": "2024-05-28",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 189.99,
+      "Ovtlyr_Return": 189.99
+    },
+    {
+      "Quotedate": "2024-05-29",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 190.29,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-05-30",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 191.29,
+      "Ovtlyr_Return": 191.29
+    },
+    {
+      "Quotedate": "2024-05-31",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 192.25,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-06-03",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 194.03,
+      "Ovtlyr_Return": 194.03
+    },
+    {
+      "Quotedate": "2024-06-04",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 194.35,
+      "Ovtlyr_Return": 194.35
+    },
+    {
+      "Quotedate": "2024-06-05",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 195.87,
+      "Ovtlyr_Return": 195.87
+    },
+    {
+      "Quotedate": "2024-06-06",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 194.48,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-06-07",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 196.89,
+      "Ovtlyr_Return": 196.89
+    },
+    {
+      "Quotedate": "2024-06-10",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 193.12,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-06-11",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 207.15,
+      "Ovtlyr_Return": 207.15
+    },
+    {
+      "Quotedate": "2024-06-12",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 213.07,
+      "Ovtlyr_Return": 213.07
+    },
+    {
+      "Quotedate": "2024-06-13",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 214.24,
+      "Ovtlyr_Return": 214.24
+    },
+    {
+      "Quotedate": "2024-06-14",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 212.49,
+      "Ovtlyr_Return": 212.49
+    },
+    {
+      "Quotedate": "2024-06-17",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 216.67,
+      "Ovtlyr_Return": 216.67
+    },
+    {
+      "Quotedate": "2024-06-18",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 214.29,
+      "Ovtlyr_Return": 214.29
+    },
+    {
+      "Quotedate": "2024-06-20",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 209.68,
+      "Ovtlyr_Return": 209.68
+    },
+    {
+      "Quotedate": "2024-06-21",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 207.49,
+      "Ovtlyr_Return": 207.49
+    },
+    {
+      "Quotedate": "2024-06-24",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 208.14,
+      "Ovtlyr_Return": 208.14
+    },
+    {
+      "Quotedate": "2024-06-25",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 209.07,
+      "Ovtlyr_Return": 209.07
+    },
+    {
+      "Quotedate": "2024-06-26",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 213.25,
+      "Ovtlyr_Return": 213.25
+    },
+    {
+      "Quotedate": "2024-06-27",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 214.1,
+      "Ovtlyr_Return": 214.1
+    },
+    {
+      "Quotedate": "2024-06-28",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 210.62,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-07-01",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 216.75,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-07-02",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 220.27,
+      "Ovtlyr_Return": 220.27
+    },
+    {
+      "Quotedate": "2024-07-03",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 221.55,
+      "Ovtlyr_Return": 221.55
+    },
+    {
+      "Quotedate": "2024-07-05",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 226.34,
+      "Ovtlyr_Return": 226.34
+    },
+    {
+      "Quotedate": "2024-07-08",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 227.82,
+      "Ovtlyr_Return": 227.82
+    },
+    {
+      "Quotedate": "2024-07-09",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 228.68,
+      "Ovtlyr_Return": 228.68
+    },
+    {
+      "Quotedate": "2024-07-10",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 232.98,
+      "Ovtlyr_Return": 232.98
+    },
+    {
+      "Quotedate": "2024-07-11",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 227.57,
+      "Ovtlyr_Return": 227.57
+    },
+    {
+      "Quotedate": "2024-07-12",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 230.54,
+      "Ovtlyr_Return": 230.54
+    },
+    {
+      "Quotedate": "2024-07-15",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 234.4,
+      "Ovtlyr_Return": 234.4
+    },
+    {
+      "Quotedate": "2024-07-16",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 234.82,
+      "Ovtlyr_Return": 234.82
+    },
+    {
+      "Quotedate": "2024-07-17",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 228.88,
+      "Ovtlyr_Return": 228.88
+    },
+    {
+      "Quotedate": "2024-07-18",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 224.18,
+      "Ovtlyr_Return": 224.18
+    },
+    {
+      "Quotedate": "2024-07-19",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 224.31,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-07-22",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 223.96,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-07-23",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 225.01,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-07-24",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 218.54,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-07-25",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 217.49,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-07-26",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 217.96,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-07-29",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 218.24,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-07-30",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 218.8,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-07-31",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 222.08,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-08-01",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 218.36,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-08-02",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 219.86,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-08-05",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 209.27,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-08-06",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 207.23,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-08-07",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 209.82,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-08-08",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 213.31,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-08-09",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 216.24,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-08-12",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 217.53,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-08-13",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 221.27,
+      "Ovtlyr_Return": 221.27
+    },
+    {
+      "Quotedate": "2024-08-14",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 221.72,
+      "Ovtlyr_Return": 221.72
+    },
+    {
+      "Quotedate": "2024-08-15",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 224.72,
+      "Ovtlyr_Return": 224.72
+    },
+    {
+      "Quotedate": "2024-08-16",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 226.05,
+      "Ovtlyr_Return": 226.05
+    },
+    {
+      "Quotedate": "2024-08-19",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 225.89,
+      "Ovtlyr_Return": 225.89
+    },
+    {
+      "Quotedate": "2024-08-20",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 226.51,
+      "Ovtlyr_Return": 226.51
+    },
+    {
+      "Quotedate": "2024-08-21",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 226.4,
+      "Ovtlyr_Return": 226.4
+    },
+    {
+      "Quotedate": "2024-08-22",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 224.53,
+      "Ovtlyr_Return": 224.53
+    },
+    {
+      "Quotedate": "2024-08-23",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 226.84,
+      "Ovtlyr_Return": 226.84
+    },
+    {
+      "Quotedate": "2024-08-26",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 227.18,
+      "Ovtlyr_Return": 227.18
+    },
+    {
+      "Quotedate": "2024-08-27",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 228.03,
+      "Ovtlyr_Return": 228.03
+    },
+    {
+      "Quotedate": "2024-08-28",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 226.49,
+      "Ovtlyr_Return": 226.49
+    },
+    {
+      "Quotedate": "2024-08-29",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 229.79,
+      "Ovtlyr_Return": 229.79
+    },
+    {
+      "Quotedate": "2024-08-30",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 229,
+      "Ovtlyr_Return": 229
+    },
+    {
+      "Quotedate": "2024-09-03",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 222.77,
+      "Ovtlyr_Return": 222.77
+    },
+    {
+      "Quotedate": "2024-09-04",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 220.85,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-09-05",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 222.38,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-09-06",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 220.82,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-09-09",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 220.91,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-09-10",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 220.11,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-09-11",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 222.66,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-09-12",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 222.77,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-09-13",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 222.5,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-09-16",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 216.32,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-09-17",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 216.79,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-09-18",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 220.69,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-09-19",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 228.87,
+      "Ovtlyr_Return": 228.87
+    },
+    {
+      "Quotedate": "2024-09-20",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 228.2,
+      "Ovtlyr_Return": 228.2
+    },
+    {
+      "Quotedate": "2024-09-23",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 226.47,
+      "Ovtlyr_Return": 226.47
+    },
+    {
+      "Quotedate": "2024-09-24",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 227.37,
+      "Ovtlyr_Return": 227.37
+    },
+    {
+      "Quotedate": "2024-09-25",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 226.37,
+      "Ovtlyr_Return": 226.37
+    },
+    {
+      "Quotedate": "2024-09-26",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 227.52,
+      "Ovtlyr_Return": 227.52
+    },
+    {
+      "Quotedate": "2024-09-27",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 227.79,
+      "Ovtlyr_Return": 227.79
+    },
+    {
+      "Quotedate": "2024-09-30",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 233,
+      "Ovtlyr_Return": 233
+    },
+    {
+      "Quotedate": "2024-10-01",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 226.21,
+      "Ovtlyr_Return": 226.21
+    },
+    {
+      "Quotedate": "2024-10-02",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 226.78,
+      "Ovtlyr_Return": 226.78
+    },
+    {
+      "Quotedate": "2024-10-03",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 225.67,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-10-04",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 226.8,
+      "Ovtlyr_Return": 226.8
+    },
+    {
+      "Quotedate": "2024-10-07",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 221.69,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-10-08",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 225.77,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-10-09",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 229.54,
+      "Ovtlyr_Return": 229.54
+    },
+    {
+      "Quotedate": "2024-10-10",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 229.04,
+      "Ovtlyr_Return": 229.04
+    },
+    {
+      "Quotedate": "2024-10-11",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 227.55,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-10-14",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 231.3,
+      "Ovtlyr_Return": 231.3
+    },
+    {
+      "Quotedate": "2024-10-15",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 233.85,
+      "Ovtlyr_Return": 233.85
+    },
+    {
+      "Quotedate": "2024-10-16",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 231.78,
+      "Ovtlyr_Return": 231.78
+    },
+    {
+      "Quotedate": "2024-10-17",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 232.15,
+      "Ovtlyr_Return": 232.15
+    },
+    {
+      "Quotedate": "2024-10-18",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 235,
+      "Ovtlyr_Return": 235
+    },
+    {
+      "Quotedate": "2024-10-21",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 236.48,
+      "Ovtlyr_Return": 236.48
+    },
+    {
+      "Quotedate": "2024-10-22",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 235.86,
+      "Ovtlyr_Return": 235.86
+    },
+    {
+      "Quotedate": "2024-10-23",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 230.76,
+      "Ovtlyr_Return": 230.76
+    },
+    {
+      "Quotedate": "2024-10-24",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 230.57,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-10-25",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 231.41,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-10-28",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 233.4,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-10-29",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 233.67,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-10-30",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 230.1,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-10-31",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 225.91,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-11-01",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 222.91,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-11-04",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 222.01,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-11-05",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 223.45,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-11-06",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 222.72,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-11-07",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 227.48,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-11-08",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 226.96,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-11-11",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 224.23,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-11-12",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 224.23,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-11-13",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 225.12,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-11-14",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 228.22,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-11-15",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 225,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-11-18",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 228.02,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-11-19",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 228.28,
+      "Ovtlyr_Return": 228.28
+    },
+    {
+      "Quotedate": "2024-11-20",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 229,
+      "Ovtlyr_Return": 229
+    },
+    {
+      "Quotedate": "2024-11-21",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 228.52,
+      "Ovtlyr_Return": 228.52
+    },
+    {
+      "Quotedate": "2024-11-22",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 229.87,
+      "Ovtlyr_Return": 229.87
+    },
+    {
+      "Quotedate": "2024-11-25",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 232.87,
+      "Ovtlyr_Return": 232.87
+    },
+    {
+      "Quotedate": "2024-11-26",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 235.06,
+      "Ovtlyr_Return": 235.06
+    },
+    {
+      "Quotedate": "2024-11-27",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 234.93,
+      "Ovtlyr_Return": 234.93
+    },
+    {
+      "Quotedate": "2024-11-29",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 237.33,
+      "Ovtlyr_Return": 237.33
+    },
+    {
+      "Quotedate": "2024-12-02",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 239.59,
+      "Ovtlyr_Return": 239.59
+    },
+    {
+      "Quotedate": "2024-12-03",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 242.65,
+      "Ovtlyr_Return": 242.65
+    },
+    {
+      "Quotedate": "2024-12-04",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 243.01,
+      "Ovtlyr_Return": 243.01
+    },
+    {
+      "Quotedate": "2024-12-05",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 243.04,
+      "Ovtlyr_Return": 243.04
+    },
+    {
+      "Quotedate": "2024-12-06",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 242.84,
+      "Ovtlyr_Return": 242.84
+    },
+    {
+      "Quotedate": "2024-12-09",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 246.75,
+      "Ovtlyr_Return": 246.75
+    },
+    {
+      "Quotedate": "2024-12-10",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 247.77,
+      "Ovtlyr_Return": 247.77
+    },
+    {
+      "Quotedate": "2024-12-11",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 246.49,
+      "Ovtlyr_Return": 246.49
+    },
+    {
+      "Quotedate": "2024-12-12",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 247.96,
+      "Ovtlyr_Return": 247.96
+    },
+    {
+      "Quotedate": "2024-12-13",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 248.13,
+      "Ovtlyr_Return": 248.13
+    },
+    {
+      "Quotedate": "2024-12-16",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 251.04,
+      "Ovtlyr_Return": 251.04
+    },
+    {
+      "Quotedate": "2024-12-17",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 253.48,
+      "Ovtlyr_Return": 253.48
+    },
+    {
+      "Quotedate": "2024-12-18",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 248.05,
+      "Ovtlyr_Return": 248.05
+    },
+    {
+      "Quotedate": "2024-12-19",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 249.79,
+      "Ovtlyr_Return": 249.79
+    },
+    {
+      "Quotedate": "2024-12-20",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 254.49,
+      "Ovtlyr_Return": 254.49
+    },
+    {
+      "Quotedate": "2024-12-23",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 255.27,
+      "Ovtlyr_Return": 255.27
+    },
+    {
+      "Quotedate": "2024-12-24",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 258.2,
+      "Ovtlyr_Return": 258.2
+    },
+    {
+      "Quotedate": "2024-12-26",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 259.02,
+      "Ovtlyr_Return": 259.02
+    },
+    {
+      "Quotedate": "2024-12-27",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 255.59,
+      "Ovtlyr_Return": 255.59
+    },
+    {
+      "Quotedate": "2024-12-30",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 252.2,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2024-12-31",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 250.42,
+      "Ovtlyr_Return": 250.42
+    },
+    {
+      "Quotedate": "2025-01-02",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 243.85,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2025-01-03",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 243.36,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2025-01-06",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 245,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2025-01-07",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 242.21,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2025-01-08",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 242.7,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2025-01-10",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 236.85,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2025-01-13",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 234.4,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2025-01-14",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 233.28,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2025-01-15",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 237.87,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2025-01-16",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 228.26,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2025-01-17",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 229.98,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2025-01-21",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 222.64,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2025-01-22",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 223.83,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2025-01-23",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 223.66,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2025-01-24",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 222.78,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2025-01-27",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 229.86,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2025-01-28",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 238.26,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2025-01-29",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 239.36,
+      "Ovtlyr_Return": 239.36
+    },
+    {
+      "Quotedate": "2025-01-30",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 237.59,
+      "Ovtlyr_Return": 237.59
+    },
+    {
+      "Quotedate": "2025-01-31",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 236,
+      "Ovtlyr_Return": 236
+    },
+    {
+      "Quotedate": "2025-02-03",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 228.01,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2025-02-04",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 232.8,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2025-02-05",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 232.47,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2025-02-06",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 233.22,
+      "Ovtlyr_Return": 233.22
+    },
+    {
+      "Quotedate": "2025-02-07",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 227.63,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2025-02-10",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 227.65,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2025-02-11",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 232.62,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2025-02-12",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 236.87,
+      "Ovtlyr_Return": 236.87
+    },
+    {
+      "Quotedate": "2025-02-13",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 241.53,
+      "Ovtlyr_Return": 241.53
+    },
+    {
+      "Quotedate": "2025-02-14",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 244.6,
+      "Ovtlyr_Return": 244.6
+    },
+    {
+      "Quotedate": "2025-02-18",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 244.47,
+      "Ovtlyr_Return": 244.47
+    },
+    {
+      "Quotedate": "2025-02-19",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 244.87,
+      "Ovtlyr_Return": 244.87
+    },
+    {
+      "Quotedate": "2025-02-20",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 245.83,
+      "Ovtlyr_Return": 245.83
+    },
+    {
+      "Quotedate": "2025-02-21",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 245.55,
+      "Ovtlyr_Return": 245.55
+    },
+    {
+      "Quotedate": "2025-02-24",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 247.1,
+      "Ovtlyr_Return": 247.1
+    },
+    {
+      "Quotedate": "2025-02-25",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 247.04,
+      "Ovtlyr_Return": 247.04
+    },
+    {
+      "Quotedate": "2025-02-26",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 240.36,
+      "Ovtlyr_Return": 240.36
+    },
+    {
+      "Quotedate": "2025-02-27",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 237.3,
+      "Ovtlyr_Return": 237.3
+    },
+    {
+      "Quotedate": "2025-02-28",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 241.84,
+      "Ovtlyr_Return": 241.84
+    },
+    {
+      "Quotedate": "2025-03-03",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 238.03,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2025-03-04",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 235.93,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2025-03-05",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 235.74,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2025-03-06",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 235.33,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2025-03-07",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 239.07,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2025-03-10",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 227.48,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2025-03-11",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 220.84,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2025-03-12",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 216.98,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2025-03-13",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 209.68,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2025-03-14",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 213.49,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2025-03-17",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 214,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2025-03-18",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 212.69,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2025-03-19",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 215.24,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2025-03-20",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 214.1,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2025-03-21",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 218.27,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2025-03-24",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 220.73,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2025-03-25",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 223.75,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2025-03-26",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 221.53,
+      "Ovtlyr_Return": 221.53
+    },
+    {
+      "Quotedate": "2025-03-27",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 223.85,
+      "Ovtlyr_Return": 223.85
+    },
+    {
+      "Quotedate": "2025-03-28",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 217.9,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2025-03-31",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 222.13,
+      "Ovtlyr_Return": 222.13
+    },
+    {
+      "Quotedate": "2025-04-01",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 223.19,
+      "Ovtlyr_Return": 223.19
+    },
+    {
+      "Quotedate": "2025-04-02",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 223.89,
+      "Ovtlyr_Return": 223.89
+    },
+    {
+      "Quotedate": "2025-04-03",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 203.19,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2025-04-04",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 188.38,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2025-04-07",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 181.46,
+      "Ovtlyr_Return": "NA"
+    },
+    {
+      "Quotedate": "2025-04-08",
+      "StockSymbol": "AAPL",
+      "ClosePrice": 172.42,
+      "Ovtlyr_Return": "NA"
+    }
+  ]
+  // const columnData = data.map(item => ({
+  //   x: new Date(item.Quotedate).getTime(),
+  //   y: item.ClosePrice
+  // }));
+  const columnData = data.map(item => [new Date(item.Quotedate).getTime(), item.ClosePrice]);
+  const per_summary = data
+    .filter(item => item.Ovtlyr_Return !== null && item.Ovtlyr_Return !== undefined && !isNaN(item.Ovtlyr_Return))
+    .map(item => [new Date(item.Quotedate).getTime(), item.Ovtlyr_Return]);
+
+  // Get the min and max timestamps
+  const xMin = columnData[0][0];
+  const xMax = columnData[columnData.length - 1][0];
+  Highcharts.chart('performance_chart', {
+    chart: {
+      type: 'column',
+    },
+    title: { text: null },
+
+    xAxis: {
+      type: 'datetime',
+      min: xMin,
+      max: xMax,
+      ordinal: true, // optional: disables automatic gap filling
+      labels: {
+        formatter: function () {
+          return Highcharts.dateFormat('%b %e, %Y', this.value);
+        },
+        style: { fontSize: '10px', color: '#808191' }
+      }
+    },
+    yAxis: [
+      {
+        title: { text: null },
+        top: '0%',
+        height: '100%',
+        offset: 1,
+        lineWidth: 1,
+        labels: {
+          style: { fontSize: '10px', color: '#808191' }
+        }
+      },
+      {
+        title: { text: null },
+        top: '0%',
+        height: '100%',
+        offset: 1,
+        lineWidth: 1,
+        labels: {
+          style: { fontSize: '10px', color: '#808191' }
+        }
+      }
+    ],
+
+
+
+    plotOptions: {
+      column: {
+        grouping: true,
+        groupPadding: 0.05,
+        pointPadding: 0,
+        borderWidth: 0
+      }
+    },
+
+    credits: { enabled: false },
+    legend: { enabled: true },
+
+
+    series: [
+      {
+        name: 'Close Price', // <--- important
+        data: columnData,
+        color: '#000000',
+        yAxis: 0,
+        showInLegend: false, // hide from legend
+        tooltip: { enabled: true },
+        states: {
+          hover: { enabled: false },
+          select: { enabled: false },
+          inactive: { enabled: false }
+        }
+      },
+
+      {
+        name: 'Trading Period',
+        data: per_summary,
+        color: '#19A7CE',
+        showInLegend: true,
+        tooltip: { enabled: true },
+        yAxis: 1,
+        states: {
+          hover: { enabled: false },
+          select: { enabled: false },
+          inactive: { enabled: false }
+        },
+      }
+    ],
+    tooltip: {
+      shared: true,
+      formatter: function () {
+        let s = `<b>${Highcharts.dateFormat('%b %e, %Y', this.x)}</b>`;
+        this.points.forEach(point => {
+          s += `<br/><span style="color:${point.color}">\u25CF</span> ${point.series.name}: ${point.y}`;
+        });
+        return s;
+      }
+    }
+  });
+
+</script>
+</body>
+</html>
