@@ -1,0 +1,19 @@
+<svg id="Group_1181" data-name="Group 1181" xmlns="http://www.w3.org/2000/svg" width="300" height="270" viewBox="0 0 300 270">
+  <g id="noun-histogram-6912744" transform="translate(25.047 110.019)">
+    <g id="Group_98" data-name="Group 98" transform="translate(0 0)">
+      <path id="Path_267" data-name="Path 267" d="M0,0H21.924V45.237H0Z" transform="translate(2.426 97.44)" fill="#d93872"/>
+      <path id="Path_268" data-name="Path 268" d="M.113.78C.085.514.066.266.037,0A1.161,1.161,0,0,0,.113.78Z" transform="translate(0 72.251)"/>
+      <path id="Path_269" data-name="Path 269" d="M.076,0A6.378,6.378,0,0,1,0,.733,1.3,1.3,0,0,0,.076,0Z" transform="translate(221.542 72.301)"/>
+      <path id="Path_274" data-name="Path 274" d="M0,0H21.924V70.111H0Z" transform="translate(51.146 72.566)" fill="#d93872"/>
+      <path id="Path_275" data-name="Path 275" d="M0,0H21.924V45.237H0Z" transform="translate(245.512 97.44)" fill="#20a461"/>
+      <path id="Path_276" data-name="Path 276" d="M0,0H21.924V69.6H0Z" transform="translate(196.792 73.08)" fill="#20a461"/>
+      <path id="Path_277" data-name="Path 277" d="M0,0H21.924V142.677H0Z" transform="translate(99.866)" fill="#d93872"/>
+      <path id="Path_283" data-name="Path 283" d="M0,0H21.924V142.677H0Z" transform="translate(148.468)" fill="#20a461"/>
+    </g>
+    <path id="Path_297" data-name="Path 297" d="M-10.1,110.835c20.966,1.43,33.395-33.021,43.008-55.7C42.191,33.225,61.649-16.123,107.2,4c1.457.644-1.656-.911,0,0,31.911,23.97,20.879,93.756,88.46,106.84" transform="translate(37.407 34.07)" fill="none" stroke="#000" stroke-width="3"/>
+  </g>
+  <g id="Constituent_map" data-name="Constituent map" transform="translate(-744.5 -2161.923)">
+    <line id="Line_28" data-name="Line 28" x2="300" transform="translate(744.5 2416.923)" fill="none" stroke="#000" stroke-width="5"/>
+    <line id="Line_29" data-name="Line 29" y2="270" transform="translate(760.5 2161.923)" fill="none" stroke="#000" stroke-width="5"/>
+  </g>
+</svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="41" height="25" viewBox="0 0 41 25">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_7" data-name="Rectangle 7" width="41" height="25" transform="translate(-0.318)" fill="#fff"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_4" data-name="Mask Group 4" transform="translate(0.318)" clip-path="url(#clip-path)">
+    <g id="Filter_Horizontal" data-name="Filter Horizontal" transform="translate(7.682 4.055)">
+      <path id="Path_48" data-name="Path 48" d="M2.944,19.055A.444.444,0,0,1,2.5,18.61V15.944a.444.444,0,1,1,.889,0V18.61A.444.444,0,0,1,2.944,19.055Z" transform="translate(-0.278 -2.17)" fill="#d93872"/>
+      <path id="Path_49" data-name="Path 49" d="M2.944,6.721A.444.444,0,0,1,2.5,6.276V.944a.444.444,0,0,1,.889,0V6.276A.444.444,0,0,1,2.944,6.721Z" transform="translate(-0.278 -0.5)" fill="#d93872"/>
+      <path id="Path_50" data-name="Path 50" d="M24.944,19.055a.444.444,0,0,1-.444-.444V15.944a.444.444,0,1,1,.889,0V18.61A.444.444,0,0,1,24.944,19.055Z" transform="translate(-2.728 -2.17)" fill="#d93872"/>
+      <path id="Path_51" data-name="Path 51" d="M24.944,6.721a.444.444,0,0,1-.444-.444V.944a.444.444,0,0,1,.889,0V6.276A.444.444,0,0,1,24.944,6.721Z" transform="translate(-2.728 -0.5)" fill="#d93872"/>
+      <path id="Path_52" data-name="Path 52" d="M13.944,18.721a.444.444,0,0,1-.444-.444V12.944a.444.444,0,1,1,.889,0v5.332A.444.444,0,0,1,13.944,18.721Z" transform="translate(-1.503 -1.836)" fill="#10a861"/>
+      <path id="Path_53" data-name="Path 53" d="M13.944,4.055A.444.444,0,0,1,13.5,3.61V.944a.444.444,0,1,1,.889,0V3.61A.444.444,0,0,1,13.944,4.055Z" transform="translate(-1.503 -0.5)" fill="#10a861"/>
+      <path id="Path_62" data-name="Path 62" d="M.889,0H4.443a.889.889,0,0,1,.889.889v8a.889.889,0,0,1-.889.889H.889A.889.889,0,0,1,0,8.887v-8A.889.889,0,0,1,.889,0Z" transform="translate(0 4.888)" fill="#d93872"/>
+      <path id="Path_61" data-name="Path 61" d="M.889,0H4.443a.889.889,0,0,1,.889.889v8a.889.889,0,0,1-.889.889H.889A.889.889,0,0,1,0,8.887v-8A.889.889,0,0,1,.889,0Z" transform="translate(19.55 3.999)" fill="#d93872"/>
+      <rect id="Rectangle_5" data-name="Rectangle 5" width="5.492" height="8.238" rx="1" transform="translate(9.611 2.746)" fill="#10a861"/>
+    </g>
+  </g>
+</svg>

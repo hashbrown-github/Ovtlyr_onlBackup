@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="271" viewBox="0 0 300 271">
+  <g id="Market_Breadth" data-name="Market Breadth" transform="translate(-7.1 -9.9)">
+    <line id="V" y2="249.988" transform="translate(15.182 19.598)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="3"/>
+    <line id="Line_13" data-name="Line 13" x1="280.874" transform="translate(15.99 144.861)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="3"/>
+    <line id="Line_14" data-name="Line 14" x1="270.368" transform="translate(15.99 30.104)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="3"/>
+    <line id="Line_19" data-name="Line 19" y1="229.963" x2="1.116" transform="translate(77.024 30.419)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="3"/>
+    <line id="Line_20" data-name="Line 20" y1="229.963" x2="1.116" transform="translate(144.373 30.419)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="3"/>
+    <line id="Line_21" data-name="Line 21" y1="229.963" x2="1.116" transform="translate(211.745 30.419)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="3"/>
+    <line id="Line_22" data-name="Line 22" y1="229.963" x2="1.116" transform="translate(283.356 30.419)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="3"/>
+    <line id="Line_15" data-name="Line 15" x1="268.482" transform="translate(15.99 87.483)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="3"/>
+    <line id="Line_16" data-name="Line 16" x1="268.482" transform="translate(15.99 202.51)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="3"/>
+    <line id="Line_17" data-name="Line 17" x1="270.368" transform="translate(15.99 259.888)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="3"/>
+    <path id="Path_111" data-name="Path 111" d="M15.182,9.9,7.1,23.908H22.994Z" transform="translate(0)"/>
+    <path id="Path_112" data-name="Path 112" d="M112.308,65.082,98.3,57V73.163Z" transform="translate(194.792 79.78)"/>
+    <path id="Path_113" data-name="Path 113" d="M15.182,119.139,7.1,105.4H22.994Z" transform="translate(0 161.762)"/>
+    <path id="Path_114" data-name="Path 114" d="M51.8,99.475s34.212-143.043,64.652,0" transform="translate(100.605 44.04)" fill="#1da561" fill-rule="evenodd"/>
+    <path id="Path_115" data-name="Path 115" d="M92.15,60.5S61.979,225.363,31,60.5" transform="translate(53.556 85.708)" fill="#d93872" fill-rule="evenodd"/>
+    <path id="Path_116" data-name="Path 116" d="M73.9,60.5s26.669,100.211,58.726,0" transform="translate(153.462 85.708)" fill="#d93872" fill-rule="evenodd"/>
+    <path id="Path_117" data-name="Path 117" d="M10.9,115.434s18.857-200.152,59.8,0" transform="translate(6.437 28.08)" fill="#1da561" fill-rule="evenodd"/>
+  </g>
+</svg>
