@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Industry Performance Chart</title>
+<script src="highstock.js"></script>
+<style>
+  body
+  {
+      margin:0;
+      padding:10px;
+      font-family:Arial, sans-serif;
+      background:#ffffff;
+      width: calc(100% - 20px);
+  }
+</style>
+</head>
+<body>
+<div id="halfYearChart"></div>
+<script>
+
+    var data = [
+        {
+            Group: 1,
+            Sub_Category: "Price_Change_HalfYear",
+            Plot_Value: 12.28649294
+        },
+        {
+            Group: 2,
+            Sub_Category: "Price_Change_HalfYear",
+            Plot_Value: 8.854319614
+        },
+        {
+            Group: 3,
+            Sub_Category: "Price_Change_HalfYear",
+            Plot_Value: 13.05705864
+        },
+        {
+            Group: 4,
+            Sub_Category: "Price_Change_HalfYear",
+            Plot_Value: 18.2324645
+        }
+    ];
+    Highcharts.chart('halfYearChart', {
+        chart: {
+            type: 'line',
+            margin: [0, 0, 0, 0],
+            spacing: [0, 0, 0, 0],
+            height: 60,
+            width: 200,
+            backgroundColor: 'transparent'
+        },
+        title: {
+            text: null
+        },
+        subtitle: {
+            text: null
+        },
+        xAxis: {
+            categories: data.map(item => item.Group.toString()),
+            visible: false,
+            lineWidth: 0,
+            tickLength: 0
+        },
+
+        yAxis: {
+            visible: false,
+            title: {
+                text: null
+            },
+            gridLineWidth: 0
+        },
+        legend: {
+            enabled: false
+        },
+
+        tooltip: {
+            enabled: false
+        },
+
+        credits: {
+            enabled: false
+        },
+
+        exporting: {
+            enabled: false
+        },
+        plotOptions: {
+            series: {
+                animation: false,
+                marker: {
+                    enabled: false
+                },
+                lineWidth: 2,
+                states: {
+                    hover: {
+                        enabled: false
+                    }
+                }
+            }
+        },
+        series: [{
+            name: 'Half Year',
+            data: data.map(item => item.Plot_Value)
+        }],
+
+        credits: {
+            enabled: false
+        }
+    });
+</script>
+</body>
+</html>

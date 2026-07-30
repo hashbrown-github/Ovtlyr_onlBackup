@@ -1,0 +1,154 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>OVTLYR | API Call</title>
+<meta name="title" content="" />
+<meta name="description" content="Turning Investor Behavior into Stock Market Success" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<link rel="icon" type="image/ico" sizes="32x32" href="images/favicon-32x32.ico">
+<link rel="canonical" href="" />
+<meta name="twitter:card" content="" />
+<meta name="twitter:site" content="" />
+<meta name="twitter:title" content="" />
+<meta name="twitter:description" content="" />
+<meta name="twitter:image" content="" />
+<meta property="og:title" content="" />
+<meta property="og:site_name" content="" />
+<meta property="og:url" content="" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="" />
+<meta property="og:image" content="" />
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/front-style-new.css" />
+</head>
+<body>
+<section class=" padding-section">
+  <div class="container">
+    <div class="stock_box">
+      <div class="regenerate_div">
+        <div class="api_div">
+          <h3>User Email : <span>xxx@xx.com</span></h3>
+          <h3>API Token : <span>pk_jsZIEZdwer8Gd5N_20275e8d-2e49-48e9-823a-174a049a9d7f</span></h3>
+        </div>
+        <div><button type="button" class="api_btn">Regenerate</button></div>
+      </div>
+      <div class="search_bar" style="display: none;">
+        <!-- <div class="input-group">
+            <div class="form-outline tags-container" data-mdb-input-init>
+              <input id="search-box" type="search" class="form-control" placeholder="Search for names.." />
+            </div>
+            <button type="button" class="api_btn" data-mdb-ripple-init>
+              <i class="fas fa-search"></i>
+            </button>
+          </div> -->
+        <div class="tags-container" id="tags-container">
+          <input id="search-box" type="text" class="form-control" placeholder="Search and select items"
+            autocomplete="off">
+          <button type="button" class="api_btn" data-mdb-ripple-init>
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+        <div class="dropdown-container">
+          <div class="dropdown" id="dropdown">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="stock-data_box">
+      <button type="button" class="api_btn" data-bs-toggle="modal" data-bs-target="#stockData">
+        Get Stock Data
+      </button>
+    </div>
+    <div class="api_boxes">
+      <div class="box_div">
+        <h5>API Calls Made</h5>
+        <label>12</label>
+      </div>
+      <div class="box_div">
+        <h5>Overage Calls</h5>
+        <label>2</label>
+      </div>
+      <div class="box_div">
+        <h5>Billing Start Date</h5>
+        <label>Sep 1st, 2024</label>
+      </div>
+      <div class="box_div">
+        <h5>Billing End Date</h5>
+        <label>Sep 3rd, 2024</label>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Add Stock Data Modal -->
+<div class="modal fade stockData_modal" id="stockData" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <!-- <h5 class="modal-title" id="exampleModalLabel">Modal title</h5> -->
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+       <h5> Congratulations!</h5><p>The data has been retrieved successfully.</p>
+       <!-- <h5> Congratulations!</h5><p>The data has been retrieved successfully.</p> -->
+      </div>
+      <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div> -->
+    </div>
+  </div>
+</div>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+  $(document).ready(function() {
+    var availableItems = ['AAPL', 'AIT', 'AMAT', 'APLE', 'SAIC'];
+
+    // Show dropdown items based on search
+    $('#search-box').on('input', function() {
+      var searchValue = $(this).val().toLowerCase();
+      var filteredItems = availableItems.filter(function(item) {
+        return item.toLowerCase().includes(searchValue);
+      });
+
+      $('#dropdown').empty().show();
+      filteredItems.forEach(function(item) {
+        $('#dropdown').append('<div class="dropdown-item">' + item + '</div>');
+      });
+
+      if (filteredItems.length === 0) {
+        $('#dropdown').hide();
+      }
+    });
+
+    // Handle item selection
+    $(document).on('click', '.dropdown-item', function() {
+      var selectedItem = $(this).text();
+      $('#tags-container').append('<div class="tag">' + selectedItem + '<span class="remove-tag">&times;</span></div>');
+      $('#search-box').val('');
+      $('#dropdown').hide();
+    });
+
+    // Remove tag
+    $(document).on('click', '.remove-tag', function() {
+      $(this).parent().remove();
+    });
+
+    // Hide dropdown if clicked outside
+    $(document).on('click', function(e) {
+      if (!$(e.target).closest('#search-box, #dropdown').length) {
+        $('#dropdown').hide();
+      }
+    });
+  });
+</script>
+</body>
+</html>
