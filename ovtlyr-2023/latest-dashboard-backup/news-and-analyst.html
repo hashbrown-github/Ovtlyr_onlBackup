@@ -1,0 +1,1655 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>OVTLYR | News & Analyst</title>
+<meta name="description" content="Turning Investor Behavior into Stock Market Success" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<link rel="icon" type="image/ico" sizes="32x32" href="images/favicon-32x32.ico">
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/latest-style.css" />
+<script>
+var viewportmeta = document.querySelector('meta[name="viewport"]');
+if(viewportmeta) {
+  if(screen.width < 320){
+    var newScale = screen.width / 320;
+    viewportmeta.content = 'width=320, minimum-scale=' + newScale + ', maximum-scale=1.0, user-scalable=no, initial-scale=' + newScale + '';
+  } else {
+    viewportmeta.content = 'width=device-width, maximum-scale=1.0, initial-scale=1.0';
+  }
+}
+</script>
+</head>
+<body>
+<script>
+console.log(localStorage.getItem('darkMode'));
+if (localStorage.getItem('darkMode') === "on") {
+	document.body.classList.add("dark");
+	document.addEventListener("DOMContentLoaded", function(){
+		document.querySelector('.js-switch-theme input').checked = true;
+  });
+}
+</script>
+<div class="page toggle new_sidebar final_dashbd1">
+  <div class="sidebar active final_dashbd11">
+    <!-- <div class="sidebar__top">
+      <button class="sidebar__close"><span class="material-symbols-outlined">close</span></button>
+      <a class="sidebar__logo" href="stock-detail.html">
+        <img class="sidebar__pic sidebar__pic_black" src="images/black-logo.svg" alt="OVTLYR Logo" />
+        <img class="sidebar__pic sidebar__pic_white" src="images/white-logo.svg" alt="OVTLYR Logo" />
+      </a>
+      <button class="sidebar__burger"></button>
+    </div> -->
+    <div class="sidebar__wrapper ovtlyr_sidebar">
+      <div class="sidebar__inner">
+        <!-- <a class="sidebar__logo" href="stock-detail.html">
+          <img class="sidebar__pic sidebar__pic_black" src="images/black-logo-small.svg" alt="OVTLYR Logo" />
+          <img class="sidebar__pic sidebar__pic_white" src="images/white-logo-small.svg" alt="OVTLYR Logo" />
+        </a> -->
+        <div class="sidebar__list">
+          <div class="sidebar__group">
+            <!-- <div class="searchbar_input">
+              <div class="sidebar__item">
+                <div class="sidebar__icon">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div class="sidebar__text">
+                  <input type="text" placeholder="Search" />
+                </div>
+              </div>
+              <div class="sidebarSearch__list">
+                <ul>
+                  <li><a href="#"><span>Apple Inc</span><div><span>AAPL</span> : <span>NASDAQ</div></a></li>
+                  <li><a href="#"><span>Apple Inc Apple Inc Apple Inc Apple Inc Apple Inc</span><div><span>AAPL</span> : <span>NASDAQ</div></a></li>
+                  <li class="active"><a href="#"><span>Apple Inc</span><span>APLE : NYSE</span></a></li>
+                  <li><a href="#"><span>Apple Inc</span><div><span>AAPL</span> : <span>NASDAQ</div></a></li>
+                  <li><a href="#"><span>Apple Inc</span><div><span>AAPL</span> : <span>NASDAQ</div></a></li>
+                  <li><a href="#"><span>Apple Inc</span><div><span>AAPL</span> : <span>NASDAQ</div></a></li>
+                  <li><a href="#"><span>Apple Inc</span><div><span>AAPL</span> : <span>NASDAQ</div></a></li>
+                  <li><a href="#"><span>Apple Inc</span><div><span>AAPL</span> : <span>NASDAQ</div></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="sidebar__caption caption-sm">Menu</div> -->
+            <div class="sidebar__menu">
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="dashboard-latest.html" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Dashboard">
+                  <div class="sidebar__icon">
+                    <img src="images/dashboard.svg" alt="Dashboard" />
+                  </div>
+                </a>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="market-breadth-latest.html" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Market Breadth">
+                  <div class="sidebar__icon">
+                    <img src="images/market-breadth.svg" alt="Market" />
+                  </div>
+                </a>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="stocks-etfs.html" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Screener">
+                  <div class="sidebar__icon">
+                    <img src="images/stock-etf.svg" alt="Stocks" />
+                  </div>
+                </a>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="watchlist.html" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Watchlist">
+                  <div class="sidebar__icon">
+                    <img src="images/watchlist.svg" alt="Star" />
+                  </div>
+                </a>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item active" href="news-and-analyst.html" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="News and Analyst Ratings">
+                  <div class="sidebar__icon">
+                    <img src="images/news.svg" alt="News" />
+                  </div>
+                </a>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="notification.html" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Notification & List Management">
+                  <div class="sidebar__icon">
+                    <img src="images/notification.svg" alt="Notification" />
+                  </div>
+                  <span class="noti_count2">10</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="sidebar__group">
+            <div class="sidebar__caption caption-sm">General</div>
+            <div class="sidebar__menu">
+              <div class="side_dropdown arrow_drop dropdown_btn">
+                <p></p>
+                <a class="sidebar__item" href="javascript:void(0);">
+                  <div class="sidebar__icon">
+                    <img src="images/setting.svg" alt="Settings" />
+                  </div>
+                  <div class="sidebar__text">Settings</div>
+                  <span class="noti_count2">99+</span>
+                </a>
+                <span><a href="subscription.html">Subscription Management</a></span>
+                <span><a href="notification.html">Notification Management<span class="noti_count2">3</span></a></span>
+                <span><a href="profile.html">Profile</a></span>
+              </div>
+              <div class="side_dropdown arrow_drop dropdown_btn">
+                <p></p>
+                <a class="sidebar__item" href="javascript:void(0);">
+                  <div class="sidebar__icon">
+                    <img src="images/support.svg" alt="Support" />
+                  </div>
+                  <div class="sidebar__text">Resources</div>
+                </a>
+                <span><a href="https://discord.gg/DjgmSrdxUY" target="_blank">Discord</a></span>
+                <span><a href="affiliate-info.html">Referral Dashboard</a></span>
+                <span><a href="tutorials.html">Tutorials</a></span>
+                <span><a href="contact.html">Contact Us</a></span>
+                <span><a href="https://ovtlyr.com/blog" target="_blank">Blog</a></span>
+              </div>
+              <div class="side_dropdown arrow_drop dropdown_btn" style="display: none;">
+                <p></p>
+                <a class="sidebar__item" href="promoter.html">
+                  <div class="sidebar__icon">
+                    <img src="images/earn.svg" alt="Settings" />
+                  </div>
+                  <div class="sidebar__text">Earn</div>
+                </a>
+                <span><a href="promoter.html">FirstPromoter</a></span>
+              </div>
+              <div class="side_dropdown theme_switchBtn">
+                <div class="sidebar__item mb-0">
+                  <div class="sidebar__icon">
+                    <img src="images/theme.svg" alt="Theme" />
+                  </div>
+                  <div class="sidebar__text">Theme</div>
+                </div>
+                <div class="">
+                  <label class="switch switch_theme js-switch-theme">
+                    <input class="switch__input" type="checkbox" />
+                    <span class="switch__in">
+                      <span class="switch__box"></span>
+                      <span class="switch__icon">
+                        <span class="material-symbols-outlined icon-sun">dark_mode</span>
+                        <span class="material-symbols-outlined icon-moon">light_mode</span>
+                      </span>
+                    </span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div> -->
+        </div>
+        <!-- <div class="sidebar__profile">
+          <div class="sidebar__details">
+            <a class="sidebar__link" href="profile.html">
+              <div class="sidebar__icon">
+                <img src="images/user.svg" alt="Profile" />
+              </div>
+              <div class="sidebar__text">Profile</div>
+            </a>
+            <a class="sidebar__link" href="#">
+              <div class="sidebar__icon">
+                <img src="images/logout.svg" alt="Logout" />
+              </div>
+              <div class="sidebar__text">Log out</div>
+            </a>
+          </div>
+          <a class="sidebar__user" href="#">
+            <div class="sidebar__ava">FN</div>
+            <div class="sidebar__desc">
+              <div class="sidebar__man">Full Name</div>
+              <div class="sidebar__status caption">gmail@example.com</div>
+            </div>
+            <div class="sidebar__arrow">
+              <img src="images/logout.svg" alt="Logout" />
+            </div>
+          </a>
+        </div> -->
+      </div>
+      <div class="sidebar__inner final_dashbd111">
+        <div class="sidebar__list">
+          <div class="sidebar__group">
+            <div class="sidebar__menu">
+              <div class="side_dropdown">
+                <div class="profileDrop dropup-right dropup" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Settings">
+                  <a class="sidebar__item p-0" href="#" id="settingsButton" data-bs-toggle="dropdown" aria-expanded="false">
+                    <div class="sidebar__icon">
+                      <img src="images/setting.svg" alt="setting" />
+                    </div>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="settingsButton" >
+                    <li><a class="dropdown-item" href="subscription-all.html"><p class="mb-0">Subscription Management</p></a></li>
+                    <li><a class="dropdown-item" href="notification.html"><p class="mb-0">Notification Management</p></a></li>
+                    <li><a class="dropdown-item" href="promoter.html"><p class="mb-0">Referral Dashboard</p></a></li>
+                    <li><a class="dropdown-item" href="documentation.html"><p class="mb-0">Documentation</p></a></li>
+                    <li><a class="dropdown-item" href="tutorials.html"><p class="mb-0">Tutorials</p></a></li>
+                    <li><a class="dropdown-item" href="contact.html"><p class="mb-0">Contact Us</p></a></li>
+                    <li>
+                      <a class="dropdown-item" href="javascript:void(0);">
+                        <p class="switchThemeBtn mb-0">
+                          <span>Theme</span>
+                          <label class="switch switch_theme js-switch-theme mt-0">
+                            <input class="switch__input" type="checkbox">
+                            <span class="switch__in">
+                              <span class="switch__box"></span>
+                              <span class="switch__icon">
+                                <span class="material-symbols-outlined icon-sun">dark_mode</span>
+                                <span class="material-symbols-outlined icon-moon">light_mode</span>
+                              </span>
+                            </span>
+                          </label>
+                        </p>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="https://discord.gg/DjgmSrdxUY" target="_blank" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Discord">
+                  <div class="sidebar__icon">
+                    <img src="images/discord.svg" alt="Discord" />
+                  </div>
+                </a>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="javascript:void(0);" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Logout">
+                  <div class="sidebar__icon">
+                    <img src="images/logout.svg" alt="Logout" />
+                  </div>
+                </a>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="profile.html" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Profile">
+                  <div class="sidebar__icon profile_icon">
+                    <img src="images/profile.svg" alt="Profile" />
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page__wrapper final_dashbd12">
+    <div class="page__center new_content">
+      <!-- <div class="header">
+        <button class="header__burger"></button>
+        <div class="mobile_header">
+          <a class="sidebar__logo" href="stock-detail.html">
+            <img class="sidebar__pic sidebar__pic_black" src="images/black-logo.svg" alt="OVTLYR Logo" />
+            <img class="sidebar__pic sidebar__pic_white" src="images/white-logo.svg" alt="OVTLYR Logo" />
+          </a>
+        </div>
+      </div> -->
+      <div class="dashboard_cont final_dashbd2 p-0">
+        <!-- <div class="new_header">
+          <div class="newleft_21">
+            <div class="me-1">
+              <a href="https://discord.gg/DjgmSrdxUY" target="_blank"><img src="images/discord.svg" class="icon_img" alt="Discord" /></a>
+            </div>
+            <div class="profileDrop">
+              <button class="" type="button" id="profileMenuButton" data-bs-toggle="dropdown" aria-expanded="false"><img src="images/profile.svg" class="icon_img" alt="Profile" /></button>
+                <ul class="dropdown-menu" aria-labelledby="profileMenuButton">
+                  <li><a class="dropdown-item" href="profile.html"><p class="mb-0">Profile</p></a></li>
+                  <li><a class="dropdown-item" href="subscription.html"><p class="mb-0">Subscription Management</p></a></li>
+                  <li><a class="dropdown-item" href="notification.html"><p class="mb-0">Notification Management</p></a></li>
+                  <li><a class="dropdown-item" href="affiliate-info.html"><p class="mb-0">Referral Dashboard</p></a></li>
+                  <li><a class="dropdown-item" href="tutorials.html"><p class="mb-0">Tutorials</p></a></li>
+                  <li><a class="dropdown-item" href="contact.html"><p class="mb-0">Contact Us</p></a></li>
+                  <li>
+                    <a class="dropdown-item" href="javascript:void(0);">
+                      <p class="switchThemeBtn mb-0">
+                        <span>Theme</span>
+                        <label class="switch switch_theme js-switch-theme">
+                          <input class="switch__input" type="checkbox">
+                          <span class="switch__in">
+                            <span class="switch__box"></span>
+                            <span class="switch__icon">
+                              <span class="material-symbols-outlined icon-sun">dark_mode</span>
+                              <span class="material-symbols-outlined icon-moon">light_mode</span>
+                            </span>
+                          </span>
+                        </label>
+                      </p>
+                    </a>
+                  </li>
+                  <li><a class="dropdown-item" href="log-in.html"><p class="mb-0">Logout</p></a></li>
+                </ul>
+            </div>
+          </div>
+        </div> -->
+        <div class="news_main">
+          <div class="news_1 padd_top">
+            <div class="news_heading">
+              <h3>News & Analyst Ratings<button type="button" class="video_icon2" data-bs-toggle="modal" data-bs-target="#favList"><img src="images/video-icon.svg" alt="Video"></button></h3>
+              <p>Stay on top of the latest stock news & analyst ratings upgrades / downgrades.</p>
+            </div>
+            <div class="news_11">
+              <div class="news_12">
+                <div class="news_111">
+                  <h5>Stock News</h5>
+                  <button type="button" id="openModal1"><span class="material-symbols-outlined">zoom_out_map</span></button>
+                </div>
+                <div class="news_112">
+                  <div class="news_search">
+                    <div class="news_head">
+                      <div class="notes_field2">
+                        <i class="fa-solid fa fa-spinner fa-pulse loader_icon"></i>
+                        <input type="text" name="search" placeholder="Get news for one or multiple tickers…" />
+                      </div>
+                      <div class="news_head2">
+                        <p class="port_symbol mb-0">AAPL</p>
+                        <button type="button">Reset</button>
+                      </div>
+                    </div>
+                    <div class="sidebarSearch__list">
+                      <ul>
+                        <li>
+                          <a href="#">
+                            <div class="dashSeaList">
+                              <span class="port_symbol">AAPL</span>
+                              <div>
+                                <span class="large_word">Assosiated Banc - Corp</span>
+                                <div class="small_word"><span>ASB</span> : <span>NYSE</span></div>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="dashSeaList">
+                              <span class="port_symbol">AAPL</span>
+                              <div>
+                                <span class="large_word">Assosiated Banc - Corp</span>
+                                <div class="small_word"><span>ASB</span> : <span>NYSE</span></div>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li class="active">
+                          <a href="#">
+                            <div class="dashSeaList">
+                              <span class="port_symbol">AAPL</span>
+                              <div>
+                                <span class="large_word">Assosiated Banc - Corp</span>
+                                <div class="small_word"><span>ASB</span> : <span>NYSE</span></div>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li class="active">
+                          <a href="#">
+                            <div class="dashSeaList">
+                              <span class="port_symbol">AAPL</span>
+                              <div>
+                                <span class="large_word">Assosiated Banc - Corp</span>
+                                <div class="small_word"><span>ASB</span> : <span>NYSE</span></div>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="dashSeaList">
+                              <span class="port_symbol">AAPL</span>
+                              <div>
+                                <span class="large_word">Assosiated Banc - Corp</span>
+                                <div class="small_word"><span>ASB</span> : <span>NYSE</span></div>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="dashSeaList">
+                              <span class="port_symbol">AAPL</span>
+                              <div>
+                                <span class="large_word">Assosiated Banc - Corp</span>
+                                <div class="small_word"><span>ASB</span> : <span>NYSE</span></div>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="dashSeaList">
+                              <span class="port_symbol">AAPL</span>
+                              <div>
+                                <span class="large_word">Assosiated Banc - Corp</span>
+                                <div class="small_word"><span>ASB</span> : <span>NYSE</span></div>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="dashSeaList">
+                              <span class="port_symbol">AAPL</span>
+                              <div>
+                                <span class="large_word">Assosiated Banc - Corp</span>
+                                <div class="small_word"><span>ASB</span> : <span>NYSE</span></div>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                      </ul>
+                      <div style="width:100%; height:auto; overflow:hidden; text-align: center; margin-top: 8px;">
+                        <a id="btn_loadMore_analyst" style="cursor: pointer; display: block;" class="fold_moreBtn2">Load More<i class="fa-solid fa-angle-right"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="news_list popupList_scroll" id="dataDiv1">
+                    <ul>
+                      <li>
+                        <div class="newslist1">
+                          <a href="#" target="_blank">
+                            <img src="images/news-1.jpg" alt="Card Image">
+                          </a>
+                        </div>
+                        <div class="newslist2">
+                          <a href="#" target="_blank">
+                            <h6>Analysts revise Tesla stock price target</h6>
+                          </a>
+                          <p>Despite the popularity and prominence of the electric vehicle (EV), Tesla (NASDAQ: TSLA) has been on rather shaky despite the popularity and prominence of the electric vehicle (EV), Tesla (NASDAQ: TSLA) has been on rather shaky.</p>
+                          <p class="smallTxt"><span class="port_symbol me-2">TSLA</span>Finbold | Wed, 09 Oct 2024 11:02:45 -0400 | <span class="neg_news">Negative</span></p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="newslist1">
+                          <a href="#" target="_blank">
+                            <img src="images/news-2.jpg" alt="Card Image">
+                          </a>
+                        </div>
+                        <div class="newslist2">
+                          <a href="#" target="_blank">
+                            <h6>Tesla robotaxi set to have two seats, Musk to discuss FSD for Semi</h6>
+                          </a>
+                          <p>Tesla’s robotaxi is set to have two front seats and butterfly-wing doors and CEO Elon Musk is expected to discuss d…</p>
+                          <p class="smallTxt"><span class="port_symbol me-2">TSLA</span>Reuters | Wed, 09 Oct 2024 10:35:49 -0400 | <span class="pos_news">Positive</span></p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="newslist1">
+                          <a href="#" target="_blank">
+                            <img src="images/news-3.jpg" alt="Card Image">
+                          </a>
+                        </div>
+                        <div class="newslist2">
+                          <a href="#" target="_blank">
+                            <h6>Thinking of Buying TSLA Stock Ahead of Robotaxi Day? Think Again</h6>
+                          </a>
+                          <p>The future of Tesla’s Robotaxi project may be bright, but for now, caution is the name of the game.</p>
+                          <p class="smallTxt"><span class="port_symbol me-2">TSLA</span>Zacks Investment Research | Wed, 09 Oct 2024 09:25:28 -0400 | <span class="neu_news">Neutral</span></p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="newslist1">
+                          <a href="#" target="_blank">
+                            <img src="images/news-4.jpg" alt="Card Image">
+                          </a>
+                        </div>
+                        <div class="newslist2">
+                          <a href="#" target="_blank">
+                            <h6>Helen of Troy’s Q2 Success: Earnings Beat and Strategic Restructuring</h6>
+                          </a>
+                          <p>Helen of Troy (HELE, Financial) saw a significant turnaround in Q2, with shares rising 19%. The company…</p>
+                          <p class="smallTxt"><span class="port_symbol me-2">HELE</span>GuruFocus | Wed, 09 Oct 2024 11:14:44 -0400 | <span class="neg_news">Negative</span></p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="newslist1">
+                          <a href="#" target="_blank">
+                            <img src="images/news-5.jpg" alt="Card Image">
+                          </a>
+                        </div>
+                        <div class="newslist2">
+                          <a href="#" target="_blank">
+                            <h6>Helen Of Troy Ltd (HELE) Q2 Earnings: EPS of $0.74 Beats Estimates, Revenue at $474.</h6>
+                          </a>
+                          <p>The future of Tesla’s Robotaxi project may be bright, but for now, caution is the name of the game.</p>
+                          <p class="smallTxt"><span class="port_symbol me-2">HELE</span>The Motley Fool | Wed, 09 Oct 2024 14:22:54 -0400 | <span class="pos_news">Positive</span></p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="newslist1">
+                          <a href="#" target="_blank">
+                            <img src="images/news-1.jpg" alt="Card Image">
+                          </a>
+                        </div>
+                        <div class="newslist2">
+                          <a href="#" target="_blank">
+                            <h6>Analysts revise Tesla stock price target</h6>
+                          </a>
+                          <p>Despite the popularity and prominence of the electric vehicle (EV), Tesla (NASDAQ: TSLA) has been on rather shaky g…</p>
+                          <p class="smallTxt"><span class="port_symbol me-2">TSLA</span>Finbold | Wed, 09 Oct 2024 11:02:45 -0400 | <span class="neg_news">Negative</span></p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="newslist1">
+                          <a href="#" target="_blank">
+                            <img src="images/news-2.jpg" alt="Card Image">
+                          </a>
+                        </div>
+                        <div class="newslist2">
+                          <a href="#" target="_blank">
+                            <h6>Tesla robotaxi set to have two seats, Musk to discuss FSD for Semi</h6>
+                          </a>
+                          <p>Tesla’s robotaxi is set to have two front seats and butterfly-wing doors and CEO Elon Musk is expected to discuss d…</p>
+                          <p class="smallTxt"><span class="port_symbol me-2">TSLA</span>Reuters | Wed, 09 Oct 2024 10:35:49 -0400 | <span class="pos_news">Positive</span></p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="news_12">
+                <div class="news_111">
+                  <h5>Analyst</h5>
+                  <button type="button" id="openModal2"><span class="material-symbols-outlined">zoom_out_map</span></button>
+                </div>
+                <div class="news_112">
+                  <div class="news_search">
+                    <div class="news_head">
+                      <div class="notes_field3">
+                        <i class="fa-solid fa fa-spinner fa-pulse loader_icon"></i>
+                        <input type="text" name="search" placeholder="Get news for one or multiple tickers…" />
+                      </div>
+                      <div class="news_head2">
+                        <p class="port_symbol mb-0">AAPL</p>
+                        <button type="button">Reset</button>
+                      </div>
+                    </div>
+                    <div class="sidebarSearch__list">
+                      <ul>
+                        <li>
+                          <a href="#">
+                            <div class="dashSeaList">
+                              <span class="port_symbol">AAPL</span>
+                              <div>
+                                <span class="large_word">Assosiated Banc - Corp</span>
+                                <div class="small_word"><span>ASB</span> : <span>NYSE</span></div>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="dashSeaList">
+                              <span class="port_symbol">AAPL</span>
+                              <div>
+                                <span class="large_word">Assosiated Banc - Corp</span>
+                                <div class="small_word"><span>ASB</span> : <span>NYSE</span></div>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li class="active">
+                          <a href="#">
+                            <div class="dashSeaList">
+                              <span class="port_symbol">AAPL</span>
+                              <div>
+                                <span class="large_word">Assosiated Banc - Corp</span>
+                                <div class="small_word"><span>ASB</span> : <span>NYSE</span></div>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li class="active">
+                          <a href="#">
+                            <div class="dashSeaList">
+                              <span class="port_symbol">AAPL</span>
+                              <div>
+                                <span class="large_word">Assosiated Banc - Corp</span>
+                                <div class="small_word"><span>ASB</span> : <span>NYSE</span></div>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="dashSeaList">
+                              <span class="port_symbol">AAPL</span>
+                              <div>
+                                <span class="large_word">Assosiated Banc - Corp</span>
+                                <div class="small_word"><span>ASB</span> : <span>NYSE</span></div>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="dashSeaList">
+                              <span class="port_symbol">AAPL</span>
+                              <div>
+                                <span class="large_word">Assosiated Banc - Corp</span>
+                                <div class="small_word"><span>ASB</span> : <span>NYSE</span></div>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="dashSeaList">
+                              <span class="port_symbol">AAPL</span>
+                              <div>
+                                <span class="large_word">Assosiated Banc - Corp</span>
+                                <div class="small_word"><span>ASB</span> : <span>NYSE</span></div>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="dashSeaList">
+                              <span class="port_symbol">AAPL</span>
+                              <div>
+                                <span class="large_word">Assosiated Banc - Corp</span>
+                                <div class="small_word"><span>ASB</span> : <span>NYSE</span></div>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                      </ul>
+                      <div style="width:100%; height:auto; overflow:hidden; text-align: center; margin-top: 8px;">
+                        <a id="btn_loadMore_analyst" style="cursor: pointer; display: block;" class="fold_moreBtn2">Load More<i class="fa-solid fa-angle-right"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="analyst_list popupList_scroll" id="dataDiv2">
+                    <table class="table analyst_table ovtlyr_table">
+                      <thead class="sticky-top">
+                        <tr class="ovtlyr__row_head">
+                          <th style="width: 10%;">Ticker</th>
+                          <th>Brokerage Firm</th>
+                          <th>Ratings Change</th>
+                          <th>Price Target</th>
+                          <th>Date</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="ovtlyr__row">
+                          <td>
+                            <a href="#" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="American Multinational Technology Company">
+                              <span class="port_symbol">AAPL</span>
+                            </a>
+                          </td>
+                          <td><p>H.C. Wainwright</p></td>
+                          <td><p>Neutral>>Buy</p></td>
+                          <td><p>$172>>$165</p></td>
+                          <td><p>October 9th 2024</p></td>
+                        </tr>
+                        <tr class="ovtlyr__row">
+                          <td>
+                            <a href="#" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="American Multinational Technology Company">
+                              <span class="port_symbol">AAPL</span>
+                            </a>
+                          </td>
+                          <td><p>Argus</p></td>
+                          <td><p>Hold>> Buy</p></td>
+                          <td><p>>>$511</p></td>
+                          <td><p>October 9th 2024</p></td>
+                        </tr>
+                        <tr class="ovtlyr__row">
+                          <td>
+                            <a href="#" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="American Multinational Technology Company">
+                              <span class="port_symbol">AAPL</span>
+                            </a>
+                          </td>
+                          <td><p>Wolfe Research</p></td>
+                          <td><p>Peer Perform>> Outperform</p></td>
+                          <td><p>$172>>$165</p></td>
+                          <td><p>October 9th 2024</p></td>
+                        </tr>
+                        <tr class="ovtlyr__row">
+                          <td>
+                            <a href="#" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="American Multinational Technology Company">
+                              <span class="port_symbol">AAPL</span>
+                            </a>
+                          </td>
+                          <td><p>Jefferies</p></td>
+                          <td><p>Hold>>Buy</p></td>
+                          <td><p>$172>>$165</p></td>
+                          <td><p>October 9th 2024</p></td>
+                        </tr>
+                        <tr class="ovtlyr__row">
+                          <td>
+                            <a href="#" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="American Multinational Technology Company">
+                              <span class="port_symbol">AAPL</span>
+                            </a>
+                          </td>
+                          <td><p>H.C. Wainwright</p></td>
+                          <td><p>Neutral>>Buy</p></td>
+                          <td><p>>>$146</p></td>
+                          <td><p>October 9th 2024</p></td>
+                        </tr>
+                        <tr class="ovtlyr__row">
+                          <td>
+                            <a href="#" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="American Multinational Technology Company">
+                              <span class="port_symbol">AAPL</span>
+                            </a>
+                          </td>
+                          <td><p>Barclays</p></td>
+                          <td><p>Underweight>> EqualWeight</p></td>
+                          <td><p>$20>>$30</p></td>
+                          <td><p>October 9th 2024</p></td>
+                        </tr>
+                        <tr class="ovtlyr__row">
+                          <td>
+                            <a href="#" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="American Multinational Technology Company">
+                              <span class="port_symbol">AAPL</span>
+                            </a>
+                          </td>
+                          <td><p>Jefferies</p></td>
+                          <td><p>Hold>>Buy</p></td>
+                          <td><p>$172>>$165</p></td>
+                          <td><p>October 9th 2024</p></td>
+                        </tr>
+                        <tr class="ovtlyr__row">
+                          <td>
+                            <a href="#" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="American Multinational Technology Company">
+                              <span class="port_symbol">AAPL</span>
+                            </a>
+                          </td>
+                          <td><p>Jefferies</p></td>
+                          <td><p>Hold>>Buy</p></td>
+                          <td><p>>>$680</p></td>
+                          <td><p>October 9th 2024</p></td>
+                        </tr>
+                        <tr class="ovtlyr__row">
+                          <td>
+                            <a href="#" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="American Multinational Technology Company">
+                              <span class="port_symbol">AAPL</span>
+                            </a>
+                          </td>
+                          <td><p>Barclays</p></td>
+                          <td><p>Underweight>> EqualWeight</p></td>
+                          <td><p>$24>>$32</p></td>
+                          <td><p>October 9th 2024</p></td>
+                        </tr>
+                        </tr>
+                        <tr class="ovtlyr__row">
+                          <td>
+                            <a href="#" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="American Multinational Technology Company">
+                              <span class="port_symbol">AAPL</span>
+                            </a>
+                          </td>
+                          <td><p>Barclays</p></td>
+                          <td><p>Underweight>> EqualWeight</p></td>
+                          <td><p>$235>>$285</p></td>
+                          <td><p>October 9th 2024</p></td>
+                        </tr>
+                        </tr>
+                        <tr class="ovtlyr__row">
+                          <td>
+                            <a href="#" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="American Multinational Technology Company">
+                              <span class="port_symbol">AAPL</span>
+                            </a>
+                          </td>
+                          <td><p>Barclays</p></td>
+                          <td><p>Underweight>> EqualWeight</p></td>
+                          <td><p>$250>>$300</p></td>
+                          <td><p>October 9th 2024</p></td>
+                        </tr>
+                        <tr class="ovtlyr__row">
+                          <td>
+                            <a href="#" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="American Multinational Technology Company">
+                              <span class="port_symbol">AAPL</span>
+                            </a>
+                          </td>
+                          <td><p>Jefferies</p></td>
+                          <td><p>Hold>>Buy</p></td>
+                          <td><p>$7.5>>$8.5</p></td>
+                          <td><p>October 9th 2024</p></td>
+                        </tr>
+                        <tr class="ovtlyr__row">
+                          <td>
+                            <a href="#" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="American Multinational Technology Company">
+                              <span class="port_symbol">AAPL</span>
+                            </a>
+                          </td>
+                          <td><p>Barclays</p></td>
+                          <td><p>Underweight>> EqualWeight</p></td>
+                          <td><p>$20>>$30</p></td>
+                          <td><p>October 9th 2024</p></td>
+                        </tr>
+                        <tr class="ovtlyr__row">
+                          <td>
+                            <a href="#" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="American Multinational Technology Company">
+                              <span class="port_symbol">AAPL</span>
+                            </a>
+                          </td>
+                          <td><p>UBS</p></td>
+                          <td><p>Sell>> Neutral</p></td>
+                          <td><p>$235>>$285</p></td>
+                          <td><p>October 9th 2024</p></td>
+                        </tr>
+                        <tr class="ovtlyr__row">
+                          <td>
+                            <a href="#" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="American Multinational Technology Company">
+                              <span class="port_symbol">AAPL</span>
+                            </a>
+                          </td>
+                          <td><p>UBS</p></td>
+                          <td><p>Sell>> Neutral</p></td>
+                          <td><p>$250>>$300</p></td>
+                          <td><p>October 9th 2024</p></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="news_2 padd_top">
+            <div class="news_heading">
+              <h3 class="mb-0">Trending Headlines</h3>
+            </div>
+            <div class="news_21">
+              <div class="analyst_list popupList_scroll scroll_x">
+                <table class="table analyst_table ovtlyr_table">
+                  <thead class="sticky-top">
+                    <tr class="ovtlyr__row_head">
+                      <th style="width: 20%;"><div class="flexBox">Ticker</div></th>
+                      <th style="width: 80%;">Brokerage Firm</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="ovtlyr__row">
+                      <td>
+                        <div class="flexBox">
+                          <a href="#" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Taiwan Semiconductor Manufacturing Company Limited">
+                            <span class="port_symbol">TSM</span>
+                          </a>
+                          <img src="images/positive-smiley.svg" alt="Positive Smiley" />
+                        </div>
+                      </td>
+                      <td>
+                        <h4>TSMC’s Q3 Revenue Surpasses Market Expectations</h4>
+                        <p>TSMC, the top contract chipmaker globally, announced third-quarter revenue of T$759.69 billion ($23.62 billion) on Wednesday. This figure surpassed market expectations, driven by strong demand for artificial intelligence (AI) technologies.</p>
+                      </td>
+                    </tr>
+                    <tr class="ovtlyr__row">
+                      <td>
+                        <div class="flexBox">
+                          <a href="#" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Alphabet Inc.">
+                            <span class="port_symbol">GOOG</span>
+                          </a>
+                          <img src="images/negative-smiley.svg" alt="Negative Smiley" />
+                        </div>
+                      </td>
+                      <td>
+                        <h4>U.S. Proposes Solutions in Google Search Case</h4>
+                        <p>The U.S. Department of Justice announced on Tuesday that it might request a judge to make Alphabet’s Google stop exclusive deals, which were previously determined by the court to have contributed to Google’s monopoly in online search.</p>
+                      </td>
+                    </tr>
+                    <tr class="ovtlyr__row">
+                      <td>
+                        <div class="flexBox">
+                          <a href="#" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Equinor ASA">
+                            <span class="port_symbol">EQNR</span>
+                          </a>
+                          <img src="images/neutral-smiley.svg" alt="Neutal Smiley" />
+                        </div>
+                      </td>
+                      <td>
+                        <h4>Equinor Stays Committed to Tanzania LNG Project</h4>
+                        <p>A senior executive from Equinor stated on Tuesday that the company is still dedicated to a $42 billion LNG project in Tanzania, despite delays caused by proposed changes to a financial agreement made with the government last year.</p>
+                      </td>
+                    </tr>
+                    <tr class="ovtlyr__row">
+                      <td>
+                        <div class="flexBox">
+                          <a href="#" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Taiwan Semiconductor Manufacturing Company Limited">
+                            <span class="port_symbol">TSM</span>
+                          </a>
+                          <img src="images/positive-smiley.svg" alt="Positive Smiley" />
+                        </div>
+                      </td>
+                      <td>
+                        <h4>TSMC’s Q3 Revenue Surpasses Market Expectations</h4>
+                        <p>TSMC, the top contract chipmaker globally, announced third-quarter revenue of T$759.69 billion ($23.62 billion) on Wednesday. This figure surpassed market expectations, driven by strong demand for artificial intelligence (AI) technologies.</p>
+                      </td>
+                    </tr>
+                    <tr class="ovtlyr__row">
+                      <td>
+                        <div class="flexBox">
+                          <a href="#" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Alphabet Inc.">
+                            <span class="port_symbol">GOOG</span>
+                          </a>
+                          <img src="images/negative-smiley.svg" alt="Negative Smiley" />
+                        </div>
+                      </td>
+                      <td>
+                        <h4>U.S. Proposes Solutions in Google Search Case</h4>
+                        <p>The U.S. Department of Justice announced on Tuesday that it might request a judge to make Alphabet’s Google stop exclusive deals, which were previously determined by the court to have contributed to Google’s monopoly in online search.</p>
+                      </td>
+                    </tr>
+                    <tr class="ovtlyr__row">
+                      <td>
+                        <div class="flexBox">
+                          <a href="#" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Equinor ASA">
+                            <span class="port_symbol">EQNR</span>
+                          </a>
+                          <img src="images/neutral-smiley.svg" alt="Neutal Smiley" />
+                        </div>
+                      </td>
+                      <td>
+                        <h4>Equinor Stays Committed to Tanzania LNG Project</h4>
+                        <p>A senior executive from Equinor stated on Tuesday that the company is still dedicated to a $42 billion LNG project in Tanzania, despite delays caused by proposed changes to a financial agreement made with the government last year.</p>
+                      </td>
+                    </tr>
+                    <tr class="ovtlyr__row">
+                      <td>
+                        <div class="flexBox">
+                          <a href="#" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Taiwan Semiconductor Manufacturing Company Limited">
+                            <span class="port_symbol">TSM</span>
+                          </a>
+                          <img src="images/positive-smiley.svg" alt="Positive Smiley" />
+                        </div>
+                      </td>
+                      <td>
+                        <h4>TSMC’s Q3 Revenue Surpasses Market Expectations</h4>
+                        <p>TSMC, the top contract chipmaker globally, announced third-quarter revenue of T$759.69 billion ($23.62 billion) on Wednesday. This figure surpassed market expectations, driven by strong demand for artificial intelligence (AI) technologies.</p>
+                      </td>
+                    </tr>
+                    <tr class="ovtlyr__row">
+                      <td>
+                        <div class="flexBox">
+                          <a href="#" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Alphabet Inc.">
+                            <span class="port_symbol">GOOG</span>
+                          </a>
+                          <img src="images/negative-smiley.svg" alt="Negative Smiley" />
+                        </div>
+                      </td>
+                      <td>
+                        <h4>U.S. Proposes Solutions in Google Search Case</h4>
+                        <p>The U.S. Department of Justice announced on Tuesday that it might request a judge to make Alphabet’s Google stop exclusive deals, which were previously determined by the court to have contributed to Google’s monopoly in online search.</p>
+                      </td>
+                    </tr>
+                    <tr class="ovtlyr__row">
+                      <td>
+                        <div class="flexBox">
+                          <a href="#" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Equinor ASA">
+                            <span class="port_symbol">EQNR</span>
+                          </a>
+                          <img src="images/neutral-smiley.svg" alt="Neutal Smiley" />
+                        </div>
+                      </td>
+                      <td>
+                        <h4>Equinor Stays Committed to Tanzania LNG Project</h4>
+                        <p>A senior executive from Equinor stated on Tuesday that the company is still dedicated to a $42 billion LNG project in Tanzania, despite delays caused by proposed changes to a financial agreement made with the government last year.</p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="news_3 padd_top">
+            <div class="news_heading">
+              <h3 class="mb-0">High Coverage News</h3>
+            </div>
+            <div class="news_31">
+              <div class="nav_item high_news">
+                <a class="nav_link" href="#">Hyundai Motor India Plans $3 Billion IPO Opening Next Week at 1,865-1,960 Rupees per Share</a>
+                <a class="nav_link active" href="#">NVIDIA Showcases AI Innovations and Industry Impact Amid Washington Summit</a>
+                <a class="nav_link" href="#">DOJ Considers Breaking Up Google Amid Antitrust Remedies Discussions</a>
+                <a class="nav_link" href="#">Pfizer Stock Rises After Starboard’s $1 Billion Investment Stake</a>
+                <a class="nav_link" href="#">Trump Media Stock Surges Amid Rally and High-Profile Events</a>
+                <a class="nav_link" href="#">GM Investor Day: Key Insights and Investor Concerns Addressed</a>
+              </div>
+            </div>
+            <div class="news_32">
+              <div class="news_list popupList_scroll">
+                <ul>
+                  <li>
+                    <div class="newslist1">
+                      <a href="#" target="_blank">
+                        <img src="images/news-6.jpg" alt="Card Image">
+                      </a>
+                    </div>
+                    <div class="newslist2">
+                      <a href="#" target="_blank">
+                        <h6>Helen of Troy’s Q2 Success: Earnings Beat and Strategic Restructuring</h6>
+                      </a>
+                      <p>Helen of Troy (HELE, Financial) saw a significant turnaround in Q2, with shares rising 19%. The company reversed it…</p>
+                      <p class="smallTxt"><span class="port_symbol me-2">HELE</span>GuruFocus | Wed, 09 Oct 2024 11:14:44 -0400 | <span class="neg_news">Negative</span></p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="newslist1">
+                      <a href="#" target="_blank">
+                        <img src="images/news-5.jpg" alt="Card Image">
+                      </a>
+                    </div>
+                    <div class="newslist2">
+                      <a href="#" target="_blank">
+                        <h6>Helen Of Troy Ltd (HELE) Q2 Earnings: EPS of $0.74 Beats Estimates, Revenue at $474.</h6>
+                      </a>
+                      <p>The future of Tesla’s Robotaxi project may be bright, but for now, caution is the name of the game.</p>
+                      <p class="smallTxt"><span class="port_symbol me-2">HELE</span>The Motley Fool | Wed, 09 Oct 2024 14:22:54 -0400 | <span class="pos_news">Positive</span></p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="newslist1">
+                      <a href="#" target="_blank">
+                        <img src="images/news-7.jpg" alt="Card Image">
+                      </a>
+                    </div>
+                    <div class="newslist2">
+                      <a href="#" target="_blank">
+                        <h6>Why Helen of Troy Stock Is Skyrocketing Today</h6>
+                      </a>
+                      <p>Even with the big jump today, the stock is still down roughly 39% in 2024.</p>
+                      <p class="smallTxt"><span class="port_symbol me-2">HELE</span>The Motley Fool | Wed, 09 Oct 2024 14:22:54 -0400 | <span class="pos_news">Positive</span></p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="newslist1">
+                      <a href="#" target="_blank">
+                        <img src="images/news-3.jpg" alt="Card Image">
+                      </a>
+                    </div>
+                    <div class="newslist2">
+                      <a href="#" target="_blank">
+                        <h6>Thinking of Buying TSLA Stock Ahead of Robotaxi Day? Think Again</h6>
+                      </a>
+                      <p>The future of Tesla’s Robotaxi project may be bright, but for now, caution is the name of the game.</p>
+                      <p class="smallTxt"><span class="port_symbol me-2">TSLA</span>Zacks Investment Research | Wed, 09 Oct 2024 09:25:28 -0400 | <span class="neu_news">Neutral</span></p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="newslist1">
+                      <a href="#" target="_blank">
+                        <img src="images/news-4.jpg" alt="Card Image">
+                      </a>
+                    </div>
+                    <div class="newslist2">
+                      <a href="#" target="_blank">
+                        <h6>Helen of Troy’s Q2 Success: Earnings Beat and Strategic Restructuring</h6>
+                      </a>
+                      <p>Helen of Troy (HELE, Financial) saw a significant turnaround in Q2, with shares rising 19%. The company…</p>
+                      <p class="smallTxt"><span class="port_symbol me-2">HELE</span>GuruFocus | Wed, 09 Oct 2024 11:14:44 -0400 | <span class="neg_news">Negative</span></p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="newslist1">
+                      <a href="#" target="_blank">
+                        <img src="images/news-1.jpg" alt="Card Image">
+                      </a>
+                    </div>
+                    <div class="newslist2">
+                      <a href="#" target="_blank">
+                        <h6>Analysts revise Tesla stock price target</h6>
+                      </a>
+                      <p>Despite the popularity and prominence of the electric vehicle (EV), Tesla (NASDAQ: TSLA) has been on rather shaky g…</p>
+                      <p class="smallTxt"><span class="port_symbol me-2">TSLA</span>Finbold | Wed, 09 Oct 2024 11:02:45 -0400 | <span class="neg_news">Negative</span></p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="newslist1">
+                      <a href="#" target="_blank">
+                        <img src="images/news-2.jpg" alt="Card Image">
+                      </a>
+                    </div>
+                    <div class="newslist2">
+                      <a href="#" target="_blank">
+                        <h6>Tesla robotaxi set to have two seats, Musk to discuss FSD for Semi</h6>
+                      </a>
+                      <p>Tesla’s robotaxi is set to have two front seats and butterfly-wing doors and CEO Elon Musk is expected to discuss d…</p>
+                      <p class="smallTxt"><span class="port_symbol me-2">TSLA</span>Reuters | Wed, 09 Oct 2024 10:35:49 -0400 | <span class="pos_news">Positive</span></p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="news_5 padd_top">
+            <div class="news_heading">
+              <h3 class="mb-0">Top Mentions & Sentiment</h3>
+            </div>
+            <div class="news_31 news_51">
+              <div class="nav_item gen_news">
+                <a class="nav_link" href="#">General News Sentiment</a>
+                <a class="nav_link active" href="#">All tickers Sentiment</a>
+                <a class="nav_link" href="#">Top Mentions This Week</a>
+                <a class="nav_link" href="#">Top Mentions This Month</a>
+                <a class="nav_link" href="#">Top Mentions Today</a>
+              </div>
+            </div>
+            <div class="news_52">
+              <div id="sentimentChart2">
+            </div>
+          </div>
+          <div class="news_4 padd_top">
+            <div class="news_heading">
+              <h3 class="mb-0">News By Topic</h3>
+            </div>
+            <div class="news_31 news_41">
+              <div class="nav_item topic_news">
+                <a class="nav_link active" href="#">General Market News</a>
+                <a class="nav_link" href="#">Technology</a>
+                <a class="nav_link" href="#">Videos</a>
+                <a class="nav_link" href="#">Conference</a>
+                <a class="nav_link" href="#">Press Releases</a>
+                <a class="nav_link" href="#">M&A</a>
+                <a class="nav_link" href="#">Negative</a>
+                <a class="nav_link" href="#">CEO</a>
+                <a class="nav_link" href="#">Earnings</a>
+                <a class="nav_link" href="#">Layoffs</a>
+                <a class="nav_link" href="#">Podcasts</a>
+                <a class="nav_link" href="#">Articles</a>
+                <a class="nav_link" href="#">Cannabis</a>
+                <a class="nav_link" href="#">Jim Cramer</a>
+                <a class="nav_link" href="#">Healthcare</a>
+              </div>
+            </div>
+            <div class="news_32 news_42">
+              <div class="news_list popupList_scroll">
+                <ul>
+                  <li>
+                    <div class="newslist1">
+                      <a href="#" target="_blank">
+                        <img src="images/news-6.jpg" alt="Card Image">
+                      </a>
+                    </div>
+                    <div class="newslist2">
+                      <a href="#" target="_blank">
+                        <h6>Helen of Troy’s Q2 Success: Earnings Beat and Strategic Restructuring</h6>
+                      </a>
+                      <p>Helen of Troy (HELE, Financial) saw a significant turnaround in Q2, with shares rising 19%. The company reversed it…</p>
+                      <p class="smallTxt"><span class="blue_txt me-2">Reuters</span>| Wed, 09 Oct 2024 11:14:44 -0400 | <span class="neg_news">Negative</span></p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="newslist1">
+                      <a href="#" target="_blank">
+                        <img src="images/news-7.jpg" alt="Card Image">
+                      </a>
+                    </div>
+                    <div class="newslist2">
+                      <a href="#" target="_blank">
+                        <h6>Why Helen of Troy Stock Is Skyrocketing Today</h6>
+                      </a>
+                      <p>Even with the big jump today, the stock is still down roughly 39% in 2024.</p>
+                      <p class="smallTxt"><span class="blue_txt me-2">New York Post</span>| Wed, 09 Oct 2024 14:22:54 -0400 | <span class="pos_news">Positive</span></p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="newslist1">
+                      <a href="#" target="_blank">
+                        <img src="images/news-3.jpg" alt="Card Image">
+                      </a>
+                    </div>
+                    <div class="newslist2">
+                      <a href="#" target="_blank">
+                        <h6>Thinking of Buying TSLA Stock Ahead of Robotaxi Day? Think Again</h6>
+                      </a>
+                      <p>The future of Tesla’s Robotaxi project may be bright, but for now, caution is the name of the game.</p>
+                      <p class="smallTxt"><span class="blue_txt me-2">Investors Business Daily</span>| Wed, 09 Oct 2024 09:25:28 -0400 | <span class="neu_news">Neutral</span></p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="newslist1">
+                      <a href="#" target="_blank">
+                        <img src="images/news-4.jpg" alt="Card Image">
+                      </a>
+                    </div>
+                    <div class="newslist2">
+                      <a href="#" target="_blank">
+                        <h6>Helen of Troy’s Q2 Success: Earnings Beat and Strategic Restructuring</h6>
+                      </a>
+                      <p>Helen of Troy (HELE, Financial) saw a significant turnaround in Q2, with shares rising 19%. The company…</p>
+                      <p class="smallTxt"><span class="blue_txt me-2">GuruFocus</span> | Wed, 09 Oct 2024 11:14:44 -0400 | <span class="neg_news">Negative</span></p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="newslist1">
+                      <a href="#" target="_blank">
+                        <img src="images/news-5.jpg" alt="Card Image">
+                      </a>
+                    </div>
+                    <div class="newslist2">
+                      <a href="#" target="_blank">
+                        <h6>Helen Of Troy Ltd (HELE) Q2 Earnings: EPS of $0.74 Beats Estimates, Revenue at $474.</h6>
+                      </a>
+                      <p>The future of Tesla’s Robotaxi project may be bright, but for now, caution is the name of the game.</p>
+                      <p class="smallTxt"><span class="blue_txt me-2">New York Post</span> | Wed, 09 Oct 2024 14:22:54 -0400 | <span class="pos_news">Positive</span></p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="newslist1">
+                      <a href="#" target="_blank">
+                        <img src="images/news-1.jpg" alt="Card Image">
+                      </a>
+                    </div>
+                    <div class="newslist2">
+                      <a href="#" target="_blank">
+                        <h6>Analysts revise Tesla stock price target</h6>
+                      </a>
+                      <p>Despite the popularity and prominence of the electric vehicle (EV), Tesla (NASDAQ: TSLA) has been on rather shaky g…</p>
+                      <p class="smallTxt"><span class="blue_txt me-2">Investors Business Daily</span> | Wed, 09 Oct 2024 11:02:45 -0400 | <span class="neg_news">Negative</span></p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="newslist1">
+                      <a href="#" target="_blank">
+                        <img src="images/news-2.jpg" alt="Card Image">
+                      </a>
+                    </div>
+                    <div class="newslist2">
+                      <a href="#" target="_blank">
+                        <h6>Tesla robotaxi set to have two seats, Musk to discuss FSD for Semi</h6>
+                      </a>
+                      <p>Tesla’s robotaxi is set to have two front seats and butterfly-wing doors and CEO Elon Musk is expected to discuss d…</p>
+                      <p class="smallTxt"><span class="blue_txt me-2">Reuters</span>Reuters | Wed, 09 Oct 2024 10:35:49 -0400 | <span class="pos_news">Positive</span></p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--====== TUTORIAL VIDEO POPUP BEGIN ======-->
+        <div class="modal upgrade_popup watchVideo fade" id="favList" tabindex="-1" aria-labelledby="favList_modalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-body">
+                <button type="button" class="close_btn" data-bs-dismiss="modal" aria-label="Close"><span class="material-icons">close</span></button>
+                <div class="modal_body">
+                  <iframe src="https://www.youtube.com/embed/C5iIh5bDf_M?si=9IQ_QFpflhH9zFs4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--====== TUTORIAL VIDEO POPUP END ========-->
+        <!--========= STOCK NEWS POPUP BEGIN ========-->
+        <div class="modal large_popup fade" id="dataModal1" tabindex="-1" aria-labelledby="dataModal1lLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-body">
+                <button type="button" class="close_btn" data-bs-dismiss="modal" aria-label="Close"><span class="material-icons">close</span></button>
+                <div class="modal_body">
+                  <h5>Stock News</h5>
+                  <div class="expand_Border">
+                    <div class="news_list popupList_scroll" id="modalContent1">
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--========== STOCK NEWS POPUP END =========-->
+        <!--========== ANALYST POPUP BEGIN ==========-->
+        <div class="modal large_popup fade" id="dataModal2" tabindex="-1" aria-labelledby="dataModal2Label" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-body">
+                <button type="button" class="close_btn" data-bs-dismiss="modal" aria-label="Close"><span class="material-icons">close</span></button>
+                <div class="modal_body">
+                  <h5>Analyst</h5>
+                  <div class="">
+                    <div id="chartdiv"></div>
+                  </div>
+                  <div class="expand_Border">
+                    <div class="analyst_list popupList_scroll scroll_x" id="modalContent2">
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--=========== ANALYST POPUP END ===========-->
+      </div>
+    </div>
+  </div>
+</div>
+<!-- scripts-->
+<script src="js/jquery.min.js"></script>
+<script src="js/magnific-popup-svg4-app.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<!--=========== TOOLTIP SCRIPT ==========-->
+<script>
+  const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+  const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+</script>
+<!--========= TOOLTIP SCRIPT END ========-->
+<script>
+  $(document).ready(function(){
+    $('.notes_field2 input').click(function(){
+      $(this).parent().parent(".news_search").find(".sidebarSearch__list").css({
+        "visibility": "visible" , 
+        "opacity": "1"
+      });
+    });
+  });
+  $(document).click(function() {
+    var container = $(".notes_field2");
+    if (!container.is(event.target) && !container.has(event.target).length) {
+      container.parent(".news_search").find(".sidebarSearch__list").css({
+        "visibility": "hidden" , 
+        "opacity": "0"
+       });
+    }
+  });
+</script>
+<script>
+  $(document).ready(function(){
+    $('.notes_field3 input').click(function(){
+      $(this).parent().parent(".news_search").find(".sidebarSearch__list").css({
+        "visibility": "visible" , 
+        "opacity": "1"
+      });
+    });
+  });
+  $(document).click(function() {
+    var container2 = $(".notes_field3");
+    if (!container2.is(event.target) && !container2.has(event.target).length) {
+      container2.parent(".news_search").find(".sidebarSearch__list").css({
+        "visibility": "hidden" , 
+        "opacity": "0"
+       });
+    }
+  });
+</script>
+<script>
+  $(document).ready(function () {
+    $("#openModal1").click(function () {
+      $("#modalContent1").html($("#dataDiv1").html());
+      $("#dataModal1").modal('show');
+    });
+  });
+</script>
+<script>
+  $(document).ready(function () {
+    $("#openModal2").click(function () {
+      $("#modalContent2").html($("#dataDiv2").html());
+      $("#dataModal2").modal('show');
+    });
+  });
+</script>
+<script>
+  $('.high_news .nav_link').on('click', function (e) {
+    e.preventDefault();
+    $('.high_news .nav_link').removeClass('active');
+    $(this).toggleClass('active');
+  });
+</script>
+<script>
+  $('.topic_news .nav_link').on('click', function (e) {
+    e.preventDefault();
+    $('.topic_news .nav_link').removeClass('active');
+    $(this).toggleClass('active');
+  });
+</script>
+<script>
+  $('.gen_news .nav_link').on('click', function (e) {
+    e.preventDefault();
+    $('.gen_news .nav_link').removeClass('active');
+    $(this).toggleClass('active');
+  });
+</script>
+<script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/themes/Responsive.js"></script>
+<!--======= ANALYST CHART START =======-->
+<script>
+  am5.ready(function(){
+    am5.addLicense("AM5C311897715");
+    var root = am5.Root.new("chartdiv");
+    var myTheme = am5.Theme.new(root);
+    myTheme.rule("Grid", ["base"]).setAll({
+      strokeOpacity: 0.1
+    });
+    root.setThemes([
+      am5themes_Animated.new(root),
+      myTheme
+    ]);
+    var chart = root.container.children.push(am5xy.XYChart.new(root, {
+      panX: false,
+      panY: false,
+      wheelX: "panY",
+      wheelY: "zoomY",
+      paddingLeft: 0,
+      layout: root.verticalLayout
+    }));
+    var data = [{
+      "quotedate": "18-10-2024",
+      "neutral": 0.9,
+      "negative": 2,
+      "positive": 3.5
+    }];
+    var yRenderer = am5xy.AxisRendererY.new(root, {minGridDistance:20});
+    var yAxis = chart.yAxes.push(am5xy.CategoryAxis.new(root, {
+      categoryField: "quotedate",
+      renderer: yRenderer,
+      tooltip: am5.Tooltip.new(root, {})
+    }));
+    yRenderer.grid.template.setAll({
+      location: 1
+    });
+    yAxis.data.setAll(data);
+    var xAxis = chart.xAxes.push(am5xy.ValueAxis.new(root, {
+      min: 0,
+      maxPrecision: 0,
+      renderer: am5xy.AxisRendererX.new(root, {
+        minGridDistance: 20,
+        strokeOpacity: 0.1
+      })
+    }));
+    var legend = chart.children.push(am5.Legend.new(root, {
+      centerX: am5.p50,
+      x: am5.p50
+    }));
+    function makeSeries(name, fieldName, color) {
+      var series = chart.series.push(am5xy.ColumnSeries.new(root, {
+        name: name,
+        stacked: true,
+        xAxis: xAxis,
+        yAxis: yAxis,
+        baseAxis: yAxis,
+        valueXField: fieldName,
+        categoryYField: "quotedate",
+      }));
+      series.columns.template.setAll({
+        tooltipText: "{name}, {categoryY}: {valueX}",
+        tooltipY: am5.percent(90),
+        fill: color, 
+        stroke: color 
+      });
+      series.data.setAll(data);
+      series.appear();
+      series.bullets.push(function () {
+        return am5.Bullet.new(root, {
+          sprite: am5.Label.new(root, {
+            text: "{valueX}",
+            fill: root.interfaceColors.get("alternativeText"),
+            centerY: am5.p50,
+            centerX: am5.p50,
+            populateText: true
+          })
+        });
+      });
+      legend.data.push(series);
+    }
+    makeSeries("Neutral", "neutral", am5.color(0xf2c312)); 
+    makeSeries("Negative", "negative", am5.color(0xD93872));
+    makeSeries("Positive", "positive", am5.color(0x10A861)); 
+
+    chart.appear(1000, 100);
+  }); 
+</script>
+<!--======== ANALYST CHART END ========-->
+<script src="js/chart-js/highcharts.js"></script>
+<script>
+  var data = [
+    { date: '01/12/2025', negative: 22, neutral: 15, positive: 35 },
+    { date: '02/12/2025', negative: 25, neutral: 18, positive: 38 },
+    { date: '03/12/2025', negative: 28, neutral: 20, positive: 40 },
+    { date: '04/12/2025', negative: 30, neutral: 22, positive: 42 },
+    { date: '05/12/2025', negative: 35, neutral: 25, positive: 45 },
+    { date: '06/12/2025', negative: 32, neutral: 23, positive: 43 },
+    { date: '07/12/2025', negative: 38, neutral: 26, positive: 48 },
+    { date: '08/12/2025', negative: 40, neutral: 28, positive: 50 },
+    { date: '09/12/2025', negative: 42, neutral: 30, positive: 52 },
+    { date: '10/12/2025', negative: 45, neutral: 32, positive: 55 },
+    { date: '11/12/2025', negative: 48, neutral: 34, positive: 58 },
+    { date: '12/12/2025', negative: 46, neutral: 33, positive: 56 },
+    { date: '13/12/2025', negative: 44, neutral: 31, positive: 54 },
+    { date: '14/12/2025', negative: 47, neutral: 34, positive: 57 },
+    { date: '15/12/2025', negative: 50, neutral: 36, positive: 60 },
+    { date: '16/12/2025', negative: 52, neutral: 38, positive: 62 },
+    { date: '17/12/2025', negative: 54, neutral: 40, positive: 64 },
+    { date: '18/12/2025', negative: 56, neutral: 42, positive: 66 },
+    { date: '19/12/2025', negative: 58, neutral: 44, positive: 68 },
+    { date: '20/12/2025', negative: 60, neutral: 45, positive: 70 },
+    { date: '21/12/2025', negative: 62, neutral: 47, positive: 72 },
+    { date: '22/12/2025', negative: 64, neutral: 48, positive: 74 },
+    { date: '23/12/2025', negative: 66, neutral: 50, positive: 76 },
+    { date: '24/12/2025', negative: 68, neutral: 52, positive: 78 },
+    { date: '25/12/2025', negative: 70, neutral: 54, positive: 80 },
+    { date: '26/12/2025', negative: 72, neutral: 55, positive: 82 },
+    { date: '27/12/2025', negative: 74, neutral: 57, positive: 84 },
+    { date: '28/12/2025', negative: 76, neutral: 58, positive: 86 },
+    { date: '29/12/2025', negative: 78, neutral: 60, positive: 88 },
+    { date: '30/12/2025', negative: 80, neutral: 62, positive: 90 }
+  ];
+var processedData = data.map(d => ({
+  x: Date.UTC(
+    d.date.split('/')[2],       
+    d.date.split('/')[1] - 1,   
+    d.date.split('/')[0]       
+  ),
+  negative: d.negative,
+  neutral: d.neutral,
+  positive: d.positive
+}));
+var negativeData = processedData.map(d => [d.x, d.negative]);
+var neutralData  = processedData.map(d => [d.x, d.neutral]);
+var positiveData = processedData.map(d => [d.x, d.positive]);
+ 
+Highcharts.chart('sentimentChart2', {
+  chart: {
+    type: 'area',
+    spacing: [5, 0, -5, 0],
+    marginBottom: 70,
+    backgroundColor: 'transparent'
+  },
+  title: {
+    text: ''
+  },
+    xAxis: {
+    type: 'datetime',
+ 
+       startOnTick: true,
+  endOnTick: false,
+    labels: {
+       align: 'left',
+    format: '{value:%d %b, %Y}',
+    style: {
+      fontSize: '10px',
+       color:'#808191'
+    }
+    },
+    scrollbar:
+    {
+        enabled: true
+    },
+    },
+  yAxis: {
+    min:0,
+    max:220,
+    offset: -3,
+    gridLineColor: '#808191',
+    gridLineWidth: 0.4,
+    title: { text: '' },
+    labels: {
+    style: {
+      fontSize: '10px',
+      color:'#808191'
+    }
+    },
+  },
+  tooltip: {
+    shared: true,
+style: {
+    fontSize: '12px'
+  }
+  },
+  plotOptions: {
+  area: {
+    stacking: 'normal',
+    lineWidth: 0,
+    marker: { enabled: false }
+  }
+  },
+  legend: {
+   align: 'center',
+  verticalAlign: 'bottom',
+  itemStyle: {
+    fontSize: '14px',
+     color:'#808191'
+  },
+  itemMarginTop: 2,
+  itemMarginBottom: 2,
+  symbolPadding: 6
+  },
+  series: [
+    {
+      name: 'Negative',
+      data: negativeData,
+      color: {
+        linearGradient: { x1: 1, y1: 0.8, x2: 1, y2: 1 },
+        stops: [
+          [0, '#D93872'],  
+          [1, 'rgba(217,56,114,0.2)']
+        ]
+      }
+    },
+    {
+      name: 'Neutral',
+      data: neutralData,
+      color: {
+        linearGradient: { x1: 1, y1: 0.9, x2: 1, y2: 1 },
+        stops: [
+          [0, '#F2D14C'],
+          [1, 'rgba(242,209,76,0.25)']
+        ]
+      }
+    },
+    {
+      name: 'Positive',
+      data: positiveData,
+      color: {
+        linearGradient: { x1: 0, y1: 0, x2: 0, y2: 1 },
+        stops: [
+          [0, '#3CB371'],
+          [1, 'rgba(60,179,113,0.25)']
+        ]
+      }
+    }
+  ],
+  credits: {
+    enabled: false
+  },
+  
+});
+</script>
+</body>
+</html>
+  

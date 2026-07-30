@@ -1,0 +1,4710 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>OVTLYR | Sector Intelligence Map</title>
+<meta name="description" content="Turning Investor Behavior into Stock Market Success" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no" />
+<link rel="icon" type="image/ico" sizes="32x32" href="images/favicon-32x32.ico" />
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/css/bootstrap-datepicker.standalone.min.css" />
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta2/css/bootstrap-select.min.css" /> -->
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/latest-style.css" />
+<script>
+  var viewportmeta = document.querySelector('meta[name="viewport"]');
+  if (viewportmeta) {
+    if (screen.width < 320) {
+      var newScale = screen.width / 320;
+      viewportmeta.content = 'width=320, minimum-scale=' + newScale + ', maximum-scale=1.0, user-scalable=no, initial-scale=' + newScale + '';
+    } else {
+      viewportmeta.content = 'width=device-width, maximum-scale=1.0, initial-scale=1.0';
+    }
+  }
+</script>
+</head>
+<body>
+<script>
+  console.log(localStorage.getItem('darkMode'));
+  if (localStorage.getItem('darkMode') === "on") {
+    document.body.classList.add("dark");
+    document.addEventListener("DOMContentLoaded", function () {
+      document.querySelector('.js-switch-theme input').checked = true;
+    });
+  }
+</script>
+<div class="page toggle new_sidebar final_dashbd1">
+  <div class="sidebar active final_dashbd11">
+    <div class="sidebar__wrapper ovtlyr_sidebar">
+      <div class="sidebar__inner">
+        <div class="sidebar__list">
+          <div class="sidebar__group">
+            <div class="sidebar__menu">
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="dashboard-latest.html" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Dashboard">
+                  <div class="sidebar__icon">
+                    <img src="images/dashboard.svg" alt="Dashboard" />
+                  </div>
+                </a>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="market-breadth-latest.html" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Market Breadth">
+                  <div class="sidebar__icon">
+                    <img src="images/market-breadth.svg" alt="Market" />
+                  </div>
+                </a>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item active" href="sector-intelligence-map.html" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Sector Intelligence Map">
+                  <div class="sidebar__icon">
+                    <img src="images/sector-map.svg" alt="Sector Intelligence Map" />
+                  </div>
+                </a>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="stocks-etfs.html" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Screener">
+                  <div class="sidebar__icon">
+                    <img src="images/stock-etf.svg" alt="Stocks" />
+                  </div>
+                </a>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="watchlist.html" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Watchlist">
+                  <div class="sidebar__icon">
+                    <img src="images/watchlist.svg" alt="Star" />
+                  </div>
+                </a>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="news-and-analyst.html" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="News and Analyst Ratings">
+                  <div class="sidebar__icon">
+                    <img src="images/news.svg" alt="News" />
+                  </div>
+                </a>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="notification.html" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Notification & List Management">
+                  <div class="sidebar__icon">
+                    <img src="images/notification.svg" alt="Notification" />
+                  </div>
+                  <span class="noti_count2">10</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sidebar__inner final_dashbd111">
+        <div class="sidebar__list">
+          <div class="sidebar__group">
+            <div class="sidebar__menu">
+              <div class="side_dropdown">
+                <div class="profileDrop dropup-right dropup" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Training">
+                  <a class="sidebar__item p-0" href="#" id="trainingButton" data-bs-toggle="dropdown" aria-expanded="false">
+                    <div class="sidebar__icon">
+                      <img src="images/training.svg" alt="Training" />
+                    </div>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="trainingButton" >
+                    <li><a class="dropdown-item" href="documentation.html"><p class="mb-0">User Guide</p></a></li>
+                    <li><a class="dropdown-item" href="tutorials.html"><p class="mb-0">Training Index</p></a></li>
+                    <li><a class="dropdown-item" href="playlists.html" target="_blank"><p class="mb-0">Tutorials</p></a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="side_dropdown">
+                <div class="profileDrop dropup-right dropup" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Settings">
+                  <a class="sidebar__item p-0" href="#" id="settingsButton" data-bs-toggle="dropdown" aria-expanded="false">
+                    <div class="sidebar__icon">
+                      <img src="images/setting.svg" alt="setting" />
+                    </div>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="settingsButton">
+                    <li><a class="dropdown-item" href="subscription-all.html"><p class="mb-0">Subscription Management</p></a></li>
+                    <li><a class="dropdown-item" href="notification.html"><p class="mb-0">Notification Management</p></a></li>
+                    <li><a class="dropdown-item" href="promoter.html"><p class="mb-0">Referral Dashboard</p></a></li>
+                    <!-- <li><a class="dropdown-item" href="documentation.html"><p class="mb-0">Documentation</p></a></li>
+                    <li><a class="dropdown-item" href="tutorials.html"><p class="mb-0">Tutorials</p></a></li>
+                    <li><a class="dropdown-item" href="playlists.html" target="_blank"><p class="mb-0">Video Tutorials</p></a></li> -->
+                    <li><a class="dropdown-item" href="contact.html"><p class="mb-0">Contact Us</p></a></li>
+                    <li>
+                      <a class="dropdown-item" href="javascript:void(0);">
+                        <p class="switchThemeBtn mb-0">
+                          <span>Theme</span>
+                          <label class="switch switch_theme js-switch-theme mt-0">
+                            <input class="switch__input" type="checkbox">
+                            <span class="switch__in">
+                              <span class="switch__box"></span>
+                              <span class="switch__icon">
+                                <span class="material-symbols-outlined icon-sun">dark_mode</span>
+                                <span class="material-symbols-outlined icon-moon">light_mode</span>
+                              </span>
+                            </span>
+                          </label>
+                        </p>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="side_dropdown">
+                <div class="profileDrop dropup-right dropup" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Discord">
+                  <a class="sidebar__item p-0" href="#" id="discordButton" data-bs-toggle="dropdown" aria-expanded="false">
+                    <div class="sidebar__icon">
+                      <img src="images/discord.svg" alt="Discord" />
+                    </div>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="discordButton" >
+                    <li><a class="dropdown-item" href="https://discord.gg/MtQ9dctJu5" target="_blank"><p class="mb-0">First-Time Verify</p></a></li>
+                    <li><a class="dropdown-item" href="https://discord.com/channels/@me" target="_blank"><p class="mb-0">Open Discord</p></a></li>
+                  </ul>
+                </div>
+              </div>
+              <!-- <div class="side_dropdown">
+                <a class="sidebar__item" href="https://discord.gg/MtQ9dctJu5" target="_blank" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Discord">
+                  <div class="sidebar__icon">
+                    <img src="images/discord.svg" alt="Discord" />
+                  </div>
+                </a>
+              </div> -->
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="javascript:void(0);" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Logout">
+                  <div class="sidebar__icon">
+                    <img src="images/logout.svg" alt="Logout" />
+                  </div>
+                </a>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="profile.html" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Profile">
+                  <div class="sidebar__icon profile_icon">
+                    <img src="images/profile.svg" alt="Profile" />
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page__wrapper final_dashbd12">
+    <div class="page__center new_content">
+      <div class="dashboard_cont final_dashbd2 p-0">
+        <div class="group_filter0">
+          <div class="group_filter">
+            <h6>Groups:</h6>
+            <div class="profileDrop listtypeDrop HideShowDataCol">
+              <button type="button" class="dropdown-toggle" id="groupsView" data-bs-toggle="dropdown" aria-expanded="false">Sector Performance View</button>
+              <div class="sector_drop1">
+                <ul class="dropdown-menu selectedView" aria-labelledby="groupsView">
+                  <li><a href="javascript:void(0);" class="dropdown-item active"><p class="mb-0">Sector Performance View</p></a></li>
+                  <li><a href="javascript:void(0);" class="dropdown-item"><p class="mb-0">Sector List View</p></a></li>
+                  <li><a href="javascript:void(0);" class="dropdown-item"><p class="mb-0">Industry Performance View</p></a></li>
+                  <li><a href="javascript:void(0);" class="dropdown-item"><p class="mb-0">Industry List View</p></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="group_filter">
+            <h6>Order By:</h6>
+            <div class="profileDrop listtypeDrop HideShowDataCol">
+              <button type="button" class="dropdown-toggle" id="orderBy" data-bs-toggle="dropdown" aria-expanded="false">Ascending</button>
+              <div class="sector_drop2">
+                <ul class="dropdown-menu" aria-labelledby="orderBy">
+                  <li><a href="javascript:void(0);" class="dropdown-item active"><p class="mb-0">Ascending</p></a></li>
+                  <li><a href="javascript:void(0);" class="dropdown-item"><p class="mb-0">Descending</p></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="group_view">
+          <div class="secPerView">
+            <div class="secPerView1">
+              <div class="secPerView11">
+                <h3>1 Day Performance</h3>
+                <div id="sector-performance"></div>
+              </div>
+              <div class="secPerView11">
+                <h3>1 Week Performance</h3>
+              </div>
+              <div class="secPerView11">
+                <h3>1 Month Performance</h3>
+              </div>
+              <div class="secPerView11">
+                <h3>3 Month Performance</h3>
+              </div>
+              <div class="secPerView11">
+                <h3>Half Year Performance</h3>
+              </div>
+              <div class="secPerView11">
+                <h3>1 Year Performance</h3>
+              </div>
+            </div>
+          </div>
+          <div class="secListView" style="display: none;">
+            <div class="secListView1 horizontal_scroll">
+              <table class="table ovtlyr_table" id="table1">
+                <thead class="sticky-top">
+                  <tr class="ovtlyr__row_head">
+                    <th width="4%" class="align__items">No.</th>
+                    <th width="16%" class="sortTable_col">Name</th>
+                    <th width="7%" class="sortTable_col">Perf Week</th>
+                    <th width="7%" class="sortTable_col">Perf Month</th>
+                    <th width="7%" class="sortTable_col">Perf Quart</th>
+                    <th width="7%" class="sortTable_col">Perf Half</th>
+                    <th width="7%" class="sortTable_col">Perf Year</th>
+                    <th width="8%" class="sortTable_col">Buy Count(%)</th>
+                    <th width="8%" class="sortTable_col">Avg Volume</th>
+                    <th width="7%" class="sortTable_col">Rel Volume</th>
+                    <th width="7%" class="sortTable_col">Change</th>
+                    <th width="7%" class="sortTable_col">Volume</th>
+                    <th width="8%" class="sortTable_col">Sector Relative Greed</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="ovtlyr__row">
+                    <td class="align__items"><p>1</p></td>
+                    <td>
+                      <a href="#" class="inblock_txt" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Basic Materials">
+                        <p class="company_name text_blue">Basic Materials</p>
+                      </a>
+                    </td>
+                    <td class="textRight"><p class="red_txt">-4.49%</p></td>
+                    <td class="textRight"><p class="red_txt">-3.66%</p></td>
+                    <td class="textRight"><p class="red_txt">-6.02%</p></td>
+                    <td class="textRight"><p class="green_txt">25.55%</p></td>
+                    <td class="textRight"><p class="green_txt">43.56%</p></td>
+                    <td class="textRight"><p>60%</p></td>
+                    <td class="textRight"><p>722.52M</p></td>
+                    <td class="textRight"><p>0.83</p></td>
+                    <td class="textRight"><p class="green_txt">0.76%</p></td>
+                    <td class="textRight"><p>596.13M</p></td>
+                    <td class="textRight"><p>< 1</p></td>
+                  </tr>
+                  <tr class="ovtlyr__row">
+                    <td class="align__items"><p>2</p></td>
+                    <td>
+                      <a href="#" class="inblock_txt" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Communication Services">
+                        <p class="company_name text_blue">Communication Services</p>
+                      </a>
+                    </td>
+                    <td class="textRight"><p class="red_txt">-1.82%</p></td>
+                    <td class="textRight"><p class="green_txt">4.05%</p></td>
+                    <td class="textRight"><p class="green_txt">8.77%</p></td>
+                    <td class="textRight"><p class="green_txt">13.46%</p></td>
+                    <td class="textRight"><p class="green_txt">37.72%</p></td>
+                    <td class="textRight"><p>55%</p></td>
+                    <td class="textRight"><p>685.96M</p></td>
+                    <td class="textRight"><p>0.89</p></td>
+                    <td class="textRight"><p class="green_txt">0.14%</p></td>
+                    <td class="textRight"><p>610.89M</p></td>
+                    <td class="textRight"><p>< 1</p></td>
+                  </tr>
+                  <tr class="ovtlyr__row">
+                    <td class="align__items"><p>3</p></td>
+                    <td>
+                      <a href="#" class="inblock_txt" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Consumer Cyclical">
+                        <p class="company_name text_blue">Consumer Cyclical</p>
+                      </a>
+                    </td>
+                    <td class="textRight"><p class="red_txt">-4.49%</p></td>
+                    <td class="textRight"><p class="red_txt">-3.66%</p></td>
+                    <td class="textRight"><p class="red_txt">-6.02%</p></td>
+                    <td class="textRight"><p class="green_txt">25.55%</p></td>
+                    <td class="textRight"><p class="green_txt">43.56%</p></td>
+                    <td class="textRight"><p>60%</p></td>
+                    <td class="textRight"><p>722.52M</p></td>
+                    <td class="textRight"><p>0.83</p></td>
+                    <td class="textRight"><p class="green_txt">0.76%</p></td>
+                    <td class="textRight"><p>596.13M</p></td>
+                    <td class="textRight"><p>> 1</p></td>
+                  </tr>
+                  <tr class="ovtlyr__row">
+                    <td class="align__items"><p>4</p></td>
+                    <td>
+                      <a href="#" class="inblock_txt" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Consumer Defensive">
+                        <p class="company_name text_blue">Consumer Defensive</p>
+                      </a>
+                    </td>
+                    <td class="textRight"><p class="red_txt">-1.82%</p></td>
+                    <td class="textRight"><p class="green_txt">4.05%</p></td>
+                    <td class="textRight"><p class="green_txt">8.77%</p></td>
+                    <td class="textRight"><p class="green_txt">13.46%</p></td>
+                    <td class="textRight"><p class="green_txt">37.72%</p></td>
+                    <td class="textRight"><p>55%</p></td>
+                    <td class="textRight"><p>685.96M</p></td>
+                    <td class="textRight"><p>0.89</p></td>
+                    <td class="textRight"><p class="green_txt">0.14%</p></td>
+                    <td class="textRight"><p>610.89M</p></td>
+                    <td class="textRight"><p>> 1</p></td>
+                  </tr>
+                  <tr class="ovtlyr__row">
+                    <td class="align__items"><p>5</p></td>
+                    <td>
+                      <a href="#" class="inblock_txt" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Energy">
+                        <p class="company_name text_blue">Energy</p>
+                      </a>
+                    </td>
+                    <td class="textRight"><p class="green_txt">1.16%</p></td>
+                    <td class="textRight"><p class="green_txt">3.19%</p></td>
+                    <td class="textRight"><p class="green_txt">10.30%</p></td>
+                    <td class="textRight"><p class="green_txt">30.71%</p></td>
+                    <td class="textRight"><p class="green_txt">44.34%</p></td>
+                    <td class="textRight"><p>55%</p></td>
+                    <td class="textRight"><p>802.67M</p></td>
+                    <td class="textRight"><p>0.80</p></td>
+                    <td class="textRight"><p class="red_txt">-0.59%</p></td>
+                    <td class="textRight"><p>640.95M</p></td>
+                    <td class="textRight"><p>> 1</p></td>
+                  </tr>
+                  <tr class="ovtlyr__row">
+                    <td class="align__items"><p>6</p></td>
+                    <td>
+                      <a href="#" class="inblock_txt" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Financial">
+                        <p class="company_name text_blue">Financial</p>
+                      </a>
+                    </td>
+                    <td class="textRight"><p class="green_txt">1.16%</p></td>
+                    <td class="textRight"><p class="green_txt">3.19%</p></td>
+                    <td class="textRight"><p class="green_txt">10.30%</p></td>
+                    <td class="textRight"><p class="green_txt">30.71%</p></td>
+                    <td class="textRight"><p class="green_txt">44.34%</p></td>
+                    <td class="textRight"><p>55%</p></td>
+                    <td class="textRight"><p>802.67M</p></td>
+                    <td class="textRight"><p>0.80</p></td>
+                    <td class="textRight"><p class="red_txt">-0.59%</p></td>
+                    <td class="textRight"><p>640.95M</p></td>
+                    <td class="textRight"><p>< 1</p></td>
+                  </tr>
+                  <tr class="ovtlyr__row">
+                    <td class="align__items"><p>7</p></td>
+                    <td>
+                      <a href="#" class="inblock_txt" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Healthcare">
+                        <p class="company_name text_blue">Healthcare</p>
+                      </a>
+                    </td>
+                    <td class="textRight"><p class="green_txt">1.16%</p></td>
+                    <td class="textRight"><p class="green_txt">3.19%</p></td>
+                    <td class="textRight"><p class="green_txt">10.30%</p></td>
+                    <td class="textRight"><p class="green_txt">30.71%</p></td>
+                    <td class="textRight"><p class="green_txt">44.34%</p></td>
+                    <td class="textRight"><p>55%</p></td>
+                    <td class="textRight"><p>802.67M</p></td>
+                    <td class="textRight"><p>0.80</p></td>
+                    <td class="textRight"><p class="red_txt">-0.59%</p></td>
+                    <td class="textRight"><p>640.95M</p></td>
+                    <td class="textRight"><p>< 1</p></td>
+                  </tr>
+                  <tr class="ovtlyr__row">
+                    <td class="align__items"><p>8</p></td>
+                    <td>
+                      <a href="#" class="inblock_txt" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Industrials">
+                        <p class="company_name text_blue">Industrials</p>
+                      </a>
+                    </td>
+                    <td class="textRight"><p class="red_txt">-4.49%</p></td>
+                    <td class="textRight"><p class="red_txt">-3.66%</p></td>
+                    <td class="textRight"><p class="red_txt">-6.02%</p></td>
+                    <td class="textRight"><p class="green_txt">25.55%</p></td>
+                    <td class="textRight"><p class="green_txt">43.56%</p></td>
+                    <td class="textRight"><p>60%</p></td>
+                    <td class="textRight"><p>722.52M</p></td>
+                    <td class="textRight"><p>0.83</p></td>
+                    <td class="textRight"><p class="green_txt">0.76%</p></td>
+                    <td class="textRight"><p>596.13M</p></td>
+                    <td class="textRight"><p>< 1</p></td>
+                  </tr>
+                  <tr class="ovtlyr__row">
+                    <td class="align__items"><p>9</p></td>
+                    <td>
+                      <a href="#" class="inblock_txt" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Real Estate">
+                        <p class="company_name text_blue">Real Estate</p>
+                      </a>
+                    </td>
+                    <td class="textRight"><p class="green_txt">1.16%</p></td>
+                    <td class="textRight"><p class="green_txt">3.19%</p></td>
+                    <td class="textRight"><p class="green_txt">10.30%</p></td>
+                    <td class="textRight"><p class="green_txt">30.71%</p></td>
+                    <td class="textRight"><p class="green_txt">44.34%</p></td>
+                    <td class="textRight"><p>55%</p></td>
+                    <td class="textRight"><p>802.67M</p></td>
+                    <td class="textRight"><p>0.80</p></td>
+                    <td class="textRight"><p class="red_txt">-0.59%</p></td>
+                    <td class="textRight"><p>640.95M</p></td>
+                    <td class="textRight"><p>< 1</p></td>
+                  </tr>
+                  <tr class="ovtlyr__row">
+                    <td class="align__items"><p>10</p></td>
+                    <td>
+                      <a href="#" class="inblock_txt" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Technology">
+                        <p class="company_name text_blue">Technology</p>
+                      </a>
+                    </td>
+                    <td class="textRight"><p class="red_txt">-4.49%</p></td>
+                    <td class="textRight"><p class="red_txt">-3.66%</p></td>
+                    <td class="textRight"><p class="red_txt">-6.02%</p></td>
+                    <td class="textRight"><p class="green_txt">25.55%</p></td>
+                    <td class="textRight"><p class="green_txt">43.56%</p></td>
+                    <td class="textRight"><p>60%</p></td>
+                    <td class="textRight"><p>722.52M</p></td>
+                    <td class="textRight"><p>0.83</p></td>
+                    <td class="textRight"><p class="green_txt">0.76%</p></td>
+                    <td class="textRight"><p>596.13M</p></td>
+                    <td class="textRight"><p>< 1</p></td>
+                  </tr>
+                  <tr class="ovtlyr__row">
+                    <td class="align__items"><p>11</p></td>
+                    <td>
+                      <a href="#" class="inblock_txt" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Utilities">
+                        <p class="company_name text_blue">Utilities</p>
+                      </a>
+                    </td>
+                    <td class="textRight"><p class="green_txt">1.16%</p></td>
+                    <td class="textRight"><p class="green_txt">3.19%</p></td>
+                    <td class="textRight"><p class="green_txt">10.30%</p></td>
+                    <td class="textRight"><p class="green_txt">30.71%</p></td>
+                    <td class="textRight"><p class="green_txt">44.34%</p></td>
+                    <td class="textRight"><p>55%</p></td>
+                    <td class="textRight"><p>802.67M</p></td>
+                    <td class="textRight"><p>0.80</p></td>
+                    <td class="textRight"><p class="red_txt">-0.59%</p></td>
+                    <td class="textRight"><p>640.95M</p></td>
+                    <td class="textRight"><p>< 1</p></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="indPerView" style="display: none;">
+            <div class="secPerView1">
+              <div class="secPerView11">
+                <h3>1 Day Performance</h3>
+                <div id="industry-performance"></div>
+              </div>
+              <div class="secPerView11">
+                <h3>1 Week Performance</h3>
+              </div>
+              <div class="secPerView11">
+                <h3>1 Month Performance</h3>
+              </div>
+              <div class="secPerView11">
+                <h3>3 Month Performance</h3>
+              </div>
+              <div class="secPerView11">
+                <h3>Half Year Performance</h3>
+              </div>
+              <div class="secPerView11">
+                <h3>1 Year Performance</h3>
+              </div>
+            </div>
+          </div>
+          <div class="indListView" style="display: none;">
+            <div class="secListView1 horizontal_scroll">
+              <table class="table ovtlyr_table" id="table2">
+                <thead class="sticky-top">
+                  <tr class="ovtlyr__row_head">
+                    <th width="4%" class="align__items">No.</th>
+                    <th width="16%" class="sortTable_col">Name</th>
+                    <th width="7%" class="sortTable_col">Perf Week</th>
+                    <th width="7%" class="sortTable_col">Perf Month</th>
+                    <th width="7%" class="sortTable_col">Perf Quart</th>
+                    <th width="7%" class="sortTable_col">Perf Half</th>
+                    <th width="7%" class="sortTable_col">Perf Year</th>
+                    <th width="8%" class="sortTable_col">Buy Count(%)</th>
+                    <th width="8%" class="sortTable_col">Avg Volume</th>
+                    <th width="7%" class="sortTable_col">Rel Volume</th>
+                    <th width="7%" class="sortTable_col">Change</th>
+                    <th width="7%" class="sortTable_col">Volume</th>
+                    <th width="8%" class="sortTable_col">Sector Relative Greed</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="ovtlyr__row">
+                    <td class="align__items"><p>1</p></td>
+                    <td>
+                      <a href="#" class="inblock_txt" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Advertising Agencies">
+                        <p class="company_name text_blue">Advertising Agencies</p>
+                      </a>
+                    </td>
+                    <td class="textRight"><p class="red_txt">-4.49%</p></td>
+                    <td class="textRight"><p class="red_txt">-3.66%</p></td>
+                    <td class="textRight"><p class="red_txt">-6.02%</p></td>
+                    <td class="textRight"><p class="green_txt">25.55%</p></td>
+                    <td class="textRight"><p class="green_txt">43.56%</p></td>
+                    <td class="textRight"><p>60%</p></td>
+                    <td class="textRight"><p>722.52M</p></td>
+                    <td class="textRight"><p>0.83</p></td>
+                    <td class="textRight"><p class="green_txt">0.76%</p></td>
+                    <td class="textRight"><p>596.13M</p></td>
+                    <td class="textRight"><p>< 1</p></td>
+                  </tr>
+                  <tr class="ovtlyr__row">
+                    <td class="align__items"><p>2</p></td>
+                    <td>
+                      <a href="#" class="inblock_txt" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Aerospace & Defense">
+                        <p class="company_name text_blue">Aerospace & Defense</p>
+                      </a>
+                    </td>
+                    <td class="textRight"><p class="red_txt">-1.82%</p></td>
+                    <td class="textRight"><p class="green_txt">4.05%</p></td>
+                    <td class="textRight"><p class="green_txt">8.77%</p></td>
+                    <td class="textRight"><p class="green_txt">13.46%</p></td>
+                    <td class="textRight"><p class="green_txt">37.72%</p></td>
+                    <td class="textRight"><p>55%</p></td>
+                    <td class="textRight"><p>685.96M</p></td>
+                    <td class="textRight"><p>0.89</p></td>
+                    <td class="textRight"><p class="green_txt">0.14%</p></td>
+                    <td class="textRight"><p>610.89M</p></td>
+                    <td class="textRight"><p>< 1</p></td>
+                  </tr>
+                  <tr class="ovtlyr__row">
+                    <td class="align__items"><p>3</p></td>
+                    <td>
+                      <a href="#" class="inblock_txt" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Agricultural Inputs">
+                        <p class="company_name text_blue">Agricultural Inputs</p>
+                      </a>
+                    </td>
+                    <td class="textRight"><p class="red_txt">-4.49%</p></td>
+                    <td class="textRight"><p class="red_txt">-3.66%</p></td>
+                    <td class="textRight"><p class="red_txt">-6.02%</p></td>
+                    <td class="textRight"><p class="green_txt">25.55%</p></td>
+                    <td class="textRight"><p class="green_txt">43.56%</p></td>
+                    <td class="textRight"><p>60%</p></td>
+                    <td class="textRight"><p>722.52M</p></td>
+                    <td class="textRight"><p>0.83</p></td>
+                    <td class="textRight"><p class="green_txt">0.76%</p></td>
+                    <td class="textRight"><p>596.13M</p></td>
+                    <td class="textRight"><p>> 1</p></td>
+                  </tr>
+                  <tr class="ovtlyr__row">
+                    <td class="align__items"><p>4</p></td>
+                    <td>
+                      <a href="#" class="inblock_txt" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Airlines">
+                        <p class="company_name text_blue">Airlines</p>
+                      </a>
+                    </td>
+                    <td class="textRight"><p class="red_txt">-1.82%</p></td>
+                    <td class="textRight"><p class="green_txt">4.05%</p></td>
+                    <td class="textRight"><p class="green_txt">8.77%</p></td>
+                    <td class="textRight"><p class="green_txt">13.46%</p></td>
+                    <td class="textRight"><p class="green_txt">37.72%</p></td>
+                    <td class="textRight"><p>55%</p></td>
+                    <td class="textRight"><p>685.96M</p></td>
+                    <td class="textRight"><p>0.89</p></td>
+                    <td class="textRight"><p class="green_txt">0.14%</p></td>
+                    <td class="textRight"><p>610.89M</p></td>
+                    <td class="textRight"><p>> 1</p></td>
+                  </tr>
+                  <tr class="ovtlyr__row">
+                    <td class="align__items"><p>5</p></td>
+                    <td>
+                      <a href="#" class="inblock_txt" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Airports & Air Services">
+                        <p class="company_name text_blue">Airports & Air Services</p>
+                      </a>
+                    </td>
+                    <td class="textRight"><p class="green_txt">1.16%</p></td>
+                    <td class="textRight"><p class="green_txt">3.19%</p></td>
+                    <td class="textRight"><p class="green_txt">10.30%</p></td>
+                    <td class="textRight"><p class="green_txt">30.71%</p></td>
+                    <td class="textRight"><p class="green_txt">44.34%</p></td>
+                    <td class="textRight"><p>55%</p></td>
+                    <td class="textRight"><p>802.67M</p></td>
+                    <td class="textRight"><p>0.80</p></td>
+                    <td class="textRight"><p class="red_txt">-0.59%</p></td>
+                    <td class="textRight"><p>640.95M</p></td>
+                    <td class="textRight"><p>> 1</p></td>
+                  </tr>
+                  <tr class="ovtlyr__row">
+                    <td class="align__items"><p>6</p></td>
+                    <td>
+                      <a href="#" class="inblock_txt" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Aluminum">
+                        <p class="company_name text_blue">Aluminum</p>
+                      </a>
+                    </td>
+                    <td class="textRight"><p class="green_txt">1.16%</p></td>
+                    <td class="textRight"><p class="green_txt">3.19%</p></td>
+                    <td class="textRight"><p class="green_txt">10.30%</p></td>
+                    <td class="textRight"><p class="green_txt">30.71%</p></td>
+                    <td class="textRight"><p class="green_txt">44.34%</p></td>
+                    <td class="textRight"><p>55%</p></td>
+                    <td class="textRight"><p>802.67M</p></td>
+                    <td class="textRight"><p>0.80</p></td>
+                    <td class="textRight"><p class="red_txt">-0.59%</p></td>
+                    <td class="textRight"><p>640.95M</p></td>
+                    <td class="textRight"><p>< 1</p></td>
+                  </tr>
+                  <tr class="ovtlyr__row">
+                    <td class="align__items"><p>7</p></td>
+                    <td>
+                      <a href="#" class="inblock_txt" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Apparel Manufacturing">
+                        <p class="company_name text_blue">Apparel Manufacturing</p>
+                      </a>
+                    </td>
+                    <td class="textRight"><p class="green_txt">1.16%</p></td>
+                    <td class="textRight"><p class="green_txt">3.19%</p></td>
+                    <td class="textRight"><p class="green_txt">10.30%</p></td>
+                    <td class="textRight"><p class="green_txt">30.71%</p></td>
+                    <td class="textRight"><p class="green_txt">44.34%</p></td>
+                    <td class="textRight"><p>55%</p></td>
+                    <td class="textRight"><p>802.67M</p></td>
+                    <td class="textRight"><p>0.80</p></td>
+                    <td class="textRight"><p class="red_txt">-0.59%</p></td>
+                    <td class="textRight"><p>640.95M</p></td>
+                    <td class="textRight"><p>< 1</p></td>
+                  </tr>
+                  <tr class="ovtlyr__row">
+                    <td class="align__items"><p>8</p></td>
+                    <td>
+                      <a href="#" class="inblock_txt" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Apparel Retail">
+                        <p class="company_name text_blue">Apparel Retail</p>
+                      </a>
+                    </td>
+                    <td class="textRight"><p class="red_txt">-4.49%</p></td>
+                    <td class="textRight"><p class="red_txt">-3.66%</p></td>
+                    <td class="textRight"><p class="red_txt">-6.02%</p></td>
+                    <td class="textRight"><p class="green_txt">25.55%</p></td>
+                    <td class="textRight"><p class="green_txt">43.56%</p></td>
+                    <td class="textRight"><p>60%</p></td>
+                    <td class="textRight"><p>722.52M</p></td>
+                    <td class="textRight"><p>0.83</p></td>
+                    <td class="textRight"><p class="green_txt">0.76%</p></td>
+                    <td class="textRight"><p>596.13M</p></td>
+                    <td class="textRight"><p>< 1</p></td>
+                  </tr>
+                  <tr class="ovtlyr__row">
+                    <td class="align__items"><p>9</p></td>
+                    <td>
+                      <a href="#" class="inblock_txt" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Asset Management">
+                        <p class="company_name text_blue">Asset Management</p>
+                      </a>
+                    </td>
+                    <td class="textRight"><p class="green_txt">1.16%</p></td>
+                    <td class="textRight"><p class="green_txt">3.19%</p></td>
+                    <td class="textRight"><p class="green_txt">10.30%</p></td>
+                    <td class="textRight"><p class="green_txt">30.71%</p></td>
+                    <td class="textRight"><p class="green_txt">44.34%</p></td>
+                    <td class="textRight"><p>55%</p></td>
+                    <td class="textRight"><p>802.67M</p></td>
+                    <td class="textRight"><p>0.80</p></td>
+                    <td class="textRight"><p class="red_txt">-0.59%</p></td>
+                    <td class="textRight"><p>640.95M</p></td>
+                    <td class="textRight"><p>< 1</p></td>
+                  </tr>
+                  <tr class="ovtlyr__row">
+                    <td class="align__items"><p>10</p></td>
+                    <td>
+                      <a href="#" class="inblock_txt" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Auto & Truck Dealerships">
+                        <p class="company_name text_blue">Auto & Truck Dealerships</p>
+                      </a>
+                    </td>
+                    <td class="textRight"><p class="red_txt">-4.49%</p></td>
+                    <td class="textRight"><p class="red_txt">-3.66%</p></td>
+                    <td class="textRight"><p class="red_txt">-6.02%</p></td>
+                    <td class="textRight"><p class="green_txt">25.55%</p></td>
+                    <td class="textRight"><p class="green_txt">43.56%</p></td>
+                    <td class="textRight"><p>60%</p></td>
+                    <td class="textRight"><p>722.52M</p></td>
+                    <td class="textRight"><p>0.83</p></td>
+                    <td class="textRight"><p class="green_txt">0.76%</p></td>
+                    <td class="textRight"><p>596.13M</p></td>
+                    <td class="textRight"><p>< 1</p></td>
+                  </tr>
+                  <tr class="ovtlyr__row">
+                    <td class="align__items"><p>11</p></td>
+                    <td>
+                      <a href="#" class="inblock_txt" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Auto Manufacturers">
+                        <p class="company_name text_blue">Auto Manufacturers</p>
+                      </a>
+                    </td>
+                    <td class="textRight"><p class="green_txt">1.16%</p></td>
+                    <td class="textRight"><p class="green_txt">3.19%</p></td>
+                    <td class="textRight"><p class="green_txt">10.30%</p></td>
+                    <td class="textRight"><p class="green_txt">30.71%</p></td>
+                    <td class="textRight"><p class="green_txt">44.34%</p></td>
+                    <td class="textRight"><p>55%</p></td>
+                    <td class="textRight"><p>802.67M</p></td>
+                    <td class="textRight"><p>0.80</p></td>
+                    <td class="textRight"><p class="red_txt">-0.59%</p></td>
+                    <td class="textRight"><p>640.95M</p></td>
+                    <td class="textRight"><p>< 1</p></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- scripts-->
+<script src="js/jquery.min.js"></script>
+<script src="js/magnific-popup-svg4-app.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script>
+  $(function () {
+    $("#table1").addSortWidget();
+    $("#table2").addSortWidget();
+  });
+</script>
+<!--=========== TOOLTIP SCRIPT ==========-->
+<script>
+  const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+  const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+</script>
+<!--========= TOOLTIP SCRIPT END ========-->
+<!--==== SIDEBAR DROPDOWN OPEN START ====-->
+<script>
+  $(document).ready(function(){
+    $('.dropdown_btn .sidebar__item').on('click', function(e){
+      $(this).parent().toggleClass('active');
+    });
+  });
+</script>
+<!--===== SIDEBAR DROPDOWN OPEN END =====-->
+<script>
+  $(document).ready(function () {
+    function showSelectedView(selectedText) {
+      // Hide all first
+      $('.secPerView, .secListView, .indPerView, .indListView').hide();
+      // Show according to selected text
+      if (selectedText === 'Sector Performance View') {
+        $('.secPerView').show();
+      }
+      else if (selectedText === 'Sector List View') {
+        $('.secListView').show();
+      }
+      else if (selectedText === 'Industry Performance View') {
+        $('.indPerView').show();
+      }
+      else if (selectedText === 'Industry List View') {
+        $('.indListView').show();
+      }
+      // Update button text
+      $('#groupsView').text(selectedText);
+    }
+
+    // Check initially selected item
+    let initialSelected = $('.selectedView .dropdown-item.active p').text().trim();
+    showSelectedView(initialSelected);
+    // On dropdown click
+    $('.selectedView .dropdown-item').on('click', function () {
+      $('.selectedView .dropdown-item').removeClass('active');
+      $(this).addClass('active');
+      let selectedText = $(this).find('p').text().trim();
+      showSelectedView(selectedText);
+    });
+  });
+</script>
+
+<!--========= CHART SCRIPT =========-->
+<script src="js/chart-js/highcharts.js"></script>
+<script>
+  // YOUR DATA
+  const raw = [
+    {
+      "Gics_sector": "Communication Services",
+      "Symbol": "XLC",
+      "Gics_Industry": "NA",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.894654343,
+      "Price_Change_Week": 2.937430884,
+      "Price_Change_Month": 3.715848144,
+      "Price_Change_Quarter": 11.27526201,
+      "Price_Change_HalfYear": 18.87285283,
+      "Price_Change_Year": 50.34321545,
+      "AverageVolume": 3921808.894,
+      "Volume": 3895853.793,
+      "Relative_Volume": 0.993381855,
+      "BuyCount": 12,
+      "TotalCount": 58,
+      "Buy_Percentage": 20.68965517,
+      "SectorGreed": 0,
+      "Category": "Sector"
+    },
+    {
+      "Gics_sector": "Consumer Discretionary",
+      "Symbol": "XLY",
+      "Gics_Industry": "NA",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.41880561,
+      "Price_Change_Week": 1.858845774,
+      "Price_Change_Month": 6.474965827,
+      "Price_Change_Quarter": 14.05033628,
+      "Price_Change_HalfYear": 5.540384857,
+      "Price_Change_Year": 15.49483576,
+      "AverageVolume": 2532405.227,
+      "Volume": 2570525.729,
+      "Relative_Volume": 1.015053081,
+      "BuyCount": 304,
+      "TotalCount": 677,
+      "Buy_Percentage": 44.90398818,
+      "SectorGreed": 1,
+      "Category": "Sector"
+    },
+    {
+      "Gics_sector": "Consumer Staples",
+      "Symbol": "XLP",
+      "Gics_Industry": "NA",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.304344207,
+      "Price_Change_Week": 1.387518027,
+      "Price_Change_Month": 1.038280394,
+      "Price_Change_Quarter": 0.843182519,
+      "Price_Change_HalfYear": -3.146236632,
+      "Price_Change_Year": -2.91684367,
+      "AverageVolume": 2888647.961,
+      "Volume": 2590321.916,
+      "Relative_Volume": 0.896724679,
+      "BuyCount": 37,
+      "TotalCount": 95,
+      "Buy_Percentage": 38.94736842,
+      "SectorGreed": 0,
+      "Category": "Sector"
+    },
+    {
+      "Gics_sector": "Energy",
+      "Symbol": "XLE",
+      "Gics_Industry": "NA",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.238002928,
+      "Price_Change_Week": -3.867387133,
+      "Price_Change_Month": -7.35303556,
+      "Price_Change_Quarter": -1.347464427,
+      "Price_Change_HalfYear": 25.23403968,
+      "Price_Change_Year": 43.88383922,
+      "AverageVolume": 3746381.663,
+      "Volume": 3564323.446,
+      "Relative_Volume": 0.951404253,
+      "BuyCount": 11,
+      "TotalCount": 131,
+      "Buy_Percentage": 8.396946565,
+      "SectorGreed": 0,
+      "Category": "Sector"
+    },
+    {
+      "Gics_sector": "Financials",
+      "Symbol": "XLF",
+      "Gics_Industry": "NA",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.115341986,
+      "Price_Change_Week": 1.492115213,
+      "Price_Change_Month": 4.148862767,
+      "Price_Change_Quarter": 9.972164386,
+      "Price_Change_HalfYear": 2.474792917,
+      "Price_Change_Year": 16.19757842,
+      "AverageVolume": 1299174.931,
+      "Volume": 1334334.162,
+      "Relative_Volume": 1.027062738,
+      "BuyCount": 486,
+      "TotalCount": 869,
+      "Buy_Percentage": 55.92635213,
+      "SectorGreed": 1,
+      "Category": "Sector"
+    },
+    {
+      "Gics_sector": "Health Care",
+      "Symbol": "XLV",
+      "Gics_Industry": "NA",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.953644588,
+      "Price_Change_Week": 0.747223182,
+      "Price_Change_Month": 1.517531437,
+      "Price_Change_Quarter": 5.96813069,
+      "Price_Change_HalfYear": -0.131036308,
+      "Price_Change_Year": 32.19046799,
+      "AverageVolume": 2086739.246,
+      "Volume": 1744584.447,
+      "Relative_Volume": 0.836033755,
+      "BuyCount": 160,
+      "TotalCount": 541,
+      "Buy_Percentage": 29.57486137,
+      "SectorGreed": 0,
+      "Category": "Sector"
+    },
+    {
+      "Gics_sector": "Industrials",
+      "Symbol": "XLI",
+      "Gics_Industry": "NA",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.94449338,
+      "Price_Change_Week": 1.311889786,
+      "Price_Change_Month": 5.793853206,
+      "Price_Change_Quarter": 17.87696385,
+      "Price_Change_HalfYear": 19.79147793,
+      "Price_Change_Year": 47.94388787,
+      "AverageVolume": 2811054.086,
+      "Volume": 4168692.733,
+      "Relative_Volume": 1.482964257,
+      "BuyCount": 168,
+      "TotalCount": 413,
+      "Buy_Percentage": 40.6779661,
+      "SectorGreed": 0,
+      "Category": "Sector"
+    },
+    {
+      "Gics_sector": "Information Technology",
+      "Symbol": "XLK",
+      "Gics_Industry": "NA",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -1.390561008,
+      "Price_Change_Week": 2.7424614,
+      "Price_Change_Month": 5.621811717,
+      "Price_Change_Quarter": 30.1362062,
+      "Price_Change_HalfYear": 27.83779919,
+      "Price_Change_Year": 64.92179638,
+      "AverageVolume": 5930981.148,
+      "Volume": 6131173.164,
+      "Relative_Volume": 1.033753609,
+      "BuyCount": 82,
+      "TotalCount": 436,
+      "Buy_Percentage": 18.80733945,
+      "SectorGreed": 1,
+      "Category": "Sector"
+    },
+    {
+      "Gics_sector": "Materials",
+      "Symbol": "XLB",
+      "Gics_Industry": "NA",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.291901795,
+      "Price_Change_Week": 10.66757887,
+      "Price_Change_Month": 2.127943073,
+      "Price_Change_Quarter": 11.43437269,
+      "Price_Change_HalfYear": 11.08533904,
+      "Price_Change_Year": 65.38650845,
+      "AverageVolume": 4952763.822,
+      "Volume": 4398205.475,
+      "Relative_Volume": 0.888030529,
+      "BuyCount": 13,
+      "TotalCount": 61,
+      "Buy_Percentage": 21.31147541,
+      "SectorGreed": 0,
+      "Category": "Sector"
+    },
+    {
+      "Gics_sector": "Real Estate",
+      "Symbol": "XLRE",
+      "Gics_Industry": "NA",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.109283444,
+      "Price_Change_Week": -0.909622211,
+      "Price_Change_Month": 2.719996805,
+      "Price_Change_Quarter": 6.791431627,
+      "Price_Change_HalfYear": 5.306573156,
+      "Price_Change_Year": 9.297710963,
+      "AverageVolume": 1691896.84,
+      "Volume": 1601667.324,
+      "Relative_Volume": 0.946669611,
+      "BuyCount": 83,
+      "TotalCount": 182,
+      "Buy_Percentage": 45.6043956,
+      "SectorGreed": 1,
+      "Category": "Sector"
+    },
+    {
+      "Gics_sector": "Utilities",
+      "Symbol": "XLU",
+      "Gics_Industry": "NA",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.115155039,
+      "Price_Change_Week": 0.021710854,
+      "Price_Change_Month": 1.018619624,
+      "Price_Change_Quarter": 1.6740275,
+      "Price_Change_HalfYear": 8.083786466,
+      "Price_Change_Year": 21.97023074,
+      "AverageVolume": 2586580.021,
+      "Volume": 2210584.761,
+      "Relative_Volume": 0.854636138,
+      "BuyCount": 49,
+      "TotalCount": 117,
+      "Buy_Percentage": 41.88034188,
+      "SectorGreed": 0,
+      "Category": "Sector"
+    }
+  ]
+
+  // FIELD TO DISPLAY
+  const metric = "Price_Change_Year";
+
+  // COLOR SCALE
+  const positiveColors = [
+    '#4B8E63', // darkest green
+    '#4A9B5F',
+    '#49A95B',
+    '#47B757',
+    '#44C752',
+    '#3FD44D',
+    '#30cc5a'  // brightest green
+  ];
+
+  const negativeColors = [
+    '#92484D',
+    '#A1494B',
+    '#B84848',
+    '#C64945',
+    '#D44943',
+    '#FF3B3F'
+  ];
+
+  // SORT BY ACTUAL VALUE
+  const sorted = [...raw].sort(
+    (a, b) => b[metric] - a[metric]
+  );
+
+  const maxPositive = Math.max(
+    ...sorted
+      .filter(d => d[metric] > 0)
+      .map(d => d[metric]),
+    1
+  );
+
+  const maxNegative = Math.max(
+    ...sorted
+      .filter(d => d[metric] < 0)
+      .map(d => Math.abs(d[metric])),
+    1
+  );
+
+  // PREPARE CHART DATA
+  const chartData = sorted.map(item => {
+
+    const value = Number(item[metric]);
+
+    let color;
+
+    if (value >= 0) {
+
+      const idx = Math.min(
+        positiveColors.length - 1,
+        Math.floor(
+          (value / maxPositive) *
+          positiveColors.length
+        )
+      );
+
+      color = positiveColors[idx];
+
+    } else {
+
+      const idx = Math.min(
+        negativeColors.length - 1,
+        Math.floor(
+          (Math.abs(value) / maxNegative) *
+          negativeColors.length
+        )
+      );
+
+      color = negativeColors[idx];
+    }
+
+    return {
+      name: item.Gics_sector,
+      y: Math.abs(value), // always positive -> bars on right side
+      actualValue: value,
+      color: color
+    };
+  });
+  const rowHeight = 24;
+  const chartHeight = raw.length * rowHeight;
+
+
+  Highcharts.chart('sector-performance', {
+
+    chart: {
+      type: 'bar',
+      height: chartHeight,
+      backgroundColor: 'transparent'
+    },
+
+    title: {
+      text: null
+    },
+
+    credits: {
+      enabled: false
+    },
+
+    legend: {
+      enabled: false
+    },
+
+    xAxis: {
+      categories: chartData.map(d => d.name),
+      lineWidth: 0,
+      tickLength: 0,
+      gridLineColor: '#777E87',
+      gridLineWidth: 0.1,
+      labels: {
+        enabled: true,
+        style: {
+          fontSize: '11px',
+          color: '#777E87'
+        }
+      }
+    },
+
+    yAxis: {
+      min: 0,
+      title: {
+        text: null
+      },
+      gridLineColor: '#777E87',
+      gridLineWidth: 0.1,
+      labels: {
+        enabled: true,
+        style: {
+          fontSize: '11px',
+          color: '#777E87'
+        }
+      }
+    },
+
+    tooltip: {
+      formatter: function () {
+
+        return `
+        <b>${this.point.name}</b><br>
+        ${(this.point.actualValue > 0 ? '+' : '')}
+        ${Highcharts.numberFormat(
+          this.point.actualValue,
+          2
+        )}%
+      `;
+      }
+    },
+
+    plotOptions: {
+      series: {
+        borderWidth: 0,
+        pointWidth: 16,
+        borderRadius: 3,
+        pointPadding: 0,
+        dataLabels: {
+          enabled: true,
+          formatter: function () {
+            return (
+              (this.point.actualValue > 0 ? '+' : '') +
+              Highcharts.numberFormat(
+                this.point.actualValue,
+                2
+              ) +
+              '%'
+            );
+          },
+
+          style: {
+            fontSize: '11px',
+            color: '#777E87',
+            fontWeight: 'normal',
+            textOutline: 'none'
+          }
+        }
+      }
+    },
+
+    series: [{
+      name: 'Performance',
+      data: chartData
+    }]
+  });
+</script>
+<script>
+  const raw2 = [
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Accident &Health Insurance",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": 0.17357029,
+      "Price_Change_Week": 3.385517571,
+      "Price_Change_Month": 8.471009592,
+      "Price_Change_Quarter": 22.452955,
+      "Price_Change_HalfYear": 16.49342972,
+      "Price_Change_Year": 29.95356842,
+      "AverageVolume": 1371193.683,
+      "Volume": 1564641.5,
+      "Relative_Volume": 1.141079863,
+      "BuyCount": 4,
+      "TotalCount": 4,
+      "Buy_Percentage": 100,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Advertising",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.043859061,
+      "Price_Change_Week": 3.333980314,
+      "Price_Change_Month": 3.280433094,
+      "Price_Change_Quarter": 10.10226075,
+      "Price_Change_HalfYear": -11.50099754,
+      "Price_Change_Year": -13.15459028,
+      "AverageVolume": 1147879.621,
+      "Volume": 948733.5625,
+      "Relative_Volume": 0.826509632,
+      "BuyCount": 3,
+      "TotalCount": 16,
+      "Buy_Percentage": 18.75,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Aerospace",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.912647986,
+      "Price_Change_Week": 5.382226288,
+      "Price_Change_Month": 5.598273768,
+      "Price_Change_Quarter": 3.491650977,
+      "Price_Change_HalfYear": -0.894975827,
+      "Price_Change_Year": 9.575114879,
+      "AverageVolume": 6962593.429,
+      "Volume": 7936241.938,
+      "Relative_Volume": 1.13983992,
+      "BuyCount": 5,
+      "TotalCount": 16,
+      "Buy_Percentage": 31.25,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Aerospace & Defense",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.23044285,
+      "Price_Change_Week": 3.018661811,
+      "Price_Change_Month": 23.22547962,
+      "Price_Change_Quarter": 22.39292175,
+      "Price_Change_HalfYear": 32.56581775,
+      "Price_Change_Year": 68.53269653,
+      "AverageVolume": 324769.9333,
+      "Volume": 262604.5,
+      "Relative_Volume": 0.808586242,
+      "BuyCount": 1,
+      "TotalCount": 2,
+      "Buy_Percentage": 50,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Agricultural Chemicals",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -2.237176336,
+      "Price_Change_Week": -2.006303368,
+      "Price_Change_Month": -5.463487549,
+      "Price_Change_Quarter": -12.20928806,
+      "Price_Change_HalfYear": -0.833849623,
+      "Price_Change_Year": -12.35307049,
+      "AverageVolume": 2220838.746,
+      "Volume": 1965752.5,
+      "Relative_Volume": 0.885139681,
+      "BuyCount": 2,
+      "TotalCount": 8,
+      "Buy_Percentage": 25,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Air Freight/Delivery Services",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -1.255374542,
+      "Price_Change_Week": 7.300959693,
+      "Price_Change_Month": 15.40652227,
+      "Price_Change_Quarter": 27.37116015,
+      "Price_Change_HalfYear": 6.544297921,
+      "Price_Change_Year": 37.28641072,
+      "AverageVolume": 10310976.39,
+      "Volume": 14148898.43,
+      "Relative_Volume": 1.37221713,
+      "BuyCount": 9,
+      "TotalCount": 14,
+      "Buy_Percentage": 64.28571429,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Aluminum",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -1.371520266,
+      "Price_Change_Week": -10.41320572,
+      "Price_Change_Month": -3.325930495,
+      "Price_Change_Quarter": 5.50424078,
+      "Price_Change_HalfYear": 54.09928836,
+      "Price_Change_Year": 155.2858363,
+      "AverageVolume": 3345897.45,
+      "Volume": 4064375.5,
+      "Relative_Volume": 1.214734032,
+      "BuyCount": 0,
+      "TotalCount": 2,
+      "Buy_Percentage": 0,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Apparel",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -2.082654444,
+      "Price_Change_Week": 3.077124321,
+      "Price_Change_Month": 11.88894614,
+      "Price_Change_Quarter": 11.36917172,
+      "Price_Change_HalfYear": 14.57780569,
+      "Price_Change_Year": 27.91258428,
+      "AverageVolume": 1930339.894,
+      "Volume": 2509624.944,
+      "Relative_Volume": 1.300094844,
+      "BuyCount": 12,
+      "TotalCount": 18,
+      "Buy_Percentage": 66.66666667,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Apparel Manufacturing",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": 6.091370558,
+      "Price_Change_Week": 10.58201058,
+      "Price_Change_Month": 2.450980392,
+      "Price_Change_Quarter": 64.56692913,
+      "Price_Change_HalfYear": 84.95575221,
+      "Price_Change_Year": 8.854166667,
+      "AverageVolume": 669359.0667,
+      "Volume": 230587,
+      "Relative_Volume": 0.344489246,
+      "BuyCount": 0,
+      "TotalCount": 1,
+      "Buy_Percentage": 0,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Asset Management",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.938911522,
+      "Price_Change_Week": 2.765812207,
+      "Price_Change_Month": 2.779623477,
+      "Price_Change_Quarter": 22.93600655,
+      "Price_Change_HalfYear": 18.56623054,
+      "Price_Change_Year": 14.48231504,
+      "AverageVolume": 415794.95,
+      "Volume": 291172.5,
+      "Relative_Volume": 0.700279068,
+      "BuyCount": 1,
+      "TotalCount": 2,
+      "Buy_Percentage": 50,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Auto & Home Supply Stores",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": 0.229275859,
+      "Price_Change_Week": 4.36987037,
+      "Price_Change_Month": 5.204450841,
+      "Price_Change_Quarter": 13.52315485,
+      "Price_Change_HalfYear": 21.97792301,
+      "Price_Change_Year": 2.967397004,
+      "AverageVolume": 1588607.733,
+      "Volume": 1092827.667,
+      "Relative_Volume": 0.687915364,
+      "BuyCount": 2,
+      "TotalCount": 6,
+      "Buy_Percentage": 33.33333333,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Auto Manufacturing",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -1.106476991,
+      "Price_Change_Week": -0.085600862,
+      "Price_Change_Month": -2.358712041,
+      "Price_Change_Quarter": 1.495238885,
+      "Price_Change_HalfYear": -16.17684553,
+      "Price_Change_Year": -4.43416844,
+      "AverageVolume": 16192774.04,
+      "Volume": 14010607.38,
+      "Relative_Volume": 0.865238245,
+      "BuyCount": 4,
+      "TotalCount": 13,
+      "Buy_Percentage": 30.76923077,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Auto Parts:O.E.M.",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -1.389585016,
+      "Price_Change_Week": 0.121596346,
+      "Price_Change_Month": 4.505367919,
+      "Price_Change_Quarter": 18.808559,
+      "Price_Change_HalfYear": 21.94059805,
+      "Price_Change_Year": 44.85205779,
+      "AverageVolume": 1181643.129,
+      "Volume": 1015046.897,
+      "Relative_Volume": 0.859013074,
+      "BuyCount": 8,
+      "TotalCount": 29,
+      "Buy_Percentage": 27.5862069,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Automotive Aftermarket",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -1.618168999,
+      "Price_Change_Week": 6.336940176,
+      "Price_Change_Month": 8.292601634,
+      "Price_Change_Quarter": 10.05532974,
+      "Price_Change_HalfYear": -21.05422717,
+      "Price_Change_Year": -14.84495965,
+      "AverageVolume": 3344312.625,
+      "Volume": 2672136.25,
+      "Relative_Volume": 0.799009109,
+      "BuyCount": 2,
+      "TotalCount": 4,
+      "Buy_Percentage": 50,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Banks",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.171385847,
+      "Price_Change_Week": 0.574242751,
+      "Price_Change_Month": 7.958726296,
+      "Price_Change_Quarter": 14.76260412,
+      "Price_Change_HalfYear": 12.23854695,
+      "Price_Change_Year": 29.91320127,
+      "AverageVolume": 322066.2137,
+      "Volume": 390860.4118,
+      "Relative_Volume": 1.213602654,
+      "BuyCount": 16,
+      "TotalCount": 17,
+      "Buy_Percentage": 94.11764706,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Beverages (Production/Distribution)",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": 0.307198612,
+      "Price_Change_Week": 2.064500892,
+      "Price_Change_Month": 2.026394283,
+      "Price_Change_Quarter": 11.15204397,
+      "Price_Change_HalfYear": 8.444127479,
+      "Price_Change_Year": 8.256809085,
+      "AverageVolume": 4619874.568,
+      "Volume": 4577806.762,
+      "Relative_Volume": 0.990894167,
+      "BuyCount": 7,
+      "TotalCount": 21,
+      "Buy_Percentage": 33.33333333,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Beverages - Non-Alcoholic",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": 0.472334683,
+      "Price_Change_Week": 9.485294118,
+      "Price_Change_Month": 4.822245688,
+      "Price_Change_Quarter": 12.05117586,
+      "Price_Change_HalfYear": 13.78469554,
+      "Price_Change_Year": 17.33259918,
+      "AverageVolume": 6011.766667,
+      "Volume": 3091,
+      "Relative_Volume": 0.514158345,
+      "BuyCount": 0,
+      "TotalCount": 1,
+      "Buy_Percentage": 0,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Beverages - Wineries & Distilleries",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -2.054286802,
+      "Price_Change_Week": -0.109232583,
+      "Price_Change_Month": -0.859211441,
+      "Price_Change_Quarter": 15.66782876,
+      "Price_Change_HalfYear": -12.29776379,
+      "Price_Change_Year": 2.791687822,
+      "AverageVolume": 1657390.117,
+      "Volume": 1165286,
+      "Relative_Volume": 0.703084921,
+      "BuyCount": 2,
+      "TotalCount": 2,
+      "Buy_Percentage": 100,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Biotechnology: Biological Products (No Diagnostic Substances)",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -1.235280744,
+      "Price_Change_Week": 1.570317187,
+      "Price_Change_Month": 0.640572893,
+      "Price_Change_Quarter": 2.778672264,
+      "Price_Change_HalfYear": 5.38478708,
+      "Price_Change_Year": 50.04825315,
+      "AverageVolume": 2435713.124,
+      "Volume": 2199298.273,
+      "Relative_Volume": 0.902938138,
+      "BuyCount": 17,
+      "TotalCount": 77,
+      "Buy_Percentage": 22.07792208,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Biotechnology: Commercial Physical & Biological Resarch",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -7.948793884,
+      "Price_Change_Week": -13.61620194,
+      "Price_Change_Month": -5.923316657,
+      "Price_Change_Quarter": 1.929782638,
+      "Price_Change_HalfYear": -26.68804985,
+      "Price_Change_Year": 3.648388447,
+      "AverageVolume": 5338204.041,
+      "Volume": 787945,
+      "Relative_Volume": 0.147604886,
+      "BuyCount": 4,
+      "TotalCount": 9,
+      "Buy_Percentage": 44.44444444,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Biotechnology: Electromedical & Electrotherapeutic Apparatus",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.476328535,
+      "Price_Change_Week": 2.10766202,
+      "Price_Change_Month": 6.677415251,
+      "Price_Change_Quarter": 12.95779146,
+      "Price_Change_HalfYear": 20.63368525,
+      "Price_Change_Year": 37.9184506,
+      "AverageVolume": 1344875.843,
+      "Volume": 1127245.143,
+      "Relative_Volume": 0.83817785,
+      "BuyCount": 5,
+      "TotalCount": 16,
+      "Buy_Percentage": 31.25,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Biotechnology: In Vitro & In Vivo Diagnostic Substances",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -1.945670795,
+      "Price_Change_Week": 0.952949934,
+      "Price_Change_Month": 6.615799566,
+      "Price_Change_Quarter": 15.76455556,
+      "Price_Change_HalfYear": 21.7790115,
+      "Price_Change_Year": 63.54256734,
+      "AverageVolume": 1540825.224,
+      "Volume": 1508946.091,
+      "Relative_Volume": 0.979310351,
+      "BuyCount": 8,
+      "TotalCount": 11,
+      "Buy_Percentage": 72.72727273,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Biotechnology: Laboratory Analytical Instruments",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": 0.563034879,
+      "Price_Change_Week": -5.53726593,
+      "Price_Change_Month": 42.30619483,
+      "Price_Change_Quarter": 44.91696374,
+      "Price_Change_HalfYear": 13.68941861,
+      "Price_Change_Year": 31.0350579,
+      "AverageVolume": 2525392.3,
+      "Volume": 1513037,
+      "Relative_Volume": 0.59912949,
+      "BuyCount": 2,
+      "TotalCount": 16,
+      "Buy_Percentage": 12.5,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Biotechnology: Pharmaceutical Preparations",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.817135733,
+      "Price_Change_Week": 2.102227014,
+      "Price_Change_Month": 0.829242045,
+      "Price_Change_Quarter": 4.390208863,
+      "Price_Change_HalfYear": -0.29312085,
+      "Price_Change_Year": 44.75571088,
+      "AverageVolume": 2047966.024,
+      "Volume": 1565035.035,
+      "Relative_Volume": 0.764189941,
+      "BuyCount": 66,
+      "TotalCount": 259,
+      "Buy_Percentage": 25.48262548,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Blank Checks",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -1.300141576,
+      "Price_Change_Week": -0.949367089,
+      "Price_Change_Month": -2.28956229,
+      "Price_Change_Quarter": 15.85032033,
+      "Price_Change_HalfYear": -27.32419623,
+      "Price_Change_Year": -37.65064726,
+      "AverageVolume": 5039242.217,
+      "Volume": 1757411,
+      "Relative_Volume": 0.348745094,
+      "BuyCount": 0,
+      "TotalCount": 2,
+      "Buy_Percentage": 0,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Books",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": 4.636835547,
+      "Price_Change_Week": 0.42343974,
+      "Price_Change_Month": 7.450479998,
+      "Price_Change_Quarter": 22.7828736,
+      "Price_Change_HalfYear": 34.05572822,
+      "Price_Change_Year": 48.09740441,
+      "AverageVolume": 524221.8333,
+      "Volume": 672871.6667,
+      "Relative_Volume": 1.283562843,
+      "BuyCount": 2,
+      "TotalCount": 3,
+      "Buy_Percentage": 66.66666667,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Broadcasting",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": 0.20540117,
+      "Price_Change_Week": -3.868845754,
+      "Price_Change_Month": -1.743851057,
+      "Price_Change_Quarter": 35.5171257,
+      "Price_Change_HalfYear": 11.35012122,
+      "Price_Change_Year": 35.53236559,
+      "AverageVolume": 2023261.105,
+      "Volume": 3142387.421,
+      "Relative_Volume": 1.553129951,
+      "BuyCount": 3,
+      "TotalCount": 19,
+      "Buy_Percentage": 15.78947368,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Building Materials",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": 1.015574678,
+      "Price_Change_Week": 6.940498447,
+      "Price_Change_Month": 19.45617819,
+      "Price_Change_Quarter": 35.07148902,
+      "Price_Change_HalfYear": 23.66028176,
+      "Price_Change_Year": 52.81867408,
+      "AverageVolume": 3601952.722,
+      "Volume": 3581280.167,
+      "Relative_Volume": 0.994260737,
+      "BuyCount": 5,
+      "TotalCount": 6,
+      "Buy_Percentage": 83.33333333,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Building Products",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": 1.438861534,
+      "Price_Change_Week": 3.082921834,
+      "Price_Change_Month": 1.855159207,
+      "Price_Change_Quarter": 9.374145287,
+      "Price_Change_HalfYear": 19.12333655,
+      "Price_Change_Year": 231.5691073,
+      "AverageVolume": 1260183.414,
+      "Volume": 1038440.571,
+      "Relative_Volume": 0.824039231,
+      "BuyCount": 2,
+      "TotalCount": 7,
+      "Buy_Percentage": 28.57142857,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Building operators",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": 1.847404605,
+      "Price_Change_Week": 2.459555528,
+      "Price_Change_Month": -0.271500394,
+      "Price_Change_Quarter": 3.972642129,
+      "Price_Change_HalfYear": 0.674665634,
+      "Price_Change_Year": 45.34493942,
+      "AverageVolume": 1199705.127,
+      "Volume": 969112.2,
+      "Relative_Volume": 0.807791997,
+      "BuyCount": 1,
+      "TotalCount": 5,
+      "Buy_Percentage": 20,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Business Equipment & Supplies",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.636942675,
+      "Price_Change_Week": -1.265822785,
+      "Price_Change_Month": 2.183406114,
+      "Price_Change_Quarter": -5.454545455,
+      "Price_Change_HalfYear": 23.80952381,
+      "Price_Change_Year": 27.17391304,
+      "AverageVolume": 246711.6,
+      "Volume": 490973,
+      "Relative_Volume": 1.990068566,
+      "BuyCount": 0,
+      "TotalCount": 1,
+      "Buy_Percentage": 0,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Business Services",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": 0.062154853,
+      "Price_Change_Week": 0.860499989,
+      "Price_Change_Month": 2.734330293,
+      "Price_Change_Quarter": 9.666832326,
+      "Price_Change_HalfYear": -8.984607808,
+      "Price_Change_Year": -9.524807591,
+      "AverageVolume": 4145152.4,
+      "Volume": 5020051.254,
+      "Relative_Volume": 1.211065546,
+      "BuyCount": 12,
+      "TotalCount": 59,
+      "Buy_Percentage": 20.33898305,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Cable & Other Pay Television Services",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -1.029574893,
+      "Price_Change_Week": 4.534135187,
+      "Price_Change_Month": 8.223644107,
+      "Price_Change_Quarter": -3.798089022,
+      "Price_Change_HalfYear": -10.69792184,
+      "Price_Change_Year": 3.028352019,
+      "AverageVolume": 4144824.255,
+      "Volume": 4827898.071,
+      "Relative_Volume": 1.164801636,
+      "BuyCount": 3,
+      "TotalCount": 14,
+      "Buy_Percentage": 21.42857143,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Catalog/Specialty Distribution",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.777986419,
+      "Price_Change_Week": 5.1570145,
+      "Price_Change_Month": 11.366775,
+      "Price_Change_Quarter": 6.178103875,
+      "Price_Change_HalfYear": -4.877448843,
+      "Price_Change_Year": 0.096257038,
+      "AverageVolume": 8238190.555,
+      "Volume": 7045444.455,
+      "Relative_Volume": 0.855217466,
+      "BuyCount": 4,
+      "TotalCount": 11,
+      "Buy_Percentage": 36.36363636,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Closed-End Fund - Debt",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": 0,
+      "Price_Change_Week": 0.974930362,
+      "Price_Change_Month": 1.327742837,
+      "Price_Change_Quarter": -0.412087912,
+      "Price_Change_HalfYear": -5.414220483,
+      "Price_Change_Year": -4.421814008,
+      "AverageVolume": 49706.26667,
+      "Volume": 55024,
+      "Relative_Volume": 1.106983157,
+      "BuyCount": 1,
+      "TotalCount": 1,
+      "Buy_Percentage": 100,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Closed-End Fund - Equity",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.878734622,
+      "Price_Change_Week": -1.052631579,
+      "Price_Change_Month": -2.590673575,
+      "Price_Change_Quarter": -3.58974359,
+      "Price_Change_HalfYear": -3.754266212,
+      "Price_Change_Year": -5.752027038,
+      "AverageVolume": 72015.33333,
+      "Volume": 107616,
+      "Relative_Volume": 1.494348426,
+      "BuyCount": 0,
+      "TotalCount": 1,
+      "Buy_Percentage": 0,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Closed-End Fund - Foreign",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.496963004,
+      "Price_Change_Week": 0.445930881,
+      "Price_Change_Month": 1.635645798,
+      "Price_Change_Quarter": 3.981534911,
+      "Price_Change_HalfYear": 4.342790967,
+      "Price_Change_Year": 13.96984572,
+      "AverageVolume": 39461.63333,
+      "Volume": 31464,
+      "Relative_Volume": 0.797331416,
+      "BuyCount": 0,
+      "TotalCount": 1,
+      "Buy_Percentage": 0,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Clothing/Shoe/Accessory Stores",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.99180246,
+      "Price_Change_Week": 3.530965892,
+      "Price_Change_Month": 16.15626246,
+      "Price_Change_Quarter": 23.28696543,
+      "Price_Change_HalfYear": 5.764710282,
+      "Price_Change_Year": 75.87078094,
+      "AverageVolume": 1911488.778,
+      "Volume": 1717006,
+      "Relative_Volume": 0.898255862,
+      "BuyCount": 15,
+      "TotalCount": 22,
+      "Buy_Percentage": 68.18181818,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Coal Mining",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -1.258751445,
+      "Price_Change_Week": -1.544132956,
+      "Price_Change_Month": 1.1085234,
+      "Price_Change_Quarter": -4.498189531,
+      "Price_Change_HalfYear": 2.463968314,
+      "Price_Change_Year": 50.63367225,
+      "AverageVolume": 1326192.639,
+      "Volume": 1002868.273,
+      "Relative_Volume": 0.756201055,
+      "BuyCount": 0,
+      "TotalCount": 11,
+      "Buy_Percentage": 0,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Commercial Banks",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.209674309,
+      "Price_Change_Week": 5.798200709,
+      "Price_Change_Month": 14.85420697,
+      "Price_Change_Quarter": 21.14441874,
+      "Price_Change_HalfYear": 14.53431104,
+      "Price_Change_Year": 39.55508917,
+      "AverageVolume": 2471418.423,
+      "Volume": 2762621.406,
+      "Relative_Volume": 1.117828281,
+      "BuyCount": 26,
+      "TotalCount": 32,
+      "Buy_Percentage": 81.25,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Computer Communications Equipment",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -1.330514614,
+      "Price_Change_Week": 4.976293174,
+      "Price_Change_Month": 11.25833496,
+      "Price_Change_Quarter": 47.42688673,
+      "Price_Change_HalfYear": 52.58958929,
+      "Price_Change_Year": 92.88400315,
+      "AverageVolume": 6247045.233,
+      "Volume": 3945273.857,
+      "Relative_Volume": 0.631542387,
+      "BuyCount": 2,
+      "TotalCount": 7,
+      "Buy_Percentage": 28.57142857,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Computer Manufacturing",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.875038735,
+      "Price_Change_Week": 1.044390686,
+      "Price_Change_Month": 13.31731859,
+      "Price_Change_Quarter": 40.35410866,
+      "Price_Change_HalfYear": 41.96828476,
+      "Price_Change_Year": 73.20195063,
+      "AverageVolume": 19134165.24,
+      "Volume": 15136450,
+      "Relative_Volume": 0.791069263,
+      "BuyCount": 1,
+      "TotalCount": 8,
+      "Buy_Percentage": 12.5,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Computer Software: Prepackaged Software",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.647278195,
+      "Price_Change_Week": 0.694941822,
+      "Price_Change_Month": 4.933219753,
+      "Price_Change_Quarter": 9.660458039,
+      "Price_Change_HalfYear": -11.60866676,
+      "Price_Change_Year": -15.31711945,
+      "AverageVolume": 4613256.769,
+      "Volume": 6215131.655,
+      "Relative_Volume": 1.347232978,
+      "BuyCount": 14,
+      "TotalCount": 139,
+      "Buy_Percentage": 10.07194245,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Computer Software: Programming Data Processing",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": 0.037579105,
+      "Price_Change_Week": 1.921754183,
+      "Price_Change_Month": 4.606153187,
+      "Price_Change_Quarter": 18.12767693,
+      "Price_Change_HalfYear": 4.88159049,
+      "Price_Change_Year": 5.987124207,
+      "AverageVolume": 6508417.721,
+      "Volume": 7339798.629,
+      "Relative_Volume": 1.127739328,
+      "BuyCount": 8,
+      "TotalCount": 36,
+      "Buy_Percentage": 22.22222222,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Computer peripheral equipment",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -1.426490103,
+      "Price_Change_Week": 3.058365905,
+      "Price_Change_Month": 15.11946798,
+      "Price_Change_Quarter": 46.96160824,
+      "Price_Change_HalfYear": 32.19700328,
+      "Price_Change_Year": 23.61850051,
+      "AverageVolume": 2771124.194,
+      "Volume": 1695496.5,
+      "Relative_Volume": 0.611844284,
+      "BuyCount": 4,
+      "TotalCount": 12,
+      "Buy_Percentage": 33.33333333,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Construction/Ag Equipment/Trucks",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -1.367186223,
+      "Price_Change_Week": 4.892571647,
+      "Price_Change_Month": 8.036731314,
+      "Price_Change_Quarter": 14.86689954,
+      "Price_Change_HalfYear": 16.09975816,
+      "Price_Change_Year": 28.55427942,
+      "AverageVolume": 1843748.487,
+      "Volume": 1714420.5,
+      "Relative_Volume": 0.92985595,
+      "BuyCount": 7,
+      "TotalCount": 10,
+      "Buy_Percentage": 70,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Consumer Electronics/Appliances",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.776547736,
+      "Price_Change_Week": 1.405396627,
+      "Price_Change_Month": 4.310102416,
+      "Price_Change_Quarter": 4.731623117,
+      "Price_Change_HalfYear": -1.583648216,
+      "Price_Change_Year": 5.847834207,
+      "AverageVolume": 2378517.367,
+      "Volume": 2007170.167,
+      "Relative_Volume": 0.843874506,
+      "BuyCount": 4,
+      "TotalCount": 12,
+      "Buy_Percentage": 33.33333333,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Consumer Electronics/Video Chains",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.94889748,
+      "Price_Change_Week": 5.246059766,
+      "Price_Change_Month": 8.815776041,
+      "Price_Change_Quarter": 3.931055796,
+      "Price_Change_HalfYear": -5.727908794,
+      "Price_Change_Year": -22.21865997,
+      "AverageVolume": 11497945.17,
+      "Volume": 17974147.5,
+      "Relative_Volume": 1.563248671,
+      "BuyCount": 2,
+      "TotalCount": 4,
+      "Buy_Percentage": 50,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Consumer Specialties",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": 0.040088706,
+      "Price_Change_Week": 4.18328483,
+      "Price_Change_Month": 14.62608874,
+      "Price_Change_Quarter": 17.99839627,
+      "Price_Change_HalfYear": 25.68678297,
+      "Price_Change_Year": 72.61098228,
+      "AverageVolume": 408496.4333,
+      "Volume": 485225.8333,
+      "Relative_Volume": 1.187833709,
+      "BuyCount": 5,
+      "TotalCount": 6,
+      "Buy_Percentage": 83.33333333,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Containers/Packaging",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": 0.802136477,
+      "Price_Change_Week": 4.903735074,
+      "Price_Change_Month": 10.14291225,
+      "Price_Change_Quarter": 13.38211515,
+      "Price_Change_HalfYear": 0.013937797,
+      "Price_Change_Year": 5.446862579,
+      "AverageVolume": 2048340.362,
+      "Volume": 1903986.769,
+      "Relative_Volume": 0.92952656,
+      "BuyCount": 9,
+      "TotalCount": 13,
+      "Buy_Percentage": 69.23076923,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Department/Specialty Retail Stores",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -1.474262434,
+      "Price_Change_Week": 1.420305178,
+      "Price_Change_Month": 7.126682218,
+      "Price_Change_Quarter": 4.292132713,
+      "Price_Change_HalfYear": -1.14597722,
+      "Price_Change_Year": 29.24864696,
+      "AverageVolume": 4213680.317,
+      "Volume": 3611053.786,
+      "Relative_Volume": 0.856983329,
+      "BuyCount": 8,
+      "TotalCount": 14,
+      "Buy_Percentage": 57.14285714,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Diversified Commercial Services",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": 0.031029449,
+      "Price_Change_Week": 0.935882618,
+      "Price_Change_Month": 6.582053647,
+      "Price_Change_Quarter": 10.39766221,
+      "Price_Change_HalfYear": 1.792230536,
+      "Price_Change_Year": 7.028589598,
+      "AverageVolume": 2609272.115,
+      "Volume": 2528486.8,
+      "Relative_Volume": 0.969039138,
+      "BuyCount": 13,
+      "TotalCount": 20,
+      "Buy_Percentage": 65,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Diversified Financial Services",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.261518102,
+      "Price_Change_Week": 0.530234438,
+      "Price_Change_Month": 1.536022269,
+      "Price_Change_Quarter": 10.76995671,
+      "Price_Change_HalfYear": 5.220477488,
+      "Price_Change_Year": 20.72461786,
+      "AverageVolume": 1549208.344,
+      "Volume": 1548397,
+      "Relative_Volume": 0.999476284,
+      "BuyCount": 0,
+      "TotalCount": 3,
+      "Buy_Percentage": 0,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Durable Goods",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -3.791590714,
+      "Price_Change_Week": -7.069805502,
+      "Price_Change_Month": -15.06813095,
+      "Price_Change_Quarter": -18.09636329,
+      "Price_Change_HalfYear": -43.14200315,
+      "Price_Change_Year": -13.45954911,
+      "AverageVolume": 818228.0667,
+      "Volume": 1255979,
+      "Relative_Volume": 1.534998677,
+      "BuyCount": 0,
+      "TotalCount": 3,
+      "Buy_Percentage": 0,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "EDP Services",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": 0.081284917,
+      "Price_Change_Week": 1.813331798,
+      "Price_Change_Month": 2.377835454,
+      "Price_Change_Quarter": 8.725996986,
+      "Price_Change_HalfYear": -11.98522778,
+      "Price_Change_Year": -0.962232235,
+      "AverageVolume": 4741985.247,
+      "Volume": 3873544.115,
+      "Relative_Volume": 0.816861275,
+      "BuyCount": 12,
+      "TotalCount": 78,
+      "Buy_Percentage": 15.38461538,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Electric Utilities: Central",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.197597292,
+      "Price_Change_Week": 2.119888914,
+      "Price_Change_Month": 3.305521225,
+      "Price_Change_Quarter": 1.059641192,
+      "Price_Change_HalfYear": 6.012332137,
+      "Price_Change_Year": 19.40464015,
+      "AverageVolume": 2897684.53,
+      "Volume": 2449613.7,
+      "Relative_Volume": 0.845369354,
+      "BuyCount": 18,
+      "TotalCount": 40,
+      "Buy_Percentage": 45,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Electrical Products",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -2.959623166,
+      "Price_Change_Week": 5.981206987,
+      "Price_Change_Month": 15.49996313,
+      "Price_Change_Quarter": 74.925045,
+      "Price_Change_HalfYear": 97.1590226,
+      "Price_Change_Year": 180.1876956,
+      "AverageVolume": 1714440.324,
+      "Volume": 1355911,
+      "Relative_Volume": 0.790876755,
+      "BuyCount": 10,
+      "TotalCount": 28,
+      "Buy_Percentage": 35.71428571,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Electronic Components",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -1.309127338,
+      "Price_Change_Week": 8.033357865,
+      "Price_Change_Month": 16.91939528,
+      "Price_Change_Quarter": 48.45550833,
+      "Price_Change_HalfYear": 99.10487148,
+      "Price_Change_Year": 208.6854737,
+      "AverageVolume": 1843685.621,
+      "Volume": 2247504.842,
+      "Relative_Volume": 1.219028242,
+      "BuyCount": 9,
+      "TotalCount": 20,
+      "Buy_Percentage": 45,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Electronics Distribution",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.831792976,
+      "Price_Change_Week": -2.543142598,
+      "Price_Change_Month": -0.740055504,
+      "Price_Change_Quarter": -6.492374728,
+      "Price_Change_HalfYear": -3.158844765,
+      "Price_Change_Year": -6.695652174,
+      "AverageVolume": 6943484.333,
+      "Volume": 6296432,
+      "Relative_Volume": 0.90681158,
+      "BuyCount": 0,
+      "TotalCount": 1,
+      "Buy_Percentage": 0,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Engineering & Construction",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.960972313,
+      "Price_Change_Week": -0.616232341,
+      "Price_Change_Month": -0.876332215,
+      "Price_Change_Quarter": 19.91876999,
+      "Price_Change_HalfYear": 24.88400432,
+      "Price_Change_Year": 71.98184167,
+      "AverageVolume": 724551.3872,
+      "Volume": 891587.6154,
+      "Relative_Volume": 1.230537449,
+      "BuyCount": 4,
+      "TotalCount": 13,
+      "Buy_Percentage": 30.76923077,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Environmental Services",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": 2.974468889,
+      "Price_Change_Week": 0.66482022,
+      "Price_Change_Month": 5.428358043,
+      "Price_Change_Quarter": 3.512235013,
+      "Price_Change_HalfYear": -9.82120019,
+      "Price_Change_Year": -10.65062461,
+      "AverageVolume": 1198841.65,
+      "Volume": 1139327.125,
+      "Relative_Volume": 0.950356642,
+      "BuyCount": 5,
+      "TotalCount": 8,
+      "Buy_Percentage": 62.5,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Farm Products",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.27288514,
+      "Price_Change_Week": -2.498180936,
+      "Price_Change_Month": 0.099601594,
+      "Price_Change_Quarter": 6.772908367,
+      "Price_Change_HalfYear": 5.817320347,
+      "Price_Change_Year": 28.1933945,
+      "AverageVolume": 17906.4,
+      "Volume": 15034,
+      "Relative_Volume": 0.83958808,
+      "BuyCount": 0,
+      "TotalCount": 1,
+      "Buy_Percentage": 0,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Farming/Seeds/Milling",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -1.421313796,
+      "Price_Change_Week": -0.5569739,
+      "Price_Change_Month": -4.154350538,
+      "Price_Change_Quarter": -10.17755745,
+      "Price_Change_HalfYear": -4.432684587,
+      "Price_Change_Year": 1.971758021,
+      "AverageVolume": 1300672.131,
+      "Volume": 862968.75,
+      "Relative_Volume": 0.663479081,
+      "BuyCount": 3,
+      "TotalCount": 12,
+      "Buy_Percentage": 25,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Finance Companies",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.103672815,
+      "Price_Change_Week": 1.083094694,
+      "Price_Change_Month": 1.138759214,
+      "Price_Change_Quarter": 4.158615538,
+      "Price_Change_HalfYear": 2.167565021,
+      "Price_Change_Year": 9.88790632,
+      "AverageVolume": 171490.4872,
+      "Volume": 156546.6333,
+      "Relative_Volume": 0.912858992,
+      "BuyCount": 23,
+      "TotalCount": 60,
+      "Buy_Percentage": 38.33333333,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Finance/Investors Services",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.002340994,
+      "Price_Change_Week": 0.303939353,
+      "Price_Change_Month": -0.491323318,
+      "Price_Change_Quarter": 2.412538707,
+      "Price_Change_HalfYear": -1.920058869,
+      "Price_Change_Year": 2.508927417,
+      "AverageVolume": 270268.0379,
+      "Volume": 277492.4706,
+      "Relative_Volume": 1.026730622,
+      "BuyCount": 14,
+      "TotalCount": 51,
+      "Buy_Percentage": 27.45098039,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Finance: Consumer Services",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": 0.178646517,
+      "Price_Change_Week": 3.077963037,
+      "Price_Change_Month": 3.663096416,
+      "Price_Change_Quarter": 10.61944355,
+      "Price_Change_HalfYear": -8.915732785,
+      "Price_Change_Year": -0.040927737,
+      "AverageVolume": 4552583.837,
+      "Volume": 4967759.246,
+      "Relative_Volume": 1.091195555,
+      "BuyCount": 21,
+      "TotalCount": 65,
+      "Buy_Percentage": 32.30769231,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Fluid Controls",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.508440157,
+      "Price_Change_Week": 3.802770069,
+      "Price_Change_Month": 8.015085359,
+      "Price_Change_Quarter": 22.29906995,
+      "Price_Change_HalfYear": 43.12502435,
+      "Price_Change_Year": 72.04791366,
+      "AverageVolume": 1025021.671,
+      "Volume": 976207.5714,
+      "Relative_Volume": 0.952377495,
+      "BuyCount": 3,
+      "TotalCount": 7,
+      "Buy_Percentage": 42.85714286,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Food Chains",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.312232354,
+      "Price_Change_Week": 0.706707705,
+      "Price_Change_Month": 6.353236365,
+      "Price_Change_Quarter": 10.92136038,
+      "Price_Change_HalfYear": 4.907250062,
+      "Price_Change_Year": -2.478807061,
+      "AverageVolume": 2440373.637,
+      "Volume": 2776395.556,
+      "Relative_Volume": 1.137692816,
+      "BuyCount": 5,
+      "TotalCount": 9,
+      "Buy_Percentage": 55.55555556,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Food Distributors",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.425523165,
+      "Price_Change_Week": 3.586529474,
+      "Price_Change_Month": 7.982382784,
+      "Price_Change_Quarter": 14.09175397,
+      "Price_Change_HalfYear": 11.72841503,
+      "Price_Change_Year": 23.14133757,
+      "AverageVolume": 1267551.496,
+      "Volume": 991972.75,
+      "Relative_Volume": 0.782589704,
+      "BuyCount": 5,
+      "TotalCount": 8,
+      "Buy_Percentage": 62.5,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Forest Products",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.202805652,
+      "Price_Change_Week": 5.090705604,
+      "Price_Change_Month": 17.97060629,
+      "Price_Change_Quarter": 14.71359262,
+      "Price_Change_HalfYear": -6.89151517,
+      "Price_Change_Year": -19.73850668,
+      "AverageVolume": 1642944.407,
+      "Volume": 1315079.8,
+      "Relative_Volume": 0.800440839,
+      "BuyCount": 4,
+      "TotalCount": 5,
+      "Buy_Percentage": 80,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Garments and Clothing",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -1.122255121,
+      "Price_Change_Week": -0.387465944,
+      "Price_Change_Month": 8.417172158,
+      "Price_Change_Quarter": 14.36779431,
+      "Price_Change_HalfYear": 3.039262725,
+      "Price_Change_Year": 20.19837693,
+      "AverageVolume": 2371574.533,
+      "Volume": 1702907.167,
+      "Relative_Volume": 0.718049187,
+      "BuyCount": 4,
+      "TotalCount": 6,
+      "Buy_Percentage": 66.66666667,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "General Bldg Contractors - Nonresidential Bldgs",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -1.193100765,
+      "Price_Change_Week": 6.143772639,
+      "Price_Change_Month": -3.812649918,
+      "Price_Change_Quarter": 9.56284153,
+      "Price_Change_HalfYear": 11.99470822,
+      "Price_Change_Year": 80.80208828,
+      "AverageVolume": 545314.3333,
+      "Volume": 434826,
+      "Relative_Volume": 0.797385972,
+      "BuyCount": 0,
+      "TotalCount": 1,
+      "Buy_Percentage": 0,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Home Furnishings",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -1.939337404,
+      "Price_Change_Week": -0.966591937,
+      "Price_Change_Month": 6.36661171,
+      "Price_Change_Quarter": 15.12865435,
+      "Price_Change_HalfYear": 4.311402436,
+      "Price_Change_Year": 12.82752807,
+      "AverageVolume": 1658474.176,
+      "Volume": 1793586.706,
+      "Relative_Volume": 1.081467973,
+      "BuyCount": 11,
+      "TotalCount": 17,
+      "Buy_Percentage": 64.70588235,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Homebuilding",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": 0.296051973,
+      "Price_Change_Week": 1.974861111,
+      "Price_Change_Month": 15.5999343,
+      "Price_Change_Quarter": 12.0733969,
+      "Price_Change_HalfYear": 2.224559915,
+      "Price_Change_Year": 16.06461599,
+      "AverageVolume": 812058.4272,
+      "Volume": 819134.6296,
+      "Relative_Volume": 1.008713908,
+      "BuyCount": 21,
+      "TotalCount": 27,
+      "Buy_Percentage": 77.77777778,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Hospital/Nursing Management",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": 0.232566593,
+      "Price_Change_Week": 3.170318154,
+      "Price_Change_Month": -1.022677716,
+      "Price_Change_Quarter": 0.871472027,
+      "Price_Change_HalfYear": 2.180261702,
+      "Price_Change_Year": 27.67969176,
+      "AverageVolume": 1276956.554,
+      "Volume": 1232236.154,
+      "Relative_Volume": 0.964978918,
+      "BuyCount": 6,
+      "TotalCount": 13,
+      "Buy_Percentage": 46.15384615,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Hotels/Resorts",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": 0.018222559,
+      "Price_Change_Week": 1.879777692,
+      "Price_Change_Month": 9.554405067,
+      "Price_Change_Quarter": 15.4272872,
+      "Price_Change_HalfYear": 11.3498128,
+      "Price_Change_Year": 25.1447012,
+      "AverageVolume": 1838897.337,
+      "Volume": 1491534.897,
+      "Relative_Volume": 0.811102864,
+      "BuyCount": 17,
+      "TotalCount": 29,
+      "Buy_Percentage": 58.62068966,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Industrial Distribution",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": 0,
+      "Price_Change_Week": 0,
+      "Price_Change_Month": -13.32986653,
+      "Price_Change_Quarter": -4.976515625,
+      "Price_Change_HalfYear": -0.640161247,
+      "Price_Change_Year": -21.10526602,
+      "AverageVolume": 27.06666667,
+      "Volume": 16,
+      "Relative_Volume": 0.591133005,
+      "BuyCount": 0,
+      "TotalCount": 1,
+      "Buy_Percentage": 0,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Industrial Machinery/Components",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.743587357,
+      "Price_Change_Week": 2.263260364,
+      "Price_Change_Month": 4.125643463,
+      "Price_Change_Quarter": 20.16844982,
+      "Price_Change_HalfYear": 24.24742912,
+      "Price_Change_Year": 66.71688967,
+      "AverageVolume": 2949199.546,
+      "Volume": 2252927.772,
+      "Relative_Volume": 0.763911609,
+      "BuyCount": 55,
+      "TotalCount": 127,
+      "Buy_Percentage": 43.30708661,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Industrial Specialties",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": 0.201512194,
+      "Price_Change_Week": 1.191458805,
+      "Price_Change_Month": 4.194342299,
+      "Price_Change_Quarter": 14.29999549,
+      "Price_Change_HalfYear": 2.818356499,
+      "Price_Change_Year": 11.82243995,
+      "AverageVolume": 709264.0965,
+      "Volume": 853415.2105,
+      "Relative_Volume": 1.203240393,
+      "BuyCount": 18,
+      "TotalCount": 38,
+      "Buy_Percentage": 47.36842105,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Insurance - Diversified",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.433717683,
+      "Price_Change_Week": 1.751852992,
+      "Price_Change_Month": 2.812396045,
+      "Price_Change_Quarter": 2.232276017,
+      "Price_Change_HalfYear": -2.376656872,
+      "Price_Change_Year": 1.143379595,
+      "AverageVolume": 2562112.167,
+      "Volume": 2154261,
+      "Relative_Volume": 0.840814476,
+      "BuyCount": 2,
+      "TotalCount": 2,
+      "Buy_Percentage": 100,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Integrated Freight & Logistics",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.146042512,
+      "Price_Change_Week": 2.440793587,
+      "Price_Change_Month": 12.23969644,
+      "Price_Change_Quarter": 6.139820479,
+      "Price_Change_HalfYear": -13.05440946,
+      "Price_Change_Year": 15.71854939,
+      "AverageVolume": 992307.5222,
+      "Volume": 763287.6667,
+      "Relative_Volume": 0.769204757,
+      "BuyCount": 3,
+      "TotalCount": 6,
+      "Buy_Percentage": 50,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Integrated oil Companies",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": 0.069926772,
+      "Price_Change_Week": -5.192874319,
+      "Price_Change_Month": -6.21884238,
+      "Price_Change_Quarter": -5.226191523,
+      "Price_Change_HalfYear": 28.70840547,
+      "Price_Change_Year": 40.86795388,
+      "AverageVolume": 4282009.678,
+      "Volume": 4399910,
+      "Relative_Volume": 1.027533876,
+      "BuyCount": 0,
+      "TotalCount": 15,
+      "Buy_Percentage": 0,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Investment Bankers/Brokers/Service",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.419478643,
+      "Price_Change_Week": 3.509096767,
+      "Price_Change_Month": 1.911102017,
+      "Price_Change_Quarter": 11.05346144,
+      "Price_Change_HalfYear": 4.597645097,
+      "Price_Change_Year": 13.20829208,
+      "AverageVolume": 2208444.759,
+      "Volume": 2185283.783,
+      "Relative_Volume": 0.98951254,
+      "BuyCount": 23,
+      "TotalCount": 46,
+      "Buy_Percentage": 50,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Investment Managers",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.133283282,
+      "Price_Change_Week": 1.236727306,
+      "Price_Change_Month": 1.400016616,
+      "Price_Change_Quarter": 6.022176657,
+      "Price_Change_HalfYear": 0.829078843,
+      "Price_Change_Year": 9.56696621,
+      "AverageVolume": 730897.5478,
+      "Volume": 587276.3435,
+      "Relative_Volume": 0.803500224,
+      "BuyCount": 49,
+      "TotalCount": 133,
+      "Buy_Percentage": 36.84210526,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Life Insurance",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.154269046,
+      "Price_Change_Week": 3.809173522,
+      "Price_Change_Month": 3.888114039,
+      "Price_Change_Quarter": 15.65050431,
+      "Price_Change_HalfYear": 4.53986759,
+      "Price_Change_Year": 22.39220504,
+      "AverageVolume": 1594723.875,
+      "Volume": 1532552.625,
+      "Relative_Volume": 0.961014411,
+      "BuyCount": 11,
+      "TotalCount": 16,
+      "Buy_Percentage": 68.75,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Major Banks",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.365264078,
+      "Price_Change_Week": 0.801965705,
+      "Price_Change_Month": 7.393371273,
+      "Price_Change_Quarter": 16.09347622,
+      "Price_Change_HalfYear": 8.613576962,
+      "Price_Change_Year": 32.85194396,
+      "AverageVolume": 1414709.231,
+      "Volume": 1451321.046,
+      "Relative_Volume": 1.025879393,
+      "BuyCount": 193,
+      "TotalCount": 217,
+      "Buy_Percentage": 88.94009217,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Major Chemicals",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -1.448955254,
+      "Price_Change_Week": -0.227664357,
+      "Price_Change_Month": -2.028444765,
+      "Price_Change_Quarter": 10.59795443,
+      "Price_Change_HalfYear": 24.21519247,
+      "Price_Change_Year": 30.25085924,
+      "AverageVolume": 1418567.505,
+      "Volume": 1971880.906,
+      "Relative_Volume": 1.390050807,
+      "BuyCount": 21,
+      "TotalCount": 53,
+      "Buy_Percentage": 39.62264151,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Marine Transportation",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.790062668,
+      "Price_Change_Week": 2.006009706,
+      "Price_Change_Month": -0.615131535,
+      "Price_Change_Quarter": 7.361251384,
+      "Price_Change_HalfYear": 24.53666758,
+      "Price_Change_Year": 43.99301166,
+      "AverageVolume": 2348709.182,
+      "Volume": 2049870.029,
+      "Relative_Volume": 0.872764515,
+      "BuyCount": 9,
+      "TotalCount": 34,
+      "Buy_Percentage": 26.47058824,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Meat/Poultry/Fish",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.367732922,
+      "Price_Change_Week": 1.51772443,
+      "Price_Change_Month": 7.874152556,
+      "Price_Change_Quarter": -2.151166165,
+      "Price_Change_HalfYear": -3.496786674,
+      "Price_Change_Year": -4.713313559,
+      "AverageVolume": 2679081.942,
+      "Volume": 1700410,
+      "Relative_Volume": 0.634698765,
+      "BuyCount": 2,
+      "TotalCount": 4,
+      "Buy_Percentage": 50,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Medical Care Facilities",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": 0.21691974,
+      "Price_Change_Week": 9.219858156,
+      "Price_Change_Month": 12.27217497,
+      "Price_Change_Quarter": 11.19133574,
+      "Price_Change_HalfYear": 5.119453925,
+      "Price_Change_Year": -23.57320099,
+      "AverageVolume": 91702.76667,
+      "Volume": 39318,
+      "Relative_Volume": 0.428754785,
+      "BuyCount": 1,
+      "TotalCount": 1,
+      "Buy_Percentage": 100,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Medical Devices",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": 0,
+      "Price_Change_Week": 0,
+      "Price_Change_Month": 13.73069588,
+      "Price_Change_Quarter": 13.25637684,
+      "Price_Change_HalfYear": -2.108142903,
+      "Price_Change_Year": 21.62108125,
+      "AverageVolume": 193.7333333,
+      "Volume": 4,
+      "Relative_Volume": 0.020646937,
+      "BuyCount": 1,
+      "TotalCount": 1,
+      "Buy_Percentage": 100,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Medical Electronics",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.186219739,
+      "Price_Change_Week": 2.642665645,
+      "Price_Change_Month": 3.916246607,
+      "Price_Change_Quarter": 0.827689992,
+      "Price_Change_HalfYear": 0.903614458,
+      "Price_Change_Year": 18.32229581,
+      "AverageVolume": 1262672.833,
+      "Volume": 582669,
+      "Relative_Volume": 0.461456828,
+      "BuyCount": 0,
+      "TotalCount": 1,
+      "Buy_Percentage": 0,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Medical Specialities",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.991806788,
+      "Price_Change_Week": -0.972407273,
+      "Price_Change_Month": 9.1370862,
+      "Price_Change_Quarter": 22.37638328,
+      "Price_Change_HalfYear": 7.925322842,
+      "Price_Change_Year": 51.43475668,
+      "AverageVolume": 1638419.687,
+      "Volume": 1400974.696,
+      "Relative_Volume": 0.85507682,
+      "BuyCount": 10,
+      "TotalCount": 23,
+      "Buy_Percentage": 43.47826087,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Medical/Dental Instruments",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.567426836,
+      "Price_Change_Week": -2.174818052,
+      "Price_Change_Month": 1.389773056,
+      "Price_Change_Quarter": -1.73295271,
+      "Price_Change_HalfYear": -16.64470468,
+      "Price_Change_Year": -14.526412,
+      "AverageVolume": 1514413.799,
+      "Volume": 1023492.868,
+      "Relative_Volume": 0.675834351,
+      "BuyCount": 19,
+      "TotalCount": 68,
+      "Buy_Percentage": 27.94117647,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Medical/Nursing Services",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": 0.813725977,
+      "Price_Change_Week": 3.507794092,
+      "Price_Change_Month": 10.72363457,
+      "Price_Change_Quarter": 33.12409725,
+      "Price_Change_HalfYear": 8.551499692,
+      "Price_Change_Year": 16.75288897,
+      "AverageVolume": 3394257.567,
+      "Volume": 2632365.308,
+      "Relative_Volume": 0.775534931,
+      "BuyCount": 7,
+      "TotalCount": 13,
+      "Buy_Percentage": 53.84615385,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Medicinal Chemicals and Botanical Products",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -2.900538208,
+      "Price_Change_Week": -7.12377314,
+      "Price_Change_Month": -11.32826585,
+      "Price_Change_Quarter": -13.27881396,
+      "Price_Change_HalfYear": -31.16913378,
+      "Price_Change_Year": -33.25231876,
+      "AverageVolume": 5534929.823,
+      "Volume": 9903830.462,
+      "Relative_Volume": 1.789332616,
+      "BuyCount": 1,
+      "TotalCount": 14,
+      "Buy_Percentage": 7.142857143,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Metal Fabrications",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": 0.264973435,
+      "Price_Change_Week": 3.076413712,
+      "Price_Change_Month": 6.421655409,
+      "Price_Change_Quarter": 34.66564095,
+      "Price_Change_HalfYear": 32.60886053,
+      "Price_Change_Year": 60.20841816,
+      "AverageVolume": 1751419.465,
+      "Volume": 1593016.355,
+      "Relative_Volume": 0.909557297,
+      "BuyCount": 12,
+      "TotalCount": 31,
+      "Buy_Percentage": 38.70967742,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Metal Mining",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.650024158,
+      "Price_Change_Week": 11.54762463,
+      "Price_Change_Month": 5.274344069,
+      "Price_Change_Quarter": 28.42970872,
+      "Price_Change_HalfYear": 28.82694358,
+      "Price_Change_Year": 97.91061115,
+      "AverageVolume": 6559845.339,
+      "Volume": 4935602.583,
+      "Relative_Volume": 0.752396181,
+      "BuyCount": 3,
+      "TotalCount": 12,
+      "Buy_Percentage": 25,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Military/Government/Technical",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.688217466,
+      "Price_Change_Week": 1.400820474,
+      "Price_Change_Month": 4.784800602,
+      "Price_Change_Quarter": 15.82563579,
+      "Price_Change_HalfYear": 30.98274171,
+      "Price_Change_Year": 65.68770113,
+      "AverageVolume": 5111985.546,
+      "Volume": 4324856.857,
+      "Relative_Volume": 0.846022904,
+      "BuyCount": 11,
+      "TotalCount": 22,
+      "Buy_Percentage": 50,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Mining & Quarrying of Nonmetallic Minerals (No Fuels)",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.527509382,
+      "Price_Change_Week": 5.720732259,
+      "Price_Change_Month": -1.233855906,
+      "Price_Change_Quarter": 8.393546089,
+      "Price_Change_HalfYear": 14.30555082,
+      "Price_Change_Year": 68.62021889,
+      "AverageVolume": 3239853.028,
+      "Volume": 3207762.917,
+      "Relative_Volume": 0.990095195,
+      "BuyCount": 3,
+      "TotalCount": 12,
+      "Buy_Percentage": 25,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Misc Corporate Leasing Services",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.152897016,
+      "Price_Change_Week": 7.472098777,
+      "Price_Change_Month": 12.21347205,
+      "Price_Change_Quarter": 42.51954959,
+      "Price_Change_HalfYear": 32.85564908,
+      "Price_Change_Year": 54.2350618,
+      "AverageVolume": 1396403.378,
+      "Volume": 923033,
+      "Relative_Volume": 0.661007424,
+      "BuyCount": 3,
+      "TotalCount": 3,
+      "Buy_Percentage": 100,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Misc Health and Biotechnology Services",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.55961477,
+      "Price_Change_Week": 2.404175514,
+      "Price_Change_Month": 13.8309296,
+      "Price_Change_Quarter": 115.5098438,
+      "Price_Change_HalfYear": 109.3950208,
+      "Price_Change_Year": 46.35247042,
+      "AverageVolume": 1147977.143,
+      "Volume": 779377.4286,
+      "Relative_Volume": 0.678913717,
+      "BuyCount": 6,
+      "TotalCount": 7,
+      "Buy_Percentage": 85.71428571,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Miscellaneous manufacturing industries",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -1.664537379,
+      "Price_Change_Week": 5.398484105,
+      "Price_Change_Month": 7.135885264,
+      "Price_Change_Quarter": 15.93004837,
+      "Price_Change_HalfYear": 16.50061171,
+      "Price_Change_Year": 30.00653099,
+      "AverageVolume": 2114452.193,
+      "Volume": 1921947.4,
+      "Relative_Volume": 0.908957604,
+      "BuyCount": 3,
+      "TotalCount": 5,
+      "Buy_Percentage": 60,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Motor Vehicles",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -1.122277086,
+      "Price_Change_Week": 2.057030191,
+      "Price_Change_Month": 2.744443219,
+      "Price_Change_Quarter": 9.163395343,
+      "Price_Change_HalfYear": -11.53864363,
+      "Price_Change_Year": -19.84722908,
+      "AverageVolume": 1859934.073,
+      "Volume": 1384087.6,
+      "Relative_Volume": 0.744159495,
+      "BuyCount": 3,
+      "TotalCount": 5,
+      "Buy_Percentage": 60,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Movies/Entertainment",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": 1.309299003,
+      "Price_Change_Week": 4.587808915,
+      "Price_Change_Month": 24.9046656,
+      "Price_Change_Quarter": 21.83972037,
+      "Price_Change_HalfYear": -4.456275086,
+      "Price_Change_Year": -23.78958422,
+      "AverageVolume": 5373231.09,
+      "Volume": 7716112.857,
+      "Relative_Volume": 1.436028477,
+      "BuyCount": 4,
+      "TotalCount": 7,
+      "Buy_Percentage": 57.14285714,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Natural Gas Distribution",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.430739941,
+      "Price_Change_Week": -1.459804306,
+      "Price_Change_Month": -3.517480957,
+      "Price_Change_Quarter": 1.214785929,
+      "Price_Change_HalfYear": 14.78818139,
+      "Price_Change_Year": 26.62414783,
+      "AverageVolume": 2466108.006,
+      "Volume": 2212758.654,
+      "Relative_Volume": 0.897267536,
+      "BuyCount": 3,
+      "TotalCount": 26,
+      "Buy_Percentage": 11.53846154,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Newspapers/Magazines",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.505670483,
+      "Price_Change_Week": 0.122096146,
+      "Price_Change_Month": -0.831439012,
+      "Price_Change_Quarter": 6.471985658,
+      "Price_Change_HalfYear": 25.40731094,
+      "Price_Change_Year": 23.64146131,
+      "AverageVolume": 2128701.124,
+      "Volume": 1607619.429,
+      "Relative_Volume": 0.755211434,
+      "BuyCount": 1,
+      "TotalCount": 7,
+      "Buy_Percentage": 14.28571429,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Office Equipment/Supplies/Services",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": 0.643478555,
+      "Price_Change_Week": 5.654562471,
+      "Price_Change_Month": 8.395096757,
+      "Price_Change_Quarter": 18.16462793,
+      "Price_Change_HalfYear": -1.156329584,
+      "Price_Change_Year": -9.143174936,
+      "AverageVolume": 1469591.178,
+      "Volume": 1436667.333,
+      "Relative_Volume": 0.977596596,
+      "BuyCount": 4,
+      "TotalCount": 6,
+      "Buy_Percentage": 66.66666667,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Oil & Gas Production",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.0729387,
+      "Price_Change_Week": -5.116921317,
+      "Price_Change_Month": -10.37828944,
+      "Price_Change_Quarter": -8.999965883,
+      "Price_Change_HalfYear": 21.68201494,
+      "Price_Change_Year": 19.29445337,
+      "AverageVolume": 3424579.954,
+      "Volume": 3697629.361,
+      "Relative_Volume": 1.079732233,
+      "BuyCount": 4,
+      "TotalCount": 73,
+      "Buy_Percentage": 5.479452055,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Oil Refining/Marketing",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -1.16248062,
+      "Price_Change_Week": -1.637307546,
+      "Price_Change_Month": -1.989190124,
+      "Price_Change_Quarter": 1.34378757,
+      "Price_Change_HalfYear": 6.182041924,
+      "Price_Change_Year": -9.947142404,
+      "AverageVolume": 381519.8,
+      "Volume": 446667.3333,
+      "Relative_Volume": 1.170757935,
+      "BuyCount": 3,
+      "TotalCount": 6,
+      "Buy_Percentage": 50,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Oil and Gas Field Machinery",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -1.845577227,
+      "Price_Change_Week": -1.47857762,
+      "Price_Change_Month": -4.530866146,
+      "Price_Change_Quarter": 5.738438818,
+      "Price_Change_HalfYear": 29.73510688,
+      "Price_Change_Year": 72.0937936,
+      "AverageVolume": 2351903.039,
+      "Volume": 1953363.364,
+      "Relative_Volume": 0.830545873,
+      "BuyCount": 2,
+      "TotalCount": 11,
+      "Buy_Percentage": 18.18181818,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Oil/Gas Transmission",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.790941767,
+      "Price_Change_Week": -3.228162079,
+      "Price_Change_Month": -7.196484934,
+      "Price_Change_Quarter": -8.675340334,
+      "Price_Change_HalfYear": -1.078185149,
+      "Price_Change_Year": 2.694141918,
+      "AverageVolume": 1391118.579,
+      "Volume": 1138039.455,
+      "Relative_Volume": 0.818075089,
+      "BuyCount": 1,
+      "TotalCount": 11,
+      "Buy_Percentage": 9.090909091,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Oilfield Services/Equipment",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -1.920330176,
+      "Price_Change_Week": -4.056534976,
+      "Price_Change_Month": -5.570671601,
+      "Price_Change_Quarter": 3.185448286,
+      "Price_Change_HalfYear": 35.13439912,
+      "Price_Change_Year": 65.47996371,
+      "AverageVolume": 2436257.111,
+      "Volume": 2532255.2,
+      "Relative_Volume": 1.039403924,
+      "BuyCount": 2,
+      "TotalCount": 15,
+      "Buy_Percentage": 13.33333333,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Ophthalmic Goods",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.904120543,
+      "Price_Change_Week": -2.070342399,
+      "Price_Change_Month": -2.515768231,
+      "Price_Change_Quarter": -5.900856833,
+      "Price_Change_HalfYear": -23.52583985,
+      "Price_Change_Year": -8.177481696,
+      "AverageVolume": 2035346.06,
+      "Volume": 1723440.6,
+      "Relative_Volume": 0.846755564,
+      "BuyCount": 1,
+      "TotalCount": 5,
+      "Buy_Percentage": 20,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Ordnance And Accessories",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -2.063345865,
+      "Price_Change_Week": -2.481434604,
+      "Price_Change_Month": -4.890543662,
+      "Price_Change_Quarter": -6.222290564,
+      "Price_Change_HalfYear": -0.226387736,
+      "Price_Change_Year": 6.84721474,
+      "AverageVolume": 445003.8667,
+      "Volume": 436784.8333,
+      "Relative_Volume": 0.981530423,
+      "BuyCount": 0,
+      "TotalCount": 6,
+      "Buy_Percentage": 0,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Other Consumer Services",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": 0.557148814,
+      "Price_Change_Week": -0.86582488,
+      "Price_Change_Month": -0.96800676,
+      "Price_Change_Quarter": 8.075575044,
+      "Price_Change_HalfYear": 5.818272348,
+      "Price_Change_Year": -2.730951896,
+      "AverageVolume": 942490.3939,
+      "Volume": 766685.2121,
+      "Relative_Volume": 0.813467402,
+      "BuyCount": 6,
+      "TotalCount": 33,
+      "Buy_Percentage": 18.18181818,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Other Metals and Minerals",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.608179383,
+      "Price_Change_Week": 6.727838298,
+      "Price_Change_Month": -6.93425665,
+      "Price_Change_Quarter": 1.831559224,
+      "Price_Change_HalfYear": 13.59431415,
+      "Price_Change_Year": 53.33551631,
+      "AverageVolume": 8938347.113,
+      "Volume": 7458754,
+      "Relative_Volume": 0.83446681,
+      "BuyCount": 0,
+      "TotalCount": 5,
+      "Buy_Percentage": 0,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Other Pharmaceuticals",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.886548106,
+      "Price_Change_Week": 0.601978604,
+      "Price_Change_Month": 0.828108411,
+      "Price_Change_Quarter": -14.34718386,
+      "Price_Change_HalfYear": -16.48915403,
+      "Price_Change_Year": 11.90384305,
+      "AverageVolume": 1593999.893,
+      "Volume": 1421452.8,
+      "Relative_Volume": 0.89175213,
+      "BuyCount": 3,
+      "TotalCount": 5,
+      "Buy_Percentage": 60,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Other Specialty Stores",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -1.154810513,
+      "Price_Change_Week": -0.80323316,
+      "Price_Change_Month": 8.846106107,
+      "Price_Change_Quarter": 31.73749045,
+      "Price_Change_HalfYear": 7.837887547,
+      "Price_Change_Year": 16.88779528,
+      "AverageVolume": 1292679.616,
+      "Volume": 1087426.429,
+      "Relative_Volume": 0.841218826,
+      "BuyCount": 6,
+      "TotalCount": 21,
+      "Buy_Percentage": 28.57142857,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Package Goods/Cosmetics",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": 0.198647436,
+      "Price_Change_Week": 4.640526885,
+      "Price_Change_Month": 10.59492458,
+      "Price_Change_Quarter": 15.23665583,
+      "Price_Change_HalfYear": 3.909693072,
+      "Price_Change_Year": -11.23723833,
+      "AverageVolume": 2941725.969,
+      "Volume": 3442009.733,
+      "Relative_Volume": 1.170064707,
+      "BuyCount": 10,
+      "TotalCount": 15,
+      "Buy_Percentage": 66.66666667,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Packaged Foods",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": 0.170017177,
+      "Price_Change_Week": 1.845092419,
+      "Price_Change_Month": 1.474192274,
+      "Price_Change_Quarter": -7.121701389,
+      "Price_Change_HalfYear": -15.32630731,
+      "Price_Change_Year": -20.9124486,
+      "AverageVolume": 3401607.547,
+      "Volume": 2978572.233,
+      "Relative_Volume": 0.875636649,
+      "BuyCount": 13,
+      "TotalCount": 30,
+      "Buy_Percentage": 43.33333333,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Packaging & Containers",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": 1.292788298,
+      "Price_Change_Week": 7.286626961,
+      "Price_Change_Month": 12.11543085,
+      "Price_Change_Quarter": 9.846554725,
+      "Price_Change_HalfYear": 8.383521607,
+      "Price_Change_Year": 22.95360716,
+      "AverageVolume": 126206.8167,
+      "Volume": 219779,
+      "Relative_Volume": 1.741419408,
+      "BuyCount": 2,
+      "TotalCount": 2,
+      "Buy_Percentage": 100,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Paints/Coatings",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -1.36687612,
+      "Price_Change_Week": 2.113592157,
+      "Price_Change_Month": 17.72407232,
+      "Price_Change_Quarter": 22.19550134,
+      "Price_Change_HalfYear": 7.641372415,
+      "Price_Change_Year": 9.572110164,
+      "AverageVolume": 1791859.744,
+      "Volume": 1604772.333,
+      "Relative_Volume": 0.895590371,
+      "BuyCount": 3,
+      "TotalCount": 3,
+      "Buy_Percentage": 100,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Paper",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -1.321471066,
+      "Price_Change_Week": 5.714219013,
+      "Price_Change_Month": 12.0322094,
+      "Price_Change_Quarter": 3.054922137,
+      "Price_Change_HalfYear": -5.233371093,
+      "Price_Change_Year": 8.39432996,
+      "AverageVolume": 1658815.6,
+      "Volume": 1228985.714,
+      "Relative_Volume": 0.740881454,
+      "BuyCount": 4,
+      "TotalCount": 7,
+      "Buy_Percentage": 57.14285714,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Plastic Products",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.946552771,
+      "Price_Change_Week": 7.712959255,
+      "Price_Change_Month": 11.64084066,
+      "Price_Change_Quarter": 12.81535199,
+      "Price_Change_HalfYear": 16.36423064,
+      "Price_Change_Year": 20.53289286,
+      "AverageVolume": 2070322.414,
+      "Volume": 2027987.571,
+      "Relative_Volume": 0.97955157,
+      "BuyCount": 6,
+      "TotalCount": 7,
+      "Buy_Percentage": 85.71428571,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Pollution Control Equipment",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -1.318492425,
+      "Price_Change_Week": 1.397021113,
+      "Price_Change_Month": -2.747500221,
+      "Price_Change_Quarter": 18.04029968,
+      "Price_Change_HalfYear": 1.677135903,
+      "Price_Change_Year": 57.23781341,
+      "AverageVolume": 506706.175,
+      "Volume": 370656.75,
+      "Relative_Volume": 0.731502335,
+      "BuyCount": 2,
+      "TotalCount": 4,
+      "Buy_Percentage": 50,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Power Generation",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": 0.140808096,
+      "Price_Change_Week": 0.68665622,
+      "Price_Change_Month": 2.834258674,
+      "Price_Change_Quarter": -0.789787589,
+      "Price_Change_HalfYear": 6.902960498,
+      "Price_Change_Year": 11.72642065,
+      "AverageVolume": 3593526.402,
+      "Volume": 2910673.5,
+      "Relative_Volume": 0.809976935,
+      "BuyCount": 14,
+      "TotalCount": 16,
+      "Buy_Percentage": 87.5,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Precious Metals",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": 0.711507957,
+      "Price_Change_Week": 16.57025779,
+      "Price_Change_Month": -2.754054168,
+      "Price_Change_Quarter": 5.776003239,
+      "Price_Change_HalfYear": 5.481433399,
+      "Price_Change_Year": 93.50552235,
+      "AverageVolume": 5456394.806,
+      "Volume": 5383769.103,
+      "Relative_Volume": 0.986689801,
+      "BuyCount": 0,
+      "TotalCount": 29,
+      "Buy_Percentage": 0,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Precision Instruments",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": 1.943634597,
+      "Price_Change_Week": -7.820738137,
+      "Price_Change_Month": 27.77101096,
+      "Price_Change_Quarter": 33.37571519,
+      "Price_Change_HalfYear": -10.79931973,
+      "Price_Change_Year": 43.69863014,
+      "AverageVolume": 1562595.867,
+      "Volume": 4968091,
+      "Relative_Volume": 3.17938317,
+      "BuyCount": 1,
+      "TotalCount": 1,
+      "Buy_Percentage": 100,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Professional Services",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.958636475,
+      "Price_Change_Week": 0.219963855,
+      "Price_Change_Month": 8.684775676,
+      "Price_Change_Quarter": 16.63138089,
+      "Price_Change_HalfYear": 5.815700838,
+      "Price_Change_Year": -8.215798768,
+      "AverageVolume": 670465.3977,
+      "Volume": 531498.3103,
+      "Relative_Volume": 0.792730411,
+      "BuyCount": 9,
+      "TotalCount": 29,
+      "Buy_Percentage": 31.03448276,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Professional and commerical equipment",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": 0.167488601,
+      "Price_Change_Week": 0.344891872,
+      "Price_Change_Month": -8.25805352,
+      "Price_Change_Quarter": -15.56862745,
+      "Price_Change_HalfYear": -15.79976535,
+      "Price_Change_Year": -8.971757145,
+      "AverageVolume": 878714.4667,
+      "Volume": 559625,
+      "Relative_Volume": 0.636867858,
+      "BuyCount": 0,
+      "TotalCount": 1,
+      "Buy_Percentage": 0,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Property-Casualty Insurers",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": 0.261461525,
+      "Price_Change_Week": 2.173664893,
+      "Price_Change_Month": 1.915762484,
+      "Price_Change_Quarter": 4.21200908,
+      "Price_Change_HalfYear": -5.533817877,
+      "Price_Change_Year": 2.550339287,
+      "AverageVolume": 671178.7256,
+      "Volume": 582010.7885,
+      "Relative_Volume": 0.867147253,
+      "BuyCount": 29,
+      "TotalCount": 52,
+      "Buy_Percentage": 55.76923077,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Publishing",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": 0.264186281,
+      "Price_Change_Week": -1.863324752,
+      "Price_Change_Month": 1.210105003,
+      "Price_Change_Quarter": 13.41387476,
+      "Price_Change_HalfYear": 2.153897626,
+      "Price_Change_Year": 22.41116441,
+      "AverageVolume": 646095.8722,
+      "Volume": 738208.5,
+      "Relative_Volume": 1.142568049,
+      "BuyCount": 2,
+      "TotalCount": 6,
+      "Buy_Percentage": 33.33333333,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "REIT - Office",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": 0,
+      "Price_Change_Week": -7.218309859,
+      "Price_Change_Month": -2.946593002,
+      "Price_Change_Quarter": 8.884297521,
+      "Price_Change_HalfYear": -24.2816092,
+      "Price_Change_Year": -36.97297932,
+      "AverageVolume": 6464.566667,
+      "Volume": 407,
+      "Relative_Volume": 0.06295859,
+      "BuyCount": 0,
+      "TotalCount": 1,
+      "Buy_Percentage": 0,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "RETAIL: Building Materials",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.412740176,
+      "Price_Change_Week": -1.005350524,
+      "Price_Change_Month": 1.280022405,
+      "Price_Change_Quarter": -1.815310473,
+      "Price_Change_HalfYear": -16.71743212,
+      "Price_Change_Year": -23.90957295,
+      "AverageVolume": 4007860.34,
+      "Volume": 3586206.929,
+      "Relative_Volume": 0.894793387,
+      "BuyCount": 7,
+      "TotalCount": 14,
+      "Buy_Percentage": 50,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Radio And Television Broadcasting And Communications Equipment",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -1.682071866,
+      "Price_Change_Week": 1.310848784,
+      "Price_Change_Month": -7.404172723,
+      "Price_Change_Quarter": 42.15767517,
+      "Price_Change_HalfYear": 76.28373736,
+      "Price_Change_Year": 122.9350672,
+      "AverageVolume": 13790734.03,
+      "Volume": 14835740.43,
+      "Relative_Volume": 1.075775981,
+      "BuyCount": 0,
+      "TotalCount": 14,
+      "Buy_Percentage": 0,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Railroads",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": 0.586772284,
+      "Price_Change_Week": 0.874671215,
+      "Price_Change_Month": 3.086183982,
+      "Price_Change_Quarter": 12.75517249,
+      "Price_Change_HalfYear": 14.00379193,
+      "Price_Change_Year": 21.95604922,
+      "AverageVolume": 2473226.563,
+      "Volume": 2105029.667,
+      "Relative_Volume": 0.851126904,
+      "BuyCount": 3,
+      "TotalCount": 9,
+      "Buy_Percentage": 33.33333333,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Real Estate",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": 0.782813432,
+      "Price_Change_Week": 0.84533125,
+      "Price_Change_Month": 10.45040134,
+      "Price_Change_Quarter": 13.55565102,
+      "Price_Change_HalfYear": -0.299048979,
+      "Price_Change_Year": 24.93516494,
+      "AverageVolume": 2232750.441,
+      "Volume": 2788829.639,
+      "Relative_Volume": 1.249055688,
+      "BuyCount": 16,
+      "TotalCount": 36,
+      "Buy_Percentage": 44.44444444,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Real Estate Investment Trusts",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.26119951,
+      "Price_Change_Week": -0.828177459,
+      "Price_Change_Month": 3.211500713,
+      "Price_Change_Quarter": 7.114920785,
+      "Price_Change_HalfYear": 4.322767159,
+      "Price_Change_Year": 7.805812729,
+      "AverageVolume": 1848848.215,
+      "Volume": 1751747.385,
+      "Relative_Volume": 0.947480367,
+      "BuyCount": 77,
+      "TotalCount": 156,
+      "Buy_Percentage": 49.35897436,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Recreational Games/Products/Toys",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -1.68492043,
+      "Price_Change_Week": -0.698991145,
+      "Price_Change_Month": 0.374648165,
+      "Price_Change_Quarter": 3.475640974,
+      "Price_Change_HalfYear": 1.416309289,
+      "Price_Change_Year": 1.829840219,
+      "AverageVolume": 1904232.42,
+      "Volume": 1321833.4,
+      "Relative_Volume": 0.694155496,
+      "BuyCount": 3,
+      "TotalCount": 15,
+      "Buy_Percentage": 20,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Rental/Leasing Companies",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -1.291915332,
+      "Price_Change_Week": 0.153638166,
+      "Price_Change_Month": 15.54642163,
+      "Price_Change_Quarter": 47.5283962,
+      "Price_Change_HalfYear": 26.37041269,
+      "Price_Change_Year": 28.78587195,
+      "AverageVolume": 2077757.05,
+      "Volume": 1595604.25,
+      "Relative_Volume": 0.767945535,
+      "BuyCount": 3,
+      "TotalCount": 4,
+      "Buy_Percentage": 75,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Restaurants",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": 0.674177122,
+      "Price_Change_Week": 5.410709186,
+      "Price_Change_Month": 9.602679366,
+      "Price_Change_Quarter": 11.30861872,
+      "Price_Change_HalfYear": 4.017703354,
+      "Price_Change_Year": -11.11381044,
+      "AverageVolume": 2261936.863,
+      "Volume": 1954314.457,
+      "Relative_Volume": 0.864000445,
+      "BuyCount": 17,
+      "TotalCount": 35,
+      "Buy_Percentage": 48.57142857,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Retail-Auto Dealers and Gas Stations",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.851780462,
+      "Price_Change_Week": -1.677036935,
+      "Price_Change_Month": 1.700923578,
+      "Price_Change_Quarter": 11.14198046,
+      "Price_Change_HalfYear": -2.485756437,
+      "Price_Change_Year": -2.855227787,
+      "AverageVolume": 2049745.081,
+      "Volume": 2062089.5,
+      "Relative_Volume": 1.006022417,
+      "BuyCount": 8,
+      "TotalCount": 16,
+      "Buy_Percentage": 50,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Retail-Drug Stores and Proprietary Stores",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.822154137,
+      "Price_Change_Week": 3.839493016,
+      "Price_Change_Month": -6.65323858,
+      "Price_Change_Quarter": 5.235061171,
+      "Price_Change_HalfYear": -5.304852085,
+      "Price_Change_Year": 0.919787892,
+      "AverageVolume": 4433119.883,
+      "Volume": 2517504,
+      "Relative_Volume": 0.567885387,
+      "BuyCount": 1,
+      "TotalCount": 2,
+      "Buy_Percentage": 50,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Retail: Computer Software & Peripheral Equipment",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -1.107648213,
+      "Price_Change_Week": 1.103106751,
+      "Price_Change_Month": 24.251047,
+      "Price_Change_Quarter": 40.88093865,
+      "Price_Change_HalfYear": 16.06608875,
+      "Price_Change_Year": 42.17389197,
+      "AverageVolume": 5312796.89,
+      "Volume": 4001394.286,
+      "Relative_Volume": 0.75316154,
+      "BuyCount": 4,
+      "TotalCount": 7,
+      "Buy_Percentage": 57.14285714,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Savings Institutions",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.329323765,
+      "Price_Change_Week": 0.238300192,
+      "Price_Change_Month": 5.138359233,
+      "Price_Change_Quarter": 16.5851297,
+      "Price_Change_HalfYear": 13.11708314,
+      "Price_Change_Year": 37.82959709,
+      "AverageVolume": 366310.2827,
+      "Volume": 442895.96,
+      "Relative_Volume": 1.209073239,
+      "BuyCount": 18,
+      "TotalCount": 25,
+      "Buy_Percentage": 72,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Semiconductors",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -4.4171435,
+      "Price_Change_Week": 5.7334371,
+      "Price_Change_Month": 2.177446207,
+      "Price_Change_Quarter": 73.0626996,
+      "Price_Change_HalfYear": 109.2528558,
+      "Price_Change_Year": 243.864694,
+      "AverageVolume": 10603543.95,
+      "Volume": 9951756.472,
+      "Relative_Volume": 0.938531166,
+      "BuyCount": 11,
+      "TotalCount": 72,
+      "Buy_Percentage": 15.27777778,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Services-Misc. Amusement & Recreation",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": 0.09516154,
+      "Price_Change_Week": 3.084852341,
+      "Price_Change_Month": 6.508894162,
+      "Price_Change_Quarter": 18.41925166,
+      "Price_Change_HalfYear": 13.47797255,
+      "Price_Change_Year": 22.94085787,
+      "AverageVolume": 3007648.949,
+      "Volume": 2987853.375,
+      "Relative_Volume": 0.993418257,
+      "BuyCount": 17,
+      "TotalCount": 25,
+      "Buy_Percentage": 68,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Shoe Manufacturing",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -1.469414834,
+      "Price_Change_Week": 1.131448233,
+      "Price_Change_Month": 16.54064148,
+      "Price_Change_Quarter": 15.22319225,
+      "Price_Change_HalfYear": 2.673090757,
+      "Price_Change_Year": 19.51341653,
+      "AverageVolume": 4150352.508,
+      "Volume": 3572704.625,
+      "Relative_Volume": 0.860819561,
+      "BuyCount": 8,
+      "TotalCount": 8,
+      "Buy_Percentage": 100,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Software - Application",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -6.324108166,
+      "Price_Change_Week": -5.483343837,
+      "Price_Change_Month": 31.24286488,
+      "Price_Change_Quarter": 37.35753252,
+      "Price_Change_HalfYear": 1.40292304,
+      "Price_Change_Year": 3.755188293,
+      "AverageVolume": 4101075.417,
+      "Volume": 3471414.5,
+      "Relative_Volume": 0.846464439,
+      "BuyCount": 1,
+      "TotalCount": 3,
+      "Buy_Percentage": 33.33333333,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Software - Infrastructure",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.351559697,
+      "Price_Change_Week": -3.846153846,
+      "Price_Change_Month": -9.747292419,
+      "Price_Change_Quarter": -20.43284532,
+      "Price_Change_HalfYear": -31.97278912,
+      "Price_Change_Year": 47.05882353,
+      "AverageVolume": 19631.5,
+      "Volume": 12044,
+      "Relative_Volume": 0.613503808,
+      "BuyCount": 0,
+      "TotalCount": 1,
+      "Buy_Percentage": 0,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Specialty Business Services",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -1.141253508,
+      "Price_Change_Week": -1.417910448,
+      "Price_Change_Month": -2.40118212,
+      "Price_Change_Quarter": -12.69001983,
+      "Price_Change_HalfYear": -20.75584883,
+      "Price_Change_Year": -28.87456538,
+      "AverageVolume": 825394.6333,
+      "Volume": 606902,
+      "Relative_Volume": 0.735287068,
+      "BuyCount": 0,
+      "TotalCount": 1,
+      "Buy_Percentage": 0,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Specialty Chemicals",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": 0.268577233,
+      "Price_Change_Week": 0.299128644,
+      "Price_Change_Month": 6.999868542,
+      "Price_Change_Quarter": 12.61704025,
+      "Price_Change_HalfYear": -1.516610254,
+      "Price_Change_Year": -4.596097586,
+      "AverageVolume": 867415.8867,
+      "Volume": 667811.6,
+      "Relative_Volume": 0.769886291,
+      "BuyCount": 4,
+      "TotalCount": 5,
+      "Buy_Percentage": 80,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Specialty Foods",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.639220607,
+      "Price_Change_Week": 0.367104068,
+      "Price_Change_Month": -4.132044781,
+      "Price_Change_Quarter": -7.393583379,
+      "Price_Change_HalfYear": -2.895077955,
+      "Price_Change_Year": 19.39803617,
+      "AverageVolume": 430207.5667,
+      "Volume": 530816.2857,
+      "Relative_Volume": 1.233860877,
+      "BuyCount": 2,
+      "TotalCount": 7,
+      "Buy_Percentage": 28.57142857,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Specialty Insurers",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": 0.301910872,
+      "Price_Change_Week": 0.861834466,
+      "Price_Change_Month": 2.835973101,
+      "Price_Change_Quarter": 1.611601903,
+      "Price_Change_HalfYear": -18.2124091,
+      "Price_Change_Year": -19.04907653,
+      "AverageVolume": 1295749.259,
+      "Volume": 1096437,
+      "Relative_Volume": 0.846179916,
+      "BuyCount": 12,
+      "TotalCount": 18,
+      "Buy_Percentage": 66.66666667,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Steel/Iron Ore",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -4.297792374,
+      "Price_Change_Week": 0.944064542,
+      "Price_Change_Month": 7.592249444,
+      "Price_Change_Quarter": 27.94065621,
+      "Price_Change_HalfYear": 22.53878268,
+      "Price_Change_Year": 50.72839542,
+      "AverageVolume": 5971009.532,
+      "Volume": 34409675.43,
+      "Relative_Volume": 5.762790236,
+      "BuyCount": 7,
+      "TotalCount": 21,
+      "Buy_Percentage": 33.33333333,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Telecommunications Equipment",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -1.166634696,
+      "Price_Change_Week": 1.221407733,
+      "Price_Change_Month": 1.952661238,
+      "Price_Change_Quarter": 13.18306131,
+      "Price_Change_HalfYear": 27.88709582,
+      "Price_Change_Year": 83.6037535,
+      "AverageVolume": 3415732.41,
+      "Volume": 3565298.902,
+      "Relative_Volume": 1.043787532,
+      "BuyCount": 11,
+      "TotalCount": 51,
+      "Buy_Percentage": 21.56862745,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Textiles",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": 0.03412354,
+      "Price_Change_Week": -0.599288552,
+      "Price_Change_Month": 1.892656987,
+      "Price_Change_Quarter": 11.39637804,
+      "Price_Change_HalfYear": 6.596653321,
+      "Price_Change_Year": -8.065634274,
+      "AverageVolume": 189176.9944,
+      "Volume": 211112,
+      "Relative_Volume": 1.115949646,
+      "BuyCount": 1,
+      "TotalCount": 6,
+      "Buy_Percentage": 16.66666667,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Tobacco",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": 1.159840522,
+      "Price_Change_Week": 2.246916595,
+      "Price_Change_Month": -6.655518395,
+      "Price_Change_Quarter": -5.368444846,
+      "Price_Change_HalfYear": -23.31013006,
+      "Price_Change_Year": 11.64187668,
+      "AverageVolume": 466085.4667,
+      "Volume": 798240,
+      "Relative_Volume": 1.712647266,
+      "BuyCount": 0,
+      "TotalCount": 1,
+      "Buy_Percentage": 0,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Tools/Hardware",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": 2.058724266,
+      "Price_Change_Week": -1.860666378,
+      "Price_Change_Month": 2.392776524,
+      "Price_Change_Quarter": -3.273270071,
+      "Price_Change_HalfYear": 24.39325381,
+      "Price_Change_Year": 34.06947709,
+      "AverageVolume": 973825.0667,
+      "Volume": 920199,
+      "Relative_Volume": 0.944932546,
+      "BuyCount": 0,
+      "TotalCount": 1,
+      "Buy_Percentage": 0,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Transportation Services",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.626217613,
+      "Price_Change_Week": 1.14591023,
+      "Price_Change_Month": 1.419768617,
+      "Price_Change_Quarter": 10.8371081,
+      "Price_Change_HalfYear": 4.794139365,
+      "Price_Change_Year": 23.80648824,
+      "AverageVolume": 6427153.828,
+      "Volume": 4423636.25,
+      "Relative_Volume": 0.688272969,
+      "BuyCount": 4,
+      "TotalCount": 12,
+      "Buy_Percentage": 33.33333333,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Trucking Freight/Courier Services",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -2.279462027,
+      "Price_Change_Week": -0.464249614,
+      "Price_Change_Month": 16.10466504,
+      "Price_Change_Quarter": 46.94197847,
+      "Price_Change_HalfYear": 42.92051943,
+      "Price_Change_Year": 54.73562101,
+      "AverageVolume": 1349130.373,
+      "Volume": 1346830.533,
+      "Relative_Volume": 0.998295317,
+      "BuyCount": 4,
+      "TotalCount": 15,
+      "Buy_Percentage": 26.66666667,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Trusts Except Educational Religious and Charitable",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.109024625,
+      "Price_Change_Week": 0.798492653,
+      "Price_Change_Month": 0.831877428,
+      "Price_Change_Quarter": 3.161082807,
+      "Price_Change_HalfYear": 0.212673443,
+      "Price_Change_Year": 4.993339341,
+      "AverageVolume": 215773.1047,
+      "Volume": 211625.8605,
+      "Relative_Volume": 0.980779606,
+      "BuyCount": 27,
+      "TotalCount": 86,
+      "Buy_Percentage": 31.39534884,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Water Sewer Pipeline Comm & Power Line Construction",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -1.346992929,
+      "Price_Change_Week": 2.864435565,
+      "Price_Change_Month": -1.93341709,
+      "Price_Change_Quarter": 30.82947322,
+      "Price_Change_HalfYear": 49.41435643,
+      "Price_Change_Year": 118.5684277,
+      "AverageVolume": 939222.0733,
+      "Volume": 540229.6,
+      "Relative_Volume": 0.575188356,
+      "BuyCount": 0,
+      "TotalCount": 5,
+      "Buy_Percentage": 0,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Water Supply",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": 0.243476291,
+      "Price_Change_Week": -1.233954268,
+      "Price_Change_Month": 1.799309416,
+      "Price_Change_Quarter": -0.742545122,
+      "Price_Change_HalfYear": -2.471386932,
+      "Price_Change_Year": 3.751242651,
+      "AverageVolume": 1036158.147,
+      "Volume": 1394267.583,
+      "Relative_Volume": 1.34561272,
+      "BuyCount": 8,
+      "TotalCount": 12,
+      "Buy_Percentage": 66.66666667,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    },
+    {
+      "Gics_sector": "NA",
+      "Symbol": "NA",
+      "Gics_Industry": "Wholesale Distributors",
+      "Signal_Type": "Normal",
+      "Price_Change_OneDay": -0.394949005,
+      "Price_Change_Week": 3.170506484,
+      "Price_Change_Month": 11.52494161,
+      "Price_Change_Quarter": 7.712290134,
+      "Price_Change_HalfYear": -11.90802568,
+      "Price_Change_Year": 17.87136419,
+      "AverageVolume": 792325.9,
+      "Volume": 679855.5,
+      "Relative_Volume": 0.85805033,
+      "BuyCount": 1,
+      "TotalCount": 2,
+      "Buy_Percentage": 50,
+      "SectorGreed": "NA",
+      "Category": "Industry"
+    }
+  ];
+  const metric2 = "Price_Change_Year";
+  const positiveColors2 = [
+    '#4B8E63', // darkest green
+    '#4A9B5F',
+    '#49A95B',
+    '#47B757',
+    '#44C752',
+    '#3FD44D',
+    '#30cc5a'  // brightest green
+  ];
+
+  const negativeColors2 = [
+    '#92484D',
+    '#A1494B',
+    '#B84848',
+    '#C64945',
+    '#D44943',
+    '#FF3B3F'
+  ];
+
+  // SORT BY ACTUAL VALUE
+  const sorted2 = [...raw2].sort(
+    (a, b) => b[metric2] - a[metric2]
+  );
+  const maxPositive2 = Math.max(
+    ...sorted2
+      .filter(d => d[metric2] > 0)
+      .map(d => d[metric2]),
+    1
+  );
+
+  const maxNegative2 = Math.max(
+    ...sorted2
+      .filter(d => d[metric2] < 0)
+      .map(d => Math.abs(d[metric2])),
+    1
+  );
+
+  // PREPARE CHART DATA
+  const chartData2 = sorted2.map(item => {
+    const value = Number(item[metric2]);
+    let color;
+    if (value >= 0) {
+      const idx = Math.min(
+        positiveColors2.length - 1,
+        Math.floor(
+          (value / maxPositive2) *
+          positiveColors2.length
+        )
+      );
+      color = positiveColors2[idx];
+    } else {
+
+      const idx = Math.min(
+        negativeColors2.length - 1,
+        Math.floor(
+          (Math.abs(value) / maxNegative2) *
+          negativeColors2.length
+        )
+      );
+      color = negativeColors2[idx];
+    }
+
+    return {
+      name: item.Gics_Industry,
+      y: Math.abs(value), // always positive -> bars on right side
+      actualValue: value,
+      color: color
+    };
+  });
+  // const rowHeight = 28; 
+  // const chartHeight2 = raw2.length * rowHeight;
+  const totalBars = chartData2.length;
+  const barHeight = 16;
+  const gap = 4;
+  const chartHeight2 = totalBars * (barHeight + gap);
+  Highcharts.chart('industry-performance', {
+    chart: {
+      type: 'bar',
+      height: chartHeight2,
+      backgroundColor: 'transparent'
+    },
+    title: {
+      text: null
+    },
+    credits: {
+      enabled: false
+    },
+    legend: {
+      enabled: false
+    },
+    xAxis: {
+      categories: chartData2.map(d => d.name),
+      lineWidth: 0,
+      tickLength: 0,
+      gridLineColor: '#777E87',
+      gridLineWidth: 0.1,
+      labels: {
+        enabled: true,
+        style: {
+          fontSize: '11px',
+          color: '#777E87'
+        }
+      }
+    },
+    yAxis: {
+      min: 0,
+      title: {
+        text: null
+      },
+      gridLineColor: '#777E87',
+      gridLineWidth: 0.1,
+      labels: {
+        enabled: true,
+        style: {
+          fontSize: '11px',
+          color: '#777E87'
+        }
+      }
+    },
+
+    tooltip: {
+      formatter: function () {
+        return `
+        <b>${this.point.name}</b><br>
+        ${(this.point.actualValue > 0 ? '+' : '')}
+        ${Highcharts.numberFormat(
+          this.point.actualValue,
+          2
+        )}%
+      `;
+      }
+    },
+    plotOptions: {
+      series: {
+        borderWidth: 0,
+        pointWidth: 17,
+        borderRadius: 3,
+        pointPadding: 0,
+        dataLabels: {
+          enabled: true,
+          formatter: function () {
+            return (
+              (this.point.actualValue > 0 ? '+' : '') +
+              Highcharts.numberFormat(
+                this.point.actualValue,
+                2
+              ) +
+              '%'
+            );
+          },
+
+          style: {
+            fontSize: '11px',
+            color: '#777E87',
+            fontWeight: 'normal',
+            textOutline: 'none',
+          }
+        }
+      }
+    },
+
+    series: [{
+      name: 'Performance',
+      data: chartData2
+    }]
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,2784 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>OVTLYR | Watchlist</title>
+<meta name="description" content="Turning Investor Behavior into Stock Market Success" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<link rel="icon" type="image/ico" sizes="32x32" href="images/favicon-32x32.ico">
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/latest-style.css" />
+<script>
+var viewportmeta = document.querySelector('meta[name="viewport"]');
+if(viewportmeta) {
+  if(screen.width < 320){
+    var newScale = screen.width / 320;
+    viewportmeta.content = 'width=320, minimum-scale=' + newScale + ', maximum-scale=1.0, user-scalable=no, initial-scale=' + newScale + '';
+  } else {
+    viewportmeta.content = 'width=device-width, maximum-scale=1.0, initial-scale=1.0';
+  }
+}
+</script>
+</head>
+<body>
+<script>
+console.log(localStorage.getItem('darkMode'));
+if (localStorage.getItem('darkMode') === "on") {
+  document.body.classList.add("dark");
+  document.addEventListener("DOMContentLoaded", function(){
+    document.querySelector('.js-switch-theme input').checked = true;
+  });
+}
+</script>
+<div class="page toggle new_sidebar final_dashbd1">
+  <div class="sidebar active final_dashbd11">
+    <!-- <div class="sidebar__top">
+      <button class="sidebar__close"><span class="material-symbols-outlined">close</span></button>
+      <a class="sidebar__logo" href="stock-detail.html">
+        <img class="sidebar__pic sidebar__pic_black" src="images/black-logo.svg" alt="OVTLYR Logo" />
+        <img class="sidebar__pic sidebar__pic_white" src="images/white-logo.svg" alt="OVTLYR Logo" />
+      </a>
+      <button class="sidebar__burger"></button>
+    </div> -->
+    <div class="sidebar__wrapper ovtlyr_sidebar">
+      <div class="sidebar__inner">
+        <!-- <a class="sidebar__logo" href="stock-detail.html">
+          <img class="sidebar__pic sidebar__pic_black" src="images/black-logo-small.svg" alt="OVTLYR Logo" />
+          <img class="sidebar__pic sidebar__pic_white" src="images/white-logo-small.svg" alt="OVTLYR Logo" />
+        </a> -->
+        <div class="sidebar__list">
+          <div class="sidebar__group">
+            <div class="sidebar__menu">
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="dashboard-latest.html" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Dashboard">
+                  <div class="sidebar__icon">
+                    <img src="images/dashboard.svg" alt="Dashboard" />
+                  </div>
+                </a>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="market-breadth-latest.html" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Market Breadth">
+                  <div class="sidebar__icon">
+                    <img src="images/market-breadth.svg" alt="Market" />
+                  </div>
+                </a>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="stocks-etfs.html" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Screener">
+                  <div class="sidebar__icon">
+                    <img src="images/stock-etf.svg" alt="Stocks" />
+                  </div>
+                </a>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item active" href="watchlist.html" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Watchlist">
+                  <div class="sidebar__icon">
+                    <img src="images/watchlist.svg" alt="Star" />
+                  </div>
+                </a>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="news-and-analyst.html" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="News and Analyst Ratings">
+                  <div class="sidebar__icon">
+                    <img src="images/news.svg" alt="News" />
+                  </div>
+                </a>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="notification.html" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Notification & List Management">
+                  <div class="sidebar__icon">
+                    <img src="images/notification.svg" alt="Notification" />
+                  </div>
+                  <span class="noti_count2">10</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sidebar__inner final_dashbd111">
+        <div class="sidebar__list">
+          <div class="sidebar__group">
+            <div class="sidebar__menu">
+              <div class="side_dropdown">
+                <div class="profileDrop dropup-right dropup" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Settings">
+                  <a class="sidebar__item p-0" href="#" id="settingsButton" data-bs-toggle="dropdown" aria-expanded="false">
+                    <div class="sidebar__icon">
+                      <img src="images/setting.svg" alt="setting" />
+                    </div>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="settingsButton" >
+                    <li><a class="dropdown-item" href="subscription-all.html"><p class="mb-0">Subscription Management</p></a></li>
+                    <li><a class="dropdown-item" href="notification.html"><p class="mb-0">Notification Management</p></a></li>
+                    <li><a class="dropdown-item" href="promoter.html"><p class="mb-0">Referral Dashboard</p></a></li>
+                    <li><a class="dropdown-item" href="documentation.html"><p class="mb-0">Documentation</p></a></li>
+                    <li><a class="dropdown-item" href="tutorials.html"><p class="mb-0">Tutorials</p></a></li>
+                    <li><a class="dropdown-item" href="contact.html"><p class="mb-0">Contact Us</p></a></li>
+                    <li>
+                      <a class="dropdown-item" href="javascript:void(0);">
+                        <p class="switchThemeBtn mb-0">
+                          <span>Theme</span>
+                          <label class="switch switch_theme js-switch-theme mt-0">
+                            <input class="switch__input" type="checkbox">
+                            <span class="switch__in">
+                              <span class="switch__box"></span>
+                              <span class="switch__icon">
+                                <span class="material-symbols-outlined icon-sun">dark_mode</span>
+                                <span class="material-symbols-outlined icon-moon">light_mode</span>
+                              </span>
+                            </span>
+                          </label>
+                        </p>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="https://discord.gg/DjgmSrdxUY" target="_blank" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Discord">
+                  <div class="sidebar__icon">
+                    <img src="images/discord.svg" alt="Discord" />
+                  </div>
+                </a>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="javascript:void(0);" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Logout">
+                  <div class="sidebar__icon">
+                    <img src="images/logout.svg" alt="Logout" />
+                  </div>
+                </a>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="profile.html" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Profile">
+                  <div class="sidebar__icon profile_icon">
+                    <img src="images/profile.svg" alt="Profile" />
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page__wrapper final_dashbd12">
+    <div class="page__center new_content">
+      <div class="dashboard_cont final_dashbd2 p-0">
+        <!-- <div class="new_header">
+          <div class="newleft_21">
+            <div class="me-1">
+              <a href="https://discord.gg/DjgmSrdxUY" target="_blank"><img src="images/discord.svg" class="icon_img" alt="Discord" /></a>
+            </div>
+            <div class="profileDrop">
+              <button class="" type="button" id="profileMenuButton" data-bs-toggle="dropdown" aria-expanded="false"><img src="images/profile.svg" class="icon_img" alt="Profile" /></button>
+                <ul class="dropdown-menu" aria-labelledby="profileMenuButton">
+                  <li><a class="dropdown-item" href="profile.html"><p class="mb-0">Profile</p></a></li>
+                  <li><a class="dropdown-item" href="subscription.html"><p class="mb-0">Subscription Management</p></a></li>
+                  <li><a class="dropdown-item" href="notification.html"><p class="mb-0">Notification Management</p></a></li>
+                  <li><a class="dropdown-item" href="affiliate-info.html"><p class="mb-0">Referral Dashboard</p></a></li>
+                  <li><a class="dropdown-item" href="tutorials.html"><p class="mb-0">Tutorials</p></a></li>
+                  <li><a class="dropdown-item" href="contact.html"><p class="mb-0">Contact Us</p></a></li>
+                  <li>
+                    <a class="dropdown-item" href="javascript:void(0);">
+                      <p class="switchThemeBtn mb-0">
+                        <span>Theme</span>
+                        <label class="switch switch_theme js-switch-theme">
+                          <input class="switch__input" type="checkbox">
+                          <span class="switch__in">
+                            <span class="switch__box"></span>
+                            <span class="switch__icon">
+                              <span class="material-symbols-outlined icon-sun">dark_mode</span>
+                              <span class="material-symbols-outlined icon-moon">light_mode</span>
+                            </span>
+                          </span>
+                        </label>
+                      </p>
+                    </a>
+                  </li>
+                  <li><a class="dropdown-item" href="log-in.html"><p class="mb-0">Logout</p></a></li>
+                </ul>
+            </div>
+          </div>
+        </div> -->
+        <div class="watchlist_head">
+          <div class="page_head">
+            <div class="pageHeading">
+              <div>
+                <div class="video_head">
+                  <!-- <button type="button"><span class="material-symbols-outlined">chevron_left</span></button> -->
+                  <h5>Watchlist</h5>
+                  <div class="chart_dtl video_icon">
+                    <div class="sort_dropdown">
+                      <button data-bs-toggle="modal" data-bs-target="#favList"><img src="images/video-icon.svg" alt="Video"></button>
+                      <!--  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#favList"><p class="mb-0">Favorites List</p></a></li>
+                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#bullbearList"><p class="mb-0">Bull & Bear List</p></a></li>
+                      </ul> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="watchlist_dash">
+          <div class="watchlist_tabs gridSec_1">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+              <li class="nav-item bullList_tab" role="watchlist">
+                <button class="nav-link active" id="bullslist-tab" data-bs-toggle="tab" data-bs-target="#bullslisttab" type="button" role="tab" aria-controls="bullslisttab" aria-selected="true">
+                  <div><img src="images/bull-box.svg" alt="Bull">Bull List </div><span>(10 New, 550 Total)</span>
+                </button>
+              </li>
+              <li class="nav-item bearList_tab" role="watchlist">
+                <button class="nav-link" id="bearslist-tab" data-bs-toggle="tab" data-bs-target="#bearslisttab" type="button" role="tab" aria-controls="bearslisttab" aria-selected="false" tabindex="-1">
+                  <div><img src="images/bear-box.svg" alt="Bear">Bear List </div><span>(10 New, 550 Total)</span>
+                </button>
+              </li>
+            </ul>
+            <div class="watchlist_listing">
+              <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="bullslisttab" role="tabpanel" aria-labelledby="bullslist-tab">
+                  <div class="bullList_tabC">
+                    <div class="table_head">
+                      <div class="fav_rankTabs">
+                        <ul class="nav nav-tabs" id="myTab2" role="tablist">
+                          <li class="nav-item" role="favranklist2">
+                            <button class="nav-link active" id="stocks-tab1" data-bs-toggle="tab" data-bs-target="#stockstab1" type="button" role="tab" aria-controls="stockstab1" aria-selected="true">
+                              Stocks
+                            </button>
+                          </li>
+                          <li class="nav-item" role="favranklist2">
+                            <button class="nav-link" id="etfs-tab1" data-bs-toggle="tab" data-bs-target="#etfstab1" type="button" role="tab" aria-controls="#etfstab1" aria-selected="false" tabindex="-1">
+                              ETFs
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="filterDropd_box">
+                        <a href="javascript:void(0);" class="expand_btn" id="expand_btn2"><span></span></a>
+                      </div>
+                    </div>
+                    <div class="tab-content" id="myTab2Content">
+                      <div class="tab-pane fade show active" id="stockstab1" role="tabpanel" aria-labelledby="stocks-tab1">
+                        <div class="favList_tabC">
+                          <div class="table_scroll vertical_scroll horizontal_scroll">
+                            <table class="table ovtlyr_table favList__table bullTable_2">
+                              <thead class="sticky-top">
+                                <tr class="ovtlyr__row_head">
+                                  <th>Symbol</th>
+                                  <th>Current Signal</th>
+                                  <th class="dropdown drop_box">
+                                    <div class="sort_dropdown">
+                                      <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Last Signal Date</button>
+                                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item" href="#"><p class="mb-0">All</p></a></li>
+                                        <li><a class="dropdown-item" href="#"><p class="mb-0">Ascending</p></a></li>
+                                        <li><a class="dropdown-item" href="#"><p class="mb-0">Descending</p></a></li>
+                                      </ul>
+                                    </div>
+                                  </th>
+                                  <th>Sector <a href="javascript:void(0);" class="show_filters"><span class="material-symbols-outlined icon_filter">filter_alt</span></a></th>
+                                  <th class="dropdown drop_box">
+                                    <div class="sort_dropdown">
+                                      <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Overlay</button>
+                                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item" href="#"><p><span class="whiteBox"><span class="drop_text">All</span></span></p></a></li>
+                                        <li><a class="dropdown-item" href="#"><p><span class="greenBox"><span class="drop_text">Uptrend</span></span></p></a></li>
+                                        <li><a class="dropdown-item" href="#"><p><span class="redBox"><span class="drop_text">Downtrend</span></span></p></a></li>
+                                        <li><a class="dropdown-item" href="#"><p><span class="blueBox"><span class="drop_text">Neutral</span></span></p></a></li>
+                                      </ul>
+                                    </div>
+                                  </th>
+                                  <th class="dropdown drop_box">
+                                    <div class="sort_dropdown">
+                                      <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Overlay Start Date</button>
+                                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item" href="#"><p class="mb-0">Latest to Oldest</p></a></li>
+                                        <li><a class="dropdown-item" href="#"><p class="mb-0">Oldest to Latest</p></a></li>
+                                      </ul>
+                                    </div>
+                                  </th>
+                                  <th>OC Status</th>
+                                  <th class="dropdown drop_box">
+                                    <div class="sort_dropdown">
+                                      <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Last Day Close</button>
+                                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item" href="#"><p class="mb-0">All</p></a></li>
+                                        <li><a class="dropdown-item" href="#"><p class="mb-0">Ascending</p></a></li>
+                                        <li><a class="dropdown-item" href="#"><p class="mb-0">Descending</p></a></li>
+                                      </ul>
+                                    </div>
+                                  </th>
+                                  <th class="dropdown drop_box">
+                                    <div class="sort_dropdown">
+                                      <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">30-Day Avg. Vol.</button>
+                                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item" href="#"><p class="mb-0">All</p></a></li>
+                                        <li><a class="dropdown-item" href="#"><p class="mb-0">Ascending</p></a></li>
+                                        <li><a class="dropdown-item" href="#"><p class="mb-0">Descending</p></a></li>
+                                      </ul>
+                                    </div>
+                                  </th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr class="ovtyr__row">
+                                  <td>
+                                    <div class="fav_symbol justify-content-center">
+                                      <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="American Multinational Technology Company">
+                                        <div class="favSymbol_box"><span class="port_symbol"><span class="noti_box"><span class="noti_count">2</span></span>AAPL</span></div>
+                                      </a>
+                                      <button type="button" class="addTo_fav"><i class="fa-solid fa-star"></i></button>
+                                      <button type="button" data-bs-toggle="modal" data-bs-target="#notiSett_modal">
+                                        <i class="fa-regular fa-bell bell_icon"></i>
+                                      </button> 
+                                    </div>
+                                  </td>
+                                  <td><p class="buy_stock">Buy</p></td>
+                                  <td><p>01-02-2022</p></td>
+                                  <td><p><span class="arrows arrow_up">Utilities</span></p></td>
+                                  <td class="align__items"><p><span class="greenBox"></span></p></td>
+                                  <td class="align__items"><p><span class="date_start">Aug 04,2025</span></p></td>
+                                  <td><p class="greenBg">OC</p></td>
+                                  <td><p>$2.04</p></td>
+                                  <td><p>4.3M</p></td>
+                                </tr>
+                                <tr class="ovtyr__row">
+                                  <td>
+                                    <div class="fav_symbol justify-content-center">
+                                      <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="American Multinational Technology Company">
+                                        <div class="favSymbol_box"><span class="port_symbol"><span class="noti_box"><span class="noti_count">2</span></span>AAPL</span></div>
+                                      </a>
+                                      <button type="button" class="addTo_fav"><i class="fa-solid fa-star"></i></button>
+                                      <button type="button" data-bs-toggle="modal" data-bs-target="#notiSett_modal">
+                                        <i class="fa-regular fa-bell bell_icon"></i>
+                                      </button> 
+                                    </div>
+                                  </td>
+                                  <td><p class="buy_stock">Buy</p></td>
+                                  <td><p>01-02-2022</p></td>
+                                  <td><p><span class="arrows arrow_up">Utilities</span></p></td>
+                                  <td class="align__items"><p><span class="greenBox"></span></p></td>
+                                  <td class="align__items"><p><span class="date_start">Aug 04,2025</span></p></td>
+                                  <td><p class="greenBg">OC</p></td>
+                                  <td><p>$2.04</p></td>
+                                  <td><p>4.3M</p></td>
+                                </tr>
+                                <tr class="ovtyr__row">
+                                  <td>
+                                    <div class="fav_symbol justify-content-center">
+                                      <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="American Multinational Technology Company">
+                                        <div class="favSymbol_box"><span class="port_symbol">AAPL</span></div>
+                                      </a>
+                                      <button type="button" class="addTo_fav"><i class="fa-regular fa-star"></i></button>
+                                      <button type="button" data-bs-toggle="modal" data-bs-target="#notiSett_modal">
+                                        <i class="fa-regular fa-bell bell_icon"></i>
+                                      </button> 
+                                    </div>
+                                  </td>
+                                  <td><p class="buy_stock">Buy</p></td>
+                                  <td><p>01-02-2022</p></td>
+                                  <td><p><span class="arrows arrow_down">Technology</span></p></td>
+                                  <td class="align__items"><p><span class="greenBox"></span></p></td>
+                                  <td class="align__items"><p><span class="date_start">Aug 04,2025</span></p></td>
+                                  <td><p class="pinkBg">OC</p></td>
+                                  <td><p>$2.04</p></td>
+                                  <td><p>4.3M</p></td>
+                                </tr>
+                                <tr class="ovtyr__row">
+                                  <td>
+                                    <div class="fav_symbol justify-content-center">
+                                      <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="American Multinational Technology Company">
+                                        <div class="favSymbol_box"><span class="port_symbol">AAPL</span></div>
+                                      </a>
+                                      <button type="button" class="addTo_fav"><i class="fa-regular fa-star"></i></button>
+                                      <button type="button" data-bs-toggle="modal" data-bs-target="#notiSett_modal">
+                                        <i class="fa-regular fa-bell bell_icon"></i>
+                                      </button> 
+                                    </div>
+                                  </td>
+                                  <td><p class="buy_stock">Buy</p></td>
+                                  <td><p>01-02-2022</p></td>
+                                  <td><p><span class="arrows arrow_up">Utilities</span></p></td>
+                                  <td class="align__items"><p><span class="greenBox"></span></p></td>
+                                  <td class="align__items"><p><span class="date_start">Aug 04,2025</span></p></td>
+                                  <td><p class="greenBg">OC</p></td>
+                                  <td><p>$2.04</p></td>
+                                  <td><p>4.3M</p></td>
+                                </tr>
+                                <tr class="ovtyr__row">
+                                  <td>
+                                    <div class="fav_symbol justify-content-center">
+                                      <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="American Multinational Technology Company">
+                                        <div class="favSymbol_box"><span class="port_symbol">AAPL</span></div>
+                                      </a>
+                                      <button type="button" class="addTo_fav"><i class="fa-regular fa-star"></i></button>
+                                      <button type="button" data-bs-toggle="modal" data-bs-target="#notiSett_modal">
+                                        <i class="fa-solid fa-bell bell_icon"></i>
+                                      </button> 
+                                    </div>
+                                  </td>
+                                  <td><p class="buy_stock">Buy</p></td>
+                                  <td><p>01-02-2022</p></td>
+                                  <td><p><span class="arrows arrow_down">Technology</span></p></td>
+                                  <td class="align__items"><p><span class="greenBox"></span></p></td>
+                                  <td class="align__items"><p><span class="date_start">Aug 04,2025</span></p></td>
+                                  <td><p class="greenBg">OC</p></td>
+                                  <td><p>$2.04</p></td>
+                                  <td><p>4.3M</p></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                        <div class="favList_grid">
+                          <div class="favList_item">
+                            <p>
+                              <span>Symbol</span>
+                              <span class="favSymbol_box">
+                                <span class="port_symbol"><span class="noti_box"><span class="noti_count">2</span></span>AAPL</span>
+                                <button type="button" class="addTo_fav"><i class="fa-regular fa-star"></i></button>
+                              </span>
+                            </p>
+                            <p>
+                              <span>Status</span>
+                              <span class="buy_stock">Buy</span>
+                            </p>
+                            <p>
+                              <span>Last Signal Date</span>
+                              <span>01-02-2023</span>
+                            </p>
+                            <p>
+                              <span>Sector</span>
+                              <span><span class="arrows arrow_up">Utilities</span></span>
+                            </p>
+                            <p>
+                              <span>Overlay</span>
+                              <span class="orgBox"></span>
+                            </p>
+                            <p>
+                              <span>Last Day Close</span>
+                              <span>$2.04</span>
+                            </p>
+                          </div>
+                          <div class="favList_item active">
+                            <p>
+                              <span>Symbol</span>
+                              <span class="favSymbol_box">
+                                <span class="port_symbol"><span class="noti_box"><span class="noti_count">2</span></span>AAPL</span>
+                                <button type="button" class="addTo_fav"><i class="fa-regular fa-star"></i></button>
+                              </span>
+                            </p>
+                            <p>
+                              <span>Status</span>
+                              <span class="buy_stock">Buy</span>
+                            </p>
+                            <p>
+                              <span>Last Signal Date</span>
+                              <span>01-02-2023</span>
+                            </p>
+                            <p>
+                              <span>Sector</span>
+                              <span><span class="arrows arrow_up">Utilities</span></span>
+                            </p>
+                            <p>
+                              <span>Overlay</span>
+                              <span class="redBox"></span>
+                            </p>
+                            <p>
+                              <span>Last Day Close</span>
+                              <span>$2.04</span>
+                            </p>
+                          </div>
+                          <div class="favList_item">
+                            <p>
+                              <span>Symbol</span>
+                              <span class="favSymbol_box">
+                                <span class="port_symbol"><span class="noti_box"><span class="noti_count">2</span></span>AAPL</span>
+                                <button type="button" class="addTo_fav"><i class="fa-regular fa-star"></i></button>
+                              </span>
+                            </p>
+                            <p>
+                              <span>Status</span>
+                              <span class="buy_stock">Buy</span>
+                            </p>
+                            <p>
+                              <span>Last Signal Date</span>
+                              <span>01-02-2023</span>
+                            </p>
+                            <p>
+                              <span>Sector</span>
+                              <span><span class="arrows arrow_up">Utilities</span></span>
+                            </p>
+                            <p>
+                              <span>Overlay</span>
+                              <span class="orgBox"></span>
+                            </p>
+                            <p>
+                              <span>Last Day Close</span>
+                              <span>$2.04</span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tab-pane fade" id="etfstab1" role="tabpanel" aria-labelledby="etfs-tab1">
+                        <div class="favList_tabC">
+                          <div class="table_scroll horizontal_scroll">
+                            <table class="table ovtlyr_table favList__table bullTable_2">
+                              <thead class="sticky-top">
+                                <tr class="ovtlyr__row_head">
+                                  <th>Symbol</th>
+                                  <th>Current Signal</th>
+                                  <th class="dropdown drop_box">
+                                    <div class="sort_dropdown">
+                                      <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Last Signal Date</button>
+                                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item" href="#"><p class="mb-0">All</p></a></li>
+                                        <li><a class="dropdown-item" href="#"><p class="mb-0">Ascending</p></a></li>
+                                        <li><a class="dropdown-item" href="#"><p class="mb-0">Descending</p></a></li>
+                                      </ul>
+                                    </div>
+                                  </th>
+                                  <th class="dropdown drop_box">
+                                    <div class="sort_dropdown">
+                                      <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Overlay</button>
+                                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item" href="#"><p><span class="whiteBox"><span class="drop_text">All</span></span></p></a></li>
+                                        <li><a class="dropdown-item" href="#"><p><span class="greenBox"><span class="drop_text">Uptrend</span></span></p></a></li>
+                                        <li><a class="dropdown-item" href="#"><p><span class="redBox"><span class="drop_text">Downtrend</span></span></p></a></li>
+                                        <li><a class="dropdown-item" href="#"><p><span class="blueBox"><span class="drop_text">Neutral</span></span></p></a></li>
+                                      </ul>
+                                    </div>
+                                  </th>
+                                  <th class="dropdown drop_box">
+                                    <div class="sort_dropdown">
+                                      <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Overlay Start Date</button>
+                                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item" href="#"><p class="mb-0">Latest to Oldest</p></a></li>
+                                        <li><a class="dropdown-item" href="#"><p class="mb-0">Oldest to Latest</p></a></li>
+                                      </ul>
+                                    </div>
+                                  </th>
+                                  <th>Expense Ratio</th>
+                                  <th>Index Tracked</th>
+                                  <th>Last Day Close</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr class="ovtyr__row">
+                                  <td>
+                                    <div class="fav_symbol justify-content-center">
+                                      <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="American Multinational Technology Company">
+                                        <div class="favSymbol_box"><span class="port_symbol">AAPL</span></div>
+                                      </a>
+                                      <button type="button" class="addTo_fav"><i class="fa-regular fa-star"></i></button>
+                                      <button type="button" data-bs-toggle="modal" data-bs-target="#notiSett_modal">
+                                        <i class="fa-regular fa-bell bell_icon"></i>
+                                      </button> 
+                                    </div>
+                                  </td>
+                                  <td><p class="buy_stock">Buy</p></td>
+                                  <td><p>01-02-2022</p></td>
+                                  <td><p><span class="greenBox"></span></p></td>
+                                  <td><p><span class="date_start">Aug 06,2025</span></p></td>
+                                  <td><p>0.85%</p></td>
+                                  <td>
+                                    <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Alerian MLP Infrastructure Index">
+                                      <p class="company_name">Alerian MLP Infrastructure Index</p>
+                                    </a>
+                                  </td>
+                                  <td><p>$2.04</p></td>
+                                </tr>
+                                <tr class="ovtyr__row">
+                                  <td>
+                                    <div class="fav_symbol justify-content-center">
+                                      <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="American Multinational Technology Company">
+                                        <div class="favSymbol_box"><span class="port_symbol">AAPL</span></div>
+                                      </a>
+                                      <button type="button" class="addTo_fav"><i class="fa-regular fa-star"></i></button>
+                                      <button type="button" data-bs-toggle="modal" data-bs-target="#notiSett_modal">
+                                        <i class="fa-regular fa-bell bell_icon"></i>
+                                      </button> 
+                                    </div>
+                                  </td>
+                                  <td><p class="buy_stock">Buy</p></td>
+                                  <td><p>01-02-2022</p></td>
+                                  <td><p><span class="redBox"></span></p></td>
+                                  <td><p><span class="date_start">Aug 06,2025</span></p></td>
+                                  <td><p>0.85%</p></td>
+                                  <td>
+                                    <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Alerian MLP Infrastructure Index">
+                                      <p class="company_name">Alerian MLP Infrastructure Index</p>
+                                    </a>
+                                  </td>
+                                  <td><p>$2.04</p></td>
+                                </tr>
+                                <tr class="ovtyr__row">
+                                  <td>
+                                    <div class="fav_symbol justify-content-center">
+                                      <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="American Multinational Technology Company">
+                                        <div class="favSymbol_box"><span class="port_symbol">AAPL</span></div>
+                                      </a>
+                                      <button type="button" class="addTo_fav"><i class="fa-regular fa-star"></i></button>
+                                      <button type="button" data-bs-toggle="modal" data-bs-target="#notiSett_modal">
+                                        <i class="fa-regular fa-bell bell_icon"></i>
+                                      </button> 
+                                    </div>
+                                  </td>
+                                  <td><p class="buy_stock">Buy</p></td>
+                                  <td><p>01-02-2022</p></td>
+                                  <td><p><span class="blueBox"></span></p></td>
+                                  <td><p><span class="date_start">Aug 06,2025</span></p></td>
+                                  <td><p>0.85%</p></td>
+                                  <td>
+                                    <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Alerian MLP Infrastructure Index">
+                                      <p class="company_name">Alerian MLP Infrastructure Index</p>
+                                    </a>
+                                  </td>
+                                  <td><p>$2.04</p></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                        <div class="favList_grid">
+                          <div class="favList_item">
+                            <p>
+                              <span>Symbol</span>
+                              <span class="favSymbol_box">
+                                <span class="port_symbol"><span class="noti_box"><span class="noti_count">2</span></span>AAPL</span>
+                                <button type="button" class="addTo_fav"><i class="fa-regular fa-star"></i></button>
+                              </span>
+                            </p>
+                            <p>
+                              <span>Status</span>
+                              <span class="buy_stock">Buy</span>
+                            </p>
+                            <p>
+                              <span>Last Signal Date</span>
+                              <span>01-02-2023</span>
+                            </p>
+                            <p>
+                              <span>Expense Ratio</span>
+                              <span>0.85%</span>
+                            </p>
+                            <p>
+                              <span>Index Tracked</span>
+                              <span class="company_name">Alerian MLP Infrastructure Index</span>
+                            </p>
+                            <p>
+                              <span>Last Day Close</span>
+                              <span>$2.04</span>
+                            </p>
+                          </div>
+                          <div class="favList_item">
+                            <p>
+                              <span>Symbol</span>
+                              <span class="favSymbol_box">
+                                <span class="port_symbol"><span class="noti_box"><span class="noti_count">2</span></span>AAPL</span>
+                                <button type="button" class="addTo_fav"><i class="fa-regular fa-star"></i></button>
+                              </span>
+                            </p>
+                            <p>
+                              <span>Status</span>
+                              <span class="buy_stock">Buy</span>
+                            </p>
+                            <p>
+                              <span>Last Signal Date</span>
+                              <span>01-02-2023</span>
+                            </p>
+                            <p>
+                              <span>Expense Ratio</span>
+                              <span>0.85%</span>
+                            </p>
+                            <p>
+                              <span>Index Tracked</span>
+                              <span class="company_name">Alerian MLP Infrastructure Index</span>
+                            </p>
+                            <p>
+                              <span>Last Day Close</span>
+                              <span>$2.04</span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="bearslisttab" role="tabpanel" aria-labelledby="bearslist-tab">
+                  <div class="bearList_tabC">
+                    <div class="table_head">
+                      <div class="fav_rankTabs">
+                        <ul class="nav nav-tabs" id="myTab3" role="tablist">
+                          <li class="nav-item" role="favranklist3">
+                            <button class="nav-link active" id="stocks-tab2" data-bs-toggle="tab" data-bs-target="#stockstab2" type="button" role="tab" aria-controls="stockstab2" aria-selected="true">
+                              Stocks
+                            </button>
+                          </li>
+                          <li class="nav-item" role="favranklist3">
+                            <button class="nav-link" id="etfs-tab2" data-bs-toggle="tab" data-bs-target="#etfstab2" type="button" role="tab" aria-controls="#etfstab2" aria-selected="false" tabindex="-1">
+                              ETFs
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="filterDropd_box">
+                        <a href="javascript:void(0);" class="expand_btn" id="expand_btn3"><span></span></a>
+                      </div>
+                    </div>
+                    <div class="tab-content" id="myTab3Content">
+                      <div class="tab-pane fade show active" id="stockstab2" role="tabpanel" aria-labelledby="stocks-tab2">
+                        <div class="favList_tabC">
+                          <div class="table_scroll vertical_scroll horizontal_scroll">
+                            <table class="table ovtlyr_table favList__table bearTable_2 bullTable_2">
+                              <thead class="sticky-top">
+                                <tr class="ovtlyr__row_head">
+                                  <th>Symbol</th>
+                                  <th>Current Signal</th>
+                                  <th class="dropdown drop_box">
+                                    <div class="sort_dropdown">
+                                      <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Last Signal Date</button>
+                                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item" href="#"><p class="mb-0">All</p></a></li>
+                                        <li><a class="dropdown-item" href="#"><p class="mb-0">Ascending</p></a></li>
+                                        <li><a class="dropdown-item" href="#"><p class="mb-0">Descending</p></a></li>
+                                      </ul>
+                                    </div>
+                                  </th>
+                                  <th>Sector <a href="javascript:void(0);" class="show_filters"><span class="material-symbols-outlined icon_filter">filter_alt</span></a></th>
+                                  <th class="dropdown drop_box">
+                                    <div class="sort_dropdown">
+                                      <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Overlay</button>
+                                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item" href="#"><p><span class="whiteBox"><span class="drop_text">All</span></span></p></a></li>
+                                        <li><a class="dropdown-item" href="#"><p><span class="greenBox"><span class="drop_text">Uptrend</span></span></p></a></li>
+                                        <li><a class="dropdown-item" href="#"><p><span class="redBox"><span class="drop_text">Downtrend</span></span></p></a></li>
+                                        <li><a class="dropdown-item" href="#"><p><span class="blueBox"><span class="drop_text">Neutral</span></span></p></a></li>
+                                      </ul>
+                                    </div>
+                                  </th>
+                                  <th class="dropdown drop_box">
+                                    <div class="sort_dropdown">
+                                      <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Overlay Start Date</button>
+                                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item" href="#"><p class="mb-0">Latest to Oldest</p></a></li>
+                                        <li><a class="dropdown-item" href="#"><p class="mb-0">Oldest to Latest</p></a></li>
+                                      </ul>
+                                    </div>
+                                  </th>
+                                  <th>OC Status</th>
+                                  <th class="dropdown drop_box">
+                                    <div class="sort_dropdown">
+                                      <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Last Day Close</button>
+                                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item" href="#"><p class="mb-0">All</p></a></li>
+                                        <li><a class="dropdown-item" href="#"><p class="mb-0">Ascending</p></a></li>
+                                        <li><a class="dropdown-item" href="#"><p class="mb-0">Descending</p></a></li>
+                                      </ul>
+                                    </div>
+                                  </th>
+                                  <th class="dropdown drop_box">
+                                    <div class="sort_dropdown">
+                                      <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">30-Day Avg. Vol.</button>
+                                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item" href="#"><p class="mb-0">All</p></a></li>
+                                        <li><a class="dropdown-item" href="#"><p class="mb-0">Ascending</p></a></li>
+                                        <li><a class="dropdown-item" href="#"><p class="mb-0">Descending</p></a></li>
+                                      </ul>
+                                    </div>
+                                  </th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr class="ovtyr__row">
+                                  <td>
+                                    <div class="fav_symbol justify-content-center">
+                                      <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="American Multinational Technology Company">
+                                        <div class="favSymbol_box"><span class="port_symbol"><span class="noti_box"><span class="noti_count">2</span></span>AAPL</span></div>
+                                      </a>
+                                      <button type="button" class="addTo_fav"><i class="fa-solid fa-star"></i></button>
+                                      <button type="button" data-bs-toggle="modal" data-bs-target="#notiSett_modal">
+                                        <i class="fa-regular fa-bell bell_icon"></i>
+                                      </button> 
+                                    </div>
+                                  </td>
+                                  <td><p class="sell_stock">Sell</p></td>
+                                  <td><p>01-02-2022</p></td>
+                                  <td><p><span class="arrows arrow_up">Utilities</span></p></td>
+                                  <td class="align__items"><p><span class="greenBox"></span></p></td>
+                                  <td class="align__items"><p><span class="date_start">Aug 04,2025</span></p></td>
+                                  <td><p class="greenBg">OC</p></td>
+                                  <td><p>$2.04</p></td>
+                                  <td><p>4.3M</p></td>
+                                </tr>
+                                <tr class="ovtyr__row">
+                                  <td>
+                                    <div class="fav_symbol justify-content-center">
+                                      <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="American Multinational Technology Company">
+                                        <div class="favSymbol_box"><span class="port_symbol"><span class="noti_box"><span class="noti_count">2</span></span>AAPL</span></div>
+                                      </a>
+                                      <button type="button" class="addTo_fav"><i class="fa-solid fa-star"></i></button>
+                                      <button type="button" data-bs-toggle="modal" data-bs-target="#notiSett_modal">
+                                        <i class="fa-regular fa-bell bell_icon"></i>
+                                      </button> 
+                                    </div>
+                                  </td>
+                                  <td><p class="sell_stock">Sell</p></td>
+                                  <td><p>01-02-2022</p></td>
+                                  <td><p><span class="arrows arrow_up">Utilities</span></p></td>
+                                  <td class="align__items"><p><span class="greenBox"></span></p></td>
+                                  <td class="align__items"><p><span class="date_start">Aug 04,2025</span></p></td>
+                                  <td><p class="greenBg">OC</p></td>
+                                  <td><p>$2.04</p></td>
+                                  <td><p>4.3M</p></td>
+                                </tr>
+                                <tr class="ovtyr__row">
+                                  <td>
+                                    <div class="fav_symbol justify-content-center">
+                                      <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="American Multinational Technology Company">
+                                        <div class="favSymbol_box"><span class="port_symbol">AAPL</span></div>
+                                      </a>
+                                      <button type="button" class="addTo_fav"><i class="fa-regular fa-star"></i></button>
+                                      <button type="button" data-bs-toggle="modal" data-bs-target="#notiSett_modal">
+                                        <i class="fa-regular fa-bell bell_icon"></i>
+                                      </button> 
+                                    </div>
+                                  </td>
+                                  <td><p class="sell_stock">Sell</p></td>
+                                  <td><p>01-02-2022</p></td>
+                                  <td><p><span class="arrows arrow_up">Utilities</span></p></td>
+                                  <td class="align__items"><p><span class="greenBox"></span></p></td>
+                                  <td class="align__items"><p><span class="date_start">Aug 04,2025</span></p></td>
+                                  <td><p class="pinkBg">OC</p></td>
+                                  <td><p>$2.04</p></td>
+                                  <td><p>4.3M</p></td>
+                                </tr>
+                                <tr class="ovtyr__row">
+                                  <td>
+                                    <div class="fav_symbol justify-content-center">
+                                      <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="American Multinational Technology Company">
+                                        <div class="favSymbol_box"><span class="port_symbol">AAPL</span></div>
+                                      </a>
+                                      <button type="button" class="addTo_fav"><i class="fa-regular fa-star"></i></button>
+                                      <button type="button" data-bs-toggle="modal" data-bs-target="#notiSett_modal">
+                                        <i class="fa-regular fa-bell bell_icon"></i>
+                                      </button> 
+                                    </div>
+                                  </td>
+                                  <td><p class="sell_stock">Sell</p></td>
+                                  <td><p>01-02-2022</p></td>
+                                  <td><p><span class="arrows arrow_up">Utilities</span></p></td>
+                                  <td class="align__items"><p><span class="greenBox"></span></p></td>
+                                  <td class="align__items"><p><span class="date_start">Aug 04,2025</span></p></td>
+                                  <td><p class="greenBg">OC</p></td>
+                                  <td><p>$2.04</p></td>
+                                  <td><p>4.3M</p></td>
+                                </tr>
+                                <tr class="ovtyr__row">
+                                  <td>
+                                    <div class="fav_symbol justify-content-center">
+                                      <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="American Multinational Technology Company">
+                                        <div class="favSymbol_box"><span class="port_symbol">AAPL</span></div>
+                                      </a>
+                                      <button type="button" class="addTo_fav"><i class="fa-regular fa-star"></i></button>
+                                      <button type="button" data-bs-toggle="modal" data-bs-target="#notiSett_modal">
+                                        <i class="fa-regular fa-bell bell_icon"></i>
+                                      </button> 
+                                    </div>
+                                  </td>
+                                  <td><p class="sell_stock">Sell</p></td>
+                                  <td><p>01-02-2022</p></td>
+                                  <td><p><span class="arrows arrow_up">Utilities</span></p></td>
+                                  <td class="align__items"><p><span class="redBox"></span></p></td>
+                                  <td class="align__items"><p><span class="date_start">Aug 04,2025</span></p></td>
+                                  <td><p class="greenBg">OC</p></td>
+                                  <td><p>$2.04</p></td>
+                                  <td><p>4.3M</p></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                        <div class="favList_grid">
+                          <div class="favList_item">
+                            <p>
+                              <span>Symbol</span>
+                              <span class="favSymbol_box">
+                                <span class="port_symbol"><span class="noti_box"><span class="noti_count">2</span></span>AAPL</span>
+                                <button type="button" class="addTo_fav"><i class="fa-regular fa-star"></i></button>
+                              </span>
+                            </p>
+                            <p>
+                              <span>Status</span>
+                              <span class="sell_stock">Sell</span>
+                            </p>
+                            <p>
+                              <span>Last Signal Date</span>
+                              <span>01-02-2023</span>
+                            </p>
+                            <p>
+                              <span>Sector </span>
+                              <span><span class="arrows arrow_up">Utilities</span></span>
+                            </p>
+                            <p>
+                              <span>Overlay</span>
+                              <span class="redBox"></span>
+                            </p>
+                            <p>
+                              <span>Last Day Close</span>
+                              <span>$2.04</span>
+                            </p>
+                          </div>
+                          <div class="favList_item active">
+                            <p>
+                              <span>Symbol</span>
+                              <span class="favSymbol_box">
+                                <span class="port_symbol"><span class="noti_box"><span class="noti_count">2</span></span>AAPL</span>
+                                <button type="button" class="addTo_fav"><i class="fa-regular fa-star"></i></button>
+                              </span>
+                            </p>
+                            <p>
+                              <span>Status</span>
+                              <span class="sell_stock">Sell</span>
+                            </p>
+                            <p>
+                              <span>Last Signal Date</span>
+                              <span>01-02-2023</span>
+                            </p>
+                            <p>
+                              <span>Sector</span>
+                              <span><span class="arrows arrow_up">Utilities</span></span>
+                            </p>
+                            <p>
+                              <span>Overlay</span>
+                              <span class="greenBox"></span>
+                            </p>
+                            <p>
+                              <span>Last Day Close</span>
+                              <span>$2.04</span>
+                            </p>
+                          </div>
+                          <div class="favList_item">
+                            <p>
+                              <span>Symbol</span>
+                              <span class="favSymbol_box">
+                                <span class="port_symbol"><span class="noti_box"><span class="noti_count">2</span></span>AAPL</span>
+                                <button type="button" class="addTo_fav"><i class="fa-regular fa-star"></i></button>
+                              </span>
+                            </p>
+                            <p>
+                              <span>Status</span>
+                              <span class="sell_stock">Sell</span>
+                            </p>
+                            <p>
+                              <span>Last Signal Date</span>
+                              <span>01-02-2023</span>
+                            </p>
+                            <p>
+                              <span>Sector</span>
+                              <span><span class="arrows arrow_up">Utilities</span></span>
+                            </p>
+                            <p>
+                              <span>Overlay</span>
+                              <span class="orgBox"></span>
+                            </p>
+                            <p>
+                              <span>Last Day Close</span>
+                              <span>$2.04</span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tab-pane fade" id="etfstab2" role="tabpanel" aria-labelledby="etfs-tab2">
+                        <div class="favList_tabC">
+                          <div class="table_scroll horizontal_scroll">
+                            <table class="table ovtlyr_table favList__table bearTable_2 bullTable_2">
+                              <thead class="sticky-top">
+                                <tr class="ovtlyr__row_head">
+                                  <th>Symbol</th>
+                                  <th>Current Signal</th>
+                                  <th class="dropdown drop_box">
+                                    <div class="sort_dropdown">
+                                      <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Last Signal Date</button>
+                                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item" href="#"><p class="mb-0">All</p></a></li>
+                                        <li><a class="dropdown-item" href="#"><p class="mb-0">Ascending</p></a></li>
+                                        <li><a class="dropdown-item" href="#"><p class="mb-0">Descending</p></a></li>
+                                      </ul>
+                                    </div>
+                                  </th>
+                                  <th class="dropdown drop_box">
+                                    <div class="sort_dropdown">
+                                      <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Overlay</button>
+                                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item" href="#"><p><span class="whiteBox"><span class="drop_text">All</span></span></p></a></li>
+                                        <li><a class="dropdown-item" href="#"><p><span class="greenBox"><span class="drop_text">Uptrend</span></span></p></a></li>
+                                        <li><a class="dropdown-item" href="#"><p><span class="redBox"><span class="drop_text">Downtrend</span></span></p></a></li>
+                                        <li><a class="dropdown-item" href="#"><p><span class="blueBox"><span class="drop_text">Neutral</span></span></p></a></li>
+                                      </ul>
+                                    </div>
+                                  </th>
+                                  <th class="dropdown drop_box">
+                                    <div class="sort_dropdown">
+                                      <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Overlay Start Date</button>
+                                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item" href="#"><p class="mb-0">Latest to Oldest</p></a></li>
+                                        <li><a class="dropdown-item" href="#"><p class="mb-0">Oldest to Latest</p></a></li>
+                                      </ul>
+                                    </div>
+                                  </th>
+                                  <th>Expense Ratio</th>
+                                  <th>Index Tracked</th>
+                                  <th>Last Day Close</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr class="ovtyr__row">
+                                  <td>
+                                    <div class="fav_symbol justify-content-center">
+                                      <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="American Multinational Technology Company">
+                                        <div class="favSymbol_box"><span class="port_symbol">AAPL</span></div>
+                                      </a>
+                                      <button type="button" class="addTo_fav"><i class="fa-regular fa-star"></i></button>
+                                      <button type="button" data-bs-toggle="modal" data-bs-target="#notiSett_modal">
+                                        <i class="fa-regular fa-bell bell_icon"></i>
+                                      </button> 
+                                    </div>
+                                  </td>
+                                  <td><p class="sell_stock">Sell</p></td>
+                                  <td><p>01-02-2022</p></td>
+                                  <td><p><span class="greenBox"></span></p></td>
+                                  <td><p><span class="date_start">Aug 06,2025</span></p></td>
+                                  <td><p>0.85%</p></td>
+                                  <td>
+                                    <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Alerian MLP Infrastructure Index">
+                                      <p class="company_name">Alerian MLP Infrastructure Index</p>
+                                    </a>
+                                  </td>
+                                  <td><p>$2.04</p></td>
+                                </tr>
+                                <tr class="ovtyr__row">
+                                  <td>
+                                    <div class="fav_symbol justify-content-center">
+                                      <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="American Multinational Technology Company">
+                                        <div class="favSymbol_box"><span class="port_symbol">AAPL</span></div>
+                                      </a>
+                                      <button type="button" class="addTo_fav"><i class="fa-regular fa-star"></i></button>
+                                      <button type="button" data-bs-toggle="modal" data-bs-target="#notiSett_modal">
+                                        <i class="fa-regular fa-bell bell_icon"></i>
+                                      </button> 
+                                    </div>
+                                  </td>
+                                  <td><p class="sell_stock">Sell</p></td>
+                                  <td><p>01-02-2022</p></td>
+                                  <td><p><span class="redBox"></span></p></td>
+                                  <td><p><span class="date_start">Aug 06,2025</span></p></td>
+                                  <td><p>0.85%</p></td>
+                                  <td>
+                                    <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Alerian MLP Infrastructure Index">
+                                      <p class="company_name">Alerian MLP Infrastructure Index</p>
+                                    </a>
+                                  </td>
+                                  <td><p>$2.04</p></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                        <div class="favList_grid">
+                          <div class="favList_item">
+                            <p>
+                              <span>Symbol</span>
+                              <span class="favSymbol_box">
+                                <span class="port_symbol"><span class="noti_box"><span class="noti_count">2</span></span>AAPL</span>
+                                <button type="button" class="addTo_fav"><i class="fa-regular fa-star"></i></button>
+                              </span>
+                            </p>
+                            <p>
+                              <span>Status</span>
+                              <span class="sell_stock">Sell</span>
+                            </p>
+                            <p>
+                              <span>Last Signal Date</span>
+                              <span>01-02-2023</span>
+                            </p>
+                            <p>
+                              <span>Expense Ratio</span>
+                              <span>0.85%</span>
+                            </p>
+                            <p>
+                              <span>Index Tracked</span>
+                              <span class="company_name">Alerian MLP Infrastructure Index</span>
+                            </p>
+                            <p>
+                              <span>Last Day Close</span>
+                              <span>$2.04</span>
+                            </p>
+                          </div>
+                          <div class="favList_item">
+                            <p>
+                              <span>Symbol</span>
+                              <span class="favSymbol_box">
+                                <span class="port_symbol"><span class="noti_box"><span class="noti_count">2</span></span>AAPL</span>
+                                <button type="button" class="addTo_fav"><i class="fa-regular fa-star"></i></button>
+                              </span>
+                            </p>
+                            <p>
+                              <span>Status</span>
+                              <span class="sell_stock">Sell</span>
+                            </p>
+                            <p>
+                              <span>Last Signal Date</span>
+                              <span>01-02-2023</span>
+                            </p>
+                            <p>
+                              <span>Expense Ratio</span>
+                              <span>0.85%</span>
+                            </p>
+                            <p>
+                              <span>Index Tracked</span>
+                              <span class="company_name">Alerian MLP Infrastructure Index</span>
+                            </p>
+                            <p>
+                              <span>Last Day Close</span>
+                              <span>$2.04</span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="watchlist_tabs gridSec_2">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+              <li class="nav-item favList_tab justify-content-between" role="watchlist">
+                <div class="favlist_noti">
+                  <button class="nav-link active" id="favlist-tab" data-bs-toggle="tab" data-bs-target="#favlisttab" type="button" role="tab" aria-controls="favlisttab" aria-selected="true">Favorites</button>
+                  <div class="drop_box">
+                    <div class="sort_dropdown">
+                      <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#"><p class="mb-0">Custom List 1</p></a></li>
+                        <li><a class="dropdown-item" href="#"><p class="mb-0">Custom List 2</p></a></li>
+                        <li><a class="dropdown-item" href="#"><p class="mb-0">Custom List 3</p></a></li>
+                        <li><a class="dropdown-item" href="#"><p class="mb-0">Custom List 4</p></a></li>
+                        <li><a class="dropdown-item" href="#"><p class="mb-0">Custom List 5</p></a></li>
+                        <li><a class="dropdown-item" href="#"><p class="mb-0">Custom List 6</p></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <button type="button" data-bs-toggle="modal" data-bs-target="#notiSett_modal">
+                  <i class="fa-regular fa-bell bell_icon"></i>
+                </button>
+              </li>
+              <li class="nav-item sentiment_tab" role="watchlist">
+                <button class="nav-link" id="sentiment-tab" data-bs-toggle="tab" data-bs-target="#sentimenttab" type="button" role="tab" aria-controls="sentimenttab" aria-selected="false" tabindex="-1">
+                  <div><img src="images/bear-box.svg" alt="Bear">Sentiment </div><span>(10 New, 550 Total)</span>
+                </button>
+              </li>
+            </ul>
+            <div class="watchlist_listing">
+              <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="favlisttab" role="tabpanel" aria-labelledby="favlist-tab">
+                  <div class="table_head">
+                    <div class="fav_rankTabs">
+                      <ul class="nav nav-tabs" id="myTab1" role="tablist">
+                        <li class="nav-item" role="favranklist2">
+                          <button class="nav-link orange_bg active" id="favrank-tab1" data-bs-toggle="tab" data-bs-target="#favranktab1" type="button" role="tab" aria-controls="favranktab1" aria-selected="true">
+                            <i class="fa-solid fa-star"></i>
+                          </button>
+                        </li>
+                        <li class="nav-item" role="favranklist2">
+                          <button class="nav-link" id="gridrank-tab1" data-bs-toggle="tab" data-bs-target="#gridranktab1" type="button" role="tab" aria-controls="#gridranktab1" aria-selected="false" tabindex="-1">
+                            <img src="images/grid-icon.svg" alt="Grid">
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="filterDropd_box">
+                      <a href="javascript:void(0);" class="expand_btn" id="expand_btn1"><span></span></a>
+                    </div>
+                  </div>
+                  <div class="tab-content" id="myTab1Content">
+                    <div class="tab-pane fade show active" id="favranktab1" role="tabpanel" aria-labelledby="favrank-tab1">
+                      <div class="favList_tabC">
+                        <div class="table_scroll vertical_scroll horizontal_scroll">
+                          <table class="table ovtlyr_table favList__table favTable_1">
+                            <thead class="sticky-top">
+                              <tr class="ovtlyr__row_head">
+                                <th>Symbol</th>
+                                <th>Current Signal</th>
+                                <th class="dropdown drop_box">
+                                  <div class="sort_dropdown">
+                                    <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Last Signal Date</button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                      <li><a class="dropdown-item" href="#"><p class="mb-0">All</p></a></li>
+                                      <li><a class="dropdown-item" href="#"><p class="mb-0">Ascending</p></a></li>
+                                      <li><a class="dropdown-item" href="#"><p class="mb-0">Descending</p></a></li>
+                                    </ul>
+                                  </div>
+                                </th>
+                                <th>Sector</th>
+                                <th class="dropdown drop_box">
+                                  <div class="sort_dropdown">
+                                    <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Overlay</button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                      <li><a class="dropdown-item" href="#"><p><span class="whiteBox"><span class="drop_text">All</span></span></p></a></li>
+                                      <li><a class="dropdown-item" href="#"><p><span class="greenBox"><span class="drop_text">Uptrend</span></span></p></a></li>
+                                      <li><a class="dropdown-item" href="#"><p><span class="redBox"><span class="drop_text">Downtrend</span></span></p></a></li>
+                                      <li><a class="dropdown-item" href="#"><p><span class="blueBox"><span class="drop_text">Neutral</span></span></p></a></li>
+                                    </ul>
+                                  </div>
+                                </th>
+                                <th class="dropdown drop_box">
+                                  <div class="sort_dropdown">
+                                    <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Overlay Start Date</button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                      <li><a class="dropdown-item" href="#"><p class="mb-0">Latest to Oldest</p></a></li>
+                                      <li><a class="dropdown-item" href="#"><p class="mb-0">Oldest to Latest</p></a></li>
+                                    </ul>
+                                  </div>
+                                </th>
+                                <th>OC Status</th>
+                                <th class="dropdown drop_box">
+                                  <div class="sort_dropdown">
+                                    <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Last Day Close</button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                      <li><a class="dropdown-item" href="#"><p class="mb-0">All</p></a></li>
+                                      <li><a class="dropdown-item" href="#"><p class="mb-0">Ascending</p></a></li>
+                                      <li><a class="dropdown-item" href="#"><p class="mb-0">Descending</p></a></li>
+                                    </ul>
+                                  </div>
+                                </th>
+                                <th class="dropdown drop_box">
+                                  <div class="sort_dropdown">
+                                    <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">30-Day Avg. Vol.</button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                      <li><a class="dropdown-item" href="#"><p class="mb-0">All</p></a></li>
+                                      <li><a class="dropdown-item" href="#"><p class="mb-0">Ascending</p></a></li>
+                                      <li><a class="dropdown-item" href="#"><p class="mb-0">Descending</p></a></li>
+                                    </ul>
+                                  </div>
+                                </th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr class="ovtyr__row">
+                                <td>
+                                  <div class="fav_symbol justify-content-center">
+                                    <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="American Multinational Technology Company">
+                                      <div class="favSymbol_box"><span class="port_symbol"><span class="noti_box"><span class="noti_count">2</span></span>AAPL</span></div>
+                                    </a>
+                                    <button type="button" class="addTo_fav"><i class="fa-solid fa-star"></i></button>
+                                    <button type="button" data-bs-toggle="modal" data-bs-target="#notiSett_modal">
+                                      <i class="fa-regular fa-bell bell_icon"></i>
+                                    </button> 
+                                  </div>
+                                </td>
+                                <td><p class="buy_stock">Buy</p></td>
+                                <td><p>01-02-2022</p></td>
+                                <td><p><span class="arrows arrow_up">Utilities</span></p></td>
+                                <td class="align__items"><p><span class="greenBox"></span></p></td>
+                                <td class="align__items"><p><span class="date_start">Aug 04,2025</span></p></td>
+                                <td><p class="greenBg">OC</p></td>
+                                <td><p>$2.04</p></td>
+                                <td><p>4.3M</p></td>
+                              </tr>
+                              <tr class="ovtyr__row">
+                                <td>
+                                  <div class="fav_symbol justify-content-center">
+                                    <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="American Multinational Technology Company">
+                                      <div class="favSymbol_box"><span class="port_symbol"><span class="noti_box"><span class="noti_count">2</span></span>AAPL</span></div>
+                                    </a>
+                                    <button type="button" class="addTo_fav"><i class="fa-solid fa-star"></i></button>
+                                    <button type="button" data-bs-toggle="modal" data-bs-target="#notiSett_modal">
+                                      <i class="fa-solid fa-bell bell_icon"></i>
+                                    </button> 
+                                  </div>
+                                </td>
+                                <td><p class="sell_stock">Sell</p></td>
+                                <td><p>01-02-2022</p></td>
+                                <td><p><span class="arrows arrow_up">Utilities</span></p></td>
+                                <td class="align__items"><p><span class="redBox"></span></p></td>
+                                <td class="align__items"><p><span class="date_start">Aug 04,2025</span></p></td>
+                                <td><p class="pinkBg">OC</p></td>
+                                <td><p>$2.04</p></td>
+                                <td><p>4.3M</p></td>
+                              </tr>
+                              <tr class="ovtyr__row">
+                                <td>
+                                  <div class="fav_symbol justify-content-center">
+                                    <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="American Multinational Technology Company">
+                                      <div class="favSymbol_box"><span class="port_symbol">AAPL</span></div>
+                                    </a>
+                                    <button type="button" class="addTo_fav"><i class="fa-regular fa-star"></i></button>
+                                    <button type="button" data-bs-toggle="modal" data-bs-target="#notiSett_modal">
+                                      <i class="fa-solid fa-bell bell_icon"></i>
+                                    </button> 
+                                  </div>
+                                </td>
+                                <td><p class="buy_stock">Buy</p></td>
+                                <td><p>01-02-2022</p></td>
+                                <td><p><span class="arrows arrow_up">Utilities</span></p></td>
+                                <td class="align__items"><p><span class="redBox"></span></p></td>
+                                <td class="align__items"><p><span class="date_start">Aug 04,2025</span></p></td>
+                                <td><p class="greenBg">OC</p></td>
+                                <td><p>$2.04</p></td>
+                                <td><p>4.3M</p></td>
+                              </tr>
+                              <tr class="ovtyr__row">
+                                <td>
+                                  <div class="fav_symbol justify-content-center">
+                                    <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="American Multinational Technology Company">
+                                      <div class="favSymbol_box"><span class="port_symbol">AAPL</span></div>
+                                    </a>
+                                    <button type="button" class="addTo_fav"><i class="fa-regular fa-star"></i></button>
+                                    <button type="button" data-bs-toggle="modal" data-bs-target="#notiSett_modal">
+                                      <i class="fa-regular fa-bell bell_icon"></i>
+                                    </button> 
+                                  </div>
+                                </td>
+                                <td><p class="sell_stock">Sell</p></td>
+                                <td><p>01-02-2022</p></td>
+                                <td><p><span class="arrows arrow_up">Technology</span></p></td>
+                                <td class="align__items"><p><span class="orgBox"></p></td>
+                                <td class="align__items"><p><span class="date_start">Aug 04,2025</span></p></td>
+                                <td><p class="pinkBg">OC</p></td>
+                                <td><p>$2.04</p></td>
+                                <td><p>4.3M</p></td>
+                              </tr>
+                              <tr class="ovtyr__row">
+                                <td>
+                                  <div class="fav_symbol justify-content-center">
+                                    <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="American Multinational Technology Company">
+                                      <div class="favSymbol_box"><span class="port_symbol">AAPL</span></div>
+                                    </a>
+                                    <button type="button" class="addTo_fav"><i class="fa-regular fa-star"></i></button>
+                                    <button type="button" data-bs-toggle="modal" data-bs-target="#notiSett_modal">
+                                      <i class="fa-solid fa-bell bell_icon"></i>
+                                    </button> 
+                                  </div>
+                                </td>
+                                <td><p class="buy_stock">Buy</p></td>
+                                <td><p>01-02-2022</p></td>
+                                <td><p><span class="arrows arrow_down">Technology</span></p></td>
+                                <td class="align__items"><p><span class="greenBox"></span></p></td>
+                                <td class="align__items"><p><span class="date_start">Aug 04,2025</span></p></td>
+                                <td><p class="greenBg">OC</p></td>
+                                <td><p>$2.04</p></td>
+                                <td><p>4.3M</p></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <div class="favList_grid">
+                        <div class="favList_item">
+                          <a href="#">
+                            <p>
+                              <span>Symbol</span>
+                              <span class="favSymbol_box">
+                                <span class="port_symbol"><span class="noti_box"><span class="noti_count">2</span></span>AAPL</span>
+                                <button type="button" class="addTo_fav"><i class="fa-regular fa-star"></i></button>
+                              </span>
+                            </p>
+                            <p>
+                              <span>Status</span>
+                              <span class="buy_stock">Buy</span>
+                            </p>
+                            <p>
+                              <span>Last Signal Date</span>
+                              <span>01-02-2023</span>
+                            </p>
+                            <p>
+                              <span>Sector</span>
+                              <span><span class="arrows arrow_up">Utilities</span></span>
+                            </p>
+                            <p>
+                              <span>Overlay</span>
+                              <span class="greenBox"></span>
+                            </p>
+                            <p>
+                              <span>Last Day Close</span>
+                              <span>$2.04</span>
+                            </p>
+                          </a>
+                        </div>
+                        <div class="favList_item active">
+                          <a href="#">
+                            <p>
+                              <span>Symbol</span>
+                              <span class="favSymbol_box">
+                                <span class="port_symbol"><span class="noti_box"><span class="noti_count">2</span></span>AAPL</span>
+                                <button type="button" class="addTo_fav"><i class="fa-regular fa-star"></i></button>
+                              </span>
+                            </p>
+                            <p>
+                              <span>Status</span>
+                              <span class="sell_stock">Sell</span>
+                            </p>
+                            <p>
+                              <span>Last Signal Date</span>
+                              <span>01-02-2023</span>
+                            </p>
+                            <p>
+                              <span>Sector</span>
+                              <span><span class="arrows arrow_down">Utilities</span></span>
+                            </p>
+                            <p>
+                              <span>Overlay</span>
+                              <span class="greenBox"></span>
+                            </p>
+                            <p>
+                              <span>Last Day Close</span>
+                              <span>$2.04</span>
+                            </p>
+                          </a>
+                        </div>
+                        <div class="favList_item">
+                          <a href="#">
+                            <p>
+                              <span>Symbol</span>
+                              <span class="favSymbol_box">
+                                <span class="port_symbol"><span class="noti_box"><span class="noti_count">2</span></span>AAPL</span>
+                                <button type="button" class="addTo_fav"><i class="fa-regular fa-star"></i></button>
+                              </span>
+                            </p>
+                            <p>
+                              <span>Status</span>
+                              <span class="buy_stock">Buy</span>
+                            </p>
+                            <p>
+                              <span>Last Signal Date</span>
+                              <span>01-02-2023</span>
+                            </p>
+                            <p>
+                              <span>Sector</span>
+                              <span><span class="arrows arrow_up">Utilities</span></span>
+                            </p>
+                            <p>
+                              <span>Overlay</span>
+                              <span class="greenBox"></span>
+                            </p>
+                            <p>
+                              <span>Last Day Close</span>
+                              <span>$2.04</span>
+                            </p>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="gridranktab1" role="tabpanel" aria-labelledby="gridrank-tab1">
+                      <div class="favList_tabC">
+                        <div class="table_scroll vertical_scroll horizontal_scroll">
+                          <table class="table ovtlyr_table favList__table favTable_1">
+                            <thead class="sticky-top">
+                              <tr class="ovtlyr__row_head">
+                                <th>Symbol</th>
+                                <th>Current Signal</th>
+                                <th class="dropdown drop_box">
+                                  <div class="sort_dropdown">
+                                    <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Last Signal Date</button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                      <li><a class="dropdown-item" href="#"><p class="mb-0">All</p></a></li>
+                                      <li><a class="dropdown-item" href="#"><p class="mb-0">Ascending</p></a></li>
+                                      <li><a class="dropdown-item" href="#"><p class="mb-0">Descending</p></a></li>
+                                    </ul>
+                                  </div>
+                                </th>
+                                <th>Sector/Index</th>
+                                <th class="dropdown drop_box">
+                                  <div class="sort_dropdown">
+                                    <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Overlay</button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                      <li><a class="dropdown-item" href="#"><p><span class="whiteBox"><span class="drop_text">All</span></span></p></a></li>
+                                      <li><a class="dropdown-item" href="#"><p><span class="greenBox"><span class="drop_text">Uptrend</span></span></p></a></li>
+                                      <li><a class="dropdown-item" href="#"><p><span class="redBox"><span class="drop_text">Downtrend</span></span></p></a></li>
+                                      <li><a class="dropdown-item" href="#"><p><span class="blueBox"><span class="drop_text">Neutral</span></span></p></a></li>
+                                    </ul>
+                                  </div>
+                                </th>
+                                <th class="dropdown drop_box">
+                                  <div class="sort_dropdown">
+                                    <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Overlay Start Date</button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                      <li><a class="dropdown-item" href="#"><p class="mb-0">Latest to Oldest</p></a></li>
+                                      <li><a class="dropdown-item" href="#"><p class="mb-0">Oldest to Latest</p></a></li>
+                                    </ul>
+                                  </div>
+                                </th>
+                                <th>OC Status</th>
+                                <th>OC Score</th>
+                                <th class="dropdown drop_box">
+                                  <div class="sort_dropdown">
+                                    <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Last Day Close</button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                      <li><a class="dropdown-item" href="#"><p class="mb-0">All</p></a></li>
+                                      <li><a class="dropdown-item" href="#"><p class="mb-0">Ascending</p></a></li>
+                                      <li><a class="dropdown-item" href="#"><p class="mb-0">Descending</p></a></li>
+                                    </ul>
+                                  </div>
+                                </th>
+                                <th class="dropdown drop_box">
+                                  <div class="sort_dropdown">
+                                    <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">30-Day Avg. Vol.</button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                      <li><a class="dropdown-item" href="#"><p class="mb-0">All</p></a></li>
+                                      <li><a class="dropdown-item" href="#"><p class="mb-0">Ascending</p></a></li>
+                                      <li><a class="dropdown-item" href="#"><p class="mb-0">Descending</p></a></li>
+                                    </ul>
+                                  </div>
+                                </th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr class="ovtyr__row">
+                                <td>
+                                  <div class="fav_symbol justify-content-center">
+                                    <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="American Multinational Technology Company">
+                                      <div class="favSymbol_box"><span class="port_symbol">AAPL</span></div>
+                                    </a>
+                                    <button type="button" class="addTo_fav"><i class="fa-regular fa-star"></i></button>
+                                    <button type="button" data-bs-toggle="modal" data-bs-target="#notiSett_modal">
+                                      <i class="fa-regular fa-bell bell_icon"></i>
+                                    </button> 
+                                  </div>
+                                </td>
+                                <td><p class="sell_stock">Sell</p></td>
+                                <td><p>01-02-2022</p></td>
+                                <td><p><span class="arrows arrow_up">Technology</span></p></td>
+                                <td class="align__items"><p><span class="orgBox"></span></p></td>
+                                <td class="align__items"><p><span class="date_start">Aug 04,2025</span></p></td>
+                                <td><p class="pinkBg">OC</p></td>
+                                <td><p>+2</p></td>
+                                <td><p>$2.04</p></td>
+                                <td><p>4.3M</p></td>
+                              </tr>
+                              <tr class="ovtyr__row">
+                                <td>
+                                  <div class="fav_symbol justify-content-center">
+                                    <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="American Multinational Technology Company">
+                                      <div class="favSymbol_box"><span class="port_symbol">AAPL</span></div>
+                                    </a>
+                                    <button type="button" class="addTo_fav"><i class="fa-regular fa-star"></i></button>
+                                    <button type="button" data-bs-toggle="modal" data-bs-target="#notiSett_modal">
+                                      <i class="fa-regular fa-bell bell_icon"></i>
+                                    </button> 
+                                  </div>
+                                </td>
+                                <td><p class="buy_stock">Buy</p></td>
+                                <td><p>01-02-2022</p></td>
+                                <td><p><span class="arrows arrow_up">Utilities</span></p></td>
+                                <td class="align__items"><p><span class="greenBox"></span></p></td>
+                                <td class="align__items"><p><span class="date_start">Aug 04,2025</span></p></td>
+                                <td><p class="greenBg">OC</p></td>
+                                <td><p>+1</p></td>
+                                <td><p>$2.04</p></td>
+                                <td><p>4.3M</p></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <div class="favList_grid">
+                        <div class="favList_item">
+                          <a href="#">
+                            <p>
+                              <span>Symbol</span>
+                              <span class="favSymbol_box">
+                                <span class="port_symbol"><span class="noti_box"><span class="noti_count">2</span></span>AAPL</span>
+                                <button type="button" class="addTo_fav"><i class="fa-regular fa-star"></i></button>
+                              </span>
+                            </p>
+                            <p>
+                              <span>Status</span>
+                              <span class="buy_stock">Buy</span>
+                            </p>
+                            <p>
+                              <span>Last Signal Date</span>
+                              <span>01-02-2023</span>
+                            </p>
+                            <p>
+                              <span>Sector/Index</span>
+                              <span><span class="arrows arrow_down">Utilities</span></span>
+                            </p>
+                            <p>
+                              <span>Overlay</span>
+                              <span class="greenBox"></span>
+                            </p>
+                            <p>
+                              <span>Last Day Close</span>
+                              <span>$2.04</span>
+                            </p>
+                          </a>
+                        </div>
+                        <div class="favList_item">
+                          <a href="#">
+                            <p>
+                              <span>Symbol</span>
+                              <span class="favSymbol_box">
+                                <span class="port_symbol"><span class="noti_box"><span class="noti_count">2</span></span>AAPL</span>
+                                <button type="button" class="addTo_fav"><i class="fa-regular fa-star"></i></button>
+                              </span>
+                            </p>
+                            <p>
+                              <span>Status</span>
+                              <span class="sell_stock">Sell</span>
+                            </p>
+                            <p>
+                              <span>Last Signal Date</span>
+                              <span>01-02-2023</span>
+                            </p>
+                            <p>
+                              <span>Sector/Index</span>
+                              <span><span class="arrows arrow_up">Utilities</span></span>
+                            </p>
+                            <p>
+                              <span>Overlay</span>
+                              <span class="greenBox"></span>
+                            </p>
+                            <p>
+                              <span>Last Day Close</span>
+                              <span>$2.04</span>
+                            </p>
+                          </a>
+                        </div>
+                        <div class="favList_item">
+                          <a href="#">
+                            <p>
+                              <span>Symbol</span>
+                              <span class="favSymbol_box">
+                                <span class="port_symbol"><span class="noti_box"><span class="noti_count">2</span></span>AAPL</span>
+                                <button type="button" class="addTo_fav"><i class="fa-regular fa-star"></i></button>
+                              </span>
+                            </p>
+                            <p>
+                              <span>Status</span>
+                              <span class="buy_stock">Buy</span>
+                            </p>
+                            <p>
+                              <span>Last Signal Date</span>
+                              <span>01-02-2023</span>
+                            </p>
+                            <p>
+                              <span>Sector/Index</span>
+                              <span><span class="arrows arrow_up">Utilities</span></span>
+                            </p>
+                            <p>
+                              <span>Overlay</span>
+                              <span class="redBox"></span>
+                            </p>
+                            <p>
+                              <span>Last Day Close</span>
+                              <span>$2.04</span>
+                            </p>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="sentimenttab" role="tabpanel" aria-labelledby="sentiment-tab">
+                  <div class="sentiList_tabC">
+                    <div class="table_head">
+                      <div class="fav_rankTabs">
+                        <ul class="nav nav-tabs" id="myTab2" role="tablist">
+                          <li class="nav-item" role="favranklist2">
+                            <button class="nav-link active" id="stocks-tab3" data-bs-toggle="tab" data-bs-target="#stockstab3" type="button" role="tab" aria-controls="stockstab3" aria-selected="true">
+                              Stocks
+                            </button>
+                          </li>
+                          <li class="nav-item" role="favranklist2">
+                            <button class="nav-link" id="etfs-tab3" data-bs-toggle="tab" data-bs-target="#etfstab3" type="button" role="tab" aria-controls="#etfstab3" aria-selected="false" tabindex="-1">
+                              ETFs
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="filterDropd_box">
+                        <a href="javascript:void(0);" class="expand_btn" id="expand_btn4"><span></span></a>
+                      </div>
+                    </div>
+                    <div class="tab-content" id="myTab2Content">
+                      <div class="tab-pane fade show active" id="stockstab3" role="tabpanel" aria-labelledby="stocks-tab3">
+                        <div class="favList_tabC">
+                          <div class="table_scroll vertical_scroll horizontal_scroll">
+                            <table class="table ovtlyr_table favList__table sentiTable_2">
+                              <thead class="sticky-top">
+                                <tr class="ovtlyr__row_head">
+                                  <th>Symbol</th>
+                                  <th class="dropdown drop_box">
+                                    <div class="sort_dropdown">
+                                      <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Current Sentiment</button>
+                                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item" href="#"><p><span class="whiteBox"><span class="drop_text">All</span></span></p></a></li>
+                                        <li><a class="dropdown-item" href="#"><p><span class="greenBox"><span class="drop_text">+ve</span></span></p></a></li>
+                                        <li><a class="dropdown-item" href="#"><p><span class="redBox"><span class="drop_text">-ve</span></span></p></a></li>
+                                        <li><a class="dropdown-item" href="#"><p><span class="blueBox"><span class="drop_text">Neutral</span></span></p></a></li>
+                                      </ul>
+                                    </div>
+                                  </th>
+                                  <th>Last Sentiment Date</th>
+                                  <th>Sector <a href="javascript:void(0);" class="show_filters"><span class="material-symbols-outlined icon_filter">filter_alt</span></a></th>
+                                  <th class="dropdown drop_box">
+                                    <div class="sort_dropdown">
+                                      <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Overlay</button>
+                                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item" href="#"><p><span class="whiteBox"><span class="drop_text">All</span></span></p></a></li>
+                                        <li><a class="dropdown-item" href="#"><p><span class="greenBox"><span class="drop_text">Uptrend</span></span></p></a></li>
+                                        <li><a class="dropdown-item" href="#"><p><span class="redBox"><span class="drop_text">Downtrend</span></span></p></a></li>
+                                        <li><a class="dropdown-item" href="#"><p><span class="blueBox"><span class="drop_text">Neutral</span></span></p></a></li>
+                                      </ul>
+                                    </div>
+                                  </th>
+                                  <th class="dropdown drop_box">
+                                    <div class="sort_dropdown">
+                                      <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Overlay Start Date</button>
+                                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item" href="#"><p class="mb-0">Latest to Oldest</p></a></li>
+                                        <li><a class="dropdown-item" href="#"><p class="mb-0">Oldest to Latest</p></a></li>
+                                      </ul>
+                                    </div>
+                                  </th>
+                                  <th>OC Status</th>
+                                  <th class="dropdown drop_box">
+                                    <div class="sort_dropdown">
+                                      <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Last Day Close</button>
+                                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item" href="#"><p class="mb-0">All</p></a></li>
+                                        <li><a class="dropdown-item" href="#"><p class="mb-0">Ascending</p></a></li>
+                                        <li><a class="dropdown-item" href="#"><p class="mb-0">Descending</p></a></li>
+                                      </ul>
+                                    </div>
+                                  </th>
+                                  <th class="dropdown drop_box">
+                                    <div class="sort_dropdown">
+                                      <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">30-Day Avg. Vol.</button>
+                                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item" href="#"><p class="mb-0">All</p></a></li>
+                                        <li><a class="dropdown-item" href="#"><p class="mb-0">Ascending</p></a></li>
+                                        <li><a class="dropdown-item" href="#"><p class="mb-0">Descending</p></a></li>
+                                      </ul>
+                                    </div>
+                                  </th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr class="ovtyr__row">
+                                  <td>
+                                    <div class="fav_symbol justify-content-center">
+                                      <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="American Multinational Technology Company">
+                                        <div class="favSymbol_box"><span class="port_symbol"><span class="noti_box"><span class="noti_count">2</span></span>AAPL</span></div>
+                                      </a>
+                                      <button type="button" class="addTo_fav"><i class="fa-solid fa-star"></i></button>
+                                      <button type="button" data-bs-toggle="modal" data-bs-target="#notiSett_modal">
+                                        <i class="fa-regular fa-bell bell_icon"></i>
+                                      </button> 
+                                    </div>
+                                  </td>
+                                  <td><p><span class="greenBox"></span> Positive</p></td>
+                                  <td><p>01-02-2022</p></td>
+                                  <td><p><span class="arrows arrow_up">Utilities</span></p></td>
+                                  <td class="align__items"><p><span class="greenBox"></span></p></td>
+                                  <td class="align__items"><p><span class="date_start">Aug 04,2025</span></p></td>
+                                  <td><p class="greenBg">OC</p></td>
+                                  <td><p>$2.04</p></td>
+                                  <td><p>4.3M</p></td>
+                                </tr>
+                                <tr class="ovtyr__row">
+                                  <td>
+                                    <div class="fav_symbol justify-content-center">
+                                      <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="American Multinational Technology Company">
+                                        <div class="favSymbol_box"><span class="port_symbol"><span class="noti_box"><span class="noti_count">2</span></span>AAPL</span></div>
+                                      </a>
+                                      <button type="button" class="addTo_fav"><i class="fa-solid fa-star"></i></button>
+                                      <button type="button" data-bs-toggle="modal" data-bs-target="#notiSett_modal">
+                                        <i class="fa-regular fa-bell bell_icon"></i>
+                                      </button> 
+                                    </div>
+                                  </td>
+                                  <td><p><span class="redBox"></span> Negative</p></td>
+                                  <td><p>01-02-2022</p></td>
+                                  <td><p><span class="arrows arrow_up">Utilities</span></p></td>
+                                  <td class="align__items"><p><span class="greenBox"></span></p></td>
+                                  <td class="align__items"><p><span class="date_start">Aug 04,2025</span></p></td>
+                                  <td><p class="greenBg">OC</p></td>
+                                  <td><p>$2.04</p></td>
+                                  <td><p>4.3M</p></td>
+                                </tr>
+                                <tr class="ovtyr__row">
+                                  <td>
+                                    <div class="fav_symbol justify-content-center">
+                                      <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="American Multinational Technology Company">
+                                        <div class="favSymbol_box"><span class="port_symbol">AAPL</span></div>
+                                      </a>
+                                      <button type="button" class="addTo_fav"><i class="fa-regular fa-star"></i></button>
+                                      <button type="button" data-bs-toggle="modal" data-bs-target="#notiSett_modal">
+                                        <i class="fa-regular fa-bell bell_icon"></i>
+                                      </button> 
+                                    </div>
+                                  </td>
+                                  <td><p><span class="blueBox"></span> Neutral</p></td>
+                                  <td><p>01-02-2022</p></td>
+                                  <td><p><span class="arrows arrow_down">Technology</span></p></td>
+                                  <td class="align__items"><p><span class="greenBox"></span></p></td>
+                                  <td class="align__items"><p><span class="date_start">Aug 04,2025</span></p></td>
+                                  <td><p class="pinkBg">OC</p></td>
+                                  <td><p>$2.04</p></td>
+                                  <td><p>4.3M</p></td>
+                                </tr>
+                                <tr class="ovtyr__row">
+                                  <td>
+                                    <div class="fav_symbol justify-content-center">
+                                      <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="American Multinational Technology Company">
+                                        <div class="favSymbol_box"><span class="port_symbol">AAPL</span></div>
+                                      </a>
+                                      <button type="button" class="addTo_fav"><i class="fa-regular fa-star"></i></button>
+                                      <button type="button" data-bs-toggle="modal" data-bs-target="#notiSett_modal">
+                                        <i class="fa-regular fa-bell bell_icon"></i>
+                                      </button> 
+                                    </div>
+                                  </td>
+                                  <td><p><span class="blueBox"></span> Neutral</p></td>
+                                  <td><p>01-02-2022</p></td>
+                                  <td><p><span class="arrows arrow_up">Utilities</span></p></td>
+                                  <td class="align__items"><p><span class="greenBox"></span></p></td>
+                                  <td class="align__items"><p><span class="date_start">Aug 04,2025</span></p></td>
+                                  <td><p class="greenBg">OC</p></td>
+                                  <td><p>$2.04</p></td>
+                                  <td><p>4.3M</p></td>
+                                </tr>
+                                <tr class="ovtyr__row">
+                                  <td>
+                                    <div class="fav_symbol justify-content-center">
+                                      <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="American Multinational Technology Company">
+                                        <div class="favSymbol_box"><span class="port_symbol">AAPL</span></div>
+                                      </a>
+                                      <button type="button" class="addTo_fav"><i class="fa-regular fa-star"></i></button>
+                                      <button type="button" data-bs-toggle="modal" data-bs-target="#notiSett_modal">
+                                        <i class="fa-solid fa-bell bell_icon"></i>
+                                      </button> 
+                                    </div>
+                                  </td>
+                                  <td><p><span class="redBox"></span> Negative</p></td>
+                                  <td><p>01-02-2022</p></td>
+                                  <td><p><span class="arrows arrow_down">Technology</span></p></td>
+                                  <td class="align__items"><p><span class="greenBox"></span></p></td>
+                                  <td class="align__items"><p><span class="date_start">Aug 04,2025</span></p></td>
+                                  <td><p class="greenBg">OC</p></td>
+                                  <td><p>$2.04</p></td>
+                                  <td><p>4.3M</p></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                        <div class="favList_grid">
+                          <div class="favList_item">
+                            <p>
+                              <span>Symbol</span>
+                              <span class="favSymbol_box">
+                                <span class="port_symbol"><span class="noti_box"><span class="noti_count">2</span></span>AAPL</span>
+                                <button type="button" class="addTo_fav"><i class="fa-regular fa-star"></i></button>
+                              </span>
+                            </p>
+                            <p>
+                              <span>Current Sentiment</span>
+                              <span class="greenBox"></span>
+                            </p>
+                            <p>
+                              <span>Last Sentiment Date</span>
+                              <span>01-02-2023</span>
+                            </p>
+                            <p>
+                              <span>Sector</span>
+                              <span><span class="arrows arrow_up">Utilities</span></span>
+                            </p>
+                            <p>
+                              <span>Overlay</span>
+                              <span class="orgBox"></span>
+                            </p>
+                            <p>
+                              <span>Last Day Close</span>
+                              <span>$2.04</span>
+                            </p>
+                          </div>
+                          <div class="favList_item active">
+                            <p>
+                              <span>Symbol</span>
+                              <span class="favSymbol_box">
+                                <span class="port_symbol"><span class="noti_box"><span class="noti_count">2</span></span>AAPL</span>
+                                <button type="button" class="addTo_fav"><i class="fa-regular fa-star"></i></button>
+                              </span>
+                            </p>
+                            <p>
+                              <span>Current Sentiment</span>
+                              <span class="redBox"></span>
+                            </p>
+                            <p>
+                              <span>Last Sentiment Date</span>
+                              <span>01-02-2023</span>
+                            </p>
+                            <p>
+                              <span>Sector</span>
+                              <span><span class="arrows arrow_up">Utilities</span></span>
+                            </p>
+                            <p>
+                              <span>Overlay</span>
+                              <span class="redBox"></span>
+                            </p>
+                            <p>
+                              <span>Last Day Close</span>
+                              <span>$2.04</span>
+                            </p>
+                          </div>
+                          <div class="favList_item">
+                            <p>
+                              <span>Symbol</span>
+                              <span class="favSymbol_box">
+                                <span class="port_symbol"><span class="noti_box"><span class="noti_count">2</span></span>AAPL</span>
+                                <button type="button" class="addTo_fav"><i class="fa-regular fa-star"></i></button>
+                              </span>
+                            </p>
+                            <p>
+                              <span>Status</span>
+                              <span class="buy_stock">Buy</span>
+                            </p>
+                            <p>
+                              <span>Last Signal Date</span>
+                              <span>01-02-2023</span>
+                            </p>
+                            <p>
+                              <span>Sector</span>
+                              <span><span class="arrows arrow_up">Utilities</span></span>
+                            </p>
+                            <p>
+                              <span>Overlay</span>
+                              <span class="orgBox"></span>
+                            </p>
+                            <p>
+                              <span>Last Day Close</span>
+                              <span>$2.04</span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tab-pane fade" id="etfstab3" role="tabpanel" aria-labelledby="etfs-tab3">
+                        <div class="favList_tabC">
+                          <div class="table_scroll horizontal_scroll">
+                            <table class="table ovtlyr_table favList__table sentiTable_2">
+                              <thead class="sticky-top">
+                                <tr class="ovtlyr__row_head">
+                                  <th>Symbol</th>
+                                  <th>Current Signal</th>
+                                  <th class="dropdown drop_box">
+                                    <div class="sort_dropdown">
+                                      <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Last Signal Date</button>
+                                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item" href="#"><p class="mb-0">All</p></a></li>
+                                        <li><a class="dropdown-item" href="#"><p class="mb-0">Ascending</p></a></li>
+                                        <li><a class="dropdown-item" href="#"><p class="mb-0">Descending</p></a></li>
+                                      </ul>
+                                    </div>
+                                  </th>
+                                  <th class="dropdown drop_box">
+                                    <div class="sort_dropdown">
+                                      <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Overlay</button>
+                                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item" href="#"><p><span class="whiteBox"><span class="drop_text">All</span></span></p></a></li>
+                                        <li><a class="dropdown-item" href="#"><p><span class="greenBox"><span class="drop_text">Uptrend</span></span></p></a></li>
+                                        <li><a class="dropdown-item" href="#"><p><span class="redBox"><span class="drop_text">Downtrend</span></span></p></a></li>
+                                        <li><a class="dropdown-item" href="#"><p><span class="blueBox"><span class="drop_text">Neutral</span></span></p></a></li>
+                                      </ul>
+                                    </div>
+                                  </th>
+                                  <th class="dropdown drop_box">
+                                    <div class="sort_dropdown">
+                                      <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Overlay Start Date</button>
+                                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item" href="#"><p class="mb-0">Latest to Oldest</p></a></li>
+                                        <li><a class="dropdown-item" href="#"><p class="mb-0">Oldest to Latest</p></a></li>
+                                      </ul>
+                                    </div>
+                                  </th>
+                                  <th>Expense Ratio</th>
+                                  <th>Index Tracked</th>
+                                  <th>Last Day Close</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr class="ovtyr__row">
+                                  <td>
+                                    <div class="fav_symbol justify-content-center">
+                                      <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="American Multinational Technology Company">
+                                        <div class="favSymbol_box"><span class="port_symbol">AAPL</span></div>
+                                      </a>
+                                      <button type="button" class="addTo_fav"><i class="fa-regular fa-star"></i></button>
+                                      <button type="button" data-bs-toggle="modal" data-bs-target="#notiSett_modal">
+                                        <i class="fa-regular fa-bell bell_icon"></i>
+                                      </button> 
+                                    </div>
+                                  </td>
+                                  <td><p class="buy_stock">Buy</p></td>
+                                  <td><p>01-02-2022</p></td>
+                                  <td><p><span class="greenBox"></span></p></td>
+                                  <td><p><span class="date_start">Aug 06,2025</span></p></td>
+                                  <td><p>0.85%</p></td>
+                                  <td>
+                                    <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Alerian MLP Infrastructure Index">
+                                      <p class="company_name">Alerian MLP Infrastructure Index</p>
+                                    </a>
+                                  </td>
+                                  <td><p>$2.04</p></td>
+                                </tr>
+                                <tr class="ovtyr__row">
+                                  <td>
+                                    <div class="fav_symbol justify-content-center">
+                                      <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="American Multinational Technology Company">
+                                        <div class="favSymbol_box"><span class="port_symbol">AAPL</span></div>
+                                      </a>
+                                      <button type="button" class="addTo_fav"><i class="fa-regular fa-star"></i></button>
+                                      <button type="button" data-bs-toggle="modal" data-bs-target="#notiSett_modal">
+                                        <i class="fa-regular fa-bell bell_icon"></i>
+                                      </button> 
+                                    </div>
+                                  </td>
+                                  <td><p class="buy_stock">Buy</p></td>
+                                  <td><p>01-02-2022</p></td>
+                                  <td><p><span class="redBox"></span></p></td>
+                                  <td><p><span class="date_start">Aug 06,2025</span></p></td>
+                                  <td><p>0.85%</p></td>
+                                  <td>
+                                    <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Alerian MLP Infrastructure Index">
+                                      <p class="company_name">Alerian MLP Infrastructure Index</p>
+                                    </a>
+                                  </td>
+                                  <td><p>$2.04</p></td>
+                                </tr>
+                                <tr class="ovtyr__row">
+                                  <td>
+                                    <div class="fav_symbol justify-content-center">
+                                      <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="American Multinational Technology Company">
+                                        <div class="favSymbol_box"><span class="port_symbol">AAPL</span></div>
+                                      </a>
+                                      <button type="button" class="addTo_fav"><i class="fa-regular fa-star"></i></button>
+                                      <button type="button" data-bs-toggle="modal" data-bs-target="#notiSett_modal">
+                                        <i class="fa-regular fa-bell bell_icon"></i>
+                                      </button> 
+                                    </div>
+                                  </td>
+                                  <td><p class="buy_stock">Buy</p></td>
+                                  <td><p>01-02-2022</p></td>
+                                  <td><p><span class="blueBox"></span></p></td>
+                                  <td><p><span class="date_start">Aug 06,2025</span></p></td>
+                                  <td><p>0.85%</p></td>
+                                  <td>
+                                    <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Alerian MLP Infrastructure Index">
+                                      <p class="company_name">Alerian MLP Infrastructure Index</p>
+                                    </a>
+                                  </td>
+                                  <td><p>$2.04</p></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                        <div class="favList_grid">
+                          <div class="favList_item">
+                            <p>
+                              <span>Symbol</span>
+                              <span class="favSymbol_box">
+                                <span class="port_symbol"><span class="noti_box"><span class="noti_count">2</span></span>AAPL</span>
+                                <button type="button" class="addTo_fav"><i class="fa-regular fa-star"></i></button>
+                              </span>
+                            </p>
+                            <p>
+                              <span>Status</span>
+                              <span class="buy_stock">Buy</span>
+                            </p>
+                            <p>
+                              <span>Last Signal Date</span>
+                              <span>01-02-2023</span>
+                            </p>
+                            <p>
+                              <span>Expense Ratio</span>
+                              <span>0.85%</span>
+                            </p>
+                            <p>
+                              <span>Index Tracked</span>
+                              <span class="company_name">Alerian MLP Infrastructure Index</span>
+                            </p>
+                            <p>
+                              <span>Last Day Close</span>
+                              <span>$2.04</span>
+                            </p>
+                          </div>
+                          <div class="favList_item">
+                            <p>
+                              <span>Symbol</span>
+                              <span class="favSymbol_box">
+                                <span class="port_symbol"><span class="noti_box"><span class="noti_count">2</span></span>AAPL</span>
+                                <button type="button" class="addTo_fav"><i class="fa-regular fa-star"></i></button>
+                              </span>
+                            </p>
+                            <p>
+                              <span>Status</span>
+                              <span class="buy_stock">Buy</span>
+                            </p>
+                            <p>
+                              <span>Last Signal Date</span>
+                              <span>01-02-2023</span>
+                            </p>
+                            <p>
+                              <span>Expense Ratio</span>
+                              <span>0.85%</span>
+                            </p>
+                            <p>
+                              <span>Index Tracked</span>
+                              <span class="company_name">Alerian MLP Infrastructure Index</span>
+                            </p>
+                            <p>
+                              <span>Last Day Close</span>
+                              <span>$2.04</span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="watchlist_sidebar">
+          <div class="category_filter">
+            <div class="secPart_0">
+              <h4>Filter</h4>
+              <div>
+                <a href="#" class="reset_filter">Reset</a>
+                <span class="material-symbols-outlined close_btn">close</span>
+              </div>
+            </div>
+            <div class="secPart_1">
+              <h5>Market Cap</h5>
+              <div class="range-slider">
+                <span class="output outputOne" style="left: 0.2%;">$10B</span>
+                <span class="output outputTwo" style="left: 20%;">$1000B</span>
+                <span class="full-range"></span>
+                <span class="incl-range" style="width: 19.8%; left: 0.2%;"></span>
+                <input name="rangeOne" value="10" min="0" max="5000" step="1" type="range">
+                <input name="rangeTwo" value="1000" min="0" max="5000" step="1" type="range">
+              </div>
+              <p><span>&lt;$0B</span><span>&lt;$5T</span></p>
+            </div>
+            <div class="secPart_2">
+              <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="secIndustry">
+                  <button class="nav-link active" id="sectors-tab" data-bs-toggle="tab" data-bs-target="#sectorstab" type="button" role="tab" aria-controls="sectorstab" aria-selected="true">Sectors</button>
+                </li>
+                <li class="nav-item" role="secIndustry">
+                  <button class="nav-link" id="industry-tab" data-bs-toggle="tab" data-bs-target="#industrytab" type="button" role="tab" aria-controls="industrytab" aria-selected="false" tabindex="-1">Industry</button>
+                  <button class="nav-link disabled" id="industry-tab" data-bs-toggle="tab" data-bs-target="#industrytab" type="button" role="tab" aria-controls="industrytab" aria-selected="false" style="display: none;" tabindex="-1">Industry</button>
+                </li>
+              </ul>
+              <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="sectorstab" role="tabpanel" aria-labelledby="sectors-tab">
+                  <div class="sectorsTab_list filterScroll">
+                    <ul class="sectors_list">
+                      <li class="sectorList_item active">
+                        <a href="#">
+                          <img src="images/communication.svg" alt="Communication">
+                          <h6>Communication</h6>
+                        </a>
+                      </li>
+                      <li class="sectorList_item active">
+                        <a href="#">
+                          <img src="images/discretionary.svg" alt="Discretionary">
+                          <h6>Discretionary</h6>
+                        </a>
+                      </li>
+                      <li class="sectorList_item">
+                        <a href="#">
+                          <img src="images/energy.svg" alt="Energy">
+                          <h6>Energy</h6>
+                        </a>
+                      </li>
+                      <li class="sectorList_item">
+                        <a href="#">
+                          <img src="images/financial.svg" alt="Financial">
+                          <h6>Financial</h6>
+                        </a>
+                      </li>
+                      <li class="sectorList_item">
+                        <a href="#">
+                          <img src="images/health.svg" alt="Health Care">
+                          <h6>Health Care</h6>
+                        </a>
+                      </li>
+                      <li class="sectorList_item">
+                        <a href="#">
+                          <img src="images/industrials.svg" alt="Industrials">
+                          <h6>Industrials</h6>
+                        </a>
+                      </li>
+                      <li class="sectorList_item">
+                        <a href="#">
+                          <img src="images/materials.svg" alt="Materials">
+                          <h6>Materials</h6>
+                        </a>
+                      </li>
+                      <li class="sectorList_item">
+                        <a href="#">
+                          <img src="images/realestate.svg" alt="Real Estate">
+                          <h6>Real Estate</h6>
+                        </a>
+                      </li>
+                      <li class="sectorList_item">
+                        <a href="#">
+                          <img src="images/staples.svg" alt="Staples">
+                          <h6>Staples</h6>
+                        </a>
+                      </li>
+                      <li class="sectorList_item">
+                        <a href="#">
+                          <img src="images/technology.svg" alt="Technology">
+                          <h6>Technology</h6>
+                        </a>
+                      </li>
+                      <li class="sectorList_item">
+                        <a href="#">
+                          <img src="images/utilities.svg" alt="Utilities">
+                          <h6>Utilities</h6>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="industrytab" role="tabpanel" aria-labelledby="industry-tab">
+                  <div class="industryTab_list filterScroll">
+                    <ul class="industry_list">
+                      <li class="indusList_item">
+                        <label class="checkbox">
+                          <input class="checkbox__input" type="checkbox">
+                          <span class="checkbox__in">
+                            <span class="checkbox__tick"></span>
+                            <span class="checkbox__text">Auto Components</span>
+                          </span>
+                        </label>
+                      </li>
+                      <li class="indusList_item">
+                        <label class="checkbox">
+                          <input class="checkbox__input" type="checkbox">
+                          <span class="checkbox__in">
+                            <span class="checkbox__tick"></span>
+                            <span class="checkbox__text">Automobiles</span>
+                          </span>
+                        </label>
+                      </li>
+                      <li class="indusList_item">
+                        <label class="checkbox">
+                          <input class="checkbox__input" type="checkbox">
+                          <span class="checkbox__in">
+                            <span class="checkbox__tick"></span>
+                            <span class="checkbox__text">Distributors</span>
+                          </span>
+                        </label>
+                      </li>
+                      <li class="indusList_item">
+                        <label class="checkbox">
+                          <input class="checkbox__input" type="checkbox">
+                          <span class="checkbox__in">
+                            <span class="checkbox__tick"></span>
+                            <span class="checkbox__text">Distributors</span>
+                          </span>
+                        </label>
+                      </li>
+                      <li class="indusList_item">
+                        <label class="checkbox">
+                          <input class="checkbox__input" type="checkbox">
+                          <span class="checkbox__in">
+                            <span class="checkbox__tick"></span>
+                            <span class="checkbox__text">Diversified  Consumer Services</span>
+                          </span>
+                        </label>
+                      </li>
+                      <li class="indusList_item">
+                        <label class="checkbox">
+                          <input class="checkbox__input" type="checkbox">
+                          <span class="checkbox__in">
+                            <span class="checkbox__tick"></span>
+                            <span class="checkbox__text">Diversified Telecommunication</span>
+                          </span>
+                        </label>
+                      </li>
+                      <li class="indusList_item">
+                        <label class="checkbox">
+                          <input class="checkbox__input" type="checkbox">
+                          <span class="checkbox__in">
+                            <span class="checkbox__tick"></span>
+                            <span class="checkbox__text">Energy Equipment &amp; Services</span>
+                          </span>
+                        </label>
+                      </li>
+                      <li class="indusList_item">
+                        <label class="checkbox">
+                          <input class="checkbox__input" type="checkbox">
+                          <span class="checkbox__in">
+                            <span class="checkbox__tick"></span>
+                            <span class="checkbox__text">Entertainment</span>
+                          </span>
+                        </label>
+                      </li>
+                      <li class="indusList_item">
+                        <label class="checkbox">
+                          <input class="checkbox__input" type="checkbox">
+                          <span class="checkbox__in">
+                            <span class="checkbox__tick"></span>
+                            <span class="checkbox__text">Hotels, Restaurants &amp; Leisure</span>
+                          </span>
+                        </label>
+                      </li>
+                      <li class="indusList_item">
+                        <label class="checkbox">
+                          <input class="checkbox__input" type="checkbox">
+                          <span class="checkbox__in">
+                            <span class="checkbox__tick"></span>
+                            <span class="checkbox__text">Energy Equipment &amp; Services</span>
+                          </span>
+                        </label>
+                      </li>
+                      <li class="indusList_item">
+                        <label class="checkbox">
+                          <input class="checkbox__input" type="checkbox">
+                          <span class="checkbox__in">
+                            <span class="checkbox__tick"></span>
+                            <span class="checkbox__text">Entertainment</span>
+                          </span>
+                        </label>
+                      </li>
+                      <li class="indusList_item">
+                        <label class="checkbox">
+                          <input class="checkbox__input" type="checkbox">
+                          <span class="checkbox__in">
+                            <span class="checkbox__tick"></span>
+                            <span class="checkbox__text">Hotels, Restaurants &amp; Leisure</span>
+                          </span>
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="secPart_3">
+              <div class="applyFil_btn">
+                <a href="#">Apply</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--====== FAVORITES LIST VIDEO POPUP BEGIN ======-->
+        <div class="modal upgrade_popup watchVideo fade" id="favList" tabindex="-1" aria-labelledby="favList_modalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-body">
+                <button type="button" class="close_btn" data-bs-dismiss="modal" aria-label="Close"><span class="material-icons">close</span></button>
+                <div class="modal_body">
+                  <iframe src="https://www.youtube.com/embed/4SBTl-HrbZM?si=ev26bN6zZtikz62Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--====== FAVORITES LIST VIDEO POPUP END ========-->
+        <!--======= BULL & BEAR VIDEO POPUP BEGIN ========-->
+        <div class="modal upgrade_popup watchVideo fade" id="bullbearList" tabindex="-1" aria-labelledby="bullbearList_modalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-body">
+                <button type="button" class="close_btn" data-bs-dismiss="modal" aria-label="Close"><span class="material-icons">close</span></button>
+                <div class="modal_body">
+                  <iframe src="https://www.youtube.com/embed/4SBTl-HrbZM?si=ev26bN6zZtikz62Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--======== BULL & BEAR VIDEO POPUP END =========-->
+        <!--========== NOTIFICATION POPUP BEGIN ==========-->
+        <div class="modal upgrade_popup notiSett_modal fade" id="notiSett_modal" tabindex="-1" aria-labelledby="notiSett_modalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-body">
+                <button type="button" class="close_btn" data-bs-dismiss="modal" aria-label="Close"><span class="material-icons">close</span></button>
+                <div class="modal_body">
+                  <div class="lat_noti">
+                    <div class="notiHead">
+                      <h3>Notify me about APPL/Custom List 1</h3>
+                    </div>
+                    <div class="lat_noti1">
+                      <div class="lat_noti11">
+                        <div class="lat_noti111">
+                          <div>
+                            <div class="innerFlex">
+                              <span>Notify when Fear & Greed Heatmap is Moving Up, and is at or above</span>
+                            </div>
+                            <div class="innerFlex">
+                              <div class="notifi_slider">
+                                <div class="range_slider_box">
+                                  <div id="heatmap_value_up"></div>
+                                  <p class="range_value"><span class="start_value">0</span><span class="last_value">100</span></p>
+                                </div>
+                                <div class="movingArrow">
+                                  <p class="movingDown">Moving Down<span class="material-symbols-outlined">trending_flat</span></p>
+                                  <p class="movingUp">Moving Up<span class="material-symbols-outlined">trending_flat</span></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <span class="switch1 switch-sm">
+                          <label class="m-0">
+                            <input type="checkbox" name="select">
+                            <span></span> 
+                          </label>
+                        </span>
+                      </div>
+                      <div class="lat_noti11">
+                        <div class="lat_noti111">
+                          <div>
+                            <div class="innerFlex">
+                              <span>Notify when Fear & Greed Heatmap is Moving Down, and is at or below</span>
+                            </div>
+                            <div class="innerFlex">
+                              <div class="notifi_slider">
+                                <div class="range_slider_box">
+                                  <div id="heatmap_value_down"></div>
+                                  <p class="range_value"><span class="start_value">0</span><span class="last_value">100</span></p>
+                                </div>
+                                <div class="movingArrow">
+                                  <p class="movingDown">Moving Down<span class="material-symbols-outlined">trending_flat</span></p>
+                                  <p class="movingUp">Moving Up<span class="material-symbols-outlined">trending_flat</span></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <span class="switch1 switch-sm">
+                          <label class="m-0">
+                            <input type="checkbox" name="select">
+                            <span></span> 
+                          </label>
+                        </span>
+                      </div>
+                      <div class="lat_noti11">
+                        <div class="lat_noti111">
+                          <div>
+                            <div class="innerFlex">
+                              <span>Notify when Fear & Greed Heatmap is 
+                                <select class="form-select" id="selectMotion2">
+                                  <option value="movingUp2" selected>Moving Up</option>
+                                  <option value="movingDown2">Moving Down</option>
+                                  <option>Both Moving Up or Moving Down</option>
+                                </select> and Heatmap is in between
+                              </span>
+                            </div>
+                            <div class="innerFlex">
+                              <div class="notifi_slider">
+                                <div class="range_slider_box">
+                                  <div id="heatmap_value_up_down"></div>
+                                  <p class="range_value"><span class="start_value">0</span><span class="last_value">100</span></p>
+                                </div>
+                                <div class="movingArrow">
+                                  <p class="movingDown">Moving Down<span class="material-symbols-outlined">trending_flat</span></p>
+                                  <p class="movingUp">Moving Up<span class="material-symbols-outlined">trending_flat</span></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <span class="switch1 switch-sm">
+                          <label class="m-0">
+                            <input type="checkbox" name="select">
+                            <span></span> 
+                          </label>
+                        </span>
+                      </div>
+                      <div class="lat_noti11">
+                        <div class="lat_noti111">
+                          <span>When Fear & Greed Heatmap is No Change</span>
+                        </div>
+                        <span class="switch1 switch-sm">
+                          <label class="m-0">
+                            <input type="checkbox" checked name="select">
+                            <span></span> 
+                          </label>
+                        </span>
+                      </div>
+                      <div class="lat_noti11">
+                        <div class="lat_noti111">
+                          <span>When Uptrend or Downtrend started for a stock</span>
+                        </div>
+                        <span class="switch1 switch-sm">
+                          <label class="m-0">
+                            <input type="checkbox" name="select">
+                            <span></span> 
+                          </label>
+                        </span>
+                      </div>
+                      <div class="lat_noti11">
+                        <div class="lat_noti111">
+                          <span>When a new Buy or Sell signal comes</span>
+                        </div>
+                        <span class="switch1 switch-sm">
+                          <label class="m-0">
+                            <input type="checkbox" name="select">
+                            <span></span> 
+                          </label>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="applyBtn">
+                      <button type="button" class="border_btn border_btnCancel" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+                      <button type="button" class="border_btn" data-bs-dismiss="modal" aria-label="Close">Save</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--=========== NOTIFICATION POPUP END ===========-->
+      </div>
+    </div>
+  </div>
+</div>
+<!-- scripts -->
+<script src="js/jquery.min.js"></script>
+<script src="js/magnific-popup-svg4-app.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<!--=========== TOOLTIP SCRIPT ==========-->
+<script>
+  const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+  const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+</script>
+<!--========= TOOLTIP SCRIPT END ========-->
+<!--==== SIDEBAR DROPDOWN OPEN START ====-->
+<script>
+  $(document).ready(function(){
+    $('.dropdown_btn .sidebar__item').on('click', function(e){
+      $(this).parent().toggleClass('active');
+    });
+  });
+</script>
+<!--==== SIDEBAR DROPDOWN OPEN END ====-->
+<!--======== ADD TO FAV TOGGLE ========-->
+<script>
+  $(document).ready(function(){
+    $('.addTo_fav').on('click', function(e){
+      $(this).children().toggleClass('fa-regular fa-solid');
+    });
+  });
+</script>
+<!--==== STOP MODAL PLAYING START ====-->
+<script>
+  $(document).ready(function(){
+    /* Get iframe src attribute value i.e. YouTube video url and store it in a variable */
+    var url1 = $("#favList iframe").attr('src');
+    var url2 = $("#bullbearList iframe").attr('src');
+      
+    /* Assign empty url value to the iframe src attribute when modal hide, which stop the video playing */
+    $("#favList").on('hide.bs.modal', function(){
+        $("#favList iframe").attr('src', '');
+    });
+    $("#bullbearList").on('hide.bs.modal', function(){
+        $("#bullbearList iframe").attr('src', '');
+    });
+    
+    /* Assign the initially stored url back to the iframe src attribute when modal is displayed again */
+    $("#favList").on('show.bs.modal', function(){
+        $("#favList iframe").attr('src', url1);
+    });
+    $("#bullbearList").on('show.bs.modal', function(){
+        $("#bullbearList iframe").attr('src', url2);
+    });
+  });
+</script>
+<!--===== STOP MODAL PLAYING END =====-->
+<!--======== FILTERS HIDE/SHOW SCRIPT 1 BEGIN =========-->
+<script>
+    document.querySelector('.show_filters').addEventListener('click', function(event) {
+      event.preventDefault();
+      var target1 = document.querySelector('.watchlist_sidebar');
+      if (target1.classList.contains('open')) {
+        target1.classList.remove('open');
+      } 
+      else {
+        target1.classList.add('open');
+      }
+    });
+    
+    $('.close_btn').click(function (evt) {
+      evt.stopPropagation();
+      $('.watchlist_sidebar').removeClass('open');
+    });
+  
+    $('body,html').click(function (e) {
+      var container = $('.watchlist_sidebar , .show_filters');
+      if (!container.is(e.target) && container.has(e.target).length === 0) {
+        container.removeClass('open');
+      }
+    });
+</script>
+<!--========== FILTERS HIDE/SHOW SCRIPT 1 END =========-->
+<!-- <script src='https:cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script> -->
+<script>
+    var rangeOne = document.querySelector('input[name="rangeOne"]'),
+      rangeTwo = document.querySelector('input[name="rangeTwo"]'),
+      outputOne = document.querySelector('.outputOne'),
+      outputTwo = document.querySelector('.outputTwo'),
+      inclRange = document.querySelector('.incl-range'),
+      updateView = function () {
+        if (this.getAttribute('name') === 'rangeOne') {
+          outputOne.innerHTML = '$' + this.value + 'B';
+          outputOne.style.left = this.value / this.getAttribute('max') * 100 + '%';
+        } else {
+          outputTwo.style.left = this.value / this.getAttribute('max') * 100 + '%';
+          outputTwo.innerHTML = '$' + this.value + 'B';
+        }
+        if (parseInt(rangeOne.value) > parseInt(rangeTwo.value)) {
+          inclRange.style.width = (rangeOne.value - rangeTwo.value) / this.getAttribute('max') * 100 + '%';
+          inclRange.style.left = rangeTwo.value / this.getAttribute('max') * 100 + '%';
+        } else {
+          inclRange.style.width = (rangeTwo.value - rangeOne.value) / this.getAttribute('max') * 100 + '%';
+          inclRange.style.left = rangeOne.value / this.getAttribute('max') * 100 + '%';
+        }
+      };
+  
+    document.addEventListener('DOMContentLoaded', function () {
+      updateView.call(rangeOne);
+      updateView.call(rangeTwo);
+      $('input[type="range"]').on('mouseup', function() {
+        this.blur();
+      }).on('mousedown input', function () {
+        updateView.call(this);
+      });
+    });
+</script>
+<!--========= EXPAND SCRIPT START ===========-->
+<script>
+  $(document).ready(function(){
+    $('#expand_btn1').on('click', function(e){
+      if($('.watchlist_tabs').hasClass('full_listHead')){
+        $('.watchlist_tabs').removeClass('full_listHead full_listHead1');
+        $('.watchlist_listing').removeClass('full_listTable full_listTable1');
+      }
+      else {
+        $('.watchlist_tabs').addClass('full_listHead full_listHead1');
+        $('.watchlist_listing').addClass('full_listTable full_listTable1');
+      }
+    });
+      
+    $('#expand_btn2').on('click', function(e){
+      if($('.watchlist_tabs').hasClass('full_listHead')){
+        $('.watchlist_tabs').removeClass('full_listHead full_listHead2');
+        $('.watchlist_listing').removeClass('full_listTable full_listTable2');
+      }
+      else {
+        $('.watchlist_tabs').addClass('full_listHead full_listHead2');
+        $('.watchlist_listing').addClass('full_listTable full_listTable2');
+      }
+    });
+  
+    $('#expand_btn3').on('click', function(e){
+      if($('.watchlist_tabs').hasClass('full_listHead')){
+        $('.watchlist_tabs').removeClass('full_listHead full_listHead3');
+        $('.watchlist_listing').removeClass('full_listTable full_listTable3');
+      }
+      else {
+        $('.watchlist_tabs').addClass('full_listHead full_listHead3');
+        $('.watchlist_listing').addClass('full_listTable full_listTable3');
+      }
+    });
+
+    $('#expand_btn4').on('click', function(e){
+      if($('.watchlist_tabs').hasClass('full_listHead')){
+        $('.watchlist_tabs').removeClass('full_listHead full_listHead4');
+        $('.watchlist_listing').removeClass('full_listTable full_listTable4');
+      }
+      else {
+        $('.watchlist_tabs').addClass('full_listHead full_listHead4');
+        $('.watchlist_listing').addClass('full_listTable full_listTable4');
+      }
+    });
+  });
+</script>
+<!--===== SLIDER SCRIPT START =====-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.6.0/nouislider.min.js"></script>
+<script>
+  var heatmap_value_up = document.getElementById('heatmap_value_up');
+  noUiSlider.create(heatmap_value_up, {
+    start: [10],  // Initial slider value
+    range: {
+      'min': [0],
+      'max': [100]
+    },
+    step: 1,
+    tooltips: {
+      to: function(value) {
+        return Math.round(value); // Ensures whole number display
+      }
+    }
+  });
+
+  var heatmap_value_down = document.getElementById('heatmap_value_down');
+  noUiSlider.create(heatmap_value_down, {
+    start: [10],
+    range: {
+      'min': [0],
+      'max': [100]
+    },
+    step: 1,
+    tooltips: {
+      to: function(value) {
+        return Math.round(value); // Ensures whole number display
+      }
+    }
+  });
+
+  var heatmap_value_up_down = document.getElementById('heatmap_value_up_down');
+  noUiSlider.create(heatmap_value_up_down, {
+    start: [10, 30], // Initial value
+    range: {
+      'min': 0,
+      'max': 100
+    },
+    tooltips: {
+      to: function(value) {
+        return Math.round(value); // Ensures whole number display
+      }
+    },
+    connect: true,
+    format: {
+      to: function (value) {
+        return Math.round(value);
+      },
+      from: function (value) {
+        return Number(value);
+      }
+    }
+  });
+</script>
+</body>
+</html>

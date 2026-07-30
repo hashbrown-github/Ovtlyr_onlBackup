@@ -1,0 +1,922 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>OVTLYR | Sector Intelligence Map</title>
+<meta name="description" content="Turning Investor Behavior into Stock Market Success" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no" />
+<link rel="icon" type="image/ico" sizes="32x32" href="images/favicon-32x32.ico" />
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/css/bootstrap-datepicker.standalone.min.css" />
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta2/css/bootstrap-select.min.css" /> -->
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/latest-style.css" />
+<script>
+  var viewportmeta = document.querySelector('meta[name="viewport"]');
+  if (viewportmeta) {
+    if (screen.width < 320) {
+      var newScale = screen.width / 320;
+      viewportmeta.content = 'width=320, minimum-scale=' + newScale + ', maximum-scale=1.0, user-scalable=no, initial-scale=' + newScale + '';
+    } else {
+      viewportmeta.content = 'width=device-width, maximum-scale=1.0, initial-scale=1.0';
+    }
+  }
+</script>
+</head>
+<body>
+  <script>
+    console.log(localStorage.getItem('darkMode'));
+    if (localStorage.getItem('darkMode') === "on") {
+      document.body.classList.add("dark");
+      document.addEventListener("DOMContentLoaded", function () {
+        document.querySelector('.js-switch-theme input').checked = true;
+      });
+    }
+  </script>
+<div class="page toggle new_sidebar final_dashbd1">
+  <div class="sidebar active final_dashbd11">
+    <div class="sidebar__wrapper ovtlyr_sidebar">
+      <div class="sidebar__inner">
+        <div class="sidebar__list">
+          <div class="sidebar__group">
+            <div class="sidebar__menu">
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="dashboard-latest.html" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Dashboard">
+                  <div class="sidebar__icon">
+                    <img src="images/dashboard.svg" alt="Dashboard" />
+                  </div>
+                </a>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="market-breadth-latest.html" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Market Breadth">
+                  <div class="sidebar__icon">
+                    <img src="images/market-breadth.svg" alt="Market" />
+                  </div>
+                </a>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item active" href="sector-intelligence-map.html" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Sector Intelligence Map">
+                  <div class="sidebar__icon">
+                    <img src="images/sector-map.svg" alt="Sector Intelligence Map" />
+                  </div>
+                </a>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="stocks-etfs.html" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Screener">
+                  <div class="sidebar__icon">
+                    <img src="images/stock-etf.svg" alt="Stocks" />
+                  </div>
+                </a>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="watchlist.html" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Watchlist">
+                  <div class="sidebar__icon">
+                    <img src="images/watchlist.svg" alt="Star" />
+                  </div>
+                </a>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="news-and-analyst.html" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="News and Analyst Ratings">
+                  <div class="sidebar__icon">
+                    <img src="images/news.svg" alt="News" />
+                  </div>
+                </a>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="notification.html" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Notification & List Management">
+                  <div class="sidebar__icon">
+                    <img src="images/notification.svg" alt="Notification" />
+                  </div>
+                  <span class="noti_count2">10</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sidebar__inner final_dashbd111">
+        <div class="sidebar__list">
+          <div class="sidebar__group">
+            <div class="sidebar__menu">
+              <div class="side_dropdown">
+                <div class="profileDrop dropup-right dropup" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Settings">
+                  <a class="sidebar__item p-0" href="#" id="settingsButton" data-bs-toggle="dropdown" aria-expanded="false">
+                    <div class="sidebar__icon">
+                      <img src="images/setting.svg" alt="setting" />
+                    </div>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="settingsButton">
+                    <li><a class="dropdown-item" href="subscription-all.html"><p class="mb-0">Subscription Management</p></a></li>
+                    <li><a class="dropdown-item" href="notification.html"><p class="mb-0">Notification Management</p></a></li>
+                    <li><a class="dropdown-item" href="promoter.html"><p class="mb-0">Referral Dashboard</p></a></li>
+                    <li><a class="dropdown-item" href="documentation.html"><p class="mb-0">Documentation</p></a></li>
+                    <li><a class="dropdown-item" href="tutorials.html"><p class="mb-0">Tutorials</p></a></li>
+                    <li><a class="dropdown-item" href="playlists.html" target="_blank"><p class="mb-0">Video Tutorials</p></a></li>
+                    <li><a class="dropdown-item" href="contact.html"><p class="mb-0">Contact Us</p></a></li>
+                    <li>
+                      <a class="dropdown-item" href="javascript:void(0);">
+                        <p class="switchThemeBtn mb-0">
+                          <span>Theme</span>
+                          <label class="switch switch_theme js-switch-theme mt-0">
+                            <input class="switch__input" type="checkbox">
+                            <span class="switch__in">
+                              <span class="switch__box"></span>
+                              <span class="switch__icon">
+                                <span class="material-symbols-outlined icon-sun">dark_mode</span>
+                                <span class="material-symbols-outlined icon-moon">light_mode</span>
+                              </span>
+                            </span>
+                          </label>
+                        </p>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="side_dropdown">
+                <div class="profileDrop dropup-right dropup" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Discord">
+                  <a class="sidebar__item p-0" href="#" id="discordButton" data-bs-toggle="dropdown" aria-expanded="false">
+                    <div class="sidebar__icon">
+                      <img src="images/discord.svg" alt="Discord" />
+                    </div>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="discordButton" >
+                    <li><a class="dropdown-item" href="https://discord.gg/MtQ9dctJu5" target="_blank"><p class="mb-0">First-Time Verify</p></a></li>
+                    <li><a class="dropdown-item" href="https://discord.com/channels/@me" target="_blank"><p class="mb-0">Open Discord</p></a></li>
+                  </ul>
+                </div>
+              </div>
+              <!-- <div class="side_dropdown">
+                <a class="sidebar__item" href="https://discord.gg/MtQ9dctJu5" target="_blank" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Discord">
+                  <div class="sidebar__icon">
+                    <img src="images/discord.svg" alt="Discord" />
+                  </div>
+                </a>
+              </div> -->
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="javascript:void(0);" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Logout">
+                  <div class="sidebar__icon">
+                    <img src="images/logout.svg" alt="Logout" />
+                  </div>
+                </a>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="profile.html" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Profile">
+                  <div class="sidebar__icon profile_icon">
+                    <img src="images/profile.svg" alt="Profile" />
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page__wrapper final_dashbd12">
+    <div class="page__center new_content">
+      <div class="dashboard_cont final_dashbd2 p-0">
+        <div class="group_filter0">
+          <div class="group_filter">
+            <h6>Groups:</h6>
+            <div class="profileDrop listtypeDrop HideShowDataCol">
+              <button type="button" class="dropdown-toggle" id="groupsView" data-bs-toggle="dropdown" aria-expanded="false">Sector Performance View</button>
+              <div class="sector_drop1">
+                <ul class="dropdown-menu selectedView" aria-labelledby="groupsView">
+                  <li><a href="javascript:void(0);" class="dropdown-item active"><p class="mb-0">Sector Performance View</p></a></li>
+                  <li><a href="javascript:void(0);" class="dropdown-item"><p class="mb-0">Sector List View</p></a></li>
+                  <li><a href="javascript:void(0);" class="dropdown-item"><p class="mb-0">Industry List View</p></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="group_filter">
+            <h6>Order By:</h6>
+            <div class="profileDrop listtypeDrop HideShowDataCol">
+              <button type="button" class="dropdown-toggle" id="orderBy" data-bs-toggle="dropdown" aria-expanded="false">Ascending</button>
+              <div class="sector_drop2">
+                <ul class="dropdown-menu" aria-labelledby="orderBy">
+                  <li><a href="javascript:void(0);" class="dropdown-item active"><p class="mb-0">Ascending</p></a></li>
+                  <li><a href="javascript:void(0);" class="dropdown-item"><p class="mb-0">Descending</p></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="group_view">
+          <div class="secPerView">
+            <div class="secPerView1">
+              <div id="sector-performance"></div>
+              <img src="images/performance-map.jpg" style="width: 100%;" />
+            </div>
+          </div>
+          <div class="secListView">
+            <div class="secListView1 horizontal_scroll">
+              <table class="table ovtlyr_table">
+                <thead class="sticky-top">
+                  <tr class="ovtlyr__row_head">
+                    <th width="4%" class="align__items">No.</th>
+                    <th width="16%">Name</th>
+                    <th width="8%">Perf Week</th>
+                    <th width="8%">Perf Month</th>
+                    <th width="8%">Perf Quart</th>
+                    <th width="8%">Perf Half</th>
+                    <th width="8%">Perf Year</th>
+                    <th width="8%">Buy Count</th>
+                    <th width="8%">Avg Volume</th>
+                    <th width="8%">Rel Volume</th>
+                    <th width="8%">Change</th>
+                    <th width="8%">Volume</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="ovtlyr__row">
+                    <td class="align__items"><p>1</p></td>
+                    <td>
+                      <a href="#" class="inblock_txt" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Basic Materials"><p class="company_name text_blue">Basic Materials</p></a>
+                    </td>
+                    <td class="textRight"><p class="red_txt">-4.49%</p></td>
+                    <td class="textRight"><p class="red_txt">-3.66%</p></td>
+                    <td class="textRight"><p class="red_txt">-6.02%</p></td>
+                    <td class="textRight"><p class="green_txt">25.55%</p></td>
+                    <td class="textRight"><p class="green_txt">43.56%</p></td>
+                    <td class="textRight"><p>60/100</p></td>
+                    <td class="textRight"><p>722.52M</p></td>
+                    <td class="textRight"><p>0.83</p></td>
+                    <td class="textRight"><p class="green_txt">0.76%</p></td>
+                    <td class="textRight"><p>596.13M</p></td>
+                  </tr>
+                  <tr class="ovtlyr__row">
+                    <td class="align__items"><p>2</p></td>
+                    <td>
+                      <a href="#" class="inblock_txt" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Communication Services"><p class="company_name text_blue">Communication Services</p></a>
+                    </td>
+                    <td class="textRight"><p class="red_txt">-1.82%</p></td>
+                    <td class="textRight"><p class="green_txt">4.05%</p></td>
+                    <td class="textRight"><p class="green_txt">8.77%</p></td>
+                    <td class="textRight"><p class="green_txt">13.46%</p></td>
+                    <td class="textRight"><p class="green_txt">37.72%</p></td>
+                    <td class="textRight"><p>55/100</p></td>
+                    <td class="textRight"><p>685.96M</p></td>
+                    <td class="textRight"><p>0.89</p></td>
+                    <td class="textRight"><p class="green_txt">0.14%</p></td>
+                    <td class="textRight"><p>610.89M</p></td>
+                  </tr>
+                  <tr class="ovtlyr__row">
+                    <td class="align__items"><p>3</p></td>
+                    <td>
+                      <a href="#" class="inblock_txt" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Consumer Cyclical"><p class="company_name text_blue">Consumer Cyclical</p></a>
+                    </td>
+                    <td class="textRight"><p class="red_txt">-4.49%</p></td>
+                    <td class="textRight"><p class="red_txt">-3.66%</p></td>
+                    <td class="textRight"><p class="red_txt">-6.02%</p></td>
+                    <td class="textRight"><p class="green_txt">25.55%</p></td>
+                    <td class="textRight"><p class="green_txt">43.56%</p></td>
+                    <td class="textRight"><p>60/100</p></td>
+                    <td class="textRight"><p>722.52M</p></td>
+                    <td class="textRight"><p>0.83</p></td>
+                    <td class="textRight"><p class="green_txt">0.76%</p></td>
+                    <td class="textRight"><p>596.13M</p></td>
+                  </tr>
+                  <tr class="ovtlyr__row">
+                    <td class="align__items"><p>4</p></td>
+                    <td>
+                      <a href="#" class="inblock_txt" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Consumer Defensive"><p class="company_name text_blue">Consumer Defensive</p></a>
+                    </td>
+                    <td class="textRight"><p class="red_txt">-1.82%</p></td>
+                    <td class="textRight"><p class="green_txt">4.05%</p></td>
+                    <td class="textRight"><p class="green_txt">8.77%</p></td>
+                    <td class="textRight"><p class="green_txt">13.46%</p></td>
+                    <td class="textRight"><p class="green_txt">37.72%</p></td>
+                    <td class="textRight"><p>55/100</p></td>
+                    <td class="textRight"><p>685.96M</p></td>
+                    <td class="textRight"><p>0.89</p></td>
+                    <td class="textRight"><p class="green_txt">0.14%</p></td>
+                    <td class="textRight"><p>610.89M</p></td>
+                  </tr>
+                  <tr class="ovtlyr__row">
+                    <td class="align__items"><p>5</p></td>
+                    <td>
+                      <a href="#" class="inblock_txt" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Energy"><p class="company_name text_blue">Energy</p></a>
+                    </td>
+                    <td class="textRight"><p class="green_txt">1.16%</p></td>
+                    <td class="textRight"><p class="green_txt">3.19%</p></td>
+                    <td class="textRight"><p class="green_txt">10.30%</p></td>
+                    <td class="textRight"><p class="green_txt">30.71%</p></td>
+                    <td class="textRight"><p class="green_txt">44.34%</p></td>
+                    <td class="textRight"><p>55/100</p></td>
+                    <td class="textRight"><p>802.67M</p></td>
+                    <td class="textRight"><p>0.80</p></td>
+                    <td class="textRight"><p class="red_txt">-0.59%</p></td>
+                    <td class="textRight"><p>640.95M</p></td>
+                  </tr>
+                  <tr class="ovtlyr__row">
+                    <td class="align__items"><p>6</p></td>
+                    <td>
+                      <a href="#" class="inblock_txt" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Financial"><p class="company_name text_blue">Financial</p></a>
+                    </td>
+                    <td class="textRight"><p class="green_txt">1.16%</p></td>
+                    <td class="textRight"><p class="green_txt">3.19%</p></td>
+                    <td class="textRight"><p class="green_txt">10.30%</p></td>
+                    <td class="textRight"><p class="green_txt">30.71%</p></td>
+                    <td class="textRight"><p class="green_txt">44.34%</p></td>
+                    <td class="textRight"><p>55/100</p></td>
+                    <td class="textRight"><p>802.67M</p></td>
+                    <td class="textRight"><p>0.80</p></td>
+                    <td class="textRight"><p class="red_txt">-0.59%</p></td>
+                    <td class="textRight"><p>640.95M</p></td>
+                  </tr>
+                  <tr class="ovtlyr__row">
+                    <td class="align__items"><p>7</p></td>
+                    <td>
+                      <a href="#" class="inblock_txt" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Healthcare"><p class="company_name text_blue">Healthcare</p></a>
+                    </td>
+                    <td class="textRight"><p class="green_txt">1.16%</p></td>
+                    <td class="textRight"><p class="green_txt">3.19%</p></td>
+                    <td class="textRight"><p class="green_txt">10.30%</p></td>
+                    <td class="textRight"><p class="green_txt">30.71%</p></td>
+                    <td class="textRight"><p class="green_txt">44.34%</p></td>
+                    <td class="textRight"><p>55/100</p></td>
+                    <td class="textRight"><p>802.67M</p></td>
+                    <td class="textRight"><p>0.80</p></td>
+                    <td class="textRight"><p class="red_txt">-0.59%</p></td>
+                    <td class="textRight"><p>640.95M</p></td>
+                  </tr>
+                  <tr class="ovtlyr__row">
+                    <td class="align__items"><p>8</p></td>
+                    <td>
+                      <a href="#" class="inblock_txt" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Industrials"><p class="company_name text_blue">Industrials</p></a>
+                    </td>
+                    <td class="textRight"><p class="red_txt">-4.49%</p></td>
+                    <td class="textRight"><p class="red_txt">-3.66%</p></td>
+                    <td class="textRight"><p class="red_txt">-6.02%</p></td>
+                    <td class="textRight"><p class="green_txt">25.55%</p></td>
+                    <td class="textRight"><p class="green_txt">43.56%</p></td>
+                    <td class="textRight"><p>60/100</p></td>
+                    <td class="textRight"><p>722.52M</p></td>
+                    <td class="textRight"><p>0.83</p></td>
+                    <td class="textRight"><p class="green_txt">0.76%</p></td>
+                    <td class="textRight"><p>596.13M</p></td>
+                  </tr>
+                  <tr class="ovtlyr__row">
+                    <td class="align__items"><p>9</p></td>
+                    <td>
+                      <a href="#" class="inblock_txt" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Real Estate"><p class="company_name text_blue">Real Estate</p></a>
+                    </td>
+                    <td class="textRight"><p class="green_txt">1.16%</p></td>
+                    <td class="textRight"><p class="green_txt">3.19%</p></td>
+                    <td class="textRight"><p class="green_txt">10.30%</p></td>
+                    <td class="textRight"><p class="green_txt">30.71%</p></td>
+                    <td class="textRight"><p class="green_txt">44.34%</p></td>
+                    <td class="textRight"><p>55/100</p></td>
+                    <td class="textRight"><p>802.67M</p></td>
+                    <td class="textRight"><p>0.80</p></td>
+                    <td class="textRight"><p class="red_txt">-0.59%</p></td>
+                    <td class="textRight"><p>640.95M</p></td>
+                  </tr>
+                  <tr class="ovtlyr__row">
+                    <td class="align__items"><p>10</p></td>
+                    <td>
+                      <a href="#" class="inblock_txt" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Technology"><p class="company_name text_blue">Technology</p></a>
+                    </td>
+                    <td class="textRight"><p class="red_txt">-4.49%</p></td>
+                    <td class="textRight"><p class="red_txt">-3.66%</p></td>
+                    <td class="textRight"><p class="red_txt">-6.02%</p></td>
+                    <td class="textRight"><p class="green_txt">25.55%</p></td>
+                    <td class="textRight"><p class="green_txt">43.56%</p></td>
+                    <td class="textRight"><p>60/100</p></td>
+                    <td class="textRight"><p>722.52M</p></td>
+                    <td class="textRight"><p>0.83</p></td>
+                    <td class="textRight"><p class="green_txt">0.76%</p></td>
+                    <td class="textRight"><p>596.13M</p></td>
+                  </tr>
+                  <tr class="ovtlyr__row">
+                    <td class="align__items"><p>11</p></td>
+                    <td>
+                      <a href="#" class="inblock_txt" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Utilities"><p class="company_name text_blue">Utilities</p></a>
+                    </td>
+                    <td class="textRight"><p class="green_txt">1.16%</p></td>
+                    <td class="textRight"><p class="green_txt">3.19%</p></td>
+                    <td class="textRight"><p class="green_txt">10.30%</p></td>
+                    <td class="textRight"><p class="green_txt">30.71%</p></td>
+                    <td class="textRight"><p class="green_txt">44.34%</p></td>
+                    <td class="textRight"><p>55/100</p></td>
+                    <td class="textRight"><p>802.67M</p></td>
+                    <td class="textRight"><p>0.80</p></td>
+                    <td class="textRight"><p class="red_txt">-0.59%</p></td>
+                    <td class="textRight"><p>640.95M</p></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="indListView">
+            <div class="secListView1 horizontal_scroll">
+              <table class="table ovtlyr_table">
+                <thead class="sticky-top">
+                  <tr class="ovtlyr__row_head">
+                    <th width="4%" class="align__items">No.</th>
+                    <th width="16%">Name</th>
+                    <th width="8%">Perf Week</th>
+                    <th width="8%">Perf Month</th>
+                    <th width="8%">Perf Quart</th>
+                    <th width="8%">Perf Half</th>
+                    <th width="8%">Perf Year</th>
+                    <th width="8%">Buy Count</th>
+                    <th width="8%">Avg Volume</th>
+                    <th width="8%">Rel Volume</th>
+                    <th width="8%">Change</th>
+                    <th width="8%">Volume</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="ovtlyr__row">
+                    <td class="align__items"><p>1</p></td>
+                    <td>
+                      <a href="#" class="inblock_txt" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Advertising Agencies"><p class="company_name text_blue">Advertising Agencies</p></a>
+                    </td>
+                    <td class="textRight"><p class="red_txt">-4.49%</p></td>
+                    <td class="textRight"><p class="red_txt">-3.66%</p></td>
+                    <td class="textRight"><p class="red_txt">-6.02%</p></td>
+                    <td class="textRight"><p class="green_txt">25.55%</p></td>
+                    <td class="textRight"><p class="green_txt">43.56%</p></td>
+                    <td class="textRight"><p>60/100</p></td>
+                    <td class="textRight"><p>722.52M</p></td>
+                    <td class="textRight"><p>0.83</p></td>
+                    <td class="textRight"><p class="green_txt">0.76%</p></td>
+                    <td class="textRight"><p>596.13M</p></td>
+                  </tr>
+                  <tr class="ovtlyr__row">
+                    <td class="align__items"><p>2</p></td>
+                    <td>
+                      <a href="#" class="inblock_txt" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Aerospace & Defense"><p class="company_name text_blue">Aerospace & Defense</p></a>
+                    </td>
+                    <td class="textRight"><p class="red_txt">-1.82%</p></td>
+                    <td class="textRight"><p class="green_txt">4.05%</p></td>
+                    <td class="textRight"><p class="green_txt">8.77%</p></td>
+                    <td class="textRight"><p class="green_txt">13.46%</p></td>
+                    <td class="textRight"><p class="green_txt">37.72%</p></td>
+                    <td class="textRight"><p>55/100</p></td>
+                    <td class="textRight"><p>685.96M</p></td>
+                    <td class="textRight"><p>0.89</p></td>
+                    <td class="textRight"><p class="green_txt">0.14%</p></td>
+                    <td class="textRight"><p>610.89M</p></td>
+                  </tr>
+                  <tr class="ovtlyr__row">
+                    <td class="align__items"><p>3</p></td>
+                    <td>
+                      <a href="#" class="inblock_txt" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Agricultural Inputs"><p class="company_name text_blue">Agricultural Inputs</p></a>
+                    </td>
+                    <td class="textRight"><p class="red_txt">-4.49%</p></td>
+                    <td class="textRight"><p class="red_txt">-3.66%</p></td>
+                    <td class="textRight"><p class="red_txt">-6.02%</p></td>
+                    <td class="textRight"><p class="green_txt">25.55%</p></td>
+                    <td class="textRight"><p class="green_txt">43.56%</p></td>
+                    <td class="textRight"><p>60/100</p></td>
+                    <td class="textRight"><p>722.52M</p></td>
+                    <td class="textRight"><p>0.83</p></td>
+                    <td class="textRight"><p class="green_txt">0.76%</p></td>
+                    <td class="textRight"><p>596.13M</p></td>
+                  </tr>
+                  <tr class="ovtlyr__row">
+                    <td class="align__items"><p>4</p></td>
+                    <td>
+                      <a href="#" class="inblock_txt" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Airlines"><p class="company_name text_blue">Airlines</p></a>
+                    </td>
+                    <td class="textRight"><p class="red_txt">-1.82%</p></td>
+                    <td class="textRight"><p class="green_txt">4.05%</p></td>
+                    <td class="textRight"><p class="green_txt">8.77%</p></td>
+                    <td class="textRight"><p class="green_txt">13.46%</p></td>
+                    <td class="textRight"><p class="green_txt">37.72%</p></td>
+                    <td class="textRight"><p>55/100</p></td>
+                    <td class="textRight"><p>685.96M</p></td>
+                    <td class="textRight"><p>0.89</p></td>
+                    <td class="textRight"><p class="green_txt">0.14%</p></td>
+                    <td class="textRight"><p>610.89M</p></td>
+                  </tr>
+                  <tr class="ovtlyr__row">
+                    <td class="align__items"><p>5</p></td>
+                    <td>
+                      <a href="#" class="inblock_txt" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Airports & Air Services"><p class="company_name text_blue">Airports & Air Services</p></a>
+                    </td>
+                    <td class="textRight"><p class="green_txt">1.16%</p></td>
+                    <td class="textRight"><p class="green_txt">3.19%</p></td>
+                    <td class="textRight"><p class="green_txt">10.30%</p></td>
+                    <td class="textRight"><p class="green_txt">30.71%</p></td>
+                    <td class="textRight"><p class="green_txt">44.34%</p></td>
+                    <td class="textRight"><p>55/100</p></td>
+                    <td class="textRight"><p>802.67M</p></td>
+                    <td class="textRight"><p>0.80</p></td>
+                    <td class="textRight"><p class="red_txt">-0.59%</p></td>
+                    <td class="textRight"><p>640.95M</p></td>
+                  </tr>
+                  <tr class="ovtlyr__row">
+                    <td class="align__items"><p>6</p></td>
+                    <td>
+                      <a href="#" class="inblock_txt" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Aluminum"><p class="company_name text_blue">Aluminum</p></a>
+                    </td>
+                    <td class="textRight"><p class="green_txt">1.16%</p></td>
+                    <td class="textRight"><p class="green_txt">3.19%</p></td>
+                    <td class="textRight"><p class="green_txt">10.30%</p></td>
+                    <td class="textRight"><p class="green_txt">30.71%</p></td>
+                    <td class="textRight"><p class="green_txt">44.34%</p></td>
+                    <td class="textRight"><p>55/100</p></td>
+                    <td class="textRight"><p>802.67M</p></td>
+                    <td class="textRight"><p>0.80</p></td>
+                    <td class="textRight"><p class="red_txt">-0.59%</p></td>
+                    <td class="textRight"><p>640.95M</p></td>
+                  </tr>
+                  <tr class="ovtlyr__row">
+                    <td class="align__items"><p>7</p></td>
+                    <td>
+                      <a href="#" class="inblock_txt" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Apparel Manufacturing"><p class="company_name text_blue">Apparel Manufacturing</p></a>
+                    </td>
+                    <td class="textRight"><p class="green_txt">1.16%</p></td>
+                    <td class="textRight"><p class="green_txt">3.19%</p></td>
+                    <td class="textRight"><p class="green_txt">10.30%</p></td>
+                    <td class="textRight"><p class="green_txt">30.71%</p></td>
+                    <td class="textRight"><p class="green_txt">44.34%</p></td>
+                    <td class="textRight"><p>55/100</p></td>
+                    <td class="textRight"><p>802.67M</p></td>
+                    <td class="textRight"><p>0.80</p></td>
+                    <td class="textRight"><p class="red_txt">-0.59%</p></td>
+                    <td class="textRight"><p>640.95M</p></td>
+                  </tr>
+                  <tr class="ovtlyr__row">
+                    <td class="align__items"><p>8</p></td>
+                    <td>
+                      <a href="#" class="inblock_txt" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Apparel Retail"><p class="company_name text_blue">Apparel Retail</p></a>
+                    </td>
+                    <td class="textRight"><p class="red_txt">-4.49%</p></td>
+                    <td class="textRight"><p class="red_txt">-3.66%</p></td>
+                    <td class="textRight"><p class="red_txt">-6.02%</p></td>
+                    <td class="textRight"><p class="green_txt">25.55%</p></td>
+                    <td class="textRight"><p class="green_txt">43.56%</p></td>
+                    <td class="textRight"><p>60/100</p></td>
+                    <td class="textRight"><p>722.52M</p></td>
+                    <td class="textRight"><p>0.83</p></td>
+                    <td class="textRight"><p class="green_txt">0.76%</p></td>
+                    <td class="textRight"><p>596.13M</p></td>
+                  </tr>
+                  <tr class="ovtlyr__row">
+                    <td class="align__items"><p>9</p></td>
+                    <td>
+                      <a href="#" class="inblock_txt" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Asset Management"><p class="company_name text_blue">Asset Management</p></a>
+                    </td>
+                    <td class="textRight"><p class="green_txt">1.16%</p></td>
+                    <td class="textRight"><p class="green_txt">3.19%</p></td>
+                    <td class="textRight"><p class="green_txt">10.30%</p></td>
+                    <td class="textRight"><p class="green_txt">30.71%</p></td>
+                    <td class="textRight"><p class="green_txt">44.34%</p></td>
+                    <td class="textRight"><p>55/100</p></td>
+                    <td class="textRight"><p>802.67M</p></td>
+                    <td class="textRight"><p>0.80</p></td>
+                    <td class="textRight"><p class="red_txt">-0.59%</p></td>
+                    <td class="textRight"><p>640.95M</p></td>
+                  </tr>
+                  <tr class="ovtlyr__row">
+                    <td class="align__items"><p>10</p></td>
+                    <td>
+                      <a href="#" class="inblock_txt" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Auto & Truck Dealerships"><p class="company_name text_blue">Auto & Truck Dealerships</p></a>
+                    </td>
+                    <td class="textRight"><p class="red_txt">-4.49%</p></td>
+                    <td class="textRight"><p class="red_txt">-3.66%</p></td>
+                    <td class="textRight"><p class="red_txt">-6.02%</p></td>
+                    <td class="textRight"><p class="green_txt">25.55%</p></td>
+                    <td class="textRight"><p class="green_txt">43.56%</p></td>
+                    <td class="textRight"><p>60/100</p></td>
+                    <td class="textRight"><p>722.52M</p></td>
+                    <td class="textRight"><p>0.83</p></td>
+                    <td class="textRight"><p class="green_txt">0.76%</p></td>
+                    <td class="textRight"><p>596.13M</p></td>
+                  </tr>
+                  <tr class="ovtlyr__row">
+                    <td class="align__items"><p>11</p></td>
+                    <td>
+                      <a href="#" class="inblock_txt" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Auto Manufacturers"><p class="company_name text_blue">Auto Manufacturers</p></a>
+                    </td>
+                    <td class="textRight"><p class="green_txt">1.16%</p></td>
+                    <td class="textRight"><p class="green_txt">3.19%</p></td>
+                    <td class="textRight"><p class="green_txt">10.30%</p></td>
+                    <td class="textRight"><p class="green_txt">30.71%</p></td>
+                    <td class="textRight"><p class="green_txt">44.34%</p></td>
+                    <td class="textRight"><p>55/100</p></td>
+                    <td class="textRight"><p>802.67M</p></td>
+                    <td class="textRight"><p>0.80</p></td>
+                    <td class="textRight"><p class="red_txt">-0.59%</p></td>
+                    <td class="textRight"><p>640.95M</p></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- scripts-->
+<script src="js/jquery.min.js"></script>
+<script src="js/magnific-popup-svg4-app.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<!--=========== TOOLTIP SCRIPT ==========-->
+<script>
+  const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+  const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+</script>
+<!--========= TOOLTIP SCRIPT END ========-->
+<!--==== SIDEBAR DROPDOWN OPEN START ====-->
+<script>
+  $(document).ready(function(){
+    $('.dropdown_btn .sidebar__item').on('click', function(e){
+      $(this).parent().toggleClass('active');
+    });
+  });
+</script>
+<!--===== SIDEBAR DROPDOWN OPEN END =====-->
+<script>
+  $(document).ready(function () {
+  function showSelectedView(selectedText) {
+    // Hide all first
+    $('.secPerView, .secListView, .indListView').hide();
+    // Show according to selected text
+    if (selectedText === 'Sector Performance View') {
+      $('.secPerView').show();
+    }
+    else if (selectedText === 'Sector List View') {
+      $('.secListView').show();
+    }
+    else if (selectedText === 'Industry List View') {
+      $('.indListView').show();
+    }
+    // Update button text
+    $('#groupsView').text(selectedText);
+  }
+
+  // Check initially selected item
+  let initialSelected = $('.selectedView .dropdown-item.active p').text().trim();
+  showSelectedView(initialSelected);
+  // On dropdown click
+  $('.selectedView .dropdown-item').on('click', function () {
+    $('.selectedView .dropdown-item').removeClass('active');
+    $(this).addClass('active');
+    let selectedText = $(this).find('p').text().trim();
+    showSelectedView(selectedText);
+  });
+});
+</script>
+
+<script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+<script>
+  am5.ready(function () {
+
+    // Root
+    var root = am5.Root.new("sector-performance");
+
+    // Theme
+    root.setThemes([
+      am5themes_Animated.new(root)
+    ]);
+
+    // Chart
+    var chart = root.container.children.push(
+      am5xy.XYChart.new(root, {
+        panX: false,
+        panY: false,
+        wheelX: "none",
+        wheelY: "none",
+        paddingTop: 0,
+        paddingBottom: 0,
+        paddingLeft: 0,
+        paddingRight: 0,
+        layout: root.verticalLayout
+      })
+    );
+
+    // Data
+    var data = [
+      { category: "Basic Materials", value: 2.49 },
+      { category: "Industrials", value: 1.94 },
+      { category: "Technology", value: 1.70 },
+      { category: "Communication Services", value: 0.99 },
+      { category: "Real Estate", value: 0.48 },
+      { category: "Utilities", value: 0.40 },
+      { category: "Financial", value: 0.38 },
+      { category: "Consumer Cyclical", value: 0.35 },
+      { category: "Healthcare", value: -0.67 },
+      { category: "Consumer Defensive", value: -1.44 },
+      { category: "Energy", value: -2.31 }
+    ];
+
+    // Find max positive and negative values
+    var maxPositive = Math.max(
+      ...data.filter(d => d.value > 0).map(d => d.value)
+    );
+
+    var maxNegative = Math.min(
+      ...data.filter(d => d.value < 0).map(d => d.value)
+    );
+
+    // Helper: interpolate colors
+    function interpolateColor(color1, color2, factor) {
+
+      var result = color1.slice();
+
+      for (var i = 0; i < 3; i++) {
+        result[i] = Math.round(
+          result[i] + factor * (color2[i] - color1[i])
+        );
+      }
+
+      return result;
+    }
+
+    // Convert RGB array to amCharts color
+    function rgbToAm5Color(rgb) {
+      return am5.color(
+        (rgb[0] << 16) +
+        (rgb[1] << 8) +
+        rgb[2]
+      );
+    }
+
+    // Title
+    chart.children.unshift(
+      am5.Label.new(root, {
+        text: "1 DAY PERFORMANCE",
+        fontSize: 14,
+        fontWeight: "600",
+        x: am5.p0,
+        paddingBottom: 10,
+        fill: am5.color(0x777E87)
+      })
+    );
+
+    // Y Axis
+    var yRenderer = am5xy.AxisRendererY.new(root, {
+      inversed: true,
+      minGridDistance: 10
+    });
+
+    yRenderer.grid.template.set("visible", false);
+
+    var yAxis = chart.yAxes.push(
+      am5xy.CategoryAxis.new(root, {
+        categoryField: "category",
+        renderer: yRenderer
+      })
+    );
+
+    yAxis.data.setAll(data);
+
+    yAxis.get("renderer").labels.template.setAll({
+      fontSize: 12,
+      fill: am5.color(0x777E87)
+    });
+
+    // X Axis
+    var xRenderer = am5xy.AxisRendererX.new(root, {
+      minGridDistance: 50
+    });
+
+    xRenderer.grid.template.setAll({
+      strokeDasharray: [4, 4],
+      strokeOpacity: 0.5
+    });
+
+    var xAxis = chart.xAxes.push(
+      am5xy.ValueAxis.new(root, {
+        min: 0,
+        max: 2.5,
+        strictMinMax: true,
+        renderer: xRenderer
+      })
+    );
+
+    xAxis.get("renderer").labels.template.setAll({
+      fontSize: 12,
+      fill: am5.color(0x777E87)
+    });
+
+    xAxis.set("numberFormat", "#'%'");
+
+    // Series
+    var series = chart.series.push(
+      am5xy.ColumnSeries.new(root, {
+        name: "Performance",
+        xAxis: xAxis,
+        yAxis: yAxis,
+        valueXField: "absValue",
+        categoryYField: "category",
+        sequencedInterpolation: true
+      })
+    );
+
+    // Rounded bars
+    series.columns.template.setAll({
+      height: am5.percent(90),
+      strokeOpacity: 0,
+      tooltipText: "{categoryY}: {value}%"
+    });
+
+    // Dynamic Gradient Colors
+    series.columns.template.adapters.add("fill", function (fill, target) {
+
+      var dataItem = target.dataItem;
+
+      if (!dataItem) return fill;
+
+      var value = dataItem.dataContext.value;
+
+      // POSITIVE VALUES
+      if (value >= 0) {
+
+        // Dark green near zero
+        var darkGreen = [31, 90, 40];      // #1F5A28
+
+        // Bright green max positive
+        var brightGreen = [0, 184, 28];    // #00B81C
+
+        // Normalize
+        var factor = value / maxPositive;
+
+        var rgb = interpolateColor(
+          darkGreen,
+          brightGreen,
+          factor
+        );
+
+        return rgbToAm5Color(rgb);
+      }
+
+      // NEGATIVE VALUES
+      else {
+
+        // Dark red near zero
+        var darkRed = [90, 17, 17];        // #5A1111
+
+        // Bright red max negative
+        var brightRed = [251, 2, 2];       // #FB0202
+
+        // Normalize
+        var factor = Math.abs(value / maxNegative);
+
+        var rgb = interpolateColor(
+          darkRed,
+          brightRed,
+          factor
+        );
+
+        return rgbToAm5Color(rgb);
+      }
+    });
+
+    // Match stroke with fill
+    series.columns.template.adapters.add("stroke", function (stroke, target) {
+      return target.get("fill");
+    });
+
+    // Labels inside bars
+    series.bullets.push(function (root, series, dataItem) {
+
+      return am5.Bullet.new(root, {
+        locationX: 1,
+        sprite: am5.Label.new(root, {
+          text: "{valueLabel}",
+          centerY: am5.p50,
+          centerX: am5.p100,
+          populateText: true,
+          fill: am5.color(0xffffff),
+          fontWeight: "400",
+          fontSize: 12,
+          dx: -10
+        })
+      });
+    });
+
+    // Prepare absolute values for bar length
+    var processedData = data.map(item => ({
+      category: item.category,
+      value: item.value,
+      absValue: Math.abs(item.value),
+      valueLabel:
+        (item.value > 0 ? "+" : "") + item.value.toFixed(2)
+    }));
+
+    series.data.setAll(processedData);
+
+    // Animate
+    series.appear(1000);
+    chart.appear(1000, 100);
+
+  });
+</script>
+</body>
+</html>
