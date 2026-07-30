@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>amCharts 5 Horizontal Performance Chart</title>
+
+  <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+
+  <style>
+    html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      background: #ececec;
+      font-family: Arial, sans-serif;
+    }
+
+    #chartdiv {
+      width: 100%;
+      height: 250px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="chartdiv"></div>
+
+<script>
+am5.ready(function () {
+
+  // Root
+  var root = am5.Root.new("chartdiv");
+
+  // Theme
+  root.setThemes([
+    am5themes_Animated.new(root)
+  ]);
+
+  // Chart
+  var chart = root.container.children.push(
+    am5xy.XYChart.new(root, {
+      panX: false,
+      panY: false,
+      wheelX: "none",
+      wheelY: "none",
+      layout: root.verticalLayout
+    })
+  );
+
+  // Data
+  var data = [
+    { category: "Basic Materials", value: 2.49 },
+    { category: "Industrials", value: 1.94 },
+    { category: "Technology", value: 1.70 },
+    { category: "Communication Services", value: 0.99 },
+    { category: "Real Estate", value: 0.48 },
+    { category: "Utilities", value: 0.40 },
+    { category: "Financial", value: 0.38 },
+    { category: "Consumer Cyclical", value: 0.35 },
+    { category: "Healthcare", value: -0.67 },
+    { category: "Consumer Defensive", value: -1.44 },
+    { category: "Energy", value: -2.31 }
+  ];
+
+  // Find max positive and negative values
+  var maxPositive = Math.max(
+    ...data.filter(d => d.value > 0).map(d => d.value)
+  );
+
+  var maxNegative = Math.min(
+    ...data.filter(d => d.value < 0).map(d => d.value)
+  );
+
+  // Helper: interpolate colors
+  function interpolateColor(color1, color2, factor) {
+
+    var result = color1.slice();
+
+    for (var i = 0; i < 3; i++) {
+      result[i] = Math.round(
+        result[i] + factor * (color2[i] - color1[i])
+      );
+    }
+
+    return result;
+  }
+
+  // Convert RGB array to amCharts color
+  function rgbToAm5Color(rgb) {
+    return am5.color(
+      (rgb[0] << 16) +
+      (rgb[1] << 8) +
+      rgb[2]
+    );
+  }
+
+  // Title
+  chart.children.unshift(
+    am5.Label.new(root, {
+      text: "1 DAY PERFORMANCE",
+      fontSize: 14,
+      fontWeight: "600",
+      x: am5.p0,
+      paddingBottom: 10,
+      fill: am5.color(0x4b5263)
+    })
+  );
+
+  // Y Axis
+  var yRenderer = am5xy.AxisRendererY.new(root, {
+    inversed: true,
+    minGridDistance: 10
+  });
+
+  yRenderer.grid.template.set("visible", false);
+
+  var yAxis = chart.yAxes.push(
+    am5xy.CategoryAxis.new(root, {
+      categoryField: "category",
+      renderer: yRenderer
+    })
+  );
+
+  yAxis.data.setAll(data);
+
+  yAxis.get("renderer").labels.template.setAll({
+    fontSize: 10,
+    fill: am5.color(0x4b5263)
+  });
+
+  // X Axis
+  var xRenderer = am5xy.AxisRendererX.new(root, {
+    minGridDistance: 50
+  });
+
+  xRenderer.grid.template.setAll({
+    strokeDasharray: [4, 4],
+    strokeOpacity: 0.5
+  });
+
+  var xAxis = chart.xAxes.push(
+    am5xy.ValueAxis.new(root, {
+      min: 0,
+      max: 2.5,
+      strictMinMax: true,
+      renderer: xRenderer
+    })
+  );
+
+  xAxis.get("renderer").labels.template.setAll({
+    fontSize: 10,
+    fill: am5.color(0x8a8f9a)
+  });
+
+  xAxis.set("numberFormat", "#'%'" );
+
+  // Series
+  var series = chart.series.push(
+    am5xy.ColumnSeries.new(root, {
+      name: "Performance",
+      xAxis: xAxis,
+      yAxis: yAxis,
+      valueXField: "absValue",
+      categoryYField: "category",
+      sequencedInterpolation: true
+    })
+  );
+
+  // Rounded bars
+  series.columns.template.setAll({
+    height: am5.percent(90),
+    strokeOpacity: 0,
+    tooltipText: "{categoryY}: {value}%"
+  });
+
+  // Dynamic Gradient Colors
+  series.columns.template.adapters.add("fill", function(fill, target) {
+
+    var dataItem = target.dataItem;
+
+    if (!dataItem) return fill;
+
+    var value = dataItem.dataContext.value;
+
+    // POSITIVE VALUES
+    if (value >= 0) {
+
+      // Dark green near zero
+      var darkGreen = [31, 90, 40];      // #1F5A28
+
+      // Bright green max positive
+      var brightGreen = [0, 184, 28];    // #00B81C
+
+      // Normalize
+      var factor = value / maxPositive;
+
+      var rgb = interpolateColor(
+        darkGreen,
+        brightGreen,
+        factor
+      );
+
+      return rgbToAm5Color(rgb);
+    }
+
+    // NEGATIVE VALUES
+    else {
+
+      // Dark red near zero
+      var darkRed = [90, 17, 17];        // #5A1111
+
+      // Bright red max negative
+      var brightRed = [251, 2, 2];       // #FB0202
+
+      // Normalize
+      var factor = Math.abs(value / maxNegative);
+
+      var rgb = interpolateColor(
+        darkRed,
+        brightRed,
+        factor
+      );
+
+      return rgbToAm5Color(rgb);
+    }
+  });
+
+  // Match stroke with fill
+  series.columns.template.adapters.add("stroke", function(stroke, target) {
+    return target.get("fill");
+  });
+
+  // Labels inside bars
+  series.bullets.push(function(root, series, dataItem) {
+
+    return am5.Bullet.new(root, {
+      locationX: 1,
+      sprite: am5.Label.new(root, {
+        text: "{valueLabel}",
+        centerY: am5.p50,
+        centerX: am5.p100,
+        populateText: true,
+        fill: am5.color(0xffffff),
+        fontWeight: "400",
+        fontSize: 10,
+        dx: -10
+      })
+    });
+  });
+
+  // Prepare absolute values for bar length
+  var processedData = data.map(item => ({
+    category: item.category,
+    value: item.value,
+    absValue: Math.abs(item.value),
+    valueLabel:
+      (item.value > 0 ? "+" : "") + item.value.toFixed(2)
+  }));
+
+  series.data.setAll(processedData);
+
+  // Animate
+  series.appear(1000);
+  chart.appear(1000, 100);
+
+});
+</script>
+
+</body>
+</html>

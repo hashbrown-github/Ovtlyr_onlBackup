@@ -1,0 +1,933 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>OVTLYR | Subscription</title>
+<meta name="description" content="Turning Investor Behavior into Stock Market Success" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<link rel="icon" type="image/ico" sizes="32x32" href="images/favicon-32x32.ico">
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/latest-style.css" />
+<script>
+var viewportmeta = document.querySelector('meta[name="viewport"]');
+if(viewportmeta) {
+  if(screen.width < 320){
+    var newScale = screen.width / 320;
+    viewportmeta.content = 'width=320, minimum-scale=' + newScale + ', maximum-scale=1.0, user-scalable=no, initial-scale=' + newScale + '';
+  } else {
+    viewportmeta.content = 'width=device-width, maximum-scale=1.0, initial-scale=1.0';
+  }
+}
+</script>
+</head>
+<body>
+<script>
+console.log(localStorage.getItem('darkMode'));
+if (localStorage.getItem('darkMode') === "on") {
+	document.body.classList.add("dark");
+	document.addEventListener("DOMContentLoaded", function(){
+		document.querySelector('.js-switch-theme input').checked = true;
+  });
+}
+</script>
+<div class="page toggle new_sidebar final_dashbd1">
+  <div class="sidebar active final_dashbd11">
+    <div class="sidebar__wrapper ovtlyr_sidebar">
+      <div class="sidebar__inner">
+        <div class="sidebar__list">
+          <div class="sidebar__group">
+            <div class="sidebar__menu">
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="dashboard-latest.html" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Dashboard">
+                  <div class="sidebar__icon">
+                    <img src="images/dashboard.svg" alt="Dashboard" />
+                  </div>
+                </a>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="market-breadth-latest.html" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Market Breadth">
+                  <div class="sidebar__icon">
+                    <img src="images/market-breadth.svg" alt="Market" />
+                  </div>
+                </a>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="sector-intelligence-map.html" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Sector Intelligence Map">
+                  <div class="sidebar__icon">
+                    <img src="images/sector-map.svg" alt="Sector Intelligence Map" />
+                  </div>
+                </a>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="stocks-etfs.html" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Screener">
+                  <div class="sidebar__icon">
+                    <img src="images/stock-etf.svg" alt="Stocks" />
+                  </div>
+                </a>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="watchlist.html" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Watchlist">
+                  <div class="sidebar__icon">
+                    <img src="images/watchlist.svg" alt="Star" />
+                  </div>
+                </a>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="news-and-analyst.html" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="News and Analyst Ratings">
+                  <div class="sidebar__icon">
+                    <img src="images/news.svg" alt="News" />
+                  </div>
+                </a>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="notification.html" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Notification & List Management">
+                  <div class="sidebar__icon">
+                    <img src="images/notification.svg" alt="Notification" />
+                  </div>
+                  <span class="noti_count2">10</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sidebar__inner final_dashbd111">
+        <div class="sidebar__list">
+          <div class="sidebar__group">
+            <div class="sidebar__menu">
+              <div class="side_dropdown">
+                <div class="profileDrop dropup-right dropup" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Settings">
+                  <a class="sidebar__item p-0" href="#" id="settingsButton" data-bs-toggle="dropdown" aria-expanded="false">
+                    <div class="sidebar__icon">
+                      <img src="images/setting.svg" alt="setting" />
+                    </div>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="settingsButton" >
+                    <li><a class="dropdown-item active" href="subscription-all.html"><p class="mb-0">Subscription Management</p></a></li>
+                    <li><a class="dropdown-item" href="notification.html"><p class="mb-0">Notification Management</p></a></li>
+                    <li><a class="dropdown-item" href="promoter.html"><p class="mb-0">Referral Dashboard</p></a></li>
+                    <li><a class="dropdown-item" href="documentation.html"><p class="mb-0">Documentation</p></a></li>
+                    <li><a class="dropdown-item" href="tutorials.html"><p class="mb-0">Tutorials</p></a></li>
+                    <li><a class="dropdown-item" href="playlists.html" target="_blank"><p class="mb-0">Video Tutorials</p></a></li>
+                    <li><a class="dropdown-item" href="contact.html"><p class="mb-0">Contact Us</p></a></li>
+                    <li>
+                      <a class="dropdown-item" href="javascript:void(0);">
+                        <p class="switchThemeBtn mb-0">
+                          <span>Theme</span>
+                          <label class="switch switch_theme js-switch-theme mt-0">
+                            <input class="switch__input" type="checkbox">
+                            <span class="switch__in">
+                              <span class="switch__box"></span>
+                              <span class="switch__icon">
+                                <span class="material-symbols-outlined icon-sun">dark_mode</span>
+                                <span class="material-symbols-outlined icon-moon">light_mode</span>
+                              </span>
+                            </span>
+                          </label>
+                        </p>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="side_dropdown">
+                <div class="profileDrop dropup-right dropup" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Discord">
+                  <a class="sidebar__item p-0" href="#" id="discordButton" data-bs-toggle="dropdown" aria-expanded="false">
+                    <div class="sidebar__icon">
+                      <img src="images/discord.svg" alt="Discord" />
+                    </div>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="discordButton" >
+                    <li><a class="dropdown-item" href="https://discord.gg/MtQ9dctJu5" target="_blank"><p class="mb-0">First-Time Verify</p></a></li>
+                    <li><a class="dropdown-item" href="https://discord.com/channels/@me" target="_blank"><p class="mb-0">Open Discord</p></a></li>
+                  </ul>
+                </div>
+              </div>
+              <!-- <div class="side_dropdown">
+                <a class="sidebar__item" href="https://discord.gg/MtQ9dctJu5" target="_blank" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Discord">
+                  <div class="sidebar__icon">
+                    <img src="images/discord.svg" alt="Discord" />
+                  </div>
+                </a>
+              </div> -->
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="javascript:void(0);" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Logout">
+                  <div class="sidebar__icon">
+                    <img src="images/logout.svg" alt="Logout" />
+                  </div>
+                </a>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="profile.html" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Profile">
+                  <div class="sidebar__icon profile_icon">
+                    <img src="images/profile.svg" alt="Profile" />
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page__wrapper final_dashbd12">
+    <div class="page__center new_content">
+      <div class="dashboard_cont final_dashbd2 p-0">
+        <div class="settings_head">
+          <div class="settings_head1">
+            <div class="page_head">
+              <div class="pageHeading">
+                <div>
+                  <div>
+                    <button type="button"><span class="material-symbols-outlined">chevron_left</span></button>
+                    <h5>Subscription Management</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="settings_head2">
+            <div class="settings_tabs">
+              <ul class="nav nav-tabs" id="myTab" role="sattingstab">
+                <li class="nav-item" role="stocklist">
+                  <a href="notification.html" class="nav-link" id="notification-tab" data-bs-target="#notificationtab" type="button" role="tab" aria-controls="notificationtab" aria-selected="true">
+                    <show-desk>Notification Management</show-desk>
+                    <show-mob>Notifications</show-mob>
+                  </a>
+                </li>
+                <li class="nav-item" role="sattingstab">
+                  <a href="javascript:void(0);" class="nav-link active" id="subscription-tab" data-bs-target="#subscriptiontab" type="button" role="tab" aria-controls="subscriptiontab" aria-selected="false">Subscription</a>
+                </li>
+                <li class="nav-item" role="activitytab">
+                  <a href="activity.html" class="nav-link" id="activity-tab" data-bs-target="#activitytab" type="button" role="tab" aria-controls="activitytab" aria-selected="false">Activity</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="settings_dash">
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="subscriptiontab" role="tabpanel" aria-labelledby="subscription-tab">
+              <div class="note_p">
+                <p>Your scheduled Annual Pass payment was not completed. Please retry the payment to continue your subscription.</p>
+                <button type="button"><span class="material-symbols-outlined">replay</span><span>Retry</span></button>
+              </div>
+              <div class="subscription_box">
+                <div class="subscription_b1 upgradePlan">
+                  <h6>Upgrade to Annual</h6>
+                  <p class="planBottom">Paying $69/month <span class="red_color">($828/year)</span> adds up fast --But for a limited time you can <span class="green_color">Save 64%</span> and get a 
+                    full year of OVTLYR for just <span class="green_color">$299/year</span>. That's <span class="green_color">$529/year</span> in savings you can keep for trading, investing, or whatever you want. Why overpay when you don't have to?</p>
+                  <div class="planComparison">
+                    <div class="planCom planCom1">
+                      <ul>
+                        <li><h4>Monthly</h4></li>
+                        <li>
+                          <div class="actualPric">
+                            <!-- <s>$49</s> -->
+                            <span class="smallPri"><small class="price_symbol">$</small>69</span>
+                            <span class="permonth">/month + Tax</span>
+                          </div>
+                          <!-- <span class="permonth2">+ Taxes</span> -->
+                          <p class="billed_an">$828/year + Tax</p>
+                          <!-- <p class="billed_an"><span class="offer_p">50% Off for First Month</span></p> -->
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="planCom planCom1">
+                      <ul>
+                        <li><h4>Annual</h4></li>
+                        <li>
+                          <div class="actualPric">
+                            <!-- <s>$49</s> -->
+                            <span class="smallPri"><small class="price_symbol">$</small>24.92</span>
+                            <span class="permonth">/month (Billed Annually) + Tax</span>
+                          </div>
+                          <!-- <span class="permonth2">+ Tax</span> -->
+                          <p class="billed_an">Only <!-- <s>$588</s> --> <b> $299</b>/year + Tax</p>
+                          <p class="billed_an mt-1">Save <!-- <s>$588</s> --> <b> $529</b>/year</p>
+                          <!-- <p class="billed_an"><span class="offer_p">49% Off Forever</span></p> -->
+                          <div class="footerBtn">
+                            <button type="button" class="switch_btn">Switch to Annual Today</button>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="arrowBetween">
+                      <img src="images/switch-arrow.svg" alt="">
+                    </div>
+                  </div>
+                </div>
+                <div class="subscription_b1">
+                  <h6>Current Plan <button type="button" class="video_icon" data-bs-toggle="modal" data-bs-target="#subscription"><img src="images/video-icon.svg" alt="Video"></button></h6>
+                  <div class="plan_boxes">
+                    <div class="plan_boxes1 blue_box">
+                      <!-- <div class="check_icon">
+                        <span class="material-symbols-outlined">done</span>
+                      </div> -->
+                      <div class="serial1">
+                        <div class="serial11">
+                          <h4>No Active Plan</h4>
+                        </div>
+                      </div>
+                      <div class="serial2">
+                        
+                      </div>
+                      <div class="serial3">
+                        <div class="serial31">
+                          <a href="pricing.html" class="white_btn">Join Today</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="plan_boxes mt-4">
+                    <div class="plan_boxes1 blue_box">
+                      <!-- <div class="check_icon">
+                        <span class="material-symbols-outlined">done</span>
+                      </div> -->
+                      <div class="serial1">
+                        <div class="serial11">
+                          <h4>14-Day Free Trial</h4>
+                          <p>Trial ending on <b>Mar 15, 2025</b></p>
+                        </div>
+                      </div>
+                      <div class="serial2">
+                        <div class="serial11">
+                          <p>You have 7 days remaining. Your monthly subscription will start on <b>Mar 15, 2025</b>.</p>
+                        </div>
+                      </div>
+                      <div class="serial3">
+                        <div class="serial31">
+                          <a href="#" class="white_btn" data-bs-toggle="modal" data-bs-target="#annualPlan_modal">Switch to Annual</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="plan_boxes mt-4">
+                    <div class="plan_boxes1 blue_box">
+                      <!-- <div class="check_icon">
+                        <span class="material-symbols-outlined">done</span>
+                      </div> -->
+                      <div class="serial0">
+                        <div class="serial1">
+                          <div class="serial11">
+                            <h4>Ovtlyr Monthly<span>(Active)</span></h4>
+                          </div>
+                        </div>
+                        <div class="serial2">
+                          <h3 class="hide_txt" style="display: block;">$69<span> /month + Tax</span></h3>
+                          <h3 class="show_txt" style="display: none;"><del>$15</del> $10<span>/month</span> <span class="small">(10% coupon applied)</span></h3>
+                        </div>
+                        <div class="serial11">
+                          <p>Next Billing Date: <b>Jun 29, 2023</b></p>
+                        </div>
+                      </div>
+                      <div class="serial3">
+                        <div class="serial31">
+                          <a href="#" class="white_btn" data-bs-toggle="modal" data-bs-target="#changePlan_modal">Switch to Annual</a>
+                          <a href="#" class="white_btn" data-bs-toggle="modal" data-bs-target="#cancelPlan_modal">Cancel Plan</a>
+                        </div>
+                        <!-- <div class="serial32">
+                          <p>Expiration date <b>23/03/23</b></p>
+                        </div> -->
+                      </div>
+                    </div>
+                    <div class="plan_boxes1 purple_box">
+                      <div class="borderDesign">
+                        <span></span>
+                        <span class="borderCircle"></span>
+                        <span class="borderCircle"></span>
+                      </div>
+                      <div class="serial1">
+                        <div class="serial11">
+                          <h4>OVTLYR Difference:</h4>
+                          <ul>
+                            <li>
+                              <p>Unique behavioral data that is only available on OVTLYR platform</p>
+                            </li>
+                            <li>
+                              <p>Constant addition of traditional indicators and data for both traders & investors.</p>
+                            </li>
+                            <li>
+                              <p>Fastest growing private Discord Server with thousands of traders & investors</p>
+                            </li>
+                            <li>
+                              <p>Constant platform upgrades with first class member support</p>
+                            </li>
+                            <li>
+                              <p>Daily live trading rooms, training sessions and strategy guides for all members</p>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="bot_txt mb-0">As a special plan user, you are not eligible to upgrade/downgrade your subscription. If any query, kindly get in touch with at support@ovtlyr.com.</p>
+                  <div class="plan_boxes mt-4">
+                    <div class="plan_boxes1 blue_box">
+                      <!-- <div class="check_icon">
+                        <span class="material-symbols-outlined">done</span>
+                      </div> -->
+                      <div class="serial0">
+                        <div class="serial1">
+                          <div class="serial11">
+                            <h4>Ovtlyr Annual Pass<span>(Active)</span></h4>
+                          </div>
+                        </div>
+                        <div class="serial2">
+                          <h3 class="hide_txt" style="display: block;">$299<span> /year + Tax</span></h3>
+                          <h3 class="show_txt" style="display: none;"><del>$15</del> $10<span>/month</span> <span class="small">(10% coupon applied)</span></h3>
+                        </div>
+                        <div class="serial11">
+                          <p>Next Billing Date: <b>Jun 29, 2026</b></p>
+                        </div>
+                      </div>
+                      <div class="serial3">
+                        <div class="serial31">
+                          <a href="#" class="white_btn">Swith to Monthly</a>
+                          <a href="#" class="white_btn" data-bs-toggle="modal" data-bs-target="#cancelPlan_modal">Cancel Plan</a>
+                        </div>
+                        <!-- <div class="serial32">
+                          <p>Expiration date <b>23/03/23</b></p>
+                        </div> -->
+                      </div>
+                    </div>
+                    <div class="plan_boxes1 purple_box">
+                      <div class="borderDesign">
+                        <span></span>
+                        <span class="borderCircle"></span>
+                        <span class="borderCircle"></span>
+                      </div>
+                      <div class="serial1">
+                        <div class="serial11">
+                          <h4>OVTLYR Difference:</h4>
+                          <ul>
+                            <li>
+                              <p>Unique behavioral data that is only available on OVTLYR platform</p>
+                            </li>
+                            <li>
+                              <p>Constant addition of traditional indicators and data for both traders & investors.</p>
+                            </li>
+                            <li>
+                              <p>Fastest growing private Discord Server with thousands of traders & investors</p>
+                            </li>
+                            <li>
+                              <p>Constant platform upgrades with first class member support</p>
+                            </li>
+                            <li>
+                              <p>Daily live trading rooms, training sessions and strategy guides for all members</p>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="bot_txt mb-0">As a special plan user, you are not eligible to upgrade/downgrade your subscription. If any query, kindly get in touch with at support@ovtlyr.com.</p>
+                </div>
+                <div class="subscription_b1">
+                  <h6>Scheduled Plan</h6>
+                  <div class="plan_boxes">
+                    <div class="plan_boxes1 blue_box">
+                      <div class="serial0">
+                        <div class="serial1">
+                          <div class="serial11">
+                            <h4>Ovtlyr Monthly</h4>
+                          </div>
+                        </div>
+                        <div class="serial2">
+                          <h3 class="hide_txt" style="display: block;">$69<span> /month + Tax</span></h3>
+                          <h3 class="show_txt" style="display: none;"><del>$15</del> $10<span>/month</span> <span class="small">(10% coupon applied)</span></h3>
+                        </div>
+                        <div class="serial11">
+                          <p>Subscription Start Date: <b>Aug 12, 2025</b></p>
+                        </div>
+                      </div>
+                      <div class="serial3">
+                        <div class="serial31">
+                          <a href="#" class="white_btn">Cancel Plan</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="subscription_b1">
+                  <h6>Payment Method</h6>
+                  <p class="paymentNote"><span>Note:</span> You can <span>remove</span> a saved card or <span>set it as your default payment method</span> by clicking the <span>three dots (⋯)</span> icon in the top-right corner of each card.</p>
+                  <div class="card_boxes">
+                    <div class="card_boxes1 active">
+                      <div class="check_icon">
+                        <div class="dropdown">
+                          <button class="dropdown-toggle" type="button" id="card_edit" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="material-symbols-outlined">more_horiz</span>
+                          </button>
+                          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="card_edit">
+                            <li><a class="dropdown-item" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#editCard_modal">Edit</a></li>
+                            <li><a class="dropdown-item" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#deleteCard_modal">Delete</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="card_nme">Credit card</div>
+                      <div class="card_no">
+                        <img src="images/master-card.svg" alt="Card" />
+                        <span>**** **** **** <span>4575</span></span>
+                      </div>
+                      <div class="card_dlt">
+                        <p>Default</p>
+                      </div>
+                    </div>
+                    <div class="card_boxes1">
+                      <div class="check_icon">
+                        <div class="dropdown">
+                          <button class="dropdown-toggle" type="button" id="card_edit" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="material-symbols-outlined">more_horiz</span>
+                          </button>
+                          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="card_edit">
+                            <li><a class="dropdown-item" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#editCard_modal">Edit</a></li>
+                            <li><a class="dropdown-item" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#deleteCard_modal">Delete</a></li>
+                            <li><a class="dropdown-item" href="javascript:void(0);">Set as Defult</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="card_nme">Credit card</div>
+                      <div class="card_no">
+                        <img src="images/visa-card.svg" alt="Card" />
+                        <span>**** **** **** <span>0075</span></span>
+                      </div>
+                      <div class="card_dlt">
+                        <p></p>
+                      </div>
+                    </div>
+                    <div class="card_boxes1 cardAdd_box">
+                      <button type="button"><span class="material-symbols-outlined">add</span></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="subscription_b1">
+                  <h6>Billing History</h6>
+                  <div class="billingHis_table">
+                    <div class="table_scroll vertical_scroll horizontal_scroll">
+                      <table class="table billing__table ovtlyr_table">
+                        <thead>
+                          <tr class="ovtlyr__row_head">
+                            <th style="width: 20%;">Date</th>
+                            <th style="width: 20%;">Details</th>
+                            <th style="width: 20%;">Status</th>
+                            <th style="width: 20%;">Amount</th>
+                            <th style="width: 20%;">Download</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr class="ovtlyr__row">
+                            <td><p>01-02-2023</p></td>
+                            <td><p>Scheduled Annual Pass</p></td>
+                            <td><p>Pending</p></td>
+                            <td><p>$20.00</p></td>
+                            <td><p><a href="#">Invoice 25 Feb</a></p></td>
+                          </tr>
+                          <tr class="ovtlyr__row">
+                            <td><p>01-02-2023</p></td>
+                            <td><p>Annual Pass</p></td>
+                            <td><p>Completed</p></td>
+                            <td><p>$20.00</p></td>
+                            <td><p><a href="#">Invoice 25 Feb</a></p></td>
+                          </tr>
+                          <tr class="ovtlyr__row">
+                            <td><p>01-02-2023</p></td>
+                            <td><p>Monthly Plan</p></td>
+                            <td><p>Completed</p></td>
+                            <td><p>$20.00</p></td>
+                            <td><p><a href="#">Invoice 25 Feb</a></p></td>
+                          </tr>
+                          <tr class="ovtlyr__row">
+                            <td><p>01-02-2023</p></td>
+                            <td><p>Trial Plan</p></td>
+                            <td><p>Completed</p></td>
+                            <td><p>$20.00</p></td>
+                            <td><p><a href="#">Invoice 25 Feb</a></p></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="favList_grid">
+                    <div class="favList_item">
+                      <p>
+                        <span>Date</span>
+                        <span>01-02-2023</span>  
+                      </p>
+                      <p>
+                        <span>Details</span>
+                        <span>Scheduled Annual Pass</span>
+                      </p>
+                      <p>
+                        <span>Status</span>
+                        <span>Pending</span>
+                      </p>
+                      <p>
+                        <span>Amount</span>
+                        <span>$20.00</span>
+                      </p>
+                      <p>
+                        <span>Download</span>
+                        <span><a href="#">Invoice 25 Feb</a></span>
+                      </p>
+                    </div>
+                    <div class="favList_item active">
+                      <p>
+                        <span>Date</span>
+                        <span>01-02-2023</span>  
+                      </p>
+                      <p>
+                        <span>Details</span>
+                        <span>Annual Pass</span>
+                      </p>
+                      <p>
+                        <span>Status</span>
+                        <span>Completed</span>
+                      </p>
+                      <p>
+                        <span>Amount</span>
+                        <span>$20.00</span>
+                      </p>
+                      <p>
+                        <span>Download</span>
+                        <span><a href="#">Invoice 25 Feb</a></span>
+                      </p>
+                    </div>
+                    <div class="favList_item">
+                      <p>
+                        <span>Date</span>
+                        <span>01-02-2023</span>  
+                      </p>
+                      <p>
+                        <span>Details</span>
+                        <span>Monthly Plan</span>
+                      </p>
+                      <p>
+                        <span>Status</span>
+                        <span>Completed</span>
+                      </p>
+                      <p>
+                        <span>Amount</span>
+                        <span>$20.00</span>
+                      </p>
+                      <p>
+                        <span>Download</span>
+                        <span><a href="#">Invoice 25 Feb</a></span>
+                      </p>
+                    </div>
+                    <div class="favList_item">
+                      <p>
+                        <span>Date</span>
+                        <span>01-02-2023</span>  
+                      </p>
+                      <p>
+                        <span>Details</span>
+                        <span>Trial Plan</span>
+                      </p>
+                      <p>
+                        <span>Status</span>
+                        <span>Completed</span>
+                      </p>
+                      <p>
+                        <span>Amount</span>
+                        <span>$20.00</span>
+                      </p>
+                      <p>
+                        <span>Download</span>
+                        <span><a href="#">Invoice 25 Feb</a></span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--======== SUBSCRIPTION VIDEO POPUP BEGIN ========-->
+              <div class="modal upgrade_popup watchVideo fade" id="subscription" tabindex="-1" aria-labelledby="subscription_modalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <button type="button" class="close_btn" data-bs-dismiss="modal" aria-label="Close"><span class="material-icons">close</span></button>
+                      <div class="modal_body">
+                        <iframe src="https://www.youtube.com/embed/tBq3vuJQvWQ?si=MEs4pR_Wq1EBmUWr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--======== SUBSCRIPTION VIDEO POPUP END =========-->
+              <!--======== CHANGE PLAN POPUP BEGIN ========-->
+              <div class="modal upgrade_popup fade" id="changePlan_modal" tabindex="-1" aria-labelledby="changePlan_modalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <button type="button" class="close_btn" data-bs-dismiss="modal" aria-label="Close"><span class="material-icons">close</span></button>
+                      <div class="modal_body">
+                        <h5>Switch to Annual</h5>
+                        <p>Your current subscription will stay active until the end of your billing period of current plan. The new plan will start right after that and is now scheduled. Would you like to proceed?</p>
+                      </div>
+                      <div class="modal_btns">
+                        <a href="#" class="border_btn" data-bs-dismiss="modal" aria-label="Close">Cancel</a>
+                        <a href="#" class="filled_btn" data-bs-dismiss="modal" aria-label="Close">Yes</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--======== CHANGE PLAN POPUP END =========-->
+              <!--======== ANNUAL PLAN POPUP BEGIN ========-->
+              <div class="modal upgrade_popup fade" id="annualPlan_modal" tabindex="-1" aria-labelledby="annualPlan_modalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <button type="button" class="close_btn" data-bs-dismiss="modal" aria-label="Close"><span class="material-icons">close</span></button>
+                      <div class="modal_body">
+                        <h5>Switch to Annual</h5>
+                        <p>You will be charged $299/year + tax (a total of $323.67) today. Would you like to proceed?</p>
+                      </div>
+                      <div class="modal_btns">
+                        <a href="#" class="border_btn" data-bs-dismiss="modal" aria-label="Close">Cancel</a>
+                        <a href="#" class="filled_btn" data-bs-dismiss="modal" aria-label="Close">Yes</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--======== ANNUAL PLAN POPUP END =========-->
+              <!--======== CANCEL PLAN POPUP 1 BEGIN ========-->
+              <div class="modal upgrade_popup fade" id="cancelPlan_modal" tabindex="-1" aria-labelledby="cancelPlan_modalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <button type="button" class="close_btn" data-bs-dismiss="modal" aria-label="Close"><span class="material-icons">close</span></button>
+                      <div class="modal_body">
+                        <h5>Cancel Plan</h5>
+                        <p>Do you really want to cancel your plan?</p>
+                      </div>
+                      <div class="modal_btns">
+                        <a href="#" class="border_btn" data-bs-dismiss="modal" aria-label="Close">No</a>
+                        <a href="#" class="filled_btn" data-bs-toggle="modal" data-bs-target="#cancelPlan_modal2">Yes</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--======== CANCEL PLAN POPUP 1 END =========-->
+              <!--======== CANCEL PLAN POPUP 2 BEGIN ========-->
+              <div class="modal upgrade_popup upgrade_popup2 fade" id="cancelPlan_modal2" tabindex="-1" aria-labelledby="cancelPlan_modal2Label" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <button type="button" class="close_btn" data-bs-dismiss="modal" aria-label="Close"><span class="material-icons">close</span></button>
+                      <div class="modal_body">
+                        <p>We really want you to stay and be a part of the OVTLYR family.</p>
+                        <h6>We are offering you a 10% discount off your current subscription (<s>$120</s> $108 will be charged from the next billing cycle) if you stay.</h6>
+                      </div>
+                      <div class="modal_btns">
+                        <a href="#" class="border_btn" data-bs-dismiss="modal" aria-label="Close" data-bs-toggle="modal" data-bs-target="#applyOffer_modal4">Yes, I want to take this offer</a>
+                        <a href="#" class="filled_btn" data-bs-dismiss="modal" aria-label="Close" data-bs-toggle="modal" data-bs-target="#cancelPlan_modal3">No, I still want to Cancel</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--======== CANCEL PLAN POPUP 2 END =========-->
+              <!--======== CANCEL PLAN POPUP 3 BEGIN ========-->
+              <div class="modal upgrade_popup upgrade_popup2 fade" id="cancelPlan_modal3" tabindex="-1" aria-labelledby="cancelPlan_modal3Label" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <button type="button" class="close_btn" data-bs-dismiss="modal" aria-label="Close"><span class="material-icons">close</span></button>
+                      <div class="modal_body">
+                        <p>We are sorry to let you go.
+                        <p>You will not be charged from the next billing date.</p>
+                        <p>You are always welcome to renew your membership.</p>
+                        <h6>You are now a subscriber of the OVTLYR Starter Pack for FREE.</h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--======== CANCEL PLAN POPUP 3 END =========-->
+              <!--======== CANCEL PLAN POPUP 4 BEGIN ========-->
+              <div class="modal upgrade_popup fade" id="applyOffer_modal4" tabindex="-1" aria-labelledby="applyOffer_modalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <button type="button" class="close_btn" data-bs-dismiss="modal" aria-label="Close"><span class="material-icons">close</span></button>
+                      <div class="modal_body">
+                        <h5>Get 10% Discount</h5>
+                        <div class="coupon_div modal_btns">
+                          <input type="text" placeholder="Enter Coupon Code" />
+                          <a href="#" class="filled_btn" data-bs-dismiss="modal" aria-label="Close">Apply</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--======== CANCEL PLAN POPUP 1 END =========-->
+
+              <!--========== EDIT CARD POPUP BEGIN =========-->
+              <div class="modal upgrade_popup fade" id="editCard_modal" tabindex="-1" aria-labelledby="editCard_modalLabel" aria-hidden="true" data-bs-backdrop="static">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <button type="button" class="close_btn" data-bs-dismiss="modal" aria-label="Close"><span class="material-icons">close</span></button>
+                      <div class="modal_body">
+                        <div class="update_card">
+                          <h5>Update Card</h5>
+                          <div class="card_dtl">
+                            <p>Card Detail</p>
+                            <p><span class="bold_txt">Visa</span><span class="pos_txt">**** **** **** </span><span>4575</span></p>
+                          </div>
+                          <div class="account_fields">
+                            <!-- <div class="row">
+                              <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                <div class="form_field required">
+                                  <input type="text" name="name" placeholder="Name" />
+                                </div>
+                              </div>
+                            </div> -->
+                            <div class="row">
+                              <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                <Label>Expiration Month</Label>
+                                <div class="form_field mb-3">
+                                  <input type="text" name="month" placeholder="" />
+                                </div>
+                              </div>
+                              <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                <Label>Expiration Year</Label>
+                                <div class="form_field mb-3">
+                                  <input type="text" name="year" placeholder="" />
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                <Label>CVV</Label>
+                                <div class="form_field mb-2">
+                                  <input type="text" name="CVV" placeholder="" />
+                                </div>
+                              </div>
+                            </div>
+                            <!-- <div class="row">
+                              <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                <div class="form_field">
+                                  <textarea rows="1" type="text" name="addressline1" placeholder="Address Line 1"></textarea>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                <div class="form_field">
+                                  <textarea rows="1" type="text" name="addressline2"placeholder="Address Line 2"></textarea>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                <div class="form_field">
+                                  <input type="text" name="city" placeholder="City" />
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                <div class="form_field">
+                                  <input type="text" name="state" placeholder="State" />
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                <div class="form_field mb-2">
+                                  <input type="text" name="postalcode" placeholder="Postal Code" />
+                                </div>
+                              </div>
+                            </div> -->
+                          </div>
+                        </div>
+                      </div>
+                      <div class="modal_btns">
+                        <a href="#" class="border_btn" data-bs-dismiss="modal" aria-label="Close">Cancel</a>
+                        <a href="#" class="filled_btn" data-bs-dismiss="modal" aria-label="Close">Update</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--========== EDIT CARD POPUP END ==========-->
+              <!--======== DELATE CARD POPUP BEGIN ========-->
+              <div class="modal upgrade_popup fade" id="deleteCard_modal" tabindex="-1" aria-labelledby="deleteCard_modalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <button type="button" class="close_btn" data-bs-dismiss="modal" aria-label="Close"><span class="material-icons">close</span></button>
+                      <div class="modal_body">
+                        <h5>Delete Card</h5>
+                        <p>Are you sure you want to delete your card?</p>
+                      </div>
+                      <div class="modal_btns">
+                        <a href="#" class="border_btn" data-bs-dismiss="modal" aria-label="Close">No</a>
+                        <a href="#" class="filled_btn" data-bs-dismiss="modal" aria-label="Close">Yes</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--======== DELATE CARD POPUP END =========-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- scripts-->
+<script src="js/jquery.min.js"></script>
+<script src="js/magnific-popup-svg4-app.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<!--=========== TOOLTIP SCRIPT ==========-->
+<script>
+  const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+  const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+</script>
+<!--========= TOOLTIP SCRIPT END ========-->
+<!--==== SIDEBAR DROPDOWN OPEN START ====-->
+<script>
+  $(document).ready(function(){
+    $('.dropdown_btn .sidebar__item').on('click', function(e){
+      $(this).parent().toggleClass('active');
+    });
+  });
+</script>
+<!--==== SIDEBAR DROPDOWN OPEN END ====-->
+<!--==== STOP MODAL PLAYING START ====-->
+<script>
+  $(document).ready(function(){
+    /* Get iframe src attribute value i.e. YouTube video url and store it in a variable */
+    var url1 = $("#settings iframe").attr('src');
+      
+    /* Assign empty url value to the iframe src attribute when modal hide, which stop the video playing */
+    $("#settings").on('hide.bs.modal', function(){
+        $("#settings iframe").attr('src', '');
+    });
+    
+    /* Assign the initially stored url back to the iframe src attribute when modal is displayed again */
+    $("#settings").on('show.bs.modal', function(){
+        $("#settings iframe").attr('src', url1);
+    });
+  });
+</script>
+<!--===== STOP MODAL PLAYING END =====-->
+<script>
+  document.createElement('show-desk' , 'show-mob');
+</script>
+</body>
+</html>
+  

@@ -1,0 +1,314 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>OVTLYR | Become a Referer</title>
+<meta name="description" content="Turning Investor Behavior into Stock Market Success" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.svg">
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/style.css" />
+<script>
+var viewportmeta = document.querySelector('meta[name="viewport"]');
+if(viewportmeta) {
+  if(screen.width < 320){
+    var newScale = screen.width / 320;
+    viewportmeta.content = 'width=320, minimum-scale=' + newScale + ', maximum-scale=1.0, user-scalable=no, initial-scale=' + newScale + '';
+  } else {
+    viewportmeta.content = 'width=device-width, maximum-scale=1.0, initial-scale=1.0';
+  }
+}
+</script>
+</head>
+<body>
+<script>
+console.log(localStorage.getItem('darkMode'));
+if (localStorage.getItem('darkMode') === "on") {
+	document.body.classList.add("dark");
+	document.addEventListener("DOMContentLoaded", function(){
+		document.querySelector('.js-switch-theme input').checked = true;
+  });
+}
+</script>
+<div class="page">
+  <div class="sidebar">
+    <div class="sidebar__top">
+      <button class="sidebar__close"><span class="material-symbols-outlined">close</span></button>
+      <a class="sidebar__logo" href="stock-detail.html">
+        <img class="sidebar__pic sidebar__pic_black" src="images/black-logo.svg" alt="OVTLYR Logo" />
+        <img class="sidebar__pic sidebar__pic_white" src="images/white-logo.svg" alt="OVTLYR Logo" />
+      </a>
+      <button class="sidebar__burger"></button>
+    </div>
+    <div class="sidebar__wrapper ovtlyr_sidebar">
+      <div class="sidebar__inner">
+        <a class="sidebar__logo" href="stock-detail.html">
+          <img class="sidebar__pic sidebar__pic_black" src="images/black-logo-small.svg" alt="OVTLYR Logo" />
+          <img class="sidebar__pic sidebar__pic_white" src="images/white-logo-small.svg" alt="OVTLYR Logo" />
+        </a>
+        <div class="sidebar__list">
+          <div class="sidebar__group">
+            <div class="searchbar_input">
+              <div class="sidebar__item">
+                <div class="sidebar__icon">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div class="sidebar__text">
+                  <input type="text" placeholder="Search" />
+                </div>
+              </div>
+              <div class="sidebarSearch__list">
+                <ul>
+                  <li><a href="#"><span>NASDAQ: </span><span>AAPL</span></a></li>
+                  <li><a href="#"><span>NASDAQ: </span><span>AMAT</span></a></li>
+                  <li class="active"><a href="#"><span>NYSE: </span><span>AIT</span></a></li>
+                  <li><a href="#"><span>NYSE: </span><span>APLE</span></a></li>
+                  <li><a href="#"><span>NASDAQ: </span><span>AAPL</span></a></li>
+                  <li><a href="#"><span>NASDAQ: </span><span>AMAT</span></a></li>
+                  <li><a href="#"><span>NYSE: </span><span>AIT</span></a></li>
+                  <li><a href="#"><span>NYSE: </span><span>APLE</span></a></li>
+                  <li><a href="#"><span>NASDAQ: </span><span>AAPL</span></a></li>
+                  <li><a href="#"><span>NASDAQ: </span><span>AMAT</span></a></li>
+                  <li><a href="#"><span>NYSE: </span><span>AIT</span></a></li>
+                  <li><a href="#"><span>NYSE: </span><span>APLE</span></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="sidebar__caption caption-sm">Menu</div>
+            <div class="sidebar__menu">
+              <div class="side_dropdown arrow_drop">
+                <a class="sidebar__item" href="stock-detail.html">
+                  <div class="sidebar__icon">
+                    <img src="images/index-sectors.svg" alt="Dashboard" />
+                  </div>
+                  <div class="sidebar__text">Index & Sectors</div>
+                </a>
+                <span class="active">S&P</span>
+              </div>
+              <div class="side_dropdown arrow_drop">
+                <a class="sidebar__item" href="stocks-etfs.html">
+                  <div class="sidebar__icon">
+                    <img src="images/stock-etf.svg" alt="Stocks" />
+                  </div>
+                  <div class="sidebar__text">Stocks & ETFs</div>
+                </a>
+                <span class="active">AMD</span>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="watchlist.html">
+                  <div class="sidebar__icon">
+                    <img src="images/watchlist.svg" alt="Star" />
+                  </div>
+                  <div class="sidebar__text">Watchlist</div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="sidebar__group">
+            <div class="sidebar__caption caption-sm">General</div>
+            <div class="sidebar__menu">
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="notification.html">
+                  <div class="sidebar__icon">
+                    <img src="images/notification.svg" alt="Notification" />
+                  </div>
+                  <div class="sidebar__text">Notifications</div>
+                  <span class="noti_count">99+</span>
+                </a>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="https://discord.gg/MtQ9dctJu5" target="_blank">
+                  <div class="sidebar__icon">
+                    <img src="images/discord.svg" alt="Notification" />
+                  </div>
+                  <div class="sidebar__text">Discord</div>
+                </a>
+              </div>
+              <div class="side_dropdown arrow_drop dropdown_btn">
+                <p></p>
+                <a class="sidebar__item" href="subscription.html">
+                  <div class="sidebar__icon">
+                    <img src="images/setting.svg" alt="Settings" />
+                  </div>
+                  <div class="sidebar__text">Settings</div>
+                </a>
+                <span><a href="subscription.html">Subscription</a></span>
+                <span><a href="activity.html">Activity</a></span>
+                <!-- <span><a href="notification.html">Notification Management</a></span> -->
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item active" href="become-a-referer.html">
+                  <div class="sidebar__icon">
+                    <img src="images/referer.svg" alt="Referer" />
+                  </div>
+                  <div class="sidebar__text">Become a Referer</div>
+                </a>
+              </div>
+              <div class="side_dropdown arrow_drop dropdown_btn">
+                <p></p>
+                <a class="sidebar__item" href="contact.html">
+                  <div class="sidebar__icon">
+                    <img src="images/support.svg" alt="Support" />
+                  </div>
+                  <div class="sidebar__text">Resources</div>
+                </a>
+                <span><a href="contact.html">Support</a></span>
+                <span><a href="tutorials.html">Tutorials</a></span>
+                <span><a href="https://ovtlyr.com/blog" target="_blank">Blog</a></span>
+              </div>
+              <div class="side_dropdown theme_switchBtn">
+                <div class="sidebar__item mb-0">
+                  <div class="sidebar__icon">
+                    <img src="images/theme.svg" alt="Theme" />
+                  </div>
+                  <div class="sidebar__text">Theme</div>
+                </div>
+                <div class="">
+                  <label class="switch switch_theme js-switch-theme">
+                    <input class="switch__input" type="checkbox" />
+                    <span class="switch__in">
+                      <span class="switch__box"></span>
+                      <span class="switch__icon">
+                        <span class="material-symbols-outlined icon-sun">dark_mode</span>
+                        <span class="material-symbols-outlined icon-moon">light_mode</span>
+                      </span>
+                    </span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar__profile">
+          <div class="sidebar__details">
+            <a class="sidebar__link" href="profile.html">
+              <div class="sidebar__icon">
+                <img src="images/user.svg" alt="Profile" />
+              </div>
+              <div class="sidebar__text">Profile</div>
+            </a>
+            <a class="sidebar__link" href="#">
+              <div class="sidebar__icon">
+                <img src="images/logout.svg" alt="Logout" />
+              </div>
+              <div class="sidebar__text">Log out</div>
+            </a>
+          </div>
+          <a class="sidebar__user" href="#">
+            <div class="sidebar__ava">FN</div>
+            <div class="sidebar__desc">
+              <div class="sidebar__man">Full Name</div>
+              <div class="sidebar__status caption">gmail@example.com</div>
+            </div>
+            <div class="sidebar__arrow">
+              <img src="images/logout.svg" alt="Logout" />
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page__wrapper">
+    <div class="page__center">
+      <div class="header">
+        <button class="header__burger"></button>
+        <div class="mobile_header">
+          <a class="sidebar__logo" href="stock-detail.html">
+            <img class="sidebar__pic sidebar__pic_black" src="images/black-logo.svg" alt="OVTLYR Logo" />
+            <img class="sidebar__pic sidebar__pic_white" src="images/white-logo.svg" alt="OVTLYR Logo" />
+          </a>
+        </div>
+      </div>
+      <div class="dashboard_cont">
+        <div class="referral_sec">
+          <div class="referral_sec1">
+            <div class="referral_sec11">
+              <h3>Refer Talent. <span>Get Rewarded.</span></h3>
+              <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore 
+                veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+              <a href="#">Sign Up to Become a Referer</a>
+            </div>
+            <div class="referral_sec12">
+              <img src="images/become-referer-light.svg" class="white_img" alt="Become a Referer" />
+              <img src="images/become-referer-dark.svg" class="black_img" alt="Become a Referer" />
+              <a href="#">Sign Up to Become a Referer</a>
+            </div>
+          </div>
+          <div class="referral_sec2">
+            <div class="referral_sec21">
+              <h3>How Referral Program Work</h3>
+              <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque <span>laudantium, totam rem aperiam, eaque ipsa quae ab illo 
+                inventore.</span></p>
+            </div>
+            <div class="referral_sec22">
+              <ul>
+                <li>
+                  <h4>1</h4>
+                  <img src="images/signup-icon.svg" alt="Sign Up Icon" />
+                  <p>Sign up for referral program.</p>
+                </li>
+                <li>
+                  <h4>2</h4>
+                  <img src="images/link-icon.svg" alt="Link Icon" />
+                  <p>Get your referral link.</p>
+                </li>
+                <li>
+                  <h4>3</h4>
+                  <img src="images/share-icon.svg" alt="Share Icon" />
+                  <p>Share referral link with family and friends.</p>
+                </li>
+                <li>
+                  <h4>4</h4>
+                  <img src="images/comission-icon.svg" alt="Comission Icon" />
+                  <p>Get comission for paid user coming through your referral link.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- scripts-->
+<script src="js/jquery.min.js"></script>
+<script src="js/magnific-popup-svg4-app.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<!--==== SIDEBAR DROPDOWN OPEN START ====-->
+<script>
+  $(document).ready(function(){
+    $('.dropdown_btn p').on('click', function(e){
+      $(this).parent().toggleClass('active');
+    });
+  });
+</script>
+<!--==== SIDEBAR DROPDOWN OPEN END ====-->
+<!--========= SIDEBAR SEARCH DROPDOWN START =========-->
+<script>
+  $(document).ready(function(){
+    $('.searchbar_input input').click(function(){
+      $(".sidebarSearch__list").css({
+        "visibility": "visible" , 
+        "opacity": "1"
+      });
+    });
+  });
+  $(document). click(function() {
+    var container = $(".searchbar_input");
+    if (! container. is(event. target) && ! container. has(event. target). length) {
+      $(".sidebarSearch__list").css({
+        "visibility": "hidden" , 
+        "opacity": "0"
+       });
+    }
+  });
+</script>
+<!--========== SIDEBAR SEARCH DROPDOWN END ==========-->
+</body>
+</html>
+  
