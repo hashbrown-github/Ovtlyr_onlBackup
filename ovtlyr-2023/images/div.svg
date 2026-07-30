@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="75" height="70" viewBox="0 0 75 70">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_565" data-name="Rectangle 565" width="75" height="70" rx="14" transform="translate(276 127)"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="0.5" y1="-0.058" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#d83972"/>
+      <stop offset="1" stop-color="#d93872" stop-opacity="0.102"/>
+      <stop offset="1" stop-color="#42a861" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_331" data-name="Group 331" transform="translate(-276 -127)">
+    <rect id="Rectangle_564" data-name="Rectangle 564" width="75" height="70" rx="14" transform="translate(276 127)" fill="#f7f7f7"/>
+    <g id="Mask_Group_24" data-name="Mask Group 24" clip-path="url(#clip-path)">
+      <g id="Group_328" data-name="Group 328" transform="translate(-1)" opacity="0.497">
+        <path id="Line_55" data-name="Line 55" d="M1,70H-1V0H1Z" transform="translate(287 127)" fill="#c9c9c9"/>
+        <path id="Line_58" data-name="Line 58" d="M1,70H-1V0H1Z" transform="translate(320 127)" fill="#c9c9c9"/>
+        <path id="Line_56" data-name="Line 56" d="M1,70H-1V0H1Z" transform="translate(298 127)" fill="#c9c9c9"/>
+        <path id="Line_59" data-name="Line 59" d="M1,70H-1V0H1Z" transform="translate(331 127)" fill="#c9c9c9"/>
+        <path id="Line_57" data-name="Line 57" d="M1,70H-1V0H1Z" transform="translate(309 127)" fill="#c9c9c9"/>
+        <path id="Line_60" data-name="Line 60" d="M1,70H-1V0H1Z" transform="translate(342 127)" fill="#c9c9c9"/>
+      </g>
+      <g id="Group_329" data-name="Group 329" transform="translate(149 476.5) rotate(-90)" opacity="0.497">
+        <path id="Line_55-2" data-name="Line 55" d="M1,75H-1V0H1Z" transform="translate(287 127)" fill="#c9c9c9"/>
+        <path id="Line_58-2" data-name="Line 58" d="M1,75H-1V0H1Z" transform="translate(320 127)" fill="#c9c9c9"/>
+        <path id="Line_56-2" data-name="Line 56" d="M1,75H-1V0H1Z" transform="translate(298 127)" fill="#c9c9c9"/>
+        <path id="Line_59-2" data-name="Line 59" d="M1,75H-1V0H1Z" transform="translate(331 127)" fill="#c9c9c9"/>
+        <path id="Line_57-2" data-name="Line 57" d="M1,75H-1V0H1Z" transform="translate(309 127)" fill="#c9c9c9"/>
+        <path id="Line_60-2" data-name="Line 60" d="M1,75H-1V0H1Z" transform="translate(342 127)" fill="#c9c9c9"/>
+      </g>
+      <g id="Group_330" data-name="Group 330">
+        <path id="Path_1113" data-name="Path 1113" d="M625,474.617l-4.319,14.314h-3.826l-4.6,8.847-5.147-3.212-4.255-12.774-4.859,11.7-4.244-4.559-3.725,4.559-4.5,2h-2.334l-6.812-4.3h-5.584v32.326h82.316v-47.7l-5.04,2.923-4.794,3.992-4.9,10.759-3.5-10.759-4.793,3.442-2.773-7.434L625,474.617m0-1a1,1,0,0,1,.872.512l2.306,4.123a1,1,0,0,1,.064.139l2.316,6.208,3.731-2.679a1,1,0,0,1,1.534.5l2.706,8.315,3.838-8.42a1,1,0,0,1,.27-.354l4.794-3.992a1,1,0,0,1,.138-.1l5.04-2.923a1,1,0,0,1,1.5.865v47.7a1,1,0,0,1-1,1H570.792a1,1,0,0,1-1-1V491.191a1,1,0,0,1,1-1h5.584a1,1,0,0,1,.534.154l6.568,4.146h1.832l4.087-1.818,3.575-4.375a1,1,0,0,1,1.506-.049l3.185,3.421,4.263-10.262a1,1,0,0,1,1.872.068l4.141,12.432,3.924,2.448,4.1-7.887a1,1,0,0,1,.887-.539h3.083l4.1-13.6a1,1,0,0,1,.958-.711Z" transform="translate(-294.792 -324)" fill="#d93872"/>
+        <path id="Path_1112" data-name="Path 1112" d="M570.792,490.338h5.584l6.812,4.079h2.334l4.5-1.9,3.725-4.325,4.244,4.325,4.859-11.1L607.1,493.54l5.147,3.046,4.6-8.391h3.826L625,474.617l2.306,3.911,2.773,7.051,4.793-3.265,3.5,10.2,4.9-10.2,4.794-3.786,5.04-2.772V521H570.792Z" transform="translate(-294.792 -324)" fill="url(#linear-gradient)"/>
+      </g>
+    </g>
+    <path id="Line_59-3" data-name="Line 59" d="M1,70H-1V0H1Z" transform="translate(330 127)" fill="#1aa6ce"/>
+    <circle id="Ellipse_12" data-name="Ellipse 12" cx="4" cy="4" r="4" transform="translate(326 148)" fill="#1aa6ce"/>
+    <path id="Ellipse_12_-_Outline" data-name="Ellipse 12 - Outline" d="M4,.5A3.5,3.5,0,1,0,7.5,4,3.5,3.5,0,0,0,4,.5M4,0A4,4,0,1,1,0,4,4,4,0,0,1,4,0Z" transform="translate(326 148)" fill="#f7f7f7"/>
+  </g>
+</svg>
