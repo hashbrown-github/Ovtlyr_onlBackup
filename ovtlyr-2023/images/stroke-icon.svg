@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="242.983" height="235.793" viewBox="0 0 242.983 235.793">
+  <g id="stroke-icon" transform="translate(23.078 13.79)">
+    <rect id="Rectangle_36" data-name="Rectangle 36" width="88" height="88" transform="translate(18.212 42.381)" fill="#ffd9e7"/>
+    <path id="Path_70" data-name="Path 70" d="M8.4,88.4h42v35.7H8.4ZM0,132.5H58.8V80H0Z" transform="translate(0.001 88.003)" fill="#fff" stroke="#4563bb" stroke-width="3"/>
+    <path id="Path_71" data-name="Path 71" d="M46.4,52.4h42V163.7h-42ZM38,172.1H96.8V44H38Z" transform="translate(41.801 48.402)" fill="#fff" stroke="#4563bb" stroke-width="3"/>
+    <path id="Path_72" data-name="Path 72" d="M84.4,20.4h42V198.9h-42ZM76,207.3h58.8V12H76Z" transform="translate(83.602 13.201)" fill="#fff" stroke="#4563bb" stroke-width="3"/>
+    <rect id="Rectangle_47" data-name="Rectangle 47" width="8" height="40" transform="translate(6.212 174.381)" fill="#c1ffe2"/>
+    <rect id="Rectangle_45" data-name="Rectangle 45" width="5" height="183" transform="translate(165.212 31.381)" fill="#c1ffe2"/>
+    <g id="Layer_12" data-name="Layer 12" transform="translate(-23.078 -13.789)">
+      <path id="Path_94" data-name="Path 94" d="M114.134.82V5.909h33.432l-9.77,8.752L.71,151.747l3.613,3.613L141.307,18.325l9.414-8.6V42.7h5.089V.82Zm36.79,5.089Z" transform="translate(-0.71 -0.82)" fill="#fff"/>
+    </g>
+  </g>
+</svg>
