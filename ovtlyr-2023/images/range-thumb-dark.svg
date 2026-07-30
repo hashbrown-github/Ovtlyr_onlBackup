@@ -1,0 +1,5 @@
+<svg id="Slider" xmlns="http://www.w3.org/2000/svg" width="33" height="28" viewBox="0 0 33 28">
+  <rect id="Rectangle_10" data-name="Rectangle 10" width="31" height="26" rx="13" transform="translate(1 1)" fill="#4285f4"/>
+  <path id="Path_63" data-name="Path 63" d="M13.465,10.659a.584.584,0,0,1,.987.38v5.92a.586.586,0,0,1-.987.385l-2.777-2.59a1.015,1.015,0,0,1,0-1.5Zm6.071,0a.584.584,0,0,0-.987.38v5.92a.586.586,0,0,0,.987.385l2.778-2.59a1.015,1.015,0,0,0,0-1.5Z" fill="#fff" fill-rule="evenodd"/>
+  <path id="Rectangle_11" data-name="Rectangle 11" d="M13-1h5a14,14,0,0,1,9.9,23.9A13.908,13.908,0,0,1,18,27H13A14,14,0,0,1,3.1,3.1,13.908,13.908,0,0,1,13-1Zm5,26A12,12,0,0,0,26.485,4.515,11.921,11.921,0,0,0,18,1H13A12,12,0,0,0,4.515,21.485,11.921,11.921,0,0,0,13,25Z" transform="translate(1 1)" fill="#000203"/>
+</svg>

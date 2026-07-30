@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="879.5" viewBox="0 0 1000 879.5">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_690" data-name="Rectangle 690" width="832" height="786" transform="translate(-13245 1760)" fill="#fff"/>
+    </clipPath>
+  </defs>
+  <g id="Group_545" data-name="Group 545" transform="translate(0 -72)">
+    <g id="Group_543" data-name="Group 543" transform="translate(0 10)">
+      <g id="Group_542" data-name="Group 542" transform="translate(0 17.96)">
+        <g id="Group_541" data-name="Group 541" transform="translate(0 -17.96)">
+          <path id="Line_57" data-name="Line 57" d="M0,851.041a13.86,13.86,0,0,1-14-13.715V-.285A13.86,13.86,0,0,1,0-14,13.86,13.86,0,0,1,14-.285v837.61A13.86,13.86,0,0,1,0,851.041Z" transform="translate(54 90.46)" fill="#fff"/>
+          <path id="Line_58" data-name="Line 58" d="M971.989,14H.011A14.006,14.006,0,0,1-14,0,14.006,14.006,0,0,1,.011-14H971.989A14.006,14.006,0,0,1,986,0,14.006,14.006,0,0,1,971.989,14Z" transform="translate(14 887.5)" fill="#fff"/>
+          <g id="Mask_Group_47" data-name="Mask Group 47" transform="translate(13356 -1698)" clip-path="url(#clip-path)">
+            <g id="noun-gaussian-distribution-1425410" transform="translate(-13588 1913.2)">
+              <path id="Path_19592" data-name="Path 19592" d="M1431.314,568.424c-175.443,0-309.27-44.326-408.668-135.236C937.919,355.548,893.609,257.58,857.682,178.527,819.36,93.546,791.517,32.281,736.13,32.281c-55.986,0-90.116,65.5-132.929,148.505-40.717,78.488-91.314,176.456-179.634,253.532C319.978,524.663,186.15,568.707,14.6,568.707V548.944c374.537,0,487.407-217.676,569.739-376.627C630.445,83.1,666.971,12.8,736.13,12.8S837.024,82.535,876.843,171.187C949,330.7,1047.8,548.944,1431.314,548.944Z" transform="translate(29.4 -83.208)" fill="#fff"/>
+              <path id="Path_19593" data-name="Path 19593" d="M0,444Z" transform="translate(674.825 151.118)" fill="#fff"/>
+              <g id="Group_544" data-name="Group 544" transform="translate(6)">
+                <rect id="Rectangle_678" data-name="Rectangle 678" width="49.699" height="500.305" rx="24.849" transform="translate(730 94.808)" fill="#fff"/>
+                <rect id="Rectangle_680" data-name="Rectangle 680" width="49.699" height="302.079" rx="24.849" transform="translate(846 293.334)" fill="#fff"/>
+                <rect id="Rectangle_682" data-name="Rectangle 682" width="49.699" height="172.846" rx="24.849" transform="translate(963 422.268)" fill="#fff"/>
+                <rect id="Rectangle_683" data-name="Rectangle 683" width="49.699" height="103.59" rx="24.849" transform="translate(1079 491.523)" fill="#fff"/>
+                <rect id="Rectangle_686" data-name="Rectangle 686" width="49.699" height="302.079" rx="24.849" transform="translate(614 293.334)" fill="#fff"/>
+                <rect id="Rectangle_688" data-name="Rectangle 688" width="49.699" height="172.846" rx="24.849" transform="translate(497 422.268)" fill="#fff"/>
+                <rect id="Rectangle_689" data-name="Rectangle 689" width="49.699" height="103.59" rx="24.849" transform="translate(381 491.523)" fill="#fff"/>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
