@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="270" viewBox="0 0 300 270">
+  <g id="Constituent_map" data-name="Constituent map" transform="translate(-744.5 -2161.923)">
+    <rect id="Rectangle_63" data-name="Rectangle 63" width="25" height="161.538" transform="translate(789.212 2254.951)" fill="#d93872"/>
+    <rect id="Rectangle_64" data-name="Rectangle 64" width="25" height="112.5" transform="translate(829.596 2304.951)" fill="#d93872"/>
+    <rect id="Rectangle_80" data-name="Rectangle 80" width="25" height="81.731" transform="translate(869.981 2335.72)" fill="#d93872"/>
+    <rect id="Rectangle_65" data-name="Rectangle 65" width="25" height="109.615" transform="translate(950.75 2304.951)" fill="#1da561"/>
+    <rect id="Rectangle_79" data-name="Rectangle 79" width="25" height="78.846" transform="translate(910.365 2335.72)" fill="#1da561"/>
+    <rect id="Rectangle_66" data-name="Rectangle 66" width="25" height="150" transform="translate(991.135 2267.451)" fill="#1da561"/>
+    <line id="Line_28" data-name="Line 28" x2="300" transform="translate(744.5 2416.923)" fill="none" stroke="#000" stroke-width="5"/>
+    <line id="Line_29" data-name="Line 29" y2="270" transform="translate(760.5 2161.923)" fill="none" stroke="#000" stroke-width="5"/>
+  </g>
+</svg>
