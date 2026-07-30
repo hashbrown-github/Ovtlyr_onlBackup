@@ -1,0 +1,1215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>API Traffic</title>
+<meta name="title" content="">
+<meta name="description" content="" />
+<meta name="Keywords" content="" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="canonical" href="#" />
+<link rel="icon" type="image/ico" href="images/favicon.ico">
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/css/bootstrap-datepicker.standalone.min.css" />
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+<link id="styleCSS" rel="stylesheet" href="css/style.css" type="text/css" />
+<link id="responsiveCSS" rel="stylesheet" href="css/responsive.css" type="text/css" />
+</head>
+<body>
+  <div class="ovtlyr_main_sec">
+    <!------------- START Header ------------->
+    <div class="ovt_sidebar_main">
+      <div class="ovt_logo_sec">
+        <span class="material-symbols-outlined ovt_sidebar_menu_btn">menu</span>
+        <a href="https://www.ovtlyr.com/">
+          <img src="images/Ovtlyr-logo.svg" alt="Ovtlyr logo" />
+        </a>
+      </div>
+      <div class="ovt_sidebar_menu">
+        <div class="ovt_sidebar_menulist_1">
+          <a href="user-load.html">
+            <span class="material-symbols-outlined">tv_with_assistant</span>
+            <span><p>User Load</p></span>
+          </a>
+        </div>
+        <div class="ovt_sidebar_menulist_1">
+          <a href="notifications.html">
+            <span class="material-symbols-outlined">notifications_active</span>
+            <span><p class="not_text">Notifications</p></span>
+            <span class="notification_count">10</span>
+          </a>
+        </div>
+        <div class="ovt_sidebar_menulist_1">
+          <a href="API-traffic.html" class="active_click">
+            <span class="material-symbols-outlined">toll</span>
+            <span><p class="not_text">API Traffic</p></span>
+          </a>
+        </div>
+        <div class="ovt_sidebar_menulist_1 ovt_logout_main">
+          <div class="ovt_logout_cont">
+            <div class="ovt_logout">
+              <div class="ovt_logout_11">
+                <img src="images/Profile.svg" alt="user profile" />
+              </div>
+              <div class="ovt_logout_12">
+                <p class="ovt_logout_name">Maria Jonas</p>
+                <!-- <p class="ovt_logout_email">maria@gmail.com</p> -->
+              </div>
+            </div>
+            <div class="ovt_logout_13">
+              <a href="#">
+                <span class="material-symbols-outlined">logout</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!------------- END Header ------------->
+    <!------------- START Body ------------->
+    <div class="ovt_body_main">
+      <!------------- START Mobile Sidebar ------------->
+      <div class="ovt_dashboard_mobile_header" data-minimize-offset="200" data-minimize-mobile-offset="200">
+        <div class="ovt_dashboard_mobile_header_inner">
+          <div class="ovt_dashboard_head_border">
+            <div class="ovt_dashboard_left_logo">
+              <img src="images/Ovtlyr-logo.svg" alt="Ovtlyr Logo" />
+            </div>
+            <div class="ovt_dashboard_right_btn">
+              <button type="button" class="ovt_dashboard_show_sideBar" id="hide_sidebar">
+                <span class="material-symbols-outlined ovt_dashboard_menu_btn">menu</span>
+                <span class="material-symbols-outlined ovt_dashboard_close_icon" style="display: none;">close</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!------------- END Mobile Sidebar ------------->
+      <!------------- START Body Header ------------->
+      <div class="ovt_header_main">
+        <div>
+          <h1>API Traffic</h1>
+          <div class="breadcrumbs_sec">
+            <div class="breadcrumbs_Links">
+              <span>Admin</span>
+              <span class="arrowRight">&gt;</span>
+              <span class="mac_brand">API Traffic</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!------------- END Body Header ------------->
+
+      <!------------- START Content ------------->
+      <div class="ovt_content_main">
+        <div class="ovt_content_sec d-none">
+          <section class="calendar1 calendar1_sec">
+            <div class="calendar11">
+              <h3>Selected Date:</h3>
+              <div class="input_group">
+                <div class="date_flex">
+                  <input class="form_control date" type="text" name="selectdate" value="23-12-2025" placeholder="Select Date" />
+                  <span class="input-group-btn">
+                    <span class="material-symbols-outlined">calendar_month</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="calendar11 calendar11_sec">
+              <div class="calendar11_detail">
+                <h5>EST Time :</h5>
+                <div>Jan 08, 2026, 02:34 AM</div>
+              </div>
+              <div class="calendar11_detail">
+                <h5>API Calls :</h5>
+                <div>20</div>
+              </div>
+            </div>
+            <div class="calendar12">
+              <p class="syncTime"><b>Last Synced:</b> <span>Jan 08, 2026, 02:37:50 AM</span></p>
+              <div id="api_traffic"></div>
+            </div>
+          </section>
+          <section class="ovt_table_sec">
+            <div class="ovt_table">
+              <table class="ovt_table_1">
+                <thead>
+                  <tr>
+                    <th><h3>API Name</h3></th>
+                    <th><h3>Total calls</h3></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><p>#Login</p></td>
+                    <td><p>10</p></td>
+                  </tr>
+                  <tr>
+                    <td><p>#Get Users</p></td>
+                    <td><p>08</p></td>
+                  </tr>
+                  <tr>
+                    <td><p>#Create User</p></td>
+                    <td><p>01</p></td>
+                  </tr>
+                  <tr>
+                    <td><p>#Update User</p></td>
+                    <td><p>01</p></td>
+                  </tr>
+                  <tr>
+                    <td><p>#Delete User</p></td>
+                    <td><p>0</p></td>
+                  </tr>
+                  <tr>
+                    <td><p>#Get Users</p></td>
+                    <td><p>08</p></td>
+                  </tr>
+                  <tr>
+                    <td><p>#Create User</p></td>
+                    <td><p>01</p></td>
+                  </tr>
+                  <tr>
+                    <td><p>#Update User</p></td>
+                    <td><p>01</p></td>
+                  </tr>
+                  <tr>
+                    <td><p>#Delete User</p></td>
+                    <td><p>0</p></td>
+                  </tr>
+                  <tr>
+                    <td><p>#Login</p></td>
+                    <td><p>10</p></td>
+                  </tr>
+                  <tr>
+                    <td><p>#Get Users</p></td>
+                    <td><p>08</p></td>
+                  </tr>
+                  <tr>
+                    <td><p>#Create User</p></td>
+                    <td><p>01</p></td>
+                  </tr>
+                  <tr>
+                    <td><p>#Update User</p></td>
+                    <td><p>01</p></td>
+                  </tr>
+                  <tr>
+                    <td><p>#Delete User</p></td>
+                    <td><p>0</p></td>
+                  </tr>
+                  <tr>
+                    <td><p>#Get Users</p></td>
+                    <td><p>08</p></td>
+                  </tr>
+                  <tr>
+                    <td><p>#Create User</p></td>
+                    <td><p>01</p></td>
+                  </tr>
+                  <tr>
+                    <td><p>#Update User</p></td>
+                    <td><p>01</p></td>
+                  </tr>
+                  <tr>
+                    <td><p>#Delete User</p></td>
+                    <td><p>0</p></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </div>
+
+        <!--============ Empty State START ============-->
+        <div class="ovt_empty_sec">
+          <div class="container">
+            <div class="ovt_empty">
+              <img src="images/empty-stock 1.svg" alt="Empty Stock">
+              <h3>No Data Found</h3>
+              <p>Data will appear here once activity starts</p>
+            </div>
+          </div>
+        </div>
+        <!--============ Empty State END ============-->
+      </div>
+      <!------------- END Content ------------->
+    </div>
+    <!------------- END Body ------------->
+    <!------------- START Footer ------------->
+    <div class="dashboard_footer_main dashboard_footer_collapse">
+      <p><span>©2025 OVTLYR. All Rights Reserved</span></p>
+    </div>
+    <!------------- END Footer ------------->
+  </div>
+
+  <script src="js/bootstrap.bundle.min.js" type="text/javascript"></script>
+  <script src="js/jquery.min.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/js/bootstrap-datepicker.min.js"></script>
+  <script>
+    $(".date").datepicker({
+      format: "dd-mm-yyyy"
+    });
+  </script>
+  <!--============ Sidebar Collapse START ============-->
+  <script>
+    const $sidebarMain = $('.ovt_sidebar_main');
+    const $bodyMain = $('.ovt_body_main');
+    const $footerMain = $('.dashboard_footer_main');
+    const $logo = $('.ovt_logo_sec a');
+    const $logoImg = $('.ovt_logo_sec img');
+    const $collapseLogo = $('.ovt_logo_sec .ovt_collapse_logo');
+    const $sidebarMenuBtn = $('.ovt_sidebar_menu_btn');
+    const $sidebarTextElements = $('.ovt_sidebar_menulist_1 p, .ovt_logout_11, .ovt_logout_12');
+    const $notificationCount = $('.notification_count');
+    const $menuList = $('.ovt_sidebar_menulist_1 a, .ovt_sidebar_menulist_1 h3');
+
+    $footerMain.removeClass('dashboard_footer_collapse');
+
+    $logoImg.show();
+    $collapseLogo.hide();
+    $sidebarTextElements.show();
+    $sidebarMenuBtn.css('display', 'flex');
+
+    $menuList.css({
+      'gap': '',
+      'justify-content': ''
+    })
+
+    let isSidebarCollapsed = false;
+
+    function toggleSidebar() {
+      if (!isSidebarCollapsed) {
+        $sidebarMain.css('width', '58px');
+        $sidebarMain.addClass('ovt_sidebar_collapse');
+        $bodyMain.addClass('ovt_body_collapse');
+        $footerMain.addClass('dashboard_footer_collapse');
+
+        $logo.css({
+          'display': 'flex',
+          'justify-content': 'flex-end'
+        });
+        $logoImg.hide();
+        $collapseLogo.show();
+        $sidebarTextElements.hide();
+        $notificationCount.addClass('notification_count_collapse');
+
+        $menuList.css({
+          'gap': '0',
+          'justify-content': 'center'
+        })
+
+        isSidebarCollapsed = true;
+      } else {
+        $sidebarMain.css('width', '242px');
+        $sidebarMain.removeClass('ovt_sidebar_collapse');
+        $bodyMain.removeClass('ovt_body_collapse');
+        $footerMain.removeClass('dashboard_footer_collapse');
+
+        $logo.css({
+          'display': '',
+          'justify-content': ''
+        });
+        $logoImg.show();
+        $collapseLogo.hide();
+        $sidebarTextElements.show();
+        $notificationCount.removeClass('notification_count_collapse');
+
+        $menuList.css({
+          'gap': '',
+          'justify-content': ''
+        })
+
+        isSidebarCollapsed = false;
+      }
+    }
+    $('.ovt_sidebar_menu_btn').on('click', toggleSidebar);
+
+    $(document).ready(function () {
+      $(window).on('resize', function () {
+        if (window.innerWidth <= 767) {
+          if (isSidebarCollapsed) {
+            toggleSidebar();
+          }
+        }
+      });
+    });
+  </script>
+  <!--============ Sidebar Collapse END ============-->
+
+  <!--============ START Show Active Class on Click =============-->
+  <script>
+    $(document).ready(function () {
+      const $mItems = $('.ovt_sidebar_menulist_1 a');
+      $mItems.on('click', function () {
+        $mItems.removeClass('active_click');
+        $(this).addClass('active_click');
+        $('.ovt_sidebar_menulist_1 a').removeClass('selected');
+      });
+
+
+      $menuSublist.on('click', function () {
+        $('.ovt_sidebar_menulist_1 a').removeClass('selected');
+      });
+    });
+  </script>
+  <!--============ END Show Active Class on Click =============-->
+
+  <script src="https://code.highcharts.com/stock/highstock.js"></script>
+
+  <script>
+    var rawData =
+      [
+        {
+          "QuoteDate": "22/12/2025 23:59",
+          "API_Traffic": 11
+        },
+        {
+          "QuoteDate": "22/12/2025 23:58",
+          "API_Traffic": 6
+        },
+        {
+          "QuoteDate": "22/12/2025 23:57",
+          "API_Traffic": 8
+        },
+        {
+          "QuoteDate": "22/12/2025 23:56",
+          "API_Traffic": 2
+        },
+        {
+          "QuoteDate": "22/12/2025 23:55",
+          "API_Traffic": 10
+        },
+        {
+          "QuoteDate": "22/12/2025 23:54",
+          "API_Traffic": 7
+        },
+        {
+          "QuoteDate": "22/12/2025 23:53",
+          "API_Traffic": 10
+        },
+        {
+          "QuoteDate": "22/12/2025 23:52",
+          "API_Traffic": 7
+        },
+        {
+          "QuoteDate": "22/12/2025 23:51",
+          "API_Traffic": 11
+        },
+        {
+          "QuoteDate": "22/12/2025 23:50",
+          "API_Traffic": 7
+        },
+        {
+          "QuoteDate": "22/12/2025 23:49",
+          "API_Traffic": 10
+        },
+        {
+          "QuoteDate": "22/12/2025 23:48",
+          "API_Traffic": 9
+        },
+        {
+          "QuoteDate": "22/12/2025 23:47",
+          "API_Traffic": 6
+        },
+        {
+          "QuoteDate": "22/12/2025 23:46",
+          "API_Traffic": 11
+        },
+        {
+          "QuoteDate": "22/12/2025 23:45",
+          "API_Traffic": 3
+        },
+        {
+          "QuoteDate": "22/12/2025 23:44",
+          "API_Traffic": 8
+        },
+        {
+          "QuoteDate": "22/12/2025 23:43",
+          "API_Traffic": 4
+        },
+        {
+          "QuoteDate": "22/12/2025 23:42",
+          "API_Traffic": 7
+        },
+        {
+          "QuoteDate": "22/12/2025 23:41",
+          "API_Traffic": 4
+        },
+        {
+          "QuoteDate": "22/12/2025 23:40",
+          "API_Traffic": 8
+        },
+        {
+          "QuoteDate": "22/12/2025 23:39",
+          "API_Traffic": 5
+        },
+        {
+          "QuoteDate": "22/12/2025 23:38",
+          "API_Traffic": 12
+        },
+        {
+          "QuoteDate": "22/12/2025 23:37",
+          "API_Traffic": 7
+        },
+        {
+          "QuoteDate": "22/12/2025 23:36",
+          "API_Traffic": 8
+        },
+        {
+          "QuoteDate": "22/12/2025 23:35",
+          "API_Traffic": 6
+        },
+        {
+          "QuoteDate": "22/12/2025 23:34",
+          "API_Traffic": 12
+        },
+        {
+          "QuoteDate": "22/12/2025 23:33",
+          "API_Traffic": 5
+        },
+        {
+          "QuoteDate": "22/12/2025 23:32",
+          "API_Traffic": 6
+        },
+        {
+          "QuoteDate": "22/12/2025 23:31",
+          "API_Traffic": 2
+        },
+        {
+          "QuoteDate": "22/12/2025 23:30",
+          "API_Traffic": 7
+        },
+        {
+          "QuoteDate": "22/12/2025 23:29",
+          "API_Traffic": 10
+        },
+        {
+          "QuoteDate": "22/12/2025 23:28",
+          "API_Traffic": 6
+        },
+        {
+          "QuoteDate": "22/12/2025 23:27",
+          "API_Traffic": 11
+        },
+        {
+          "QuoteDate": "22/12/2025 23:26",
+          "API_Traffic": 9
+        },
+        {
+          "QuoteDate": "22/12/2025 23:25",
+          "API_Traffic": 7
+        },
+        {
+          "QuoteDate": "22/12/2025 23:24",
+          "API_Traffic": 2
+        },
+        {
+          "QuoteDate": "22/12/2025 23:23",
+          "API_Traffic": 7
+        },
+        {
+          "QuoteDate": "22/12/2025 23:22",
+          "API_Traffic": 6
+        },
+        {
+          "QuoteDate": "22/12/2025 23:21",
+          "API_Traffic": 11
+        },
+        {
+          "QuoteDate": "22/12/2025 23:20",
+          "API_Traffic": 5
+        },
+        {
+          "QuoteDate": "22/12/2025 23:19",
+          "API_Traffic": 4
+        },
+        {
+          "QuoteDate": "22/12/2025 23:18",
+          "API_Traffic": 2
+        },
+        {
+          "QuoteDate": "22/12/2025 23:17",
+          "API_Traffic": 6
+        },
+        {
+          "QuoteDate": "22/12/2025 23:16",
+          "API_Traffic": 4
+        },
+        {
+          "QuoteDate": "22/12/2025 23:15",
+          "API_Traffic": 8
+        },
+        {
+          "QuoteDate": "22/12/2025 23:14",
+          "API_Traffic": 5
+        },
+        {
+          "QuoteDate": "22/12/2025 23:13",
+          "API_Traffic": 10
+        },
+        {
+          "QuoteDate": "22/12/2025 23:12",
+          "API_Traffic": 5
+        },
+        {
+          "QuoteDate": "22/12/2025 23:11",
+          "API_Traffic": 7
+        },
+        {
+          "QuoteDate": "22/12/2025 23:10",
+          "API_Traffic": 2
+        },
+        {
+          "QuoteDate": "22/12/2025 23:09",
+          "API_Traffic": 6
+        },
+        {
+          "QuoteDate": "22/12/2025 23:08",
+          "API_Traffic": 11
+        },
+        {
+          "QuoteDate": "22/12/2025 23:07",
+          "API_Traffic": 6
+        },
+        {
+          "QuoteDate": "22/12/2025 23:06",
+          "API_Traffic": 12
+        },
+        {
+          "QuoteDate": "22/12/2025 23:05",
+          "API_Traffic": 8
+        },
+        {
+          "QuoteDate": "22/12/2025 23:04",
+          "API_Traffic": 10
+        },
+        {
+          "QuoteDate": "22/12/2025 23:03",
+          "API_Traffic": 5
+        },
+        {
+          "QuoteDate": "22/12/2025 23:02",
+          "API_Traffic": 6
+        },
+        {
+          "QuoteDate": "22/12/2025 23:01",
+          "API_Traffic": 5
+        },
+        {
+          "QuoteDate": "22/12/2025 23:00",
+          "API_Traffic": 4
+        },
+        {
+          "QuoteDate": "22/12/2025 22:59",
+          "API_Traffic": 8
+        },
+        {
+          "QuoteDate": "22/12/2025 22:58",
+          "API_Traffic": 3
+        },
+        {
+          "QuoteDate": "22/12/2025 22:57",
+          "API_Traffic": 9
+        },
+        {
+          "QuoteDate": "22/12/2025 22:56",
+          "API_Traffic": 7
+        },
+        {
+          "QuoteDate": "22/12/2025 22:55",
+          "API_Traffic": 8
+        },
+        {
+          "QuoteDate": "22/12/2025 22:54",
+          "API_Traffic": 12
+        },
+        {
+          "QuoteDate": "22/12/2025 22:53",
+          "API_Traffic": 4
+        },
+        {
+          "QuoteDate": "22/12/2025 22:52",
+          "API_Traffic": 9
+        },
+        {
+          "QuoteDate": "22/12/2025 22:51",
+          "API_Traffic": 8
+        },
+        {
+          "QuoteDate": "22/12/2025 22:50",
+          "API_Traffic": 4
+        },
+        {
+          "QuoteDate": "22/12/2025 22:49",
+          "API_Traffic": 5
+        },
+        {
+          "QuoteDate": "22/12/2025 22:48",
+          "API_Traffic": 10
+        },
+        {
+          "QuoteDate": "22/12/2025 22:47",
+          "API_Traffic": 4
+        },
+        {
+          "QuoteDate": "22/12/2025 22:46",
+          "API_Traffic": 11
+        },
+        {
+          "QuoteDate": "22/12/2025 22:45",
+          "API_Traffic": 6
+        },
+        {
+          "QuoteDate": "22/12/2025 22:44",
+          "API_Traffic": 12
+        },
+        {
+          "QuoteDate": "22/12/2025 22:43",
+          "API_Traffic": 8
+        },
+        {
+          "QuoteDate": "22/12/2025 22:42",
+          "API_Traffic": 13
+        },
+        {
+          "QuoteDate": "22/12/2025 22:41",
+          "API_Traffic": 7
+        },
+        {
+          "QuoteDate": "22/12/2025 22:40",
+          "API_Traffic": 6
+        },
+        {
+          "QuoteDate": "22/12/2025 22:39",
+          "API_Traffic": 10
+        },
+        {
+          "QuoteDate": "22/12/2025 22:38",
+          "API_Traffic": 6
+        },
+        {
+          "QuoteDate": "22/12/2025 22:37",
+          "API_Traffic": 7
+        },
+        {
+          "QuoteDate": "22/12/2025 22:36",
+          "API_Traffic": 3
+        },
+        {
+          "QuoteDate": "22/12/2025 22:35",
+          "API_Traffic": 8
+        },
+        {
+          "QuoteDate": "22/12/2025 22:34",
+          "API_Traffic": 9
+        },
+        {
+          "QuoteDate": "22/12/2025 22:33",
+          "API_Traffic": 4
+        },
+        {
+          "QuoteDate": "22/12/2025 22:32",
+          "API_Traffic": 5
+        },
+        {
+          "QuoteDate": "22/12/2025 22:31",
+          "API_Traffic": 2
+        },
+        {
+          "QuoteDate": "22/12/2025 22:30",
+          "API_Traffic": 4
+        },
+        {
+          "QuoteDate": "22/12/2025 22:29",
+          "API_Traffic": 5
+        },
+        {
+          "QuoteDate": "22/12/2025 22:28",
+          "API_Traffic": 8
+        },
+        {
+          "QuoteDate": "22/12/2025 22:27",
+          "API_Traffic": 9
+        },
+        {
+          "QuoteDate": "22/12/2025 22:26",
+          "API_Traffic": 7
+        },
+        {
+          "QuoteDate": "22/12/2025 22:25",
+          "API_Traffic": 2
+        },
+        {
+          "QuoteDate": "22/12/2025 22:24",
+          "API_Traffic": 6
+        },
+        {
+          "QuoteDate": "22/12/2025 22:23",
+          "API_Traffic": 12
+        },
+        {
+          "QuoteDate": "22/12/2025 22:22",
+          "API_Traffic": 7
+        },
+        {
+          "QuoteDate": "22/12/2025 22:21",
+          "API_Traffic": 11
+        },
+        {
+          "QuoteDate": "22/12/2025 22:20",
+          "API_Traffic": 3
+        },
+        {
+          "QuoteDate": "22/12/2025 22:19",
+          "API_Traffic": 10
+        },
+        {
+          "QuoteDate": "22/12/2025 22:18",
+          "API_Traffic": 4
+        },
+        {
+          "QuoteDate": "22/12/2025 22:17",
+          "API_Traffic": 6
+        },
+        {
+          "QuoteDate": "22/12/2025 22:16",
+          "API_Traffic": 5
+        },
+        {
+          "QuoteDate": "22/12/2025 22:15",
+          "API_Traffic": 7
+        },
+        {
+          "QuoteDate": "22/12/2025 22:14",
+          "API_Traffic": 11
+        },
+        {
+          "QuoteDate": "22/12/2025 22:13",
+          "API_Traffic": 6
+        },
+        {
+          "QuoteDate": "22/12/2025 22:12",
+          "API_Traffic": 10
+        },
+        {
+          "QuoteDate": "22/12/2025 22:11",
+          "API_Traffic": 9
+        },
+        {
+          "QuoteDate": "22/12/2025 22:10",
+          "API_Traffic": 5
+        },
+        {
+          "QuoteDate": "22/12/2025 22:09",
+          "API_Traffic": 10
+        },
+        {
+          "QuoteDate": "22/12/2025 22:08",
+          "API_Traffic": 5
+        },
+        {
+          "QuoteDate": "22/12/2025 22:07",
+          "API_Traffic": 11
+        },
+        {
+          "QuoteDate": "22/12/2025 22:06",
+          "API_Traffic": 9
+        },
+        {
+          "QuoteDate": "22/12/2025 22:05",
+          "API_Traffic": 12
+        },
+        {
+          "QuoteDate": "22/12/2025 22:04",
+          "API_Traffic": 15
+        },
+        {
+          "QuoteDate": "22/12/2025 22:03",
+          "API_Traffic": 13
+        },
+        {
+          "QuoteDate": "22/12/2025 22:02",
+          "API_Traffic": 9
+        },
+        {
+          "QuoteDate": "22/12/2025 22:01",
+          "API_Traffic": 12
+        },
+        {
+          "QuoteDate": "22/12/2025 22:00",
+          "API_Traffic": 9
+        },
+        {
+          "QuoteDate": "22/12/2025 21:59",
+          "API_Traffic": 6
+        },
+        {
+          "QuoteDate": "22/12/2025 21:58",
+          "API_Traffic": 11
+        },
+        {
+          "QuoteDate": "22/12/2025 21:57",
+          "API_Traffic": 10
+        },
+        {
+          "QuoteDate": "22/12/2025 21:56",
+          "API_Traffic": 9
+        },
+        {
+          "QuoteDate": "22/12/2025 21:55",
+          "API_Traffic": 3
+        },
+        {
+          "QuoteDate": "22/12/2025 21:54",
+          "API_Traffic": 13
+        },
+        {
+          "QuoteDate": "22/12/2025 21:53",
+          "API_Traffic": 14
+        },
+        {
+          "QuoteDate": "22/12/2025 21:52",
+          "API_Traffic": 7
+        },
+        {
+          "QuoteDate": "22/12/2025 21:51",
+          "API_Traffic": 8
+        },
+        {
+          "QuoteDate": "22/12/2025 21:50",
+          "API_Traffic": 15
+        },
+        {
+          "QuoteDate": "22/12/2025 21:49",
+          "API_Traffic": 7
+        },
+        {
+          "QuoteDate": "22/12/2025 21:48",
+          "API_Traffic": 11
+        },
+        {
+          "QuoteDate": "22/12/2025 21:47",
+          "API_Traffic": 8
+        },
+        {
+          "QuoteDate": "22/12/2025 21:46",
+          "API_Traffic": 12
+        },
+        {
+          "QuoteDate": "22/12/2025 21:45",
+          "API_Traffic": 13
+        },
+        {
+          "QuoteDate": "22/12/2025 21:44",
+          "API_Traffic": 7
+        },
+        {
+          "QuoteDate": "22/12/2025 21:43",
+          "API_Traffic": 13
+        },
+        {
+          "QuoteDate": "22/12/2025 21:42",
+          "API_Traffic": 14
+        },
+        {
+          "QuoteDate": "22/12/2025 21:41",
+          "API_Traffic": 19
+        },
+        {
+          "QuoteDate": "22/12/2025 21:40",
+          "API_Traffic": 15
+        },
+        {
+          "QuoteDate": "22/12/2025 21:39",
+          "API_Traffic": 12
+        },
+        {
+          "QuoteDate": "22/12/2025 21:38",
+          "API_Traffic": 16
+        },
+        {
+          "QuoteDate": "22/12/2025 21:37",
+          "API_Traffic": 19
+        },
+        {
+          "QuoteDate": "22/12/2025 21:36",
+          "API_Traffic": 14
+        },
+        {
+          "QuoteDate": "22/12/2025 21:35",
+          "API_Traffic": 20
+        },
+        {
+          "QuoteDate": "22/12/2025 21:34",
+          "API_Traffic": 18
+        },
+        {
+          "QuoteDate": "22/12/2025 21:33",
+          "API_Traffic": 13
+        },
+        {
+          "QuoteDate": "22/12/2025 21:32",
+          "API_Traffic": 15
+        },
+        {
+          "QuoteDate": "22/12/2025 21:31",
+          "API_Traffic": 10
+        },
+        {
+          "QuoteDate": "22/12/2025 21:30",
+          "API_Traffic": 15
+        },
+        {
+          "QuoteDate": "22/12/2025 21:29",
+          "API_Traffic": 11
+        },
+        {
+          "QuoteDate": "22/12/2025 21:28",
+          "API_Traffic": 14
+        },
+        {
+          "QuoteDate": "22/12/2025 21:27",
+          "API_Traffic": 17
+        },
+        {
+          "QuoteDate": "22/12/2025 21:26",
+          "API_Traffic": 20
+        },
+        {
+          "QuoteDate": "22/12/2025 21:25",
+          "API_Traffic": 23
+        },
+        {
+          "QuoteDate": "22/12/2025 21:24",
+          "API_Traffic": 17
+        },
+        {
+          "QuoteDate": "22/12/2025 21:23",
+          "API_Traffic": 21
+        },
+        {
+          "QuoteDate": "22/12/2025 21:22",
+          "API_Traffic": 16
+        },
+        {
+          "QuoteDate": "22/12/2025 21:21",
+          "API_Traffic": 10
+        },
+        {
+          "QuoteDate": "22/12/2025 21:20",
+          "API_Traffic": 7
+        },
+        {
+          "QuoteDate": "22/12/2025 21:19",
+          "API_Traffic": 12
+        },
+        {
+          "QuoteDate": "22/12/2025 21:18",
+          "API_Traffic": 16
+        },
+        {
+          "QuoteDate": "22/12/2025 21:17",
+          "API_Traffic": 13
+        },
+        {
+          "QuoteDate": "22/12/2025 21:16",
+          "API_Traffic": 16
+        },
+        {
+          "QuoteDate": "22/12/2025 21:15",
+          "API_Traffic": 10
+        },
+        {
+          "QuoteDate": "22/12/2025 21:14",
+          "API_Traffic": 15
+        },
+        {
+          "QuoteDate": "22/12/2025 21:13",
+          "API_Traffic": 12
+        },
+        {
+          "QuoteDate": "22/12/2025 21:12",
+          "API_Traffic": 9
+        },
+        {
+          "QuoteDate": "22/12/2025 21:11",
+          "API_Traffic": 11
+        },
+        {
+          "QuoteDate": "22/12/2025 21:10",
+          "API_Traffic": 7
+        },
+        {
+          "QuoteDate": "22/12/2025 21:09",
+          "API_Traffic": 12
+        },
+        {
+          "QuoteDate": "22/12/2025 21:08",
+          "API_Traffic": 16
+        },
+        {
+          "QuoteDate": "22/12/2025 21:07",
+          "API_Traffic": 11
+        },
+        {
+          "QuoteDate": "22/12/2025 21:06",
+          "API_Traffic": 13
+        },
+        {
+          "QuoteDate": "22/12/2025 21:05",
+          "API_Traffic": 16
+        },
+        {
+          "QuoteDate": "22/12/2025 21:04",
+          "API_Traffic": 17
+        },
+        {
+          "QuoteDate": "22/12/2025 21:03",
+          "API_Traffic": 20
+        },
+        {
+          "QuoteDate": "22/12/2025 21:02",
+          "API_Traffic": 15
+        },
+        {
+          "QuoteDate": "22/12/2025 21:01",
+          "API_Traffic": 14
+        },
+        {
+          "QuoteDate": "22/12/2025 21:00",
+          "API_Traffic": 18
+        },
+        {
+          "QuoteDate": "22/12/2025 20:59",
+          "API_Traffic": 15
+        },
+        {
+          "QuoteDate": "22/12/2025 20:58",
+          "API_Traffic": 21
+        },
+        {
+          "QuoteDate": "22/12/2025 20:57",
+          "API_Traffic": 23
+        },
+        {
+          "QuoteDate": "22/12/2025 20:56",
+          "API_Traffic": 27
+        },
+        {
+          "QuoteDate": "22/12/2025 20:55",
+          "API_Traffic": 15
+        },
+        {
+          "QuoteDate": "22/12/2025 20:54",
+          "API_Traffic": 19
+        },
+        {
+          "QuoteDate": "22/12/2025 20:53",
+          "API_Traffic": 16
+        },
+
+      ]
+    function parseDate(str) {
+      var [date, time] = str.split(' ');
+      var [dd, mm, yyyy] = date.split('/');
+      var [hh, min] = time.split(':');
+      return new Date(yyyy, mm - 1, dd, hh, min).getTime();
+    }
+    var seriesData = rawData
+      .map(d => [parseDate(d.QuoteDate), d.UserLoad])
+      .sort((a, b) => a[0] - b[0]);
+    var API_TrafficSeries = rawData
+      .map(d => [parseDate(d.QuoteDate), d.API_Traffic])
+      .sort((a, b) => a[0] - b[0]);
+    var chart = Highcharts.chart('api_traffic', {
+      chart: {
+        type: 'area',
+        animation: true,
+        spacing: [20, 0, 0, 0]
+      },
+      title: { text: null },
+      time: {
+        useUTC: false
+      },
+      xAxis: {
+        type: 'datetime',
+        gridLineWidth: 1,
+        gridLineColor: '#f1f1f1',
+        labels: { format: '{value:%I:%M %p}' }
+      },
+      yAxis: {
+        title: { text: null },
+        labels: { enabled: false },
+        gridLineWidth: 0
+      },
+      tooltip: {
+        shared: true,
+        xDateFormat: '%I:%M %p',
+        pointFormat: '<span style="color:{series.color}">\u25CF</span> {series.name}: <b>{point.y}</b><br/>'
+      },
+      legend: { enabled: false },
+      plotOptions: {
+        area: {
+          fillOpacity: 0.15,
+          lineWidth: 2,
+          marker: { enabled: false }
+        },
+        line: {
+          marker: { enabled: false },
+          lineWidth: 2
+        }
+      },
+      series: [
+        {
+          name: 'API Calls',
+          type: 'area',
+          color: '#D93872',
+          data: API_TrafficSeries
+        },
+      ],
+      credits: {
+        enabled: false
+      }
+    })
+  </script>
+
+  <!--======== SIDEBAR HIDE/SHOW SCRIPT BEGIN FOR MOBILE =========-->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const sidebar = document.querySelector(".ovt_sidebar_main");
+      const body = document.querySelector(".ovtlyr_main_sec");
+      const menuBtn = document.querySelector(".ovt_dashboard_menu_btn");
+      const closeBtn = document.querySelector(".ovt_dashboard_close_icon");
+
+      function toggleSidebar() {
+        body.classList.toggle("ovt_dashboard_show_sideBar");
+        if (body.classList.contains("ovt_dashboard_show_sideBar")) {
+          menuBtn.style.display = "none";
+          closeBtn.style.display = "inline-block";
+        } else {
+          menuBtn.style.display = "inline-block";
+          closeBtn.style.display = "none";
+        }
+      }
+
+      menuBtn.addEventListener("click", toggleSidebar);
+      closeBtn.addEventListener("click", toggleSidebar);
+
+
+      document.addEventListener("click", (event) => {
+        if (
+          !sidebar.contains(event.target) &&
+          !menuBtn.contains(event.target) &&
+          !closeBtn.contains(event.target)
+        ) {
+          body.classList.remove("show-sidebar");
+          menuBtn.style.display = "inline-block";
+          closeBtn.style.display = "none";
+        }
+      });
+    });
+  </script>
+  <!--======== SIDEBAR HIDE/SHOW SCRIPT FOR MOBILE END =========-->
+</body>
+</html>

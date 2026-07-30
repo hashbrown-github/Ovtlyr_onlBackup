@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Login</title>
+<meta name="title" content="">
+<meta name="description" content="" />
+<meta name="Keywords" content="" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="canonical" href="#" />
+<link rel="icon" type="image/ico" href="images/favicon.ico">
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+<link id="styleCSS" rel="stylesheet" href="css/style.css" type="text/css" />
+<link id="responsiveCSS" rel="stylesheet" href="css/responsive.css" type="text/css" />
+</head>
+<body>
+  <div class="ovtlyr_main_sec">
+    <div class="ovt_login_sec">
+      <div class="container">
+        <div class="ovt_login_wrap">
+          <div class="login_card">
+            <div class="ovt_login_head">
+              <img src="images/black-logo.svg" alt="ovtlyr logo">
+            </div>
+            <div class="ovt_login_1">
+              <h3>Login</h3>
+              <p>Kindly enter your details</p>
+            </div>
+            <div class="ovt_login_2">
+              <div class="form-field">
+                <div class="input-field">
+                  <label class="form-label">User Name</label>
+                  <input type="text" class="form-control">
+                  <span class="err_msg">Please enter your name!</span>
+                </div>
+                <div class="input-field">
+                  <label class="form-label">Password</label>
+                  <input type="password" class="form-control">
+                  <span class="err_msg">Please enter password!</span>
+                </div>
+              </div>
+            </div>
+            <div class="ovt_login_3">
+              <button type="button" class="blu_btn" onclick="sucessfunction()">Submit<div class="spinner-border text-white" role="status"></div></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--====== TOAST SUCESS CODE BEGIN ======-->
+  <div id="show_sucessToast" class="successful_msgT">
+    <p>You have successfully signed up!</p>
+  </div>
+  <!--======= TOAST SUCESS CODE END =======-->
+  <!--====== TOAST FAIL CODE BEGIN ======-->
+  <div id="show_failToast" class="failed_msgT">
+    <p>Session expired! please Sign up again</p>
+  </div>
+  <!--======= TOAST FAIL CODE END =======-->
+
+  <script src="js/bootstrap.bundle.min.js" type="text/javascript"></script>
+  <script src="js/jquery.min.js" type="text/javascript"></script>
+  <!--======= TOAST SCRIPT BEGIN =======-->
+  <script>
+    function sucessfunction() {
+      var x1 = document.getElementById("show_sucessToast");
+      x1.classList.add('show');
+      setTimeout(function () { x1.classList.remove('show'); }, 3000);
+    }
+  </script>
+  <script>
+    function failfunction() {
+      var x2 = document.getElementById("show_failToast");
+      x2.classList.add('show');
+      setTimeout(function () { x2.classList.remove('show'); }, 3000);
+    }
+  </script>
+  <!--======= TOAST SCRIPT END =======-->
+</body>
+</html>
