@@ -1,0 +1,1208 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>OVTLYR | Notification Management</title>
+<meta name="description" content="Turning Investor Behavior into Stock Market Success" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<link rel="icon" type="image/ico" sizes="32x32" href="images/favicon-32x32.ico">
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/latest-style.css" />
+<script>
+var viewportmeta = document.querySelector('meta[name="viewport"]');
+if(viewportmeta) {
+  if(screen.width < 320){
+    var newScale = screen.width / 320;
+    viewportmeta.content = 'width=320, minimum-scale=' + newScale + ', maximum-scale=1.0, user-scalable=no, initial-scale=' + newScale + '';
+  } else {
+    viewportmeta.content = 'width=device-width, maximum-scale=1.0, initial-scale=1.0';
+  }
+}
+</script>
+</head>
+<body>
+<script>
+console.log(localStorage.getItem('darkMode'));
+if (localStorage.getItem('darkMode') === "on") {
+	document.body.classList.add("dark");
+	document.addEventListener("DOMContentLoaded", function(){
+		document.querySelector('.js-switch-theme input').checked = true;
+  });
+}
+</script>
+<div class="page toggle new_sidebar final_dashbd1">
+  <div class="sidebar active final_dashbd11">
+    <!-- <div class="sidebar__top">
+      <button class="sidebar__close"><span class="material-symbols-outlined">close</span></button>
+      <a class="sidebar__logo" href="stock-detail.html">
+        <img class="sidebar__pic sidebar__pic_black" src="images/black-logo.svg" alt="OVTLYR Logo" />
+        <img class="sidebar__pic sidebar__pic_white" src="images/white-logo.svg" alt="OVTLYR Logo" />
+      </a>
+      <button class="sidebar__burger"></button>
+    </div> -->
+    <div class="sidebar__wrapper ovtlyr_sidebar">
+      <div class="sidebar__inner">
+        <!-- <a class="sidebar__logo" href="stock-detail.html">
+          <img class="sidebar__pic sidebar__pic_black" src="images/black-logo-small.svg" alt="OVTLYR Logo" />
+          <img class="sidebar__pic sidebar__pic_white" src="images/white-logo-small.svg" alt="OVTLYR Logo" />
+        </a> -->
+        <div class="sidebar__list">
+          <div class="sidebar__group">
+            <div class="sidebar__menu">
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="dashboard-latest.html" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Dashboard">
+                  <div class="sidebar__icon">
+                    <img src="images/dashboard.svg" alt="Dashboard" />
+                  </div>
+                  <!-- <div class="sidebar__text">Dashboard</div> -->
+                </a>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="market-breadth-latest.html" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Market Breadth">
+                  <div class="sidebar__icon">
+                    <img src="images/market-breadth.svg" alt="Market" />
+                  </div>
+                </a>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="sector-intelligence-map.html" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Sector Intelligence Map">
+                  <div class="sidebar__icon">
+                    <img src="images/sector-map.svg" alt="Sector Intelligence Map" />
+                  </div>
+                </a>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="stocks-etfs.html" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Screener">
+                  <div class="sidebar__icon">
+                    <img src="images/stock-etf.svg" alt="Stocks" />
+                  </div>
+                  <!-- <div class="sidebar__text">Screener</div> -->
+                </a>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="watchlist.html" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Watchlist">
+                  <div class="sidebar__icon">
+                    <img src="images/watchlist.svg" alt="Star" />
+                  </div>
+                  <!-- <div class="sidebar__text">Watchlist</div> -->
+                </a>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="news-and-analyst.html" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="News and Analyst Ratings">
+                  <div class="sidebar__icon">
+                    <img src="images/news.svg" alt="News" />
+                  </div>
+                  <!-- <div class="sidebar__text">News and Analyst Ratings</div> -->
+                </a>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="notification.html" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Notification & List Management">
+                  <div class="sidebar__icon">
+                    <img src="images/notification.svg" alt="Notification" />
+                  </div>
+                  <span class="noti_count2">10</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sidebar__inner final_dashbd111">
+        <div class="sidebar__list">
+          <div class="sidebar__group">
+            <div class="sidebar__menu">
+              <div class="side_dropdown">
+                <div class="profileDrop dropup-right dropup" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Settings">
+                  <a class="sidebar__item p-0" href="#" id="settingsButton" data-bs-toggle="dropdown" aria-expanded="false">
+                    <div class="sidebar__icon">
+                      <img src="images/setting.svg" alt="setting" />
+                    </div>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="settingsButton" >
+                    <li><a class="dropdown-item" href="subscription-all.html"><p class="mb-0">Subscription Management</p></a></li>
+                    <li><a class="dropdown-item active" href="notification.html"><p class="mb-0">Notification Management</p></a></li>
+                    <li><a class="dropdown-item" href="promoter.html"><p class="mb-0">Referral Dashboard</p></a></li>
+                    <li><a class="dropdown-item" href="documentation.html"><p class="mb-0">Documentation</p></a></li>
+                    <li><a class="dropdown-item" href="tutorials.html"><p class="mb-0">Tutorials</p></a></li>
+                    <li><a class="dropdown-item" href="playlists.html" target="_blank"><p class="mb-0">Video Tutorials</p></a></li>
+                    <li><a class="dropdown-item" href="contact.html"><p class="mb-0">Contact Us</p></a></li>
+                    <li>
+                      <a class="dropdown-item" href="javascript:void(0);">
+                        <p class="switchThemeBtn mb-0">
+                          <span>Theme</span>
+                          <label class="switch switch_theme js-switch-theme mt-0">
+                            <input class="switch__input" type="checkbox">
+                            <span class="switch__in">
+                              <span class="switch__box"></span>
+                              <span class="switch__icon">
+                                <span class="material-symbols-outlined icon-sun">dark_mode</span>
+                                <span class="material-symbols-outlined icon-moon">light_mode</span>
+                              </span>
+                            </span>
+                          </label>
+                        </p>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="side_dropdown">
+                <div class="profileDrop dropup-right dropup" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Discord">
+                  <a class="sidebar__item p-0" href="#" id="discordButton" data-bs-toggle="dropdown" aria-expanded="false">
+                    <div class="sidebar__icon">
+                      <img src="images/discord.svg" alt="Discord" />
+                    </div>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="discordButton" >
+                    <li><a class="dropdown-item" href="https://discord.gg/MtQ9dctJu5" target="_blank"><p class="mb-0">First-Time Verify</p></a></li>
+                    <li><a class="dropdown-item" href="https://discord.com/channels/@me" target="_blank"><p class="mb-0">Open Discord</p></a></li>
+                  </ul>
+                </div>
+              </div>
+              <!-- <div class="side_dropdown">
+                <a class="sidebar__item" href="https://discord.gg/MtQ9dctJu5" target="_blank" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Discord">
+                  <div class="sidebar__icon">
+                    <img src="images/discord.svg" alt="Discord" />
+                  </div>
+                </a>
+              </div> -->
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="javascript:void(0);" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Logout">
+                  <div class="sidebar__icon">
+                    <img src="images/logout.svg" alt="Logout" />
+                  </div>
+                </a>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="profile.html" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Profile">
+                  <div class="sidebar__icon profile_icon">
+                    <img src="images/profile.svg" alt="Profile" />
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page__wrapper final_dashbd12">
+    <div class="page__center new_content">
+      <div class="dashboard_cont final_dashbd2 p-0">
+        <!-- <div class="new_header">
+          <div class="newleft_21">
+            <div class="me-1">
+              <a href="https://discord.gg/MtQ9dctJu5" target="_blank"><img src="images/discord.svg" class="icon_img" alt="Discord" /></a>
+            </div>
+            <div class="profileDrop">
+              <button class="" type="button" id="profileMenuButton" data-bs-toggle="dropdown" aria-expanded="false"><img src="images/profile.svg" class="icon_img" alt="Profile" /></button>
+                <ul class="dropdown-menu" aria-labelledby="profileMenuButton">
+                  <li><a class="dropdown-item" href="profile.html"><p class="mb-0">Profile</p></a></li>
+                  <li><a class="dropdown-item" href="subscription.html"><p class="mb-0">Subscription Management</p></a></li>
+                  <li><a class="dropdown-item active" href="notification.html"><p class="mb-0">Notification Management</p></a></li>
+                  <li><a class="dropdown-item" href="affiliate-info.html"><p class="mb-0">Referral Dashboard</p></a></li>
+                  <li><a class="dropdown-item" href="tutorials.html"><p class="mb-0">Tutorials</p></a></li>
+                    <li><a class="dropdown-item" href="playlists.html" target="_blank"><p class="mb-0">Video Tutorials</p></a></li>
+                  <li><a class="dropdown-item" href="contact.html"><p class="mb-0">Contact Us</p></a></li>
+                  <li>
+                    <a class="dropdown-item" href="javascript:void(0);">
+                      <p class="switchThemeBtn mb-0">
+                        <span>Theme</span>
+                        <label class="switch switch_theme js-switch-theme">
+                          <input class="switch__input" type="checkbox">
+                          <span class="switch__in">
+                            <span class="switch__box"></span>
+                            <span class="switch__icon">
+                              <span class="material-symbols-outlined icon-sun">dark_mode</span>
+                              <span class="material-symbols-outlined icon-moon">light_mode</span>
+                            </span>
+                          </span>
+                        </label>
+                      </p>
+                    </a>
+                  </li>
+                  <li><a class="dropdown-item" href="log-in.html"><p class="mb-0">Logout</p></a></li>
+                </ul>
+            </div>
+          </div>
+        </div> -->
+        <div class="settings_head">
+          <div class="settings_head1">
+            <div class="page_head">
+              <div class="pageHeading">
+                <div>
+                  <div>
+                    <button type="button"><span class="material-symbols-outlined">chevron_left</span></button>
+                    <h5>Notification & List Management</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="settings_head2">
+            <div class="settings_tabs">
+              <ul class="nav nav-tabs" id="myTab" role="sattingstab">
+                <li class="nav-item" role="stocklist">
+                  <a href="javascript:void(0)" class="nav-link active" id="notification-tab" data-bs-target="#notificationtab" type="button" role="tab" aria-controls="notificationtab" aria-selected="true">
+                    <show-desk>Notification Management</show-desk>
+                    <show-mob>Notifications</show-mob>
+                  </a>
+                </li>
+                <li class="nav-item" role="sattingstab">
+                  <a href="subscription.html" class="nav-link" id="subscription-tab" data-bs-target="#subscriptiontab" type="button" role="tab" aria-controls="subscriptiontab" aria-selected="false">Subscription</a>
+                </li>
+                <li class="nav-item" role="activitytab">
+                  <a href="activity.html" class="nav-link" id="activity-tab" data-bs-target="#activitytab" type="button" role="tab" aria-controls="activitytab" aria-selected="false">Activity</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="settings_dash">
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="notificationtab" role="tabpanel" aria-labelledby="notification-tab"> 
+              <div class="settings_head3">
+                <div class="settings_head31">
+                  <p>Notifications apply to stocks & ETFs.</p>
+                </div>
+              </div>
+              <div class="stockEtf_tabs">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                  <li class="nav-item" role="stocklist">
+                    <button class="nav-link active" id="first-tab" data-bs-toggle="tab" data-bs-target="#firsttab" type="button" role="tab" aria-controls="firsttab" aria-selected="true">Notifications</button>
+                  </li>
+                  <li class="nav-item" role="stocklist">
+                    <button class="nav-link" id="second-tab" data-bs-toggle="tab" data-bs-target="#secondtab" type="button" role="tab" aria-controls="secondtab" aria-selected="false">Notification Management</button>
+                  </li>
+                  <li class="nav-item" role="stocklist">
+                    <button class="nav-link" id="third-tab" data-bs-toggle="tab" data-bs-target="#thirdtab" type="button" role="tab" aria-controls="thirdtab" aria-selected="false">List Management</button>
+                  </li>
+                </ul>
+              </div>
+              <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="firsttab" role="tabpanel" aria-labelledby="first-tab">
+                  <div class="subscription_b1 notifiLogs">
+                    <h6>Notifications <button type="button" class="video_icon" data-bs-toggle="modal" data-bs-target="#notifications"><img src="images/video-icon.svg" alt="Video"></button></h6>
+                    <div class="notifiLog_table">
+                      <div class="notifi_blur" style="display: none;">
+                        <img src="images/noti-blur-light-img.jpg" class="white_img" alt="Blur Image">
+                        <img src="images/noti-blur-dark-img.jpg" class="black_img" alt="Blur Image">
+                        <div class="noti_topTxt">
+                          <p>To get access to notification logs, upgrade to Elite Plan.</p>
+                          <a href="#">Upgrade</a>
+                        </div>
+                      </div>
+                      <div class="table_scroll vertical_scroll horizontal_scroll">
+                        <table class="table notiLog__table ovtlyr_table">
+                          <thead>
+                            <tr class="ovtlyr__row_head">
+                              <th style="width: 20%;">Stocks / ETFs</th>
+                              <th style="width: 20%;">Date</th>
+                              <th style="width: 20%;">Buy / Sell Signal</th>
+                              <th style="width: 20%;">Uptrend / Downtrend</th>
+                              <th style="width: 20%;">Fear & Greed Heatmap</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr class="ovtlyr__row">
+                              <td><p><a href="https://ovtlyr.com/stocks-etfs/AAPL">AAPL</a></p></td>
+                              <td><p>Sep 05, 2023 | 05:00 AM</p></td>
+                              <td><p class="buy_stock">Buy</p></td>
+                              <td><p class="uptrend_stock">Uptrend</p></td>
+                              <td><p class="color_green">At or Above 10</p></td>
+                            </tr>
+                            <tr class="ovtlyr__row">
+                              <td><p><a href="https://ovtlyr.com/stocks-etfs/NVDA">NVDA</a></p></td>
+                              <td><p>Sep 05, 2023 | 05:00 AM</p></td>
+                              <td><p class="sell_stock">Sell</p></td>
+                              <td><p class="downtrend_stock">Downtrend</p></td>
+                              <td><p class="color_red">At or Below 82</p></td>
+                            </tr>
+                            <tr class="ovtlyr__row">
+                              <td><p><a href="https://ovtlyr.com/stocks-etfs/AAPL">AAPL</a></p></td>
+                              <td><p>Sep 05, 2023 | 05:00 AM</p></td>
+                              <td><p class="buy_stock">Buy</p></td>
+                              <td><p class="uptrend_stock">Uptrend</p></td>
+                              <td><p class="color_green">At or Above 45</p></td>
+                            </tr>
+                            <tr class="ovtlyr__row">
+                              <td><p><a href="https://ovtlyr.com/stocks-etfs/AAPL">AAPL</a></p></td>
+                              <td><p>Sep 05, 2023 | 05:00 AM</p></td>
+                              <td><p class="buy_stock">Buy</p></td>
+                              <td><p class="uptrend_stock">Uptrend</p></td>
+                              <td><p>No Change</p></td>
+                            </tr>
+                            <tr class="ovtlyr__row">
+                              <td><p><a href="https://ovtlyr.com/stocks-etfs/NVDA">NVDA</a></p></td>
+                              <td><p>Sep 05, 2023 | 05:00 AM</p></td>
+                              <td><p class="sell_stock">Sell</p></td>
+                              <td><p class="downtrend_stock">Downtrend</p></td>
+                              <td><p class="color_red">At or Below 78</p></td>
+                            </tr>
+                            <tr class="ovtlyr__row">
+                              <td><p><a href="https://ovtlyr.com/stocks-etfs/AAPL">AAPL</a></p></td>
+                              <td><p>Sep 05, 2023 | 05:00 AM</p></td>
+                              <td><p class="buy_stock">Buy</p></td>
+                              <td><p class="uptrend_stock">Uptrend</p></td>
+                              <td><p class="color_green">At or Above 25</p></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <!-- <div class="favList_grid">
+                      <div class="favList_item">
+                        <p>
+                          <span>Date</span>
+                          <span>Sep 05, 2023 | 05:00 AM</span>  
+                        </p>
+                        <p>
+                          <span>Alert</span>
+                          <span class="buy_stock">Buy</span>
+                        </p>
+                        <p>
+                          <span>Description</span>
+                          <span><a href="https://ovtlyr.com/stocks-etfs/AAPL">AAPL</a> lorem, ipsum dolor sit amet consectet.</span>
+                        </p>
+                      </div>
+                      <div class="favList_item">
+                        <p>
+                          <span>Date</span>
+                          <span>Sep 05, 2023 | 05:00 AM</span>  
+                        </p>
+                        <p>
+                          <span>Alert</span>
+                          <span class="sell_stock">Sell</span>
+                        </p>
+                        <p>
+                          <span>Description</span>
+                          <span><a href="https://ovtlyr.com/stocks-etfs/NVDA">NVDA</a> eligendi laboriosam delectus odio asperiores.</span>
+                        </p>
+                      </div>
+                      <div class="favList_item">
+                        <p>
+                          <span>Date</span>
+                          <span>Sep 05, 2023 | 05:00 AM</span>  
+                        </p>
+                        <p>
+                          <span>Alert</span>
+                          <span class="buy_stock">Buy</span>
+                        </p>
+                        <p>
+                          <span>Description</span>
+                          <span><a href="https://ovtlyr.com/stocks-etfs/AAPL">AAPL</a> lorem, ipsum dolor sit amet consectet.</span>
+                        </p>
+                      </div>
+                    </div> -->
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="secondtab" role="tabpanel" aria-labelledby="second-tab">
+                  <div class="subscription_b1 d-flex align-items-center justify-content-between">
+                    <h6 class="mb-0">Notification Management</h6>
+                    <button type="button" class="disableBtn">Disable</button>
+                  </div>
+                  <div class="notifiLogs mt-3">
+                    <div class="notifiLog_table">
+                      <div class="table_scroll vertical_scroll horizontal_scroll">
+                        <table class="table notiLog__table ovtlyr_table">
+                          <thead>
+                            <tr class="ovtlyr__row_head">
+                              <th style="width: 80%;">
+                                <div class="d-flex align-items-center justify-content-start">
+                                  <label class="checkbox">
+                                    <input class="checkbox__input m-0" type="checkbox">
+                                    <span class="checkbox__in">
+                                      <span class="checkbox__tick"></span>
+                                    </span>
+                                  </label>
+                                  <span class="check_txt text-start ms-2">Stocks / ETFs</span>
+                                </div>
+                              </th>
+                              <th style="width: 20%;">Action</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr class="ovtlyr__row">
+                              <td>
+                                <div class="d-flex align-items-center justify-content-start">
+                                  <label class="checkbox">
+                                    <input class="checkbox__input m-0" type="checkbox">
+                                    <span class="checkbox__in">
+                                      <span class="checkbox__tick"></span>
+                                    </span>
+                                  </label>
+                                  <span class="check_txt text-start ms-2">AAPL</span>
+                                </div>
+                              </td>
+                              <td>
+                                <button type="button" class="disableBtn" data-bs-toggle="modal" data-bs-target="#notiSett_modal">Edit</button>
+                                <button type="button" class="disableBtn ms-1" data-bs-toggle="modal" data-bs-target="#disableNoti_modal">Disable</button>
+                              </td>
+                            </tr>
+                            <tr class="ovtlyr__row">
+                              <td>
+                                <div class="d-flex align-items-center justify-content-start">
+                                  <label class="checkbox">
+                                    <input class="checkbox__input m-0" type="checkbox">
+                                    <span class="checkbox__in">
+                                      <span class="checkbox__tick"></span>
+                                    </span>
+                                  </label>
+                                  <span class="check_txt text-start ms-2">NVDA</span>
+                                </div>
+                              </td>
+                              <td>
+                                <button type="button" class="disableBtn" data-bs-toggle="modal" data-bs-target="#notiSett_modal">Edit</button>
+                                <button type="button" class="disableBtn ms-1" data-bs-toggle="modal" data-bs-target="#disableNoti_modal">Disable</button>
+                              </td>
+                            </tr>
+                            <tr class="ovtlyr__row">
+                              <td>
+                                <div class="d-flex align-items-center justify-content-start">
+                                  <label class="checkbox">
+                                    <input class="checkbox__input m-0" type="checkbox">
+                                    <span class="checkbox__in">
+                                      <span class="checkbox__tick"></span>
+                                    </span>
+                                  </label>
+                                  <span class="check_txt text-start ms-2">AAPL</span>
+                                </div>
+                              </td>
+                              <td>
+                                <button type="button" class="disableBtn" data-bs-toggle="modal" data-bs-target="#notiSett_modal">Edit</button>
+                                <button type="button" class="disableBtn ms-1" data-bs-toggle="modal" data-bs-target="#disableNoti_modal">Disable</button>
+                              </td>
+                            </tr>
+                            <tr class="ovtlyr__row">
+                              <td>
+                                <div class="d-flex align-items-center justify-content-start">
+                                  <label class="checkbox">
+                                    <input class="checkbox__input m-0" type="checkbox">
+                                    <span class="checkbox__in">
+                                      <span class="checkbox__tick"></span>
+                                    </span>
+                                  </label>
+                                  <span class="check_txt text-start ms-2">AAPL</span>
+                                </div>
+                              </td>
+                              <td>
+                                <button type="button" class="disableBtn" data-bs-toggle="modal" data-bs-target="#notiSett_modal">Edit</button>
+                                <button type="button" class="disableBtn ms-1" data-bs-toggle="modal" data-bs-target="#disableNoti_modal">Disable</button>
+                              </td>
+                            </tr>
+                            <tr class="ovtlyr__row">
+                              <td>
+                                <div class="d-flex align-items-center justify-content-start">
+                                  <label class="checkbox">
+                                    <input class="checkbox__input m-0" type="checkbox">
+                                    <span class="checkbox__in">
+                                      <span class="checkbox__tick"></span>
+                                    </span>
+                                  </label>
+                                  <span class="check_txt text-start ms-2">NVDA</span>
+                                </div>
+                              </td>
+                              <td>
+                                <button type="button" class="disableBtn" data-bs-toggle="modal" data-bs-target="#notiSett_modal">Edit</button>
+                                <button type="button" class="disableBtn ms-1" data-bs-toggle="modal" data-bs-target="#disableNoti_modal">Disable</button>
+                              </td>
+                            </tr>
+                            <tr class="ovtlyr__row">
+                              <td>
+                                <div class="d-flex align-items-center justify-content-start">
+                                  <label class="checkbox">
+                                    <input class="checkbox__input m-0" type="checkbox">
+                                    <span class="checkbox__in">
+                                      <span class="checkbox__tick"></span>
+                                    </span>
+                                  </label>
+                                  <span class="check_txt text-start ms-2">AAPL</span>
+                                </div>
+                              </td>
+                              <td>
+                                <button type="button" class="disableBtn" data-bs-toggle="modal" data-bs-target="#notiSett_modal">Edit</button>
+                                <button type="button" class="disableBtn ms-1" data-bs-toggle="modal" data-bs-target="#disableNoti_modal">Disable</button>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="thirdtab" role="tabpanel" aria-labelledby="third-tab">
+                  <div class="subscription_b1 d-flex align-items-center justify-content-between">
+                    <h6 class="mb-0">List Management</h6>
+                  </div>
+                  <div class="notifiLogs mt-3">
+                    <div class="notifiLog_table">
+                      <div class="table_scroll vertical_scroll horizontal_scroll">
+                        <table class="table notiLog__table ovtlyr_table">
+                          <thead>
+                            <tr class="ovtlyr__row_head">
+                              <th style="width: 60%;">
+                                <div class="d-flex align-items-center justify-content-start">
+                                  <label class="checkbox">
+                                    <input class="checkbox__input m-0" type="checkbox">
+                                    <span class="checkbox__in">
+                                      <span class="checkbox__tick"></span>
+                                    </span>
+                                  </label>
+                                  <span class="check_txt text-start ms-2">List</span>
+                                </div>
+                              </th>
+                              <th style="width: 40%;">Action</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr class="ovtlyr__row">
+                              <td>
+                                <div class="d-flex align-items-center justify-content-start">
+                                  <label class="checkbox">
+                                    <input class="checkbox__input m-0" type="checkbox">
+                                    <span class="checkbox__in">
+                                      <span class="checkbox__tick"></span>
+                                    </span>
+                                  </label>
+                                  <span class="check_txt text-start ms-2">Custom List 1</span>
+                                </div>
+                              </td>
+                              <td>
+                                <button type="button" class="disableBtn" data-bs-toggle="modal" data-bs-target="#changeListName_modal">Edit Name</button>
+                                <button type="button" class="disableBtn ms-1" data-bs-toggle="modal" data-bs-target="#removeFav_modal">Select & Remove Stock</button>
+                                <button type="button" class="disableBtn ms-1" data-bs-toggle="modal" data-bs-target="#deleteList_modal">Delete List</button>
+                              </td>
+                            </tr>
+                            <tr class="ovtlyr__row">
+                              <td>
+                                <div class="d-flex align-items-center justify-content-start">
+                                  <label class="checkbox">
+                                    <input class="checkbox__input m-0" type="checkbox">
+                                    <span class="checkbox__in">
+                                      <span class="checkbox__tick"></span>
+                                    </span>
+                                  </label>
+                                  <span class="check_txt text-start ms-2">Custom List 2</span>
+                                </div>
+                              </td>
+                              <td>
+                                <button type="button" class="disableBtn" data-bs-toggle="modal" data-bs-target="#changeListName_modal">Edit Name</button>
+                                <button type="button" class="disableBtn ms-1" data-bs-toggle="modal" data-bs-target="#removeFav_modal">Select & Remove Stock</button>
+                                <button type="button" class="disableBtn ms-1" data-bs-toggle="modal" data-bs-target="#deleteList_modal">Delete List</button>
+                              </td>
+                            </tr>
+                            <tr class="ovtlyr__row">
+                              <td>
+                                <div class="d-flex align-items-center justify-content-start">
+                                  <label class="checkbox">
+                                    <input class="checkbox__input m-0" type="checkbox">
+                                    <span class="checkbox__in">
+                                      <span class="checkbox__tick"></span>
+                                    </span>
+                                  </label>
+                                  <span class="check_txt text-start ms-2">Custom List 3</span>
+                                </div>
+                              </td>
+                              <td>
+                                <button type="button" class="disableBtn" data-bs-toggle="modal" data-bs-target="#changeListName_modal">Edit Name</button>
+                                <button type="button" class="disableBtn ms-1" data-bs-toggle="modal" data-bs-target="#removeFav_modal">Select & Remove Stock</button>
+                                <button type="button" class="disableBtn ms-1" data-bs-toggle="modal" data-bs-target="#deleteList_modal">Delete List</button>
+                              </td>
+                            </tr>
+                            <tr class="ovtlyr__row">
+                              <td>
+                                <div class="d-flex align-items-center justify-content-start">
+                                  <label class="checkbox">
+                                    <input class="checkbox__input m-0" type="checkbox">
+                                    <span class="checkbox__in">
+                                      <span class="checkbox__tick"></span>
+                                    </span>
+                                  </label>
+                                  <span class="check_txt text-start ms-2">Custom List 4</span>
+                                </div>
+                              </td>
+                              <td>
+                                <button type="button" class="disableBtn" data-bs-toggle="modal" data-bs-target="#changeListName_modal">Edit Name</button>
+                                <button type="button" class="disableBtn ms-1" data-bs-toggle="modal" data-bs-target="#removeFav_modal">Select & Remove Stock</button>
+                                <button type="button" class="disableBtn ms-1" data-bs-toggle="modal" data-bs-target="#deleteList_modal">Delete List</button>
+                              </td>
+                            </tr>
+                            <tr class="ovtlyr__row">
+                              <td>
+                                <div class="d-flex align-items-center justify-content-start">
+                                  <label class="checkbox">
+                                    <input class="checkbox__input m-0" type="checkbox">
+                                    <span class="checkbox__in">
+                                      <span class="checkbox__tick"></span>
+                                    </span>
+                                  </label>
+                                  <span class="check_txt text-start ms-2">Custom List 5</span>
+                                </div>
+                              </td>
+                              <td>
+                                <button type="button" class="disableBtn" data-bs-toggle="modal" data-bs-target="#changeListName_modal">Edit Name</button>
+                                <button type="button" class="disableBtn ms-1" data-bs-toggle="modal" data-bs-target="#removeFav_modal">Select & Remove Stock</button>
+                                <button type="button" class="disableBtn ms-1" data-bs-toggle="modal" data-bs-target="#deleteList_modal">Delete List</button>
+                              </td>
+                            </tr>
+                            <tr class="ovtlyr__row">
+                              <td>
+                                <div class="d-flex align-items-center justify-content-start">
+                                  <label class="checkbox">
+                                    <input class="checkbox__input m-0" type="checkbox">
+                                    <span class="checkbox__in">
+                                      <span class="checkbox__tick"></span>
+                                    </span>
+                                  </label>
+                                  <span class="check_txt text-start ms-2">Custom List 6</span>
+                                </div>
+                              </td>
+                              <td>
+                                <button type="button" class="disableBtn" data-bs-toggle="modal" data-bs-target="#changeListName_modal">Edit Name</button>
+                                <button type="button" class="disableBtn ms-1" data-bs-toggle="modal" data-bs-target="#removeFav_modal">Select & Remove Stock</button>
+                                <button type="button" class="disableBtn ms-1" data-bs-toggle="modal" data-bs-target="#deleteList_modal">Delete List</button>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--======== NOTIFICATIONS VIDEO POPUP BEGIN ========-->
+        <div class="modal upgrade_popup watchVideo fade" id="notifications" tabindex="-1" aria-labelledby="notifications_modalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-body">
+                <button type="button" class="close_btn" data-bs-dismiss="modal" aria-label="Close"><span class="material-icons">close</span></button>
+                <div class="modal_body">
+                  <iframe src="https://www.youtube.com/embed/GETOfM39uuo?si=DU-S5KkjpCwYfwmJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--======== NOTIFICATIONS VIDEO POPUP END =========-->
+        <!--======== UPGRADE POPUP BEGIN ========-->
+        <div class="modal upgrade_popup fade" id="upgrade_modal" tabindex="-1" aria-labelledby="upgrade_modalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-body">
+                <button type="button" class="close_btn" data-bs-dismiss="modal" aria-label="Close"><span class="material-icons">close</span></button>
+                <div class="modal_body">
+                  <h5>Upgrade Plan</h5>
+                  <p>Upgrade to Elite Plan to enable notifications.</p>
+                </div>
+                <div class="modal_btns">
+                  <a href="#" class="border_btn" data-bs-dismiss="modal" aria-label="Close">Cancel</a>
+                  <a href="#" class="filled_btn" data-bs-dismiss="modal" aria-label="Close">Upgrade Plan</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--======== UPGRADE POPUP END =========-->
+        <!--========== NOTIFICATION POPUP BEGIN ==========-->
+        <div class="modal upgrade_popup notiSett_modal fade" id="notiSett_modal" tabindex="-1" aria-labelledby="notiSett_modalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-body">
+                <button type="button" class="close_btn" data-bs-dismiss="modal" aria-label="Close"><span class="material-icons">close</span></button>
+                <div class="modal_body">
+                  <div class="lat_noti">
+                    <div class="notiHead">
+                      <h3>Notify me about APPL/Custom List 1</h3>
+                    </div>
+                    <div class="lat_noti1">
+                      <div class="lat_noti11">
+                        <div class="lat_noti111">
+                          <div>
+                            <div class="innerFlex">
+                              <span>Notify when Fear & Greed Heatmap is Moving Up, and is at or above</span>
+                            </div>
+                            <div class="innerFlex">
+                              <div class="notifi_slider">
+                                <div class="range_slider_box">
+                                  <div id="heatmap_value_up"></div>
+                                  <p class="range_value"><span class="start_value">0</span><span class="last_value">100</span></p>
+                                </div>
+                                <div class="movingArrow">
+                                  <p class="movingDown">Moving Down<span class="material-symbols-outlined">trending_flat</span></p>
+                                  <p class="movingUp">Moving Up<span class="material-symbols-outlined">trending_flat</span></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <span class="switch1 switch-sm">
+                          <label class="m-0">
+                            <input type="checkbox" name="select">
+                            <span></span> 
+                          </label>
+                        </span>
+                      </div>
+                      <div class="lat_noti11">
+                        <div class="lat_noti111">
+                          <div>
+                            <div class="innerFlex">
+                              <span>Notify when Fear & Greed Heatmap is Moving Down, and is at or below</span>
+                            </div>
+                            <div class="innerFlex">
+                              <div class="notifi_slider">
+                                <div class="range_slider_box">
+                                  <div id="heatmap_value_down"></div>
+                                  <p class="range_value"><span class="start_value">0</span><span class="last_value">100</span></p>
+                                </div>
+                                <div class="movingArrow">
+                                  <p class="movingDown">Moving Down<span class="material-symbols-outlined">trending_flat</span></p>
+                                  <p class="movingUp">Moving Up<span class="material-symbols-outlined">trending_flat</span></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <span class="switch1 switch-sm">
+                          <label class="m-0">
+                            <input type="checkbox" name="select">
+                            <span></span> 
+                          </label>
+                        </span>
+                      </div>
+                      <div class="lat_noti11">
+                        <div class="lat_noti111">
+                          <div>
+                            <div class="innerFlex">
+                              <span>Notify when Fear & Greed Heatmap is 
+                                <select class="form-select" id="selectMotion2">
+                                  <option value="movingUp2" selected>Moving Up</option>
+                                  <option value="movingDown2">Moving Down</option>
+                                  <option>Both Moving Up or Moving Down</option>
+                                </select> and Heatmap is in between
+                              </span>
+                            </div>
+                            <div class="innerFlex">
+                              <div class="notifi_slider">
+                                <div class="range_slider_box">
+                                  <div id="heatmap_value_up_down"></div>
+                                  <p class="range_value"><span class="start_value">0</span><span class="last_value">100</span></p>
+                                </div>
+                                <div class="movingArrow">
+                                  <p class="movingDown">Moving Down<span class="material-symbols-outlined">trending_flat</span></p>
+                                  <p class="movingUp">Moving Up<span class="material-symbols-outlined">trending_flat</span></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <span class="switch1 switch-sm">
+                          <label class="m-0">
+                            <input type="checkbox" name="select">
+                            <span></span> 
+                          </label>
+                        </span>
+                      </div>
+                      <div class="lat_noti11">
+                        <div class="lat_noti111">
+                          <span>When Fear & Greed Heatmap is No Change</span>
+                        </div>
+                        <span class="switch1 switch-sm">
+                          <label class="m-0">
+                            <input type="checkbox" checked name="select">
+                            <span></span> 
+                          </label>
+                        </span>
+                      </div>
+                      <div class="lat_noti11">
+                        <div class="lat_noti111">
+                          <span>When Uptrend or Downtrend started for a stock</span>
+                        </div>
+                        <span class="switch1 switch-sm">
+                          <label class="m-0">
+                            <input type="checkbox" name="select">
+                            <span></span> 
+                          </label>
+                        </span>
+                      </div>
+                      <div class="lat_noti11">
+                        <div class="lat_noti111">
+                          <span>When a new Buy or Sell signal comes</span>
+                        </div>
+                        <span class="switch1 switch-sm">
+                          <label class="m-0">
+                            <input type="checkbox" name="select">
+                            <span></span> 
+                          </label>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="applyBtn">
+                      <button type="button" class="border_btn border_btnCancel" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+                      <button type="button" class="border_btn" data-bs-dismiss="modal" aria-label="Close">Save</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--=========== NOTIFICATION POPUP END ===========-->
+        <!--====== DISABLE NOTIFICATION POPUP START ======-->
+        <div class="modal upgrade_popup fade" id="disableNoti_modal" tabindex="-1" aria-labelledby="disableNoti_modalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-body">
+                <button type="button" class="close_btn" data-bs-dismiss="modal" aria-label="Close"><span class="material-icons">close</span></button>
+                <div class="modal_body modal_body2">
+                  <p>Do you really want to disable notifications for this stock?</p>
+                </div>
+                <div class="modal_btns">
+                  <a href="#" class="border_btn" data-bs-dismiss="modal" aria-label="Close">Cancel</a>
+                  <a href="#" class="filled_btn" data-bs-dismiss="modal" aria-label="Close">Continue</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--======= DISABLE NOTIFICATION POPUP END =======-->
+        <!--======== CHANGE LIST NAME POPUP START ========-->
+        <div class="modal large_popup add_note fade" id="changeListName_modal" tabindex="-1" aria-labelledby="changeListName_modalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-body">
+                <button type="button" class="close_btn" data-bs-dismiss="modal" aria-label="Close"><span class="material-icons">close</span></button>
+                <div class="modal_body">
+                  <h5>Edit List Name</h5>
+                  <div class="notes_field">
+                    <label>List Name</label>
+                    <input type="text" name="listname" value="Custom List 1" />
+                  </div>
+                  <div class="modal_btns">
+                    <button type="button" class="border_btn" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+                    <button type="button" class="filled_btn" data-bs-dismiss="modal" aria-label="Close">Update</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--========= CHANGE LIST NAME POPUP END =========-->
+        <!--===== REMOVE STOCK FROM LIST POPUP START =====-->
+        <div class="modal upgrade_popup fade" id="removeFav_modal" tabindex="-1" aria-labelledby="removeFav_modalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-body">
+                <button type="button" class="close_btn" data-bs-dismiss="modal" aria-label="Close"><span class="material-icons">close</span></button>
+                <div class="modal_body">
+                  <h6 class="mt-0 mb-2 text-start">Remove Stocks from the Cutom List 1 :-</h6>
+                  <div class="savPopup">
+                    <div class="savPopup_field">
+                      <ul class="addToList box_scroll">
+                        <li>
+                          <div class="flex_box div__remember">
+                            <div class="d-flex align-items-center justify-content-start">
+                              <label class="checkbox">
+                                <input class="checkbox__input m-0" type="checkbox">
+                                <span class="checkbox__in">
+                                  <span class="checkbox__tick"></span>
+                                </span>
+                              </label>
+                              <span class="check_txt text-start ms-2">AAPL</span>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="flex_box div__remember">
+                            <div class="d-flex align-items-center justify-content-start">
+                              <label class="checkbox">
+                                <input class="checkbox__input m-0" type="checkbox">
+                                <span class="checkbox__in">
+                                  <span class="checkbox__tick"></span>
+                                </span>
+                              </label>
+                              <span class="check_txt text-start ms-2">CPRI</span>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="flex_box div__remember">
+                            <div class="d-flex align-items-center justify-content-start">
+                              <label class="checkbox">
+                                <input class="checkbox__input m-0" type="checkbox">
+                                <span class="checkbox__in">
+                                  <span class="checkbox__tick"></span>
+                                </span>
+                              </label>
+                              <span class="check_txt text-start ms-2">GMI</span>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="flex_box div__remember">
+                            <div class="d-flex align-items-center justify-content-start">
+                              <label class="checkbox">
+                                <input class="checkbox__input m-0" type="checkbox">
+                                <span class="checkbox__in">
+                                  <span class="checkbox__tick"></span>
+                                </span>
+                              </label>
+                              <span class="check_txt text-start ms-2">AWR</span>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="flex_box div__remember">
+                            <div class="d-flex align-items-center justify-content-start">
+                              <label class="checkbox">
+                                <input class="checkbox__input m-0" type="checkbox">
+                                <span class="checkbox__in">
+                                  <span class="checkbox__tick"></span>
+                                </span>
+                              </label>
+                              <span class="check_txt text-start ms-2">MDU</span>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="flex_box div__remember">
+                            <div class="d-flex align-items-center justify-content-start">
+                              <label class="checkbox">
+                                <input class="checkbox__input m-0" type="checkbox">
+                                <span class="checkbox__in">
+                                  <span class="checkbox__tick"></span>
+                                </span>
+                              </label>
+                              <span class="check_txt text-start ms-2">FLOT</span>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="flex_box div__remember">
+                            <div class="d-flex align-items-center justify-content-start">
+                              <label class="checkbox">
+                                <input class="checkbox__input m-0" type="checkbox">
+                                <span class="checkbox__in">
+                                  <span class="checkbox__tick"></span>
+                                </span>
+                              </label>
+                              <span class="check_txt text-start ms-2">GME</span>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="flex_box div__remember">
+                            <div class="d-flex align-items-center justify-content-start">
+                              <label class="checkbox">
+                                <input class="checkbox__input m-0" type="checkbox">
+                                <span class="checkbox__in">
+                                  <span class="checkbox__tick"></span>
+                                </span>
+                              </label>
+                              <span class="check_txt text-start ms-2">FLRN</span>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="flex_box div__remember">
+                            <div class="d-flex align-items-center justify-content-start">
+                              <label class="checkbox">
+                                <input class="checkbox__input m-0" type="checkbox">
+                                <span class="checkbox__in">
+                                  <span class="checkbox__tick"></span>
+                                </span>
+                              </label>
+                              <span class="check_txt text-start ms-2">ICSH</span>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="flex_box div__remember">
+                            <div class="d-flex align-items-center justify-content-start">
+                              <label class="checkbox">
+                                <input class="checkbox__input m-0" type="checkbox">
+                                <span class="checkbox__in">
+                                  <span class="checkbox__tick"></span>
+                                </span>
+                              </label>
+                              <span class="check_txt text-start ms-2">NMM</span>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="flex_box div__remember">
+                            <div class="d-flex align-items-center justify-content-start">
+                              <label class="checkbox">
+                                <input class="checkbox__input m-0" type="checkbox">
+                                <span class="checkbox__in">
+                                  <span class="checkbox__tick"></span>
+                                </span>
+                              </label>
+                              <span class="check_txt text-start ms-2">FORM</span>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal_btns justify-content-end">
+                  <button type="button" class="border_btn" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+                  <button type="button" class="filled_btn" data-bs-dismiss="modal" aria-label="Close">Remove</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--====== REMOVE STOCK FROM LIST POPUP END ======-->
+        <!--========== DELETE LIST POPUP START ===========-->
+        <div class="modal upgrade_popup fade" id="deleteList_modal" tabindex="-1" aria-labelledby="deleteList_modalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-body">
+                <button type="button" class="close_btn" data-bs-dismiss="modal" aria-label="Close"><span class="material-icons">close</span></button>
+                <div class="modal_body modal_body2">
+                  <p>Do you really want to delete the Custom List 1?</p>
+                </div>
+                <div class="modal_btns">
+                  <a href="#" class="border_btn" data-bs-dismiss="modal" aria-label="Close">Cancel</a>
+                  <a href="#" class="filled_btn" data-bs-dismiss="modal" aria-label="Close">Delete</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--============ DELETE LIST POPUP END ===========-->
+      </div>
+    </div>
+  </div>
+</div>
+<!-- scripts-->
+<script src="js/jquery.min.js"></script>
+<script src="js/magnific-popup-svg4-app.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<!--=========== TOOLTIP SCRIPT ==========-->
+<script>
+  const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+  const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+</script>
+<!--========= TOOLTIP SCRIPT END ========-->
+<!--==== SIDEBAR DROPDOWN OPEN START ====-->
+<script>
+  $(document).ready(function(){
+    $('.dropdown_btn .sidebar__item').on('click', function(e){
+      $(this).parent().toggleClass('active');
+    });
+  });
+</script>
+<!--==== SIDEBAR DROPDOWN OPEN END ====-->
+<!--==== STOP MODAL PLAYING START ====-->
+<script>
+  $(document).ready(function(){
+    /* Get iframe src attribute value i.e. YouTube video url and store it in a variable */
+    var url1 = $("#notifications iframe").attr('src');
+      
+    /* Assign empty url value to the iframe src attribute when modal hide, which stop the video playing */
+    $("#notifications").on('hide.bs.modal', function(){
+        $("#notifications iframe").attr('src', '');
+    });
+    
+    /* Assign the initially stored url back to the iframe src attribute when modal is displayed again */
+    $("#notifications").on('show.bs.modal', function(){
+        $("#notifications iframe").attr('src', url1);
+    });
+  });
+</script>
+<!--===== STOP MODAL PLAYING END =====-->
+<script>
+document.createElement('show-desk' , 'show-mob');
+</script>
+<script>
+$(document).ready(function(){
+  if($('a.nav-link.annual_link').hasClass('active')){
+    $('.show_txt').hide();
+    $('.hide_txt').show();
+  }
+  else{
+    $('.show_txt').show();
+    $('.hide_txt').hide();
+  }
+  if($('.serial12 a.nav-link').click(function(){
+    if($('a.nav-link.annual_link').hasClass('active')) {
+      $('.show_txt').hide();
+      $('.hide_txt').show();
+    }
+    else{
+      $('.show_txt').show();
+      $('.hide_txt').hide();
+    }
+  }));
+});
+</script>
+<!--===== SLIDER SCRIPT START =====-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.6.0/nouislider.min.js"></script>
+<script>
+  var heatmap_value_up = document.getElementById('heatmap_value_up');
+  noUiSlider.create(heatmap_value_up, {
+    start: [10],  // Initial slider value
+    range: {
+      'min': [0],
+      'max': [100]
+    },
+    step: 1,
+    tooltips: {
+      to: function(value) {
+        return Math.round(value); // Ensures whole number display
+      }
+    }
+  });
+
+  var heatmap_value_down = document.getElementById('heatmap_value_down');
+  noUiSlider.create(heatmap_value_down, {
+    start: [10],
+    range: {
+      'min': [0],
+      'max': [100]
+    },
+    step: 1,
+    tooltips: {
+      to: function(value) {
+        return Math.round(value); // Ensures whole number display
+      }
+    }
+  });
+
+  var heatmap_value_up_down = document.getElementById('heatmap_value_up_down');
+  noUiSlider.create(heatmap_value_up_down, {
+    start: [10, 30], // Initial value
+    range: {
+      'min': 0,
+      'max': 100
+    },
+    tooltips: {
+      to: function(value) {
+        return Math.round(value); // Ensures whole number display
+      }
+    },
+    connect: true,
+    format: {
+      to: function (value) {
+        return Math.round(value);
+      },
+      from: function (value) {
+        return Number(value);
+      }
+    }
+  });
+</script>
+</body>
+</html>
+  

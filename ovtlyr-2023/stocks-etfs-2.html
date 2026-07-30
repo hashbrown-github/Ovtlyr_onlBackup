@@ -1,0 +1,1242 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>OVTLYR | Stocks & ETFs (Research Plan)</title>
+<meta name="description" content="Turning Investor Behavior into Stock Market Success" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<link rel="icon" type="image/ico" sizes="32x32" href="images/favicon-32x32.ico">
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/latest-style.css" />
+<script>
+var viewportmeta = document.querySelector('meta[name="viewport"]');
+if(viewportmeta) {
+  if(screen.width < 320){
+    var newScale = screen.width / 320;
+    viewportmeta.content = 'width=320, minimum-scale=' + newScale + ', maximum-scale=1.0, user-scalable=no, initial-scale=' + newScale + '';
+  } else {
+    viewportmeta.content = 'width=device-width, maximum-scale=1.0, initial-scale=1.0';
+  }
+}
+</script>
+</head>
+<body>
+<script>
+console.log(localStorage.getItem('darkMode'));
+if (localStorage.getItem('darkMode') === "on") {
+	document.body.classList.add("dark");
+	document.addEventListener("DOMContentLoaded", function(){
+		document.querySelector('.js-switch-theme input').checked = true;
+  });
+}
+</script>
+<div class="page toggle new_sidebar">
+  <div class="sidebar active">
+    <div class="sidebar__top">
+      <button class="sidebar__close"><span class="material-symbols-outlined">close</span></button>
+      <a class="sidebar__logo" href="stock-detail.html">
+        <img class="sidebar__pic sidebar__pic_black" src="images/black-logo.svg" alt="OVTLYR Logo" />
+        <img class="sidebar__pic sidebar__pic_white" src="images/white-logo.svg" alt="OVTLYR Logo" />
+      </a>
+      <button class="sidebar__burger"></button>
+    </div>
+    <div class="sidebar__wrapper ovtlyr_sidebar">
+      <div class="sidebar__inner">
+        <a class="sidebar__logo" href="stock-detail.html">
+          <img class="sidebar__pic sidebar__pic_black" src="images/black-logo-small.svg" alt="OVTLYR Logo" />
+          <img class="sidebar__pic sidebar__pic_white" src="images/white-logo-small.svg" alt="OVTLYR Logo" />
+        </a>
+        <div class="sidebar__list">
+          <div class="sidebar__group">
+            <div class="sidebar__menu">
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="dashboard.html" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Dashboard">
+                  <div class="sidebar__icon">
+                    <img src="images/dashboard.svg" alt="Dashboard" />
+                  </div>
+                  <div class="sidebar__text">Dashboard</div>
+                </a>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="market-breadth.html" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Market Breadth">
+                  <div class="sidebar__icon">
+                    <img src="images/market-breadth.svg" alt="Market" />
+                  </div>
+                  <div class="sidebar__text">Market Breadth</div>
+                </a>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="stocks-etfs.html" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Screener">
+                  <div class="sidebar__icon">
+                    <img src="images/stock-etf.svg" alt="Stocks" />
+                  </div>
+                  <div class="sidebar__text">Screener</div>
+                </a>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="watchlist.html" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Watchlist">
+                  <div class="sidebar__icon">
+                    <img src="images/watchlist.svg" alt="Star" />
+                  </div>
+                  <div class="sidebar__text">Watchlist</div>
+                </a>
+              </div>
+              <div class="side_dropdown">
+                <a class="sidebar__item" href="news-and-analyst.html" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="News and Analyst Ratings">
+                  <div class="sidebar__icon">
+                    <img src="images/news.svg" alt="News" />
+                  </div>
+                  <div class="sidebar__text">News and Analyst Ratings</div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page__wrapper">
+    <div class="page__center new_content">
+      <div class="dashboard_cont">
+        <div class="new_header">
+          <div class="newleft_21">
+            <div class="me-1">
+              <a href="https://discord.gg/MtQ9dctJu5" target="_blank"><img src="images/discord.svg" class="icon_img" alt="Discord" /></a>
+            </div>
+            <div class="profileDrop">
+              <button class="" type="button" id="profileMenuButton" data-bs-toggle="dropdown" aria-expanded="false"><img src="images/profile.svg" class="icon_img" alt="Profile" /></button>
+                <ul class="dropdown-menu" aria-labelledby="profileMenuButton">
+                  <li><a class="dropdown-item" href="profile.html"><p class="mb-0">Profile</p></a></li>
+                  <li><a class="dropdown-item" href="subscription.html"><p class="mb-0">Subscription Management</p></a></li>
+                  <li><a class="dropdown-item" href="notification.html"><p class="mb-0">Notification Management</p></a></li>
+                  <li><a class="dropdown-item" href="affiliate-info.html"><p class="mb-0">Referral Dashboard</p></a></li>
+                  <li><a class="dropdown-item" href="tutorials.html"><p class="mb-0">Tutorials</p></a></li>
+                  <li><a class="dropdown-item" href="contact.html"><p class="mb-0">Contact Us</p></a></li>
+                  <li>
+                    <a class="dropdown-item" href="javascript:void(0);">
+                      <p class="switchThemeBtn mb-0">
+                        <span>Theme</span>
+                        <label class="switch switch_theme js-switch-theme">
+                          <input class="switch__input" type="checkbox">
+                          <span class="switch__in">
+                            <span class="switch__box"></span>
+                            <span class="switch__icon">
+                              <span class="material-symbols-outlined icon-sun">dark_mode</span>
+                              <span class="material-symbols-outlined icon-moon">light_mode</span>
+                            </span>
+                          </span>
+                        </label>
+                      </p>
+                    </a>
+                  </li>
+                  <li><a class="dropdown-item" href="log-in.html"><p class="mb-0">Logout</p></a></li>
+                </ul>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="stockEtf_header">
+          <div class="pageHeading">
+            <div>
+              <div>
+                <button type="button"><span class="material-symbols-outlined">chevron_left</span><h6>Back</h6></button>
+              </div>
+            </div>
+          </div>
+        </div> -->
+        <div class="stockEtf_tabs">
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="stocklist">
+              <button class="nav-link active" id="stocks-tab" data-bs-toggle="tab" data-bs-target="#stockstab" type="button" role="tab" aria-controls="stockstab" aria-selected="true">Stocks</button>
+            </li>
+            <li class="nav-item" role="stocklist">
+              <button class="nav-link" id="etfs-tab" data-bs-toggle="tab" data-bs-target="#etfstab" type="button" role="tab" aria-controls="etfstab" aria-selected="false">ETFs</button>
+            </li>
+          </ul>
+        </div>
+        <div class="stockTab_grid1">
+          <div class="stockTab_grid11">
+            <div class="stocksEtfs_table">
+              <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="stockstab" role="tabpanel" aria-labelledby="stocks-tab">
+                  <div class="stockEtf_dash">
+                    <div class="stockEtf_filter">
+                      <a href="#" class="show_filters">
+                        <span class="material-icons">filter_alt</span>
+                        <!-- <span class="material-symbols-outlined">filter_alt</span> -->
+                        <span>Filter</span>
+                      </a>
+                    </div>
+                    <div class="stocksTab_table">
+                      <div class="table_scroll vertical_scroll horizontal_scroll">
+                        <table class="table stocks__table0 stocks__table1 ovtlyr_table" id="dest">
+                          <thead class="sticky-top">
+                            <tr class="ovtlyr__row_head">
+                              <!-- <th style="width: 5%;" class="align__items">
+                                <label class="checkbox mt-1">
+                                  <input class="checkbox__input" type="checkbox">
+                                  <span class="checkbox__in">
+                                    <span class="checkbox__tick"></span>
+                                  </span>
+                                </label>
+                              </th> -->
+                              <th style="width: 10%;">Symbol</th>
+                              <th style="width: 13%;" class="sortTable_col">Name</th>
+                              <th style="width: 12%;" class="sortTable_col">Sector</th>
+                              <th style="width: 16%;" class="sortTable_col">Industry</th>
+                              <th style="width: 12%;" class="align__items">Overlay</th>
+                              <th style="width: 12%;">Signal</th>
+                              <th style="width: 13%;" class="sortTable_col">Last Signal Date</th>
+                              <th style="width: 12%;">30-Day Avg. Vol.</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr class="ovtlyr__row">
+                              <!-- <td class="align__items">
+                                <label class="checkbox mt-1">
+                                  <input class="checkbox__input" type="checkbox">
+                                  <span class="checkbox__in">
+                                    <span class="checkbox__tick"></span>
+                                  </span>
+                                </label>
+                              </td> -->
+                              <td>
+                                <div class="fav_symbol">
+                                  <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="American States Water Company">
+                                    <div class="favSymbol_box"><span class="port_symbol"><span class="noti_box"><span class="noti_count">2</span></span>AWR</span></div>
+                                  </a>
+                                  <button type="button" class="addTo_fav"><i class="fa-solid fa-star"></i></button>
+                                </div>
+                              </td>             
+                              <td>
+                                <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="American States Water Company">
+                                  <p class="company_name">AWR</p>
+                                </a>
+                              </td>
+                              <td><p>Utilities</p></td>
+                              <td>
+                                <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="American States Water Company">
+                                  <p class="company_name">American States Water Company</p>
+                                </a>
+                              </td>
+                              <td class="align__items"><p><span class="greenBox"></span></p></td>
+                              <td data-bs-toggle="modal" data-bs-target="#upgrade1_modal"><p class="buy_stock">Buy</p></td>
+                              <td><p>01-02-2022</p></td>
+                              <td><p>6.7M</p></td>
+                            </tr>
+                            <tr class="ovtlyr__row">
+                              <td>
+                                <div class="fav_symbol">
+                                  <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Google">
+                                    <div class="favSymbol_box"><span class="port_symbol">GOGL</span></div>
+                                  </a>
+                                  <button type="button" class="addTo_fav"><i class="fa-regular fa-star"></i></button>
+                                </div>
+                              </td>             
+                              <td>
+                                <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="American States Water Company">
+                                  <p class="company_name">Alphabet</p>
+                                </a>
+                              </td>
+                              <td><p>Technology</p></td>
+                              <td>
+                                <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Technology">
+                                  <p class="company_name">Technology</p>
+                                </a>
+                              </td>
+                              <td class="align__items"><p><span class="redBox"></span></p></td>
+                              <td data-bs-toggle="modal" data-bs-target="#upgrade1_modal"><p class="sell_stock">Sell</p></td>
+                              <td><p>18-12-2020</p></td>
+                              <td><p>8M</p></td>
+                            </tr>
+                            <tr class="ovtlyr__row">
+                              <td>
+                                <div class="fav_symbol">
+                                  <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Google">
+                                    <div class="favSymbol_box"><span class="port_symbol">AAPL</span></div>
+                                  </a>
+                                  <button type="button" class="addTo_fav"><i class="fa-regular fa-star"></i></button>
+                                </div>
+                              </td>     
+                              <td>
+                                <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="American States Water Company">
+                                  <p class="company_name">Apple</p>
+                                </a>
+                              </td>
+                              <td><p>Technology</p></td>
+                              <td>
+                                <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Technology">
+                                  <p class="company_name">Technology</p>
+                                </a>
+                              </td>
+                              <td class="align__items"><p><span class="orgBox"></span></p></td>
+                              <td data-bs-toggle="modal" data-bs-target="#upgrade1_modal"><p class="buy_stock">Buy</p></td>
+                              <td><p>01-02-2023</p></td>
+                              <td><p>8M</p></td>
+                            </tr>
+                            <tr class="ovtlyr__row">
+                              <td>
+                                <div class="fav_symbol">
+                                  <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Google">
+                                    <div class="favSymbol_box"><span class="port_symbol">GOGL</span></div>
+                                  </a>
+                                  <button type="button" class="addTo_fav"><i class="fa-regular fa-star"></i></button>
+                                </div>
+                              </td>  
+                              <td>
+                                <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="American States Water Company">
+                                  <p class="company_name">Alphabet</p>
+                                </a>
+                              </td>
+                              <td><p>Technology</p></td>
+                              <td>
+                                <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Technology">
+                                  <p class="company_name">Technology</p>
+                                </a>
+                              </td>
+                              <td class="align__items"><p><span class="greenBox"></span></p></td>
+                              <td data-bs-toggle="modal" data-bs-target="#upgrade1_modal"><p class="sell_stock">Sell</p></td>
+                              <td><p>01-02-2023</p></td>
+                              <td><p>8M</p></td>
+                            </tr>
+                            <tr class="ovtlyr__row">
+                              <td>
+                                <div class="fav_symbol">
+                                  <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Google">
+                                    <div class="favSymbol_box"><span class="port_symbol">AAPL</span></div>
+                                  </a>
+                                  <button type="button" class="addTo_fav"><i class="fa-regular fa-star"></i></button>
+                                </div>
+                              </td>     
+                              <td>
+                                <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="American States Water Company">
+                                  <p class="company_name">Apple</p>
+                                </a>
+                              </td>
+                              <td><p>Technology</p></td>
+                              <td>
+                                <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Technology">
+                                  <p class="company_name">Technology</p>
+                                </a>
+                              </td>
+                              <td class="align__items"><p><span class="greenBox"></span></p></td>
+                              <td data-bs-toggle="modal" data-bs-target="#upgrade1_modal"><p class="buy_stock">Buy</p></td>
+                              <td><p>01-02-2023</p></td>
+                              <td><p>5.5M</p></td>
+                            </tr>
+                            <tr class="ovtlyr__row">
+                              <td>
+                                <div class="fav_symbol">
+                                  <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Google">
+                                    <div class="favSymbol_box"><span class="port_symbol">META</span></div>
+                                  </a>
+                                  <button type="button" class="addTo_fav"><i class="fa-regular fa-star"></i></button>
+                                </div>
+                              </td>  
+                              <td>
+                                <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="American States Water Company">
+                                  <p class="company_name">Meta</p>
+                                </a>
+                              </td>
+                              <td><p>Technology</p></td>
+                              <td>
+                                <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Technology">
+                                  <p class="company_name">Technology</p>
+                                </a>
+                              </td>
+                              <td class="align__items"><p><span class="redBox"></span></p></td>
+                              <td data-bs-toggle="modal" data-bs-target="#upgrade1_modal"><p class="sell_stock">Sell</p></td>
+                              <td><p>01-02-2023</p></td>
+                              <td><p>5.5M</p></td>
+                            </tr>
+                            <tr class="ovtlyr__row">
+                              <td>
+                                <div class="fav_symbol">
+                                  <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Google">
+                                    <div class="favSymbol_box"><span class="port_symbol">AAPL</span></div>
+                                  </a>
+                                  <button type="button" class="addTo_fav"><i class="fa-regular fa-star"></i></button>
+                                </div>
+                              </td>   
+                              <td>
+                                <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="American States Water Company">
+                                  <p class="company_name">Apple</p>
+                                </a>
+                              </td>
+                              <td><p>Technology</p></td>
+                              <td>
+                                <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Technology">
+                                  <p class="company_name">Technology</p>
+                                </a>
+                              </td>
+                              <td class="align__items"><p><span class="orgBox"></span></p></td>
+                              <td data-bs-toggle="modal" data-bs-target="#upgrade1_modal"><p class="buy_stock">Buy</p></td>
+                              <td><p>01-02-2023</p></td>
+                              <td><p>4.3M</p></td>
+                            </tr>
+                            <tr class="ovtlyr__row">
+                              <td>
+                                <div class="fav_symbol">
+                                  <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Google">
+                                    <div class="favSymbol_box"><span class="port_symbol">META</span></div>
+                                  </a>
+                                  <button type="button" class="addTo_fav"><i class="fa-regular fa-star"></i></button>
+                                </div>
+                              </td> 
+                              <td>
+                                <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="American States Water Company">
+                                  <p class="company_name">Meta</p>
+                                </a>
+                              </td>
+                              <td><p>Technology</p></td>
+                              <td>
+                                <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Technology">
+                                  <p class="company_name">Technology</p>
+                                </a>
+                              </td>
+                              <td class="align__items"><p><span class="redBox"></span></p></td>
+                              <td data-bs-toggle="modal" data-bs-target="#upgrade1_modal"><p class="sell_stock">Sell</p></td>
+                              <td><p>01-02-2023</p></td>
+                              <td><p>4.0M</p></td>
+                            </tr>
+                            <tr class="ovtlyr__row">
+                              <td>
+                                <div class="fav_symbol">
+                                  <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Google">
+                                    <div class="favSymbol_box"><span class="port_symbol">AAPL</span></div>
+                                  </a>
+                                  <button type="button" class="addTo_fav"><i class="fa-regular fa-star"></i></button>
+                                </div>
+                              </td>
+                              <td>
+                                <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="American States Water Company">
+                                  <p class="company_name">Apple</p>
+                                </a>
+                              </td>
+                              <td><p>Technology</p></td>
+                              <td>
+                                <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Technology">
+                                  <p class="company_name">Technology</p>
+                                </a>
+                              </td>
+                              <td class="align__items"><p><span class="orgBox"></span></p></td>
+                              <td data-bs-toggle="modal" data-bs-target="#upgrade1_modal"><p class="buy_stock">Buy</p></td>
+                              <td><p>01-02-2023</p></td>
+                              <td><p>4.3M</p></td>
+                            </tr>
+                            <tr class="ovtlyr__row">
+                              <td>
+                                <div class="fav_symbol">
+                                  <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Google">
+                                    <div class="favSymbol_box"><span class="port_symbol">AAPL</span></div>
+                                  </a>
+                                  <button type="button" class="addTo_fav"><i class="fa-regular fa-star"></i></button>
+                                </div>
+                              </td>   
+                              <td>
+                                <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="American States Water Company">
+                                  <p class="company_name">Apple</p>
+                                </a>
+                              </td>
+                              <td><p>Technology</p></td>
+                              <td>
+                                <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Technology">
+                                  <p class="company_name">Technology</p>
+                                </a>
+                              </td>
+                              <td class="align__items"><p><span class="greenBox"></span></p></td>
+                              <td data-bs-toggle="modal" data-bs-target="#upgrade1_modal"><p class="buy_stock">Buy</p></td>
+                              <td><p>01-02-2023</p></td>
+                              <td><p>2.1M</p></td>
+                            </tr>
+                            <tr class="ovtlyr__row">
+                              <td>
+                                <div class="fav_symbol">
+                                  <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Google">
+                                    <div class="favSymbol_box"><span class="port_symbol">META</span></div>
+                                  </a>
+                                  <button type="button" class="addTo_fav"><i class="fa-regular fa-star"></i></button>
+                                </div>
+                              </td> 
+                              <td>
+                                <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="American States Water Company">
+                                  <p class="company_name">Meta</p>
+                                </a>
+                              </td>
+                              <td><p>Technology</p></td>
+                              <td>
+                                <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Technology">
+                                  <p class="company_name">Technology</p>
+                                </a>
+                              </td>
+                              <td class="align__items"><p><span class="redBox"></span></p></td>
+                              <td data-bs-toggle="modal" data-bs-target="#upgrade1_modal"><p class="sell_stock">Sell</p></td>
+                              <td><p>01-02-2023</p></td>
+                              <td><p>4.3M</p></td>
+                            </tr>
+                            <tr class="ovtlyr__row">
+                              <td>
+                                <div class="fav_symbol">
+                                  <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Google">
+                                    <div class="favSymbol_box"><span class="port_symbol">AAPL</span></div>
+                                  </a>
+                                  <button type="button" class="addTo_fav"><i class="fa-regular fa-star"></i></button>
+                                </div>
+                              </td>
+                              <td>
+                                <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="American States Water Company">
+                                  <p class="company_name">Apple</p>
+                                </a>
+                              </td>
+                              <td><p>Technology</p></td>
+                              <td>
+                                <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Technology">
+                                  <p class="company_name">Technology</p>
+                                </a>
+                              </td>
+                              <td class="align__items"><p><span class="orgBox"></span></p></td>
+                              <td data-bs-toggle="modal" data-bs-target="#upgrade1_modal"><p class="buy_stock">Buy</p></td>
+                              <td><p>01-02-2023</p></td>
+                              <td><p>9.2M</p></td>
+                            </tr>
+                            <tr class="ovtlyr__row">
+                              <td>
+                                <div class="fav_symbol">
+                                  <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Google">
+                                    <div class="favSymbol_box"><span class="port_symbol">AAPL</span></div>
+                                  </a>
+                                  <button type="button" class="addTo_fav"><i class="fa-regular fa-star"></i></button>
+                                </div>
+                              </td>
+                              <td>
+                                <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="American States Water Company">
+                                  <p class="company_name">Apple</p>
+                                </a>
+                              </td>
+                              <td><p>Technology</p></td>
+                              <td>
+                                <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Technology">
+                                  <p class="company_name">Technology</p>
+                                </a>
+                              </td>
+                              <td class="align__items"><p><span class="greenBox"></span></p></td>
+                              <td data-bs-toggle="modal" data-bs-target="#upgrade1_modal"><p class="buy_stock">Buy</p></td>
+                              <td><p>01-02-2023</p></td>
+                              <td><p>4.3M</p></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="stocksTab_grids blur_resPlan">
+                      <div class="stocksTab_item">
+                        <a href="#">
+                          <p>
+                            <span>
+                              <label class="checkbox">
+                                <input class="checkbox__input" type="checkbox">
+                                <span class="checkbox__in">
+                                  <span class="checkbox__tick"></span>
+                                </span>
+                              </label>
+                            </span>
+                            <button type="button" class="addTo_fav"><i class="fa-solid fa-star"></i></button>
+                          </p>
+                          <p>
+                            <span>Symbol</span>
+                            <span class="favSymbol_box"><span class="port_symbol"><span class="noti_box"><span class="noti_count">2</span></span>AWR</span></span>
+                          </p>
+                          <p>
+                            <span>Name</span>
+                            <span>AWR</span>
+                          </p>
+                          <p>
+                            <span>Sector</span>
+                            <span>Utilities</span>
+                          </p>
+                          <p>
+                            <span>Industry</span>
+                            <span class="company_name">American States Water Company</span>
+                          </p>
+                          <p class="noPlanHide">
+                            <span>Overlay</span>
+                            <span class="greenBox"></span>
+                          </p>
+                          <p class="noPlanHide resPlanHide">
+                            <span>Signal</span>
+                            <span class="buy_stock"><!-- Buy --></span>
+                          </p>
+                          <p class="noPlanHide">
+                            <span>Last Signal Date</span>
+                            <span>01-02-2023</span>
+                          </p>
+                        </a>
+                      </div>
+                      <div class="stocksTab_item">
+                        <a href="#">
+                          <p>
+                            <span>
+                              <label class="checkbox">
+                                <input class="checkbox__input" type="checkbox">
+                                <span class="checkbox__in">
+                                  <span class="checkbox__tick"></span>
+                                </span>
+                              </label>
+                            </span>
+                            <button type="button" class="addTo_fav"><i class="fa-regular fa-star"></i></button>
+                          </p>
+                          <p>
+                            <span>Symbol</span>
+                            <span class="favSymbol_box"><span class="port_symbol"><span class="noti_box"><span class="noti_count">2</span></span>AAPL</span></span>
+                          </p>
+                          <p>
+                            <span>Name</span>
+                            <span>AAPL</span>
+                          </p>
+                          <p>
+                            <span>Sector</span>
+                            <span>Utilities</span>
+                          </p>
+                          <p>
+                            <span>Industry</span>
+                            <span class="company_name">American States Water Company</span>
+                          </p>
+                          <p class="noPlanHide">
+                            <span>Overlay</span>
+                            <span class="redBox"></span>
+                          </p>
+                          <p class="noPlanHide resPlanHide">
+                            <span>Signal</span>
+                            <span class="sell_stock"><!-- Sell --></span>
+                          </p>
+                          <p class="noPlanHide">
+                            <span>Last Signal Date</span>
+                            <span>01-02-2023</span>
+                          </p>
+                        </a>
+                      </div>
+                      <div class="stocksTab_item">
+                        <a href="#">
+                          <p>
+                            <span>
+                              <label class="checkbox">
+                                <input class="checkbox__input" type="checkbox">
+                                <span class="checkbox__in">
+                                  <span class="checkbox__tick"></span>
+                                </span>
+                              </label>
+                            </span>
+                            <button type="button" class="addTo_fav"><i class="fa-regular fa-star"></i></button>
+                          </p>
+                          <p>
+                            <span>Symbol</span>
+                            <span class="favSymbol_box"><span class="port_symbol">AWR</span></span>
+                          </p>
+                          <p>
+                            <span>Name</span>
+                            <span>AWR</span>
+                          </p>
+                          <p>
+                            <span>Sector</span>
+                            <span>Utilities</span>
+                          </p>
+                          <p>
+                            <span>Industry</span>
+                            <span class="company_name">American States Water Company</span>
+                          </p>
+                          <p class="noPlanHide">
+                            <span>Overlay</span>
+                            <span class="orgBox"></span>
+                          </p>
+                          <p class="noPlanHide resPlanHide">
+                            <span>Signal</span>
+                            <span class="buy_stock"><!-- Buy --></span>
+                          </p>
+                          <p class="noPlanHide">
+                            <span>Last Signal Date</span>
+                            <span>01-02-2023</span>
+                          </p>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="watchlist_sidebar">
+                      <div class="category_filter">
+                        <div class="secPart_0">
+                          <h4>Filter</h4>
+                          <div>
+                            <a href="#" class="reset_filter">Reset</a>
+                            <span class="material-symbols-outlined close_btn">close</span>
+                          </div>
+                        </div>
+                        <div class="secPart_1">
+                          <h5>Market Cap</h5>
+                          <div class="range-slider">
+                            <span class="output outputOne"></span>
+                            <span class="output outputTwo"></span>
+                            <span class="full-range"></span>
+                            <span class="incl-range"></span>
+                            <input name="rangeOne" value="10" min="0" max="5000" step="1" type="range">
+                            <input name="rangeTwo" value="1000" min="0" max="5000" step="1" type="range">
+                          </div>
+                          <p><span>&lt;$0B</span><span>&lt;$5T</span></p>
+                        </div>
+                        <div class="secPart_2">
+                          <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="secIndustry">
+                              <button class="nav-link active" id="sectors-tab" data-bs-toggle="tab" data-bs-target="#sectorstab" type="button" role="tab" aria-controls="sectorstab" aria-selected="true">Sectors</button>
+                            </li>
+                            <li class="nav-item" role="secIndustry">
+                              <button class="nav-link" id="industry-tab" data-bs-toggle="tab" data-bs-target="#industrytab" type="button" role="tab" aria-controls="industrytab" aria-selected="false" tabindex="-1">Industry</button>
+                              <button class="nav-link disabled" id="industry-tab" data-bs-toggle="tab" data-bs-target="#industrytab" type="button" role="tab" aria-controls="industrytab" aria-selected="false" style="display: none;" tabindex="-1">Industry</button>
+                            </li>
+                          </ul>
+                          <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="sectorstab" role="tabpanel" aria-labelledby="sectors-tab">
+                              <div class="sectorsTab_list filterScroll">
+                                <ul class="sectors_list">
+                                  <li class="sectorList_item active">
+                                    <a href="#">
+                                      <img src="images/communication.svg" alt="Communication">
+                                      <h6>Communication</h6>
+                                    </a>
+                                  </li>
+                                  <li class="sectorList_item active">
+                                    <a href="#">
+                                      <img src="images/discretionary.svg" alt="Discretionary">
+                                      <h6>Discretionary</h6>
+                                    </a>
+                                  </li>
+                                  <li class="sectorList_item">
+                                    <a href="#">
+                                      <img src="images/energy.svg" alt="Energy">
+                                      <h6>Energy</h6>
+                                    </a>
+                                  </li>
+                                  <li class="sectorList_item">
+                                    <a href="#">
+                                      <img src="images/financial.svg" alt="Financial">
+                                      <h6>Financial</h6>
+                                    </a>
+                                  </li>
+                                  <li class="sectorList_item">
+                                    <a href="#">
+                                      <img src="images/health.svg" alt="Health Care">
+                                      <h6>Health Care</h6>
+                                    </a>
+                                  </li>
+                                  <li class="sectorList_item">
+                                    <a href="#">
+                                      <img src="images/industrials.svg" alt="Industrials">
+                                      <h6>Industrials</h6>
+                                    </a>
+                                  </li>
+                                  <li class="sectorList_item">
+                                    <a href="#">
+                                      <img src="images/materials.svg" alt="Materials">
+                                      <h6>Materials</h6>
+                                    </a>
+                                  </li>
+                                  <li class="sectorList_item">
+                                    <a href="#">
+                                      <img src="images/realestate.svg" alt="Real Estate">
+                                      <h6>Real Estate</h6>
+                                    </a>
+                                  </li>
+                                  <li class="sectorList_item">
+                                    <a href="#">
+                                      <img src="images/staples.svg" alt="Staples">
+                                      <h6>Staples</h6>
+                                    </a>
+                                  </li>
+                                  <li class="sectorList_item">
+                                    <a href="#">
+                                      <img src="images/technology.svg" alt="Technology">
+                                      <h6>Technology</h6>
+                                    </a>
+                                  </li>
+                                  <li class="sectorList_item">
+                                    <a href="#">
+                                      <img src="images/utilities.svg" alt="Utilities">
+                                      <h6>Utilities</h6>
+                                    </a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="tab-pane fade" id="industrytab" role="tabpanel" aria-labelledby="industry-tab">
+                              <div class="industryTab_list filterScroll">
+                                <ul class="industry_list">
+                                  <li class="indusList_item">
+                                    <label class="checkbox">
+                                      <input class="checkbox__input" type="checkbox">
+                                      <span class="checkbox__in">
+                                        <span class="checkbox__tick"></span>
+                                        <span class="checkbox__text">Auto Components</span>
+                                      </span>
+                                    </label>
+                                  </li>
+                                  <li class="indusList_item">
+                                    <label class="checkbox">
+                                      <input class="checkbox__input" type="checkbox">
+                                      <span class="checkbox__in">
+                                        <span class="checkbox__tick"></span>
+                                        <span class="checkbox__text">Automobiles</span>
+                                      </span>
+                                    </label>
+                                  </li>
+                                  <li class="indusList_item">
+                                    <label class="checkbox">
+                                      <input class="checkbox__input" type="checkbox">
+                                      <span class="checkbox__in">
+                                        <span class="checkbox__tick"></span>
+                                        <span class="checkbox__text">Distributors</span>
+                                      </span>
+                                    </label>
+                                  </li>
+                                  <li class="indusList_item">
+                                    <label class="checkbox">
+                                      <input class="checkbox__input" type="checkbox">
+                                      <span class="checkbox__in">
+                                        <span class="checkbox__tick"></span>
+                                        <span class="checkbox__text">Distributors</span>
+                                      </span>
+                                    </label>
+                                  </li>
+                                  <li class="indusList_item">
+                                    <label class="checkbox">
+                                      <input class="checkbox__input" type="checkbox">
+                                      <span class="checkbox__in">
+                                        <span class="checkbox__tick"></span>
+                                        <span class="checkbox__text">Diversified  Consumer Services</span>
+                                      </span>
+                                    </label>
+                                  </li>
+                                  <li class="indusList_item">
+                                    <label class="checkbox">
+                                      <input class="checkbox__input" type="checkbox">
+                                      <span class="checkbox__in">
+                                        <span class="checkbox__tick"></span>
+                                        <span class="checkbox__text">Diversified Telecommunication</span>
+                                      </span>
+                                    </label>
+                                  </li>
+                                  <li class="indusList_item">
+                                    <label class="checkbox">
+                                      <input class="checkbox__input" type="checkbox">
+                                      <span class="checkbox__in">
+                                        <span class="checkbox__tick"></span>
+                                        <span class="checkbox__text">Energy Equipment &amp; Services</span>
+                                      </span>
+                                    </label>
+                                  </li>
+                                  <li class="indusList_item">
+                                    <label class="checkbox">
+                                      <input class="checkbox__input" type="checkbox">
+                                      <span class="checkbox__in">
+                                        <span class="checkbox__tick"></span>
+                                        <span class="checkbox__text">Entertainment</span>
+                                      </span>
+                                    </label>
+                                  </li>
+                                  <li class="indusList_item">
+                                    <label class="checkbox">
+                                      <input class="checkbox__input" type="checkbox">
+                                      <span class="checkbox__in">
+                                        <span class="checkbox__tick"></span>
+                                        <span class="checkbox__text">Hotels, Restaurants &amp; Leisure</span>
+                                      </span>
+                                    </label>
+                                  </li>
+                                  <li class="indusList_item">
+                                    <label class="checkbox">
+                                      <input class="checkbox__input" type="checkbox">
+                                      <span class="checkbox__in">
+                                        <span class="checkbox__tick"></span>
+                                        <span class="checkbox__text">Energy Equipment &amp; Services</span>
+                                      </span>
+                                    </label>
+                                  </li>
+                                  <li class="indusList_item">
+                                    <label class="checkbox">
+                                      <input class="checkbox__input" type="checkbox">
+                                      <span class="checkbox__in">
+                                        <span class="checkbox__tick"></span>
+                                        <span class="checkbox__text">Entertainment</span>
+                                      </span>
+                                    </label>
+                                  </li>
+                                  <li class="indusList_item">
+                                    <label class="checkbox">
+                                      <input class="checkbox__input" type="checkbox">
+                                      <span class="checkbox__in">
+                                        <span class="checkbox__tick"></span>
+                                        <span class="checkbox__text">Hotels, Restaurants &amp; Leisure</span>
+                                      </span>
+                                    </label>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="secPart_3">
+                          <div class="applyFil_btn">
+                            <a href="#">Apply</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="etfstab" role="tabpanel" aria-labelledby="etfs-tab">
+                  <div class="etfsTab_table">
+                    <div class="stocksTab_table">
+                      <div class="table_scroll vertical_scroll horizontal_scroll">
+                        <table class="table stocks__table0 stocks__table2 ovtlyr_table" id="dest">
+                          <thead class="sticky-top">
+                            <tr class="ovtlyr__row_head">
+                              <th style="width: 10%;">Symbol</th>
+                              <th style="width: 15%;">Name</th>
+                              <th style="width: 11%;">Last Close Price</th>
+                              <th style="width: 15%;">Issuer</th>
+                              <th style="width: 18%;">Index Tracked</th>
+                              <th style="width: 10%;">Expense Ratio</th>
+                              <th style="width: 10%;">Signal</th>
+                              <th style="width: 11%;">Last Signal Date</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr class="ovtlyr__row">
+                              <td>
+                                <div class="fav_symbol">
+                                  <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="American States Water Company">
+                                    <div class="favSymbol_box"><span class="port_symbol"><span class="noti_box"><span class="noti_count">2</span></span>AWR</span></div>
+                                  </a>
+                                  <button type="button" class="addTo_fav"><i class="fa-solid fa-star"></i></button>
+                                </div>
+                              </td>             
+                              <td>
+                                <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="JPMorgan Alerian MLP Index ETN">
+                                  <p class="company_name">JPMorgan Alerian MLP Index ETN</p>
+                                </a>
+                              </td>
+                              <td><p>$23.12</p></td>
+                              <td><p>JPMorgan Chase</p></td>
+                              <td>
+                                <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Alerian MLP Infrastructure Index">
+                                  <p class="company_name">Alerian MLP Infrastructure Index</p>
+                                </a>
+                              </td>
+                              <td><p>0.85%</p></td>
+                              <td data-bs-toggle="modal" data-bs-target="#upgrade1_modal"><p class="buy_stock">Buy</p></td>
+                              <td data-bs-toggle="modal" data-bs-target="#upgrade1_modal"><p>01-02-2022</p></td>
+                            </tr>
+                            <tr class="ovtlyr__row">
+                              <td>
+                                <div class="fav_symbol">
+                                  <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Google">
+                                    <div class="favSymbol_box"><span class="port_symbol">GOGL</span></div>
+                                  </a>
+                                  <button type="button" class="addTo_fav"><i class="fa-regular fa-star"></i></button>
+                                </div>
+                              </td>             
+                              <td>
+                                <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Alerian MLP ETF">
+                                  <p class="company_name">Alerian MLP ETF</p>
+                                </a>
+                              </td>
+                              <td><p>$23.12</p></td>
+                              <td><p>State Street Global Advisors</p></td>
+                              <td>
+                                <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="WisdomTree U.S. Small Cap Dividend Indexy">
+                                  <p class="company_name">WisdomTree U.S. Small Cap Dividend Index</p>
+                                </a>
+                              </td>
+                              <td><p>0.85%</p></td>
+                              <td data-bs-toggle="modal" data-bs-target="#upgrade1_modal"><p class="sell_stock">Sell</p></td>
+                              <td data-bs-toggle="modal" data-bs-target="#upgrade1_modal"><p>18-12-2020</p></td>
+                            </tr>
+                            <tr class="ovtlyr__row">
+                              <td>
+                                <div class="fav_symbol">
+                                  <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Google">
+                                    <div class="favSymbol_box"><span class="port_symbol">AAPL</span></div>
+                                  </a>
+                                  <button type="button" class="addTo_fav"><i class="fa-regular fa-star"></i></button>
+                                </div>
+                              </td>     
+                              <td>
+                                <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="WisdomTree U.S. SmallCap Dividend Fund">
+                                  <p class="company_name">WisdomTree U.S. SmallCap Dividend Fund</p>
+                                </a>
+                              </td>
+                              <td><p>$23.12</p></td>
+                              <td><p>WisdomTree</p></td>
+                              <td>
+                                <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="WisdomTree U.S. Quality Dividend Growth Index">
+                                  <p class="company_name">WisdomTree U.S. Quality Dividend Growth Index</p>
+                                </a>
+                              </td>
+                              <td><p>0.85%</p></td>
+                              <td data-bs-toggle="modal" data-bs-target="#upgrade1_modal"><p class="buy_stock">Buy</p></td>
+                              <td data-bs-toggle="modal" data-bs-target="#upgrade1_modal"><p>01-02-2023</p></td>
+                            </tr>
+                            <tr class="ovtlyr__row">
+                              <td>
+                                <div class="fav_symbol">
+                                  <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Google">
+                                    <div class="favSymbol_box"><span class="port_symbol">META</span></div>
+                                  </a>
+                                  <button type="button" class="addTo_fav"><i class="fa-regular fa-star"></i></button>
+                                </div>
+                              </td>  
+                              <td>
+                                <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="iShares Core Dividend Growth ETF">
+                                  <p class="company_name">iShares Core Dividend Growth ETF</p>
+                                </a>
+                              </td>
+                              <td><p>$23.12</p></td>
+                              <td><p>Blackrock</p></td>
+                              <td>
+                                <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="DJ Industrial Average">
+                                  <p class="company_name">DJ Industrial Average</p>
+                                </a>
+                              </td>
+                              <td><p>0.85%</p></td>
+                              <td data-bs-toggle="modal" data-bs-target="#upgrade1_modal"><p class="sell_stock">Sell</p></td>
+                              <td data-bs-toggle="modal" data-bs-target="#upgrade1_modal"><p>01-02-2023</p></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="stocksTab_grids blur_resPlan">
+                      <div class="stocksTab_item">
+                        <a href="#">
+                          <!-- <p>
+                            <span>
+                              <label class="checkbox">
+                                <input class="checkbox__input" type="checkbox">
+                                <span class="checkbox__in">
+                                  <span class="checkbox__tick"></span>
+                                </span>
+                              </label>
+                            </span>
+                            <button type="button" class="addTo_fav"><i class="fa-solid fa-star"></i></button>
+                          </p> -->
+                          <p>
+                            <span>Symbol</span>
+                            <span class="favSymbol_box"><span class="port_symbol"><span class="noti_box"><span class="noti_count">2</span></span>AWR</span></span>
+                          </p>
+                          <p>
+                            <span>Name</span>
+                            <span class="company_name">JPMorgan Alerian MLP Index ETN</span>
+                          </p>
+                          <p>
+                            <span>Last Close</span>
+                            <span>$23.12</span>
+                          </p>
+                          <p>
+                            <span>Issuer</span>
+                            <span class="company_name">State Street Global Advisors</span>
+                          </p>
+                          <p>
+                            <span>Index Tracked</span>
+                            <span class="company_name">WisdomTree U.S. Quality Dividend Growth Index</span>
+                          </p>
+                          <p>
+                            <span>Expense Ratio</span>
+                            <span>0.85%</span>
+                          </p>
+                          <p class="noPlanHide resPlanHide">
+                            <span>Signal</span>
+                            <span class="buy_stock"><!-- Buy --></span>
+                          </p>
+                          <p class="noPlanHide">
+                            <span>Last Signal Date</span>
+                            <span>01-02-2023</span>
+                          </p>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--======== UPGRADE POPUP BEGIN ========-->
+        <div class="modal upgrade_popup fade" id="upgrade1_modal" tabindex="-1" aria-labelledby="upgrade_modalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-body">
+                <button type="button" class="close_btn" data-bs-dismiss="modal" aria-label="Close"><span class="material-icons">close</span></button>
+                <div class="modal_body">
+                  <!-- <img src="images/upgrade-plan.svg" alt="Upgrade Plan" /> -->
+                  <h5>Upgrade to "Elite" Plan</h5>
+                  <p>Get Full Access of this exclusive feature today!</p>
+                </div>
+                <div class="modal_btns">
+                  <a href="#" class="border_btn" data-bs-dismiss="modal" aria-label="Close">Cancel</a>
+                  <a href="#" class="filled_btn" data-bs-dismiss="modal" aria-label="Close">Upgrade Plan</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--======== UPGRADE POPUP END =========-->
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <div class="upload_loader"><i class="fas fa-solid fa-spinner fa-spin fa-pulse"></i></div> -->
+<!-- scripts-->
+<script src="js/jquery.min.js"></script>
+<script src="js/magnific-popup-svg4-app.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<!--=========== TOOLTIP SCRIPT ==========-->
+<script>
+  const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+  const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+</script>
+<!--========= TOOLTIP SCRIPT END ========-->
+<!--==== SIDEBAR DROPDOWN OPEN START ====-->
+<script>
+  $(document).ready(function(){
+    $('.dropdown_btn .sidebar__item').on('click', function(e){
+      $(this).parent().toggleClass('active');
+    });
+  });
+</script>
+<!--==== SIDEBAR DROPDOWN OPEN END ====-->
+<!--==== ADD TO FAV TOGGLE ====-->
+<script>
+$(document).ready(function(){
+  $('.addTo_fav').on('click', function(e){
+    $(this).children().toggleClass('fa-regular fa-solid');
+  });
+});
+</script>
+<!--==== MARKET CAP RANGE SLIDER ====-->
+<script>
+$(function(){
+  $("#dest").addSortWidget();
+});
+</script>
+<!--============ SIDEBAR SEARCH DROPDOWN ============-->
+<script>
+  $(document).ready(function(){
+    $('.searchbar_input input').click(function(){
+      $(".sidebarSearch__list").css({
+        "visibility": "visible" , 
+        "opacity": "1"
+      });
+    });
+  });
+  $(document). click(function() {
+    var container = $(".searchbar_input");
+    if (! container. is(event. target) && ! container. has(event. target). length) {
+      $(".sidebarSearch__list").css({
+        "visibility": "hidden" , 
+        "opacity": "0"
+       });
+    }
+  });
+</script>
+<!--========== SIDEBAR SEARCH DROPDOWN END ==========-->
+<!--======== FILTERS HIDE/SHOW SCRIPT BEGIN =========-->
+<!-- <script>
+  document.querySelector('.show_sideBar').addEventListener('click', function(event) {
+    event.preventDefault();
+    var target1 = document.querySelector('.category_filter');
+    if (target1.classList.contains('open')) {
+      target1.classList.remove('open');
+    } 
+    else {
+      target1.classList.add('open');
+    }
+    $(this).addClass('active');
+  });
+  
+  $('.close_btn').click(function (evt) {
+    evt.stopPropagation();
+    $('.category_filter').removeClass('open');
+    $('.show_sideBar').removeClass('active');
+  });
+
+  $('body,html').click(function (e) {
+    var container = $('.category_filter , .show_sideBar');
+    if (!container.is(e.target) && container.has(e.target).length === 0) {
+      container.removeClass('open');
+      $('.show_sideBar').removeClass('active');
+    }
+  });
+</script> -->
+<!--========== FILTERS HIDE/SHOW SCRIPT END =========-->
+<!--======== FILTERS HIDE/SHOW SCRIPT 1 BEGIN =========-->
+<script>
+  document.querySelector('.show_filters').addEventListener('click', function(event) {
+    event.preventDefault();
+    var target1 = document.querySelector('.watchlist_sidebar');
+    if (target1.classList.contains('open')) {
+      target1.classList.remove('open');
+    } 
+    else {
+      target1.classList.add('open');
+    }
+  });
+  
+  $('.close_btn').click(function (evt) {
+    evt.stopPropagation();
+    $('.watchlist_sidebar').removeClass('open');
+  });
+
+  $('body,html').click(function (e) {
+    var container = $('.watchlist_sidebar , .show_filters');
+    if (!container.is(e.target) && container.has(e.target).length === 0) {
+      container.removeClass('open');
+    }
+  });
+</script>
+<!--========== FILTERS HIDE/SHOW SCRIPT 1 END =========-->
+<!-- <script src='https:cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script> -->
+<script>
+  var rangeOne = document.querySelector('input[name="rangeOne"]'),
+		rangeTwo = document.querySelector('input[name="rangeTwo"]'),
+		outputOne = document.querySelector('.outputOne'),
+		outputTwo = document.querySelector('.outputTwo'),
+		inclRange = document.querySelector('.incl-range'),
+		updateView = function () {
+			if (this.getAttribute('name') === 'rangeOne') {
+				outputOne.innerHTML = '$' + this.value + 'B';
+				outputOne.style.left = this.value / this.getAttribute('max') * 100 + '%';
+			} else {
+				outputTwo.style.left = this.value / this.getAttribute('max') * 100 + '%';
+				outputTwo.innerHTML = '$' + this.value + 'B';
+			}
+			if (parseInt(rangeOne.value) > parseInt(rangeTwo.value)) {
+				inclRange.style.width = (rangeOne.value - rangeTwo.value) / this.getAttribute('max') * 100 + '%';
+				inclRange.style.left = rangeTwo.value / this.getAttribute('max') * 100 + '%';
+			} else {
+				inclRange.style.width = (rangeTwo.value - rangeOne.value) / this.getAttribute('max') * 100 + '%';
+				inclRange.style.left = rangeOne.value / this.getAttribute('max') * 100 + '%';
+			}
+		};
+
+	document.addEventListener('DOMContentLoaded', function () {
+		updateView.call(rangeOne);
+		updateView.call(rangeTwo);
+		$('input[type="range"]').on('mouseup', function() {
+			this.blur();
+		}).on('mousedown input', function () {
+			updateView.call(this);
+		});
+	});
+</script>
+</body>
+</html>
