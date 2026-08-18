@@ -1,0 +1,7502 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>OVTLYR | Live Update</title>
+<meta name="title" content="" />
+<meta name="description" content="Turning Investor Behavior into Stock Market Success" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<link rel="icon" type="image/ico" sizes="32x32" href="images/favicon-32x32.ico">
+<link rel="canonical" href="" />
+<meta name="twitter:card" content="" />
+<meta name="twitter:site" content="" />
+<meta name="twitter:title" content="" />
+<meta name="twitter:description" content="" />
+<meta name="twitter:image" content="" />
+<meta property="og:title" content="" />
+<meta property="og:site_name" content="" />
+<meta property="og:url" content="" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="" />
+<meta property="og:image" content="" />
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/css/bootstrap-datepicker.standalone.min.css" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<!-- <link rel="stylesheet" href="css/front-style.css" /> -->
+<link rel="stylesheet" href="css/front-style-new.css" />
+</head>
+<body>
+  <header class="header_outer">
+    <div class="header_inner1 new_head" style="display: none;">
+      <div class="container container_mobile">
+        <div class="top_header">
+          <p><a target="_blank" href="http://ovtlyrtraining.com/">Sign Up For Our Free Upcoming Webclass for Traders</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="header_inner2 new_head2">
+      <div class="container container_mobile">
+        <div class="header_sec">
+          <div class="header_sec1">
+            <a href="home.html">
+              <img class="white_logo" src="images/Ovtlyr-Logo.svg" alt="OVTLYR Logo" />
+              <img class="black_logo" src="images/black-logo.svg" alt="OVTLYR Logo" />
+            </a>
+          </div>
+          <div class="header_sec2">
+            <ul>
+              <li><button type="button" class="yellow_btn rounded_radius">Testimonials</button></li>
+              <li><a href="features.html">Features</a></li>
+              <li><a href="pricing.html">Pricing</a></li>
+              <li><a href="community.html">Community</a></li>
+              <!-- Without Login -->
+              <!-- <li><a href="sign-up.html">Get Started</a></li>
+              <li><a href="log-in.html" class="signUp_btn">My Account</a></li> -->
+              <!-- With Login -->
+              <li><a href="javascript:void(0);">Logout</a></li>
+              <li><a href="dashboard.html" class="signUp_btn">My Account</a></li>
+            </ul>
+            <div class="mobile_menu">
+              <div class="b-nav">
+                <div class="menu_head">
+                  <a href="home.html"><img src="images/black-logo.svg" alt="OVTLYR Logo" /></a>
+                  <button type="button" class="b-menu2"><span class="material-symbols-outlined">close</span></button>
+                </div>
+                <ul>
+                  <li class="button_mobile"><button type="button" class="yellow_btn rounded_radius">Testimonials</button></li>
+                  <li><a href="features.html">Features</a></li>
+                  <li><a href="pricing.html">Pricing</a></li>
+                  <li><a href="community.html">Community</a></li>
+                  <!-- Without Login -->
+                  <!-- <li><a href="sign-up.html">Get Started</a></li>
+                  <li><a href="log-in.html" class="signUp_btn">My Account</a></li> -->
+                  <!-- With Login -->
+                  <li><a href="javascript:void(0);">Logout</a></li>
+                  <li class="button_mobile"><a href="dashboard.html" class="signUp_btn">My Account</a></li>
+                </ul>
+              </div>
+              <!-- Burger-Icon -->
+              <div class="b-container">
+                <div class="b-menu">
+                  <div class="b-bun b-bun--top"></div>
+                  <div class="b-bun b-bun--mid"></div>
+                  <div class="b-bun b-bun--bottom"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="outer_main">
+    <section class="calendar1">
+      <div class="container">
+        <div class="calendar11">
+          <h3>Selected Date:</h3>
+          <div class="input_group">
+            <div class="date_flex">
+              <input class="form_control date" type="text" name="selectdate" value="23-12-2025" placeholder="Select Date" />
+              <span class="input-group-btn">
+                <span class="material-symbols-outlined">calendar_month</span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="calendar12">
+          <p class="syncTime"><b>Last Synced:</b> <span>25 Dec, 2025 | 11:30 am</span></p>
+          <div class="header0">
+            <div class="header1">
+              <img src="images/current-user.svg" class="blink_me" alt="Online User" />
+              <div>
+                <div class="metric">Online</div>
+                <div class="value" id="todayValue">05</div>
+              </div>
+            </div>
+            <div class="header1">
+              <img src="images/concurrent-user.svg" alt="Concurrent Users" />
+              <div>
+                <div class="metric">Users Load</div>
+                <div class="value">12</div>
+              </div>
+            </div>
+          </div>
+          <div id="live_update"></div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer_outer">
+      <div class="container">
+        <div class="footer_outer1">
+          <div class="footer_outer11">
+            <a href="home.html"><img src="images/Ovtlyr-Logo.svg" alt="OVTLYR Logo" /></a>
+            <ul>
+              <li><a href="https://www.facebook.com/Ovtlyr/" target="_blank"><img src="images/facebook.svg" alt="Facebook" /></a></li>
+              <li><a href="https://twitter.com/ovtlyr" target="_blank"><img src="images/twitter.svg" alt="Twitter" /></a></li>
+              <li><a href="https://www.instagram.com/ovtlyrinc/" target="_blank"><img src="images/instagram.svg" alt="Instagram" /></a></li>
+              <li><a href="https://www.linkedin.com/company/ovtlyr/" target="_blank"><img src="images/linkedin.svg" alt="LinkedIn" /></a></li>
+              <li><a href="https://www.youtube.com/channel/UCzEWI-YKGVwO20pTFmVkFig" target="_blank"><img src="images/youtube.svg" alt="YouTube" /></a></li>
+            </ul>
+          </div>
+          <div class="footer_outer12">
+            <div>
+              <ul>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="coverage-list.html">Coverage List</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="affiliates.html">Affiliates</a></li>
+                <li><a href="blogs.html">Blog</a></li>
+                <li><a href="roadmap.html">Roadmap</a></li>
+                <li><a href="sitemap.html">Sitemap</a></li>
+              </ul>
+            </div>
+            <div>
+              <h5>Socials</h5>
+              <ul>
+                <li><a href="https://www.instagram.com/ovtlyrinc/" target="_blank">Instagram</a></li>
+                <li><a href="https://twitter.com/ovtlyr" target="_blank">Twitter</a></li>
+                <li><a href="https://www.facebook.com/Ovtlyr/" target="_blank">Facebook</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer_outer2">
+          <p>©2025 OVTLYR. All Rights Reserved</p>
+          <ul>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms-of-use.html">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <!--======= MOBILE MENU START =======-->
+  <script>
+    (function() {
+      var body = document.body;
+      var burgerMenu = document.getElementsByClassName('b-menu')[0];
+      var closeBtn = document.getElementsByClassName('b-menu2')[0];
+      var burgerContain = document.getElementsByClassName('b-container')[0];
+      var burgerNav = document.getElementsByClassName('b-nav')[0];
+      var body = document.getElementsByTagName('body')[0];
+    
+      burgerMenu.addEventListener('click', function toggleClasses() {
+        [burgerContain, burgerNav, body].forEach(function (el) {
+          el.classList.toggle('open');
+        });
+      }, false);
+      closeBtn.addEventListener('click', function toggleClasses() {
+        [burgerContain, burgerNav, body].forEach(function (el) {
+          el.classList.toggle('open');
+        });
+      }, false);
+    
+      $('body,html').click(function (e) {
+        var container = $('.b-container , .b-nav');
+        var body = document.getElementsByTagName('body')[0];
+        if (!container.is(e.target) && container.has(e.target).length === 0) {
+          container.removeClass('open');
+          $(this).removeClass('open');
+        }
+      });
+    })();
+  </script>
+<!--======== MOBILE MENU END ========-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/js/bootstrap-datepicker.min.js"></script>
+<script>
+$(".date").datepicker({
+  format: "dd-mm-yyyy"
+});
+</script>
+<script src="https://code.highcharts.com/stock/highstock.js"></script>
+<script>
+  var rawData =
+    [
+      {
+        "QuoteDate": "22/12/2025 23:59",
+        "UserLoad": 9,
+        "Online": 11
+      },
+      {
+        "QuoteDate": "22/12/2025 23:58",
+        "UserLoad": 8,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 23:57",
+        "UserLoad": 5,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 23:56",
+        "UserLoad": 4,
+        "Online": 2
+      },
+      {
+        "QuoteDate": "22/12/2025 23:55",
+        "UserLoad": 8,
+        "Online": 10
+      },
+      {
+        "QuoteDate": "22/12/2025 23:54",
+        "UserLoad": 10,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 23:53",
+        "UserLoad": 8,
+        "Online": 10
+      },
+      {
+        "QuoteDate": "22/12/2025 23:52",
+        "UserLoad": 9,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 23:51",
+        "UserLoad": 9,
+        "Online": 11
+      },
+      {
+        "QuoteDate": "22/12/2025 23:50",
+        "UserLoad": 9,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 23:49",
+        "UserLoad": 8,
+        "Online": 10
+      },
+      {
+        "QuoteDate": "22/12/2025 23:48",
+        "UserLoad": 7,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 23:47",
+        "UserLoad": 8,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 23:46",
+        "UserLoad": 8,
+        "Online": 11
+      },
+      {
+        "QuoteDate": "22/12/2025 23:45",
+        "UserLoad": 5,
+        "Online": 3
+      },
+      {
+        "QuoteDate": "22/12/2025 23:44",
+        "UserLoad": 6,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 23:43",
+        "UserLoad": 7,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 23:42",
+        "UserLoad": 5,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 23:41",
+        "UserLoad": 6,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 23:40",
+        "UserLoad": 6,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 23:39",
+        "UserLoad": 7,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 23:38",
+        "UserLoad": 10,
+        "Online": 12
+      },
+      {
+        "QuoteDate": "22/12/2025 23:37",
+        "UserLoad": 9,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 23:36",
+        "UserLoad": 6,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 23:35",
+        "UserLoad": 8,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 23:34",
+        "UserLoad": 9,
+        "Online": 12
+      },
+      {
+        "QuoteDate": "22/12/2025 23:33",
+        "UserLoad": 7,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 23:32",
+        "UserLoad": 4,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 23:31",
+        "UserLoad": 4,
+        "Online": 2
+      },
+      {
+        "QuoteDate": "22/12/2025 23:30",
+        "UserLoad": 5,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 23:29",
+        "UserLoad": 7,
+        "Online": 10
+      },
+      {
+        "QuoteDate": "22/12/2025 23:28",
+        "UserLoad": 8,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 23:27",
+        "UserLoad": 8,
+        "Online": 11
+      },
+      {
+        "QuoteDate": "22/12/2025 23:26",
+        "UserLoad": 9,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 23:25",
+        "UserLoad": 7,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 23:24",
+        "UserLoad": 5,
+        "Online": 2
+      },
+      {
+        "QuoteDate": "22/12/2025 23:23",
+        "UserLoad": 4,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 23:22",
+        "UserLoad": 5,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 23:21",
+        "UserLoad": 8,
+        "Online": 11
+      },
+      {
+        "QuoteDate": "22/12/2025 23:20",
+        "UserLoad": 8,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 23:19",
+        "UserLoad": 7,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 23:18",
+        "UserLoad": 2,
+        "Online": 2
+      },
+      {
+        "QuoteDate": "22/12/2025 23:17",
+        "UserLoad": 4,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 23:16",
+        "UserLoad": 3,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 23:15",
+        "UserLoad": 5,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 23:14",
+        "UserLoad": 7,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 23:13",
+        "UserLoad": 8,
+        "Online": 10
+      },
+      {
+        "QuoteDate": "22/12/2025 23:12",
+        "UserLoad": 7,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 23:11",
+        "UserLoad": 5,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 23:10",
+        "UserLoad": 4,
+        "Online": 2
+      },
+      {
+        "QuoteDate": "22/12/2025 23:09",
+        "UserLoad": 4,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 23:08",
+        "UserLoad": 8,
+        "Online": 11
+      },
+      {
+        "QuoteDate": "22/12/2025 23:07",
+        "UserLoad": 9,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 23:06",
+        "UserLoad": 11,
+        "Online": 12
+      },
+      {
+        "QuoteDate": "22/12/2025 23:05",
+        "UserLoad": 10,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 23:04",
+        "UserLoad": 8,
+        "Online": 10
+      },
+      {
+        "QuoteDate": "22/12/2025 23:03",
+        "UserLoad": 7,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 23:02",
+        "UserLoad": 3,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 23:01",
+        "UserLoad": 2,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 23:00",
+        "UserLoad": 6,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 22:59",
+        "UserLoad": 5,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 22:58",
+        "UserLoad": 6,
+        "Online": 3
+      },
+      {
+        "QuoteDate": "22/12/2025 22:57",
+        "UserLoad": 9,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 22:56",
+        "UserLoad": 10,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 22:55",
+        "UserLoad": 6,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 22:54",
+        "UserLoad": 6,
+        "Online": 12
+      },
+      {
+        "QuoteDate": "22/12/2025 22:53",
+        "UserLoad": 6,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 22:52",
+        "UserLoad": 7,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 22:51",
+        "UserLoad": 8,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 22:50",
+        "UserLoad": 6,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 22:49",
+        "UserLoad": 8,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 22:48",
+        "UserLoad": 9,
+        "Online": 10
+      },
+      {
+        "QuoteDate": "22/12/2025 22:47",
+        "UserLoad": 10,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 22:46",
+        "UserLoad": 10,
+        "Online": 11
+      },
+      {
+        "QuoteDate": "22/12/2025 22:45",
+        "UserLoad": 10,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 22:44",
+        "UserLoad": 10,
+        "Online": 12
+      },
+      {
+        "QuoteDate": "22/12/2025 22:43",
+        "UserLoad": 9,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 22:42",
+        "UserLoad": 8,
+        "Online": 13
+      },
+      {
+        "QuoteDate": "22/12/2025 22:41",
+        "UserLoad": 8,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 22:40",
+        "UserLoad": 8,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 22:39",
+        "UserLoad": 5,
+        "Online": 10
+      },
+      {
+        "QuoteDate": "22/12/2025 22:38",
+        "UserLoad": 4,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 22:37",
+        "UserLoad": 5,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 22:36",
+        "UserLoad": 6,
+        "Online": 3
+      },
+      {
+        "QuoteDate": "22/12/2025 22:35",
+        "UserLoad": 6,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 22:34",
+        "UserLoad": 2,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 22:33",
+        "UserLoad": 2,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 22:32",
+        "UserLoad": 4,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 22:31",
+        "UserLoad": 5,
+        "Online": 2
+      },
+      {
+        "QuoteDate": "22/12/2025 22:30",
+        "UserLoad": 7,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 22:29",
+        "UserLoad": 7,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 22:28",
+        "UserLoad": 5,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 22:27",
+        "UserLoad": 4,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 22:26",
+        "UserLoad": 7,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 22:25",
+        "UserLoad": 10,
+        "Online": 2
+      },
+      {
+        "QuoteDate": "22/12/2025 22:24",
+        "UserLoad": 10,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 22:23",
+        "UserLoad": 9,
+        "Online": 12
+      },
+      {
+        "QuoteDate": "22/12/2025 22:22",
+        "UserLoad": 5,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 22:21",
+        "UserLoad": 7,
+        "Online": 11
+      },
+      {
+        "QuoteDate": "22/12/2025 22:20",
+        "UserLoad": 7,
+        "Online": 3
+      },
+      {
+        "QuoteDate": "22/12/2025 22:19",
+        "UserLoad": 4,
+        "Online": 10
+      },
+      {
+        "QuoteDate": "22/12/2025 22:18",
+        "UserLoad": 3,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 22:17",
+        "UserLoad": 5,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 22:16",
+        "UserLoad": 7,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 22:15",
+        "UserLoad": 9,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 22:14",
+        "UserLoad": 7,
+        "Online": 11
+      },
+      {
+        "QuoteDate": "22/12/2025 22:13",
+        "UserLoad": 7,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 22:12",
+        "UserLoad": 7,
+        "Online": 10
+      },
+      {
+        "QuoteDate": "22/12/2025 22:11",
+        "UserLoad": 7,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 22:10",
+        "UserLoad": 8,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 22:09",
+        "UserLoad": 8,
+        "Online": 10
+      },
+      {
+        "QuoteDate": "22/12/2025 22:08",
+        "UserLoad": 7,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 22:07",
+        "UserLoad": 9,
+        "Online": 11
+      },
+      {
+        "QuoteDate": "22/12/2025 22:06",
+        "UserLoad": 8,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 22:05",
+        "UserLoad": 10,
+        "Online": 12
+      },
+      {
+        "QuoteDate": "22/12/2025 22:04",
+        "UserLoad": 13,
+        "Online": 15
+      },
+      {
+        "QuoteDate": "22/12/2025 22:03",
+        "UserLoad": 11,
+        "Online": 13
+      },
+      {
+        "QuoteDate": "22/12/2025 22:02",
+        "UserLoad": 11,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 22:01",
+        "UserLoad": 10,
+        "Online": 12
+      },
+      {
+        "QuoteDate": "22/12/2025 22:00",
+        "UserLoad": 7,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 21:59",
+        "UserLoad": 7,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 21:58",
+        "UserLoad": 9,
+        "Online": 11
+      },
+      {
+        "QuoteDate": "22/12/2025 21:57",
+        "UserLoad": 8,
+        "Online": 10
+      },
+      {
+        "QuoteDate": "22/12/2025 21:56",
+        "UserLoad": 7,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 21:55",
+        "UserLoad": 5,
+        "Online": 3
+      },
+      {
+        "QuoteDate": "22/12/2025 21:54",
+        "UserLoad": 11,
+        "Online": 13
+      },
+      {
+        "QuoteDate": "22/12/2025 21:53",
+        "UserLoad": 12,
+        "Online": 14
+      },
+      {
+        "QuoteDate": "22/12/2025 21:52",
+        "UserLoad": 9,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 21:51",
+        "UserLoad": 10,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 21:50",
+        "UserLoad": 12,
+        "Online": 15
+      },
+      {
+        "QuoteDate": "22/12/2025 21:49",
+        "UserLoad": 10,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 21:48",
+        "UserLoad": 9,
+        "Online": 11
+      },
+      {
+        "QuoteDate": "22/12/2025 21:47",
+        "UserLoad": 10,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 21:46",
+        "UserLoad": 9,
+        "Online": 12
+      },
+      {
+        "QuoteDate": "22/12/2025 21:45",
+        "UserLoad": 11,
+        "Online": 13
+      },
+      {
+        "QuoteDate": "22/12/2025 21:44",
+        "UserLoad": 10,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 21:43",
+        "UserLoad": 11,
+        "Online": 13
+      },
+      {
+        "QuoteDate": "22/12/2025 21:42",
+        "UserLoad": 12,
+        "Online": 14
+      },
+      {
+        "QuoteDate": "22/12/2025 21:41",
+        "UserLoad": 17,
+        "Online": 19
+      },
+      {
+        "QuoteDate": "22/12/2025 21:40",
+        "UserLoad": 17,
+        "Online": 15
+      },
+      {
+        "QuoteDate": "22/12/2025 21:39",
+        "UserLoad": 10,
+        "Online": 12
+      },
+      {
+        "QuoteDate": "22/12/2025 21:38",
+        "UserLoad": 14,
+        "Online": 16
+      },
+      {
+        "QuoteDate": "22/12/2025 21:37",
+        "UserLoad": 17,
+        "Online": 19
+      },
+      {
+        "QuoteDate": "22/12/2025 21:36",
+        "UserLoad": 16,
+        "Online": 14
+      },
+      {
+        "QuoteDate": "22/12/2025 21:35",
+        "UserLoad": 18,
+        "Online": 20
+      },
+      {
+        "QuoteDate": "22/12/2025 21:34",
+        "UserLoad": 16,
+        "Online": 18
+      },
+      {
+        "QuoteDate": "22/12/2025 21:33",
+        "UserLoad": 15,
+        "Online": 13
+      },
+      {
+        "QuoteDate": "22/12/2025 21:32",
+        "UserLoad": 11,
+        "Online": 15
+      },
+      {
+        "QuoteDate": "22/12/2025 21:31",
+        "UserLoad": 13,
+        "Online": 10
+      },
+      {
+        "QuoteDate": "22/12/2025 21:30",
+        "UserLoad": 12,
+        "Online": 15
+      },
+      {
+        "QuoteDate": "22/12/2025 21:29",
+        "UserLoad": 13,
+        "Online": 11
+      },
+      {
+        "QuoteDate": "22/12/2025 21:28",
+        "UserLoad": 13,
+        "Online": 14
+      },
+      {
+        "QuoteDate": "22/12/2025 21:27",
+        "UserLoad": 12,
+        "Online": 17
+      },
+      {
+        "QuoteDate": "22/12/2025 21:26",
+        "UserLoad": 14,
+        "Online": 20
+      },
+      {
+        "QuoteDate": "22/12/2025 21:25",
+        "UserLoad": 18,
+        "Online": 23
+      },
+      {
+        "QuoteDate": "22/12/2025 21:24",
+        "UserLoad": 21,
+        "Online": 17
+      },
+      {
+        "QuoteDate": "22/12/2025 21:23",
+        "UserLoad": 19,
+        "Online": 21
+      },
+      {
+        "QuoteDate": "22/12/2025 21:22",
+        "UserLoad": 19,
+        "Online": 16
+      },
+      {
+        "QuoteDate": "22/12/2025 21:21",
+        "UserLoad": 14,
+        "Online": 10
+      },
+      {
+        "QuoteDate": "22/12/2025 21:20",
+        "UserLoad": 12,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 21:19",
+        "UserLoad": 9,
+        "Online": 12
+      },
+      {
+        "QuoteDate": "22/12/2025 21:18",
+        "UserLoad": 14,
+        "Online": 16
+      },
+      {
+        "QuoteDate": "22/12/2025 21:17",
+        "UserLoad": 14,
+        "Online": 13
+      },
+      {
+        "QuoteDate": "22/12/2025 21:16",
+        "UserLoad": 15,
+        "Online": 16
+      },
+      {
+        "QuoteDate": "22/12/2025 21:15",
+        "UserLoad": 14,
+        "Online": 10
+      },
+      {
+        "QuoteDate": "22/12/2025 21:14",
+        "UserLoad": 12,
+        "Online": 15
+      },
+      {
+        "QuoteDate": "22/12/2025 21:13",
+        "UserLoad": 13,
+        "Online": 12
+      },
+      {
+        "QuoteDate": "22/12/2025 21:12",
+        "UserLoad": 10,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 21:11",
+        "UserLoad": 11,
+        "Online": 11
+      },
+      {
+        "QuoteDate": "22/12/2025 21:10",
+        "UserLoad": 9,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 21:09",
+        "UserLoad": 9,
+        "Online": 12
+      },
+      {
+        "QuoteDate": "22/12/2025 21:08",
+        "UserLoad": 14,
+        "Online": 16
+      },
+      {
+        "QuoteDate": "22/12/2025 21:07",
+        "UserLoad": 14,
+        "Online": 11
+      },
+      {
+        "QuoteDate": "22/12/2025 21:06",
+        "UserLoad": 13,
+        "Online": 13
+      },
+      {
+        "QuoteDate": "22/12/2025 21:05",
+        "UserLoad": 11,
+        "Online": 16
+      },
+      {
+        "QuoteDate": "22/12/2025 21:04",
+        "UserLoad": 14,
+        "Online": 17
+      },
+      {
+        "QuoteDate": "22/12/2025 21:03",
+        "UserLoad": 19,
+        "Online": 20
+      },
+      {
+        "QuoteDate": "22/12/2025 21:02",
+        "UserLoad": 18,
+        "Online": 15
+      },
+      {
+        "QuoteDate": "22/12/2025 21:01",
+        "UserLoad": 13,
+        "Online": 14
+      },
+      {
+        "QuoteDate": "22/12/2025 21:00",
+        "UserLoad": 12,
+        "Online": 18
+      },
+      {
+        "QuoteDate": "22/12/2025 20:59",
+        "UserLoad": 16,
+        "Online": 15
+      },
+      {
+        "QuoteDate": "22/12/2025 20:58",
+        "UserLoad": 17,
+        "Online": 21
+      },
+      {
+        "QuoteDate": "22/12/2025 20:57",
+        "UserLoad": 18,
+        "Online": 23
+      },
+      {
+        "QuoteDate": "22/12/2025 20:56",
+        "UserLoad": 21,
+        "Online": 27
+      },
+      {
+        "QuoteDate": "22/12/2025 20:55",
+        "UserLoad": 25,
+        "Online": 15
+      },
+      {
+        "QuoteDate": "22/12/2025 20:54",
+        "UserLoad": 17,
+        "Online": 19
+      },
+      {
+        "QuoteDate": "22/12/2025 20:53",
+        "UserLoad": 17,
+        "Online": 16
+      },
+      {
+        "QuoteDate": "22/12/2025 20:52",
+        "UserLoad": 18,
+        "Online": 21
+      },
+      {
+        "QuoteDate": "22/12/2025 20:51",
+        "UserLoad": 18,
+        "Online": 26
+      },
+      {
+        "QuoteDate": "22/12/2025 20:50",
+        "UserLoad": 24,
+        "Online": 21
+      },
+      {
+        "QuoteDate": "22/12/2025 20:49",
+        "UserLoad": 23,
+        "Online": 28
+      },
+      {
+        "QuoteDate": "22/12/2025 20:48",
+        "UserLoad": 26,
+        "Online": 23
+      },
+      {
+        "QuoteDate": "22/12/2025 20:47",
+        "UserLoad": 25,
+        "Online": 20
+      },
+      {
+        "QuoteDate": "22/12/2025 20:46",
+        "UserLoad": 22,
+        "Online": 21
+      },
+      {
+        "QuoteDate": "22/12/2025 20:45",
+        "UserLoad": 19,
+        "Online": 18
+      },
+      {
+        "QuoteDate": "22/12/2025 20:44",
+        "UserLoad": 16,
+        "Online": 19
+      },
+      {
+        "QuoteDate": "22/12/2025 20:43",
+        "UserLoad": 21,
+        "Online": 23
+      },
+      {
+        "QuoteDate": "22/12/2025 20:42",
+        "UserLoad": 25,
+        "Online": 29
+      },
+      {
+        "QuoteDate": "22/12/2025 20:41",
+        "UserLoad": 27,
+        "Online": 32
+      },
+      {
+        "QuoteDate": "22/12/2025 20:40",
+        "UserLoad": 34,
+        "Online": 37
+      },
+      {
+        "QuoteDate": "22/12/2025 20:39",
+        "UserLoad": 35,
+        "Online": 33
+      },
+      {
+        "QuoteDate": "22/12/2025 20:38",
+        "UserLoad": 36,
+        "Online": 28
+      },
+      {
+        "QuoteDate": "22/12/2025 20:37",
+        "UserLoad": 31,
+        "Online": 33
+      },
+      {
+        "QuoteDate": "22/12/2025 20:36",
+        "UserLoad": 30,
+        "Online": 26
+      },
+      {
+        "QuoteDate": "22/12/2025 20:35",
+        "UserLoad": 28,
+        "Online": 33
+      },
+      {
+        "QuoteDate": "22/12/2025 20:34",
+        "UserLoad": 31,
+        "Online": 27
+      },
+      {
+        "QuoteDate": "22/12/2025 20:33",
+        "UserLoad": 29,
+        "Online": 22
+      },
+      {
+        "QuoteDate": "22/12/2025 20:32",
+        "UserLoad": 24,
+        "Online": 25
+      },
+      {
+        "QuoteDate": "22/12/2025 20:31",
+        "UserLoad": 23,
+        "Online": 22
+      },
+      {
+        "QuoteDate": "22/12/2025 20:30",
+        "UserLoad": 25,
+        "Online": 28
+      },
+      {
+        "QuoteDate": "22/12/2025 20:29",
+        "UserLoad": 30,
+        "Online": 30
+      },
+      {
+        "QuoteDate": "22/12/2025 20:28",
+        "UserLoad": 28,
+        "Online": 26
+      },
+      {
+        "QuoteDate": "22/12/2025 20:27",
+        "UserLoad": 28,
+        "Online": 21
+      },
+      {
+        "QuoteDate": "22/12/2025 20:26",
+        "UserLoad": 23,
+        "Online": 25
+      },
+      {
+        "QuoteDate": "22/12/2025 20:25",
+        "UserLoad": 23,
+        "Online": 21
+      },
+      {
+        "QuoteDate": "22/12/2025 20:24",
+        "UserLoad": 24,
+        "Online": 25
+      },
+      {
+        "QuoteDate": "22/12/2025 20:23",
+        "UserLoad": 23,
+        "Online": 29
+      },
+      {
+        "QuoteDate": "22/12/2025 20:22",
+        "UserLoad": 27,
+        "Online": 33
+      },
+      {
+        "QuoteDate": "22/12/2025 20:21",
+        "UserLoad": 31,
+        "Online": 29
+      },
+      {
+        "QuoteDate": "22/12/2025 20:20",
+        "UserLoad": 31,
+        "Online": 18
+      },
+      {
+        "QuoteDate": "22/12/2025 20:19",
+        "UserLoad": 20,
+        "Online": 22
+      },
+      {
+        "QuoteDate": "22/12/2025 20:18",
+        "UserLoad": 20,
+        "Online": 25
+      },
+      {
+        "QuoteDate": "22/12/2025 20:17",
+        "UserLoad": 23,
+        "Online": 21
+      },
+      {
+        "QuoteDate": "22/12/2025 20:16",
+        "UserLoad": 23,
+        "Online": 22
+      },
+      {
+        "QuoteDate": "22/12/2025 20:15",
+        "UserLoad": 24,
+        "Online": 24
+      },
+      {
+        "QuoteDate": "22/12/2025 20:14",
+        "UserLoad": 22,
+        "Online": 28
+      },
+      {
+        "QuoteDate": "22/12/2025 20:13",
+        "UserLoad": 26,
+        "Online": 27
+      },
+      {
+        "QuoteDate": "22/12/2025 20:12",
+        "UserLoad": 29,
+        "Online": 27
+      },
+      {
+        "QuoteDate": "22/12/2025 20:11",
+        "UserLoad": 25,
+        "Online": 21
+      },
+      {
+        "QuoteDate": "22/12/2025 20:10",
+        "UserLoad": 19,
+        "Online": 21
+      },
+      {
+        "QuoteDate": "22/12/2025 20:09",
+        "UserLoad": 23,
+        "Online": 26
+      },
+      {
+        "QuoteDate": "22/12/2025 20:08",
+        "UserLoad": 24,
+        "Online": 25
+      },
+      {
+        "QuoteDate": "22/12/2025 20:07",
+        "UserLoad": 23,
+        "Online": 29
+      },
+      {
+        "QuoteDate": "22/12/2025 20:06",
+        "UserLoad": 28,
+        "Online": 24
+      },
+      {
+        "QuoteDate": "22/12/2025 20:05",
+        "UserLoad": 27,
+        "Online": 23
+      },
+      {
+        "QuoteDate": "22/12/2025 20:04",
+        "UserLoad": 27,
+        "Online": 25
+      },
+      {
+        "QuoteDate": "22/12/2025 20:03",
+        "UserLoad": 27,
+        "Online": 19
+      },
+      {
+        "QuoteDate": "22/12/2025 20:02",
+        "UserLoad": 21,
+        "Online": 17
+      },
+      {
+        "QuoteDate": "22/12/2025 20:01",
+        "UserLoad": 21,
+        "Online": 18
+      },
+      {
+        "QuoteDate": "22/12/2025 20:00",
+        "UserLoad": 16,
+        "Online": 15
+      },
+      {
+        "QuoteDate": "22/12/2025 19:59",
+        "UserLoad": 14,
+        "Online": 13
+      },
+      {
+        "QuoteDate": "22/12/2025 19:58",
+        "UserLoad": 12,
+        "Online": 17
+      },
+      {
+        "QuoteDate": "22/12/2025 19:57",
+        "UserLoad": 15,
+        "Online": 20
+      },
+      {
+        "QuoteDate": "22/12/2025 19:56",
+        "UserLoad": 18,
+        "Online": 20
+      },
+      {
+        "QuoteDate": "22/12/2025 19:55",
+        "UserLoad": 22,
+        "Online": 26
+      },
+      {
+        "QuoteDate": "22/12/2025 19:54",
+        "UserLoad": 22,
+        "Online": 20
+      },
+      {
+        "QuoteDate": "22/12/2025 19:53",
+        "UserLoad": 24,
+        "Online": 19
+      },
+      {
+        "QuoteDate": "22/12/2025 19:52",
+        "UserLoad": 22,
+        "Online": 20
+      },
+      {
+        "QuoteDate": "22/12/2025 19:51",
+        "UserLoad": 21,
+        "Online": 22
+      },
+      {
+        "QuoteDate": "22/12/2025 19:50",
+        "UserLoad": 18,
+        "Online": 19
+      },
+      {
+        "QuoteDate": "22/12/2025 19:49",
+        "UserLoad": 20,
+        "Online": 15
+      },
+      {
+        "QuoteDate": "22/12/2025 19:48",
+        "UserLoad": 17,
+        "Online": 17
+      },
+      {
+        "QuoteDate": "22/12/2025 19:47",
+        "UserLoad": 17,
+        "Online": 21
+      },
+      {
+        "QuoteDate": "22/12/2025 19:46",
+        "UserLoad": 15,
+        "Online": 19
+      },
+      {
+        "QuoteDate": "22/12/2025 19:45",
+        "UserLoad": 17,
+        "Online": 22
+      },
+      {
+        "QuoteDate": "22/12/2025 19:44",
+        "UserLoad": 19,
+        "Online": 15
+      },
+      {
+        "QuoteDate": "22/12/2025 19:43",
+        "UserLoad": 21,
+        "Online": 16
+      },
+      {
+        "QuoteDate": "22/12/2025 19:42",
+        "UserLoad": 20,
+        "Online": 21
+      },
+      {
+        "QuoteDate": "22/12/2025 19:41",
+        "UserLoad": 17,
+        "Online": 25
+      },
+      {
+        "QuoteDate": "22/12/2025 19:40",
+        "UserLoad": 14,
+        "Online": 23
+      },
+      {
+        "QuoteDate": "22/12/2025 19:39",
+        "UserLoad": 19,
+        "Online": 21
+      },
+      {
+        "QuoteDate": "22/12/2025 19:38",
+        "UserLoad": 23,
+        "Online": 21
+      },
+      {
+        "QuoteDate": "22/12/2025 19:37",
+        "UserLoad": 25,
+        "Online": 25
+      },
+      {
+        "QuoteDate": "22/12/2025 19:36",
+        "UserLoad": 20,
+        "Online": 24
+      },
+      {
+        "QuoteDate": "22/12/2025 19:35",
+        "UserLoad": 19,
+        "Online": 19
+      },
+      {
+        "QuoteDate": "22/12/2025 19:34",
+        "UserLoad": 23,
+        "Online": 29
+      },
+      {
+        "QuoteDate": "22/12/2025 19:33",
+        "UserLoad": 22,
+        "Online": 26
+      },
+      {
+        "QuoteDate": "22/12/2025 19:32",
+        "UserLoad": 21,
+        "Online": 29
+      },
+      {
+        "QuoteDate": "22/12/2025 19:31",
+        "UserLoad": 27,
+        "Online": 21
+      },
+      {
+        "QuoteDate": "22/12/2025 19:30",
+        "UserLoad": 28,
+        "Online": 17
+      },
+      {
+        "QuoteDate": "22/12/2025 19:29",
+        "UserLoad": 27,
+        "Online": 21
+      },
+      {
+        "QuoteDate": "22/12/2025 19:28",
+        "UserLoad": 19,
+        "Online": 30
+      },
+      {
+        "QuoteDate": "22/12/2025 19:27",
+        "UserLoad": 19,
+        "Online": 17
+      },
+      {
+        "QuoteDate": "22/12/2025 19:26",
+        "UserLoad": 23,
+        "Online": 11
+      },
+      {
+        "QuoteDate": "22/12/2025 19:25",
+        "UserLoad": 28,
+        "Online": 17
+      },
+      {
+        "QuoteDate": "22/12/2025 19:24",
+        "UserLoad": 19,
+        "Online": 13
+      },
+      {
+        "QuoteDate": "22/12/2025 19:23",
+        "UserLoad": 13,
+        "Online": 11
+      },
+      {
+        "QuoteDate": "22/12/2025 19:22",
+        "UserLoad": 15,
+        "Online": 17
+      },
+      {
+        "QuoteDate": "22/12/2025 19:21",
+        "UserLoad": 15,
+        "Online": 21
+      },
+      {
+        "QuoteDate": "22/12/2025 19:20",
+        "UserLoad": 13,
+        "Online": 17
+      },
+      {
+        "QuoteDate": "22/12/2025 19:19",
+        "UserLoad": 15,
+        "Online": 13
+      },
+      {
+        "QuoteDate": "22/12/2025 19:18",
+        "UserLoad": 19,
+        "Online": 17
+      },
+      {
+        "QuoteDate": "22/12/2025 19:17",
+        "UserLoad": 19,
+        "Online": 11
+      },
+      {
+        "QuoteDate": "22/12/2025 19:16",
+        "UserLoad": 15,
+        "Online": 13
+      },
+      {
+        "QuoteDate": "22/12/2025 19:15",
+        "UserLoad": 14,
+        "Online": 10
+      },
+      {
+        "QuoteDate": "22/12/2025 19:14",
+        "UserLoad": 15,
+        "Online": 11
+      },
+      {
+        "QuoteDate": "22/12/2025 19:13",
+        "UserLoad": 13,
+        "Online": 20
+      },
+      {
+        "QuoteDate": "22/12/2025 19:12",
+        "UserLoad": 11,
+        "Online": 16
+      },
+      {
+        "QuoteDate": "22/12/2025 19:11",
+        "UserLoad": 8,
+        "Online": 16
+      },
+      {
+        "QuoteDate": "22/12/2025 19:10",
+        "UserLoad": 13,
+        "Online": 18
+      },
+      {
+        "QuoteDate": "22/12/2025 19:09",
+        "UserLoad": 18,
+        "Online": 17
+      },
+      {
+        "QuoteDate": "22/12/2025 19:08",
+        "UserLoad": 18,
+        "Online": 13
+      },
+      {
+        "QuoteDate": "22/12/2025 19:07",
+        "UserLoad": 18,
+        "Online": 15
+      },
+      {
+        "QuoteDate": "22/12/2025 19:06",
+        "UserLoad": 20,
+        "Online": 15
+      },
+      {
+        "QuoteDate": "22/12/2025 19:05",
+        "UserLoad": 15,
+        "Online": 13
+      },
+      {
+        "QuoteDate": "22/12/2025 19:04",
+        "UserLoad": 14,
+        "Online": 11
+      },
+      {
+        "QuoteDate": "22/12/2025 19:03",
+        "UserLoad": 13,
+        "Online": 21
+      },
+      {
+        "QuoteDate": "22/12/2025 19:02",
+        "UserLoad": 11,
+        "Online": 18
+      },
+      {
+        "QuoteDate": "22/12/2025 19:01",
+        "UserLoad": 13,
+        "Online": 15
+      },
+      {
+        "QuoteDate": "22/12/2025 19:00",
+        "UserLoad": 19,
+        "Online": 19
+      },
+      {
+        "QuoteDate": "22/12/2025 18:59",
+        "UserLoad": 20,
+        "Online": 17
+      },
+      {
+        "QuoteDate": "22/12/2025 18:58",
+        "UserLoad": 17,
+        "Online": 18
+      },
+      {
+        "QuoteDate": "22/12/2025 18:57",
+        "UserLoad": 21,
+        "Online": 13
+      },
+      {
+        "QuoteDate": "22/12/2025 18:56",
+        "UserLoad": 19,
+        "Online": 19
+      },
+      {
+        "QuoteDate": "22/12/2025 18:55",
+        "UserLoad": 16,
+        "Online": 24
+      },
+      {
+        "QuoteDate": "22/12/2025 18:54",
+        "UserLoad": 15,
+        "Online": 20
+      },
+      {
+        "QuoteDate": "22/12/2025 18:53",
+        "UserLoad": 17,
+        "Online": 24
+      },
+      {
+        "QuoteDate": "22/12/2025 18:52",
+        "UserLoad": 22,
+        "Online": 15
+      },
+      {
+        "QuoteDate": "22/12/2025 18:51",
+        "UserLoad": 22,
+        "Online": 23
+      },
+      {
+        "QuoteDate": "22/12/2025 18:50",
+        "UserLoad": 22,
+        "Online": 16
+      },
+      {
+        "QuoteDate": "22/12/2025 18:49",
+        "UserLoad": 17,
+        "Online": 20
+      },
+      {
+        "QuoteDate": "22/12/2025 18:48",
+        "UserLoad": 21,
+        "Online": 21
+      },
+      {
+        "QuoteDate": "22/12/2025 18:47",
+        "UserLoad": 18,
+        "Online": 20
+      },
+      {
+        "QuoteDate": "22/12/2025 18:46",
+        "UserLoad": 18,
+        "Online": 15
+      },
+      {
+        "QuoteDate": "22/12/2025 18:45",
+        "UserLoad": 19,
+        "Online": 11
+      },
+      {
+        "QuoteDate": "22/12/2025 18:44",
+        "UserLoad": 18,
+        "Online": 18
+      },
+      {
+        "QuoteDate": "22/12/2025 18:43",
+        "UserLoad": 13,
+        "Online": 21
+      },
+      {
+        "QuoteDate": "22/12/2025 18:42",
+        "UserLoad": 13,
+        "Online": 26
+      },
+      {
+        "QuoteDate": "22/12/2025 18:41",
+        "UserLoad": 16,
+        "Online": 30
+      },
+      {
+        "QuoteDate": "22/12/2025 18:40",
+        "UserLoad": 19,
+        "Online": 23
+      },
+      {
+        "QuoteDate": "22/12/2025 18:39",
+        "UserLoad": 24,
+        "Online": 25
+      },
+      {
+        "QuoteDate": "22/12/2025 18:38",
+        "UserLoad": 28,
+        "Online": 29
+      },
+      {
+        "QuoteDate": "22/12/2025 18:37",
+        "UserLoad": 25,
+        "Online": 21
+      },
+      {
+        "QuoteDate": "22/12/2025 18:36",
+        "UserLoad": 23,
+        "Online": 14
+      },
+      {
+        "QuoteDate": "22/12/2025 18:35",
+        "UserLoad": 27,
+        "Online": 18
+      },
+      {
+        "QuoteDate": "22/12/2025 18:34",
+        "UserLoad": 23,
+        "Online": 20
+      },
+      {
+        "QuoteDate": "22/12/2025 18:33",
+        "UserLoad": 16,
+        "Online": 15
+      },
+      {
+        "QuoteDate": "22/12/2025 18:32",
+        "UserLoad": 16,
+        "Online": 19
+      },
+      {
+        "QuoteDate": "22/12/2025 18:31",
+        "UserLoad": 18,
+        "Online": 25
+      },
+      {
+        "QuoteDate": "22/12/2025 18:30",
+        "UserLoad": 17,
+        "Online": 24
+      },
+      {
+        "QuoteDate": "22/12/2025 18:29",
+        "UserLoad": 21,
+        "Online": 15
+      },
+      {
+        "QuoteDate": "22/12/2025 18:28",
+        "UserLoad": 23,
+        "Online": 19
+      },
+      {
+        "QuoteDate": "22/12/2025 18:27",
+        "UserLoad": 22,
+        "Online": 13
+      },
+      {
+        "QuoteDate": "22/12/2025 18:26",
+        "UserLoad": 17,
+        "Online": 15
+      },
+      {
+        "QuoteDate": "22/12/2025 18:25",
+        "UserLoad": 17,
+        "Online": 20
+      },
+      {
+        "QuoteDate": "22/12/2025 18:24",
+        "UserLoad": 15,
+        "Online": 16
+      },
+      {
+        "QuoteDate": "22/12/2025 18:23",
+        "UserLoad": 17,
+        "Online": 18
+      },
+      {
+        "QuoteDate": "22/12/2025 18:22",
+        "UserLoad": 18,
+        "Online": 18
+      },
+      {
+        "QuoteDate": "22/12/2025 18:21",
+        "UserLoad": 14,
+        "Online": 22
+      },
+      {
+        "QuoteDate": "22/12/2025 18:20",
+        "UserLoad": 16,
+        "Online": 23
+      },
+      {
+        "QuoteDate": "22/12/2025 18:19",
+        "UserLoad": 20,
+        "Online": 27
+      },
+      {
+        "QuoteDate": "22/12/2025 18:18",
+        "UserLoad": 20,
+        "Online": 20
+      },
+      {
+        "QuoteDate": "22/12/2025 18:17",
+        "UserLoad": 20,
+        "Online": 22
+      },
+      {
+        "QuoteDate": "22/12/2025 18:16",
+        "UserLoad": 25,
+        "Online": 24
+      },
+      {
+        "QuoteDate": "22/12/2025 18:15",
+        "UserLoad": 30,
+        "Online": 23
+      },
+      {
+        "QuoteDate": "22/12/2025 18:14",
+        "UserLoad": 22,
+        "Online": 24
+      },
+      {
+        "QuoteDate": "22/12/2025 18:13",
+        "UserLoad": 20,
+        "Online": 25
+      },
+      {
+        "QuoteDate": "22/12/2025 18:12",
+        "UserLoad": 22,
+        "Online": 23
+      },
+      {
+        "QuoteDate": "22/12/2025 18:11",
+        "UserLoad": 25,
+        "Online": 20
+      },
+      {
+        "QuoteDate": "22/12/2025 18:10",
+        "UserLoad": 24,
+        "Online": 17
+      },
+      {
+        "QuoteDate": "22/12/2025 18:09",
+        "UserLoad": 22,
+        "Online": 21
+      },
+      {
+        "QuoteDate": "22/12/2025 18:08",
+        "UserLoad": 23,
+        "Online": 21
+      },
+      {
+        "QuoteDate": "22/12/2025 18:07",
+        "UserLoad": 21,
+        "Online": 26
+      },
+      {
+        "QuoteDate": "22/12/2025 18:06",
+        "UserLoad": 18,
+        "Online": 20
+      },
+      {
+        "QuoteDate": "22/12/2025 18:05",
+        "UserLoad": 19,
+        "Online": 21
+      },
+      {
+        "QuoteDate": "22/12/2025 18:04",
+        "UserLoad": 23,
+        "Online": 17
+      },
+      {
+        "QuoteDate": "22/12/2025 18:03",
+        "UserLoad": 24,
+        "Online": 21
+      },
+      {
+        "QuoteDate": "22/12/2025 18:02",
+        "UserLoad": 22,
+        "Online": 22
+      },
+      {
+        "QuoteDate": "22/12/2025 18:01",
+        "UserLoad": 19,
+        "Online": 16
+      },
+      {
+        "QuoteDate": "22/12/2025 18:00",
+        "UserLoad": 17,
+        "Online": 13
+      },
+      {
+        "QuoteDate": "22/12/2025 17:59",
+        "UserLoad": 19,
+        "Online": 14
+      },
+      {
+        "QuoteDate": "22/12/2025 17:58",
+        "UserLoad": 19,
+        "Online": 14
+      },
+      {
+        "QuoteDate": "22/12/2025 17:57",
+        "UserLoad": 23,
+        "Online": 20
+      },
+      {
+        "QuoteDate": "22/12/2025 17:56",
+        "UserLoad": 18,
+        "Online": 27
+      },
+      {
+        "QuoteDate": "22/12/2025 17:55",
+        "UserLoad": 15,
+        "Online": 22
+      },
+      {
+        "QuoteDate": "22/12/2025 17:54",
+        "UserLoad": 12,
+        "Online": 27
+      },
+      {
+        "QuoteDate": "22/12/2025 17:53",
+        "UserLoad": 16,
+        "Online": 16
+      },
+      {
+        "QuoteDate": "22/12/2025 17:52",
+        "UserLoad": 22,
+        "Online": 17
+      },
+      {
+        "QuoteDate": "22/12/2025 17:51",
+        "UserLoad": 25,
+        "Online": 13
+      },
+      {
+        "QuoteDate": "22/12/2025 17:50",
+        "UserLoad": 24,
+        "Online": 18
+      },
+      {
+        "QuoteDate": "22/12/2025 17:49",
+        "UserLoad": 25,
+        "Online": 21
+      },
+      {
+        "QuoteDate": "22/12/2025 17:48",
+        "UserLoad": 18,
+        "Online": 23
+      },
+      {
+        "QuoteDate": "22/12/2025 17:47",
+        "UserLoad": 15,
+        "Online": 18
+      },
+      {
+        "QuoteDate": "22/12/2025 17:46",
+        "UserLoad": 15,
+        "Online": 12
+      },
+      {
+        "QuoteDate": "22/12/2025 17:45",
+        "UserLoad": 20,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 17:44",
+        "UserLoad": 23,
+        "Online": 21
+      },
+      {
+        "QuoteDate": "22/12/2025 17:43",
+        "UserLoad": 21,
+        "Online": 33
+      },
+      {
+        "QuoteDate": "22/12/2025 17:42",
+        "UserLoad": 16,
+        "Online": 25
+      },
+      {
+        "QuoteDate": "22/12/2025 17:41",
+        "UserLoad": 10,
+        "Online": 22
+      },
+      {
+        "QuoteDate": "22/12/2025 17:40",
+        "UserLoad": 11,
+        "Online": 27
+      },
+      {
+        "QuoteDate": "22/12/2025 17:39",
+        "UserLoad": 23,
+        "Online": 21
+      },
+      {
+        "QuoteDate": "22/12/2025 17:38",
+        "UserLoad": 31,
+        "Online": 17
+      },
+      {
+        "QuoteDate": "22/12/2025 17:37",
+        "UserLoad": 27,
+        "Online": 19
+      },
+      {
+        "QuoteDate": "22/12/2025 17:36",
+        "UserLoad": 24,
+        "Online": 16
+      },
+      {
+        "QuoteDate": "22/12/2025 17:35",
+        "UserLoad": 25,
+        "Online": 18
+      },
+      {
+        "QuoteDate": "22/12/2025 17:34",
+        "UserLoad": 19,
+        "Online": 16
+      },
+      {
+        "QuoteDate": "22/12/2025 17:33",
+        "UserLoad": 19,
+        "Online": 20
+      },
+      {
+        "QuoteDate": "22/12/2025 17:32",
+        "UserLoad": 17,
+        "Online": 16
+      },
+      {
+        "QuoteDate": "22/12/2025 17:31",
+        "UserLoad": 18,
+        "Online": 24
+      },
+      {
+        "QuoteDate": "22/12/2025 17:30",
+        "UserLoad": 16,
+        "Online": 18
+      },
+      {
+        "QuoteDate": "22/12/2025 17:29",
+        "UserLoad": 18,
+        "Online": 22
+      },
+      {
+        "QuoteDate": "22/12/2025 17:28",
+        "UserLoad": 18,
+        "Online": 23
+      },
+      {
+        "QuoteDate": "22/12/2025 17:27",
+        "UserLoad": 19,
+        "Online": 18
+      },
+      {
+        "QuoteDate": "22/12/2025 17:26",
+        "UserLoad": 18,
+        "Online": 21
+      },
+      {
+        "QuoteDate": "22/12/2025 17:25",
+        "UserLoad": 22,
+        "Online": 17
+      },
+      {
+        "QuoteDate": "22/12/2025 17:24",
+        "UserLoad": 20,
+        "Online": 16
+      },
+      {
+        "QuoteDate": "22/12/2025 17:23",
+        "UserLoad": 20,
+        "Online": 21
+      },
+      {
+        "QuoteDate": "22/12/2025 17:22",
+        "UserLoad": 25,
+        "Online": 14
+      },
+      {
+        "QuoteDate": "22/12/2025 17:21",
+        "UserLoad": 23,
+        "Online": 13
+      },
+      {
+        "QuoteDate": "22/12/2025 17:20",
+        "UserLoad": 20,
+        "Online": 16
+      },
+      {
+        "QuoteDate": "22/12/2025 17:19",
+        "UserLoad": 19,
+        "Online": 11
+      },
+      {
+        "QuoteDate": "22/12/2025 17:18",
+        "UserLoad": 17,
+        "Online": 12
+      },
+      {
+        "QuoteDate": "22/12/2025 17:17",
+        "UserLoad": 18,
+        "Online": 15
+      },
+      {
+        "QuoteDate": "22/12/2025 17:16",
+        "UserLoad": 19,
+        "Online": 18
+      },
+      {
+        "QuoteDate": "22/12/2025 17:15",
+        "UserLoad": 16,
+        "Online": 14
+      },
+      {
+        "QuoteDate": "22/12/2025 17:14",
+        "UserLoad": 15,
+        "Online": 14
+      },
+      {
+        "QuoteDate": "22/12/2025 17:13",
+        "UserLoad": 14,
+        "Online": 18
+      },
+      {
+        "QuoteDate": "22/12/2025 17:12",
+        "UserLoad": 13,
+        "Online": 21
+      },
+      {
+        "QuoteDate": "22/12/2025 17:11",
+        "UserLoad": 14,
+        "Online": 26
+      },
+      {
+        "QuoteDate": "22/12/2025 17:10",
+        "UserLoad": 17,
+        "Online": 28
+      },
+      {
+        "QuoteDate": "22/12/2025 17:09",
+        "UserLoad": 16,
+        "Online": 23
+      },
+      {
+        "QuoteDate": "22/12/2025 17:08",
+        "UserLoad": 16,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 17:07",
+        "UserLoad": 16,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 17:06",
+        "UserLoad": 19,
+        "Online": 12
+      },
+      {
+        "QuoteDate": "22/12/2025 17:05",
+        "UserLoad": 24,
+        "Online": 16
+      },
+      {
+        "QuoteDate": "22/12/2025 17:04",
+        "UserLoad": 26,
+        "Online": 15
+      },
+      {
+        "QuoteDate": "22/12/2025 17:03",
+        "UserLoad": 21,
+        "Online": 20
+      },
+      {
+        "QuoteDate": "22/12/2025 17:02",
+        "UserLoad": 11,
+        "Online": 20
+      },
+      {
+        "QuoteDate": "22/12/2025 17:01",
+        "UserLoad": 10,
+        "Online": 13
+      },
+      {
+        "QuoteDate": "22/12/2025 17:00",
+        "UserLoad": 10,
+        "Online": 18
+      },
+      {
+        "QuoteDate": "22/12/2025 16:59",
+        "UserLoad": 14,
+        "Online": 23
+      },
+      {
+        "QuoteDate": "22/12/2025 16:58",
+        "UserLoad": 17,
+        "Online": 19
+      },
+      {
+        "QuoteDate": "22/12/2025 16:57",
+        "UserLoad": 18,
+        "Online": 23
+      },
+      {
+        "QuoteDate": "22/12/2025 16:56",
+        "UserLoad": 22,
+        "Online": 18
+      },
+      {
+        "QuoteDate": "22/12/2025 16:55",
+        "UserLoad": 18,
+        "Online": 18
+      },
+      {
+        "QuoteDate": "22/12/2025 16:54",
+        "UserLoad": 15,
+        "Online": 17
+      },
+      {
+        "QuoteDate": "22/12/2025 16:53",
+        "UserLoad": 20,
+        "Online": 19
+      },
+      {
+        "QuoteDate": "22/12/2025 16:52",
+        "UserLoad": 21,
+        "Online": 27
+      },
+      {
+        "QuoteDate": "22/12/2025 16:51",
+        "UserLoad": 17,
+        "Online": 35
+      },
+      {
+        "QuoteDate": "22/12/2025 16:50",
+        "UserLoad": 21,
+        "Online": 25
+      },
+      {
+        "QuoteDate": "22/12/2025 16:49",
+        "UserLoad": 20,
+        "Online": 18
+      },
+      {
+        "QuoteDate": "22/12/2025 16:48",
+        "UserLoad": 20,
+        "Online": 19
+      },
+      {
+        "QuoteDate": "22/12/2025 16:47",
+        "UserLoad": 15,
+        "Online": 26
+      },
+      {
+        "QuoteDate": "22/12/2025 16:46",
+        "UserLoad": 17,
+        "Online": 34
+      },
+      {
+        "QuoteDate": "22/12/2025 16:45",
+        "UserLoad": 25,
+        "Online": 24
+      },
+      {
+        "QuoteDate": "22/12/2025 16:44",
+        "UserLoad": 33,
+        "Online": 23
+      },
+      {
+        "QuoteDate": "22/12/2025 16:43",
+        "UserLoad": 27,
+        "Online": 30
+      },
+      {
+        "QuoteDate": "22/12/2025 16:42",
+        "UserLoad": 20,
+        "Online": 24
+      },
+      {
+        "QuoteDate": "22/12/2025 16:41",
+        "UserLoad": 21,
+        "Online": 24
+      },
+      {
+        "QuoteDate": "22/12/2025 16:40",
+        "UserLoad": 28,
+        "Online": 27
+      },
+      {
+        "QuoteDate": "22/12/2025 16:39",
+        "UserLoad": 32,
+        "Online": 34
+      },
+      {
+        "QuoteDate": "22/12/2025 16:38",
+        "UserLoad": 26,
+        "Online": 36
+      },
+      {
+        "QuoteDate": "22/12/2025 16:37",
+        "UserLoad": 21,
+        "Online": 22
+      },
+      {
+        "QuoteDate": "22/12/2025 16:36",
+        "UserLoad": 23,
+        "Online": 21
+      },
+      {
+        "QuoteDate": "22/12/2025 16:35",
+        "UserLoad": 28,
+        "Online": 25
+      },
+      {
+        "QuoteDate": "22/12/2025 16:34",
+        "UserLoad": 26,
+        "Online": 20
+      },
+      {
+        "QuoteDate": "22/12/2025 16:33",
+        "UserLoad": 26,
+        "Online": 24
+      },
+      {
+        "QuoteDate": "22/12/2025 16:32",
+        "UserLoad": 25,
+        "Online": 23
+      },
+      {
+        "QuoteDate": "22/12/2025 16:31",
+        "UserLoad": 32,
+        "Online": 28
+      },
+      {
+        "QuoteDate": "22/12/2025 16:30",
+        "UserLoad": 34,
+        "Online": 34
+      },
+      {
+        "QuoteDate": "22/12/2025 16:29",
+        "UserLoad": 24,
+        "Online": 38
+      },
+      {
+        "QuoteDate": "22/12/2025 16:28",
+        "UserLoad": 23,
+        "Online": 34
+      },
+      {
+        "QuoteDate": "22/12/2025 16:27",
+        "UserLoad": 27,
+        "Online": 35
+      },
+      {
+        "QuoteDate": "22/12/2025 16:26",
+        "UserLoad": 22,
+        "Online": 33
+      },
+      {
+        "QuoteDate": "22/12/2025 16:25",
+        "UserLoad": 22,
+        "Online": 29
+      },
+      {
+        "QuoteDate": "22/12/2025 16:24",
+        "UserLoad": 25,
+        "Online": 34
+      },
+      {
+        "QuoteDate": "22/12/2025 16:23",
+        "UserLoad": 30,
+        "Online": 28
+      },
+      {
+        "QuoteDate": "22/12/2025 16:22",
+        "UserLoad": 36,
+        "Online": 36
+      },
+      {
+        "QuoteDate": "22/12/2025 16:21",
+        "UserLoad": 36,
+        "Online": 37
+      },
+      {
+        "QuoteDate": "22/12/2025 16:20",
+        "UserLoad": 37,
+        "Online": 34
+      },
+      {
+        "QuoteDate": "22/12/2025 16:19",
+        "UserLoad": 31,
+        "Online": 27
+      },
+      {
+        "QuoteDate": "22/12/2025 16:18",
+        "UserLoad": 31,
+        "Online": 28
+      },
+      {
+        "QuoteDate": "22/12/2025 16:17",
+        "UserLoad": 32,
+        "Online": 29
+      },
+      {
+        "QuoteDate": "22/12/2025 16:16",
+        "UserLoad": 30,
+        "Online": 29
+      },
+      {
+        "QuoteDate": "22/12/2025 16:15",
+        "UserLoad": 34,
+        "Online": 34
+      },
+      {
+        "QuoteDate": "22/12/2025 16:14",
+        "UserLoad": 39,
+        "Online": 30
+      },
+      {
+        "QuoteDate": "22/12/2025 16:13",
+        "UserLoad": 36,
+        "Online": 37
+      },
+      {
+        "QuoteDate": "22/12/2025 16:12",
+        "UserLoad": 25,
+        "Online": 33
+      },
+      {
+        "QuoteDate": "22/12/2025 16:11",
+        "UserLoad": 30,
+        "Online": 34
+      },
+      {
+        "QuoteDate": "22/12/2025 16:10",
+        "UserLoad": 31,
+        "Online": 30
+      },
+      {
+        "QuoteDate": "22/12/2025 16:09",
+        "UserLoad": 31,
+        "Online": 23
+      },
+      {
+        "QuoteDate": "22/12/2025 16:08",
+        "UserLoad": 32,
+        "Online": 21
+      },
+      {
+        "QuoteDate": "22/12/2025 16:07",
+        "UserLoad": 32,
+        "Online": 21
+      },
+      {
+        "QuoteDate": "22/12/2025 16:06",
+        "UserLoad": 35,
+        "Online": 26
+      },
+      {
+        "QuoteDate": "22/12/2025 16:05",
+        "UserLoad": 35,
+        "Online": 26
+      },
+      {
+        "QuoteDate": "22/12/2025 16:04",
+        "UserLoad": 32,
+        "Online": 32
+      },
+      {
+        "QuoteDate": "22/12/2025 16:03",
+        "UserLoad": 32,
+        "Online": 36
+      },
+      {
+        "QuoteDate": "22/12/2025 16:02",
+        "UserLoad": 28,
+        "Online": 39
+      },
+      {
+        "QuoteDate": "22/12/2025 16:01",
+        "UserLoad": 21,
+        "Online": 40
+      },
+      {
+        "QuoteDate": "22/12/2025 16:00",
+        "UserLoad": 23,
+        "Online": 37
+      },
+      {
+        "QuoteDate": "22/12/2025 15:59",
+        "UserLoad": 23,
+        "Online": 33
+      },
+      {
+        "QuoteDate": "22/12/2025 15:58",
+        "UserLoad": 28,
+        "Online": 27
+      },
+      {
+        "QuoteDate": "22/12/2025 15:57",
+        "UserLoad": 28,
+        "Online": 30
+      },
+      {
+        "QuoteDate": "22/12/2025 15:56",
+        "UserLoad": 30,
+        "Online": 29
+      },
+      {
+        "QuoteDate": "22/12/2025 15:55",
+        "UserLoad": 34,
+        "Online": 38
+      },
+      {
+        "QuoteDate": "22/12/2025 15:54",
+        "UserLoad": 37,
+        "Online": 35
+      },
+      {
+        "QuoteDate": "22/12/2025 15:53",
+        "UserLoad": 42,
+        "Online": 24
+      },
+      {
+        "QuoteDate": "22/12/2025 15:52",
+        "UserLoad": 39,
+        "Online": 24
+      },
+      {
+        "QuoteDate": "22/12/2025 15:51",
+        "UserLoad": 36,
+        "Online": 24
+      },
+      {
+        "QuoteDate": "22/12/2025 15:50",
+        "UserLoad": 31,
+        "Online": 30
+      },
+      {
+        "QuoteDate": "22/12/2025 15:49",
+        "UserLoad": 25,
+        "Online": 28
+      },
+      {
+        "QuoteDate": "22/12/2025 15:48",
+        "UserLoad": 32,
+        "Online": 27
+      },
+      {
+        "QuoteDate": "22/12/2025 15:47",
+        "UserLoad": 31,
+        "Online": 31
+      },
+      {
+        "QuoteDate": "22/12/2025 15:46",
+        "UserLoad": 36,
+        "Online": 34
+      },
+      {
+        "QuoteDate": "22/12/2025 15:45",
+        "UserLoad": 37,
+        "Online": 40
+      },
+      {
+        "QuoteDate": "22/12/2025 15:44",
+        "UserLoad": 26,
+        "Online": 41
+      },
+      {
+        "QuoteDate": "22/12/2025 15:43",
+        "UserLoad": 22,
+        "Online": 33
+      },
+      {
+        "QuoteDate": "22/12/2025 15:42",
+        "UserLoad": 26,
+        "Online": 27
+      },
+      {
+        "QuoteDate": "22/12/2025 15:41",
+        "UserLoad": 28,
+        "Online": 30
+      },
+      {
+        "QuoteDate": "22/12/2025 15:40",
+        "UserLoad": 26,
+        "Online": 33
+      },
+      {
+        "QuoteDate": "22/12/2025 15:39",
+        "UserLoad": 29,
+        "Online": 26
+      },
+      {
+        "QuoteDate": "22/12/2025 15:38",
+        "UserLoad": 29,
+        "Online": 37
+      },
+      {
+        "QuoteDate": "22/12/2025 15:37",
+        "UserLoad": 36,
+        "Online": 33
+      },
+      {
+        "QuoteDate": "22/12/2025 15:36",
+        "UserLoad": 42,
+        "Online": 29
+      },
+      {
+        "QuoteDate": "22/12/2025 15:35",
+        "UserLoad": 39,
+        "Online": 31
+      },
+      {
+        "QuoteDate": "22/12/2025 15:34",
+        "UserLoad": 31,
+        "Online": 36
+      },
+      {
+        "QuoteDate": "22/12/2025 15:33",
+        "UserLoad": 25,
+        "Online": 34
+      },
+      {
+        "QuoteDate": "22/12/2025 15:32",
+        "UserLoad": 28,
+        "Online": 30
+      },
+      {
+        "QuoteDate": "22/12/2025 15:31",
+        "UserLoad": 31,
+        "Online": 31
+      },
+      {
+        "QuoteDate": "22/12/2025 15:30",
+        "UserLoad": 28,
+        "Online": 35
+      },
+      {
+        "QuoteDate": "22/12/2025 15:29",
+        "UserLoad": 35,
+        "Online": 40
+      },
+      {
+        "QuoteDate": "22/12/2025 15:28",
+        "UserLoad": 31,
+        "Online": 43
+      },
+      {
+        "QuoteDate": "22/12/2025 15:27",
+        "UserLoad": 31,
+        "Online": 39
+      },
+      {
+        "QuoteDate": "22/12/2025 15:26",
+        "UserLoad": 29,
+        "Online": 37
+      },
+      {
+        "QuoteDate": "22/12/2025 15:25",
+        "UserLoad": 34,
+        "Online": 33
+      },
+      {
+        "QuoteDate": "22/12/2025 15:24",
+        "UserLoad": 32,
+        "Online": 32
+      },
+      {
+        "QuoteDate": "22/12/2025 15:23",
+        "UserLoad": 28,
+        "Online": 33
+      },
+      {
+        "QuoteDate": "22/12/2025 15:22",
+        "UserLoad": 33,
+        "Online": 35
+      },
+      {
+        "QuoteDate": "22/12/2025 15:21",
+        "UserLoad": 32,
+        "Online": 41
+      },
+      {
+        "QuoteDate": "22/12/2025 15:20",
+        "UserLoad": 37,
+        "Online": 45
+      },
+      {
+        "QuoteDate": "22/12/2025 15:19",
+        "UserLoad": 42,
+        "Online": 46
+      },
+      {
+        "QuoteDate": "22/12/2025 15:18",
+        "UserLoad": 41,
+        "Online": 47
+      },
+      {
+        "QuoteDate": "22/12/2025 15:17",
+        "UserLoad": 34,
+        "Online": 43
+      },
+      {
+        "QuoteDate": "22/12/2025 15:16",
+        "UserLoad": 35,
+        "Online": 34
+      },
+      {
+        "QuoteDate": "22/12/2025 15:15",
+        "UserLoad": 31,
+        "Online": 38
+      },
+      {
+        "QuoteDate": "22/12/2025 15:14",
+        "UserLoad": 30,
+        "Online": 41
+      },
+      {
+        "QuoteDate": "22/12/2025 15:13",
+        "UserLoad": 31,
+        "Online": 40
+      },
+      {
+        "QuoteDate": "22/12/2025 15:12",
+        "UserLoad": 37,
+        "Online": 45
+      },
+      {
+        "QuoteDate": "22/12/2025 15:11",
+        "UserLoad": 39,
+        "Online": 37
+      },
+      {
+        "QuoteDate": "22/12/2025 15:10",
+        "UserLoad": 43,
+        "Online": 44
+      },
+      {
+        "QuoteDate": "22/12/2025 15:09",
+        "UserLoad": 44,
+        "Online": 36
+      },
+      {
+        "QuoteDate": "22/12/2025 15:08",
+        "UserLoad": 49,
+        "Online": 41
+      },
+      {
+        "QuoteDate": "22/12/2025 15:07",
+        "UserLoad": 41,
+        "Online": 32
+      },
+      {
+        "QuoteDate": "22/12/2025 15:06",
+        "UserLoad": 32,
+        "Online": 32
+      },
+      {
+        "QuoteDate": "22/12/2025 15:05",
+        "UserLoad": 40,
+        "Online": 39
+      },
+      {
+        "QuoteDate": "22/12/2025 15:04",
+        "UserLoad": 39,
+        "Online": 38
+      },
+      {
+        "QuoteDate": "22/12/2025 15:03",
+        "UserLoad": 42,
+        "Online": 46
+      },
+      {
+        "QuoteDate": "22/12/2025 15:02",
+        "UserLoad": 43,
+        "Online": 39
+      },
+      {
+        "QuoteDate": "22/12/2025 15:01",
+        "UserLoad": 39,
+        "Online": 33
+      },
+      {
+        "QuoteDate": "22/12/2025 15:00",
+        "UserLoad": 42,
+        "Online": 33
+      },
+      {
+        "QuoteDate": "22/12/2025 14:59",
+        "UserLoad": 38,
+        "Online": 28
+      },
+      {
+        "QuoteDate": "22/12/2025 14:58",
+        "UserLoad": 39,
+        "Online": 23
+      },
+      {
+        "QuoteDate": "22/12/2025 14:57",
+        "UserLoad": 34,
+        "Online": 25
+      },
+      {
+        "QuoteDate": "22/12/2025 14:56",
+        "UserLoad": 34,
+        "Online": 28
+      },
+      {
+        "QuoteDate": "22/12/2025 14:55",
+        "UserLoad": 37,
+        "Online": 36
+      },
+      {
+        "QuoteDate": "22/12/2025 14:54",
+        "UserLoad": 40,
+        "Online": 33
+      },
+      {
+        "QuoteDate": "22/12/2025 14:53",
+        "UserLoad": 44,
+        "Online": 36
+      },
+      {
+        "QuoteDate": "22/12/2025 14:52",
+        "UserLoad": 41,
+        "Online": 37
+      },
+      {
+        "QuoteDate": "22/12/2025 14:51",
+        "UserLoad": 35,
+        "Online": 33
+      },
+      {
+        "QuoteDate": "22/12/2025 14:50",
+        "UserLoad": 31,
+        "Online": 37
+      },
+      {
+        "QuoteDate": "22/12/2025 14:49",
+        "UserLoad": 30,
+        "Online": 33
+      },
+      {
+        "QuoteDate": "22/12/2025 14:48",
+        "UserLoad": 25,
+        "Online": 30
+      },
+      {
+        "QuoteDate": "22/12/2025 14:47",
+        "UserLoad": 27,
+        "Online": 25
+      },
+      {
+        "QuoteDate": "22/12/2025 14:46",
+        "UserLoad": 30,
+        "Online": 27
+      },
+      {
+        "QuoteDate": "22/12/2025 14:45",
+        "UserLoad": 34,
+        "Online": 22
+      },
+      {
+        "QuoteDate": "22/12/2025 14:44",
+        "UserLoad": 35,
+        "Online": 27
+      },
+      {
+        "QuoteDate": "22/12/2025 14:43",
+        "UserLoad": 38,
+        "Online": 31
+      },
+      {
+        "QuoteDate": "22/12/2025 14:42",
+        "UserLoad": 39,
+        "Online": 37
+      },
+      {
+        "QuoteDate": "22/12/2025 14:41",
+        "UserLoad": 35,
+        "Online": 43
+      },
+      {
+        "QuoteDate": "22/12/2025 14:40",
+        "UserLoad": 35,
+        "Online": 38
+      },
+      {
+        "QuoteDate": "22/12/2025 14:39",
+        "UserLoad": 35,
+        "Online": 32
+      },
+      {
+        "QuoteDate": "22/12/2025 14:38",
+        "UserLoad": 34,
+        "Online": 41
+      },
+      {
+        "QuoteDate": "22/12/2025 14:37",
+        "UserLoad": 28,
+        "Online": 40
+      },
+      {
+        "QuoteDate": "22/12/2025 14:36",
+        "UserLoad": 27,
+        "Online": 31
+      },
+      {
+        "QuoteDate": "22/12/2025 14:35",
+        "UserLoad": 29,
+        "Online": 25
+      },
+      {
+        "QuoteDate": "22/12/2025 14:34",
+        "UserLoad": 24,
+        "Online": 23
+      },
+      {
+        "QuoteDate": "22/12/2025 14:33",
+        "UserLoad": 29,
+        "Online": 28
+      },
+      {
+        "QuoteDate": "22/12/2025 14:32",
+        "UserLoad": 29,
+        "Online": 32
+      },
+      {
+        "QuoteDate": "22/12/2025 14:31",
+        "UserLoad": 35,
+        "Online": 39
+      },
+      {
+        "QuoteDate": "22/12/2025 14:30",
+        "UserLoad": 41,
+        "Online": 44
+      },
+      {
+        "QuoteDate": "22/12/2025 14:29",
+        "UserLoad": 40,
+        "Online": 35
+      },
+      {
+        "QuoteDate": "22/12/2025 14:28",
+        "UserLoad": 34,
+        "Online": 33
+      },
+      {
+        "QuoteDate": "22/12/2025 14:27",
+        "UserLoad": 39,
+        "Online": 30
+      },
+      {
+        "QuoteDate": "22/12/2025 14:26",
+        "UserLoad": 38,
+        "Online": 30
+      },
+      {
+        "QuoteDate": "22/12/2025 14:25",
+        "UserLoad": 33,
+        "Online": 31
+      },
+      {
+        "QuoteDate": "22/12/2025 14:24",
+        "UserLoad": 27,
+        "Online": 28
+      },
+      {
+        "QuoteDate": "22/12/2025 14:23",
+        "UserLoad": 21,
+        "Online": 26
+      },
+      {
+        "QuoteDate": "22/12/2025 14:22",
+        "UserLoad": 26,
+        "Online": 27
+      },
+      {
+        "QuoteDate": "22/12/2025 14:21",
+        "UserLoad": 30,
+        "Online": 29
+      },
+      {
+        "QuoteDate": "22/12/2025 14:20",
+        "UserLoad": 37,
+        "Online": 41
+      },
+      {
+        "QuoteDate": "22/12/2025 14:19",
+        "UserLoad": 42,
+        "Online": 41
+      },
+      {
+        "QuoteDate": "22/12/2025 14:18",
+        "UserLoad": 37,
+        "Online": 36
+      },
+      {
+        "QuoteDate": "22/12/2025 14:17",
+        "UserLoad": 35,
+        "Online": 25
+      },
+      {
+        "QuoteDate": "22/12/2025 14:16",
+        "UserLoad": 32,
+        "Online": 20
+      },
+      {
+        "QuoteDate": "22/12/2025 14:15",
+        "UserLoad": 28,
+        "Online": 16
+      },
+      {
+        "QuoteDate": "22/12/2025 14:14",
+        "UserLoad": 33,
+        "Online": 21
+      },
+      {
+        "QuoteDate": "22/12/2025 14:13",
+        "UserLoad": 26,
+        "Online": 26
+      },
+      {
+        "QuoteDate": "22/12/2025 14:12",
+        "UserLoad": 28,
+        "Online": 29
+      },
+      {
+        "QuoteDate": "22/12/2025 14:11",
+        "UserLoad": 29,
+        "Online": 23
+      },
+      {
+        "QuoteDate": "22/12/2025 14:10",
+        "UserLoad": 31,
+        "Online": 24
+      },
+      {
+        "QuoteDate": "22/12/2025 14:09",
+        "UserLoad": 39,
+        "Online": 20
+      },
+      {
+        "QuoteDate": "22/12/2025 14:08",
+        "UserLoad": 43,
+        "Online": 25
+      },
+      {
+        "QuoteDate": "22/12/2025 14:07",
+        "UserLoad": 34,
+        "Online": 20
+      },
+      {
+        "QuoteDate": "22/12/2025 14:06",
+        "UserLoad": 23,
+        "Online": 25
+      },
+      {
+        "QuoteDate": "22/12/2025 14:05",
+        "UserLoad": 22,
+        "Online": 24
+      },
+      {
+        "QuoteDate": "22/12/2025 14:04",
+        "UserLoad": 18,
+        "Online": 20
+      },
+      {
+        "QuoteDate": "22/12/2025 14:03",
+        "UserLoad": 23,
+        "Online": 26
+      },
+      {
+        "QuoteDate": "22/12/2025 14:02",
+        "UserLoad": 28,
+        "Online": 28
+      },
+      {
+        "QuoteDate": "22/12/2025 14:01",
+        "UserLoad": 27,
+        "Online": 19
+      },
+      {
+        "QuoteDate": "22/12/2025 14:00",
+        "UserLoad": 25,
+        "Online": 20
+      },
+      {
+        "QuoteDate": "22/12/2025 13:59",
+        "UserLoad": 22,
+        "Online": 21
+      },
+      {
+        "QuoteDate": "22/12/2025 13:58",
+        "UserLoad": 22,
+        "Online": 27
+      },
+      {
+        "QuoteDate": "22/12/2025 13:57",
+        "UserLoad": 23,
+        "Online": 28
+      },
+      {
+        "QuoteDate": "22/12/2025 13:56",
+        "UserLoad": 22,
+        "Online": 31
+      },
+      {
+        "QuoteDate": "22/12/2025 13:55",
+        "UserLoad": 27,
+        "Online": 25
+      },
+      {
+        "QuoteDate": "22/12/2025 13:54",
+        "UserLoad": 26,
+        "Online": 21
+      },
+      {
+        "QuoteDate": "22/12/2025 13:53",
+        "UserLoad": 22,
+        "Online": 20
+      },
+      {
+        "QuoteDate": "22/12/2025 13:52",
+        "UserLoad": 28,
+        "Online": 13
+      },
+      {
+        "QuoteDate": "22/12/2025 13:51",
+        "UserLoad": 26,
+        "Online": 15
+      },
+      {
+        "QuoteDate": "22/12/2025 13:50",
+        "UserLoad": 21,
+        "Online": 19
+      },
+      {
+        "QuoteDate": "22/12/2025 13:49",
+        "UserLoad": 22,
+        "Online": 23
+      },
+      {
+        "QuoteDate": "22/12/2025 13:48",
+        "UserLoad": 23,
+        "Online": 19
+      },
+      {
+        "QuoteDate": "22/12/2025 13:47",
+        "UserLoad": 25,
+        "Online": 27
+      },
+      {
+        "QuoteDate": "22/12/2025 13:46",
+        "UserLoad": 30,
+        "Online": 28
+      },
+      {
+        "QuoteDate": "22/12/2025 13:45",
+        "UserLoad": 29,
+        "Online": 22
+      },
+      {
+        "QuoteDate": "22/12/2025 13:44",
+        "UserLoad": 27,
+        "Online": 16
+      },
+      {
+        "QuoteDate": "22/12/2025 13:43",
+        "UserLoad": 23,
+        "Online": 20
+      },
+      {
+        "QuoteDate": "22/12/2025 13:42",
+        "UserLoad": 18,
+        "Online": 18
+      },
+      {
+        "QuoteDate": "22/12/2025 13:41",
+        "UserLoad": 15,
+        "Online": 25
+      },
+      {
+        "QuoteDate": "22/12/2025 13:40",
+        "UserLoad": 17,
+        "Online": 29
+      },
+      {
+        "QuoteDate": "22/12/2025 13:39",
+        "UserLoad": 21,
+        "Online": 26
+      },
+      {
+        "QuoteDate": "22/12/2025 13:38",
+        "UserLoad": 21,
+        "Online": 27
+      },
+      {
+        "QuoteDate": "22/12/2025 13:37",
+        "UserLoad": 21,
+        "Online": 31
+      },
+      {
+        "QuoteDate": "22/12/2025 13:36",
+        "UserLoad": 25,
+        "Online": 27
+      },
+      {
+        "QuoteDate": "22/12/2025 13:35",
+        "UserLoad": 26,
+        "Online": 26
+      },
+      {
+        "QuoteDate": "22/12/2025 13:34",
+        "UserLoad": 20,
+        "Online": 22
+      },
+      {
+        "QuoteDate": "22/12/2025 13:33",
+        "UserLoad": 18,
+        "Online": 19
+      },
+      {
+        "QuoteDate": "22/12/2025 13:32",
+        "UserLoad": 18,
+        "Online": 16
+      },
+      {
+        "QuoteDate": "22/12/2025 13:31",
+        "UserLoad": 20,
+        "Online": 17
+      },
+      {
+        "QuoteDate": "22/12/2025 13:30",
+        "UserLoad": 23,
+        "Online": 20
+      },
+      {
+        "QuoteDate": "22/12/2025 13:29",
+        "UserLoad": 27,
+        "Online": 24
+      },
+      {
+        "QuoteDate": "22/12/2025 13:28",
+        "UserLoad": 28,
+        "Online": 20
+      },
+      {
+        "QuoteDate": "22/12/2025 13:27",
+        "UserLoad": 27,
+        "Online": 16
+      },
+      {
+        "QuoteDate": "22/12/2025 13:26",
+        "UserLoad": 29,
+        "Online": 19
+      },
+      {
+        "QuoteDate": "22/12/2025 13:25",
+        "UserLoad": 29,
+        "Online": 15
+      },
+      {
+        "QuoteDate": "22/12/2025 13:24",
+        "UserLoad": 27,
+        "Online": 23
+      },
+      {
+        "QuoteDate": "22/12/2025 13:23",
+        "UserLoad": 24,
+        "Online": 21
+      },
+      {
+        "QuoteDate": "22/12/2025 13:22",
+        "UserLoad": 22,
+        "Online": 17
+      },
+      {
+        "QuoteDate": "22/12/2025 13:21",
+        "UserLoad": 21,
+        "Online": 15
+      },
+      {
+        "QuoteDate": "22/12/2025 13:20",
+        "UserLoad": 14,
+        "Online": 16
+      },
+      {
+        "QuoteDate": "22/12/2025 13:19",
+        "UserLoad": 15,
+        "Online": 20
+      },
+      {
+        "QuoteDate": "22/12/2025 13:18",
+        "UserLoad": 22,
+        "Online": 16
+      },
+      {
+        "QuoteDate": "22/12/2025 13:17",
+        "UserLoad": 26,
+        "Online": 15
+      },
+      {
+        "QuoteDate": "22/12/2025 13:16",
+        "UserLoad": 22,
+        "Online": 23
+      },
+      {
+        "QuoteDate": "22/12/2025 13:15",
+        "UserLoad": 14,
+        "Online": 21
+      },
+      {
+        "QuoteDate": "22/12/2025 13:14",
+        "UserLoad": 17,
+        "Online": 18
+      },
+      {
+        "QuoteDate": "22/12/2025 13:13",
+        "UserLoad": 17,
+        "Online": 14
+      },
+      {
+        "QuoteDate": "22/12/2025 13:12",
+        "UserLoad": 21,
+        "Online": 20
+      },
+      {
+        "QuoteDate": "22/12/2025 13:11",
+        "UserLoad": 23,
+        "Online": 15
+      },
+      {
+        "QuoteDate": "22/12/2025 13:10",
+        "UserLoad": 19,
+        "Online": 24
+      },
+      {
+        "QuoteDate": "22/12/2025 13:09",
+        "UserLoad": 17,
+        "Online": 19
+      },
+      {
+        "QuoteDate": "22/12/2025 13:08",
+        "UserLoad": 18,
+        "Online": 17
+      },
+      {
+        "QuoteDate": "22/12/2025 13:07",
+        "UserLoad": 18,
+        "Online": 13
+      },
+      {
+        "QuoteDate": "22/12/2025 13:06",
+        "UserLoad": 19,
+        "Online": 17
+      },
+      {
+        "QuoteDate": "22/12/2025 13:05",
+        "UserLoad": 18,
+        "Online": 12
+      },
+      {
+        "QuoteDate": "22/12/2025 13:04",
+        "UserLoad": 17,
+        "Online": 13
+      },
+      {
+        "QuoteDate": "22/12/2025 13:03",
+        "UserLoad": 21,
+        "Online": 16
+      },
+      {
+        "QuoteDate": "22/12/2025 13:02",
+        "UserLoad": 23,
+        "Online": 12
+      },
+      {
+        "QuoteDate": "22/12/2025 13:01",
+        "UserLoad": 20,
+        "Online": 17
+      },
+      {
+        "QuoteDate": "22/12/2025 13:00",
+        "UserLoad": 16,
+        "Online": 12
+      },
+      {
+        "QuoteDate": "22/12/2025 12:59",
+        "UserLoad": 18,
+        "Online": 14
+      },
+      {
+        "QuoteDate": "22/12/2025 12:58",
+        "UserLoad": 17,
+        "Online": 14
+      },
+      {
+        "QuoteDate": "22/12/2025 12:57",
+        "UserLoad": 22,
+        "Online": 12
+      },
+      {
+        "QuoteDate": "22/12/2025 12:56",
+        "UserLoad": 21,
+        "Online": 19
+      },
+      {
+        "QuoteDate": "22/12/2025 12:55",
+        "UserLoad": 15,
+        "Online": 15
+      },
+      {
+        "QuoteDate": "22/12/2025 12:54",
+        "UserLoad": 11,
+        "Online": 21
+      },
+      {
+        "QuoteDate": "22/12/2025 12:53",
+        "UserLoad": 15,
+        "Online": 25
+      },
+      {
+        "QuoteDate": "22/12/2025 12:52",
+        "UserLoad": 14,
+        "Online": 21
+      },
+      {
+        "QuoteDate": "22/12/2025 12:51",
+        "UserLoad": 15,
+        "Online": 20
+      },
+      {
+        "QuoteDate": "22/12/2025 12:50",
+        "UserLoad": 14,
+        "Online": 17
+      },
+      {
+        "QuoteDate": "22/12/2025 12:49",
+        "UserLoad": 15,
+        "Online": 16
+      },
+      {
+        "QuoteDate": "22/12/2025 12:48",
+        "UserLoad": 14,
+        "Online": 20
+      },
+      {
+        "QuoteDate": "22/12/2025 12:47",
+        "UserLoad": 16,
+        "Online": 18
+      },
+      {
+        "QuoteDate": "22/12/2025 12:46",
+        "UserLoad": 12,
+        "Online": 15
+      },
+      {
+        "QuoteDate": "22/12/2025 12:45",
+        "UserLoad": 10,
+        "Online": 19
+      },
+      {
+        "QuoteDate": "22/12/2025 12:44",
+        "UserLoad": 17,
+        "Online": 21
+      },
+      {
+        "QuoteDate": "22/12/2025 12:43",
+        "UserLoad": 17,
+        "Online": 16
+      },
+      {
+        "QuoteDate": "22/12/2025 12:42",
+        "UserLoad": 19,
+        "Online": 10
+      },
+      {
+        "QuoteDate": "22/12/2025 12:41",
+        "UserLoad": 23,
+        "Online": 16
+      },
+      {
+        "QuoteDate": "22/12/2025 12:40",
+        "UserLoad": 23,
+        "Online": 22
+      },
+      {
+        "QuoteDate": "22/12/2025 12:39",
+        "UserLoad": 18,
+        "Online": 16
+      },
+      {
+        "QuoteDate": "22/12/2025 12:38",
+        "UserLoad": 15,
+        "Online": 15
+      },
+      {
+        "QuoteDate": "22/12/2025 12:37",
+        "UserLoad": 14,
+        "Online": 14
+      },
+      {
+        "QuoteDate": "22/12/2025 12:36",
+        "UserLoad": 18,
+        "Online": 17
+      },
+      {
+        "QuoteDate": "22/12/2025 12:35",
+        "UserLoad": 16,
+        "Online": 14
+      },
+      {
+        "QuoteDate": "22/12/2025 12:34",
+        "UserLoad": 17,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 12:33",
+        "UserLoad": 17,
+        "Online": 13
+      },
+      {
+        "QuoteDate": "22/12/2025 12:32",
+        "UserLoad": 19,
+        "Online": 12
+      },
+      {
+        "QuoteDate": "22/12/2025 12:31",
+        "UserLoad": 18,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 12:30",
+        "UserLoad": 12,
+        "Online": 14
+      },
+      {
+        "QuoteDate": "22/12/2025 12:29",
+        "UserLoad": 14,
+        "Online": 12
+      },
+      {
+        "QuoteDate": "22/12/2025 12:28",
+        "UserLoad": 20,
+        "Online": 16
+      },
+      {
+        "QuoteDate": "22/12/2025 12:27",
+        "UserLoad": 18,
+        "Online": 12
+      },
+      {
+        "QuoteDate": "22/12/2025 12:26",
+        "UserLoad": 17,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 12:25",
+        "UserLoad": 12,
+        "Online": 13
+      },
+      {
+        "QuoteDate": "22/12/2025 12:24",
+        "UserLoad": 15,
+        "Online": 14
+      },
+      {
+        "QuoteDate": "22/12/2025 12:23",
+        "UserLoad": 12,
+        "Online": 10
+      },
+      {
+        "QuoteDate": "22/12/2025 12:22",
+        "UserLoad": 11,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 12:21",
+        "UserLoad": 11,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 12:20",
+        "UserLoad": 10,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 12:19",
+        "UserLoad": 12,
+        "Online": 10
+      },
+      {
+        "QuoteDate": "22/12/2025 12:18",
+        "UserLoad": 10,
+        "Online": 14
+      },
+      {
+        "QuoteDate": "22/12/2025 12:17",
+        "UserLoad": 14,
+        "Online": 13
+      },
+      {
+        "QuoteDate": "22/12/2025 12:16",
+        "UserLoad": 16,
+        "Online": 12
+      },
+      {
+        "QuoteDate": "22/12/2025 12:15",
+        "UserLoad": 14,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 12:14",
+        "UserLoad": 10,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 12:13",
+        "UserLoad": 15,
+        "Online": 12
+      },
+      {
+        "QuoteDate": "22/12/2025 12:12",
+        "UserLoad": 12,
+        "Online": 11
+      },
+      {
+        "QuoteDate": "22/12/2025 12:11",
+        "UserLoad": 12,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 12:10",
+        "UserLoad": 10,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 12:09",
+        "UserLoad": 12,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 12:08",
+        "UserLoad": 14,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 12:07",
+        "UserLoad": 11,
+        "Online": 10
+      },
+      {
+        "QuoteDate": "22/12/2025 12:06",
+        "UserLoad": 10,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 12:05",
+        "UserLoad": 10,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 12:04",
+        "UserLoad": 6,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 12:03",
+        "UserLoad": 8,
+        "Online": 10
+      },
+      {
+        "QuoteDate": "22/12/2025 12:02",
+        "UserLoad": 12,
+        "Online": 11
+      },
+      {
+        "QuoteDate": "22/12/2025 12:01",
+        "UserLoad": 15,
+        "Online": 15
+      },
+      {
+        "QuoteDate": "22/12/2025 12:00",
+        "UserLoad": 14,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 11:59",
+        "UserLoad": 10,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 11:58",
+        "UserLoad": 8,
+        "Online": 12
+      },
+      {
+        "QuoteDate": "22/12/2025 11:57",
+        "UserLoad": 11,
+        "Online": 10
+      },
+      {
+        "QuoteDate": "22/12/2025 11:56",
+        "UserLoad": 10,
+        "Online": 11
+      },
+      {
+        "QuoteDate": "22/12/2025 11:55",
+        "UserLoad": 9,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 11:54",
+        "UserLoad": 5,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 11:53",
+        "UserLoad": 8,
+        "Online": 11
+      },
+      {
+        "QuoteDate": "22/12/2025 11:52",
+        "UserLoad": 7,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 11:51",
+        "UserLoad": 6,
+        "Online": 11
+      },
+      {
+        "QuoteDate": "22/12/2025 11:50",
+        "UserLoad": 8,
+        "Online": 10
+      },
+      {
+        "QuoteDate": "22/12/2025 11:49",
+        "UserLoad": 10,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 11:48",
+        "UserLoad": 10,
+        "Online": 12
+      },
+      {
+        "QuoteDate": "22/12/2025 11:47",
+        "UserLoad": 9,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 11:46",
+        "UserLoad": 8,
+        "Online": 11
+      },
+      {
+        "QuoteDate": "22/12/2025 11:45",
+        "UserLoad": 12,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 11:44",
+        "UserLoad": 13,
+        "Online": 15
+      },
+      {
+        "QuoteDate": "22/12/2025 11:43",
+        "UserLoad": 13,
+        "Online": 12
+      },
+      {
+        "QuoteDate": "22/12/2025 11:42",
+        "UserLoad": 11,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 11:41",
+        "UserLoad": 11,
+        "Online": 13
+      },
+      {
+        "QuoteDate": "22/12/2025 11:40",
+        "UserLoad": 10,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 11:39",
+        "UserLoad": 8,
+        "Online": 11
+      },
+      {
+        "QuoteDate": "22/12/2025 11:38",
+        "UserLoad": 9,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 11:37",
+        "UserLoad": 9,
+        "Online": 11
+      },
+      {
+        "QuoteDate": "22/12/2025 11:36",
+        "UserLoad": 9,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 11:35",
+        "UserLoad": 12,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 11:34",
+        "UserLoad": 11,
+        "Online": 10
+      },
+      {
+        "QuoteDate": "22/12/2025 11:33",
+        "UserLoad": 11,
+        "Online": 13
+      },
+      {
+        "QuoteDate": "22/12/2025 11:32",
+        "UserLoad": 12,
+        "Online": 11
+      },
+      {
+        "QuoteDate": "22/12/2025 11:31",
+        "UserLoad": 11,
+        "Online": 11
+      },
+      {
+        "QuoteDate": "22/12/2025 11:30",
+        "UserLoad": 9,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 11:29",
+        "UserLoad": 10,
+        "Online": 15
+      },
+      {
+        "QuoteDate": "22/12/2025 11:28",
+        "UserLoad": 11,
+        "Online": 12
+      },
+      {
+        "QuoteDate": "22/12/2025 11:27",
+        "UserLoad": 13,
+        "Online": 15
+      },
+      {
+        "QuoteDate": "22/12/2025 11:26",
+        "UserLoad": 10,
+        "Online": 11
+      },
+      {
+        "QuoteDate": "22/12/2025 11:25",
+        "UserLoad": 9,
+        "Online": 16
+      },
+      {
+        "QuoteDate": "22/12/2025 11:24",
+        "UserLoad": 11,
+        "Online": 10
+      },
+      {
+        "QuoteDate": "22/12/2025 11:23",
+        "UserLoad": 11,
+        "Online": 14
+      },
+      {
+        "QuoteDate": "22/12/2025 11:22",
+        "UserLoad": 9,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 11:21",
+        "UserLoad": 8,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 11:20",
+        "UserLoad": 9,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 11:19",
+        "UserLoad": 8,
+        "Online": 13
+      },
+      {
+        "QuoteDate": "22/12/2025 11:18",
+        "UserLoad": 8,
+        "Online": 10
+      },
+      {
+        "QuoteDate": "22/12/2025 11:17",
+        "UserLoad": 8,
+        "Online": 13
+      },
+      {
+        "QuoteDate": "22/12/2025 11:16",
+        "UserLoad": 9,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 11:15",
+        "UserLoad": 11,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 11:14",
+        "UserLoad": 9,
+        "Online": 13
+      },
+      {
+        "QuoteDate": "22/12/2025 11:13",
+        "UserLoad": 13,
+        "Online": 16
+      },
+      {
+        "QuoteDate": "22/12/2025 11:12",
+        "UserLoad": 10,
+        "Online": 12
+      },
+      {
+        "QuoteDate": "22/12/2025 11:11",
+        "UserLoad": 13,
+        "Online": 15
+      },
+      {
+        "QuoteDate": "22/12/2025 11:10",
+        "UserLoad": 13,
+        "Online": 12
+      },
+      {
+        "QuoteDate": "22/12/2025 11:09",
+        "UserLoad": 14,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 11:08",
+        "UserLoad": 12,
+        "Online": 10
+      },
+      {
+        "QuoteDate": "22/12/2025 11:07",
+        "UserLoad": 12,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 11:06",
+        "UserLoad": 11,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 11:05",
+        "UserLoad": 10,
+        "Online": 11
+      },
+      {
+        "QuoteDate": "22/12/2025 11:04",
+        "UserLoad": 7,
+        "Online": 11
+      },
+      {
+        "QuoteDate": "22/12/2025 11:03",
+        "UserLoad": 8,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 11:02",
+        "UserLoad": 11,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 11:01",
+        "UserLoad": 12,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 11:00",
+        "UserLoad": 11,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 10:59",
+        "UserLoad": 10,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 10:58",
+        "UserLoad": 10,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 10:57",
+        "UserLoad": 11,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 10:56",
+        "UserLoad": 14,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 10:55",
+        "UserLoad": 14,
+        "Online": 10
+      },
+      {
+        "QuoteDate": "22/12/2025 10:54",
+        "UserLoad": 13,
+        "Online": 12
+      },
+      {
+        "QuoteDate": "22/12/2025 10:53",
+        "UserLoad": 14,
+        "Online": 12
+      },
+      {
+        "QuoteDate": "22/12/2025 10:52",
+        "UserLoad": 8,
+        "Online": 11
+      },
+      {
+        "QuoteDate": "22/12/2025 10:51",
+        "UserLoad": 8,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 10:50",
+        "UserLoad": 8,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 10:49",
+        "UserLoad": 7,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 10:48",
+        "UserLoad": 9,
+        "Online": 12
+      },
+      {
+        "QuoteDate": "22/12/2025 10:47",
+        "UserLoad": 13,
+        "Online": 11
+      },
+      {
+        "QuoteDate": "22/12/2025 10:46",
+        "UserLoad": 10,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 10:45",
+        "UserLoad": 5,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 10:44",
+        "UserLoad": 7,
+        "Online": 3
+      },
+      {
+        "QuoteDate": "22/12/2025 10:43",
+        "UserLoad": 6,
+        "Online": 3
+      },
+      {
+        "QuoteDate": "22/12/2025 10:42",
+        "UserLoad": 6,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 10:41",
+        "UserLoad": 7,
+        "Online": 10
+      },
+      {
+        "QuoteDate": "22/12/2025 10:40",
+        "UserLoad": 10,
+        "Online": 14
+      },
+      {
+        "QuoteDate": "22/12/2025 10:39",
+        "UserLoad": 8,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 10:38",
+        "UserLoad": 6,
+        "Online": 11
+      },
+      {
+        "QuoteDate": "22/12/2025 10:37",
+        "UserLoad": 5,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 10:36",
+        "UserLoad": 7,
+        "Online": 10
+      },
+      {
+        "QuoteDate": "22/12/2025 10:35",
+        "UserLoad": 7,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 10:34",
+        "UserLoad": 7,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 10:33",
+        "UserLoad": 4,
+        "Online": 10
+      },
+      {
+        "QuoteDate": "22/12/2025 10:32",
+        "UserLoad": 4,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 10:31",
+        "UserLoad": 6,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 10:30",
+        "UserLoad": 8,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 10:29",
+        "UserLoad": 10,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 10:28",
+        "UserLoad": 10,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 10:27",
+        "UserLoad": 9,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 10:26",
+        "UserLoad": 6,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 10:25",
+        "UserLoad": 7,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 10:24",
+        "UserLoad": 9,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 10:23",
+        "UserLoad": 10,
+        "Online": 10
+      },
+      {
+        "QuoteDate": "22/12/2025 10:22",
+        "UserLoad": 9,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 10:21",
+        "UserLoad": 9,
+        "Online": 3
+      },
+      {
+        "QuoteDate": "22/12/2025 10:20",
+        "UserLoad": 6,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 10:19",
+        "UserLoad": 1,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 10:18",
+        "UserLoad": 5,
+        "Online": 10
+      },
+      {
+        "QuoteDate": "22/12/2025 10:17",
+        "UserLoad": 8,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 10:16",
+        "UserLoad": 12,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 10:15",
+        "UserLoad": 13,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 10:14",
+        "UserLoad": 11,
+        "Online": 0
+      },
+      {
+        "QuoteDate": "22/12/2025 10:13",
+        "UserLoad": 9,
+        "Online": 2
+      },
+      {
+        "QuoteDate": "22/12/2025 10:12",
+        "UserLoad": 9,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 10:11",
+        "UserLoad": 8,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 10:10",
+        "UserLoad": 8,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 10:09",
+        "UserLoad": 8,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 10:08",
+        "UserLoad": 9,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 10:07",
+        "UserLoad": 11,
+        "Online": 3
+      },
+      {
+        "QuoteDate": "22/12/2025 10:06",
+        "UserLoad": 7,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 10:05",
+        "UserLoad": 5,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 10:04",
+        "UserLoad": 6,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 10:03",
+        "UserLoad": 6,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 10:02",
+        "UserLoad": 7,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 10:01",
+        "UserLoad": 6,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 10:00",
+        "UserLoad": 5,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 09:59",
+        "UserLoad": 7,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 09:58",
+        "UserLoad": 9,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 09:57",
+        "UserLoad": 8,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 09:56",
+        "UserLoad": 6,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 09:55",
+        "UserLoad": 1,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 09:54",
+        "UserLoad": 3,
+        "Online": 3
+      },
+      {
+        "QuoteDate": "22/12/2025 09:53",
+        "UserLoad": 7,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 09:52",
+        "UserLoad": 8,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 09:51",
+        "UserLoad": 7,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 09:50",
+        "UserLoad": 4,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 09:49",
+        "UserLoad": 3,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 09:48",
+        "UserLoad": 2,
+        "Online": 1
+      },
+      {
+        "QuoteDate": "22/12/2025 09:47",
+        "UserLoad": 4,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 09:46",
+        "UserLoad": 7,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 09:45",
+        "UserLoad": 8,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 09:44",
+        "UserLoad": 11,
+        "Online": 12
+      },
+      {
+        "QuoteDate": "22/12/2025 09:43",
+        "UserLoad": 5,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 09:42",
+        "UserLoad": 6,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 09:41",
+        "UserLoad": 5,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 09:40",
+        "UserLoad": 4,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 09:39",
+        "UserLoad": 5,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 09:38",
+        "UserLoad": 4,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 09:37",
+        "UserLoad": 5,
+        "Online": 3
+      },
+      {
+        "QuoteDate": "22/12/2025 09:36",
+        "UserLoad": 5,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 09:35",
+        "UserLoad": 7,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 09:34",
+        "UserLoad": 5,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 09:33",
+        "UserLoad": 6,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 09:32",
+        "UserLoad": 6,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 09:31",
+        "UserLoad": 6,
+        "Online": 11
+      },
+      {
+        "QuoteDate": "22/12/2025 09:30",
+        "UserLoad": 6,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 09:29",
+        "UserLoad": 5,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 09:28",
+        "UserLoad": 6,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 09:27",
+        "UserLoad": 8,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 09:26",
+        "UserLoad": 9,
+        "Online": 2
+      },
+      {
+        "QuoteDate": "22/12/2025 09:25",
+        "UserLoad": 8,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 09:24",
+        "UserLoad": 6,
+        "Online": 2
+      },
+      {
+        "QuoteDate": "22/12/2025 09:23",
+        "UserLoad": 6,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 09:22",
+        "UserLoad": 8,
+        "Online": 0
+      },
+      {
+        "QuoteDate": "22/12/2025 09:21",
+        "UserLoad": 6,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 09:20",
+        "UserLoad": 9,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 09:19",
+        "UserLoad": 12,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 09:18",
+        "UserLoad": 10,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 09:17",
+        "UserLoad": 9,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 09:16",
+        "UserLoad": 9,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 09:15",
+        "UserLoad": 6,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 09:14",
+        "UserLoad": 5,
+        "Online": 10
+      },
+      {
+        "QuoteDate": "22/12/2025 09:13",
+        "UserLoad": 7,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 09:12",
+        "UserLoad": 8,
+        "Online": 1
+      },
+      {
+        "QuoteDate": "22/12/2025 09:11",
+        "UserLoad": 8,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 09:10",
+        "UserLoad": 10,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 09:09",
+        "UserLoad": 10,
+        "Online": 2
+      },
+      {
+        "QuoteDate": "22/12/2025 09:08",
+        "UserLoad": 9,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 09:07",
+        "UserLoad": 7,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 09:06",
+        "UserLoad": 7,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 09:05",
+        "UserLoad": 8,
+        "Online": 10
+      },
+      {
+        "QuoteDate": "22/12/2025 09:04",
+        "UserLoad": 6,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 09:03",
+        "UserLoad": 6,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 09:02",
+        "UserLoad": 7,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 09:01",
+        "UserLoad": 7,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 09:00",
+        "UserLoad": 9,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 08:59",
+        "UserLoad": 8,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 08:58",
+        "UserLoad": 5,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 08:57",
+        "UserLoad": 2,
+        "Online": 11
+      },
+      {
+        "QuoteDate": "22/12/2025 08:56",
+        "UserLoad": 3,
+        "Online": 11
+      },
+      {
+        "QuoteDate": "22/12/2025 08:55",
+        "UserLoad": 3,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 08:54",
+        "UserLoad": 5,
+        "Online": 11
+      },
+      {
+        "QuoteDate": "22/12/2025 08:53",
+        "UserLoad": 7,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 08:52",
+        "UserLoad": 7,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 08:51",
+        "UserLoad": 7,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 08:50",
+        "UserLoad": 9,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 08:49",
+        "UserLoad": 10,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 08:48",
+        "UserLoad": 6,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 08:47",
+        "UserLoad": 6,
+        "Online": 1
+      },
+      {
+        "QuoteDate": "22/12/2025 08:46",
+        "UserLoad": 4,
+        "Online": 3
+      },
+      {
+        "QuoteDate": "22/12/2025 08:45",
+        "UserLoad": 3,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 08:44",
+        "UserLoad": 2,
+        "Online": 10
+      },
+      {
+        "QuoteDate": "22/12/2025 08:43",
+        "UserLoad": 4,
+        "Online": 10
+      },
+      {
+        "QuoteDate": "22/12/2025 08:42",
+        "UserLoad": 4,
+        "Online": 14
+      },
+      {
+        "QuoteDate": "22/12/2025 08:41",
+        "UserLoad": 4,
+        "Online": 15
+      },
+      {
+        "QuoteDate": "22/12/2025 08:40",
+        "UserLoad": 4,
+        "Online": 11
+      },
+      {
+        "QuoteDate": "22/12/2025 08:39",
+        "UserLoad": 7,
+        "Online": 15
+      },
+      {
+        "QuoteDate": "22/12/2025 08:38",
+        "UserLoad": 7,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 08:37",
+        "UserLoad": 6,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 08:36",
+        "UserLoad": 4,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 08:35",
+        "UserLoad": 2,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 08:34",
+        "UserLoad": 4,
+        "Online": 10
+      },
+      {
+        "QuoteDate": "22/12/2025 08:33",
+        "UserLoad": 6,
+        "Online": 12
+      },
+      {
+        "QuoteDate": "22/12/2025 08:32",
+        "UserLoad": 3,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 08:31",
+        "UserLoad": 4,
+        "Online": 12
+      },
+      {
+        "QuoteDate": "22/12/2025 08:30",
+        "UserLoad": 3,
+        "Online": 11
+      },
+      {
+        "QuoteDate": "22/12/2025 08:29",
+        "UserLoad": 4,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 08:28",
+        "UserLoad": 5,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 08:27",
+        "UserLoad": 10,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 08:26",
+        "UserLoad": 6,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 08:25",
+        "UserLoad": 4,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 08:24",
+        "UserLoad": 7,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 08:23",
+        "UserLoad": 8,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 08:22",
+        "UserLoad": 7,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 08:21",
+        "UserLoad": 8,
+        "Online": 3
+      },
+      {
+        "QuoteDate": "22/12/2025 08:20",
+        "UserLoad": 9,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 08:19",
+        "UserLoad": 8,
+        "Online": 10
+      },
+      {
+        "QuoteDate": "22/12/2025 08:18",
+        "UserLoad": 7,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 08:17",
+        "UserLoad": 4,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 08:16",
+        "UserLoad": 5,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 08:15",
+        "UserLoad": 4,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 08:14",
+        "UserLoad": 6,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 08:13",
+        "UserLoad": 4,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 08:12",
+        "UserLoad": 4,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 08:11",
+        "UserLoad": 9,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 08:10",
+        "UserLoad": 11,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 08:09",
+        "UserLoad": 7,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 08:08",
+        "UserLoad": 5,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 08:07",
+        "UserLoad": 4,
+        "Online": 0
+      },
+      {
+        "QuoteDate": "22/12/2025 08:06",
+        "UserLoad": 5,
+        "Online": 1
+      },
+      {
+        "QuoteDate": "22/12/2025 08:05",
+        "UserLoad": 4,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 08:04",
+        "UserLoad": 4,
+        "Online": 3
+      },
+      {
+        "QuoteDate": "22/12/2025 08:03",
+        "UserLoad": 4,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 08:02",
+        "UserLoad": 2,
+        "Online": 2
+      },
+      {
+        "QuoteDate": "22/12/2025 08:01",
+        "UserLoad": 3,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 08:00",
+        "UserLoad": 4,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 07:59",
+        "UserLoad": 5,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 07:58",
+        "UserLoad": 4,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 07:57",
+        "UserLoad": 7,
+        "Online": 10
+      },
+      {
+        "QuoteDate": "22/12/2025 07:56",
+        "UserLoad": 6,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 07:55",
+        "UserLoad": 7,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 07:54",
+        "UserLoad": 8,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 07:53",
+        "UserLoad": 10,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 07:52",
+        "UserLoad": 5,
+        "Online": 11
+      },
+      {
+        "QuoteDate": "22/12/2025 07:51",
+        "UserLoad": 3,
+        "Online": 10
+      },
+      {
+        "QuoteDate": "22/12/2025 07:50",
+        "UserLoad": 3,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 07:49",
+        "UserLoad": 4,
+        "Online": 11
+      },
+      {
+        "QuoteDate": "22/12/2025 07:48",
+        "UserLoad": 4,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 07:47",
+        "UserLoad": 3,
+        "Online": 10
+      },
+      {
+        "QuoteDate": "22/12/2025 07:46",
+        "UserLoad": 6,
+        "Online": 12
+      },
+      {
+        "QuoteDate": "22/12/2025 07:45",
+        "UserLoad": 7,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 07:44",
+        "UserLoad": 8,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 07:43",
+        "UserLoad": 7,
+        "Online": 13
+      },
+      {
+        "QuoteDate": "22/12/2025 07:42",
+        "UserLoad": 7,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 07:41",
+        "UserLoad": 7,
+        "Online": 11
+      },
+      {
+        "QuoteDate": "22/12/2025 07:40",
+        "UserLoad": 8,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 07:39",
+        "UserLoad": 7,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 07:38",
+        "UserLoad": 5,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 07:37",
+        "UserLoad": 7,
+        "Online": 10
+      },
+      {
+        "QuoteDate": "22/12/2025 07:36",
+        "UserLoad": 7,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 07:35",
+        "UserLoad": 9,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 07:34",
+        "UserLoad": 9,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 07:33",
+        "UserLoad": 9,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 07:32",
+        "UserLoad": 9,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 07:31",
+        "UserLoad": 7,
+        "Online": 10
+      },
+      {
+        "QuoteDate": "22/12/2025 07:30",
+        "UserLoad": 7,
+        "Online": 13
+      },
+      {
+        "QuoteDate": "22/12/2025 07:29",
+        "UserLoad": 7,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 07:28",
+        "UserLoad": 8,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 07:27",
+        "UserLoad": 8,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 07:26",
+        "UserLoad": 6,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 07:25",
+        "UserLoad": 3,
+        "Online": 11
+      },
+      {
+        "QuoteDate": "22/12/2025 07:24",
+        "UserLoad": 1,
+        "Online": 12
+      },
+      {
+        "QuoteDate": "22/12/2025 07:23",
+        "UserLoad": 5,
+        "Online": 12
+      },
+      {
+        "QuoteDate": "22/12/2025 07:22",
+        "UserLoad": 8,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 07:21",
+        "UserLoad": 8,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 07:20",
+        "UserLoad": 12,
+        "Online": 11
+      },
+      {
+        "QuoteDate": "22/12/2025 07:19",
+        "UserLoad": 13,
+        "Online": 16
+      },
+      {
+        "QuoteDate": "22/12/2025 07:18",
+        "UserLoad": 13,
+        "Online": 12
+      },
+      {
+        "QuoteDate": "22/12/2025 07:17",
+        "UserLoad": 13,
+        "Online": 10
+      },
+      {
+        "QuoteDate": "22/12/2025 07:16",
+        "UserLoad": 11,
+        "Online": 12
+      },
+      {
+        "QuoteDate": "22/12/2025 07:15",
+        "UserLoad": 8,
+        "Online": 14
+      },
+      {
+        "QuoteDate": "22/12/2025 07:14",
+        "UserLoad": 7,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 07:13",
+        "UserLoad": 3,
+        "Online": 10
+      },
+      {
+        "QuoteDate": "22/12/2025 07:12",
+        "UserLoad": 8,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 07:11",
+        "UserLoad": 10,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 07:10",
+        "UserLoad": 9,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 07:09",
+        "UserLoad": 10,
+        "Online": 11
+      },
+      {
+        "QuoteDate": "22/12/2025 07:08",
+        "UserLoad": 9,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 07:07",
+        "UserLoad": 6,
+        "Online": 10
+      },
+      {
+        "QuoteDate": "22/12/2025 07:06",
+        "UserLoad": 7,
+        "Online": 11
+      },
+      {
+        "QuoteDate": "22/12/2025 07:05",
+        "UserLoad": 9,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 07:04",
+        "UserLoad": 7,
+        "Online": 12
+      },
+      {
+        "QuoteDate": "22/12/2025 07:03",
+        "UserLoad": 6,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 07:02",
+        "UserLoad": 8,
+        "Online": 11
+      },
+      {
+        "QuoteDate": "22/12/2025 07:01",
+        "UserLoad": 5,
+        "Online": 10
+      },
+      {
+        "QuoteDate": "22/12/2025 07:00",
+        "UserLoad": 4,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 06:59",
+        "UserLoad": 4,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 06:58",
+        "UserLoad": 5,
+        "Online": 3
+      },
+      {
+        "QuoteDate": "22/12/2025 06:57",
+        "UserLoad": 6,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 06:56",
+        "UserLoad": 8,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 06:55",
+        "UserLoad": 5,
+        "Online": 10
+      },
+      {
+        "QuoteDate": "22/12/2025 06:54",
+        "UserLoad": 5,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 06:53",
+        "UserLoad": 5,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 06:52",
+        "UserLoad": 8,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 06:51",
+        "UserLoad": 6,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 06:50",
+        "UserLoad": 6,
+        "Online": 11
+      },
+      {
+        "QuoteDate": "22/12/2025 06:49",
+        "UserLoad": 4,
+        "Online": 12
+      },
+      {
+        "QuoteDate": "22/12/2025 06:48",
+        "UserLoad": 6,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 06:47",
+        "UserLoad": 7,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 06:46",
+        "UserLoad": 6,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 06:45",
+        "UserLoad": 4,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 06:44",
+        "UserLoad": 4,
+        "Online": 3
+      },
+      {
+        "QuoteDate": "22/12/2025 06:43",
+        "UserLoad": 2,
+        "Online": 10
+      },
+      {
+        "QuoteDate": "22/12/2025 06:42",
+        "UserLoad": 3,
+        "Online": 12
+      },
+      {
+        "QuoteDate": "22/12/2025 06:41",
+        "UserLoad": 3,
+        "Online": 10
+      },
+      {
+        "QuoteDate": "22/12/2025 06:40",
+        "UserLoad": 4,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 06:39",
+        "UserLoad": 5,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 06:38",
+        "UserLoad": 5,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 06:37",
+        "UserLoad": 3,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 06:36",
+        "UserLoad": 4,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 06:35",
+        "UserLoad": 7,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 06:34",
+        "UserLoad": 8,
+        "Online": 10
+      },
+      {
+        "QuoteDate": "22/12/2025 06:33",
+        "UserLoad": 7,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 06:32",
+        "UserLoad": 5,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 06:31",
+        "UserLoad": 4,
+        "Online": 2
+      },
+      {
+        "QuoteDate": "22/12/2025 06:30",
+        "UserLoad": 6,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 06:29",
+        "UserLoad": 9,
+        "Online": 11
+      },
+      {
+        "QuoteDate": "22/12/2025 06:28",
+        "UserLoad": 8,
+        "Online": 12
+      },
+      {
+        "QuoteDate": "22/12/2025 06:27",
+        "UserLoad": 9,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 06:26",
+        "UserLoad": 9,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 06:25",
+        "UserLoad": 9,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 06:24",
+        "UserLoad": 8,
+        "Online": 13
+      },
+      {
+        "QuoteDate": "22/12/2025 06:23",
+        "UserLoad": 10,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 06:22",
+        "UserLoad": 11,
+        "Online": 11
+      },
+      {
+        "QuoteDate": "22/12/2025 06:21",
+        "UserLoad": 11,
+        "Online": 12
+      },
+      {
+        "QuoteDate": "22/12/2025 06:20",
+        "UserLoad": 9,
+        "Online": 13
+      },
+      {
+        "QuoteDate": "22/12/2025 06:19",
+        "UserLoad": 6,
+        "Online": 15
+      },
+      {
+        "QuoteDate": "22/12/2025 06:18",
+        "UserLoad": 7,
+        "Online": 16
+      },
+      {
+        "QuoteDate": "22/12/2025 06:17",
+        "UserLoad": 5,
+        "Online": 12
+      },
+      {
+        "QuoteDate": "22/12/2025 06:16",
+        "UserLoad": 8,
+        "Online": 15
+      },
+      {
+        "QuoteDate": "22/12/2025 06:15",
+        "UserLoad": 7,
+        "Online": 11
+      },
+      {
+        "QuoteDate": "22/12/2025 06:14",
+        "UserLoad": 6,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 06:13",
+        "UserLoad": 6,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 06:12",
+        "UserLoad": 7,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 06:11",
+        "UserLoad": 8,
+        "Online": 11
+      },
+      {
+        "QuoteDate": "22/12/2025 06:10",
+        "UserLoad": 11,
+        "Online": 14
+      },
+      {
+        "QuoteDate": "22/12/2025 06:09",
+        "UserLoad": 7,
+        "Online": 13
+      },
+      {
+        "QuoteDate": "22/12/2025 06:08",
+        "UserLoad": 7,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 06:07",
+        "UserLoad": 4,
+        "Online": 12
+      },
+      {
+        "QuoteDate": "22/12/2025 06:06",
+        "UserLoad": 7,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 06:05",
+        "UserLoad": 9,
+        "Online": 13
+      },
+      {
+        "QuoteDate": "22/12/2025 06:04",
+        "UserLoad": 14,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 06:03",
+        "UserLoad": 14,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 06:02",
+        "UserLoad": 10,
+        "Online": 1
+      },
+      {
+        "QuoteDate": "22/12/2025 06:01",
+        "UserLoad": 10,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 06:00",
+        "UserLoad": 12,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 05:59",
+        "UserLoad": 13,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 05:58",
+        "UserLoad": 11,
+        "Online": 2
+      },
+      {
+        "QuoteDate": "22/12/2025 05:57",
+        "UserLoad": 8,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 05:56",
+        "UserLoad": 7,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 05:55",
+        "UserLoad": 6,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 05:54",
+        "UserLoad": 7,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 05:53",
+        "UserLoad": 8,
+        "Online": 13
+      },
+      {
+        "QuoteDate": "22/12/2025 05:52",
+        "UserLoad": 9,
+        "Online": 11
+      },
+      {
+        "QuoteDate": "22/12/2025 05:51",
+        "UserLoad": 11,
+        "Online": 15
+      },
+      {
+        "QuoteDate": "22/12/2025 05:50",
+        "UserLoad": 9,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 05:49",
+        "UserLoad": 10,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 05:48",
+        "UserLoad": 10,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 05:47",
+        "UserLoad": 11,
+        "Online": 14
+      },
+      {
+        "QuoteDate": "22/12/2025 05:46",
+        "UserLoad": 8,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 05:45",
+        "UserLoad": 9,
+        "Online": 13
+      },
+      {
+        "QuoteDate": "22/12/2025 05:44",
+        "UserLoad": 10,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 05:43",
+        "UserLoad": 10,
+        "Online": 11
+      },
+      {
+        "QuoteDate": "22/12/2025 05:42",
+        "UserLoad": 9,
+        "Online": 15
+      },
+      {
+        "QuoteDate": "22/12/2025 05:41",
+        "UserLoad": 9,
+        "Online": 11
+      },
+      {
+        "QuoteDate": "22/12/2025 05:40",
+        "UserLoad": 5,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 05:39",
+        "UserLoad": 7,
+        "Online": 10
+      },
+      {
+        "QuoteDate": "22/12/2025 05:38",
+        "UserLoad": 8,
+        "Online": 11
+      },
+      {
+        "QuoteDate": "22/12/2025 05:37",
+        "UserLoad": 7,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 05:36",
+        "UserLoad": 5,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 05:35",
+        "UserLoad": 3,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 05:34",
+        "UserLoad": 7,
+        "Online": 12
+      },
+      {
+        "QuoteDate": "22/12/2025 05:33",
+        "UserLoad": 6,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 05:32",
+        "UserLoad": 7,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 05:31",
+        "UserLoad": 10,
+        "Online": 1
+      },
+      {
+        "QuoteDate": "22/12/2025 05:30",
+        "UserLoad": 7,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 05:29",
+        "UserLoad": 9,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 05:28",
+        "UserLoad": 9,
+        "Online": 10
+      },
+      {
+        "QuoteDate": "22/12/2025 05:27",
+        "UserLoad": 6,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 05:26",
+        "UserLoad": 5,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 05:25",
+        "UserLoad": 8,
+        "Online": 10
+      },
+      {
+        "QuoteDate": "22/12/2025 05:24",
+        "UserLoad": 10,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 05:23",
+        "UserLoad": 8,
+        "Online": 12
+      },
+      {
+        "QuoteDate": "22/12/2025 05:22",
+        "UserLoad": 6,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 05:21",
+        "UserLoad": 7,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 05:20",
+        "UserLoad": 7,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 05:19",
+        "UserLoad": 7,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 05:18",
+        "UserLoad": 7,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 05:17",
+        "UserLoad": 8,
+        "Online": 12
+      },
+      {
+        "QuoteDate": "22/12/2025 05:16",
+        "UserLoad": 4,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 05:15",
+        "UserLoad": 9,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 05:14",
+        "UserLoad": 13,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 05:13",
+        "UserLoad": 10,
+        "Online": 3
+      },
+      {
+        "QuoteDate": "22/12/2025 05:12",
+        "UserLoad": 9,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 05:11",
+        "UserLoad": 10,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 05:10",
+        "UserLoad": 8,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 05:09",
+        "UserLoad": 7,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 05:08",
+        "UserLoad": 6,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 05:07",
+        "UserLoad": 3,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 05:06",
+        "UserLoad": 7,
+        "Online": 10
+      },
+      {
+        "QuoteDate": "22/12/2025 05:05",
+        "UserLoad": 11,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 05:04",
+        "UserLoad": 12,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 05:03",
+        "UserLoad": 11,
+        "Online": 3
+      },
+      {
+        "QuoteDate": "22/12/2025 05:02",
+        "UserLoad": 10,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 05:01",
+        "UserLoad": 11,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 05:00",
+        "UserLoad": 11,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 04:59",
+        "UserLoad": 12,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 04:58",
+        "UserLoad": 11,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 04:57",
+        "UserLoad": 14,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 04:56",
+        "UserLoad": 12,
+        "Online": 11
+      },
+      {
+        "QuoteDate": "22/12/2025 04:55",
+        "UserLoad": 7,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 04:54",
+        "UserLoad": 6,
+        "Online": 2
+      },
+      {
+        "QuoteDate": "22/12/2025 04:53",
+        "UserLoad": 8,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 04:52",
+        "UserLoad": 8,
+        "Online": 0
+      },
+      {
+        "QuoteDate": "22/12/2025 04:51",
+        "UserLoad": 7,
+        "Online": 3
+      },
+      {
+        "QuoteDate": "22/12/2025 04:50",
+        "UserLoad": 8,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 04:49",
+        "UserLoad": 9,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 04:48",
+        "UserLoad": 8,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 04:47",
+        "UserLoad": 7,
+        "Online": 0
+      },
+      {
+        "QuoteDate": "22/12/2025 04:46",
+        "UserLoad": 10,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 04:45",
+        "UserLoad": 11,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 04:44",
+        "UserLoad": 12,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 04:43",
+        "UserLoad": 13,
+        "Online": 3
+      },
+      {
+        "QuoteDate": "22/12/2025 04:42",
+        "UserLoad": 20,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 04:41",
+        "UserLoad": 18,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 04:40",
+        "UserLoad": 14,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 04:39",
+        "UserLoad": 13,
+        "Online": 3
+      },
+      {
+        "QuoteDate": "22/12/2025 04:38",
+        "UserLoad": 11,
+        "Online": 3
+      },
+      {
+        "QuoteDate": "22/12/2025 04:37",
+        "UserLoad": 9,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 04:36",
+        "UserLoad": 9,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 04:35",
+        "UserLoad": 9,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 04:34",
+        "UserLoad": 9,
+        "Online": 2
+      },
+      {
+        "QuoteDate": "22/12/2025 04:33",
+        "UserLoad": 12,
+        "Online": 1
+      },
+      {
+        "QuoteDate": "22/12/2025 04:32",
+        "UserLoad": 11,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 04:31",
+        "UserLoad": 11,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 04:30",
+        "UserLoad": 10,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 04:29",
+        "UserLoad": 10,
+        "Online": 10
+      },
+      {
+        "QuoteDate": "22/12/2025 04:28",
+        "UserLoad": 9,
+        "Online": 3
+      },
+      {
+        "QuoteDate": "22/12/2025 04:27",
+        "UserLoad": 11,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 04:26",
+        "UserLoad": 6,
+        "Online": 2
+      },
+      {
+        "QuoteDate": "22/12/2025 04:25",
+        "UserLoad": 3,
+        "Online": 3
+      },
+      {
+        "QuoteDate": "22/12/2025 04:24",
+        "UserLoad": 3,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 04:23",
+        "UserLoad": 7,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 04:22",
+        "UserLoad": 5,
+        "Online": 2
+      },
+      {
+        "QuoteDate": "22/12/2025 04:21",
+        "UserLoad": 3,
+        "Online": 0
+      },
+      {
+        "QuoteDate": "22/12/2025 04:20",
+        "UserLoad": 4,
+        "Online": 3
+      },
+      {
+        "QuoteDate": "22/12/2025 04:19",
+        "UserLoad": 7,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 04:18",
+        "UserLoad": 8,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 04:17",
+        "UserLoad": 6,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 04:16",
+        "UserLoad": 10,
+        "Online": 3
+      },
+      {
+        "QuoteDate": "22/12/2025 04:15",
+        "UserLoad": 12,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 04:14",
+        "UserLoad": 13,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 04:13",
+        "UserLoad": 10,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 04:12",
+        "UserLoad": 7,
+        "Online": 3
+      },
+      {
+        "QuoteDate": "22/12/2025 04:11",
+        "UserLoad": 11,
+        "Online": 2
+      },
+      {
+        "QuoteDate": "22/12/2025 04:10",
+        "UserLoad": 12,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 04:09",
+        "UserLoad": 10,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 04:08",
+        "UserLoad": 11,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 04:07",
+        "UserLoad": 11,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 04:06",
+        "UserLoad": 13,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 04:05",
+        "UserLoad": 13,
+        "Online": 3
+      },
+      {
+        "QuoteDate": "22/12/2025 04:04",
+        "UserLoad": 10,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 04:03",
+        "UserLoad": 12,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 04:02",
+        "UserLoad": 9,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 04:01",
+        "UserLoad": 9,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 04:00",
+        "UserLoad": 11,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 03:59",
+        "UserLoad": 10,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 03:58",
+        "UserLoad": 6,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 03:57",
+        "UserLoad": 3,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 03:56",
+        "UserLoad": 4,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 03:55",
+        "UserLoad": 8,
+        "Online": 3
+      },
+      {
+        "QuoteDate": "22/12/2025 03:54",
+        "UserLoad": 8,
+        "Online": 3
+      },
+      {
+        "QuoteDate": "22/12/2025 03:53",
+        "UserLoad": 8,
+        "Online": 3
+      },
+      {
+        "QuoteDate": "22/12/2025 03:52",
+        "UserLoad": 8,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 03:51",
+        "UserLoad": 6,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 03:50",
+        "UserLoad": 10,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 03:49",
+        "UserLoad": 9,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 03:48",
+        "UserLoad": 6,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 03:47",
+        "UserLoad": 5,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 03:46",
+        "UserLoad": 6,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 03:45",
+        "UserLoad": 7,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 03:44",
+        "UserLoad": 10,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 03:43",
+        "UserLoad": 8,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 03:42",
+        "UserLoad": 6,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 03:41",
+        "UserLoad": 5,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 03:40",
+        "UserLoad": 5,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 03:39",
+        "UserLoad": 6,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 03:38",
+        "UserLoad": 6,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 03:37",
+        "UserLoad": 8,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 03:36",
+        "UserLoad": 6,
+        "Online": 11
+      },
+      {
+        "QuoteDate": "22/12/2025 03:35",
+        "UserLoad": 5,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 03:34",
+        "UserLoad": 8,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 03:33",
+        "UserLoad": 8,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 03:32",
+        "UserLoad": 6,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 03:31",
+        "UserLoad": 6,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 03:30",
+        "UserLoad": 9,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 03:29",
+        "UserLoad": 8,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 03:28",
+        "UserLoad": 10,
+        "Online": 3
+      },
+      {
+        "QuoteDate": "22/12/2025 03:27",
+        "UserLoad": 12,
+        "Online": 2
+      },
+      {
+        "QuoteDate": "22/12/2025 03:26",
+        "UserLoad": 7,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 03:25",
+        "UserLoad": 4,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 03:24",
+        "UserLoad": 3,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 03:23",
+        "UserLoad": 2,
+        "Online": 3
+      },
+      {
+        "QuoteDate": "22/12/2025 03:22",
+        "UserLoad": 5,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 03:21",
+        "UserLoad": 6,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 03:20",
+        "UserLoad": 6,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 03:19",
+        "UserLoad": 5,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 03:18",
+        "UserLoad": 2,
+        "Online": 10
+      },
+      {
+        "QuoteDate": "22/12/2025 03:17",
+        "UserLoad": 6,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 03:16",
+        "UserLoad": 7,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 03:15",
+        "UserLoad": 7,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 03:14",
+        "UserLoad": 5,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 03:13",
+        "UserLoad": 7,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 03:12",
+        "UserLoad": 7,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 03:11",
+        "UserLoad": 9,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 03:10",
+        "UserLoad": 7,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 03:09",
+        "UserLoad": 5,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 03:08",
+        "UserLoad": 5,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 03:07",
+        "UserLoad": 4,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 03:06",
+        "UserLoad": 6,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 03:05",
+        "UserLoad": 4,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 03:04",
+        "UserLoad": 5,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 03:03",
+        "UserLoad": 4,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 03:02",
+        "UserLoad": 3,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 03:01",
+        "UserLoad": 6,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 03:00",
+        "UserLoad": 6,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 02:59",
+        "UserLoad": 5,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 02:58",
+        "UserLoad": 8,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 02:57",
+        "UserLoad": 5,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 02:56",
+        "UserLoad": 5,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 02:55",
+        "UserLoad": 4,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 02:54",
+        "UserLoad": 6,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 02:53",
+        "UserLoad": 6,
+        "Online": 3
+      },
+      {
+        "QuoteDate": "22/12/2025 02:52",
+        "UserLoad": 4,
+        "Online": 2
+      },
+      {
+        "QuoteDate": "22/12/2025 02:51",
+        "UserLoad": 1,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 02:50",
+        "UserLoad": 4,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 02:49",
+        "UserLoad": 4,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 02:48",
+        "UserLoad": 4,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 02:47",
+        "UserLoad": 5,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 02:46",
+        "UserLoad": 5,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 02:45",
+        "UserLoad": 7,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 02:44",
+        "UserLoad": 9,
+        "Online": 3
+      },
+      {
+        "QuoteDate": "22/12/2025 02:43",
+        "UserLoad": 6,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 02:42",
+        "UserLoad": 3,
+        "Online": 10
+      },
+      {
+        "QuoteDate": "22/12/2025 02:41",
+        "UserLoad": 4,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 02:40",
+        "UserLoad": 5,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 02:39",
+        "UserLoad": 7,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 02:38",
+        "UserLoad": 7,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 02:37",
+        "UserLoad": 6,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 02:36",
+        "UserLoad": 6,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 02:35",
+        "UserLoad": 8,
+        "Online": 3
+      },
+      {
+        "QuoteDate": "22/12/2025 02:34",
+        "UserLoad": 8,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 02:33",
+        "UserLoad": 9,
+        "Online": 3
+      },
+      {
+        "QuoteDate": "22/12/2025 02:32",
+        "UserLoad": 7,
+        "Online": 3
+      },
+      {
+        "QuoteDate": "22/12/2025 02:31",
+        "UserLoad": 4,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 02:30",
+        "UserLoad": 7,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 02:29",
+        "UserLoad": 5,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 02:28",
+        "UserLoad": 7,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 02:27",
+        "UserLoad": 5,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 02:26",
+        "UserLoad": 4,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 02:25",
+        "UserLoad": 6,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 02:24",
+        "UserLoad": 4,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 02:23",
+        "UserLoad": 2,
+        "Online": 2
+      },
+      {
+        "QuoteDate": "22/12/2025 02:22",
+        "UserLoad": 3,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 02:21",
+        "UserLoad": 4,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 02:20",
+        "UserLoad": 5,
+        "Online": 3
+      },
+      {
+        "QuoteDate": "22/12/2025 02:19",
+        "UserLoad": 6,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 02:18",
+        "UserLoad": 5,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 02:17",
+        "UserLoad": 5,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 02:16",
+        "UserLoad": 7,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 02:15",
+        "UserLoad": 5,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 02:14",
+        "UserLoad": 6,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 02:13",
+        "UserLoad": 7,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 02:12",
+        "UserLoad": 6,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 02:11",
+        "UserLoad": 5,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 02:10",
+        "UserLoad": 5,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 02:09",
+        "UserLoad": 6,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 02:08",
+        "UserLoad": 7,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 02:07",
+        "UserLoad": 7,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 02:06",
+        "UserLoad": 6,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 02:05",
+        "UserLoad": 6,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 02:04",
+        "UserLoad": 7,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 02:03",
+        "UserLoad": 8,
+        "Online": 3
+      },
+      {
+        "QuoteDate": "22/12/2025 02:02",
+        "UserLoad": 7,
+        "Online": 2
+      },
+      {
+        "QuoteDate": "22/12/2025 02:01",
+        "UserLoad": 5,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 02:00",
+        "UserLoad": 6,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 01:59",
+        "UserLoad": 7,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 01:58",
+        "UserLoad": 6,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 01:57",
+        "UserLoad": 5,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 01:56",
+        "UserLoad": 5,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 01:55",
+        "UserLoad": 5,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 01:54",
+        "UserLoad": 4,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 01:53",
+        "UserLoad": 4,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 01:52",
+        "UserLoad": 7,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 01:51",
+        "UserLoad": 6,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 01:50",
+        "UserLoad": 4,
+        "Online": 10
+      },
+      {
+        "QuoteDate": "22/12/2025 01:49",
+        "UserLoad": 6,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 01:48",
+        "UserLoad": 6,
+        "Online": 11
+      },
+      {
+        "QuoteDate": "22/12/2025 01:47",
+        "UserLoad": 8,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 01:46",
+        "UserLoad": 7,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 01:45",
+        "UserLoad": 6,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 01:44",
+        "UserLoad": 5,
+        "Online": 3
+      },
+      {
+        "QuoteDate": "22/12/2025 01:43",
+        "UserLoad": 6,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 01:42",
+        "UserLoad": 8,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 01:41",
+        "UserLoad": 8,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 01:40",
+        "UserLoad": 9,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 01:39",
+        "UserLoad": 7,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 01:38",
+        "UserLoad": 6,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 01:37",
+        "UserLoad": 6,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 01:36",
+        "UserLoad": 4,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 01:35",
+        "UserLoad": 5,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 01:34",
+        "UserLoad": 5,
+        "Online": 2
+      },
+      {
+        "QuoteDate": "22/12/2025 01:33",
+        "UserLoad": 4,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 01:32",
+        "UserLoad": 5,
+        "Online": 10
+      },
+      {
+        "QuoteDate": "22/12/2025 01:31",
+        "UserLoad": 5,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 01:30",
+        "UserLoad": 4,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 01:29",
+        "UserLoad": 5,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 01:28",
+        "UserLoad": 3,
+        "Online": 2
+      },
+      {
+        "QuoteDate": "22/12/2025 01:27",
+        "UserLoad": 8,
+        "Online": 3
+      },
+      {
+        "QuoteDate": "22/12/2025 01:26",
+        "UserLoad": 8,
+        "Online": 1
+      },
+      {
+        "QuoteDate": "22/12/2025 01:25",
+        "UserLoad": 6,
+        "Online": 1
+      },
+      {
+        "QuoteDate": "22/12/2025 01:24",
+        "UserLoad": 6,
+        "Online": 2
+      },
+      {
+        "QuoteDate": "22/12/2025 01:23",
+        "UserLoad": 4,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 01:22",
+        "UserLoad": 1,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 01:21",
+        "UserLoad": 2,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 01:20",
+        "UserLoad": 3,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 01:19",
+        "UserLoad": 3,
+        "Online": 11
+      },
+      {
+        "QuoteDate": "22/12/2025 01:18",
+        "UserLoad": 4,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 01:17",
+        "UserLoad": 6,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 01:16",
+        "UserLoad": 9,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 01:15",
+        "UserLoad": 7,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 01:14",
+        "UserLoad": 9,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 01:13",
+        "UserLoad": 9,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 01:12",
+        "UserLoad": 7,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 01:11",
+        "UserLoad": 5,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 01:10",
+        "UserLoad": 7,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 01:09",
+        "UserLoad": 5,
+        "Online": 10
+      },
+      {
+        "QuoteDate": "22/12/2025 01:08",
+        "UserLoad": 6,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 01:07",
+        "UserLoad": 5,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 01:06",
+        "UserLoad": 5,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 01:05",
+        "UserLoad": 9,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 01:04",
+        "UserLoad": 8,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 01:03",
+        "UserLoad": 6,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 01:02",
+        "UserLoad": 8,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 01:01",
+        "UserLoad": 10,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 01:00",
+        "UserLoad": 7,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 00:59",
+        "UserLoad": 7,
+        "Online": 2
+      },
+      {
+        "QuoteDate": "22/12/2025 00:58",
+        "UserLoad": 7,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 00:57",
+        "UserLoad": 3,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 00:56",
+        "UserLoad": 4,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 00:55",
+        "UserLoad": 5,
+        "Online": 3
+      },
+      {
+        "QuoteDate": "22/12/2025 00:54",
+        "UserLoad": 5,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 00:53",
+        "UserLoad": 4,
+        "Online": 3
+      },
+      {
+        "QuoteDate": "22/12/2025 00:52",
+        "UserLoad": 4,
+        "Online": 2
+      },
+      {
+        "QuoteDate": "22/12/2025 00:51",
+        "UserLoad": 5,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 00:50",
+        "UserLoad": 5,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 00:49",
+        "UserLoad": 6,
+        "Online": 9
+      },
+      {
+        "QuoteDate": "22/12/2025 00:48",
+        "UserLoad": 6,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 00:47",
+        "UserLoad": 2,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 00:46",
+        "UserLoad": 3,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 00:45",
+        "UserLoad": 3,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 00:44",
+        "UserLoad": 4,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 00:43",
+        "UserLoad": 9,
+        "Online": 3
+      },
+      {
+        "QuoteDate": "22/12/2025 00:42",
+        "UserLoad": 7,
+        "Online": 3
+      },
+      {
+        "QuoteDate": "22/12/2025 00:41",
+        "UserLoad": 10,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 00:40",
+        "UserLoad": 8,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 00:39",
+        "UserLoad": 5,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 00:38",
+        "UserLoad": 6,
+        "Online": 3
+      },
+      {
+        "QuoteDate": "22/12/2025 00:37",
+        "UserLoad": 6,
+        "Online": 3
+      },
+      {
+        "QuoteDate": "22/12/2025 00:36",
+        "UserLoad": 5,
+        "Online": 1
+      },
+      {
+        "QuoteDate": "22/12/2025 00:35",
+        "UserLoad": 5,
+        "Online": 0
+      },
+      {
+        "QuoteDate": "22/12/2025 00:34",
+        "UserLoad": 5,
+        "Online": 1
+      },
+      {
+        "QuoteDate": "22/12/2025 00:33",
+        "UserLoad": 5,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 00:32",
+        "UserLoad": 4,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 00:31",
+        "UserLoad": 3,
+        "Online": 2
+      },
+      {
+        "QuoteDate": "22/12/2025 00:30",
+        "UserLoad": 4,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 00:29",
+        "UserLoad": 5,
+        "Online": 1
+      },
+      {
+        "QuoteDate": "22/12/2025 00:28",
+        "UserLoad": 4,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 00:27",
+        "UserLoad": 5,
+        "Online": 2
+      },
+      {
+        "QuoteDate": "22/12/2025 00:26",
+        "UserLoad": 4,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 00:25",
+        "UserLoad": 2,
+        "Online": 0
+      },
+      {
+        "QuoteDate": "22/12/2025 00:24",
+        "UserLoad": 1,
+        "Online": 3
+      },
+      {
+        "QuoteDate": "22/12/2025 00:23",
+        "UserLoad": 1,
+        "Online": 3
+      },
+      {
+        "QuoteDate": "22/12/2025 00:22",
+        "UserLoad": 3,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 00:21",
+        "UserLoad": 5,
+        "Online": 10
+      },
+      {
+        "QuoteDate": "22/12/2025 00:20",
+        "UserLoad": 6,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 00:19",
+        "UserLoad": 4,
+        "Online": 2
+      },
+      {
+        "QuoteDate": "22/12/2025 00:18",
+        "UserLoad": 3,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 00:17",
+        "UserLoad": 2,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 00:16",
+        "UserLoad": 5,
+        "Online": 2
+      },
+      {
+        "QuoteDate": "22/12/2025 00:15",
+        "UserLoad": 4,
+        "Online": 1
+      },
+      {
+        "QuoteDate": "22/12/2025 00:14",
+        "UserLoad": 3,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 00:13",
+        "UserLoad": 2,
+        "Online": 3
+      },
+      {
+        "QuoteDate": "22/12/2025 00:12",
+        "UserLoad": 5,
+        "Online": 2
+      },
+      {
+        "QuoteDate": "22/12/2025 00:11",
+        "UserLoad": 5,
+        "Online": 3
+      },
+      {
+        "QuoteDate": "22/12/2025 00:10",
+        "UserLoad": 6,
+        "Online": 4
+      },
+      {
+        "QuoteDate": "22/12/2025 00:09",
+        "UserLoad": 8,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 00:08",
+        "UserLoad": 6,
+        "Online": 8
+      },
+      {
+        "QuoteDate": "22/12/2025 00:07",
+        "UserLoad": 4,
+        "Online": 5
+      },
+      {
+        "QuoteDate": "22/12/2025 00:06",
+        "UserLoad": 6,
+        "Online": 7
+      },
+      {
+        "QuoteDate": "22/12/2025 00:05",
+        "UserLoad": 7,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 00:04",
+        "UserLoad": 4,
+        "Online": 3
+      },
+      {
+        "QuoteDate": "22/12/2025 00:03",
+        "UserLoad": 3,
+        "Online": 3
+      },
+      {
+        "QuoteDate": "22/12/2025 00:02",
+        "UserLoad": 3,
+        "Online": 2
+      },
+      {
+        "QuoteDate": "22/12/2025 00:01",
+        "UserLoad": 5,
+        "Online": 6
+      },
+      {
+        "QuoteDate": "22/12/2025 00:00",
+        "UserLoad": 5,
+        "Online": 7
+      }
+    ]
+  function parseDate(str) {
+    const [date, time] = str.split(' ');
+    const [dd, mm, yyyy] = date.split('/');
+    const [hh, min] = time.split(':');
+    return new Date(yyyy, mm - 1, dd, hh, min).getTime();
+  }
+  const seriesData = rawData
+    .map(d => [parseDate(d.QuoteDate), d.UserLoad])
+    .sort((a, b) => a[0] - b[0]);
+
+
+  const onlineSeries = rawData
+    .map(d => [parseDate(d.QuoteDate), d.Online])
+    .sort((a, b) => a[0] - b[0]);
+
+
+  const chart = Highcharts.chart('live_update', {
+    chart: {
+      type: 'area',
+      animation: true,
+      spacingTop: 20
+    },
+    title: { text: null },
+    time: {
+      useUTC: false
+    },
+    xAxis: {
+      type: 'datetime',
+      gridLineWidth: 1,
+      gridLineColor: '#f1f1f1',
+      labels: {
+        format: '{value:%I:%M %p}'
+      }
+    },
+
+    yAxis: {
+      title: { text: null },
+      labels: { enabled: false },
+      gridLineWidth: 0
+    },
+    tooltip: {
+      shared: true,
+      xDateFormat: '%I:%M %p',
+      pointFormat:
+        '<span style="color:{series.color}">\u25CF</span> {series.name}: <b>{point.y}</b><br/>'
+    },
+    legend: { enabled: false },
+
+    plotOptions: {
+      area: {
+        fillOpacity: 0.15,
+        lineWidth: 2,
+        marker: { enabled: false }
+      },
+      line: {
+        marker: { enabled: false },
+        lineWidth: 2
+      }
+    },
+    series: [{
+      name: 'Last 2 min user',
+      type: 'area',
+      color: '#D93872',
+      data: seriesData
+    },
+    {
+      name: 'Online',
+      type: 'line',
+      color: '#00c48c',
+      data: onlineSeries
+    }
+    ],
+    credits: {
+      enabled: false
+    }
+  })
+</script>
+</body>
+</html>
