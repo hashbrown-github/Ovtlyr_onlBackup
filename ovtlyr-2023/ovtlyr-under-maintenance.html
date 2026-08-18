@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Under Maintenance</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --primary: #4285f4;
+  --primary-dim: #e8f0fe;
+  --text: #000000;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,body{
+  height: 100%;
+  font-family: 'DM Sans', 'DMSans-Regular', sans-serif;
+  font-weight: 500;
+  color: var(--text);
+  background: #ffffff;
+  overflow-x: hidden;
+}
+/* subtle moving grid backdrop */
+.grid-bg{
+  position: fixed;
+  inset: 0;
+  background-image: linear-gradient(var(--primary-dim) 1px, transparent 1px), linear-gradient(90deg, var(--primary-dim) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(circle at 50% 40%, black 0%, transparent 75%);
+  -webkit-mask-image: radial-gradient(circle at 50% 40%, black 0%, transparent 75%);
+  animation: drift 40s linear infinite;
+  z-index:0;
+}
+@keyframes drift {
+from {
+  background-position: 0 0, 0 0;
+}
+to {
+  background-position: 480px 240px, 480px 240px;
+}
+}
+.wrap {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 32px 24px;
+}
+.gear {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 28px;
+  animation: spin 6s linear infinite;
+}
+@keyframes spin {
+from {
+  transform: rotate(0deg);
+}
+to {
+  transform: rotate(360deg);
+}
+}
+.eyebrow {
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin-bottom: 18px;
+}
+h1 {
+  font-weight: 700;
+  font-size: clamp(32px, 6vw, 56px);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  max-width: 720px;
+  margin-bottom: 18px;
+}
+p.sub {
+  font-weight: 400;
+  font-size: clamp(15px, 2vw, 18px);
+  color:#000000;
+  opacity: 0.65;
+  max-width: 480px;
+  line-height: 1.5;
+  margin-bottom: 40px;
+}
+.timer {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 44px;
+}
+.timer .block {
+  background: var(--primary-dim);
+  border: 1px solid rgba(66,133,244,0.18);
+  border-radius: 14px;
+  padding: 16px 20px;
+  min-width: 84px;
+}
+.timer .num {
+  font-weight: 700;
+  font-size: clamp(28px, 4vw, 38px);
+  color: var(--primary);
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+.timer .label {
+  font-weight:500;
+  font-size:11px;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  opacity:0.5;
+  margin-top:8px;
+}
+.progress-track {
+  width: 100%;
+  max-width: 420px;
+  height: 6px;
+  background: var(--primary-dim);
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  background: var(--primary);
+  border-radius: 999px;
+  transition: width 1s linear;
+}
+.progress-caption {
+  font-weight: 400;
+  font-size: 13px;
+  opacity: 0.55;
+  margin-bottom: 56px;
+}
+.footer {
+  font-weight: 400;
+  font-size: 14px;
+  opacity: 0.6;
+}
+.footer a {
+  color: var(--primary);
+  font-weight: 700;
+  text-decoration: none;
+}
+.footer a:hover {
+  text-decoration:underline;
+}
+@media (max-width:480px) {
+.timer {
+  gap:8px;
+}
+.timer .block {
+  padding: 12px 14px;
+  min-width:64px;
+}
+}
+</style>
+</head>
+<body>
+<div class="grid-bg"></div>
+<div class="wrap">
+  <div class="eyebrow">Under Maintenance</div>
+  <h1>We'll be back shortly</h1>
+  <p class="sub">We're making some improvements behind the scenes. The site will be back online once maintenance is complete — thanks for your patience.</p>
+  <div class="timer" id="timer">
+    <div class="block">
+      <div class="num" id="hrs">03</div>
+      <div class="label">Hours</div>
+    </div>
+    <div class="block">
+      <div class="num" id="mins">00</div>
+      <div class="label">Minutes</div>
+    </div>
+    <div class="block">
+      <div class="num" id="secs">00</div>
+      <div class="label">Seconds</div>
+    </div>
+  </div>
+  <div class="progress-track">
+    <div class="progress-fill" id="progressFill"></div>
+  </div>
+  <div class="progress-caption" id="progressCaption">Maintenance in progress — 0% complete</div>
+  <div class="footer">Questions? Reach us at <a href="mailto:support@example.com">support@ovtlyr.com</a></div>
+</div>
+
+<script>
+  // Total maintenance duration in seconds (3 hours)
+  const TOTAL_SECONDS = 3 * 60 * 60;
+
+  // Set this to the actual maintenance start time (ISO string) if known.
+  // Defaults to "now" when the page is first loaded.
+  const START_KEY = 'maintenance_start_ts';
+  let startTs = localStorage.getItem(START_KEY);
+  if (!startTs) {
+    startTs = Date.now();
+    localStorage.setItem(START_KEY, startTs);
+  } else {
+    startTs = parseInt(startTs, 10);
+  }
+
+  const endTs = startTs + TOTAL_SECONDS * 1000;
+
+  const hrsEl = document.getElementById('hrs');
+  const minsEl = document.getElementById('mins');
+  const secsEl = document.getElementById('secs');
+  const fillEl = document.getElementById('progressFill');
+  const captionEl = document.getElementById('progressCaption');
+
+  function pad(n) {return String(n).padStart(2, '0');}
+
+  function tick() {
+    const now = Date.now();
+    const remainingMs = Math.max(0, endTs - now);
+    const remainingSec = Math.floor(remainingMs / 1000);
+
+    const h = Math.floor(remainingSec / 3600);
+    const m = Math.floor((remainingSec % 3600) / 60);
+    const s = remainingSec % 60;
+
+    hrsEl.textContent = pad(h);
+    minsEl.textContent = pad(m);
+    secsEl.textContent = pad(s);
+
+    const elapsed = TOTAL_SECONDS - remainingSec;
+    const pct = Math.min(100, Math.max(0, (elapsed / TOTAL_SECONDS) * 100));
+    fillEl.style.width = pct.toFixed(1) + '%';
+
+    if (remainingSec <= 0) {
+      captionEl.textContent = 'Maintenance complete — refreshing…';
+      clearInterval(intervalId);
+      setTimeout(() => window.location.reload(), 2000);
+    } else {
+      captionEl.textContent = 'Maintenance in progress — ' + pct.toFixed(0) + '% complete';
+    }
+  }
+  tick();
+  const intervalId = setInterval(tick, 1000);
+</script>
+</body>
+</html>
